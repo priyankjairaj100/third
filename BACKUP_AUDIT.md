@@ -158,3 +158,22 @@ It supplies no native runtime or memory measurement.
 The Phase 7 publication report covers new project files and compressed members.
 The main backup manifest covers the complete saved checkpoint.
 Frozen Phase 3 through Phase 6 code and reports remain unchanged.
+
+## Phase 8 preservation supplement — 4 October 2026
+
+This checkpoint adds archive exports, streaming replay, staged input assembly, and scoped observed policy selection.
+It records remaining software routes and missing scientific inputs explicitly.
+No original corpus, semantic model file, completed human response, or primary experiment was added.
+
+Archive format checks use existing Civil text with explicit software-only metadata.
+The production archive gate refuses these substitute identities.
+Intermediate check reports retain their original source hashes.
+Some intermediate source snapshots were not saved before corrections.
+Those earlier versions are not claimed independently replayable.
+The final archive source snapshot and its final check report are saved together.
+
+The publication scan covers changed project files and compressed members.
+The final backup manifest records every included file and checksum.
+No News article body or real rater identity belongs in this checkpoint.
+Future private inputs and derivations remain excluded from ordinary Git additions.
+Frozen Phase 3–7 preservation is verified against the previous checkpoint manifest.

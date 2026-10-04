@@ -1,0 +1,193 @@
+{
+  "schema": "ccu-archive-independent-review-1",
+  "status": "passed",
+  "scope": "Read-only source review and bounded format fixtures; no authentic original export or replay.",
+  "check_count": 31,
+  "checks": [
+    {
+      "check": "civil_comments/published_identity",
+      "passed": true
+    },
+    {
+      "check": "cc_news/published_identity",
+      "passed": true
+    },
+    {
+      "check": "civil/universal_newline_and_raw_values",
+      "passed": true
+    },
+    {
+      "check": "civil/FP32_parent_all_labels",
+      "passed": true
+    },
+    {
+      "check": "civil/split_and_omission_lineage",
+      "passed": true
+    },
+    {
+      "check": "civil/raw_lexeme_hash",
+      "passed": true
+    },
+    {
+      "check": "civil/common_parse_before_missing_label",
+      "passed": true
+    },
+    {
+      "check": "civil/ordered_float_parse_before_omission",
+      "passed": true
+    },
+    {
+      "check": "civil/late_omission_before_dtype_validation",
+      "passed": true
+    },
+    {
+      "check": "civil/file_and_hash_sink_equivalence",
+      "passed": true
+    },
+    {
+      "check": "civil/changed_lineage_reconstruction_refused",
+      "passed": true
+    },
+    {
+      "check": "civil/frozen_adapter_lineage_compatibility",
+      "passed": true
+    },
+    {
+      "check": "news/literal_basename_filter",
+      "passed": true
+    },
+    {
+      "check": "news/duplicate_member_instances_preserved",
+      "passed": true
+    },
+    {
+      "check": "news/mapping_strip_null_and_raw_values",
+      "passed": true
+    },
+    {
+      "check": "news/member_bytes_and_order",
+      "passed": true
+    },
+    {
+      "check": "news/file_and_hash_sink_equivalence",
+      "passed": true
+    },
+    {
+      "check": "news/frozen_adapter_keeps_distinct_instances",
+      "passed": true
+    },
+    {
+      "check": "civil_comments/production_refuses_fixture_identity",
+      "passed": true
+    },
+    {
+      "check": "civil_comments/preserved_failure_no_acceptance",
+      "passed": true
+    },
+    {
+      "check": "civil_comments/output_never_overwritten",
+      "passed": true
+    },
+    {
+      "check": "civil_comments/failure_bytes_unchanged",
+      "passed": true
+    },
+    {
+      "check": "cc_news/production_refuses_fixture_identity",
+      "passed": true
+    },
+    {
+      "check": "cc_news/preserved_failure_no_acceptance",
+      "passed": true
+    },
+    {
+      "check": "cc_news/output_never_overwritten",
+      "passed": true
+    },
+    {
+      "check": "cc_news/failure_bytes_unchanged",
+      "passed": true
+    },
+    {
+      "check": "replay/fixture_scope_refused",
+      "passed": true
+    },
+    {
+      "check": "replay/self_consistent_fixture_pin_refused",
+      "passed": true
+    },
+    {
+      "check": "replay/no_duplicate_corpus_files_on_refusal",
+      "passed": true
+    },
+    {
+      "check": "source_binding/changed_loaded_source_refused",
+      "passed": true
+    },
+    {
+      "check": "source_binding/drift_failure_preserves_loaded_hash",
+      "passed": true
+    }
+  ],
+  "source_sha256": {
+    "empirical_execution/phase8/archive_export.py": "9f053957bbc5a523f9ff278049ee5142ea460524eecd2e75e1d9568963cb2353",
+    "empirical_execution/phase8/check_archive_export.py": "944c658fbda3a4ea4e91f9d11bcae21b10ca9f0314cefd9a7be7004bb3b4196a",
+    "empirical_execution/phase8/ARCHIVE_EXPORT.md": "3c346c5a2c3b6d7e36ffa24fad87d28a60e6af4689110cf919332ea1230bbad2",
+    "empirical_execution/phase8/results/archive_checks_final.json": "7d66b1518329ce4dd744d586b0b1cfa2ac50d69a382a485356e3f30a4619ef7a",
+    "empirical_execution/phase4/adapters.py": "7171b59802dff219636a08b53f13d8b3bdbb7bc400f5712f041280e61e8d6f0d",
+    "empirical_execution/phase7/ACQUISITION_REVIEW.md": "7dbde4ae529b32633ecad87e1f60396770cd118faae656d23f28c0cc900881a1"
+  },
+  "closed_findings": [
+    {
+      "finding": "Success receipts could bind changed source bytes.",
+      "resolution": "Loaded-source digest is captured, source drift is refused, and failed attempts retain the loaded digest."
+    },
+    {
+      "finding": "Civil quoted CRLF/CR differed from the local upstream reader.",
+      "resolution": "Feature values mirror universal-newline conversion; raw original strings remain in lineage."
+    },
+    {
+      "finding": "Path normalization changed News basename selection.",
+      "resolution": "Literal POSIX basename matching preserves upstream filter behavior."
+    }
+  ],
+  "streaming_review": {
+    "corpus_table_retained": false,
+    "tar_member_cache_cleared": true,
+    "replay_corpus_copy_written": false,
+    "every_reconstructed_byte_hashed": true,
+    "working_set_caveats": [
+      "ZIP central directory and names",
+      "Several copies of the current CSV row or JSON member",
+      "Decompression buffers and TAR/PAX metadata"
+    ],
+    "measured_constant_RSS_claim": false
+  },
+  "replay_boundary": {
+    "fixed_production_identity_override": false,
+    "all_three_serialized_streams_and_counts_compared": true,
+    "full_successful_original_replay_executed": false,
+    "fixture_scope_can_produce_primary_acceptance": false,
+    "archive_to_export_proves_permissions_or_source_semantics": false
+  },
+  "provenance_review": {
+    "Civil_original_builder_revision": "ff070f916bdbc7f5f833e2bf9e48336946d6fb56",
+    "CC_News_archive_revision": "0ae17dffa45f621cb8061a8393e2dd225d0876a0",
+    "official_splits_are_lineage_not_study_assignments": true,
+    "local_upstream_mapping_review": "Pinned TFDS builder and Phase7 acquisition map; official News loader mapping and literal basename selection."
+  },
+  "fixture_scope": "Tiny CSV/TAR format inputs and a tiny PSL format placeholder; never empirical datasets or genuine native-source evidence. Temporary copies were deleted.",
+  "open_findings": [],
+  "original_archives_available": false,
+  "primary_study_started": false,
+  "benchmarks_executed": false,
+  "production_source_modified_by_reviewer": false,
+  "independent_check_execution": {
+    "method": "Interactive Python supplied through the execution tool standard input.",
+    "exact_independent_check_script_retained": false,
+    "independent_check_script_sha256": null,
+    "limitation": "The exact interactive 31-check script was not saved as a standalone file. Do not claim standalone replay of this independent check sequence. The final production source, owner checker, and owner check result retain their recorded hash bindings.",
+    "checks_reconstructed_or_rerun_for_this_note": false,
+    "report_sha256_before_provenance_note": "082af4ee4b6a37950ad3c4b6e0efdb3fa21497c3be4ba3ca017efb7967eda5bc"
+  }
+}

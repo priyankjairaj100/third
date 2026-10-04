@@ -1,0 +1,16 @@
+{
+  "schema": "ccu-frozen-phase-preservation-1",
+  "base_commit": "a8582393bf558f227804518f89ad4e02c90cf1f5",
+  "base_manifest_sha256": "7cd9c5f5168a861f74878fc8df38fce8276d94f669f7b9150ed9eb00ebc93958",
+  "phases": [
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "files_checked": 1958,
+  "changed_files": [],
+  "passed": true,
+  "scope": "Every prior manifest file under Phases3\u20137, including compressed historical bytes. No new scientific validation."
+}

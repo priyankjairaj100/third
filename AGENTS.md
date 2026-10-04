@@ -2,7 +2,7 @@
 
 This repository is the user's durable checkpoint for an ACL 2027 counterfactual-curation unlearning research project.
 
-- Read `RESUME_CONTEXT.md`, `THEORY_AND_RESULTS_HANDOFF.md` and `empirical_execution/CURRENT_STATUS.json` before new research or execution. Read the Phase 7 README and CHECKPOINT.md for current interfaces and remaining work. Phase 6 README and COMPLETION_LEDGER.md retain the audited implementation scope.
+- Read `RESUME_CONTEXT.md`, `THEORY_AND_RESULTS_HANDOFF.md` and `empirical_execution/CURRENT_STATUS.json` before new research or execution. Read the Phase 8 README, CHECKPOINT.md, and REMAINING_TASKS.md for current interfaces and remaining work. Phase 6 README and COMPLETION_LEDGER.md retain the audited implementation scope.
 - Keep exact theory, engineering/development measurements, and confirmatory evidence distinct. The primary semantic study is currently unstarted.
 - Use existing natural datasets. Do not invent records, provenance, semantic embeddings, source IDs or human judgments. Tiny algebraic software fixtures must remain labeled as software tests.
 - The user wants work completed in the current workspace. Do not infer permission for remote/paid compute from unrelated history.

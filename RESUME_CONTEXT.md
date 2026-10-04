@@ -1,15 +1,15 @@
 # Resume this research project
 
-Last substantive checkpoint: **4 October 2026, Phase 7 input and execution interfaces**.
+Last substantive checkpoint: **4 October 2026, Phase 8 input assembly and scoped policy qualification**.
 The primary semantic study remains unstarted.
-Read the Phase 7 checkpoint and Phase 6 ledger for evidence and remaining requirements.
+Read the Phase 8 checkpoint and remaining-task ledger, then the frozen Phase 6 implementation ledger.
 Repository: **https://github.com/priyankjairaj100/third**.
 
 This is a project handoff reconstructed from the available conversation and the saved research files. It is not a verbatim export of all chats. It deliberately contains only this project's context.
 
 ## Paste this into a new chat
 
-> Continue the ACL 2027 counterfactual semantic-curation unlearning project at https://github.com/priyankjairaj100/third. Read README.md, RESUME_CONTEXT.md, THEORY_AND_RESULTS_HANDOFF.md, empirical_execution/CURRENT_STATUS.json and empirical_execution/phase7/CHECKPOINT.md, empirical_execution/phase7/README.md, and empirical_execution/phase6/COMPLETION_LEDGER.md, then inspect the relevant code and result files before acting. Preserve the distinction between exact theory, natural-preview engineering evidence, and the unstarted primary semantic study. All work must be carried out in this workspace; do not start paid or external compute without my instruction. Continue the highest-value executable work, keep me informed, and save all project progress back to this repository with an updated handoff. Do not fabricate missing corpus provenance, semantic embeddings, or human ratings.
+> Continue the ACL 2027 counterfactual semantic-curation unlearning project at https://github.com/priyankjairaj100/third. Read README.md, RESUME_CONTEXT.md, THEORY_AND_RESULTS_HANDOFF.md, empirical_execution/CURRENT_STATUS.json and empirical_execution/phase8/CHECKPOINT.md, empirical_execution/phase8/README.md, empirical_execution/phase8/REMAINING_TASKS.md, and empirical_execution/phase6/COMPLETION_LEDGER.md, then inspect the relevant code and result files before acting. Preserve the distinction between exact theory, natural-preview engineering evidence, and the unstarted primary semantic study. All work must be carried out in this workspace; do not start paid or external compute without my instruction. Continue the highest-value executable work, keep me informed, and save all project progress back to this repository with an updated handoff. Do not fabricate missing corpus provenance, semantic embeddings, or human ratings.
 
 ## User objective and preferences
 
@@ -39,8 +39,10 @@ Read its ledger, acceptance documentation, and source-bound review first.
 Use the Phase 6 README restoration command before auditing archived result paths.
 The independent review passed 244 checks; dispatcher and extension integration passed 31 and 48 checks.
 No background research jobs remain.
-Use Phase 7 interfaces for new intake and explicit policy dispatch.
-Start the next chat with input intake, not another repetition of completed lexical checks.
+Use Phase 8 for archive export, streaming replay, and staged input assembly.
+Use Phase 7 for accepted blank calibration forms and explicit policy dispatch.
+Start the next chat with the Phase 8 remaining-task ledger and actual input intake.
+Do not repeat completed lexical checks as new primary evidence.
 Missing original assets and human judgments remain genuine blockers.
 Do not repeat lexical checks as a substitute for collecting that evidence.
 
@@ -65,7 +67,8 @@ It does not authorize invented provenance, human ratings, paid compute, or conta
 | Phase 4 extensions | News calendar/encoding bridge, per-encoder calibration and blank admission pack implemented; fractional-label logistic pilot/certificate completed in its stated single-output scope; consult final audits and `phase4/TODO.json` |
 | Phase 5 | Compact payload/all summary methods, enforced no-reaccess, versioned numerical gate, full-refit adapter, convex/replication/boundary/human/task/statistical integrations and complete prospective registry; see latest completion ledger |
 | Phase 6 | All 21 recipe obligations resolved prospectively; 21,332 jobs registered; dispatcher, extensions, acceptance, numerical and state audits passed. Independent review passed 244 checks. See the Phase 6 ledger. |
-| Phase 7 | Explicit resource policy CLI, accepted blank calibration preparation, native resource preflight, and official input map. Original files and primary evidence remain absent. |
+| Phase 7 | Explicit resource policy CLI, accepted blank calibration preparation, native resource preflight, and official input map. |
+| Phase 8 | Pinned archive export, streaming replay, staged input assembly, and scoped observed audit-policy selection. Read its checkpoint for tested scope and unfinished routes. |
 | Primary semantic study | **Not started.** No E5/MPNet embeddings, no original source-rich corpus snapshot and no completed human ratings |
 | Paper-ready confirmatory evidence | **Absent.** Do not turn development checks into semantic or source-withdrawal claims |
 
@@ -218,3 +221,31 @@ submission nor primary activation. Supply real inputs, resolve development
 configuration and acceptance, then exercise the complete scientific chain;
 never change a role string or boolean to waive those gates. See updated status
 and branch READMEs for final numerical counts and exact current source hashes.
+
+## Phase 8 continuation checkpoint
+
+The user asked for remaining tasks and further work.
+Phase 8 implements pinned Civil/News archive exports and complete streaming replay.
+Replay avoids a second corpus copy by hashing regenerated bytes.
+Raw values, omissions, source splits, and archive members remain bound.
+The actual original archives remain absent.
+
+Phase 8 also adds staged input assembly and scoped observed audit-policy selection.
+Read its checkpoint for final check counts, source bindings, and independent review.
+The assembler handles one stable request family at a time.
+Shared-root multi-family assembly remains unfinished.
+The policy selector covers native core audits only.
+Mixed, projected, larger-panel, and dense-convex qualification routes remain unfinished.
+Neither a policy receipt nor an unsigned candidate authorizes primary execution.
+
+Original source bytes, full model/tokenizer inventories, and genuine ratings remain required.
+There are still zero executed primary jobs and zero human responses.
+About 2 GiB of workspace disk was free during the Phase 8 inventory.
+Torch, transformers, Faiss, and safetensors were absent.
+That inventory is time-specific, not a reserved resource guarantee.
+
+Use `phase8/REMAINING_TASKS.md` and `phase8/TODO.json` for the current order.
+Complete actual source-disjoint development and baseline qualification before confirmation.
+Do not recycle lexical engineering evidence as semantic development evidence.
+The remaining paper assets are six figures, three tables, analyses, and empirical prose.
+They require accepted study results.

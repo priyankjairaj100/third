@@ -1,0 +1,7 @@
+{
+  "captured_after_correction": true,
+  "method": "Reverse the single recorded corrective line, then require exact equality to the failure receipt SHA256. Checker was unchanged.",
+  "dossiers_sha256": "8fb236a30667318272cbaaed8ca0ab859833cead515511cdbd071c665e1a6d65",
+  "checker_sha256": "583a27a3d1accbcf0f1134804707ab702a0b82d0a2c8afc998d74c8f90699bd0",
+  "hashes_match_recorded_failure": true
+}

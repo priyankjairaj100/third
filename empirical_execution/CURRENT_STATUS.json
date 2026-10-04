@@ -1,7 +1,7 @@
 {
   "date": "2026-10-04",
   "scope": "current status supplement; older STATUS.json describes an earlier run",
-  "stage": "phase7_input_interfaces_checked_primary_assets_and_native_qualification_pending",
+  "stage": "phase8_archive_and_scoped_dossier_policy_tools_checked_primary_study_unstarted",
   "all_computation_local": true,
   "synthetic_empirical_data": false,
   "strict_mode_completed_previously": {
@@ -60,7 +60,7 @@
     "primary_threshold_selected": false,
     "primary_quality_gate_passed": false
   },
-  "todo_ledger": "phase7/CHECKPOINT.md",
+  "todo_ledger": "phase8/TODO.json",
   "all_research_todos_complete": false,
   "primary_semantic_study_started": false,
   "actual_human_ratings": 0,
@@ -309,12 +309,13 @@
     }
   },
   "remaining_requirements": [
-    "Authorized transfer of exact original source archives and pinned model files",
-    "Audited raw archive exports and full dossier construction",
-    "Actual local runtime, encoder replay, and official backend acceptance",
-    "Genuine independent threshold, validation, and admission responses",
-    "Disjoint development measurements and a feasible prospective native audit policy",
-    "Accepted primary execution and the complete natural semantic study"
+    "Authorized import of exact original corpora, complete pinned model/tokenizer assets, and compatible local runtime",
+    "Actual original export/preparation/cache replay and official backend acceptance",
+    "Genuine threshold selection, fresh validation, admission, and context judgments",
+    "Shared-root multi-family assembly and resource qualification adapters beyond native core C",
+    "Genuine source-disjoint development, strong baseline/correctness checks, and feasible native resource qualification",
+    "All registered semantic/source/task/replication/systems experiments with zeros and failures retained",
+    "Bound statistical analysis, six figures, three tables, empirical paper, and permitted reproducibility release"
   ],
   "pause_requested_by_user": false,
   "phase6_summary": {
@@ -443,5 +444,56 @@
     ],
     "all_research_todos_complete": false,
     "frozen_files_verified_unchanged": 1885
+  },
+  "phase8_summary": {
+    "scope": "Prospective preparation software with explicit fixture/mock controls; no primary scientific evidence",
+    "archive_export": {
+      "checks": 82,
+      "independent_checks": 31,
+      "report": "phase8/results/archive_checks_final.json",
+      "independent_report": "phase8/results/archive_independent_review.json",
+      "genuine_export_or_replay_executed": false,
+      "replay_writes_second_corpus_copy": false,
+      "intermediate_source_preservation_limit_disclosed": true,
+      "independent_interactive_script_not_retained": true
+    },
+    "dossiers": {
+      "checks": 36,
+      "report": "phase8/results/dossier_checks_final.json",
+      "positive_upstream_acceptance_mocked": true,
+      "scope": "One stable request family; native core qualification only",
+      "complete_multi_family_assembly": false,
+      "actual_primary_inputs_accepted": false
+    },
+    "resource_policy": {
+      "checks": 47,
+      "report": "phase8/results/resource_checks_final.json",
+      "missing_input_refusal": "phase8/results/resource_missing_native/qualification.json",
+      "actual_native_observations": 0,
+      "actual_native_policies_exported": 0,
+      "scope": "Exact canonical native C full and light audit coverage only",
+      "convex_cap_changed": false,
+      "runtime_or_peak_memory_guarantee": false
+    },
+    "local_capacity": "phase8/results/local_preparation_capacity.json",
+    "frozen_phases_preserved": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "frozen_files_verified_unchanged": 1958,
+    "remaining_task_ledger": "phase8/REMAINING_TASKS.md",
+    "primary_study_started": false,
+    "actual_human_responses": 0,
+    "executed_primary_jobs": 0,
+    "all_research_tasks_complete": false,
+    "independent_review": {
+      "status": "passed_scoped_source_and_evidence_review",
+      "report": "phase8/results/independent_review.json",
+      "sha256": "4544eee10f9a011656e5d85189d6b86b6c0977d0f4cd6248715017ac5ef13960",
+      "bound_artifacts": 141
+    }
   }
 }

@@ -1,0 +1,27 @@
+{
+  "schema": "ccu-phase8-checkpoint-binding-verification-1",
+  "date": "2026-10-04",
+  "status": "passed",
+  "component_reports": [
+    {
+      "report": "empirical_execution/phase8/results/dossier_checks_final.json",
+      "report_sha256": "253b21e668a493d9078be1731675583553d67054621c9ea1a194e92487032279",
+      "source_bindings_checked": 126
+    },
+    {
+      "report": "empirical_execution/phase8/results/resource_checks_final.json",
+      "report_sha256": "9e79b9d9b32bb202fbeff0c17b7f2b4c2e379655e60958a3e209eebcc948ec03",
+      "source_bindings_checked": 126
+    },
+    {
+      "report": "empirical_execution/phase8/results/archive_independent_review.json",
+      "report_sha256": "c41b93ff76c98ba5cbff382813df5c5ae046871798ddf09907cbcaa1931f1ac3",
+      "source_bindings_checked": 6
+    }
+  ],
+  "source_binding_comparisons": 258,
+  "frozen_preservation_report_sha256": "e8581444e7e51e2603a0f90bff6bee3667ccb95a830c245f572d4c13e867ef4f",
+  "frozen_prior_files": 1958,
+  "primary_experiments_executed": 0,
+  "scope": "Current source/report binding and historical preservation only; no new component test or scientific evidence"
+}

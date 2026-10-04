@@ -1,0 +1,35 @@
+{
+  "schema": "ccu-local-preparation-capacity-1",
+  "date": "2026-10-04",
+  "scope": "Point-in-time workspace storage and runtime inventory; no full-corpus benchmark",
+  "filesystem_bytes": {
+    "total": 33770192896,
+    "used": 29922770944,
+    "free": 2112659456
+  },
+  "visible_cpu_count": 9,
+  "python_version": "3.12.14",
+  "installed_module_presence": {
+    "numpy": true,
+    "scipy": true,
+    "torch": false,
+    "transformers": false,
+    "faiss": false,
+    "safetensors": false,
+    "datasets": false,
+    "huggingface_hub": false
+  },
+  "required_disk_charges": [
+    "original compressed archives",
+    "exported record files",
+    "row and archive member lineage",
+    "independent replay output if retained",
+    "prepared source records",
+    "semantic caches",
+    "worker and audit snapshots"
+  ],
+  "full_export_bytes_measured": false,
+  "full_cache_bytes_measured": false,
+  "native_runtime_memory_qualified": false,
+  "point_in_time_not_a_reserved_capacity": true
+}

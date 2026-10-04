@@ -1,0 +1,107 @@
+{
+  "schema": "ccu-phase8-remaining-tasks-1",
+  "date": "2026-10-04",
+  "primary_semantic_study_started": false,
+  "executed_primary_jobs": 0,
+  "actual_human_responses": 0,
+  "all_research_tasks_complete": false,
+  "authority": "REMAINING_TASKS.md and narrative empirical protocol",
+  "tasks": [
+    {
+      "task_id": "archive_export_replay",
+      "status": "software_complete",
+      "task": "Pinned Civil/News export and streaming byte replay",
+      "evidence": "ARCHIVE_EXPORT.md"
+    },
+    {
+      "task_id": "single_family_dossier",
+      "status": "software_complete_with_declared_scope",
+      "task": "Stable single-family calibration/candidate/development/finalization workflow",
+      "evidence": "DOSSIERS.md"
+    },
+    {
+      "task_id": "native_core_resource_policy",
+      "status": "software_complete_with_declared_scope",
+      "task": "Observed native core audit count-policy selection",
+      "evidence": "RESOURCE_POLICY.md"
+    },
+    {
+      "task_id": "multi_family_root",
+      "status": "software_pending",
+      "task": "Shared-root multi-family assembly preserving signed path meanings",
+      "evidence": null
+    },
+    {
+      "task_id": "resource_extensions",
+      "status": "software_and_evidence_pending",
+      "task": "Mixed-encoder, projected, larger-panel, and dense-convex qualification adapters",
+      "evidence": null
+    },
+    {
+      "task_id": "original_input_import",
+      "status": "input_blocked",
+      "task": "Exact original corpora with complete provenance and source coverage",
+      "evidence": "../phase7/ACQUISITION_REVIEW.md"
+    },
+    {
+      "task_id": "local_models_runtime",
+      "status": "input_blocked",
+      "task": "Complete pinned E5/MPNet/tokenizer assets and compatible local runtime",
+      "evidence": "../phase7/MODEL_IMPORT.md"
+    },
+    {
+      "task_id": "actual_encoder_replay",
+      "status": "input_blocked",
+      "task": "Produce semantic caches and replay every row in fresh encoder processes",
+      "evidence": null
+    },
+    {
+      "task_id": "official_backend",
+      "status": "input_blocked",
+      "task": "Execute and accept the official SemDeDup backend",
+      "evidence": null
+    },
+    {
+      "task_id": "threshold_collection",
+      "status": "human_input_blocked",
+      "task": "Genuine selection judgments and fresh independent quality validation",
+      "evidence": null
+    },
+    {
+      "task_id": "guarded_panels_tasks",
+      "status": "upstream_blocked",
+      "task": "Lock complete guarded panels, source partitions, labels, and task decisions",
+      "evidence": null
+    },
+    {
+      "task_id": "development_gate",
+      "status": "upstream_blocked",
+      "task": "Genuine source-disjoint precision, correctness, strong-baseline, and resource qualification",
+      "evidence": null
+    },
+    {
+      "task_id": "study_execution",
+      "status": "upstream_blocked",
+      "task": "Run the 21,332-job registry, retaining all failures, zeros, and missing cells",
+      "evidence": "../phase6/results/recipes_release"
+    },
+    {
+      "task_id": "admission_humans",
+      "status": "human_and_upstream_blocked",
+      "task": "Genuine semantic and both context audits on the accepted admission frames",
+      "evidence": null
+    },
+    {
+      "task_id": "statistics_claims",
+      "status": "upstream_blocked",
+      "task": "Run bound statistical analyses and apply the frozen claim ledger",
+      "evidence": null
+    },
+    {
+      "task_id": "paper_release",
+      "status": "upstream_blocked",
+      "task": "Six figures, three tables, empirical prose, and reproducible permitted release",
+      "evidence": null
+    }
+  ]
+}
