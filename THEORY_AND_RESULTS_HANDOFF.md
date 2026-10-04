@@ -6,7 +6,7 @@ Snapshot: 4 October 2026. Intended venue: ACL 2027. Working paper name: **Unlear
 
 The project has a developed fixed-curator theory, locally implemented repair algorithms, completed natural-text engineering experiments, a strict exact-state/certified-release implementation, and an audited preparation workflow. **The primary semantic empirical study has not started.** There are no actual human ratings, no selected primary semantic threshold, no passed primary semantic-quality gate, and no pinned E5/MPNet embeddings in the available workspace.
 
-`empirical_execution/CURRENT_STATUS.json` is the machine-readable current status. Older `empirical_execution/STATUS.json` and phase-specific reports are historical, not competing current status. `empirical_execution/phase3/README.txt` describes the executable next workflow. Nothing is running in the background.
+`empirical_execution/CURRENT_STATUS.json` is the machine-readable current status. Older `empirical_execution/STATUS.json` and phase-specific reports are historical, not competing current status. Read `empirical_execution/phase4/README.md` and `TODO.json` for the current completed-software versus pending-research inventory; the frozen phase-3 workflow remains a dependency. This handoff is a checkpoint, not a background-run promise.
 
 The user has repeatedly requested that all computation be done here, that synthetic empirical datasets be deferred, that weaknesses be solved algorithmically rather than defended, and that actual work continue instead of receiving another plan. The new repository instruction is to preserve all project files and enough context to resume in another chat. Do not substitute generated labels, fake provenance, lexical hashing described as semantic embeddings, or additional repetitions of the small preview for the missing primary study.
 
@@ -32,6 +32,7 @@ Evolution:
 - Strict qualification: unique rational pivot chart removed floating/history-dependent representation choices; exact residual arithmetic certified numerical head releases. This is a separate exact-aggregation target.
 - Phase 2: prediction/loss consequences on a fixed 82/18 development split, with unfavorable curation utility and structural zeros fully preserved.
 - Phase 3: source-disjoint preparation, corrected leakage guards, common pair-local finite-precision scoring, calibration/validation sampling, exact quality-bound arithmetic, offline CLI and input bindings. Actual scientific inputs remain missing.
+- Phase 4: original-schema adapters, offline encoder integration, calibration-only task selection, paired request manifests, final fixed-input comparison, partial dossier inspector and fresh-process measurement harness. News/calendar and per-encoder calibration software, the scoped convex pilot/certificate, and blank admission packs are also completed in their separately recorded scopes. None starts the primary semantic study or replaces missing genuine assets/ratings.
 
 ## Core model and theorem contracts
 
@@ -236,6 +237,97 @@ Evidence: `phase3/README.txt`, `PREPARATION_AMENDMENT.txt`, `independent_review.
 - The natural lexical engineering pack has 4,950 frame pairs, 241 sampled pairs and **723 blank assignments**. It is not the primary E5 annotation pack and yields no selected semantic threshold.
 - Recorded checks: panel 48, calibration 31, intake regression 69, graph 10 (10,000 score entries), CLI nine success/refusal cases. Independent arithmetic audit checked 2,900 bound cells and 5,200 coverage cells; worst noncoverage was exactly 0.05. Independent scalar scoring checked 4,950 pairs at each of dimensions 128 and 768, multiple tile sizes, retained rebuilds and reversed input order. Independent guard audit checked 27 endpoint cases plus missing/malformed source IDs.
 
+### Phase 4: executable integration, primary study still unstarted
+
+Evidence: `phase4/README.md`, `TODO.json`, each module's README, and
+`results/execution_engineering_final/`. The earlier `execution_engineering/`
+directory predates the correction to shared request streams and is historical;
+do not pool its outputs with the final run.
+
+The core adds original-schema Civil/Stack/News adapters; local E5/MPNet all-chunk
+encoding and asset/runtime binding; calibration-only tag/lambda/decision-threshold
+selection; R/S/U/A and matched-record request manifests; a six-method fixed-input
+engineering runner; a partial dossier inspector; and a fresh-process resource
+measurement harness. Real archive acceptance and the real transformer backend
+remain unexecuted. Code completion does not supply authentic original sources,
+semantic caches, human ratings, primary configurations or the full method system.
+
+The final replay uses the same natural Civil100 lexical fixture. Curator d=128,
+threshold0.6; learner d=64/768, lambda0.01, no intercept, current-count shift.
+Four R, four U and two A trajectories at checkpoints1/2/4/8 produce **80 rows**,
+with **zero failures and 54 zero-admission rows**. Maximum same-target head
+discrepancy is `8.326672684688674e-16`; moment discrepancy
+`4.440892098500626e-15`. Independent dual ridge checks **480 saved heads**,
+including the wrong-target B-F head against its declared target, with maximum
+discrepancy `8.881784197001252e-16`. This is numerical agreement on these inputs,
+not a rigorous certificate for every floating operation or new semantic evidence.
+Compact eligible payload remains smaller than joint-span state on this fixture.
+
+New prospective task conventions are explicit: hash-sort whole sources and assign
+round-robin five-fold CV, pool every validation record/output equally, choose
+larger lambda only on exact computed loss ties, and maximize per-tag OOF F1 using
+exact count ratios and strictest thresholds. Zero-positive tags predict no
+positives. Unknown-source and all-zero-target records remain; at least five genuine
+groups are separately required for primary source-CV. Test tags never select these
+settings; a separate evaluation API can apply the frozen vocabulary. Projected
+FP32 features are not silently renormalized. The available preview lacks genuine
+groups, so no actual task configuration was calibrated.
+
+R/S/matched-R random streams are graph-independent across curator sensitivities,
+while each graph is sealed separately. U/A and graph stress use explicitly
+graph-dependent populations. The source service may represent unknown singleton
+units, but genuine-source sampling never relabels them as real sources.
+
+The systems harness's 50 checks exercise short software commands, distinct fresh
+processes, default five repeats, failure retention, hashes, elapsed time and wait4
+RSS. This is not the registered systems experiment. It cannot certify access
+isolation, fair method implementations, undeclared I/O, absence of competing jobs,
+or summed simultaneous process-tree peak memory. All method code/imported project
+files must be explicitly pinned as inputs; interpreter/argv hashes alone do not
+bind them. Its measurements remain separate from the multi-method engineering
+runner, whose shared arrays do not establish isolated method capability parity.
+
+News/calendar and the encoder bridge are implemented, with 42 original-adapter
+checks and 18 calendar/source checks. `NEWS_CALENDAR_AMENDMENT.txt` fixes the
+2017 calibration versus 2018–2019 analysis convention and calendar-completeness
+requirements. The local encoder passes 63 software checks; versioned E5/MPNet
+calibration passes 46. Actual original archive acceptance, transformer execution,
+pinned semantic vectors, complete-month evidence and human ratings remain absent.
+See `EMBEDDINGS_README.txt`; the software tests do not instantiate real encoders.
+
+The separately named single-output fractional-logistic extension completes 12
+natural-preview lexical checkpoints, with 25 rigorous optimizer-error certificates
+including the initial fit. Maximum certified parameter radius is
+`6.729862803437307e-13`; six rows have zero admissions. The fixed release tolerance
+remains `1e-8`. The initial pilot had a warm-solver objective-resolution failure at
+A000/checkpoint4: its certificate radius `1.3940385712210056e-8` failed. That run,
+source snapshots, certificate and failure diagnosis remain in
+`results/convex_engineering/`; the new candidate-generation safeguard and final
+run are separately frozen in `results/convex_engineering_release_v2/`, including
+the explicitly saved initial head and `convex_checks.json`. The intermediate
+`results/convex_engineering_final/` is retained as history. No tolerance
+relaxation or hidden cold fallback was used. Extra trial-gradient work is charged.
+The rigorous residual certificate, rather than the numerical convergence flag,
+governs release. `CONVEX_README.txt` states its exact stored-value target and
+arithmetic/resource limits. This does not establish canonical state bytes, privacy,
+no-reaccess, source-service support, useful semantic effects or systems speedup.
+The prescribed Stack multioutput extension is still unimplemented.
+
+The admission-pair software uses the natural Civil100 lexical records and a
+declared frame to select 24 unique pairs, producing 72 **blank** assignments.
+No person supplied a rating; missing AskUbuntu/News quotas stay unfilled. The
+complete former-blocker and nearest surviving selected-text contextual audits
+of 100 admissions each remain pending. Pair packs alone do not complete these
+audits or establish that admissions add useful new information. Instructions,
+probability rules and limits are in `HUMAN_ADMISSION_AUDIT_README.txt`.
+
+The existing fixed-curator, information, memory and strict-ridge theorem stack is
+unchanged by this separately scoped convex optimizer certificate.
+Optimized primary B-E/B-A/P-S/P-R integrations, native source services, no-reaccess
+workers, persistence/compaction, the true SemDeDup refit branch and other registered
+boundary studies remain unfinished. `study_lock.py` intentionally leaves
+`execution_allowed=False`; the engineering runner also refuses a primary-role run.
+
 ## Locked preparation rules and why they matter
 
 The high-level protocol and phase-3 amendment are the sources; do not infer rules from a simplified JSON summary alone.
@@ -270,13 +362,13 @@ The nominal protocol proposes a 256 GiB host, 128 GiB method caps and an acceler
 
 1. Preserve this repository snapshot and current result hashes. Start a new run directory for any fresh empirical execution; do not overwrite original registries or annotation manifests. Re-read permissions/capabilities in a new chat: prior network or runtime restrictions may change, but never assume missing assets now exist.
 2. Acquire authentic source-rich original corpus files by a permitted route into this workspace, or receive them as attachments. The checked HF connector exposed metadata/schema/preview rows and public URLs but not an available byte-import operation. Its Civil export has text plus seven labels, no required article/publication IDs. No supported import was found; do not bypass restrictions or relabel metadata as data.
-3. Finish corpus-specific parsers against actual archives: Civil native IDs/parents/publication/article completeness; Stack question/date/tag/owner/duplicate-link extraction; News declared title/body normalization, dates and pinned-public-suffix registrable domains. The current intake checker is not a completed general parser. In particular, the inherited News text-field branch does not settle the final title/body construction rule.
-4. Run local phase-3 `prepare` on normalized authenticated records with original fields and native duplicate links. Review source/missing-source counts and fixed guards before embeddings/panels.
-5. Supply pinned E5 FP32 N-by-768 `.npy` vectors with ordered row IDs and derivation evidence, or local model/tokenizer plus runtime capable of generating them here. Current runtime has NumPy/SciPy/sklearn but no torch/transformers/sentence-transformers/datasets/pyarrow/onnxruntime in the recorded inspection. No remote compute was used or authorized by the study instructions.
-6. Bind cache bytes, normalized text/IDs, full prepared rows, preparation audit, encoder revision and scope using the exact manifest fields in `phase3/README.txt`. Generate selection assignments. Have genuine independent blinded humans complete them; do not fill blank labels or flip attestations computationally.
+3. Run acceptance checks on the implemented `phase4/adapters.py` using authentic archives: Civil native IDs/parents/publication/article completeness; Stack question/date/tag/owner/duplicate links; News title-plus-body, dates and pinned-PSL domains. Code exists, but original-archive acceptance does not. The frozen phase-3 News body-only verifier is not the newer title/body rule. Check the News/calendar extension's final state and coverage evidence before constructing calendar windows.
+4. Run local phase-3 `prepare` on normalized authenticated records with original fields and native duplicate links. Review source/missing-source counts and fixed guards before embeddings/panels, preserving the versioned Phase 4 adapter provenance.
+5. Supply pinned E5/MPNet FP32 N-by-768 vectors with ordered row IDs and derivation evidence, or local model/tokenizer assets and runtime for `phase4/embeddings.py`. The adapter is implemented; its actual transformer backend remains unexecuted. The recorded environment lacks the required torch/transformers stack. No remote compute was used or authorized by the study instructions.
+6. Bind cache bytes, normalized text/IDs, full prepared rows, preparation audit, encoder revision and scope using phase-3 and the final versioned per-encoder wrapper instructions. Generate selection assignments. Have genuine independent blinded humans complete them; do not fill blank labels or flip attestations computationally.
 7. Lock threshold, generate independent validation assignments, collect fresh human judgments, run exact quality gate. A failed gate stays failed; no retrospective retuning. Human collection/provenance remains outside what JSON can prove.
-8. Apply training-only semantic guard and freeze whole-source primary/replication panels. Complete remaining pre-execution lock: task vocabularies, calibration-only selected lambdas, request manifests, code/runtime hashes, resource caps/timeouts, compaction/persistence, full-refit policies, annotation protocol and costs. Do not call the main study started before those dependencies are real.
-9. Run the structural audit first, then native-dimension memory feasibility and fair baseline integration, then prescribed task/source/replication/full-refit experiments. The decisive unknowns remain meaningful natural additions, task consequences, and measured total cost versus compact eligible payload—not another correctness check on the same 100 rows.
+8. Apply training-only E5 semantic guard and freeze whole-source primary/replication panels. Execute the implemented calibration-only vocabulary/lambda/threshold and request selectors on real inputs. Freeze code/runtime hashes, resource caps/timeouts, compaction/persistence, full-refit policies, annotation protocol and costs. These locks are empirical outputs, not values that may be invented from tested code.
+9. Finish and independently audit primary optimized methods, source/access isolation, lifecycle/persistence workers, full-refit and boundary integrations in `phase4/TODO.json`. The generic process harness and shared-input engineering runner do not fulfill those method contracts. Run structural audit and native memory feasibility before the prescribed task/source/replication/full-refit program. The decisive unknowns remain meaningful natural additions, task consequences and measured total cost versus compact eligible payload.
 
 ## Reproduction entry points
 
@@ -294,6 +386,18 @@ python3 empirical_execution/phase3/audit_guards_independent.py
 ```
 
 `check_calibration.py` verifies the existing pack and refuses differing replacement; code changes require preserving its old code/frame hashes. `check_panels.py` also needs the local News text fixture that portable archives intentionally omit. Its recorded audit remains valid historical evidence, not automatically a replay result after code changes.
+
+For current Phase 4 software verification, read `phase4/README.md` first. Examples:
+
+```bash
+python3 -m empirical_execution.phase4.check_model_selection
+python3 -m empirical_execution.phase4.check_systems
+```
+
+These checks use explicitly marked transient algebra/command fixtures; they do
+not create synthetic empirical datasets or execute the primary study. Preserve
+their recorded audit JSON or rerun in a separate checkout. The authoritative final
+engineering comparison registry is `phase4/results/execution_engineering_final/`.
 
 Historical Civil-only pilot from `empirical_execution/`:
 
@@ -316,4 +420,4 @@ The exact helper is platform-specific; use its provided source/compile instructi
 
 Readable PDFs are in `output/pdf/`: theory, empirical protocol, execution_01, memory_repair, strict_mode, empirical_phase2, and empirical_preparation. Their corresponding ZIPs preserve stage-specific source/results. `output/counterfactual_curation_reproducibility.zip` is earlier theory/reproducibility material, not the complete latest state. Use the repository's live source plus explicit current status for continuation; do not resume only from an old archive.
 
-There is not yet a finished ACL submission backed by the promised semantic study. The algorithmic qualifications addressed above are real progress, but “reviewer-proof,” superiority to strong incremental baselines, broad learned-curator exactness, and semantic task value are not established facts. A new chat should resume at authentic input acquisition and the phase-3 workflow, preserving the theorem scope and all unfavorable results.
+There is not yet a finished ACL submission backed by the promised semantic study. The algorithmic qualifications addressed above are real progress, but “reviewer-proof,” superiority to strong incremental baselines, broad learned-curator exactness, and semantic task value are not established facts. A new chat should resume from `phase4/TODO.json`: acquire/accept authentic inputs, execute the phase-3 plus versioned phase-4 preparation workflows, and finish the remaining primary integrations while preserving theorem scope and all unfavorable results.

@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "natural_records": 100,
+  "natural_dimension": 128,
+  "natural_curator": "lexical_engineering_reference_FP64_tau_0.6",
+  "natural_one_percent_record_horizon": 1,
+  "natural_checkpoint_observations_checked": 10,
+  "natural_candidate_scores_checked": 10,
+  "natural_mass_source_paths_with_no_genuine_sources": 4,
+  "mathematical_PPS_draw_traces_exhaustively_checked": 22,
+  "mathematical_PPS_order_probabilities_checked": 6,
+  "source_fixture_observations_checked": 16,
+  "integer_horizon_boundaries_checked": [
+    {
+      "records": 0,
+      "horizon": 0
+    },
+    {
+      "records": 1,
+      "horizon": 1
+    },
+    {
+      "records": 100,
+      "horizon": 1
+    },
+    {
+      "records": 101,
+      "horizon": 2
+    },
+    {
+      "records": 200,
+      "horizon": 2
+    },
+    {
+      "records": 201,
+      "horizon": 3
+    },
+    {
+      "records": 12801,
+      "horizon": 129
+    }
+  ],
+  "genuine_source_empirical_experiments_run": false,
+  "semantic_encoder_experiments_run": false,
+  "source_fixture_scope": "mathematical ownership and integer arithmetic only; no source evidence",
+  "separate_namespace_and_state": true,
+  "within_branch_paired_curator_randomness": true,
+  "manifest_sha256": "cdb9a864e6ecc0fe22243a8fc304daf3c8f07a5deebf7fa0c87456b228573bbf",
+  "data_sha256": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9",
+  "code_sha256": {
+    "phase4/check_requests_extensions.py": "bf0564ad88c423bb718b17fd182b9d3e0fc3c3e4a7e2e27b0f7951dc5117a6fb",
+    "phase4/requests_extensions.py": "e6fdca03cb9b49594997459fa4ac4a211cc6e06316c10746de8c61c6e38320bd",
+    "phase4/requests.py": "71b1d40032c64d4a058ee70b647d58a425827aeaeb2fa271037e26059bb6198d"
+  }
+}

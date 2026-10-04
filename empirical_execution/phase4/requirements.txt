@@ -1,0 +1,6 @@
+# Tested preparation/comparison runtime; install from repository root.
+-r ../requirements.txt
+idna==3.19
+# Real transformers execution additionally requires byte/version-pinned local
+# torch, transformers, tokenizers and safetensors according to asset_manifest.
+# Those packages/assets are absent and no tested versions are invented here.

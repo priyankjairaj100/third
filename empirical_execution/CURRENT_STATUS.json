@@ -1,7 +1,7 @@
 {
   "date": "2026-10-04",
   "scope": "current status supplement; older STATUS.json describes an earlier run",
-  "stage": "phase3_preparation_complete_primary_semantic_study_blocked",
+  "stage": "phase4_offline_software_and_scoped_engineering_complete_primary_program_blocked",
   "all_computation_local": true,
   "synthetic_empirical_data": false,
   "strict_mode_completed_previously": {
@@ -9,8 +9,8 @@
     "history_comparisons": 10,
     "result": "canonical_results/summary.json"
   },
-  "next_required_inputs": "phase3/README.txt",
-  "primary_asset_readiness": "phase3/acquisition_route_check.json",
+  "next_required_inputs": "phase4/README.md",
+  "primary_asset_readiness": "phase4/results/access_recheck.json",
   "no_background_jobs": true,
   "previous_phase2_development": {
     "status": "completed_development_not_confirmation",
@@ -47,6 +47,24 @@
     "semantic_encoder_used": false
   },
   "completed_this_phase": {
+    "original_schema_adapters_software": true,
+    "news_calendar_and_encoder_bridge_software": true,
+    "local_semantic_encoding_software": true,
+    "per_encoder_calibration_software": true,
+    "calibration_only_task_selection_software": true,
+    "frozen_requests_software": true,
+    "ridge_fixed_input_engineering_comparison": true,
+    "single_output_convex_lexical_engineering_and_certification": true,
+    "fresh_process_systems_harness_software": true,
+    "natural_preview_admission_pack_blank": true,
+    "primary_study_started": false,
+    "semantic_encoder_used": false,
+    "actual_human_ratings": 0,
+    "primary_threshold_selected": false,
+    "primary_quality_gate_passed": false,
+    "primary_optimized_method_access_and_full_refit_integration_complete": false
+  },
+  "previous_phase3_preparation": {
     "source_preparation": true,
     "shared_pair_local_reference": true,
     "blinded_calibration_software": true,
@@ -59,5 +77,66 @@
     "actual_human_ratings": 0,
     "primary_threshold_selected": false,
     "primary_quality_gate_passed": false
+  },
+  "todo_ledger": "phase4/TODO.json",
+  "all_research_todos_complete": false,
+  "primary_semantic_study_started": false,
+  "actual_human_ratings": 0,
+  "phase4_summary": {
+    "scope": "Implemented offline software and reused natural-preview lexical engineering only; primary semantic study unstarted",
+    "adapter_checks": 42,
+    "news_calendar_checks": 18,
+    "embedding_software_checks": 63,
+    "per_encoder_calibration_software_checks": 46,
+    "model_selection_checks": 37,
+    "systems_harness_checks": 50,
+    "ridge_final": {
+      "reference": "phase4/results/execution_engineering_final",
+      "checkpoint_rows": 80,
+      "failures": 0,
+      "zero_admission_rows": 54,
+      "maximum_same_target_head_absolute_difference": 8.326672684688674e-16,
+      "maximum_moment_absolute_difference": 4.440892098500626e-15,
+      "independent_saved_heads_checked": 480,
+      "independent_maximum_head_absolute_difference": 8.881784197001252e-16,
+      "evidence_role": "lexical_engineering_only",
+      "strict_rational_certificate_for_all_heads": false
+    },
+    "convex_final": {
+      "reference": "phase4/results/convex_engineering_release_v2",
+      "checkpoint_rows": 12,
+      "rigorous_optimizer_error_certificates_including_initial": 25,
+      "maximum_certified_parameter_radius_display": 6.729862803437307e-13,
+      "unchanged_release_radius": 1e-08,
+      "zero_admission_rows": 6,
+      "final_failure_events": 0,
+      "earlier_failed_run_source_and_certificate_preserved": "phase4/results/convex_engineering",
+      "scope": "single_output_fractional_label_logistic_on_natural_Civil100_lexical_features",
+      "stack_multioutput_implemented": false,
+      "semantic_study_result": false,
+      "no_reaccess_claim": false,
+      "speedup_claim": false,
+      "checks_file": "phase4/results/convex_engineering_release_v2/convex_checks.json",
+      "explicit_initial_head_saved": true,
+      "intermediate_final_preserved": "phase4/results/convex_engineering_final"
+    },
+    "admission_pack": {
+      "reference": "phase4/results/human_admission_engineering_pack",
+      "selected_natural_preview_pairs": 24,
+      "blank_assignments": 72,
+      "actual_human_responses": 0,
+      "full_former_blocker_context_100_admissions": "pending",
+      "nearest_surviving_selected_context_100_admissions": "pending",
+      "human_dispatch_ready": false
+    },
+    "systems_actual_isolated_primary_method_program_executed": false,
+    "real_transformer_backend_executed": false,
+    "authentic_archive_acceptance_completed": false,
+    "consolidated_independent_review": {
+      "status": "passed",
+      "check_count": 264,
+      "reference": "phase4/independent_review.txt"
+    },
+    "repository_checkpoint": "included_in_current_git_checkpoint; verify remote tree and BACKUP_MANIFEST"
   }
 }

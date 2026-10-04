@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "natural_records": 100,
+  "natural_dimension": 128,
+  "natural_curator": "lexical_engineering_reference_FP64_tau_0.6",
+  "natural_trajectories": 960,
+  "natural_observations_checked": 1792,
+  "natural_candidate_admission_counts_checked": 1344,
+  "source_fixture_observations_checked": 64,
+  "source_fixture_candidate_counts_checked": 12,
+  "source_fixture_scope": "invented IDs/ownership on mathematical adjacency only; no empirical dataset or provenance evidence",
+  "actual_native_source_experiments_run": false,
+  "actual_semantic_experiments_run": false,
+  "reproducible_manifest": true,
+  "paired_R_sensitivity_requests_preserved": true,
+  "cumulative_prefixes_matched_source_volumes_and_remaining_horizons_checked": true,
+  "empty_graph_empty_pool_failed_stress_and_full_deletion_retained": true,
+  "seal_graph_mismatch_and_overwrite_rejected": true,
+  "data_sha256": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9",
+  "manifest_sha256": "0f573800903b66c9c0b41fa67372d6375027edba9f25e6237e0bd2a86917ce9d",
+  "code_sha256": {
+    "phase4/check_requests.py": "7510ea3090bb1ba9f661cd648d90f338d4daa0dba00dc2f0fc4296faef96cc13",
+    "phase4/requests.py": "71b1d40032c64d4a058ee70b647d58a425827aeaeb2fa271037e26059bb6198d"
+  }
+}

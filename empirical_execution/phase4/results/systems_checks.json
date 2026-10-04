@@ -1,0 +1,1749 @@
+{
+  "passed": true,
+  "check_count": 50,
+  "checks": [
+    "default_exactly_five_repetitions_per_method",
+    "all_success_measurements_complete",
+    "randomized_order_prespecified_and_reproducible",
+    "each_repetition_contains_both_methods_once",
+    "fixed_threads_and_hashseed_1",
+    "complete_regular_output_byte_ledger_1",
+    "command_and_input_hashes_1",
+    "fixed_threads_and_hashseed_2",
+    "complete_regular_output_byte_ledger_2",
+    "command_and_input_hashes_2",
+    "fixed_threads_and_hashseed_3",
+    "complete_regular_output_byte_ledger_3",
+    "command_and_input_hashes_3",
+    "fixed_threads_and_hashseed_4",
+    "complete_regular_output_byte_ledger_4",
+    "command_and_input_hashes_4",
+    "fixed_threads_and_hashseed_5",
+    "complete_regular_output_byte_ledger_5",
+    "command_and_input_hashes_5",
+    "fixed_threads_and_hashseed_6",
+    "complete_regular_output_byte_ledger_6",
+    "command_and_input_hashes_6",
+    "fixed_threads_and_hashseed_7",
+    "complete_regular_output_byte_ledger_7",
+    "command_and_input_hashes_7",
+    "fixed_threads_and_hashseed_8",
+    "complete_regular_output_byte_ledger_8",
+    "command_and_input_hashes_8",
+    "fixed_threads_and_hashseed_9",
+    "complete_regular_output_byte_ledger_9",
+    "command_and_input_hashes_9",
+    "fixed_threads_and_hashseed_10",
+    "complete_regular_output_byte_ledger_10",
+    "command_and_input_hashes_10",
+    "all_runs_fresh_distinct_processes",
+    "positive_wait4_RSS_and_charged_end_to_end",
+    "ledger_persistence_receipt_matches",
+    "old_results_never_overwritten",
+    "more_than_five_repetitions_rejected",
+    "zero_timeout_rejected",
+    "unstructured_shell_string_rejected",
+    "nonzero_exit_retained",
+    "signal_retained",
+    "timeout_retained",
+    "launch_failure_retained",
+    "wrong_input_hash_prevents_execution",
+    "output_symlink_incomplete_not_success_evidence",
+    "all_failed_incomplete_trials_remain_in_registry",
+    "declared_input_mutation_retained_as_failure",
+    "scope_never_promotes_software_to_paper_evidence"
+  ],
+  "scope": "software subprocess/measurement checks only; no corpus, model, empirical method comparison, or paper systems run",
+  "temporary_test_outputs_removed_after_check": true,
+  "retained_raw_software_command_reports": [
+    {
+      "schema": "ccu-fresh-process-systems-v1",
+      "started_utc": "2026-10-04T07:05:45.138699+00:00",
+      "spec": {
+        "evidence_role": "software_harness_validation",
+        "methods": [
+          {
+            "method_id": "alpha",
+            "argv": [
+              "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+              "-c",
+              "import json,os,pathlib,sys; p=pathlib.Path(sys.argv[1]); (p/'payload.bin').write_bytes(bytes(257)); (p/'runtime.json').write_text(json.dumps({'pid':os.getpid(),'threads':{k:os.environ.get(k) for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','PYTHONHASHSEED']}})); print('ok')",
+              "{output_dir}"
+            ],
+            "input_files": [
+              {
+                "path": "software_fixture_input.txt",
+                "sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc"
+              }
+            ]
+          },
+          {
+            "method_id": "beta",
+            "argv": [
+              "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+              "-c",
+              "import json,os,pathlib,sys; p=pathlib.Path(sys.argv[1]); (p/'payload.bin').write_bytes(bytes(257)); (p/'runtime.json').write_text(json.dumps({'pid':os.getpid(),'threads':{k:os.environ.get(k) for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','PYTHONHASHSEED']}})); print('ok')",
+              "{output_dir}"
+            ],
+            "input_files": [
+              {
+                "path": "software_fixture_input.txt",
+                "sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc"
+              }
+            ]
+          }
+        ],
+        "timeout_seconds": 3,
+        "threads": 1,
+        "order_seed": 20261004,
+        "repetitions": 5,
+        "termination_grace_seconds": 0.5
+      },
+      "spec_sha256": "82e33c64f892cd1029c0ef5754afeacd91c21d6a6e27eddd37578f615a14b679",
+      "planned_order": [
+        {
+          "repetition": 0,
+          "position": 0,
+          "method_id": "beta"
+        },
+        {
+          "repetition": 0,
+          "position": 1,
+          "method_id": "alpha"
+        },
+        {
+          "repetition": 1,
+          "position": 0,
+          "method_id": "beta"
+        },
+        {
+          "repetition": 1,
+          "position": 1,
+          "method_id": "alpha"
+        },
+        {
+          "repetition": 2,
+          "position": 0,
+          "method_id": "alpha"
+        },
+        {
+          "repetition": 2,
+          "position": 1,
+          "method_id": "beta"
+        },
+        {
+          "repetition": 3,
+          "position": 0,
+          "method_id": "alpha"
+        },
+        {
+          "repetition": 3,
+          "position": 1,
+          "method_id": "beta"
+        },
+        {
+          "repetition": 4,
+          "position": 0,
+          "method_id": "alpha"
+        },
+        {
+          "repetition": 4,
+          "position": 1,
+          "method_id": "beta"
+        }
+      ],
+      "workspace": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13",
+      "fixed_thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1",
+        "PYTHONHASHSEED": "0",
+        "OMP_DYNAMIC": "FALSE",
+        "MKL_DYNAMIC": "FALSE"
+      },
+      "software": {
+        "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.39"
+      },
+      "cpu_affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "harness_code_sha256": "cbff2eb551b91fd446667cdf0507b063f36c6834c0e0e35ac1b0d25c7d8b1f44",
+      "runs": [
+        {
+          "repetition": 0,
+          "position": 0,
+          "method_id": "beta",
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import json,os,pathlib,sys; p=pathlib.Path(sys.argv[1]); (p/'payload.bin').write_bytes(bytes(257)); (p/'runtime.json').write_text(json.dumps({'pid':os.getpid(),'threads':{k:os.environ.get(k) for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','PYTHONHASHSEED']}})); print('ok')",
+            "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-000-beta-repeat-0/artifacts"
+          ],
+          "argv_canonical_utf8_sha256": "284d6bb036036e4edae15999c11f9c76796db0df9649debb15864c9192793e9a",
+          "argv_canonical_utf8_bytes": 485,
+          "argv_template": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import json,os,pathlib,sys; p=pathlib.Path(sys.argv[1]); (p/'payload.bin').write_bytes(bytes(257)); (p/'runtime.json').write_text(json.dumps({'pid':os.getpid(),'threads':{k:os.environ.get(k) for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','PYTHONHASHSEED']}})); print('ok')",
+            "{output_dir}"
+          ],
+          "run_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-000-beta-repeat-0",
+          "output_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-000-beta-repeat-0/artifacts",
+          "status": "success",
+          "returncode": 0,
+          "signal": null,
+          "timed_out": false,
+          "child_peak_rss_bytes": 15073280,
+          "child_peak_rss_raw": 14720,
+          "spawn_to_reap_elapsed_seconds": 0.021033045000876882,
+          "child_user_cpu_seconds": 0.020461,
+          "child_system_cpu_seconds": 0.0,
+          "remaining_process_group_detected": false,
+          "failure_details": [],
+          "inputs_before": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "actual_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "logical_bytes": 45,
+              "matches": true
+            }
+          ],
+          "resolved_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+          "inputs_after": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "actual_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "logical_bytes": 45,
+              "matches": true
+            }
+          ],
+          "declared_inputs_unchanged": true,
+          "output_file_ledger": [
+            {
+              "path": "stderr.log",
+              "logical_bytes": 0,
+              "allocated_bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "path": "stdout.log",
+              "logical_bytes": 3,
+              "allocated_bytes": 4096,
+              "sha256": "dc51b8c96c2d745df3bd5590d990230a482fd247123599548e0632fdbf97fc22"
+            },
+            {
+              "path": "artifacts/payload.bin",
+              "logical_bytes": 257,
+              "allocated_bytes": 4096,
+              "sha256": "6c934d0cdf9dba94b474d6d1929f16739bd9a8ed31d0c3bcaf82c283fb7a3568"
+            },
+            {
+              "path": "artifacts/runtime.json",
+              "logical_bytes": 123,
+              "allocated_bytes": 4096,
+              "sha256": "4e4520cda62ef5ef1689633a15dd7d8d21d12c35bc03842c6c510f48aa99f510"
+            }
+          ],
+          "output_inspection_errors": [],
+          "persistent_output_logical_bytes": 383,
+          "persistent_output_allocated_bytes": 12288,
+          "method_artifact_logical_bytes": 380,
+          "charged_end_to_end_elapsed_seconds": 0.04146886499984248,
+          "measurement_complete": true,
+          "eligible_for_success_timing_summary": true
+        },
+        {
+          "repetition": 0,
+          "position": 1,
+          "method_id": "alpha",
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import json,os,pathlib,sys; p=pathlib.Path(sys.argv[1]); (p/'payload.bin').write_bytes(bytes(257)); (p/'runtime.json').write_text(json.dumps({'pid':os.getpid(),'threads':{k:os.environ.get(k) for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','PYTHONHASHSEED']}})); print('ok')",
+            "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-001-alpha-repeat-0/artifacts"
+          ],
+          "argv_canonical_utf8_sha256": "1ef1fbff47f8b5d447aa08c0d71f093aba8ed2c8ff6272fa33118a7e064bdc13",
+          "argv_canonical_utf8_bytes": 486,
+          "argv_template": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import json,os,pathlib,sys; p=pathlib.Path(sys.argv[1]); (p/'payload.bin').write_bytes(bytes(257)); (p/'runtime.json').write_text(json.dumps({'pid':os.getpid(),'threads':{k:os.environ.get(k) for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','PYTHONHASHSEED']}})); print('ok')",
+            "{output_dir}"
+          ],
+          "run_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-001-alpha-repeat-0",
+          "output_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-001-alpha-repeat-0/artifacts",
+          "status": "success",
+          "returncode": 0,
+          "signal": null,
+          "timed_out": false,
+          "child_peak_rss_bytes": 15130624,
+          "child_peak_rss_raw": 14776,
+          "spawn_to_reap_elapsed_seconds": 0.02083643699916138,
+          "child_user_cpu_seconds": 0.015375,
+          "child_system_cpu_seconds": 0.003849,
+          "remaining_process_group_detected": false,
+          "failure_details": [],
+          "inputs_before": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "actual_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "logical_bytes": 45,
+              "matches": true
+            }
+          ],
+          "resolved_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+          "inputs_after": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "actual_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "logical_bytes": 45,
+              "matches": true
+            }
+          ],
+          "declared_inputs_unchanged": true,
+          "output_file_ledger": [
+            {
+              "path": "stderr.log",
+              "logical_bytes": 0,
+              "allocated_bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "path": "stdout.log",
+              "logical_bytes": 3,
+              "allocated_bytes": 4096,
+              "sha256": "dc51b8c96c2d745df3bd5590d990230a482fd247123599548e0632fdbf97fc22"
+            },
+            {
+              "path": "artifacts/payload.bin",
+              "logical_bytes": 257,
+              "allocated_bytes": 4096,
+              "sha256": "6c934d0cdf9dba94b474d6d1929f16739bd9a8ed31d0c3bcaf82c283fb7a3568"
+            },
+            {
+              "path": "artifacts/runtime.json",
+              "logical_bytes": 123,
+              "allocated_bytes": 4096,
+              "sha256": "461eb2d9fd1c61dee0b733d8b23347c661976e2d82930e0e131d686b56666a2e"
+            }
+          ],
+          "output_inspection_errors": [],
+          "persistent_output_logical_bytes": 383,
+          "persistent_output_allocated_bytes": 12288,
+          "method_artifact_logical_bytes": 380,
+          "charged_end_to_end_elapsed_seconds": 0.04065932899902691,
+          "measurement_complete": true,
+          "eligible_for_success_timing_summary": true
+        },
+        {
+          "repetition": 1,
+          "position": 0,
+          "method_id": "beta",
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import json,os,pathlib,sys; p=pathlib.Path(sys.argv[1]); (p/'payload.bin').write_bytes(bytes(257)); (p/'runtime.json').write_text(json.dumps({'pid':os.getpid(),'threads':{k:os.environ.get(k) for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','PYTHONHASHSEED']}})); print('ok')",
+            "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-002-beta-repeat-1/artifacts"
+          ],
+          "argv_canonical_utf8_sha256": "6cd31e84efb7669ba34f92a382c06572eab42e08a124138120f6d862a412ef68",
+          "argv_canonical_utf8_bytes": 485,
+          "argv_template": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import json,os,pathlib,sys; p=pathlib.Path(sys.argv[1]); (p/'payload.bin').write_bytes(bytes(257)); (p/'runtime.json').write_text(json.dumps({'pid':os.getpid(),'threads':{k:os.environ.get(k) for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','PYTHONHASHSEED']}})); print('ok')",
+            "{output_dir}"
+          ],
+          "run_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-002-beta-repeat-1",
+          "output_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-002-beta-repeat-1/artifacts",
+          "status": "success",
+          "returncode": 0,
+          "signal": null,
+          "timed_out": false,
+          "child_peak_rss_bytes": 15159296,
+          "child_peak_rss_raw": 14804,
+          "spawn_to_reap_elapsed_seconds": 0.020851427998422878,
+          "child_user_cpu_seconds": 0.015891,
+          "child_system_cpu_seconds": 0.003972,
+          "remaining_process_group_detected": false,
+          "failure_details": [],
+          "inputs_before": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "actual_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "logical_bytes": 45,
+              "matches": true
+            }
+          ],
+          "resolved_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+          "inputs_after": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "actual_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "logical_bytes": 45,
+              "matches": true
+            }
+          ],
+          "declared_inputs_unchanged": true,
+          "output_file_ledger": [
+            {
+              "path": "stderr.log",
+              "logical_bytes": 0,
+              "allocated_bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "path": "stdout.log",
+              "logical_bytes": 3,
+              "allocated_bytes": 4096,
+              "sha256": "dc51b8c96c2d745df3bd5590d990230a482fd247123599548e0632fdbf97fc22"
+            },
+            {
+              "path": "artifacts/payload.bin",
+              "logical_bytes": 257,
+              "allocated_bytes": 4096,
+              "sha256": "6c934d0cdf9dba94b474d6d1929f16739bd9a8ed31d0c3bcaf82c283fb7a3568"
+            },
+            {
+              "path": "artifacts/runtime.json",
+              "logical_bytes": 123,
+              "allocated_bytes": 4096,
+              "sha256": "f105f6858b8492bf24316a81edeaa16413d30e0d70b3b1f973403c6c41f33340"
+            }
+          ],
+          "output_inspection_errors": [],
+          "persistent_output_logical_bytes": 383,
+          "persistent_output_allocated_bytes": 12288,
+          "method_artifact_logical_bytes": 380,
+          "charged_end_to_end_elapsed_seconds": 0.04073308700026246,
+          "measurement_complete": true,
+          "eligible_for_success_timing_summary": true
+        },
+        {
+          "repetition": 1,
+          "position": 1,
+          "method_id": "alpha",
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import json,os,pathlib,sys; p=pathlib.Path(sys.argv[1]); (p/'payload.bin').write_bytes(bytes(257)); (p/'runtime.json').write_text(json.dumps({'pid':os.getpid(),'threads':{k:os.environ.get(k) for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','PYTHONHASHSEED']}})); print('ok')",
+            "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-003-alpha-repeat-1/artifacts"
+          ],
+          "argv_canonical_utf8_sha256": "216ea6272968e8278c1c71e5fba8278c95568be8923bb8c4e46c4bb45e9278d8",
+          "argv_canonical_utf8_bytes": 486,
+          "argv_template": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import json,os,pathlib,sys; p=pathlib.Path(sys.argv[1]); (p/'payload.bin').write_bytes(bytes(257)); (p/'runtime.json').write_text(json.dumps({'pid':os.getpid(),'threads':{k:os.environ.get(k) for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','PYTHONHASHSEED']}})); print('ok')",
+            "{output_dir}"
+          ],
+          "run_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-003-alpha-repeat-1",
+          "output_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-003-alpha-repeat-1/artifacts",
+          "status": "success",
+          "returncode": 0,
+          "signal": null,
+          "timed_out": false,
+          "child_peak_rss_bytes": 15175680,
+          "child_peak_rss_raw": 14820,
+          "spawn_to_reap_elapsed_seconds": 0.026024403001429164,
+          "child_user_cpu_seconds": 0.021020999999999998,
+          "child_system_cpu_seconds": 0.0,
+          "remaining_process_group_detected": false,
+          "failure_details": [],
+          "inputs_before": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "actual_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "logical_bytes": 45,
+              "matches": true
+            }
+          ],
+          "resolved_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+          "inputs_after": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "actual_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "logical_bytes": 45,
+              "matches": true
+            }
+          ],
+          "declared_inputs_unchanged": true,
+          "output_file_ledger": [
+            {
+              "path": "stderr.log",
+              "logical_bytes": 0,
+              "allocated_bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "path": "stdout.log",
+              "logical_bytes": 3,
+              "allocated_bytes": 4096,
+              "sha256": "dc51b8c96c2d745df3bd5590d990230a482fd247123599548e0632fdbf97fc22"
+            },
+            {
+              "path": "artifacts/payload.bin",
+              "logical_bytes": 257,
+              "allocated_bytes": 4096,
+              "sha256": "6c934d0cdf9dba94b474d6d1929f16739bd9a8ed31d0c3bcaf82c283fb7a3568"
+            },
+            {
+              "path": "artifacts/runtime.json",
+              "logical_bytes": 123,
+              "allocated_bytes": 4096,
+              "sha256": "e50088ec61c71861f8e57e98db9c2636f8dcb89ca114a1fa05c008379887b6da"
+            }
+          ],
+          "output_inspection_errors": [],
+          "persistent_output_logical_bytes": 383,
+          "persistent_output_allocated_bytes": 12288,
+          "method_artifact_logical_bytes": 380,
+          "charged_end_to_end_elapsed_seconds": 0.04596206200039887,
+          "measurement_complete": true,
+          "eligible_for_success_timing_summary": true
+        },
+        {
+          "repetition": 2,
+          "position": 0,
+          "method_id": "alpha",
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import json,os,pathlib,sys; p=pathlib.Path(sys.argv[1]); (p/'payload.bin').write_bytes(bytes(257)); (p/'runtime.json').write_text(json.dumps({'pid':os.getpid(),'threads':{k:os.environ.get(k) for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','PYTHONHASHSEED']}})); print('ok')",
+            "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-004-alpha-repeat-2/artifacts"
+          ],
+          "argv_canonical_utf8_sha256": "430ea22189a375a00b8e5fb647044ff06f40fdb78f76b5905f0468926669ffc3",
+          "argv_canonical_utf8_bytes": 486,
+          "argv_template": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import json,os,pathlib,sys; p=pathlib.Path(sys.argv[1]); (p/'payload.bin').write_bytes(bytes(257)); (p/'runtime.json').write_text(json.dumps({'pid':os.getpid(),'threads':{k:os.environ.get(k) for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','PYTHONHASHSEED']}})); print('ok')",
+            "{output_dir}"
+          ],
+          "run_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-004-alpha-repeat-2",
+          "output_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-004-alpha-repeat-2/artifacts",
+          "status": "success",
+          "returncode": 0,
+          "signal": null,
+          "timed_out": false,
+          "child_peak_rss_bytes": 15192064,
+          "child_peak_rss_raw": 14836,
+          "spawn_to_reap_elapsed_seconds": 0.026168878999669687,
+          "child_user_cpu_seconds": 0.012131,
+          "child_system_cpu_seconds": 0.008565,
+          "remaining_process_group_detected": false,
+          "failure_details": [],
+          "inputs_before": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "actual_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "logical_bytes": 45,
+              "matches": true
+            }
+          ],
+          "resolved_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+          "inputs_after": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "actual_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "logical_bytes": 45,
+              "matches": true
+            }
+          ],
+          "declared_inputs_unchanged": true,
+          "output_file_ledger": [
+            {
+              "path": "stderr.log",
+              "logical_bytes": 0,
+              "allocated_bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "path": "stdout.log",
+              "logical_bytes": 3,
+              "allocated_bytes": 4096,
+              "sha256": "dc51b8c96c2d745df3bd5590d990230a482fd247123599548e0632fdbf97fc22"
+            },
+            {
+              "path": "artifacts/payload.bin",
+              "logical_bytes": 257,
+              "allocated_bytes": 4096,
+              "sha256": "6c934d0cdf9dba94b474d6d1929f16739bd9a8ed31d0c3bcaf82c283fb7a3568"
+            },
+            {
+              "path": "artifacts/runtime.json",
+              "logical_bytes": 124,
+              "allocated_bytes": 4096,
+              "sha256": "9ea2002eadb5d39d244081f10db04169b8d7009e85644d91eea23da4b9596296"
+            }
+          ],
+          "output_inspection_errors": [],
+          "persistent_output_logical_bytes": 384,
+          "persistent_output_allocated_bytes": 12288,
+          "method_artifact_logical_bytes": 381,
+          "charged_end_to_end_elapsed_seconds": 0.04660169499948097,
+          "measurement_complete": true,
+          "eligible_for_success_timing_summary": true
+        },
+        {
+          "repetition": 2,
+          "position": 1,
+          "method_id": "beta",
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import json,os,pathlib,sys; p=pathlib.Path(sys.argv[1]); (p/'payload.bin').write_bytes(bytes(257)); (p/'runtime.json').write_text(json.dumps({'pid':os.getpid(),'threads':{k:os.environ.get(k) for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','PYTHONHASHSEED']}})); print('ok')",
+            "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-005-beta-repeat-2/artifacts"
+          ],
+          "argv_canonical_utf8_sha256": "06f7f717b8f881352d131bd021ba9f2759bc2366c0ddd9059f08bded25dfa0b2",
+          "argv_canonical_utf8_bytes": 485,
+          "argv_template": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import json,os,pathlib,sys; p=pathlib.Path(sys.argv[1]); (p/'payload.bin').write_bytes(bytes(257)); (p/'runtime.json').write_text(json.dumps({'pid':os.getpid(),'threads':{k:os.environ.get(k) for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','PYTHONHASHSEED']}})); print('ok')",
+            "{output_dir}"
+          ],
+          "run_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-005-beta-repeat-2",
+          "output_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-005-beta-repeat-2/artifacts",
+          "status": "success",
+          "returncode": 0,
+          "signal": null,
+          "timed_out": false,
+          "child_peak_rss_bytes": 15204352,
+          "child_peak_rss_raw": 14848,
+          "spawn_to_reap_elapsed_seconds": 0.021003041001677047,
+          "child_user_cpu_seconds": 0.01605,
+          "child_system_cpu_seconds": 0.00404,
+          "remaining_process_group_detected": false,
+          "failure_details": [],
+          "inputs_before": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "actual_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "logical_bytes": 45,
+              "matches": true
+            }
+          ],
+          "resolved_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+          "inputs_after": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "actual_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "logical_bytes": 45,
+              "matches": true
+            }
+          ],
+          "declared_inputs_unchanged": true,
+          "output_file_ledger": [
+            {
+              "path": "stderr.log",
+              "logical_bytes": 0,
+              "allocated_bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "path": "stdout.log",
+              "logical_bytes": 3,
+              "allocated_bytes": 4096,
+              "sha256": "dc51b8c96c2d745df3bd5590d990230a482fd247123599548e0632fdbf97fc22"
+            },
+            {
+              "path": "artifacts/payload.bin",
+              "logical_bytes": 257,
+              "allocated_bytes": 4096,
+              "sha256": "6c934d0cdf9dba94b474d6d1929f16739bd9a8ed31d0c3bcaf82c283fb7a3568"
+            },
+            {
+              "path": "artifacts/runtime.json",
+              "logical_bytes": 124,
+              "allocated_bytes": 4096,
+              "sha256": "8f766f5c21cf9e96c6e09b5f4cc233125f0dfd6d6bc2b12c4f1280d84b0c6ef1"
+            }
+          ],
+          "output_inspection_errors": [],
+          "persistent_output_logical_bytes": 384,
+          "persistent_output_allocated_bytes": 12288,
+          "method_artifact_logical_bytes": 381,
+          "charged_end_to_end_elapsed_seconds": 0.041743718000361696,
+          "measurement_complete": true,
+          "eligible_for_success_timing_summary": true
+        },
+        {
+          "repetition": 3,
+          "position": 0,
+          "method_id": "alpha",
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import json,os,pathlib,sys; p=pathlib.Path(sys.argv[1]); (p/'payload.bin').write_bytes(bytes(257)); (p/'runtime.json').write_text(json.dumps({'pid':os.getpid(),'threads':{k:os.environ.get(k) for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','PYTHONHASHSEED']}})); print('ok')",
+            "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-006-alpha-repeat-3/artifacts"
+          ],
+          "argv_canonical_utf8_sha256": "d1214be86e5cc771f34d9c4a68895a7d22c67a358c1fc8ce0c613117e686c9b5",
+          "argv_canonical_utf8_bytes": 486,
+          "argv_template": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import json,os,pathlib,sys; p=pathlib.Path(sys.argv[1]); (p/'payload.bin').write_bytes(bytes(257)); (p/'runtime.json').write_text(json.dumps({'pid':os.getpid(),'threads':{k:os.environ.get(k) for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','PYTHONHASHSEED']}})); print('ok')",
+            "{output_dir}"
+          ],
+          "run_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-006-alpha-repeat-3",
+          "output_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-006-alpha-repeat-3/artifacts",
+          "status": "success",
+          "returncode": 0,
+          "signal": null,
+          "timed_out": false,
+          "child_peak_rss_bytes": 15233024,
+          "child_peak_rss_raw": 14876,
+          "spawn_to_reap_elapsed_seconds": 0.020991813998989528,
+          "child_user_cpu_seconds": 0.016163999999999998,
+          "child_system_cpu_seconds": 0.0040409999999999995,
+          "remaining_process_group_detected": false,
+          "failure_details": [],
+          "inputs_before": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "actual_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "logical_bytes": 45,
+              "matches": true
+            }
+          ],
+          "resolved_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+          "inputs_after": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "actual_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "logical_bytes": 45,
+              "matches": true
+            }
+          ],
+          "declared_inputs_unchanged": true,
+          "output_file_ledger": [
+            {
+              "path": "stderr.log",
+              "logical_bytes": 0,
+              "allocated_bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "path": "stdout.log",
+              "logical_bytes": 3,
+              "allocated_bytes": 4096,
+              "sha256": "dc51b8c96c2d745df3bd5590d990230a482fd247123599548e0632fdbf97fc22"
+            },
+            {
+              "path": "artifacts/payload.bin",
+              "logical_bytes": 257,
+              "allocated_bytes": 4096,
+              "sha256": "6c934d0cdf9dba94b474d6d1929f16739bd9a8ed31d0c3bcaf82c283fb7a3568"
+            },
+            {
+              "path": "artifacts/runtime.json",
+              "logical_bytes": 124,
+              "allocated_bytes": 4096,
+              "sha256": "847fd3a64bff754c1a4753334b476f84504d9cc7e63f09f8ca2d0914cb8fe154"
+            }
+          ],
+          "output_inspection_errors": [],
+          "persistent_output_logical_bytes": 384,
+          "persistent_output_allocated_bytes": 12288,
+          "method_artifact_logical_bytes": 381,
+          "charged_end_to_end_elapsed_seconds": 0.04163432699897385,
+          "measurement_complete": true,
+          "eligible_for_success_timing_summary": true
+        },
+        {
+          "repetition": 3,
+          "position": 1,
+          "method_id": "beta",
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import json,os,pathlib,sys; p=pathlib.Path(sys.argv[1]); (p/'payload.bin').write_bytes(bytes(257)); (p/'runtime.json').write_text(json.dumps({'pid':os.getpid(),'threads':{k:os.environ.get(k) for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','PYTHONHASHSEED']}})); print('ok')",
+            "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-007-beta-repeat-3/artifacts"
+          ],
+          "argv_canonical_utf8_sha256": "54de1ff95468bf2e8d0d39357db9fc4ff4a54d9f080f9a163f566db624040f3c",
+          "argv_canonical_utf8_bytes": 485,
+          "argv_template": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import json,os,pathlib,sys; p=pathlib.Path(sys.argv[1]); (p/'payload.bin').write_bytes(bytes(257)); (p/'runtime.json').write_text(json.dumps({'pid':os.getpid(),'threads':{k:os.environ.get(k) for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','PYTHONHASHSEED']}})); print('ok')",
+            "{output_dir}"
+          ],
+          "run_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-007-beta-repeat-3",
+          "output_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-007-beta-repeat-3/artifacts",
+          "status": "success",
+          "returncode": 0,
+          "signal": null,
+          "timed_out": false,
+          "child_peak_rss_bytes": 15257600,
+          "child_peak_rss_raw": 14900,
+          "spawn_to_reap_elapsed_seconds": 0.020987748001061846,
+          "child_user_cpu_seconds": 0.008036,
+          "child_system_cpu_seconds": 0.012034,
+          "remaining_process_group_detected": false,
+          "failure_details": [],
+          "inputs_before": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "actual_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "logical_bytes": 45,
+              "matches": true
+            }
+          ],
+          "resolved_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+          "inputs_after": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "actual_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "logical_bytes": 45,
+              "matches": true
+            }
+          ],
+          "declared_inputs_unchanged": true,
+          "output_file_ledger": [
+            {
+              "path": "stderr.log",
+              "logical_bytes": 0,
+              "allocated_bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "path": "stdout.log",
+              "logical_bytes": 3,
+              "allocated_bytes": 4096,
+              "sha256": "dc51b8c96c2d745df3bd5590d990230a482fd247123599548e0632fdbf97fc22"
+            },
+            {
+              "path": "artifacts/payload.bin",
+              "logical_bytes": 257,
+              "allocated_bytes": 4096,
+              "sha256": "6c934d0cdf9dba94b474d6d1929f16739bd9a8ed31d0c3bcaf82c283fb7a3568"
+            },
+            {
+              "path": "artifacts/runtime.json",
+              "logical_bytes": 124,
+              "allocated_bytes": 4096,
+              "sha256": "20dc3a9bdab3c55752e7fae519fb4a9f25aedd135a7678b257ffdcd69aba7c37"
+            }
+          ],
+          "output_inspection_errors": [],
+          "persistent_output_logical_bytes": 384,
+          "persistent_output_allocated_bytes": 12288,
+          "method_artifact_logical_bytes": 381,
+          "charged_end_to_end_elapsed_seconds": 0.04126684900074906,
+          "measurement_complete": true,
+          "eligible_for_success_timing_summary": true
+        },
+        {
+          "repetition": 4,
+          "position": 0,
+          "method_id": "alpha",
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import json,os,pathlib,sys; p=pathlib.Path(sys.argv[1]); (p/'payload.bin').write_bytes(bytes(257)); (p/'runtime.json').write_text(json.dumps({'pid':os.getpid(),'threads':{k:os.environ.get(k) for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','PYTHONHASHSEED']}})); print('ok')",
+            "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-008-alpha-repeat-4/artifacts"
+          ],
+          "argv_canonical_utf8_sha256": "1a8b135f554fdb4997ba7e165d0d17f8d8b5e69fbe1cc726920055c686f15525",
+          "argv_canonical_utf8_bytes": 486,
+          "argv_template": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import json,os,pathlib,sys; p=pathlib.Path(sys.argv[1]); (p/'payload.bin').write_bytes(bytes(257)); (p/'runtime.json').write_text(json.dumps({'pid':os.getpid(),'threads':{k:os.environ.get(k) for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','PYTHONHASHSEED']}})); print('ok')",
+            "{output_dir}"
+          ],
+          "run_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-008-alpha-repeat-4",
+          "output_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-008-alpha-repeat-4/artifacts",
+          "status": "success",
+          "returncode": 0,
+          "signal": null,
+          "timed_out": false,
+          "child_peak_rss_bytes": 15269888,
+          "child_peak_rss_raw": 14912,
+          "spawn_to_reap_elapsed_seconds": 0.021071320999908494,
+          "child_user_cpu_seconds": 0.01232,
+          "child_system_cpu_seconds": 0.008222,
+          "remaining_process_group_detected": false,
+          "failure_details": [],
+          "inputs_before": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "actual_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "logical_bytes": 45,
+              "matches": true
+            }
+          ],
+          "resolved_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+          "inputs_after": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "actual_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "logical_bytes": 45,
+              "matches": true
+            }
+          ],
+          "declared_inputs_unchanged": true,
+          "output_file_ledger": [
+            {
+              "path": "stderr.log",
+              "logical_bytes": 0,
+              "allocated_bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "path": "stdout.log",
+              "logical_bytes": 3,
+              "allocated_bytes": 4096,
+              "sha256": "dc51b8c96c2d745df3bd5590d990230a482fd247123599548e0632fdbf97fc22"
+            },
+            {
+              "path": "artifacts/payload.bin",
+              "logical_bytes": 257,
+              "allocated_bytes": 4096,
+              "sha256": "6c934d0cdf9dba94b474d6d1929f16739bd9a8ed31d0c3bcaf82c283fb7a3568"
+            },
+            {
+              "path": "artifacts/runtime.json",
+              "logical_bytes": 124,
+              "allocated_bytes": 4096,
+              "sha256": "315bd38c20c2a86acae0d5e1b0e87b5104102241472aee6dfcc7f17123a9e9b6"
+            }
+          ],
+          "output_inspection_errors": [],
+          "persistent_output_logical_bytes": 384,
+          "persistent_output_allocated_bytes": 12288,
+          "method_artifact_logical_bytes": 381,
+          "charged_end_to_end_elapsed_seconds": 0.04155290699964098,
+          "measurement_complete": true,
+          "eligible_for_success_timing_summary": true
+        },
+        {
+          "repetition": 4,
+          "position": 1,
+          "method_id": "beta",
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import json,os,pathlib,sys; p=pathlib.Path(sys.argv[1]); (p/'payload.bin').write_bytes(bytes(257)); (p/'runtime.json').write_text(json.dumps({'pid':os.getpid(),'threads':{k:os.environ.get(k) for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','PYTHONHASHSEED']}})); print('ok')",
+            "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-009-beta-repeat-4/artifacts"
+          ],
+          "argv_canonical_utf8_sha256": "8db7b310c4a37d791e546bfbe2d3631796406895e50fe569876287b3b63f3576",
+          "argv_canonical_utf8_bytes": 485,
+          "argv_template": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import json,os,pathlib,sys; p=pathlib.Path(sys.argv[1]); (p/'payload.bin').write_bytes(bytes(257)); (p/'runtime.json').write_text(json.dumps({'pid':os.getpid(),'threads':{k:os.environ.get(k) for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','PYTHONHASHSEED']}})); print('ok')",
+            "{output_dir}"
+          ],
+          "run_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-009-beta-repeat-4",
+          "output_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/success/run-009-beta-repeat-4/artifacts",
+          "status": "success",
+          "returncode": 0,
+          "signal": null,
+          "timed_out": false,
+          "child_peak_rss_bytes": 15302656,
+          "child_peak_rss_raw": 14944,
+          "spawn_to_reap_elapsed_seconds": 0.0413065259999712,
+          "child_user_cpu_seconds": 0.032605999999999996,
+          "child_system_cpu_seconds": 0.007267,
+          "remaining_process_group_detected": false,
+          "failure_details": [],
+          "inputs_before": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "actual_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "logical_bytes": 45,
+              "matches": true
+            }
+          ],
+          "resolved_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+          "inputs_after": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "actual_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "logical_bytes": 45,
+              "matches": true
+            }
+          ],
+          "declared_inputs_unchanged": true,
+          "output_file_ledger": [
+            {
+              "path": "stderr.log",
+              "logical_bytes": 0,
+              "allocated_bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "path": "stdout.log",
+              "logical_bytes": 3,
+              "allocated_bytes": 4096,
+              "sha256": "dc51b8c96c2d745df3bd5590d990230a482fd247123599548e0632fdbf97fc22"
+            },
+            {
+              "path": "artifacts/payload.bin",
+              "logical_bytes": 257,
+              "allocated_bytes": 4096,
+              "sha256": "6c934d0cdf9dba94b474d6d1929f16739bd9a8ed31d0c3bcaf82c283fb7a3568"
+            },
+            {
+              "path": "artifacts/runtime.json",
+              "logical_bytes": 124,
+              "allocated_bytes": 4096,
+              "sha256": "a165bda808b669cd31159e773affb628a8cd74fe55e56274adadf4cf936ff985"
+            }
+          ],
+          "output_inspection_errors": [],
+          "persistent_output_logical_bytes": 384,
+          "persistent_output_allocated_bytes": 12288,
+          "method_artifact_logical_bytes": 381,
+          "charged_end_to_end_elapsed_seconds": 0.06197343499843555,
+          "measurement_complete": true,
+          "eligible_for_success_timing_summary": true
+        }
+      ],
+      "limits": {
+        "repetitions_max": 5,
+        "per_child_timeout_seconds": 3,
+        "termination_grace_seconds": 0.5,
+        "memory_limit_enforced": false,
+        "disk_limit_enforced": false,
+        "filesystem_or_network_security_sandbox": false
+      },
+      "measurement_contract": {
+        "charged_elapsed": "per_run_from_before_input_hashing_and_directory_setup_through_spawn_wait_output_fsync_hashing_and_post_input_verification",
+        "peak_RSS": "POSIX_wait4_ru_maxrss_child_high_water_mark_not_sum_or_simultaneous_process_tree_peak",
+        "output_bytes": "regular_files_in_declared_run_directory_including_stdout_stderr; ledger_files_charged_separately; undeclared_writes_not_measurable",
+        "process_state": "fresh_process_and_output_directory_every_repetition; OS_page_cache_not_flushed; no_competing_job_exclusion_enforced",
+        "input_access": "all_supplied_input_files_hashed_before_and_after; commands_still_retain_normal_caller_permissions"
+      },
+      "method_code_pinning_completeness_verified": false,
+      "per_method_comparative_isolation_verified": false,
+      "confirmatory_study_ready": false,
+      "paper_systems_result": false,
+      "total_benchmark_elapsed_seconds_before_final_checkpoint": 0.45271248899916827,
+      "successful_complete_runs": 10,
+      "failed_or_incomplete_runs": 0,
+      "sha256": "51c2bf23189b7259b259d0d500766a48c885d2f231fd2f198467a4ed3abc27c0"
+    },
+    {
+      "schema": "ccu-fresh-process-systems-v1",
+      "started_utc": "2026-10-04T07:05:45.594221+00:00",
+      "spec": {
+        "evidence_role": "software_harness_validation",
+        "methods": [
+          {
+            "method_id": "exit7",
+            "argv": [
+              "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+              "-c",
+              "import sys; print('retained failure'); sys.exit(7)",
+              "{output_dir}"
+            ],
+            "input_files": []
+          },
+          {
+            "method_id": "signal",
+            "argv": [
+              "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+              "-c",
+              "import os,signal; os.kill(os.getpid(),signal.SIGTERM)",
+              "{output_dir}"
+            ],
+            "input_files": []
+          },
+          {
+            "method_id": "timeout",
+            "argv": [
+              "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+              "-c",
+              "import time; time.sleep(2)",
+              "{output_dir}"
+            ],
+            "input_files": []
+          },
+          {
+            "method_id": "missing_executable",
+            "argv": [
+              "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/no-such-executable"
+            ],
+            "input_files": []
+          },
+          {
+            "method_id": "bad_hash",
+            "argv": [
+              "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+              "-c",
+              "raise AssertionError('must not run')",
+              "{output_dir}"
+            ],
+            "input_files": [
+              {
+                "path": "software_fixture_input.txt",
+                "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              }
+            ]
+          },
+          {
+            "method_id": "output_symlink",
+            "argv": [
+              "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+              "-c",
+              "import pathlib,sys; (pathlib.Path(sys.argv[1])/'unmeasured-link').symlink_to('../stdout.log')",
+              "{output_dir}"
+            ],
+            "input_files": []
+          }
+        ],
+        "timeout_seconds": 0.15,
+        "threads": 1,
+        "order_seed": 20261004,
+        "repetitions": 1,
+        "termination_grace_seconds": 0.1
+      },
+      "spec_sha256": "b73c3b9e78a50ebcc23674d879e03db0e68f23983d5dae51a9d9aea60a07cb4d",
+      "planned_order": [
+        {
+          "repetition": 0,
+          "position": 0,
+          "method_id": "signal"
+        },
+        {
+          "repetition": 0,
+          "position": 1,
+          "method_id": "output_symlink"
+        },
+        {
+          "repetition": 0,
+          "position": 2,
+          "method_id": "timeout"
+        },
+        {
+          "repetition": 0,
+          "position": 3,
+          "method_id": "missing_executable"
+        },
+        {
+          "repetition": 0,
+          "position": 4,
+          "method_id": "bad_hash"
+        },
+        {
+          "repetition": 0,
+          "position": 5,
+          "method_id": "exit7"
+        }
+      ],
+      "workspace": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13",
+      "fixed_thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1",
+        "PYTHONHASHSEED": "0",
+        "OMP_DYNAMIC": "FALSE",
+        "MKL_DYNAMIC": "FALSE"
+      },
+      "software": {
+        "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.39"
+      },
+      "cpu_affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "harness_code_sha256": "cbff2eb551b91fd446667cdf0507b063f36c6834c0e0e35ac1b0d25c7d8b1f44",
+      "runs": [
+        {
+          "repetition": 0,
+          "position": 0,
+          "method_id": "signal",
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import os,signal; os.kill(os.getpid(),signal.SIGTERM)",
+            "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/failures/run-000-signal-repeat-0/artifacts"
+          ],
+          "argv_canonical_utf8_sha256": "1badbbdaedf8d60af3e583a8e56b4414e01e3a0361b32fa9f8113be5f4d2c34d",
+          "argv_canonical_utf8_bytes": 247,
+          "argv_template": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import os,signal; os.kill(os.getpid(),signal.SIGTERM)",
+            "{output_dir}"
+          ],
+          "run_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/failures/run-000-signal-repeat-0",
+          "output_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/failures/run-000-signal-repeat-0/artifacts",
+          "status": "signal",
+          "returncode": -15,
+          "signal": 15,
+          "timed_out": false,
+          "child_peak_rss_bytes": 15310848,
+          "child_peak_rss_raw": 14952,
+          "spawn_to_reap_elapsed_seconds": 0.015856320000239066,
+          "child_user_cpu_seconds": 0.00626,
+          "child_system_cpu_seconds": 0.006279,
+          "remaining_process_group_detected": false,
+          "failure_details": [],
+          "inputs_before": [],
+          "resolved_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+          "inputs_after": [],
+          "declared_inputs_unchanged": true,
+          "output_file_ledger": [
+            {
+              "path": "stderr.log",
+              "logical_bytes": 0,
+              "allocated_bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "path": "stdout.log",
+              "logical_bytes": 0,
+              "allocated_bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            }
+          ],
+          "output_inspection_errors": [],
+          "persistent_output_logical_bytes": 0,
+          "persistent_output_allocated_bytes": 0,
+          "method_artifact_logical_bytes": 0,
+          "charged_end_to_end_elapsed_seconds": 0.036369053999806056,
+          "measurement_complete": true,
+          "eligible_for_success_timing_summary": false
+        },
+        {
+          "repetition": 0,
+          "position": 1,
+          "method_id": "output_symlink",
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import pathlib,sys; (pathlib.Path(sys.argv[1])/'unmeasured-link').symlink_to('../stdout.log')",
+            "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/failures/run-001-output_symlink-repeat-0/artifacts"
+          ],
+          "argv_canonical_utf8_sha256": "b9859ea7458f799a0d9b2ee67881b2852c20165b6a84157fed39165d3cb6bbeb",
+          "argv_canonical_utf8_bytes": 295,
+          "argv_template": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import pathlib,sys; (pathlib.Path(sys.argv[1])/'unmeasured-link').symlink_to('../stdout.log')",
+            "{output_dir}"
+          ],
+          "run_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/failures/run-001-output_symlink-repeat-0",
+          "output_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/failures/run-001-output_symlink-repeat-0/artifacts",
+          "status": "success",
+          "returncode": 0,
+          "signal": null,
+          "timed_out": false,
+          "child_peak_rss_bytes": 15327232,
+          "child_peak_rss_raw": 14968,
+          "spawn_to_reap_elapsed_seconds": 0.021003131001634756,
+          "child_user_cpu_seconds": 0.014723,
+          "child_system_cpu_seconds": 0.0036959999999999996,
+          "remaining_process_group_detected": false,
+          "failure_details": [],
+          "inputs_before": [],
+          "resolved_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+          "inputs_after": [],
+          "declared_inputs_unchanged": true,
+          "output_file_ledger": [
+            {
+              "path": "stderr.log",
+              "logical_bytes": 0,
+              "allocated_bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "path": "stdout.log",
+              "logical_bytes": 0,
+              "allocated_bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            }
+          ],
+          "output_inspection_errors": [
+            {
+              "path": "artifacts/unmeasured-link",
+              "error": "nonregular_output_not_measured"
+            }
+          ],
+          "persistent_output_logical_bytes": 0,
+          "persistent_output_allocated_bytes": 0,
+          "method_artifact_logical_bytes": 0,
+          "charged_end_to_end_elapsed_seconds": 0.04107755099903443,
+          "measurement_complete": false,
+          "eligible_for_success_timing_summary": false
+        },
+        {
+          "repetition": 0,
+          "position": 2,
+          "method_id": "timeout",
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import time; time.sleep(2)",
+            "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/failures/run-002-timeout-repeat-0/artifacts"
+          ],
+          "argv_canonical_utf8_sha256": "af93261b9b9993e25a2c65cce3a01378bafd2654524efb0f7372d53960e7b3c9",
+          "argv_canonical_utf8_bytes": 221,
+          "argv_template": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import time; time.sleep(2)",
+            "{output_dir}"
+          ],
+          "run_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/failures/run-002-timeout-repeat-0",
+          "output_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/failures/run-002-timeout-repeat-0/artifacts",
+          "status": "timeout",
+          "returncode": -15,
+          "signal": 15,
+          "timed_out": true,
+          "child_peak_rss_bytes": 15327232,
+          "child_peak_rss_raw": 14968,
+          "spawn_to_reap_elapsed_seconds": 0.15825219600083074,
+          "child_user_cpu_seconds": 0.004519,
+          "child_system_cpu_seconds": 0.004519,
+          "remaining_process_group_detected": false,
+          "failure_details": [],
+          "inputs_before": [],
+          "resolved_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+          "inputs_after": [],
+          "declared_inputs_unchanged": true,
+          "output_file_ledger": [
+            {
+              "path": "stderr.log",
+              "logical_bytes": 0,
+              "allocated_bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "path": "stdout.log",
+              "logical_bytes": 0,
+              "allocated_bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            }
+          ],
+          "output_inspection_errors": [],
+          "persistent_output_logical_bytes": 0,
+          "persistent_output_allocated_bytes": 0,
+          "method_artifact_logical_bytes": 0,
+          "charged_end_to_end_elapsed_seconds": 0.17819459400016058,
+          "measurement_complete": true,
+          "eligible_for_success_timing_summary": false
+        },
+        {
+          "repetition": 0,
+          "position": 3,
+          "method_id": "missing_executable",
+          "argv": [
+            "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/no-such-executable"
+          ],
+          "argv_canonical_utf8_sha256": "ed7263a3448e5595d9118d72b995ea16bc68b31d74b5abfd88edaf0a851b8f23",
+          "argv_canonical_utf8_bytes": 86,
+          "argv_template": [
+            "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/no-such-executable"
+          ],
+          "run_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/failures/run-003-missing_executable-repeat-0",
+          "output_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/failures/run-003-missing_executable-repeat-0/artifacts",
+          "status": "launch_or_io_failure",
+          "returncode": null,
+          "signal": null,
+          "timed_out": false,
+          "child_peak_rss_bytes": null,
+          "child_peak_rss_raw": null,
+          "spawn_to_reap_elapsed_seconds": null,
+          "child_user_cpu_seconds": null,
+          "child_system_cpu_seconds": null,
+          "remaining_process_group_detected": false,
+          "failure_details": [
+            "FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/no-such-executable'"
+          ],
+          "inputs_before": [],
+          "inputs_after": [],
+          "declared_inputs_unchanged": true,
+          "output_file_ledger": [
+            {
+              "path": "stderr.log",
+              "logical_bytes": 0,
+              "allocated_bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "path": "stdout.log",
+              "logical_bytes": 0,
+              "allocated_bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            }
+          ],
+          "output_inspection_errors": [],
+          "persistent_output_logical_bytes": 0,
+          "persistent_output_allocated_bytes": 0,
+          "method_artifact_logical_bytes": 0,
+          "charged_end_to_end_elapsed_seconds": 0.0009214399997290457,
+          "measurement_complete": true,
+          "eligible_for_success_timing_summary": false
+        },
+        {
+          "repetition": 0,
+          "position": 4,
+          "method_id": "bad_hash",
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "raise AssertionError('must not run')",
+            "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/failures/run-004-bad_hash-repeat-0/artifacts"
+          ],
+          "argv_canonical_utf8_sha256": "3fc4538532635057ed61a0a0b2feb19c5ef6a3e3ce5c8ae2d9a2449115783c0d",
+          "argv_canonical_utf8_bytes": 232,
+          "argv_template": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "raise AssertionError('must not run')",
+            "{output_dir}"
+          ],
+          "run_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/failures/run-004-bad_hash-repeat-0",
+          "output_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/failures/run-004-bad_hash-repeat-0/artifacts",
+          "status": "input_changed_or_mismatched",
+          "returncode": null,
+          "signal": null,
+          "timed_out": false,
+          "child_peak_rss_bytes": null,
+          "child_peak_rss_raw": null,
+          "spawn_to_reap_elapsed_seconds": null,
+          "child_user_cpu_seconds": null,
+          "child_system_cpu_seconds": null,
+          "remaining_process_group_detected": false,
+          "failure_details": [],
+          "inputs_before": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "actual_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "logical_bytes": 45,
+              "matches": false
+            }
+          ],
+          "inputs_after": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "actual_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "logical_bytes": 45,
+              "matches": false
+            }
+          ],
+          "declared_inputs_unchanged": false,
+          "status_before_input_check": "input_hash_mismatch",
+          "output_file_ledger": [],
+          "output_inspection_errors": [],
+          "persistent_output_logical_bytes": 0,
+          "persistent_output_allocated_bytes": 0,
+          "method_artifact_logical_bytes": 0,
+          "charged_end_to_end_elapsed_seconds": 0.0003218809997633798,
+          "measurement_complete": false,
+          "eligible_for_success_timing_summary": false
+        },
+        {
+          "repetition": 0,
+          "position": 5,
+          "method_id": "exit7",
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import sys; print('retained failure'); sys.exit(7)",
+            "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/failures/run-005-exit7-repeat-0/artifacts"
+          ],
+          "argv_canonical_utf8_sha256": "affda2a9285c3cd0260d929b8ce47f91ad5953d554d6b45d49b715af19f46267",
+          "argv_canonical_utf8_bytes": 243,
+          "argv_template": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import sys; print('retained failure'); sys.exit(7)",
+            "{output_dir}"
+          ],
+          "run_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/failures/run-005-exit7-repeat-0",
+          "output_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/failures/run-005-exit7-repeat-0/artifacts",
+          "status": "nonzero_exit",
+          "returncode": 7,
+          "signal": null,
+          "timed_out": false,
+          "child_peak_rss_bytes": 15331328,
+          "child_peak_rss_raw": 14972,
+          "spawn_to_reap_elapsed_seconds": 0.010628370999256731,
+          "child_user_cpu_seconds": 0.006821,
+          "child_system_cpu_seconds": 0.00347,
+          "remaining_process_group_detected": false,
+          "failure_details": [],
+          "inputs_before": [],
+          "resolved_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+          "inputs_after": [],
+          "declared_inputs_unchanged": true,
+          "output_file_ledger": [
+            {
+              "path": "stderr.log",
+              "logical_bytes": 0,
+              "allocated_bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "path": "stdout.log",
+              "logical_bytes": 17,
+              "allocated_bytes": 4096,
+              "sha256": "3123d875dba9a1c041ec1d38bf4bab8e70ed17f6bd02ea3cf44e905e22645452"
+            }
+          ],
+          "output_inspection_errors": [],
+          "persistent_output_logical_bytes": 17,
+          "persistent_output_allocated_bytes": 4096,
+          "method_artifact_logical_bytes": 0,
+          "charged_end_to_end_elapsed_seconds": 0.030689821998748812,
+          "measurement_complete": true,
+          "eligible_for_success_timing_summary": false
+        }
+      ],
+      "limits": {
+        "repetitions_max": 5,
+        "per_child_timeout_seconds": 0.15,
+        "termination_grace_seconds": 0.1,
+        "memory_limit_enforced": false,
+        "disk_limit_enforced": false,
+        "filesystem_or_network_security_sandbox": false
+      },
+      "measurement_contract": {
+        "charged_elapsed": "per_run_from_before_input_hashing_and_directory_setup_through_spawn_wait_output_fsync_hashing_and_post_input_verification",
+        "peak_RSS": "POSIX_wait4_ru_maxrss_child_high_water_mark_not_sum_or_simultaneous_process_tree_peak",
+        "output_bytes": "regular_files_in_declared_run_directory_including_stdout_stderr; ledger_files_charged_separately; undeclared_writes_not_measurable",
+        "process_state": "fresh_process_and_output_directory_every_repetition; OS_page_cache_not_flushed; no_competing_job_exclusion_enforced",
+        "input_access": "all_supplied_input_files_hashed_before_and_after; commands_still_retain_normal_caller_permissions"
+      },
+      "method_code_pinning_completeness_verified": false,
+      "per_method_comparative_isolation_verified": false,
+      "confirmatory_study_ready": false,
+      "paper_systems_result": false,
+      "total_benchmark_elapsed_seconds_before_final_checkpoint": 0.29099924100046337,
+      "successful_complete_runs": 0,
+      "failed_or_incomplete_runs": 6,
+      "sha256": "572d6d6fdb9e031424b6027942cd9a2310f0ca8e4cd4b534ca3db62d42f50b8b"
+    },
+    {
+      "schema": "ccu-fresh-process-systems-v1",
+      "started_utc": "2026-10-04T07:05:45.886090+00:00",
+      "spec": {
+        "evidence_role": "software_harness_validation",
+        "methods": [
+          {
+            "method_id": "mutate",
+            "argv": [
+              "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+              "-c",
+              "import pathlib; pathlib.Path('software_fixture_input.txt').write_text('changed')",
+              "{output_dir}"
+            ],
+            "input_files": [
+              {
+                "path": "software_fixture_input.txt",
+                "sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc"
+              }
+            ]
+          }
+        ],
+        "timeout_seconds": 3,
+        "threads": 1,
+        "order_seed": 20261004,
+        "repetitions": 1,
+        "termination_grace_seconds": 0.5
+      },
+      "spec_sha256": "8e29a2f2419a52bc7915c63ed02780b4555fbb14d5f31e21b90de0c5e2b91a1d",
+      "planned_order": [
+        {
+          "repetition": 0,
+          "position": 0,
+          "method_id": "mutate"
+        }
+      ],
+      "workspace": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13",
+      "fixed_thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1",
+        "PYTHONHASHSEED": "0",
+        "OMP_DYNAMIC": "FALSE",
+        "MKL_DYNAMIC": "FALSE"
+      },
+      "software": {
+        "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.39"
+      },
+      "cpu_affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "harness_code_sha256": "cbff2eb551b91fd446667cdf0507b063f36c6834c0e0e35ac1b0d25c7d8b1f44",
+      "runs": [
+        {
+          "repetition": 0,
+          "position": 0,
+          "method_id": "mutate",
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import pathlib; pathlib.Path('software_fixture_input.txt').write_text('changed')",
+            "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/mutate/run-000-mutate-repeat-0/artifacts"
+          ],
+          "argv_canonical_utf8_sha256": "29294c0bca1b9c0692835f9840da9a2c72367c009cc7481b0a2e13af69dc4193",
+          "argv_canonical_utf8_bytes": 272,
+          "argv_template": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import pathlib; pathlib.Path('software_fixture_input.txt').write_text('changed')",
+            "{output_dir}"
+          ],
+          "run_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/mutate/run-000-mutate-repeat-0",
+          "output_directory": "/workspace/scratch/35d4d4d8ba2c/systems-software-check-slnspi13/mutate/run-000-mutate-repeat-0/artifacts",
+          "status": "input_changed_or_mismatched",
+          "returncode": 0,
+          "signal": null,
+          "timed_out": false,
+          "child_peak_rss_bytes": 15335424,
+          "child_peak_rss_raw": 14976,
+          "spawn_to_reap_elapsed_seconds": 0.02082230599989998,
+          "child_user_cpu_seconds": 0.019703,
+          "child_system_cpu_seconds": 0.0,
+          "remaining_process_group_detected": false,
+          "failure_details": [],
+          "inputs_before": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "actual_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "logical_bytes": 45,
+              "matches": true
+            }
+          ],
+          "resolved_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+          "inputs_after": [
+            {
+              "path": "software_fixture_input.txt",
+              "declared_sha256": "ed5fae456756a55c3ef3dff13c28f6ee24d33fd401d548b48602b3f8edb8f7bc",
+              "actual_sha256": "d67e2e944994496c8d8ec76eed0cf9f09679448d584b532bebf941852a37f5ed",
+              "logical_bytes": 7,
+              "matches": false
+            }
+          ],
+          "declared_inputs_unchanged": false,
+          "status_before_input_check": "success",
+          "output_file_ledger": [
+            {
+              "path": "stderr.log",
+              "logical_bytes": 0,
+              "allocated_bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "path": "stdout.log",
+              "logical_bytes": 0,
+              "allocated_bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            }
+          ],
+          "output_inspection_errors": [],
+          "persistent_output_logical_bytes": 0,
+          "persistent_output_allocated_bytes": 0,
+          "method_artifact_logical_bytes": 0,
+          "charged_end_to_end_elapsed_seconds": 0.04063582500020857,
+          "measurement_complete": false,
+          "eligible_for_success_timing_summary": false
+        }
+      ],
+      "limits": {
+        "repetitions_max": 5,
+        "per_child_timeout_seconds": 3,
+        "termination_grace_seconds": 0.5,
+        "memory_limit_enforced": false,
+        "disk_limit_enforced": false,
+        "filesystem_or_network_security_sandbox": false
+      },
+      "measurement_contract": {
+        "charged_elapsed": "per_run_from_before_input_hashing_and_directory_setup_through_spawn_wait_output_fsync_hashing_and_post_input_verification",
+        "peak_RSS": "POSIX_wait4_ru_maxrss_child_high_water_mark_not_sum_or_simultaneous_process_tree_peak",
+        "output_bytes": "regular_files_in_declared_run_directory_including_stdout_stderr; ledger_files_charged_separately; undeclared_writes_not_measurable",
+        "process_state": "fresh_process_and_output_directory_every_repetition; OS_page_cache_not_flushed; no_competing_job_exclusion_enforced",
+        "input_access": "all_supplied_input_files_hashed_before_and_after; commands_still_retain_normal_caller_permissions"
+      },
+      "method_code_pinning_completeness_verified": false,
+      "per_method_comparative_isolation_verified": false,
+      "confirmatory_study_ready": false,
+      "paper_systems_result": false,
+      "total_benchmark_elapsed_seconds_before_final_checkpoint": 0.04136033600116207,
+      "successful_complete_runs": 0,
+      "failed_or_incomplete_runs": 1,
+      "sha256": "bd16bade6c2f3f7dee5fed325848234ab6805860633c59aa7dd24ce5ef695cf5"
+    }
+  ],
+  "module_sha256": "cbff2eb551b91fd446667cdf0507b063f36c6834c0e0e35ac1b0d25c7d8b1f44",
+  "paper_systems_result": false,
+  "confirmatory_study_ready": false
+}

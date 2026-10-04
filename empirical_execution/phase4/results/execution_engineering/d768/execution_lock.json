@@ -1,0 +1,52 @@
+{
+  "schema": "ccu-phase4-engineering-execution-1",
+  "evidence_role": "engineering_nonconfirmatory",
+  "confirmatory_study_ready": false,
+  "bindings": {
+    "curator_array_sha256": "84b4a67b0bb829cf6847632be08693c1a9e2db82704d8bdbe7258e4462134ba2",
+    "learner_array_sha256": "b269d75b348a4e814ff93cef302eeeefe7245666cb38286cbc01ca09b6795377",
+    "target_array_sha256": "68762a2ccfc20168fac573902df3ac39cd551443095fcf40b472d2ed8b31aef6",
+    "record_ids_sha256": "00cef42574d341540ffe869e9171fd8fbd1404e0676139e8a22dc0604308914b",
+    "request_manifest_sha256": "d7837fe31d6e838d9dd43d7b453c1b7604262d306aeab70832e9a9d18ffa0ec0",
+    "threshold_hex": "0x1.3333333333333p-1",
+    "lambda_reg_hex": "0x1.47ae147ae147bp-7",
+    "execution_code_sha256": "cea3b48d1e93b688d4708f20c53358bd7f4d1805937ebdb9fd7a4d86fa7508a4"
+  },
+  "methods": {
+    "O-G": "Fresh retained reference graph + fresh selected moments + common solve",
+    "O-T": "Correct oracle selected IDs + fresh moments + common solve; excludes graph work",
+    "B-E-signed-python": "Existing string-indexed eligible payload with signed batched moment updates",
+    "B-E-compact-common": "Integer-indexed eligible payload; rebuild selected moments at release",
+    "P-I-jointspan-common": "Indexed joint-span aggregate summary; recover moments at release",
+    "B-F": "Fresh ridge on retained initially selected records; intentionally wrong curation target"
+  },
+  "unsupported": {
+    "S": "This runner presently supports record-service paths only; source requests are not relabeled",
+    "B-A": "All-current-payload general service not integrated",
+    "P-S": "Full coefficient-map scan comparator not integrated",
+    "P-R": "Protocol rank-coordinate scan comparator not integrated; joint-span P-I is distinct",
+    "O-R": "Standard SemDeDup complete refit branch not integrated",
+    "B-E-optimized-CSR": "Current signed-payload branch is Python dictionary/set code, not the protocol optimized CSR performance baseline",
+    "compact-native-decoders": "Optional dual/joint-span decoders excluded here to hold decoder identical",
+    "primary-study": "Requires full registered branches, real assets/ratings, independent workers and externally reviewed execution lock"
+  },
+  "lambda_regularizer": "lambda * current selected count; all coordinates penalized; no intercept",
+  "common_decoder": "core.solve_ridge FP64 primal Cholesky; empty selection returns zero",
+  "moment_comparison_tolerance": 1e-09,
+  "checkpoint_failures": "preserve row and mark later path checkpoints not executed; never reroll",
+  "timing_scope": "single process wall time; shared inputs and warm caches; audits excluded; no benchmark claim",
+  "memory_scope": "state numeric arrays and recursive owned-byte estimates; no RSS/peak/allocator claim",
+  "input_storage_shared_evaluator_bytes": 359200,
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "module_sha256": {
+    "phase4/execution.py": "cea3b48d1e93b688d4708f20c53358bd7f4d1805937ebdb9fd7a4d86fa7508a4",
+    "phase4/requests.py": "47aa17f1dffe90d1114f23bc2d71c55ea69baeb952349e848b34a641bfbf252c",
+    "phase3/reference_graph.py": "efc41498648f6f7f7969768fbcd050619d7ed5d6e82eafadb1b9a3a2158e9d1c",
+    "phase3/panels.py": "bd2409958ac9a9e27faf463b44b2f839260a3195c7cde32fb3bfb76aeb14a04b",
+    "ccu/core.py": "d89f6affd566103c65aa92f10e02ac86e394f7a1f88ff2e6b098720b8cef7df3",
+    "ccu/summary.py": "4ba0f4ad3cf386f2493461d4924c6fda6467a6399f266a13f61f4966cef3e498",
+    "ccu/compact_payload.py": "a2af1ae4a36281c98e4b7756e54e175098e563b4a05bc2e7779cfbe542578378",
+    "ccu/joint_span_summary.py": "25203235fc620ece42f12575325cad119f848a307dcbaff7a5767bc3256e94dd"
+  }
+}

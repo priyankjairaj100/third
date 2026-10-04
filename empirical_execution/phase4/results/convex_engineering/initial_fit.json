@@ -1,0 +1,706 @@
+{
+  "status": "numerically_converged",
+  "objective": 0.3629228831311506,
+  "gradient_norm_diagnostic": 1.1516772674739588e-16,
+  "iterations": 5,
+  "trace": [
+    {
+      "iteration": 0,
+      "objective": 0.6931471805599454,
+      "gradient_norm_diagnostic": 0.24695896646540844,
+      "accepted_step_size": 1.0
+    },
+    {
+      "iteration": 1,
+      "objective": 0.37321112712654636,
+      "gradient_norm_diagnostic": 0.03565040175531707,
+      "accepted_step_size": 1.0
+    },
+    {
+      "iteration": 2,
+      "objective": 0.3630248769165744,
+      "gradient_norm_diagnostic": 0.0033271369177525463,
+      "accepted_step_size": 1.0
+    },
+    {
+      "iteration": 3,
+      "objective": 0.36292289751800855,
+      "gradient_norm_diagnostic": 3.9324151636455527e-05,
+      "accepted_step_size": 1.0
+    },
+    {
+      "iteration": 4,
+      "objective": 0.36292288313115084,
+      "gradient_norm_diagnostic": 5.675963311166125e-09,
+      "accepted_step_size": 1.0
+    },
+    {
+      "iteration": 5,
+      "objective": 0.3629228831311506,
+      "gradient_norm_diagnostic": 1.1516772674739588e-16
+    }
+  ],
+  "meter": {
+    "joint_objective_gradient_hessian_evaluations": 6,
+    "line_search_objective_evaluations": 5,
+    "forward_rows": 737,
+    "gradient_rows": 402,
+    "hessian_rows": 402,
+    "objective_rows": 737,
+    "linear_solves": 5,
+    "accepted_steps": 5,
+    "backtracks": 0,
+    "selected_records": 67,
+    "feature_fp32_input_bytes": 17152,
+    "target_fp64_input_bytes": 536,
+    "promoted_feature_workspace_bytes": 34304,
+    "candidate_weight_bytes": 512,
+    "hessian_matrix_bytes": 32768,
+    "peak_rss_measured": false,
+    "coordinate_row_access_lower_bound": 47168
+  },
+  "elapsed_seconds": 0.001012614000501344,
+  "certificate": {
+    "schema": "ccu-fractional-logistic-certificate-v1",
+    "status": "certified_stored_value_optimization_bound",
+    "objective": "single-output mean fractional BCE + lambda/2 * squared Euclidean weight norm; no intercept",
+    "empty_target": "zero data loss; unique minimizer zero",
+    "records": 67,
+    "dimension": 64,
+    "lambda_exact": {
+      "numerator": "5764607523034235",
+      "denominator": "576460752303423488"
+    },
+    "sigmoid_interval_precision_bits": 128,
+    "gradient_lower": [
+      {
+        "numerator": "51610191567175928128379816620267",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "80552892946326582282690820737679",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "9993399292343280591868942311767",
+        "denominator": "765004763290394496247241279624929393101152190464"
+      },
+      {
+        "numerator": "66502711804552096845902971015499",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "59617552233419559083661722661407",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "24851185460357288916352014862119",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "90632544028401985721543787724497",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "66368554243341275703068169945129",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "48721593894281092586895369656189",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "4633618441339508795459005824389",
+        "denominator": "765004763290394496247241279624929393101152190464"
+      },
+      {
+        "numerator": "77142478334605277143827586270191",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "24125956938943144658726725186947",
+        "denominator": "1530009526580788992494482559249858786202304380928"
+      },
+      {
+        "numerator": "14680514424682354450867737383649",
+        "denominator": "1530009526580788992494482559249858786202304380928"
+      },
+      {
+        "numerator": "5299772106231444308465918491089",
+        "denominator": "765004763290394496247241279624929393101152190464"
+      },
+      {
+        "numerator": "43779173824061294228949149769247",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "116301106168793911391884110851487",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "33672891880033661032578389924341",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "57399247163298177898586622229921",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "62220284866947172456889288745577",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "21176568975728928497583231222765",
+        "denominator": "1530009526580788992494482559249858786202304380928"
+      },
+      {
+        "numerator": "926590312487998274646955252081",
+        "denominator": "95625595411299312030905159953116174137644023808"
+      },
+      {
+        "numerator": "24952374720629833714994964149599",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "4445251137482106928869394181269",
+        "denominator": "382502381645197248123620639812464696550576095232"
+      },
+      {
+        "numerator": "5828091534174276371702291255761",
+        "denominator": "382502381645197248123620639812464696550576095232"
+      },
+      {
+        "numerator": "20708055005051094756726884474089",
+        "denominator": "1530009526580788992494482559249858786202304380928"
+      },
+      {
+        "numerator": "70654380441321395232013133146075",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "1749580526035370724260283604949",
+        "denominator": "191251190822598624061810319906232348275288047616"
+      },
+      {
+        "numerator": "20997509617555887212248936109717",
+        "denominator": "765004763290394496247241279624929393101152190464"
+      },
+      {
+        "numerator": "28647258855934749162848787885571",
+        "denominator": "1530009526580788992494482559249858786202304380928"
+      },
+      {
+        "numerator": "73689068263989143744091882956737",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "83577395215099998469891987650555",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "42920621912580545666741481431631",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "35587436021499792643444959105545",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "19466791703369612951524390631827",
+        "denominator": "1530009526580788992494482559249858786202304380928"
+      },
+      {
+        "numerator": "17638763383261859382479943301767",
+        "denominator": "1530009526580788992494482559249858786202304380928"
+      },
+      {
+        "numerator": "8890024584199264839668658385651",
+        "denominator": "765004763290394496247241279624929393101152190464"
+      },
+      {
+        "numerator": "3792694175609496640521824330677",
+        "denominator": "382502381645197248123620639812464696550576095232"
+      },
+      {
+        "numerator": "85010959976189902132527723888407",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "74018020823843001978622864039219",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "42217747970624861752950690283043",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "65229467398570331654776608807723",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "3487518114521407759471436177889",
+        "denominator": "382502381645197248123620639812464696550576095232"
+      },
+      {
+        "numerator": "35902217540519311621054659079333",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "9206986972697179269712063937115",
+        "denominator": "765004763290394496247241279624929393101152190464"
+      },
+      {
+        "numerator": "7949635406911714177365878286355",
+        "denominator": "382502381645197248123620639812464696550576095232"
+      },
+      {
+        "numerator": "63761643914188832207326745064489",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "37558502947461188497040624126289",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "124672271877526099174997472304881",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "9356114312599921497039548503451",
+        "denominator": "765004763290394496247241279624929393101152190464"
+      },
+      {
+        "numerator": "7991689110060677772522135533173",
+        "denominator": "765004763290394496247241279624929393101152190464"
+      },
+      {
+        "numerator": "75242252400496176743046713243329",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "5587897752935414610837576232139",
+        "denominator": "382502381645197248123620639812464696550576095232"
+      },
+      {
+        "numerator": "49938842830619034572385453999675",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "4350209212530649577077453453339",
+        "denominator": "382502381645197248123620639812464696550576095232"
+      },
+      {
+        "numerator": "23306309939253344627181191049103",
+        "denominator": "1530009526580788992494482559249858786202304380928"
+      },
+      {
+        "numerator": "42115559382264370740987876417835",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "13724005988579366429842515642297",
+        "denominator": "1530009526580788992494482559249858786202304380928"
+      },
+      {
+        "numerator": "52417251632483795211991943502665",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "36296353255771899332614791521675",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "25441088444002501915548927350049",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "9442062335239784339146156014627",
+        "denominator": "765004763290394496247241279624929393101152190464"
+      },
+      {
+        "numerator": "39673742891800028695409974245463",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "141895805612567408062078754788931",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "19687104234868432847969110880105",
+        "denominator": "1530009526580788992494482559249858786202304380928"
+      }
+    ],
+    "gradient_upper": [
+      {
+        "numerator": "25805095783587964064190621134677",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "40276446473163291141346180213187",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "79947194338746244734952597263831",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "8312838975569012105738012997337",
+        "denominator": "765004763290394496247241279624929393101152190464"
+      },
+      {
+        "numerator": "7452194029177444885457828489255",
+        "denominator": "765004763290394496247241279624929393101152190464"
+      },
+      {
+        "numerator": "24851185460357288916352367741749",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "90632544028401985721545154571889",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "66368554243341275703069367796979",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "97443187788562185173792715177189",
+        "denominator": "12240076212646311939955860473998870289618435047424"
+      },
+      {
+        "numerator": "37068947530716070363672986338995",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "77142478334605277143828830857169",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "48251913877886289317454202142877",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "117444115397458835606943486504933",
+        "denominator": "12240076212646311939955860473998870289618435047424"
+      },
+      {
+        "numerator": "21199088424925777233864065792113",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "175116695296245176915799342104125",
+        "denominator": "12240076212646311939955860473998870289618435047424"
+      },
+      {
+        "numerator": "116301106168793911391885976923179",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "134691567520134644130315459169653",
+        "denominator": "12240076212646311939955860473998870289618435047424"
+      },
+      {
+        "numerator": "57399247163298177898587486810043",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "124440569733894344913781303018729",
+        "denominator": "12240076212646311939955860473998870289618435047424"
+      },
+      {
+        "numerator": "42353137951457856995167051545123",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "59301779999231889577406121468435",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "99809498882519334859981230586329",
+        "denominator": "12240076212646311939955860473998870289618435047424"
+      },
+      {
+        "numerator": "71124018199713710861911294635891",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "93249464546788421947238102221127",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "41416110010102189513454488534609",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "17663595110330348808003606306503",
+        "denominator": "1530009526580788992494482559249858786202304380928"
+      },
+      {
+        "numerator": "55986576833131863176330092829275",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "167980076940447097697993841926745",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "57294517711869498325698425124797",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "73689068263989143744093037298527",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "83577395215099998469893113293669",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "85841243825161091333484184573189",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "142349744085999170573781942182031",
+        "denominator": "12240076212646311939955860473998870289618435047424"
+      },
+      {
+        "numerator": "77867166813478451806099062114631",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "70555053533047437529920990996915",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "2222506146049816209917192418279",
+        "denominator": "191251190822598624061810319906232348275288047616"
+      },
+      {
+        "numerator": "121366213619503892496700323819767",
+        "denominator": "12240076212646311939955860473998870289618435047424"
+      },
+      {
+        "numerator": "21252739994047475533132277087883",
+        "denominator": "1530009526580788992494482559249858786202304380928"
+      },
+      {
+        "numerator": "18504505205960750494656057513881",
+        "denominator": "1530009526580788992494482559249858786202304380928"
+      },
+      {
+        "numerator": "84435495941249723505902784408485",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "130458934797140663309555020402571",
+        "denominator": "12240076212646311939955860473998870289618435047424"
+      },
+      {
+        "numerator": "55800289832342524151543735072253",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "71804435081038623242110537579475",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "73655895781577434157697647645909",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "15899270813823428354731977091851",
+        "denominator": "765004763290394496247241279624929393101152190464"
+      },
+      {
+        "numerator": "63761643914188832207327749699665",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "75117005894922376994082433391631",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "249344543755052198349998752975777",
+        "denominator": "12240076212646311939955860473998870289618435047424"
+      },
+      {
+        "numerator": "37424457250399685988158730132689",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "31966756440242711090088991585833",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "75242252400496176743047913310621",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "22351591011741658443350642039721",
+        "denominator": "1530009526580788992494482559249858786202304380928"
+      },
+      {
+        "numerator": "99877685661238069144772317107427",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "69603347400490393233240386796395",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "2913288742406668078397690125455",
+        "denominator": "191251190822598624061810319906232348275288047616"
+      },
+      {
+        "numerator": "84231118764528741481976959885141",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "27448011977158732859685551742963",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      },
+      {
+        "numerator": "13104312908120948802998158515081",
+        "denominator": "765004763290394496247241279624929393101152190464"
+      },
+      {
+        "numerator": "72592706511543798665230594566885",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "50882176888005003831098585760291",
+        "denominator": "6120038106323155969977930236999435144809217523712"
+      },
+      {
+        "numerator": "9442062335239784339146307510349",
+        "denominator": "765004763290394496247241279624929393101152190464"
+      },
+      {
+        "numerator": "9918435722950007173852648318715",
+        "denominator": "765004763290394496247241279624929393101152190464"
+      },
+      {
+        "numerator": "283791611225134816124161819824677",
+        "denominator": "12240076212646311939955860473998870289618435047424"
+      },
+      {
+        "numerator": "39374208469736865695938843102437",
+        "denominator": "3060019053161577984988965118499717572404608761856"
+      }
+    ],
+    "gradient_norm_squared_upper": {
+      "numerator": "1979615293168640070930518677271510414126538098027071471184317100427",
+      "denominator": "149819465691390083747988319359298741288305321888422098192066715273655380453582741078954325129035776"
+    },
+    "parameter_error_squared_upper": {
+      "numerator": "1979615293168640070930518677271510414126538098027071471184317100427",
+      "denominator": "14981946569139008998547658239504762128713106844388844060282474191769158863060702823583213158400"
+    },
+    "parameter_error_norm_upper": {
+      "numerator": "11494928603733563",
+      "denominator": "1000000000000000000000000000000"
+    },
+    "objective_gap_upper": {
+      "numerator": "1979615293168640070930518677271510414126538098027071471184317100427",
+      "denominator": "2996389313827801737334649017543462976535324642248444166240809645160366645846666174961731177021440"
+    },
+    "parameter_tolerance": {
+      "numerator": "1",
+      "denominator": "100000000"
+    },
+    "meets_parameter_tolerance": true,
+    "radius_float_for_display_only": 1.1494928603733563e-14,
+    "work": {
+      "exact_logit_row_evaluations": 67,
+      "exact_feature_coordinates": 4288,
+      "taylor_terms": 1947,
+      "squarings": 153
+    },
+    "elapsed_seconds": 0.08225507700080925,
+    "input_bindings": {
+      "features_sha256": "5285f3c88e6ac14e9fd3b9134e890c434cc94837ea5f3e97c0669676982826d7",
+      "targets_sha256": "3d016c69767aa1b40f437f3e2a6e75b8cff792e07da016bb2b6779b58ebbc716",
+      "weights_sha256": "0407949d9ff8d8398d7f3597dd94fd9d65aafdb3eaddfa08feb782bb9d5e24ea",
+      "code_sha256": "cf0d9066b3032671208b34013b15373f584c5d351a89d7f62451637a3764600b"
+    },
+    "statistical_unlearning_certificate": false,
+    "privacy_claim": false,
+    "canonical_state_claim": false,
+    "peak_memory_measured": false,
+    "resource_limits": {
+      "max_coordinates": 2000000,
+      "max_terms": 256,
+      "max_squarings": 64
+    },
+    "sha256": "e8c53c55308e48e6353725b209240f470ebcf10ba0b322ede5226541738b1ba8"
+  },
+  "selected_record_ids": [
+    "civil_comments_connector_preview:train:row:0",
+    "civil_comments_connector_preview:train:row:1",
+    "civil_comments_connector_preview:train:row:2",
+    "civil_comments_connector_preview:train:row:3",
+    "civil_comments_connector_preview:train:row:4",
+    "civil_comments_connector_preview:train:row:5",
+    "civil_comments_connector_preview:train:row:6",
+    "civil_comments_connector_preview:train:row:7",
+    "civil_comments_connector_preview:train:row:8",
+    "civil_comments_connector_preview:train:row:9",
+    "civil_comments_connector_preview:train:row:10",
+    "civil_comments_connector_preview:train:row:11",
+    "civil_comments_connector_preview:train:row:12",
+    "civil_comments_connector_preview:train:row:13",
+    "civil_comments_connector_preview:train:row:16",
+    "civil_comments_connector_preview:train:row:17",
+    "civil_comments_connector_preview:train:row:20",
+    "civil_comments_connector_preview:train:row:23",
+    "civil_comments_connector_preview:train:row:26",
+    "civil_comments_connector_preview:train:row:28",
+    "civil_comments_connector_preview:train:row:29",
+    "civil_comments_connector_preview:train:row:31",
+    "civil_comments_connector_preview:train:row:33",
+    "civil_comments_connector_preview:train:row:34",
+    "civil_comments_connector_preview:train:row:35",
+    "civil_comments_connector_preview:train:row:36",
+    "civil_comments_connector_preview:train:row:37",
+    "civil_comments_connector_preview:train:row:38",
+    "civil_comments_connector_preview:train:row:39",
+    "civil_comments_connector_preview:train:row:41",
+    "civil_comments_connector_preview:train:row:42",
+    "civil_comments_connector_preview:train:row:43",
+    "civil_comments_connector_preview:train:row:44",
+    "civil_comments_connector_preview:train:row:45",
+    "civil_comments_connector_preview:train:row:46",
+    "civil_comments_connector_preview:train:row:47",
+    "civil_comments_connector_preview:train:row:48",
+    "civil_comments_connector_preview:train:row:49",
+    "civil_comments_connector_preview:train:row:50",
+    "civil_comments_connector_preview:train:row:51",
+    "civil_comments_connector_preview:train:row:52",
+    "civil_comments_connector_preview:train:row:54",
+    "civil_comments_connector_preview:train:row:56",
+    "civil_comments_connector_preview:train:row:58",
+    "civil_comments_connector_preview:train:row:59",
+    "civil_comments_connector_preview:train:row:61",
+    "civil_comments_connector_preview:train:row:62",
+    "civil_comments_connector_preview:train:row:64",
+    "civil_comments_connector_preview:train:row:67",
+    "civil_comments_connector_preview:train:row:70",
+    "civil_comments_connector_preview:train:row:71",
+    "civil_comments_connector_preview:train:row:76",
+    "civil_comments_connector_preview:train:row:77",
+    "civil_comments_connector_preview:train:row:78",
+    "civil_comments_connector_preview:train:row:79",
+    "civil_comments_connector_preview:train:row:80",
+    "civil_comments_connector_preview:train:row:81",
+    "civil_comments_connector_preview:train:row:83",
+    "civil_comments_connector_preview:train:row:85",
+    "civil_comments_connector_preview:train:row:86",
+    "civil_comments_connector_preview:train:row:87",
+    "civil_comments_connector_preview:train:row:90",
+    "civil_comments_connector_preview:train:row:91",
+    "civil_comments_connector_preview:train:row:92",
+    "civil_comments_connector_preview:train:row:95",
+    "civil_comments_connector_preview:train:row:97",
+    "civil_comments_connector_preview:train:row:99"
+  ]
+}

@@ -1,0 +1,76 @@
+NEWS SOURCE/DATE COMPLETION — PROSPECTIVE VERSION 1
+4 October 2026. No News confirmatory results exist.
+
+The narrative prescribed a source-disjoint 2017 calibration population and a
+2018–2019 analysis population but did not fully serialize their joint allocation.
+news_calendar.py now makes that choice explicit before semantic results:
+
+1. Keep the existing source hash, serialization, salt and exact 70/15/15 partition.
+2. Calibration uses only calibration-assigned domains' 2017 records.
+3. Analysis uses only train-assigned domains' 2018–2019 records.
+4. Test-domain records are reserved, unused in this structural branch. All other
+   domain/year combinations receive explicit cohort-exclusion ledger entries.
+5. Unknown-source records remain separately named singletons. Domain inference
+   retains the adapter's pinned PSL/URL consistency rules and qualifications.
+6. Whole-source size panels are built separately within the guarded analysis
+   period. Calendar-window membership means complete eligible records of chosen
+   months, not all-time source completeness or complete web/publisher holdings.
+
+prepare_news_cohorts(adapter_directory, coverage_path, output_dir) returns a new
+sealed ccu-news-preparation-1 audit, not fabricated phase3 provenance. It streams
+calibration.jsonl and analysis.jsonl, then writes records.jsonl after removing
+train-side normalized exact copies of calibration. Exact comparison uses a disk
+SQLite text index with a 2 MiB page cache. No News parent/native-duplicate link
+relation is invented. Source-ID sets are metadata stored in memory. Raw cohort
+outputs remain local, with all their disk bytes charged; never redistribute the
+News bodies in the project backup. The full-row and text/ID SHA bindings are
+computed as streaming canonical JSON arrays, identical to phase3 digest semantics.
+
+The prepared audit fields are schema, stage=fixed_guards_done_semantic_guard_pending,
+prepared_records_file_sha256, prepared_rows_sha256, normalized_records_sha256,
+news_preparation_code_sha256, adapter_code_sha256, source_and_scoring_code_sha256,
+and the explicit allocation/coverage bindings. The encoding/calibration bridge
+must recognize this separate schema and preserve its partition assignments.
+Do not reapply the generic random split to replace the date/source cohort rules.
+
+CALENDAR COVERAGE MANIFEST
+schema: ccu-news-calendar-coverage-1
+input_file_sha256: exact original extracted News CSV/JSONL bytes
+completeness_unit: all_records_in_pinned_extraction_for_recorded_month
+evidence: nonempty list of {path,sha256} local acquisition/coverage evidence files
+months: every month 2017-01 through 2019-12 mapped to
+        {status: complete|incomplete|unavailable, basis: nonempty explanation}
+
+No completeness is inferred from a count, an earliest/latest observed date, or
+the mere presence of a few rows. SHA bindings establish consistency only; a
+human must verify what the extraction/acquisition evidence actually establishes.
+The module reports whether all 2017 months were declared complete and preserves
+every declared status. Missing/changed evidence is refused. There is no bundled
+manifest falsely marking the existing connector preview as complete.
+
+FINAL CALENDAR RULE
+Compute month counts only after the fixed and primary E5 semantic guards.
+Select the earliest declared-complete calendar month from January 2018 onward
+whose eligible count reaches 10,000, including the whole month. If no individual
+complete month qualifies, take a consecutive complete whole-month prefix starting
+January 2018, including the boundary month in full. Stop at the first coverage
+gap; never join across it while claiming a complete prefix. Report shortfall,
+overshoot, every month count/status and a stopped-at-gap field. With insufficient
+coverage or records the arm remains unavailable/under target; do not substitute
+a favorable later corpus or silently lower the target.
+
+prepare_news_cohorts reports provisional post-fixed/presemantic counts only.
+select_post_guard_window consumes the sealed News-compatible semantic-guard audit
+(phase4/calibrate_cache.py), its
+bound records file, and the matching passed statistical/scope quality report.
+It writes ID membership only, and checks every analysis record has the training
+source partition and a 2018–2019 date. SHA/report checks do not authenticate human
+ratings or original corpus provenance. confirmatory_study_ready remains false.
+This function cannot be run as a genuine main-study window until those upstream
+artifacts actually exist. No passed report has been generated in this session.
+
+check_news_calendar.py uses explicitly tiny software-schema/metadata fixtures
+to verify split/date boundaries, a same-source cross-year case, heldout exact-text
+guards, streaming digest equivalence, coverage gaps, whole-month overshoot and
+blocked finalization without a passed upstream gate. These are software checks,
+not a synthetic empirical dataset or evidence of real calendar completeness.

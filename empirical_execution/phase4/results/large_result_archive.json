@@ -1,0 +1,11 @@
+{
+  "schema": "ccu-lossless-result-packaging-1",
+  "original_relative_path": "empirical_execution/phase4/results/requests_natural_engineering.json",
+  "original_bytes": 16463560,
+  "original_sha256": "06529a31ba19f5ef260e99743069a881ebfa8019d6d967c9b740f6e78fcf5659",
+  "archived_path": "empirical_execution/phase4/results/requests_natural_engineering.json.gz",
+  "archive_bytes": 617257,
+  "archive_sha256": "90568156bce1ecf1cd4c59646d2282d2dc65f526e9d75c94c4c47e4ab9613ba6",
+  "reason": "Large structured trace exceeds connected publication request limit when encoded. Deterministic gzip preserves every original byte. Uncompressed local generated copy is excluded from Git only.",
+  "restore_command": "python3 tools/restore_large_results.py"
+}

@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "scope": "phase4 outputs and code, including decompressed result archive; targeted accidental-disclosure scan, not a guarantee",
+  "files_checked": 128,
+  "news_fingerprints_checked": 90,
+  "findings": [],
+  "input_authenticity_or_scientific_readiness_claim": false
+}

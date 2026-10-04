@@ -1,13 +1,13 @@
 # Resume this research project
 
-Last substantive checkpoint: **4 October 2026, Phase 3 empirical preparation complete**.
+Last substantive checkpoint: **4 October 2026, Phase 4 core/extension software and scoped engineering checks completed; primary research dependencies and integrations remain outstanding**.
 Repository: **https://github.com/priyankjairaj100/third**.
 
 This is a project handoff reconstructed from the available conversation and the saved research files. It is not a verbatim export of all chats. It deliberately contains only this project's context.
 
 ## Paste this into a new chat
 
-> Continue the ACL 2027 counterfactual semantic-curation unlearning project at https://github.com/priyankjairaj100/third. Read README.md, RESUME_CONTEXT.md, THEORY_AND_RESULTS_HANDOFF.md and empirical_execution/CURRENT_STATUS.json, then inspect the relevant code and result files before acting. Preserve the distinction between exact theory, natural-preview engineering evidence, and the unstarted primary semantic study. All work must be carried out in this workspace; do not start paid or external compute without my instruction. Continue the highest-value executable work, keep me informed, and save all project progress back to this repository with an updated handoff. Do not fabricate missing corpus provenance, semantic embeddings, or human ratings.
+> Continue the ACL 2027 counterfactual semantic-curation unlearning project at https://github.com/priyankjairaj100/third. Read README.md, RESUME_CONTEXT.md, THEORY_AND_RESULTS_HANDOFF.md, empirical_execution/CURRENT_STATUS.json and empirical_execution/phase4/TODO.json, then inspect the relevant code and result files before acting. Preserve the distinction between exact theory, natural-preview engineering evidence, and the unstarted primary semantic study. All work must be carried out in this workspace; do not start paid or external compute without my instruction. Continue the highest-value executable work, keep me informed, and save all project progress back to this repository with an updated handoff. Do not fabricate missing corpus provenance, semantic embeddings, or human ratings.
 
 ## User objective and preferences
 
@@ -39,6 +39,8 @@ The main fixed-curator contract eventually became **global earlier-raw-neighbor 
 | Strict mode | Exact rational canonical state, history comparisons, residual certificate and bytes-only release implemented |
 | Phase 2 | 896 development checkpoints on reused Civil100, with held-out diagnostic labels and independent result audit |
 | Phase 3 | Source panels, leakage guards, shared numerical scorer, blinded calibration workflow, exact quality bound and local CLI implemented/audited |
+| Phase 4 core | Original-schema adapters, local encoding interface, task choices, request generation, six-method engineering comparison and measurement harness implemented; authentic-input acceptance still pending |
+| Phase 4 extensions | News calendar/encoding bridge, per-encoder calibration and blank admission pack implemented; fractional-label logistic pilot/certificate completed in its stated single-output scope; consult final audits and `phase4/TODO.json` |
 | Primary semantic study | **Not started.** No E5/MPNet embeddings, no original source-rich corpus snapshot and no completed human ratings |
 | Paper-ready confirmatory evidence | **Absent.** Do not turn development checks into semantic or source-withdrawal claims |
 
@@ -50,6 +52,7 @@ The main fixed-curator contract eventually became **global earlier-raw-neighbor 
 4. `empirical_execution/canonical_theory_addendum.tex`, `certified_ridge_contract.txt`, `exact_chart_algorithm_notes.txt`, and `README_strict_mode.txt` describe the strongest implemented numerical guarantee.
 5. `empirical_execution/memory_theory_addendum.tex` and `README_memory_repair.txt` qualify the memory story. Low coordinate dimension is not total-byte optimality.
 6. Phase-specific `independent_review.txt` and JSON audits establish what was independently checked versus implementation self-checks.
+7. `empirical_execution/phase4/README.md` and `TODO.json` are the current implementation/dependency inventory. `results/execution_engineering_final/` is the authoritative Phase 4 core replay. Earlier `execution_engineering/` uses a superseded request seed policy; preserve it as history and never pool the two.
 
 The newest complete user-facing report is `output/pdf/counterfactual_curation_empirical_preparation.pdf`. Previous reports and ZIPs are retained as historical deliverables, not overwritten.
 
@@ -95,13 +98,31 @@ The newest complete user-facing report is `output/pdf/counterfactual_curation_em
 - Hashes and completion declarations verify consistency, not authenticity. `confirmatory_study_ready` stays false in the preparation modules.
 - All241 engineering sample pairs /723 assignments remain blank. They are lexical plumbing examples, not the main semantic annotation pack.
 
+### Phase 4 implementation and evidence
+
+- `adapters.py` parses original Civil, Stack Posts/PostLinks and extracted News schemas. Missing-source questions remain records; explicit unknown singletons are not genuine source-arm units. Real archive coverage/acceptance remains pending.
+- The new News path verifies the declared title-plus-body construction and pinned public-suffix domain extraction. The frozen phase-3 intake branch's body-only expectation is historical, not proof of this new rule.
+- `embeddings.py` implements local, record-local all-chunk E5/MPNet feature production and file/runtime bindings. The actual transformer backend has not run because pinned local assets/runtime are absent; fake backend software checks are not semantic vectors.
+- `model_selection.py` implements calibration-only top-20 tags, five source-group folds, six-lambda CV and per-tag OOF-F1 decision thresholds. Unknown singletons/zero-target questions stay present, but primary CV requires at least five genuine groups. No empirical vocabulary/lambda/threshold was selected. A separate evaluation-only API applies the frozen vocabulary to test tags without using them in selection.
+- Source folds use hash-sorted whole-group round-robin allocation. Lambda loss ties mean exact computed FP64 equality and choose larger lambda. Per-tag F1 uses exact count ratios and strictest ties; zero-positive targets receive a never-positive decision rule. These are recorded prospective completion conventions, not previously specified facts.
+- `requests.py` preserves paired graph-independent R/S/matched-R random streams across curator sensitivities; graph identity is separately sealed. U/A and excluded-blocker stress are graph-dependent. Native-source uncertainty remains explicit.
+- The final core replay uses Civil100 lexical curator d128/tau0.6, learners d64/d768, lambda0.01; four R, four U and two A paths with checkpoints1/2/4/8 yield **80 checkpoint rows, zero failures and 54 zero-admission rows**. Maximum same-target head discrepancy is `8.326672684688674e-16`; maximum moment difference is `4.440892098500626e-15`.
+- Independent dual reconstruction checks all **480 saved heads**, including wrong-target B-F against its own declared target; maximum discrepancy `8.881784197001252e-16`. This is an FP64 agreement check, not the earlier strict rational certificate. Compact payload remains smaller than joint-span state on this fixture.
+- `systems.py` supplies fresh child processes, default five repetitions, preplanned sequential random order, declared input/output hashes, wait4 RSS, end-to-end charges and retained failures. Its 50 software checks are not a paper systems run. Actual isolated per-method workers, fair access contracts, persistence/compaction and common resource locks remain pending. The harness is not a filesystem security sandbox and does not measure summed simultaneous process-tree peak RAM.
+- `study_lock.py` is a partial dossier inspector, always with `execution_allowed=False`; the engineering runner rejects primary-role execution. Hashes and well-formed manifests cannot establish authenticity or finish missing integrations.
+- News parsing/PSL/title rules passed 42 adapter checks; the calendar/source policy and encoding bridge passed 18 checks. `NEWS_CALENDAR_AMENDMENT.txt` specifies the 2017 calibration versus 2018–2019 analysis policy. Actual complete-month evidence, original News assets and the semantic guard are still missing.
+- Local embedding software passed 63 checks and the E5/MPNet calibration wrapper passed 46. These include software backends and blocked blank responses, not real transformer execution, encoder-derived vectors or genuine ratings. See `EMBEDDINGS_README.txt`; the actual backend/cache and human gates remain pending.
+- The separately named fractional-label logistic extension completed 12 checkpoints with 25 rigorous optimizer-error certificates, maximum radius `6.729862803437307e-13`, and six zero-admission rows. The authoritative release is `phase4/results/convex_engineering_release_v2/`, including the saved initial head and `convex_checks.json`. The release radius remains `1e-8`. The earlier failed run, source snapshot, certificate and intermediate final directory are preserved separately. Its single-output lexical scope does not establish Stack multioutput, semantic/source experiments, canonical state, no-reaccess or speedup. The main fixed-curator/exact-state theorem stack is unchanged.
+- The admission pack selects 24 pairs from the natural Civil100 lexical preview and creates **72 blank assignments**. Completed human responses remain zero; missing AskUbuntu/News quotas remain unfilled. Both 100-admission contextual audits—complete former-blocker sets and nearest surviving selected text—remain pending. See `HUMAN_ADMISSION_AUDIT_README.txt`.
+- These software/engineering completions do not complete the registered primary program. Consolidated independent review passed 264 checks with matching source hashes. This checkpoint includes its final report, the TODO ledger and all archived engineering evidence.
+
 ## Immediate continuation plan
 
 1. Read the handoff and inspect the current checkout. Verify `tools/verify_backup.py` before changing frozen evidence. Establish what assets and runtimes are actually available now.
 2. If the source-rich corpus/model assets remain missing, say so and request those concrete files. Do not repeatedly rerun the same lexical pilot as purported new empirical progress.
-3. Implement and validate original-corpus adapters when authentic inputs arrive. Civil is the first prepared path; Stack date/tag/link extraction and News title/body/domain/date rules remain unfinished. The legacy News branch of intake v2 is not a finished protocol-compliant News parser.
-4. Follow `empirical_execution/phase3/README.txt`: prepare source partitions/fixed guards; bind a pinned E5 cache; generate the actual calibration-only selection pack; collect genuine ratings; freeze threshold; generate independent validation pack; collect fresh ratings; evaluate gate; apply training-only semantic guard; form whole-source panels.
-5. Complete label vocabulary/lambda selection, source universes, request manifests, memory/thread/timeout and other pre-execution locks from the original empirical protocol. Then run the primary structure/task/systems program with the prespecified strong baselines and failures retained.
+3. Accept and audit authentic archives using the implemented Phase 4 adapters; verify native ID/date/parent/duplicate-link and source coverage. The newer News verifier handles title/body construction; the legacy intake-v2 News branch must not stand in for it. Apply the completed News calendar code only with authentic complete-month evidence under `NEWS_CALENDAR_AMENDMENT.txt`.
+4. Follow Phase 3 plus the versioned Phase 4 wrappers: prepare source partitions/fixed guards; generate or bind a pinned local E5/MPNet cache with actual derivation evidence; create calibration-only blinded packs; collect genuine ratings; freeze threshold; generate fresh independent validation packs; collect ratings; evaluate the gate; apply the E5 training-only guard and freeze whole-source panels.
+5. Execute the now-implemented task/request selectors on authentic inputs, then finish the still-unimplemented primary optimized methods, source/access isolation, full-refit branch, resource and persistence/compaction policies in the TODO ledger. A generic subprocess harness or shared-array comparison is not that implementation. Only then run the prescribed primary structure/task/systems program and retain every failure.
 6. Preserve all raw signed effects, zero admissions, failures and costs. Never claim a full-model speedup or practical advantage solely from a small lexical preview or a coordinate count.
 7. Update `CURRENT_STATUS.json`, this context file and the evidence-specific documentation. Commit and push the next substantive checkpoint to this repository.
 

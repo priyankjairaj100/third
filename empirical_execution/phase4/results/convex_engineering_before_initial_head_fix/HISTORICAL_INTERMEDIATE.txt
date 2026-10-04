@@ -1,0 +1,3 @@
+Preserved copy of the solver-corrected run before initial-head persistence.
+This copy contains no additional scientific observations. The complete replay
+is ../convex_engineering_release_v2/. Do not pool or double-count these files.

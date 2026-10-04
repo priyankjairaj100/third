@@ -1,0 +1,27 @@
+{
+  "status": "failed_with_preserved_rows",
+  "checkpoint_rows": 12,
+  "completed_checkpoint_rows": 10,
+  "failure_events": 1,
+  "certificates_including_initial": 22,
+  "rigorous_optimizer_error_certificates": true,
+  "max_certified_parameter_radius_display": 6.729862803437307e-13,
+  "max_cold_warm_l2_difference": 1.2995538048686686e-13,
+  "zero_total_admission_checkpoint_rows": 6,
+  "checks": {
+    "sigmoid_symmetry_and_150_digit_crosscheck": 9,
+    "empty_target_zero_solver_and_exact_nonzero_candidate_radius": true,
+    "coordinate_cap_refused": true,
+    "term_cap_refused": true,
+    "squaring_cap_refused": true,
+    "natural_count_shift_negative_control_detected": true
+  },
+  "statistical_unlearning_certificate": false,
+  "semantic_study_result": false,
+  "speedup_claim": false,
+  "canonical_model_or_state_bytes_claim": false,
+  "no_reaccess_claim": false,
+  "source_service_tested": false,
+  "scope": "single-output fractional toxicity; Stack multioutput extension not implemented",
+  "design_lock_sha256": "5a274fa4d044814eb59858c73cfa30a107e41e88f79fd7e72bd03f8acc09144e"
+}

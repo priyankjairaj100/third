@@ -26,9 +26,10 @@ def main():
         if path.is_file():
             excluded.append({"path": str(path.relative_to(ROOT)), "bytes": path.stat().st_size,
                 "sha256": checksum(path), "reason": "News body redistribution excluded by project packaging policy"})
-    result = {"schema": "ccu-project-backup-1", "checkpoint_date": "2026-10-04",
+    current_status = json.loads((ROOT / "empirical_execution/CURRENT_STATUS.json").read_text())
+    result = {"schema": "ccu-project-backup-1", "checkpoint_date": current_status["date"],
         "repository": "https://github.com/priyankjairaj100/third", "branch": "main",
-        "scientific_status": "phase3_preparation_complete_primary_semantic_study_unstarted",
+        "scientific_status": current_status["stage"],
         "files": files, "file_count_excluding_manifest": len(files),
         "total_bytes_excluding_manifest": sum(x["bytes"] for x in files),
         "excluded_input_files": excluded,

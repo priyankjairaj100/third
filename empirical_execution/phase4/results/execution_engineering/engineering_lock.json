@@ -1,0 +1,69 @@
+{
+  "data_sha256": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9",
+  "natural_records": 100,
+  "targets": "original toxicity fractions",
+  "preview_reused": true,
+  "evaluation_test_set_used": false,
+  "primary_study": false,
+  "features": {
+    "name": "sklearn.HashingVectorizer",
+    "n_features": 128,
+    "analyzer": "word",
+    "ngrams": [
+      1,
+      2
+    ],
+    "alternate_sign": false,
+    "lowercase": false,
+    "norm": "l2",
+    "dtype": "float32",
+    "corpus_fitted_state": false,
+    "E5_or_semantic_model": false,
+    "purpose": "nonconfirmatory_software_pilot_only",
+    "limitations": [
+      "hash collisions",
+      "lexical similarity not audited semantic duplication",
+      "preview sampling and connector rendering",
+      "no held-out NLP utility claim"
+    ],
+    "array_sha256": "03f1661550b3ddab6e680502794724aec1b0bcbaaf27d2eeb02251fa62e84ab7"
+  },
+  "design": {
+    "requests": {
+      "record_horizon": 8,
+      "record_checkpoints": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "source_horizon": 8,
+      "source_checkpoints": [
+        1,
+        2,
+        4,
+        8
+      ]
+    },
+    "seeds": {
+      "request_salt": "ccu-v1-request"
+    }
+  },
+  "allocation": {
+    "R": 4,
+    "S": 0,
+    "U": 4,
+    "A": 2
+  },
+  "dimensions": [
+    64,
+    768
+  ],
+  "same_requests_for_both_dimensions": true,
+  "no_source_evidence": "Native original source metadata unavailable",
+  "blas_threads_requested": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  }
+}

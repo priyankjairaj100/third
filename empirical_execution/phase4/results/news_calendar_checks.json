@@ -1,0 +1,30 @@
+{
+  "schema": "ccu-news-calendar-software-audit-1",
+  "passed": 18,
+  "checks": [
+    "Earliest qualifying whole month precedes prefix rule",
+    "Otherwise complete chronological prefix includes full boundary month",
+    "Prefix stops at completeness gap",
+    "Incomplete month cannot qualify by high count",
+    "Zero population reports all-month shortfall",
+    "Negative count refused",
+    "Incomplete coverage map refused",
+    "Source-date cohort preserves exact allocations",
+    "Cross-year same source never crosses cohort boundary",
+    "Exact-text guard retains calibration removes training",
+    "Streaming full-row digest matches canonical list digest",
+    "Streaming text digest matches canonical list digest",
+    "News cohort accepted by explicit embedding bridge",
+    "Calendar remains presemantic provisional",
+    "Coverage cannot bind a different snapshot",
+    "Coverage needs evidence not counts alone",
+    "Changed acquisition evidence refused",
+    "No final calendar before semantic guard and quality pass"
+  ],
+  "code_sha256": "d888fa2364e672f49e99084a33490d10274cdb2be8be2e4e624a2b2b3ca8c944",
+  "adapter_code_sha256": "7171b59802dff219636a08b53f13d8b3bdbb7bc400f5712f041280e61e8d6f0d",
+  "software_fixtures_only": true,
+  "real_calendar_coverage_verified": false,
+  "synthetic_empirical_datasets_used": false,
+  "confirmatory_study_ready": false
+}

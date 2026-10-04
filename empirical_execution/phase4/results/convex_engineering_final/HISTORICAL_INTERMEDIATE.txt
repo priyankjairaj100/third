@@ -1,0 +1,4 @@
+Historical solver-corrected run before initial-head persistence was added.
+The 24 checkpoint heads and 25 certificate reports passed, but this artifact
+omitted the initial weight vector. It is superseded by the complete replay in
+../convex_engineering_release_v2/. Do not pool runs as independent evidence.

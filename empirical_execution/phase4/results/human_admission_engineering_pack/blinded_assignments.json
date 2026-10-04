@@ -1,0 +1,506 @@
+[
+  {
+    "assignment_id": "01761b42cc7f4abd1301655769f8b57e4f8e0bad9af99681ae5cb1203b0bbb1f",
+    "pair_id": "54725f912063bdf1bc31d22dcae6f30ae9d205b47e3db4d8c0b29a139414fcac",
+    "text_a": "Are you taxed as a resident of the state you were in when you bought the ticket, or as a resident of the state you are in when you claim the ticket?  If it's the latter, I suppose a theoretical lucky Oregonian will have to decide whether it's worth $90m in exchange for being stuck with the hated \"Californian\" moniker.",
+    "text_b": "Nice. :) Although it's a shame the resolution on the files make some of the lettering tough to read. I'm not sure what the last word in the lower right strip is. I like the design of the 2000s guy in the third strip. That's a guy who grew up watching Kevin Smith movies.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "01d546db47a4c9cc9e2694f721b437c5fa041c9f9d9ac3773fbcf86fdbdb0af8",
+    "pair_id": "f0c81681d6abd03bf31fb85ae9a93d4641f848c63e1b07a0b4e668cbbec2a560",
+    "text_a": "Are you taxed as a resident of the state you were in when you bought the ticket, or as a resident of the state you are in when you claim the ticket?  If it's the latter, I suppose a theoretical lucky Oregonian will have to decide whether it's worth $90m in exchange for being stuck with the hated \"Californian\" moniker.",
+    "text_b": "I saw @christa_m mention this a little below, but I'm curious how the system combats the echo chamber effect, especially on contentious issues?  I can imagine many stories where opinions which run against the (Portland) mainstream are viewed as inherently uncivil, such as supporting Trump's position on...well pretty much anyone that isn't white, or say supporting the Kleins in the Sweet Cakes by Melissa saga.  How do you convince people that an opinion which is to some degree derived from some form of prejudice is still \"civil\" and deserving of at least being heard?",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "03423d3e29ef12844c6cf21e6be747f1c5fa14438070120fdcd7ed5954e00dbf",
+    "pair_id": "0e4442a009f534423d3fd285c2858c6685beb707d020a0e808075f53d670d67b",
+    "text_a": "I love the idea of upvoting entire articles, though this would have to be something that the Publisher could turn on and off. We do have a ton of other features currently in the works—following (and blocking!) other users, bookmarking articles during the review process, to read later (I find myself wanting to read the articles that other people are commenting on, as I'm reviewing their comments!), following conversations, and so much more. Thanks for your enthusiasm, Melinda, and your patience! It's a brand-new way to approach comments, and we're going to continue to improve it. We welcome all suggestions and feedback!",
+    "text_b": "This story gets more ridiculous by the hour! And, I love that people are sending these guys dildos in the mail now. But… if they really think there's a happy ending in this for any of them, I think they're even more deluded than all of the jokes about them assume.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "0475e7828176b318530a7c068138edf0ab9ead72ee891d2129c945e7f97cb1fa",
+    "pair_id": "d481cc55121320812e61d11d3c25562952758dbdc743b11a509cc26b1ae23ca3",
+    "text_a": "This is certainly not good journalism by any stretch of the imagination, but they are words, and if this is the metric by which Willamette Week chooses to publish a journalist, then by all means publish Brace Belden.",
+    "text_b": "I think Wweek is in a strange spot with that.  Their comments can be active, but they're nowhere near as busy as say, OregonLive.  Forcing the writers or other staff to monitor comments might be overkill.  I definitely get a newspaper not wanting outsiders handling that, for fear of confusion and accusations of bias.  It seems like every OregonLive comment thread has accusations of bias due to deleted posts despite repeated insistence that comment moderation is not handled in-house.  I've also seen several communities where conforming to the political view is more of a metric for desirability than anything to do with tone or actual content, and mods reinforced that.  The results of volunteers may....vary, to be polite.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "096f2c8cec34bdf14b49e5127b47fb3241a644f757998aab6835b307a3668e17",
+    "pair_id": "7d279f2ce088155565d87cf80d90ac111c0fd412e7be4e1da0f2c441bfe3743b",
+    "text_a": "Tuesday Jan. 13, members of  this socalled 'militia' traveled to John Day,Or to try to enlist the sherif  there to come to Malheur and support them. He refused to go without the approval of the local  sheriff in Burns, Dave Ward. Sheriff Ward said he only wanted  The John Day sheriff to come to Burns if he would be willing to 'shame and humiliate' the trespassers into leaving. The Bundy Bunch are armed terrorist idiots who are attempting to poison my State with their toxic and divisive brand of 'politics'. They need to be arrested and prosecuted. Rallies to support public lands and the Malheur Refuge are being held in  PDX, Eugene, and other cities across  Or. next Tuesday Jan. 19: check out #SupportMalheur. And yes, I have lived in both rural  Or (25 years) and urban Or.",
+    "text_b": "Tried this out on another post.  Having to rate three other comments and then my own - is the lead designer a big Foucault fan?  Feels like panopticomments.  I suspect you won't go back, but I prefer Disqus because of the ubiquity and notifications system.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "09e08aeb149f7c11c72ee09ead1f5b6516e5adb508b963a6d196731260156a5f",
+    "pair_id": "04dd6db695fe3ca1b56fc69b2cf7585e7abc1bc17c00281aa626467f4bce4df0",
+    "text_a": "I love the idea of upvoting entire articles, though this would have to be something that the Publisher could turn on and off. We do have a ton of other features currently in the works—following (and blocking!) other users, bookmarking articles during the review process, to read later (I find myself wanting to read the articles that other people are commenting on, as I'm reviewing their comments!), following conversations, and so much more. Thanks for your enthusiasm, Melinda, and your patience! It's a brand-new way to approach comments, and we're going to continue to improve it. We welcome all suggestions and feedback!",
+    "text_b": "Why bother writing a review if it's going to be this devoid of content?  I understand that you work for WW. (but that hardly seems like an excuse when Fred Armisen recorded radio voices for Grand Theft Auto IV with the same number of people.)",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "16845c2e96c56c6111ae0cc6ac04ece41ae20ccdbe8c9f047a594997075359e8",
+    "pair_id": "a38e1570666c42867b7f997487966845e5e7799001bbd4b15ca552ac118a6f63",
+    "text_a": "Ah, so part of the \"back end\" and \"algorithms\" - automatic comment rejection if you don't vote on the 3 random comments in a way that is conforming enough to the way other users vote - or if you vote too fast, as I assumed many would do - just clicking a random button too quickly means that you're unwilling to \"participate\" - you just want to \"comment\" which doesn't ensure a \"civil\" community of commenters :  Screen grab from a rejected comment : i5guy 3 hours ago Rejected Personally, I already don’t have the time or energy to actually read the stuff they ask me to vote on. I’ll just randomly click on yes sorta or no to make the buttons go away.  Problems were detected in the ratings you left for your peers.",
+    "text_b": "Angry trolls, misogynists and Racists\", oh my. It doesn't take all of my 150 IQ to see the slant here.  it's the \"Diversity diode\" at work yet again. \"We can say anything that we want because we are Diversity. You on the other hand must only  say what we allow you to say. From now on, winning arguments against any member of diversity will be considered offensive language.  facts, cogent, linear posts and Math are now verboten.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "1c6556d90481c08596653dc375feaa24ae419835d5dcd3bd6706cc75c479f007",
+    "pair_id": "7d2b43f02725047d8bb74923950b9ae385636b970b9933c9274d342f519683f2",
+    "text_a": "I'm so glad Portland Development Commission, Kate Brown, and Business Oregon are taking direct action to correct the gap in participation! I think Elevate is going to do great things over the next five years. The Portland startup scene has the chance to set itself apart here, and this is definitely a step in the right direction! Very cool.",
+    "text_b": "I love the idea of upvoting entire articles, though this would have to be something that the Publisher could turn on and off. We do have a ton of other features currently in the works—following (and blocking!) other users, bookmarking articles during the review process, to read later (I find myself wanting to read the articles that other people are commenting on, as I'm reviewing their comments!), following conversations, and so much more. Thanks for your enthusiasm, Melinda, and your patience! It's a brand-new way to approach comments, and we're going to continue to improve it. We welcome all suggestions and feedback!",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "1e0ea2f20d9b832d61f1403f8548f2a88681655f1c3e15c3f96d567fbeb1e621",
+    "pair_id": "8d0e64efab29ad3fc2129577ce1282c5f3be084acb478c4c8cc603f8266f08b5",
+    "text_a": "I had a little trouble getting signed up, but after a brief email exchange with the folks at Civil everything appears to be working now.  If they're successful in their goal, I'll be extremely pleased.",
+    "text_b": "I thought Willamette week was better than this. Using weasel  wording  and referring  to a vanity fair hit piece to spread a misinformed  view what furriers are. We all do not obsessed about and or dress up. Only 10% 15% furs   dress up in costume; you find a great ratio of costumers (cosplay) at Kumoricon and New Con than a fur con.  We fur have many different and dare say family  friendly  safe for work interest including art, role  play and  literature. In fact looking  at the Loyd center piece, the pictures could been take around January 2-3. We had a furry meet up  Loyd's Center and the \"reporter\" could had easily missed us.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "1e6e75ecebdb4307d41dd1b7d95289cbca845fa50b86415409e56fefa1e41cfb",
+    "pair_id": "04dd6db695fe3ca1b56fc69b2cf7585e7abc1bc17c00281aa626467f4bce4df0",
+    "text_a": "Why bother writing a review if it's going to be this devoid of content?  I understand that you work for WW. (but that hardly seems like an excuse when Fred Armisen recorded radio voices for Grand Theft Auto IV with the same number of people.)",
+    "text_b": "I love the idea of upvoting entire articles, though this would have to be something that the Publisher could turn on and off. We do have a ton of other features currently in the works—following (and blocking!) other users, bookmarking articles during the review process, to read later (I find myself wanting to read the articles that other people are commenting on, as I'm reviewing their comments!), following conversations, and so much more. Thanks for your enthusiasm, Melinda, and your patience! It's a brand-new way to approach comments, and we're going to continue to improve it. We welcome all suggestions and feedback!",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "285eb61cf051b15e15faac05b1a211ea76a34f2e3f7ce2d30be51287599d9024",
+    "pair_id": "54725f912063bdf1bc31d22dcae6f30ae9d205b47e3db4d8c0b29a139414fcac",
+    "text_a": "Nice. :) Although it's a shame the resolution on the files make some of the lettering tough to read. I'm not sure what the last word in the lower right strip is. I like the design of the 2000s guy in the third strip. That's a guy who grew up watching Kevin Smith movies.",
+    "text_b": "Are you taxed as a resident of the state you were in when you bought the ticket, or as a resident of the state you are in when you claim the ticket?  If it's the latter, I suppose a theoretical lucky Oregonian will have to decide whether it's worth $90m in exchange for being stuck with the hated \"Californian\" moniker.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "28913c0f2170889ceaf3658a288fe695741af3d3cb09cb3138907e5fb952c9f6",
+    "pair_id": "f0c81681d6abd03bf31fb85ae9a93d4641f848c63e1b07a0b4e668cbbec2a560",
+    "text_a": "I saw @christa_m mention this a little below, but I'm curious how the system combats the echo chamber effect, especially on contentious issues?  I can imagine many stories where opinions which run against the (Portland) mainstream are viewed as inherently uncivil, such as supporting Trump's position on...well pretty much anyone that isn't white, or say supporting the Kleins in the Sweet Cakes by Melissa saga.  How do you convince people that an opinion which is to some degree derived from some form of prejudice is still \"civil\" and deserving of at least being heard?",
+    "text_b": "Are you taxed as a resident of the state you were in when you bought the ticket, or as a resident of the state you are in when you claim the ticket?  If it's the latter, I suppose a theoretical lucky Oregonian will have to decide whether it's worth $90m in exchange for being stuck with the hated \"Californian\" moniker.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "28fa7658b4352e848c3f119107b9c842a41ee01bec675f4ec338b394f5da780d",
+    "pair_id": "153bb2858ce2cf380c3130f9dbed8e19ccc2c84171a47943584e8eb693d0ae65",
+    "text_a": "This was completely fascinating. But it left me with a question I haven't seen reported elsewhere either: These guys identify as ranchers, so who are their customers? What are the economics of their situation -- are they in the same situation as chicken farmers, where they have had their livelihoods squeezed away ... I'd like to understand what drives someone who seems to have so much to be so alienated, and their economic situation must play into that.",
+    "text_b": "I love the idea of upvoting entire articles, though this would have to be something that the Publisher could turn on and off. We do have a ton of other features currently in the works—following (and blocking!) other users, bookmarking articles during the review process, to read later (I find myself wanting to read the articles that other people are commenting on, as I'm reviewing their comments!), following conversations, and so much more. Thanks for your enthusiasm, Melinda, and your patience! It's a brand-new way to approach comments, and we're going to continue to improve it. We welcome all suggestions and feedback!",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "2d1c8e00bf0675ddbc72fdf11034fae8b4009a79fba3db8781fd98c22b1a9de2",
+    "pair_id": "cd3a7a8cc99d0872b0f6369ec70aad35c0494d7fae47b97966ea42d20ee0f30f",
+    "text_a": "I couldn't be more pleased. Comments on many sites too often get overtaken by trolls. It's the first I've heard of Civil, but I like its intent and encourage other publications in town to consider comments as a platform for engagement rather than a troll-driven click driver intended to boost online ad rates.",
+    "text_b": "To anyone reading this article. That's me and my friends in this picture. I would like to point out this \"journalist\" asked us zero questions. She just snapped our picture and left. And then writes an article trashing us, with no background? That's some real class A journalism. Kigurmi run by Sazac is a European company. And last time I checked a onzie of a cheetah bought at target is fine but suddenly I'm wearing one bought online and I'm appropiating a whole country? And if that wasn't bad enough the whole second half is trashing furries? Maybe next time you should think before writing an article antagonizing teenagers trying to do their Christmas tradition of getting pictures with Santa...",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "2fc6404eac7cc0001c0e66a3a9b81ebe440a0b03980693186aba71b049df41bb",
+    "pair_id": "fe983b78d609d8f3dcb41cc4743f36f8e2f615ac7a93c189199c0207261f24ce",
+    "text_a": "I saw @christa_m mention this a little below, but I'm curious how the system combats the echo chamber effect, especially on contentious issues?  I can imagine many stories where opinions which run against the (Portland) mainstream are viewed as inherently uncivil, such as supporting Trump's position on...well pretty much anyone that isn't white, or say supporting the Kleins in the Sweet Cakes by Melissa saga.  How do you convince people that an opinion which is to some degree derived from some form of prejudice is still \"civil\" and deserving of at least being heard?",
+    "text_b": "The letter writing campaign to get livestock off of Malheur Refuge started in the late '70's. The death threat phoned in to Nancy and Denzel's home was in 1979; along with two other friends I was hired a bodyguard to help protect N&D that weekend. The Hammond's ejection of the Ferguson's from the Diamond Dance was the year or two before the death threat. Great article WW and Jim D. For the last 10 days, lots of us have been wishing we could hear Denzel make witty quips about the Bundycon's occupation of the refuge hq. Sacred Cows at the public trough is easy to get on Amazon. Read and learn, read and learn ... great history of western livestock abuses ...",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "31671158f7bc528fe8f61bcfb05c03db4d9363b062ba4d07a6bff846b2bc9abe",
+    "pair_id": "367ca354698d94f8e3da63982115b98a5a51b0dace84dfb85236a0b8b4559501",
+    "text_a": "I already see dozens of \"just commenting to vote on comments to be able to comment\" type of comments.  This voting system is completely insane- you're assuming people have the extra time to *actually read* multiple non related comments?  I would love to see this system installed on oregonlive.com - they have enough online visitors and an established \"troll\" base to really need this service.  With as little online activity as wweek has - it will discourage further growth here.",
+    "text_b": "All the framed boxes must take up extra code and bandwidth usage to send all the extra code to our browsers..  Then there is all the \"2 more replies\" buttons to click on - that is amazingly annoying - I don't want to have to click on half a dozen \"more replies\" buttons to see what is being said.  And really, you have to vote on 3 other replies? What percentage of your users wait more than 1/2 second before randomly clicking on a response? Oh well, I digress.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "31bc278aa5369958822ba9ac490143b178752d4746233d82a79335b46df21f03",
+    "pair_id": "b4b12ec223d60bfd2fa263d41e52de2b6787d428f903a5d512f1bb611178a0de",
+    "text_a": "I thought Willamette week was better than this. Using weasel  wording  and referring  to a vanity fair hit piece to spread a misinformed  view what furriers are. We all do not obsessed about and or dress up. Only 10% 15% furs   dress up in costume; you find a great ratio of costumers (cosplay) at Kumoricon and New Con than a fur con.  We fur have many different and dare say family  friendly  safe for work interest including art, role  play and  literature. In fact looking  at the Loyd center piece, the pictures could been take around January 2-3. We had a furry meet up  Loyd's Center and the \"reporter\" could had easily missed us.",
+    "text_b": "I think you left out one very important organization who help the mentally ill over 18. NAMI Multnomah. They help people with mental distress find within or without NAMI to find them the services that can be most beneficial to them.  I am a volunteer for NAMI Multnomah in their Connection program. It is a walk-in group to people 18 and up. No matter the diagnosis we welcome them and help them learn new coping skills and develop tools to further  help them learn to cope from week to week. We have groups all over Multnomah County. By going  to http://nami.multnomah.org/. You will with out much difficulty find the list of Connection Groups and their times and locations.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "332d817ca316fbb3e83229610135f89f1229a69a942d642739268e4f30bd26e8",
+    "pair_id": "cb59b19903f3ded0dc60bb9e7d8a0d95c118d4841a910ac8315d0e27f992f8b1",
+    "text_a": "I'm glad you're working on this, and I look forward to seeing how it plays out.    The comments sections of online news stories have the potential to be great tools for community interaction about current events, a Neo Town Hall, of sorts.  One of the reasons I rely on Reddit as a platform for news and local discussions is that there's a sense of community interaction that's often lacking in my \"real life,\" hectic discussions.    But hopefully we won't be tempted to silence those who take unpopular stances.",
+    "text_b": "One would hope that the purpose of introducing this system is to encourage more debate and discussion, not less.  It seems there are several things that limit the flow of discussion:  Making comments that are personal attacks or encouraging witch hunts; true spam (which has been a real problem on WW's comment section, in my experience); and chasing rabbits to draw discussions away from the primary subject at hand.  I, for one, don't want to see unpopular opinions silenced.  Healthy debate is an important component of a civil society.  But when discussions degenerate into insults and distraction, it actually limits the ability of people to talk with each other.  I'm believing that this is the intention of your newspaper here, and I hope it's a movement that results in more, not less, commentary on current events.  We need it.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "398bef3b043caa3b550996d78da8b77ad0f932274c1b9d4bc71e7bb79c8b507e",
+    "pair_id": "c6f6eb639f4327f2019b75a56fad114d12f091da92c673ab8766ecf51ba15524",
+    "text_a": "I couldn't be more pleased. Comments on many sites too often get overtaken by trolls. It's the first I've heard of Civil, but I like its intent and encourage other publications in town to consider comments as a platform for engagement rather than a troll-driven click driver intended to boost online ad rates.",
+    "text_b": "I love the idea of upvoting entire articles, though this would have to be something that the Publisher could turn on and off. We do have a ton of other features currently in the works—following (and blocking!) other users, bookmarking articles during the review process, to read later (I find myself wanting to read the articles that other people are commenting on, as I'm reviewing their comments!), following conversations, and so much more. Thanks for your enthusiasm, Melinda, and your patience! It's a brand-new way to approach comments, and we're going to continue to improve it. We welcome all suggestions and feedback!",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "3edac57b3e0f89f7593096e7b2061ea56085c1753fcfd2999bbd3e29f88410d6",
+    "pair_id": "0e4442a009f534423d3fd285c2858c6685beb707d020a0e808075f53d670d67b",
+    "text_a": "This story gets more ridiculous by the hour! And, I love that people are sending these guys dildos in the mail now. But… if they really think there's a happy ending in this for any of them, I think they're even more deluded than all of the jokes about them assume.",
+    "text_b": "I love the idea of upvoting entire articles, though this would have to be something that the Publisher could turn on and off. We do have a ton of other features currently in the works—following (and blocking!) other users, bookmarking articles during the review process, to read later (I find myself wanting to read the articles that other people are commenting on, as I'm reviewing their comments!), following conversations, and so much more. Thanks for your enthusiasm, Melinda, and your patience! It's a brand-new way to approach comments, and we're going to continue to improve it. We welcome all suggestions and feedback!",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "3fde2e34fb68c81e5363cd72505478c4d7319d6eda944f6446da603c4aa1dde5",
+    "pair_id": "7496356a42fffb667bf5b18a4bf29db9aa4b81ef2bf1bb755d6a4379df8d4096",
+    "text_a": "Our aim is actually the opposite: we want spirited debate in which everyone feels free to participate, without fear of harassment, abuse, or death threats. Right now, a lot of voices are being silenced due to that fear. We designed Civil Comments for civil, respectful discussion and debate—we don't want it to become a \"positive comments only\" echo chamber. There's a lot going on on the backend to prevent abuse of the system. So, everyone is free to speak their mind, even if their opinion is unpopular—so long as they treat each other with respect.",
+    "text_b": "Thanks so much for following our progress and helping to test the software, David! To answer your question: you'll have one over-arching Civil account where you can manage different profiles for different sites. Of course, you're welcome to use the same information across all sites! We decided that it'd be best to be able to present yourself differently to different communities, though. I might, for example, want to be portland_hipster15 here on Willamette Week, but prefer to be MrWhiskers on Cat Enthusiast Digest!",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "50a453326f5fe733932d421a25e9b2567d3dc6dc1ddb7bfce8261a56d87761c2",
+    "pair_id": "635fb5b433fde6c65710a7ca6a5198255efaeef2fd0fd922a12b4ba30e2d487c",
+    "text_a": "I agree; I don't want to grant them the legitimacy of protestors. They're greedy, small-minded people who somehow seem to share the mass delusion that this is not only a good idea for themselves as individuals, but is the right thing to do for ranchers at large. Basically: take something that currently belongs to everyone, and give it to a select group of people, so they can profit.",
+    "text_b": "I thought Willamette week was better than this. Using weasel  wording  and referring  to a vanity fair hit piece to spread a misinformed  view what furriers are. We all do not obsessed about and or dress up. Only 10% 15% furs   dress up in costume; you find a great ratio of costumers (cosplay) at Kumoricon and New Con than a fur con.  We fur have many different and dare say family  friendly  safe for work interest including art, role  play and  literature. In fact looking  at the Loyd center piece, the pictures could been take around January 2-3. We had a furry meet up  Loyd's Center and the \"reporter\" could had easily missed us.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "5252c13776bc4084ed0bb4a03175c2764de0e4aa264e6388d1959ad5bf63eb36",
+    "pair_id": "7ed3d6927c7eadbc2a26e38a0dd73c25a5c84c9ef4bb9f88dc508f79dda9398c",
+    "text_a": "Hopefully there will be enough commenters who are honestly here to have a civil discussion to allow civil comments that challenge conventional wisdom. The posts that challenge conventional wisdom yet aren't civil won't hit the thread, and, sure, some folks will always try and scam the system by not allowing comments that they disagree with thru, but I wouldn't be surprised if many of the folks that take that approach when reviewing comments are the same ones who are having comments denied for being uncivil.  If that's the case it may be somewhat of a self-correcting problem, where they become bored with not having any comments post and go elsewhere.  I'm just speculating however only time will tell. I also would not be surprised if I was totally off base on all of this.",
+    "text_b": "I'm glad you're working on this, and I look forward to seeing how it plays out.    The comments sections of online news stories have the potential to be great tools for community interaction about current events, a Neo Town Hall, of sorts.  One of the reasons I rely on Reddit as a platform for news and local discussions is that there's a sense of community interaction that's often lacking in my \"real life,\" hectic discussions.    But hopefully we won't be tempted to silence those who take unpopular stances.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "52ae84e6ecb176818735d302eec2289cf996f89d2bb2183ef0f55aad894f2ada",
+    "pair_id": "b4b12ec223d60bfd2fa263d41e52de2b6787d428f903a5d512f1bb611178a0de",
+    "text_a": "I think you left out one very important organization who help the mentally ill over 18. NAMI Multnomah. They help people with mental distress find within or without NAMI to find them the services that can be most beneficial to them.  I am a volunteer for NAMI Multnomah in their Connection program. It is a walk-in group to people 18 and up. No matter the diagnosis we welcome them and help them learn new coping skills and develop tools to further  help them learn to cope from week to week. We have groups all over Multnomah County. By going  to http://nami.multnomah.org/. You will with out much difficulty find the list of Connection Groups and their times and locations.",
+    "text_b": "I thought Willamette week was better than this. Using weasel  wording  and referring  to a vanity fair hit piece to spread a misinformed  view what furriers are. We all do not obsessed about and or dress up. Only 10% 15% furs   dress up in costume; you find a great ratio of costumers (cosplay) at Kumoricon and New Con than a fur con.  We fur have many different and dare say family  friendly  safe for work interest including art, role  play and  literature. In fact looking  at the Loyd center piece, the pictures could been take around January 2-3. We had a furry meet up  Loyd's Center and the \"reporter\" could had easily missed us.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "58701dfb6d70734ab5053efd31ad412d6e145f436592edb189ec482f043eb828",
+    "pair_id": "c0aadc517e02d28eaf3bded68379b9e470b28ef78d5020f7a9b2c48132fd81f6",
+    "text_a": "Hi David, we did consider all of these possibilities when building our system! In fact, we assume people will try to game it; that's why we have a lot going on behind the scenes algorithmically. The commenter-facing part of the app is very straightforward, but there are a lot of checks and balances on the backend to prevent coordinated attacks and also to keep comments sections from becoming echo chambers. Banning insulting words isn't enough, unfortunately; people will always be smarter than word filters, even if the algorithm tries to take context into account. We do have a backup algorithm for low-volume situations that basically does this (plus a few other things), but it's not as effective as human reviewers.  I hear you on the \"more replies\" button; I don't think we'll remove it entirely, but I agree it's appearing too often, after too few comments. We'll be pushing updates very soon!",
+    "text_b": "Our aim is actually the opposite: we want spirited debate in which everyone feels free to participate, without fear of harassment, abuse, or death threats. Right now, a lot of voices are being silenced due to that fear. We designed Civil Comments for civil, respectful discussion and debate—we don't want it to become a \"positive comments only\" echo chamber. There's a lot going on on the backend to prevent abuse of the system. So, everyone is free to speak their mind, even if their opinion is unpopular—so long as they treat each other with respect.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "6063f664d32d4b1d5bb760b158d41784b813053f0f91c3f223190cca90721950",
+    "pair_id": "8e812f45e7b0a684a04e7b9e0defed4c3f41f5abd122225c8e78ea84e6c43bc9",
+    "text_a": "Comments will be randomly chosen and be reviewed by more than one person. But I bet the Civil people have an even better, more thorough answer to this question!",
+    "text_b": "Ah, so part of the \"back end\" and \"algorithms\" - automatic comment rejection if you don't vote on the 3 random comments in a way that is conforming enough to the way other users vote - or if you vote too fast, as I assumed many would do - just clicking a random button too quickly means that you're unwilling to \"participate\" - you just want to \"comment\" which doesn't ensure a \"civil\" community of commenters :  Screen grab from a rejected comment : i5guy 3 hours ago Rejected Personally, I already don’t have the time or energy to actually read the stuff they ask me to vote on. I’ll just randomly click on yes sorta or no to make the buttons go away.  Problems were detected in the ratings you left for your peers.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "6068630fbef4b6cf0da5da79e6c8d8427ee7fa661c6ce5df22053d02024299db",
+    "pair_id": "153bb2858ce2cf380c3130f9dbed8e19ccc2c84171a47943584e8eb693d0ae65",
+    "text_a": "This was completely fascinating. But it left me with a question I haven't seen reported elsewhere either: These guys identify as ranchers, so who are their customers? What are the economics of their situation -- are they in the same situation as chicken farmers, where they have had their livelihoods squeezed away ... I'd like to understand what drives someone who seems to have so much to be so alienated, and their economic situation must play into that.",
+    "text_b": "I love the idea of upvoting entire articles, though this would have to be something that the Publisher could turn on and off. We do have a ton of other features currently in the works—following (and blocking!) other users, bookmarking articles during the review process, to read later (I find myself wanting to read the articles that other people are commenting on, as I'm reviewing their comments!), following conversations, and so much more. Thanks for your enthusiasm, Melinda, and your patience! It's a brand-new way to approach comments, and we're going to continue to improve it. We welcome all suggestions and feedback!",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "60a4b80ec6ad03b4c4e7b048fdbaac4b255335f497c2454ca335d3ad5bfa1eee",
+    "pair_id": "b4b12ec223d60bfd2fa263d41e52de2b6787d428f903a5d512f1bb611178a0de",
+    "text_a": "I think you left out one very important organization who help the mentally ill over 18. NAMI Multnomah. They help people with mental distress find within or without NAMI to find them the services that can be most beneficial to them.  I am a volunteer for NAMI Multnomah in their Connection program. It is a walk-in group to people 18 and up. No matter the diagnosis we welcome them and help them learn new coping skills and develop tools to further  help them learn to cope from week to week. We have groups all over Multnomah County. By going  to http://nami.multnomah.org/. You will with out much difficulty find the list of Connection Groups and their times and locations.",
+    "text_b": "I thought Willamette week was better than this. Using weasel  wording  and referring  to a vanity fair hit piece to spread a misinformed  view what furriers are. We all do not obsessed about and or dress up. Only 10% 15% furs   dress up in costume; you find a great ratio of costumers (cosplay) at Kumoricon and New Con than a fur con.  We fur have many different and dare say family  friendly  safe for work interest including art, role  play and  literature. In fact looking  at the Loyd center piece, the pictures could been take around January 2-3. We had a furry meet up  Loyd's Center and the \"reporter\" could had easily missed us.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "652c81b8f64acd2100124446e85746388f8d5ba5fc221a75def8ef046eb21a9b",
+    "pair_id": "04dd6db695fe3ca1b56fc69b2cf7585e7abc1bc17c00281aa626467f4bce4df0",
+    "text_a": "I love the idea of upvoting entire articles, though this would have to be something that the Publisher could turn on and off. We do have a ton of other features currently in the works—following (and blocking!) other users, bookmarking articles during the review process, to read later (I find myself wanting to read the articles that other people are commenting on, as I'm reviewing their comments!), following conversations, and so much more. Thanks for your enthusiasm, Melinda, and your patience! It's a brand-new way to approach comments, and we're going to continue to improve it. We welcome all suggestions and feedback!",
+    "text_b": "Why bother writing a review if it's going to be this devoid of content?  I understand that you work for WW. (but that hardly seems like an excuse when Fred Armisen recorded radio voices for Grand Theft Auto IV with the same number of people.)",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "66024efc217f336cb683b8d852437cca47785e0620ea3e38a18ad5fe84ec1ad6",
+    "pair_id": "06a445dab7e014369143ef69b1dae10fff23b5fed5ba45b97b74896a8153c595",
+    "text_a": "Thanks for the info! One other thing I just noticed: in the email I got about your reply, the link to view it didn't work (at least not from Mail.app on OS X). Looks like it came through as x-webdoc:// and probably doesn't know how to deal with that scheme.  Really love what you're doing with Civil Comments, though! Can't wait to see it on more sites. Might even bring back comments on my personal site once it's available!",
+    "text_b": "Thanks so much for following our progress and helping to test the software, David! To answer your question: you'll have one over-arching Civil account where you can manage different profiles for different sites. Of course, you're welcome to use the same information across all sites! We decided that it'd be best to be able to present yourself differently to different communities, though. I might, for example, want to be portland_hipster15 here on Willamette Week, but prefer to be MrWhiskers on Cat Enthusiast Digest!",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "6677ceab55c43fe19ab7c0560ac4c57114f0bae3d7d5f66f1e2d93edefdb641f",
+    "pair_id": "06a445dab7e014369143ef69b1dae10fff23b5fed5ba45b97b74896a8153c595",
+    "text_a": "Thanks for the info! One other thing I just noticed: in the email I got about your reply, the link to view it didn't work (at least not from Mail.app on OS X). Looks like it came through as x-webdoc:// and probably doesn't know how to deal with that scheme.  Really love what you're doing with Civil Comments, though! Can't wait to see it on more sites. Might even bring back comments on my personal site once it's available!",
+    "text_b": "Thanks so much for following our progress and helping to test the software, David! To answer your question: you'll have one over-arching Civil account where you can manage different profiles for different sites. Of course, you're welcome to use the same information across all sites! We decided that it'd be best to be able to present yourself differently to different communities, though. I might, for example, want to be portland_hipster15 here on Willamette Week, but prefer to be MrWhiskers on Cat Enthusiast Digest!",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "6711b5275a7cd7fb707c2a158de5d459a7af4025305ae554264a717197faa4b7",
+    "pair_id": "7d279f2ce088155565d87cf80d90ac111c0fd412e7be4e1da0f2c441bfe3743b",
+    "text_a": "Tuesday Jan. 13, members of  this socalled 'militia' traveled to John Day,Or to try to enlist the sherif  there to come to Malheur and support them. He refused to go without the approval of the local  sheriff in Burns, Dave Ward. Sheriff Ward said he only wanted  The John Day sheriff to come to Burns if he would be willing to 'shame and humiliate' the trespassers into leaving. The Bundy Bunch are armed terrorist idiots who are attempting to poison my State with their toxic and divisive brand of 'politics'. They need to be arrested and prosecuted. Rallies to support public lands and the Malheur Refuge are being held in  PDX, Eugene, and other cities across  Or. next Tuesday Jan. 19: check out #SupportMalheur. And yes, I have lived in both rural  Or (25 years) and urban Or.",
+    "text_b": "Tried this out on another post.  Having to rate three other comments and then my own - is the lead designer a big Foucault fan?  Feels like panopticomments.  I suspect you won't go back, but I prefer Disqus because of the ubiquity and notifications system.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "6d120025ef08727cc87ee6c23d80f05fe03e7d800433842ab8c9831a905a01d7",
+    "pair_id": "c6f6eb639f4327f2019b75a56fad114d12f091da92c673ab8766ecf51ba15524",
+    "text_a": "I couldn't be more pleased. Comments on many sites too often get overtaken by trolls. It's the first I've heard of Civil, but I like its intent and encourage other publications in town to consider comments as a platform for engagement rather than a troll-driven click driver intended to boost online ad rates.",
+    "text_b": "I love the idea of upvoting entire articles, though this would have to be something that the Publisher could turn on and off. We do have a ton of other features currently in the works—following (and blocking!) other users, bookmarking articles during the review process, to read later (I find myself wanting to read the articles that other people are commenting on, as I'm reviewing their comments!), following conversations, and so much more. Thanks for your enthusiasm, Melinda, and your patience! It's a brand-new way to approach comments, and we're going to continue to improve it. We welcome all suggestions and feedback!",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "76967110ed2958f7e1765427d82202dd38c7702837e5a4b1c30d2c0c2acb7e23",
+    "pair_id": "0e4442a009f534423d3fd285c2858c6685beb707d020a0e808075f53d670d67b",
+    "text_a": "This story gets more ridiculous by the hour! And, I love that people are sending these guys dildos in the mail now. But… if they really think there's a happy ending in this for any of them, I think they're even more deluded than all of the jokes about them assume.",
+    "text_b": "I love the idea of upvoting entire articles, though this would have to be something that the Publisher could turn on and off. We do have a ton of other features currently in the works—following (and blocking!) other users, bookmarking articles during the review process, to read later (I find myself wanting to read the articles that other people are commenting on, as I'm reviewing their comments!), following conversations, and so much more. Thanks for your enthusiasm, Melinda, and your patience! It's a brand-new way to approach comments, and we're going to continue to improve it. We welcome all suggestions and feedback!",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "77a4ba29801c8c6202ab07ed291f334cafd07d5bb8aa38a2f52a15a6fea52aaf",
+    "pair_id": "cd3a7a8cc99d0872b0f6369ec70aad35c0494d7fae47b97966ea42d20ee0f30f",
+    "text_a": "I couldn't be more pleased. Comments on many sites too often get overtaken by trolls. It's the first I've heard of Civil, but I like its intent and encourage other publications in town to consider comments as a platform for engagement rather than a troll-driven click driver intended to boost online ad rates.",
+    "text_b": "To anyone reading this article. That's me and my friends in this picture. I would like to point out this \"journalist\" asked us zero questions. She just snapped our picture and left. And then writes an article trashing us, with no background? That's some real class A journalism. Kigurmi run by Sazac is a European company. And last time I checked a onzie of a cheetah bought at target is fine but suddenly I'm wearing one bought online and I'm appropiating a whole country? And if that wasn't bad enough the whole second half is trashing furries? Maybe next time you should think before writing an article antagonizing teenagers trying to do their Christmas tradition of getting pictures with Santa...",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "77c5b21f5f754e3d998b43861e87ad27080d2fa7d4e8076f74a0ffa8f00035e6",
+    "pair_id": "367ca354698d94f8e3da63982115b98a5a51b0dace84dfb85236a0b8b4559501",
+    "text_a": "I already see dozens of \"just commenting to vote on comments to be able to comment\" type of comments.  This voting system is completely insane- you're assuming people have the extra time to *actually read* multiple non related comments?  I would love to see this system installed on oregonlive.com - they have enough online visitors and an established \"troll\" base to really need this service.  With as little online activity as wweek has - it will discourage further growth here.",
+    "text_b": "All the framed boxes must take up extra code and bandwidth usage to send all the extra code to our browsers..  Then there is all the \"2 more replies\" buttons to click on - that is amazingly annoying - I don't want to have to click on half a dozen \"more replies\" buttons to see what is being said.  And really, you have to vote on 3 other replies? What percentage of your users wait more than 1/2 second before randomly clicking on a response? Oh well, I digress.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "78f2fec11ec8d03e49de9346b4697fa358881d449ad20ac33e31b6ad40919ec0",
+    "pair_id": "cb59b19903f3ded0dc60bb9e7d8a0d95c118d4841a910ac8315d0e27f992f8b1",
+    "text_a": "One would hope that the purpose of introducing this system is to encourage more debate and discussion, not less.  It seems there are several things that limit the flow of discussion:  Making comments that are personal attacks or encouraging witch hunts; true spam (which has been a real problem on WW's comment section, in my experience); and chasing rabbits to draw discussions away from the primary subject at hand.  I, for one, don't want to see unpopular opinions silenced.  Healthy debate is an important component of a civil society.  But when discussions degenerate into insults and distraction, it actually limits the ability of people to talk with each other.  I'm believing that this is the intention of your newspaper here, and I hope it's a movement that results in more, not less, commentary on current events.  We need it.",
+    "text_b": "I'm glad you're working on this, and I look forward to seeing how it plays out.    The comments sections of online news stories have the potential to be great tools for community interaction about current events, a Neo Town Hall, of sorts.  One of the reasons I rely on Reddit as a platform for news and local discussions is that there's a sense of community interaction that's often lacking in my \"real life,\" hectic discussions.    But hopefully we won't be tempted to silence those who take unpopular stances.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "7f4888cad30796776405c0a0357f1e20549dca638af02d6fa5200d1240772851",
+    "pair_id": "cb59b19903f3ded0dc60bb9e7d8a0d95c118d4841a910ac8315d0e27f992f8b1",
+    "text_a": "I'm glad you're working on this, and I look forward to seeing how it plays out.    The comments sections of online news stories have the potential to be great tools for community interaction about current events, a Neo Town Hall, of sorts.  One of the reasons I rely on Reddit as a platform for news and local discussions is that there's a sense of community interaction that's often lacking in my \"real life,\" hectic discussions.    But hopefully we won't be tempted to silence those who take unpopular stances.",
+    "text_b": "One would hope that the purpose of introducing this system is to encourage more debate and discussion, not less.  It seems there are several things that limit the flow of discussion:  Making comments that are personal attacks or encouraging witch hunts; true spam (which has been a real problem on WW's comment section, in my experience); and chasing rabbits to draw discussions away from the primary subject at hand.  I, for one, don't want to see unpopular opinions silenced.  Healthy debate is an important component of a civil society.  But when discussions degenerate into insults and distraction, it actually limits the ability of people to talk with each other.  I'm believing that this is the intention of your newspaper here, and I hope it's a movement that results in more, not less, commentary on current events.  We need it.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "86aff9ded95ecb1f89397c2ec4db39b5a5f734fbdd1e54a2a18bc0b4712e17c8",
+    "pair_id": "7ed3d6927c7eadbc2a26e38a0dd73c25a5c84c9ef4bb9f88dc508f79dda9398c",
+    "text_a": "Hopefully there will be enough commenters who are honestly here to have a civil discussion to allow civil comments that challenge conventional wisdom. The posts that challenge conventional wisdom yet aren't civil won't hit the thread, and, sure, some folks will always try and scam the system by not allowing comments that they disagree with thru, but I wouldn't be surprised if many of the folks that take that approach when reviewing comments are the same ones who are having comments denied for being uncivil.  If that's the case it may be somewhat of a self-correcting problem, where they become bored with not having any comments post and go elsewhere.  I'm just speculating however only time will tell. I also would not be surprised if I was totally off base on all of this.",
+    "text_b": "I'm glad you're working on this, and I look forward to seeing how it plays out.    The comments sections of online news stories have the potential to be great tools for community interaction about current events, a Neo Town Hall, of sorts.  One of the reasons I rely on Reddit as a platform for news and local discussions is that there's a sense of community interaction that's often lacking in my \"real life,\" hectic discussions.    But hopefully we won't be tempted to silence those who take unpopular stances.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "88b9c4c71ef4e5c91f03246a5dcc866a28ca5fba50a935d3ab6e600b4455de6d",
+    "pair_id": "7496356a42fffb667bf5b18a4bf29db9aa4b81ef2bf1bb755d6a4379df8d4096",
+    "text_a": "Thanks so much for following our progress and helping to test the software, David! To answer your question: you'll have one over-arching Civil account where you can manage different profiles for different sites. Of course, you're welcome to use the same information across all sites! We decided that it'd be best to be able to present yourself differently to different communities, though. I might, for example, want to be portland_hipster15 here on Willamette Week, but prefer to be MrWhiskers on Cat Enthusiast Digest!",
+    "text_b": "Our aim is actually the opposite: we want spirited debate in which everyone feels free to participate, without fear of harassment, abuse, or death threats. Right now, a lot of voices are being silenced due to that fear. We designed Civil Comments for civil, respectful discussion and debate—we don't want it to become a \"positive comments only\" echo chamber. There's a lot going on on the backend to prevent abuse of the system. So, everyone is free to speak their mind, even if their opinion is unpopular—so long as they treat each other with respect.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "88f5f455397021d390aee16242a985f5c80267dbdb2cf2ee97731faa8bb23cd3",
+    "pair_id": "c6f6eb639f4327f2019b75a56fad114d12f091da92c673ab8766ecf51ba15524",
+    "text_a": "I love the idea of upvoting entire articles, though this would have to be something that the Publisher could turn on and off. We do have a ton of other features currently in the works—following (and blocking!) other users, bookmarking articles during the review process, to read later (I find myself wanting to read the articles that other people are commenting on, as I'm reviewing their comments!), following conversations, and so much more. Thanks for your enthusiasm, Melinda, and your patience! It's a brand-new way to approach comments, and we're going to continue to improve it. We welcome all suggestions and feedback!",
+    "text_b": "I couldn't be more pleased. Comments on many sites too often get overtaken by trolls. It's the first I've heard of Civil, but I like its intent and encourage other publications in town to consider comments as a platform for engagement rather than a troll-driven click driver intended to boost online ad rates.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "89ec53a2518a444e9082c2e070c68d774bb262c1d33e395f30c06c8f6f9be6b7",
+    "pair_id": "635fb5b433fde6c65710a7ca6a5198255efaeef2fd0fd922a12b4ba30e2d487c",
+    "text_a": "I thought Willamette week was better than this. Using weasel  wording  and referring  to a vanity fair hit piece to spread a misinformed  view what furriers are. We all do not obsessed about and or dress up. Only 10% 15% furs   dress up in costume; you find a great ratio of costumers (cosplay) at Kumoricon and New Con than a fur con.  We fur have many different and dare say family  friendly  safe for work interest including art, role  play and  literature. In fact looking  at the Loyd center piece, the pictures could been take around January 2-3. We had a furry meet up  Loyd's Center and the \"reporter\" could had easily missed us.",
+    "text_b": "I agree; I don't want to grant them the legitimacy of protestors. They're greedy, small-minded people who somehow seem to share the mass delusion that this is not only a good idea for themselves as individuals, but is the right thing to do for ranchers at large. Basically: take something that currently belongs to everyone, and give it to a select group of people, so they can profit.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "91f90bdb01b008d7418d1eace00cc508d043631d3af971da50854e25f7e9c28e",
+    "pair_id": "5fda9712df469f8d9afbbfc7ca79db3d5272d1e28a8dad1a312fa0d720c8d6af",
+    "text_a": "Our aim is actually the opposite: we want spirited debate in which everyone feels free to participate, without fear of harassment, abuse, or death threats. Right now, a lot of voices are being silenced due to that fear. We designed Civil Comments for civil, respectful discussion and debate—we don't want it to become a \"positive comments only\" echo chamber. There's a lot going on on the backend to prevent abuse of the system. So, everyone is free to speak their mind, even if their opinion is unpopular—so long as they treat each other with respect.",
+    "text_b": "Ryan Bundy seems like a nice, responsible  human being who has been sold a bill of goods by his  intellectually domineering brother, who he idolizes. Ammon has a bunch of other similarly situated nutters following him as well.  Where? No one quite knows. And, unless you live in Burns no one cares. Personally, I am glad these bearded, cammo wearing, narrowly educated , nuisances....are there and not here. Traffic is bad enough.  No reason to make it worse with a Constitutional Pagent Play in the Federal Building in downtown PDX.  And,  repulsive as their  cammo costumes are ( all available at Cabela's and Andy and Bax) with their brandishing weapons it's a very immature male form of exhibitionism....cowboys and indians for middle aged men.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "93a5d9ca8385eb2ab6e8a70c237d8996176ad6140cdff2d10ec8c5da47adfb3a",
+    "pair_id": "7d2b43f02725047d8bb74923950b9ae385636b970b9933c9274d342f519683f2",
+    "text_a": "I love the idea of upvoting entire articles, though this would have to be something that the Publisher could turn on and off. We do have a ton of other features currently in the works—following (and blocking!) other users, bookmarking articles during the review process, to read later (I find myself wanting to read the articles that other people are commenting on, as I'm reviewing their comments!), following conversations, and so much more. Thanks for your enthusiasm, Melinda, and your patience! It's a brand-new way to approach comments, and we're going to continue to improve it. We welcome all suggestions and feedback!",
+    "text_b": "I'm so glad Portland Development Commission, Kate Brown, and Business Oregon are taking direct action to correct the gap in participation! I think Elevate is going to do great things over the next five years. The Portland startup scene has the chance to set itself apart here, and this is definitely a step in the right direction! Very cool.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "9629340f47efb56bd63de78bdf21a74b4b26007b87370251e92819365aeb6f98",
+    "pair_id": "d481cc55121320812e61d11d3c25562952758dbdc743b11a509cc26b1ae23ca3",
+    "text_a": "This is certainly not good journalism by any stretch of the imagination, but they are words, and if this is the metric by which Willamette Week chooses to publish a journalist, then by all means publish Brace Belden.",
+    "text_b": "I think Wweek is in a strange spot with that.  Their comments can be active, but they're nowhere near as busy as say, OregonLive.  Forcing the writers or other staff to monitor comments might be overkill.  I definitely get a newspaper not wanting outsiders handling that, for fear of confusion and accusations of bias.  It seems like every OregonLive comment thread has accusations of bias due to deleted posts despite repeated insistence that comment moderation is not handled in-house.  I've also seen several communities where conforming to the political view is more of a metric for desirability than anything to do with tone or actual content, and mods reinforced that.  The results of volunteers may....vary, to be polite.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "98c7b1d6cf059962b9284a4847dbaeed2a550950225da502b1c938f6be2911ee",
+    "pair_id": "686a7fb7f0273d6b60416aee84cb554efb8b5e1cfb7fdfb0ad963e8584dba8a8",
+    "text_a": "Tuesday Jan. 13, members of  this socalled 'militia' traveled to John Day,Or to try to enlist the sherif  there to come to Malheur and support them. He refused to go without the approval of the local  sheriff in Burns, Dave Ward. Sheriff Ward said he only wanted  The John Day sheriff to come to Burns if he would be willing to 'shame and humiliate' the trespassers into leaving. The Bundy Bunch are armed terrorist idiots who are attempting to poison my State with their toxic and divisive brand of 'politics'. They need to be arrested and prosecuted. Rallies to support public lands and the Malheur Refuge are being held in  PDX, Eugene, and other cities across  Or. next Tuesday Jan. 19: check out #SupportMalheur. And yes, I have lived in both rural  Or (25 years) and urban Or.",
+    "text_b": "I agree; I don't want to grant them the legitimacy of protestors. They're greedy, small-minded people who somehow seem to share the mass delusion that this is not only a good idea for themselves as individuals, but is the right thing to do for ranchers at large. Basically: take something that currently belongs to everyone, and give it to a select group of people, so they can profit.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "993635c684a815354c4a8d1a1c0ca943fdebbd28ccc6626453b5329990d39ec5",
+    "pair_id": "cd3a7a8cc99d0872b0f6369ec70aad35c0494d7fae47b97966ea42d20ee0f30f",
+    "text_a": "I couldn't be more pleased. Comments on many sites too often get overtaken by trolls. It's the first I've heard of Civil, but I like its intent and encourage other publications in town to consider comments as a platform for engagement rather than a troll-driven click driver intended to boost online ad rates.",
+    "text_b": "To anyone reading this article. That's me and my friends in this picture. I would like to point out this \"journalist\" asked us zero questions. She just snapped our picture and left. And then writes an article trashing us, with no background? That's some real class A journalism. Kigurmi run by Sazac is a European company. And last time I checked a onzie of a cheetah bought at target is fine but suddenly I'm wearing one bought online and I'm appropiating a whole country? And if that wasn't bad enough the whole second half is trashing furries? Maybe next time you should think before writing an article antagonizing teenagers trying to do their Christmas tradition of getting pictures with Santa...",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "9aa48b76f28303ac24f2c7b401aa952b7faa1c56d3ae34d118bc47d3edbc4e43",
+    "pair_id": "5fda9712df469f8d9afbbfc7ca79db3d5272d1e28a8dad1a312fa0d720c8d6af",
+    "text_a": "Ryan Bundy seems like a nice, responsible  human being who has been sold a bill of goods by his  intellectually domineering brother, who he idolizes. Ammon has a bunch of other similarly situated nutters following him as well.  Where? No one quite knows. And, unless you live in Burns no one cares. Personally, I am glad these bearded, cammo wearing, narrowly educated , nuisances....are there and not here. Traffic is bad enough.  No reason to make it worse with a Constitutional Pagent Play in the Federal Building in downtown PDX.  And,  repulsive as their  cammo costumes are ( all available at Cabela's and Andy and Bax) with their brandishing weapons it's a very immature male form of exhibitionism....cowboys and indians for middle aged men.",
+    "text_b": "Our aim is actually the opposite: we want spirited debate in which everyone feels free to participate, without fear of harassment, abuse, or death threats. Right now, a lot of voices are being silenced due to that fear. We designed Civil Comments for civil, respectful discussion and debate—we don't want it to become a \"positive comments only\" echo chamber. There's a lot going on on the backend to prevent abuse of the system. So, everyone is free to speak their mind, even if their opinion is unpopular—so long as they treat each other with respect.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "9bd9cfcc220307bd984d5971ce6e2b1c5b36b265682c2ef9120070f763280db4",
+    "pair_id": "635fb5b433fde6c65710a7ca6a5198255efaeef2fd0fd922a12b4ba30e2d487c",
+    "text_a": "I thought Willamette week was better than this. Using weasel  wording  and referring  to a vanity fair hit piece to spread a misinformed  view what furriers are. We all do not obsessed about and or dress up. Only 10% 15% furs   dress up in costume; you find a great ratio of costumers (cosplay) at Kumoricon and New Con than a fur con.  We fur have many different and dare say family  friendly  safe for work interest including art, role  play and  literature. In fact looking  at the Loyd center piece, the pictures could been take around January 2-3. We had a furry meet up  Loyd's Center and the \"reporter\" could had easily missed us.",
+    "text_b": "I agree; I don't want to grant them the legitimacy of protestors. They're greedy, small-minded people who somehow seem to share the mass delusion that this is not only a good idea for themselves as individuals, but is the right thing to do for ranchers at large. Basically: take something that currently belongs to everyone, and give it to a select group of people, so they can profit.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "a068786efe9bf03868dcbf72ae3de3a5d4797cba37ec3be494c65b65a08b24ee",
+    "pair_id": "7d2b43f02725047d8bb74923950b9ae385636b970b9933c9274d342f519683f2",
+    "text_a": "I'm so glad Portland Development Commission, Kate Brown, and Business Oregon are taking direct action to correct the gap in participation! I think Elevate is going to do great things over the next five years. The Portland startup scene has the chance to set itself apart here, and this is definitely a step in the right direction! Very cool.",
+    "text_b": "I love the idea of upvoting entire articles, though this would have to be something that the Publisher could turn on and off. We do have a ton of other features currently in the works—following (and blocking!) other users, bookmarking articles during the review process, to read later (I find myself wanting to read the articles that other people are commenting on, as I'm reviewing their comments!), following conversations, and so much more. Thanks for your enthusiasm, Melinda, and your patience! It's a brand-new way to approach comments, and we're going to continue to improve it. We welcome all suggestions and feedback!",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "a93e2bf95ac06a6296994b680336923dbfbd4d1072f3cefc01c0d22251c014af",
+    "pair_id": "f0c81681d6abd03bf31fb85ae9a93d4641f848c63e1b07a0b4e668cbbec2a560",
+    "text_a": "Are you taxed as a resident of the state you were in when you bought the ticket, or as a resident of the state you are in when you claim the ticket?  If it's the latter, I suppose a theoretical lucky Oregonian will have to decide whether it's worth $90m in exchange for being stuck with the hated \"Californian\" moniker.",
+    "text_b": "I saw @christa_m mention this a little below, but I'm curious how the system combats the echo chamber effect, especially on contentious issues?  I can imagine many stories where opinions which run against the (Portland) mainstream are viewed as inherently uncivil, such as supporting Trump's position on...well pretty much anyone that isn't white, or say supporting the Kleins in the Sweet Cakes by Melissa saga.  How do you convince people that an opinion which is to some degree derived from some form of prejudice is still \"civil\" and deserving of at least being heard?",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "b07e0834ca69730dc77ba5aa1b60794d9080c2276b4b4383736e0bf0af1f0c3f",
+    "pair_id": "8d0e64efab29ad3fc2129577ce1282c5f3be084acb478c4c8cc603f8266f08b5",
+    "text_a": "I had a little trouble getting signed up, but after a brief email exchange with the folks at Civil everything appears to be working now.  If they're successful in their goal, I'll be extremely pleased.",
+    "text_b": "I thought Willamette week was better than this. Using weasel  wording  and referring  to a vanity fair hit piece to spread a misinformed  view what furriers are. We all do not obsessed about and or dress up. Only 10% 15% furs   dress up in costume; you find a great ratio of costumers (cosplay) at Kumoricon and New Con than a fur con.  We fur have many different and dare say family  friendly  safe for work interest including art, role  play and  literature. In fact looking  at the Loyd center piece, the pictures could been take around January 2-3. We had a furry meet up  Loyd's Center and the \"reporter\" could had easily missed us.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "b2331223830ddfa2ef525147ccbe74c1f2819ad6a13f386778e353eafbeb1feb",
+    "pair_id": "54725f912063bdf1bc31d22dcae6f30ae9d205b47e3db4d8c0b29a139414fcac",
+    "text_a": "Nice. :) Although it's a shame the resolution on the files make some of the lettering tough to read. I'm not sure what the last word in the lower right strip is. I like the design of the 2000s guy in the third strip. That's a guy who grew up watching Kevin Smith movies.",
+    "text_b": "Are you taxed as a resident of the state you were in when you bought the ticket, or as a resident of the state you are in when you claim the ticket?  If it's the latter, I suppose a theoretical lucky Oregonian will have to decide whether it's worth $90m in exchange for being stuck with the hated \"Californian\" moniker.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "b5d14c33bdd7814af62f273b21487ed80a181329af174ab1f1f338144b49da5f",
+    "pair_id": "fe983b78d609d8f3dcb41cc4743f36f8e2f615ac7a93c189199c0207261f24ce",
+    "text_a": "I saw @christa_m mention this a little below, but I'm curious how the system combats the echo chamber effect, especially on contentious issues?  I can imagine many stories where opinions which run against the (Portland) mainstream are viewed as inherently uncivil, such as supporting Trump's position on...well pretty much anyone that isn't white, or say supporting the Kleins in the Sweet Cakes by Melissa saga.  How do you convince people that an opinion which is to some degree derived from some form of prejudice is still \"civil\" and deserving of at least being heard?",
+    "text_b": "The letter writing campaign to get livestock off of Malheur Refuge started in the late '70's. The death threat phoned in to Nancy and Denzel's home was in 1979; along with two other friends I was hired a bodyguard to help protect N&D that weekend. The Hammond's ejection of the Ferguson's from the Diamond Dance was the year or two before the death threat. Great article WW and Jim D. For the last 10 days, lots of us have been wishing we could hear Denzel make witty quips about the Bundycon's occupation of the refuge hq. Sacred Cows at the public trough is easy to get on Amazon. Read and learn, read and learn ... great history of western livestock abuses ...",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "b7ce7a2e1c3fe149637d2d1460f9e8eae1660baee6a2880a0f0d85de2a315b30",
+    "pair_id": "c0aadc517e02d28eaf3bded68379b9e470b28ef78d5020f7a9b2c48132fd81f6",
+    "text_a": "Our aim is actually the opposite: we want spirited debate in which everyone feels free to participate, without fear of harassment, abuse, or death threats. Right now, a lot of voices are being silenced due to that fear. We designed Civil Comments for civil, respectful discussion and debate—we don't want it to become a \"positive comments only\" echo chamber. There's a lot going on on the backend to prevent abuse of the system. So, everyone is free to speak their mind, even if their opinion is unpopular—so long as they treat each other with respect.",
+    "text_b": "Hi David, we did consider all of these possibilities when building our system! In fact, we assume people will try to game it; that's why we have a lot going on behind the scenes algorithmically. The commenter-facing part of the app is very straightforward, but there are a lot of checks and balances on the backend to prevent coordinated attacks and also to keep comments sections from becoming echo chambers. Banning insulting words isn't enough, unfortunately; people will always be smarter than word filters, even if the algorithm tries to take context into account. We do have a backup algorithm for low-volume situations that basically does this (plus a few other things), but it's not as effective as human reviewers.  I hear you on the \"more replies\" button; I don't think we'll remove it entirely, but I agree it's appearing too often, after too few comments. We'll be pushing updates very soon!",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "bbe30abf59ca9b6df626bbbd880bacf535a36f82b3f7239ccd5f8b8f205cd93e",
+    "pair_id": "686a7fb7f0273d6b60416aee84cb554efb8b5e1cfb7fdfb0ad963e8584dba8a8",
+    "text_a": "I agree; I don't want to grant them the legitimacy of protestors. They're greedy, small-minded people who somehow seem to share the mass delusion that this is not only a good idea for themselves as individuals, but is the right thing to do for ranchers at large. Basically: take something that currently belongs to everyone, and give it to a select group of people, so they can profit.",
+    "text_b": "Tuesday Jan. 13, members of  this socalled 'militia' traveled to John Day,Or to try to enlist the sherif  there to come to Malheur and support them. He refused to go without the approval of the local  sheriff in Burns, Dave Ward. Sheriff Ward said he only wanted  The John Day sheriff to come to Burns if he would be willing to 'shame and humiliate' the trespassers into leaving. The Bundy Bunch are armed terrorist idiots who are attempting to poison my State with their toxic and divisive brand of 'politics'. They need to be arrested and prosecuted. Rallies to support public lands and the Malheur Refuge are being held in  PDX, Eugene, and other cities across  Or. next Tuesday Jan. 19: check out #SupportMalheur. And yes, I have lived in both rural  Or (25 years) and urban Or.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "be3651020a081bcb574e09ed38ddc97e2f857558fc7d0ece5d1ca867d2f6d6e2",
+    "pair_id": "153bb2858ce2cf380c3130f9dbed8e19ccc2c84171a47943584e8eb693d0ae65",
+    "text_a": "This was completely fascinating. But it left me with a question I haven't seen reported elsewhere either: These guys identify as ranchers, so who are their customers? What are the economics of their situation -- are they in the same situation as chicken farmers, where they have had their livelihoods squeezed away ... I'd like to understand what drives someone who seems to have so much to be so alienated, and their economic situation must play into that.",
+    "text_b": "I love the idea of upvoting entire articles, though this would have to be something that the Publisher could turn on and off. We do have a ton of other features currently in the works—following (and blocking!) other users, bookmarking articles during the review process, to read later (I find myself wanting to read the articles that other people are commenting on, as I'm reviewing their comments!), following conversations, and so much more. Thanks for your enthusiasm, Melinda, and your patience! It's a brand-new way to approach comments, and we're going to continue to improve it. We welcome all suggestions and feedback!",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "bf7c595f7b974115329cbad1b88bdb31b3d3b10fd54298485978f6b586f1cde9",
+    "pair_id": "a38e1570666c42867b7f997487966845e5e7799001bbd4b15ca552ac118a6f63",
+    "text_a": "Angry trolls, misogynists and Racists\", oh my. It doesn't take all of my 150 IQ to see the slant here.  it's the \"Diversity diode\" at work yet again. \"We can say anything that we want because we are Diversity. You on the other hand must only  say what we allow you to say. From now on, winning arguments against any member of diversity will be considered offensive language.  facts, cogent, linear posts and Math are now verboten.",
+    "text_b": "Ah, so part of the \"back end\" and \"algorithms\" - automatic comment rejection if you don't vote on the 3 random comments in a way that is conforming enough to the way other users vote - or if you vote too fast, as I assumed many would do - just clicking a random button too quickly means that you're unwilling to \"participate\" - you just want to \"comment\" which doesn't ensure a \"civil\" community of commenters :  Screen grab from a rejected comment : i5guy 3 hours ago Rejected Personally, I already don’t have the time or energy to actually read the stuff they ask me to vote on. I’ll just randomly click on yes sorta or no to make the buttons go away.  Problems were detected in the ratings you left for your peers.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "c0c62b72c4e8f3560350eeb951f31ddca0eea2114dd96f009a382a41ec7a2a22",
+    "pair_id": "d481cc55121320812e61d11d3c25562952758dbdc743b11a509cc26b1ae23ca3",
+    "text_a": "This is certainly not good journalism by any stretch of the imagination, but they are words, and if this is the metric by which Willamette Week chooses to publish a journalist, then by all means publish Brace Belden.",
+    "text_b": "I think Wweek is in a strange spot with that.  Their comments can be active, but they're nowhere near as busy as say, OregonLive.  Forcing the writers or other staff to monitor comments might be overkill.  I definitely get a newspaper not wanting outsiders handling that, for fear of confusion and accusations of bias.  It seems like every OregonLive comment thread has accusations of bias due to deleted posts despite repeated insistence that comment moderation is not handled in-house.  I've also seen several communities where conforming to the political view is more of a metric for desirability than anything to do with tone or actual content, and mods reinforced that.  The results of volunteers may....vary, to be polite.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "c85753ca0028e95fd9aff94dcffac98a4de650abada009b4787821aeb4ca85c8",
+    "pair_id": "686a7fb7f0273d6b60416aee84cb554efb8b5e1cfb7fdfb0ad963e8584dba8a8",
+    "text_a": "Tuesday Jan. 13, members of  this socalled 'militia' traveled to John Day,Or to try to enlist the sherif  there to come to Malheur and support them. He refused to go without the approval of the local  sheriff in Burns, Dave Ward. Sheriff Ward said he only wanted  The John Day sheriff to come to Burns if he would be willing to 'shame and humiliate' the trespassers into leaving. The Bundy Bunch are armed terrorist idiots who are attempting to poison my State with their toxic and divisive brand of 'politics'. They need to be arrested and prosecuted. Rallies to support public lands and the Malheur Refuge are being held in  PDX, Eugene, and other cities across  Or. next Tuesday Jan. 19: check out #SupportMalheur. And yes, I have lived in both rural  Or (25 years) and urban Or.",
+    "text_b": "I agree; I don't want to grant them the legitimacy of protestors. They're greedy, small-minded people who somehow seem to share the mass delusion that this is not only a good idea for themselves as individuals, but is the right thing to do for ranchers at large. Basically: take something that currently belongs to everyone, and give it to a select group of people, so they can profit.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "cb3274714f1c963aab8a7e0e8a0dbd89252a624cc21c816c71378050249f21e7",
+    "pair_id": "5fda9712df469f8d9afbbfc7ca79db3d5272d1e28a8dad1a312fa0d720c8d6af",
+    "text_a": "Our aim is actually the opposite: we want spirited debate in which everyone feels free to participate, without fear of harassment, abuse, or death threats. Right now, a lot of voices are being silenced due to that fear. We designed Civil Comments for civil, respectful discussion and debate—we don't want it to become a \"positive comments only\" echo chamber. There's a lot going on on the backend to prevent abuse of the system. So, everyone is free to speak their mind, even if their opinion is unpopular—so long as they treat each other with respect.",
+    "text_b": "Ryan Bundy seems like a nice, responsible  human being who has been sold a bill of goods by his  intellectually domineering brother, who he idolizes. Ammon has a bunch of other similarly situated nutters following him as well.  Where? No one quite knows. And, unless you live in Burns no one cares. Personally, I am glad these bearded, cammo wearing, narrowly educated , nuisances....are there and not here. Traffic is bad enough.  No reason to make it worse with a Constitutional Pagent Play in the Federal Building in downtown PDX.  And,  repulsive as their  cammo costumes are ( all available at Cabela's and Andy and Bax) with their brandishing weapons it's a very immature male form of exhibitionism....cowboys and indians for middle aged men.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "cde9862eb5bb34b064b0aebf2c63eed4dd62a9d34816a95e538bdffe652aead7",
+    "pair_id": "a38e1570666c42867b7f997487966845e5e7799001bbd4b15ca552ac118a6f63",
+    "text_a": "Angry trolls, misogynists and Racists\", oh my. It doesn't take all of my 150 IQ to see the slant here.  it's the \"Diversity diode\" at work yet again. \"We can say anything that we want because we are Diversity. You on the other hand must only  say what we allow you to say. From now on, winning arguments against any member of diversity will be considered offensive language.  facts, cogent, linear posts and Math are now verboten.",
+    "text_b": "Ah, so part of the \"back end\" and \"algorithms\" - automatic comment rejection if you don't vote on the 3 random comments in a way that is conforming enough to the way other users vote - or if you vote too fast, as I assumed many would do - just clicking a random button too quickly means that you're unwilling to \"participate\" - you just want to \"comment\" which doesn't ensure a \"civil\" community of commenters :  Screen grab from a rejected comment : i5guy 3 hours ago Rejected Personally, I already don’t have the time or energy to actually read the stuff they ask me to vote on. I’ll just randomly click on yes sorta or no to make the buttons go away.  Problems were detected in the ratings you left for your peers.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "d06d11d514305914e1a5339528ba0b6719960cd47ba9952edee6a9cca22a5544",
+    "pair_id": "7496356a42fffb667bf5b18a4bf29db9aa4b81ef2bf1bb755d6a4379df8d4096",
+    "text_a": "Thanks so much for following our progress and helping to test the software, David! To answer your question: you'll have one over-arching Civil account where you can manage different profiles for different sites. Of course, you're welcome to use the same information across all sites! We decided that it'd be best to be able to present yourself differently to different communities, though. I might, for example, want to be portland_hipster15 here on Willamette Week, but prefer to be MrWhiskers on Cat Enthusiast Digest!",
+    "text_b": "Our aim is actually the opposite: we want spirited debate in which everyone feels free to participate, without fear of harassment, abuse, or death threats. Right now, a lot of voices are being silenced due to that fear. We designed Civil Comments for civil, respectful discussion and debate—we don't want it to become a \"positive comments only\" echo chamber. There's a lot going on on the backend to prevent abuse of the system. So, everyone is free to speak their mind, even if their opinion is unpopular—so long as they treat each other with respect.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "d627b7986e2a39c4ba490ae4494f2dbd6c5d0f0703be8c7a01b04b8300ddfb1f",
+    "pair_id": "c0aadc517e02d28eaf3bded68379b9e470b28ef78d5020f7a9b2c48132fd81f6",
+    "text_a": "Hi David, we did consider all of these possibilities when building our system! In fact, we assume people will try to game it; that's why we have a lot going on behind the scenes algorithmically. The commenter-facing part of the app is very straightforward, but there are a lot of checks and balances on the backend to prevent coordinated attacks and also to keep comments sections from becoming echo chambers. Banning insulting words isn't enough, unfortunately; people will always be smarter than word filters, even if the algorithm tries to take context into account. We do have a backup algorithm for low-volume situations that basically does this (plus a few other things), but it's not as effective as human reviewers.  I hear you on the \"more replies\" button; I don't think we'll remove it entirely, but I agree it's appearing too often, after too few comments. We'll be pushing updates very soon!",
+    "text_b": "Our aim is actually the opposite: we want spirited debate in which everyone feels free to participate, without fear of harassment, abuse, or death threats. Right now, a lot of voices are being silenced due to that fear. We designed Civil Comments for civil, respectful discussion and debate—we don't want it to become a \"positive comments only\" echo chamber. There's a lot going on on the backend to prevent abuse of the system. So, everyone is free to speak their mind, even if their opinion is unpopular—so long as they treat each other with respect.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "da6bc38b0772413dd7e7e4391b534ff0b8b8cdc7660160f4de1f619e75ef1335",
+    "pair_id": "fe983b78d609d8f3dcb41cc4743f36f8e2f615ac7a93c189199c0207261f24ce",
+    "text_a": "The letter writing campaign to get livestock off of Malheur Refuge started in the late '70's. The death threat phoned in to Nancy and Denzel's home was in 1979; along with two other friends I was hired a bodyguard to help protect N&D that weekend. The Hammond's ejection of the Ferguson's from the Diamond Dance was the year or two before the death threat. Great article WW and Jim D. For the last 10 days, lots of us have been wishing we could hear Denzel make witty quips about the Bundycon's occupation of the refuge hq. Sacred Cows at the public trough is easy to get on Amazon. Read and learn, read and learn ... great history of western livestock abuses ...",
+    "text_b": "I saw @christa_m mention this a little below, but I'm curious how the system combats the echo chamber effect, especially on contentious issues?  I can imagine many stories where opinions which run against the (Portland) mainstream are viewed as inherently uncivil, such as supporting Trump's position on...well pretty much anyone that isn't white, or say supporting the Kleins in the Sweet Cakes by Melissa saga.  How do you convince people that an opinion which is to some degree derived from some form of prejudice is still \"civil\" and deserving of at least being heard?",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "ed1e7768863be1b5aba629ddfb3440fb575fe92b8031d55d5cfe78021e069a09",
+    "pair_id": "8d0e64efab29ad3fc2129577ce1282c5f3be084acb478c4c8cc603f8266f08b5",
+    "text_a": "I thought Willamette week was better than this. Using weasel  wording  and referring  to a vanity fair hit piece to spread a misinformed  view what furriers are. We all do not obsessed about and or dress up. Only 10% 15% furs   dress up in costume; you find a great ratio of costumers (cosplay) at Kumoricon and New Con than a fur con.  We fur have many different and dare say family  friendly  safe for work interest including art, role  play and  literature. In fact looking  at the Loyd center piece, the pictures could been take around January 2-3. We had a furry meet up  Loyd's Center and the \"reporter\" could had easily missed us.",
+    "text_b": "I had a little trouble getting signed up, but after a brief email exchange with the folks at Civil everything appears to be working now.  If they're successful in their goal, I'll be extremely pleased.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "f3305ae454fe4aa71740bffe167291f8c1d2dbf1a32cc929965e1d89df421337",
+    "pair_id": "8e812f45e7b0a684a04e7b9e0defed4c3f41f5abd122225c8e78ea84e6c43bc9",
+    "text_a": "Ah, so part of the \"back end\" and \"algorithms\" - automatic comment rejection if you don't vote on the 3 random comments in a way that is conforming enough to the way other users vote - or if you vote too fast, as I assumed many would do - just clicking a random button too quickly means that you're unwilling to \"participate\" - you just want to \"comment\" which doesn't ensure a \"civil\" community of commenters :  Screen grab from a rejected comment : i5guy 3 hours ago Rejected Personally, I already don’t have the time or energy to actually read the stuff they ask me to vote on. I’ll just randomly click on yes sorta or no to make the buttons go away.  Problems were detected in the ratings you left for your peers.",
+    "text_b": "Comments will be randomly chosen and be reviewed by more than one person. But I bet the Civil people have an even better, more thorough answer to this question!",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "f5fc025711d379a6c04e49fef88025d5de0c8eab83a65ae05e0a7e5debd1041e",
+    "pair_id": "06a445dab7e014369143ef69b1dae10fff23b5fed5ba45b97b74896a8153c595",
+    "text_a": "Thanks so much for following our progress and helping to test the software, David! To answer your question: you'll have one over-arching Civil account where you can manage different profiles for different sites. Of course, you're welcome to use the same information across all sites! We decided that it'd be best to be able to present yourself differently to different communities, though. I might, for example, want to be portland_hipster15 here on Willamette Week, but prefer to be MrWhiskers on Cat Enthusiast Digest!",
+    "text_b": "Thanks for the info! One other thing I just noticed: in the email I got about your reply, the link to view it didn't work (at least not from Mail.app on OS X). Looks like it came through as x-webdoc:// and probably doesn't know how to deal with that scheme.  Really love what you're doing with Civil Comments, though! Can't wait to see it on more sites. Might even bring back comments on my personal site once it's available!",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "fb958c1ddd2f8de3b8e239b216a2ddaba73c216aecc5bf49dc66d6780651ff0b",
+    "pair_id": "7ed3d6927c7eadbc2a26e38a0dd73c25a5c84c9ef4bb9f88dc508f79dda9398c",
+    "text_a": "I'm glad you're working on this, and I look forward to seeing how it plays out.    The comments sections of online news stories have the potential to be great tools for community interaction about current events, a Neo Town Hall, of sorts.  One of the reasons I rely on Reddit as a platform for news and local discussions is that there's a sense of community interaction that's often lacking in my \"real life,\" hectic discussions.    But hopefully we won't be tempted to silence those who take unpopular stances.",
+    "text_b": "Hopefully there will be enough commenters who are honestly here to have a civil discussion to allow civil comments that challenge conventional wisdom. The posts that challenge conventional wisdom yet aren't civil won't hit the thread, and, sure, some folks will always try and scam the system by not allowing comments that they disagree with thru, but I wouldn't be surprised if many of the folks that take that approach when reviewing comments are the same ones who are having comments denied for being uncivil.  If that's the case it may be somewhat of a self-correcting problem, where they become bored with not having any comments post and go elsewhere.  I'm just speculating however only time will tell. I also would not be surprised if I was totally off base on all of this.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "fc22ce7605c9b4efd6fa6ae6e537c56bba4162a5520f1c29d1208ebd0be80320",
+    "pair_id": "8e812f45e7b0a684a04e7b9e0defed4c3f41f5abd122225c8e78ea84e6c43bc9",
+    "text_a": "Comments will be randomly chosen and be reviewed by more than one person. But I bet the Civil people have an even better, more thorough answer to this question!",
+    "text_b": "Ah, so part of the \"back end\" and \"algorithms\" - automatic comment rejection if you don't vote on the 3 random comments in a way that is conforming enough to the way other users vote - or if you vote too fast, as I assumed many would do - just clicking a random button too quickly means that you're unwilling to \"participate\" - you just want to \"comment\" which doesn't ensure a \"civil\" community of commenters :  Screen grab from a rejected comment : i5guy 3 hours ago Rejected Personally, I already don’t have the time or energy to actually read the stuff they ask me to vote on. I’ll just randomly click on yes sorta or no to make the buttons go away.  Problems were detected in the ratings you left for your peers.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "fee477ed1a42bc70b67f05ec38134a18754421785dd4f5f8a516bf2e781be16a",
+    "pair_id": "7d279f2ce088155565d87cf80d90ac111c0fd412e7be4e1da0f2c441bfe3743b",
+    "text_a": "Tried this out on another post.  Having to rate three other comments and then my own - is the lead designer a big Foucault fan?  Feels like panopticomments.  I suspect you won't go back, but I prefer Disqus because of the ubiquity and notifications system.",
+    "text_b": "Tuesday Jan. 13, members of  this socalled 'militia' traveled to John Day,Or to try to enlist the sherif  there to come to Malheur and support them. He refused to go without the approval of the local  sheriff in Burns, Dave Ward. Sheriff Ward said he only wanted  The John Day sheriff to come to Burns if he would be willing to 'shame and humiliate' the trespassers into leaving. The Bundy Bunch are armed terrorist idiots who are attempting to poison my State with their toxic and divisive brand of 'politics'. They need to be arrested and prosecuted. Rallies to support public lands and the Malheur Refuge are being held in  PDX, Eugene, and other cities across  Or. next Tuesday Jan. 19: check out #SupportMalheur. And yes, I have lived in both rural  Or (25 years) and urban Or.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  },
+  {
+    "assignment_id": "ff13244c613bce46f6f71ff6a9eff3404b81f96bea5a884d0df638b7868b322b",
+    "pair_id": "367ca354698d94f8e3da63982115b98a5a51b0dace84dfb85236a0b8b4559501",
+    "text_a": "I already see dozens of \"just commenting to vote on comments to be able to comment\" type of comments.  This voting system is completely insane- you're assuming people have the extra time to *actually read* multiple non related comments?  I would love to see this system installed on oregonlive.com - they have enough online visitors and an established \"troll\" base to really need this service.  With as little online activity as wweek has - it will discourage further growth here.",
+    "text_b": "All the framed boxes must take up extra code and bandwidth usage to send all the extra code to our browsers..  Then there is all the \"2 more replies\" buttons to click on - that is amazingly annoying - I don't want to have to click on half a dozen \"more replies\" buttons to see what is being said.  And really, you have to vote on 3 other replies? What percentage of your users wait more than 1/2 second before randomly clicking on a response? Oh well, I digress.",
+    "task_definition": "Assess whether a textual distinction could change the perceived toxicity of a comment."
+  }
+]

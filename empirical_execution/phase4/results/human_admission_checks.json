@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "evidence_role": "engineering_nonconfirmatory",
+  "natural_records": 100,
+  "representation": "lexical_engineering_128_not_semantic_encoder",
+  "declared_request_paths": 20,
+  "complete_unique_pair_frame": 33,
+  "unique_admitted_records": 10,
+  "unique_disjoint_observed_controls": 23,
+  "selected_unique_pairs": 24,
+  "blank_assignments": 72,
+  "completed_human_responses": 0,
+  "human_dispatch_ready": false,
+  "all_frame_occurrences_controls_quotas_and_probabilities_independently_checked": true,
+  "overlap_probability_combinatorial_cases": 6,
+  "no_missing_label_imputation": true,
+  "no_favorable_shortfall_refill": true,
+  "full_neighborhood_and_nearest_survivor_audits": "pending_real_context_not_completed",
+  "manifest_sha256": "469578fc39b9986715a764751b2e76ed173a8c344dfcf2beef4622db11b32fc1",
+  "data_sha256": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9",
+  "code_sha256": {
+    "phase4/check_admission_audit.py": "3a09c26cebccdfb3e238ea6d9ec15a0d2c41aecfa83863388e8973d2c6338c20",
+    "phase4/admission_audit.py": "422ad2ec7ca7ffa3c677566f71917161b73f4f76cdd445ce8ed2389a915700da",
+    "phase4/requests.py": "71b1d40032c64d4a058ee70b647d58a425827aeaeb2fa271037e26059bb6198d"
+  }
+}

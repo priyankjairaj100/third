@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "scope": "natural Civil100 reused lexical software integration; no new paper results",
+  "dimensions": [
+    64,
+    768
+  ],
+  "trajectories_per_dimension": 10,
+  "checkpoint_rows": 80,
+  "failure_events": 0,
+  "empty_target_zero_head": true,
+  "all_records_deleted_scalar_oracle_empty": true,
+  "primary_without_full_protocol_refused": true,
+  "invalid_inputs_rejected_before_output": {
+    "nan_tolerance": true,
+    "boolean_tolerance": true,
+    "implicit_target_cast": true,
+    "tampered_manifest": true
+  },
+  "maximum_same_target_head_abs_difference": 8.326672684688674e-16,
+  "maximum_same_target_moment_abs_difference": 4.440892098500626e-15,
+  "source_sha256": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9",
+  "check_code_sha256": "1a68a109f4d398aeadf75bde9810f67cc8a042bc3bc6a341deae22b8ac0aa917"
+}

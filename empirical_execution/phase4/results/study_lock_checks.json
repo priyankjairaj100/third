@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "check_count": 11,
+  "checks": [
+    "missing dossier refused 0",
+    "missing dossier refused 1",
+    "missing dossier refused 2",
+    "missing dossier refused 3",
+    "missing dossier refused 4",
+    "invalid resource threads",
+    "invalid resource timing_repetitions",
+    "invalid resource common_timeout_seconds",
+    "invalid resource per_method_memory_cap_bytes",
+    "path escape refused",
+    "all lineage limitations explicit"
+  ],
+  "scope": "software refusal paths only; no completed calibration or human ratings",
+  "study_lock_code_sha256": "df80c30fbcf76b5686776d4b1fded9f81bc59662fe32b86c9a16756cc9d576a4"
+}

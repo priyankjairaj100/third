@@ -1,0 +1,27 @@
+{
+  "status": "completed_engineering",
+  "checkpoint_rows": 40,
+  "failure_events": 0,
+  "unsupported_checkpoint_rows": 0,
+  "zero_admission_rows": 32,
+  "maximum_same_target_head_abs_difference": 7.216449660063518e-16,
+  "maximum_same_target_moment_abs_difference": 2.886579864025407e-15,
+  "primary_study_started": false,
+  "semantic_encoder_used": false,
+  "semantic_or_utility_effect_claim": false,
+  "speedup_or_lifecycle_claim": false,
+  "process_peak_memory_measured": false,
+  "evaluator_and_services_process_isolated": false,
+  "roundoff_certificate_claim": false,
+  "execution_lock_sha256": "0ba03ee641a49f88ba2460382962489da34807e76bdd4f8daf4b778450851df1",
+  "bindings": {
+    "curator_array_sha256": "84b4a67b0bb829cf6847632be08693c1a9e2db82704d8bdbe7258e4462134ba2",
+    "learner_array_sha256": "b269d75b348a4e814ff93cef302eeeefe7245666cb38286cbc01ca09b6795377",
+    "target_array_sha256": "68762a2ccfc20168fac573902df3ac39cd551443095fcf40b472d2ed8b31aef6",
+    "record_ids_sha256": "00cef42574d341540ffe869e9171fd8fbd1404e0676139e8a22dc0604308914b",
+    "request_manifest_sha256": "d7837fe31d6e838d9dd43d7b453c1b7604262d306aeab70832e9a9d18ffa0ec0",
+    "threshold_hex": "0x1.3333333333333p-1",
+    "lambda_reg_hex": "0x1.47ae147ae147bp-7",
+    "execution_code_sha256": "cea3b48d1e93b688d4708f20c53358bd7f4d1805937ebdb9fd7a4d86fa7508a4"
+  }
+}

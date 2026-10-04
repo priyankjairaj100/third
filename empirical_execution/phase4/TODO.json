@@ -1,0 +1,143 @@
+{
+  "schema": "ccu-todo-ledger-1",
+  "date": "2026-10-04",
+  "primary_semantic_study_started": false,
+  "actual_human_ratings": 0,
+  "all_research_todos_complete": false,
+  "scope": "No task is marked complete solely because an unavailable input was documented. Software readiness and executed evidence are separate.",
+  "items": [
+    {
+      "id": "source_asset_acquisition",
+      "status": "blocked_missing_input",
+      "deliverable": "Authentic source-rich Civil, corrected Stack archives, News metadata and official pinned PSL",
+      "remaining_requirement": "Actual authorized local corpus files; authenticity/coverage review",
+      "reference": "results/access_recheck.json"
+    },
+    {
+      "id": "corpus_adapters",
+      "status": "software_complete_real_archive_acceptance_pending",
+      "deliverable": "Original-schema parsers and versioned News title/body verifier",
+      "remaining_requirement": "Original source-rich archives for acceptance checks",
+      "reference": "ADAPTERS_README.txt"
+    },
+    {
+      "id": "news_year_source_calendar",
+      "status": "software_complete_authentic_calendar_execution_pending",
+      "deliverable": "2017 source-disjoint calibration and guarded 2018-2019 calendar windows",
+      "remaining_requirement": "Authentic News, externally evidenced complete months and the locked semantic guard",
+      "reference": "NEWS_CALENDAR_AMENDMENT.txt"
+    },
+    {
+      "id": "semantic_encoding",
+      "status": "software_complete_real_backend_unexecuted",
+      "deliverable": "Local all-chunk E5/MPNet cache production with exact asset/runtime binding",
+      "remaining_requirement": "Pinned model/tokenizer assets and transformer runtime",
+      "reference": "EMBEDDINGS_README.txt"
+    },
+    {
+      "id": "per_encoder_calibration",
+      "status": "software_complete_real_vectors_and_ratings_pending",
+      "deliverable": "Versioned E5/MPNet cache calibration workflow",
+      "remaining_requirement": "Authentic local E5/MPNet vectors, prepared records and genuine human responses",
+      "reference": "EMBEDDINGS_README.txt"
+    },
+    {
+      "id": "human_threshold_quality",
+      "status": "blocked_missing_human_data",
+      "deliverable": "Actual blinded threshold selection and independent validation",
+      "remaining_requirement": "Three genuine independent human ratings per sampled pair; fresh validation ratings",
+      "reference": "../phase3/README.txt"
+    },
+    {
+      "id": "task_settings",
+      "status": "software_complete_empirical_selection_blocked",
+      "deliverable": "Top-20 tags, five source-group folds, six-lambda CV and fixed tag thresholds",
+      "remaining_requirement": "Authenticated calibration rows/features and at least five genuine source groups",
+      "reference": "MODEL_SELECTION_README.txt"
+    },
+    {
+      "id": "frozen_requests",
+      "status": "software_complete",
+      "deliverable": "R/S/U/A, matched volume, excluded-blocker stress, mass-PPS and separate 1% horizon",
+      "remaining_requirement": "Primary source-complete frozen panels for scientific execution",
+      "reference": "REQUESTS_README.txt"
+    },
+    {
+      "id": "ridge_comparison",
+      "status": "engineering_complete_primary_integration_partial",
+      "deliverable": "Six-method fixed-input comparison, independent retained graph and moments",
+      "remaining_requirement": "Full methods/access/isolation integration before confirmation",
+      "reference": "EXECUTION_README.txt"
+    },
+    {
+      "id": "convex_extension",
+      "status": "single_output_engineering_complete_primary_and_multioutput_pending",
+      "deliverable": "Strongly convex fractional-label logistic repair and residual certificate",
+      "remaining_requirement": "Primary Civil semantic/source experiment; prescribed Stack multioutput logistic implementation and authentic inputs",
+      "reference": "CONVEX_README.txt"
+    },
+    {
+      "id": "systems_harness",
+      "status": "software_complete_primary_workers_and_measurements_pending",
+      "deliverable": "Fresh child-process resource/timing/failure collection",
+      "remaining_requirement": "Isolated per-method primary workers, equal access contracts and protocol-complete resource/persistence lock",
+      "reference": "SYSTEMS_README.txt"
+    },
+    {
+      "id": "human_admission_pack",
+      "status": "software_complete_preview_pack_blank",
+      "deliverable": "Probability-sampled blinded admission/control pair pack with blank assignments",
+      "remaining_requirement": "Complete genuine semantic frame, authentic source quotas, actual human collection and both 100-admission contextual audits",
+      "reference": "HUMAN_ADMISSION_AUDIT_README.txt"
+    },
+    {
+      "id": "primary_methods_and_access",
+      "status": "implementation_pending",
+      "deliverable": "Optimized CSR B-E, B-A, P-S, P-R, native source services, no-reaccess worker integration and persistence/compaction",
+      "remaining_requirement": "Do not substitute generic child-process execution or shared-array comparison for the access contract",
+      "reference": "EXECUTION_README.txt"
+    },
+    {
+      "id": "semdedup_refit",
+      "status": "blocked_dependency_and_implementation",
+      "deliverable": "Pinned standard SemDeDup full-refit/frozen-fitted branch with its own original model",
+      "remaining_requirement": "Pinned original implementation/dependencies, authentic 5k source-complete panels and development-only configuration",
+      "reference": "../../output/empirical_program/counterfactual_curation_empirical_protocol.tex"
+    },
+    {
+      "id": "admission_human_collection",
+      "status": "blocked_missing_human_data",
+      "deliverable": "Real meaning/consequential-distinction/task-relevance judgments, full-neighborhood and surviving-neighbor interpretation audits",
+      "remaining_requirement": "Authentic admissions, consent/payment/skip protocol and independent humans; full former-blocker and nearest surviving selected-text context implementations remain pending",
+      "reference": "HUMAN_ADMISSION_AUDIT_README.txt"
+    },
+    {
+      "id": "confirmatory_program",
+      "status": "blocked_dependencies",
+      "deliverable": "Structural, relevance, replication, systems and full-refit panels plus prescribed analyses",
+      "remaining_requirement": "All preceding input, semantic quality, access and execution gates",
+      "reference": "../../output/empirical_program/study_design.json"
+    },
+    {
+      "id": "boundary_studies",
+      "status": "implementation_and_inputs_pending",
+      "deliverable": "Pinned ANN missed-pair audit, FP32 accuracy frontier, conditioning factors, valid numerical graph-envelope instantiation if supported",
+      "remaining_requirement": "Authentic panels and fixed primary configuration; no substitution for failed primary evidence",
+      "reference": "../../output/empirical_program/counterfactual_curation_empirical_protocol.tex"
+    },
+    {
+      "id": "independent_review",
+      "status": "completed",
+      "deliverable": "Independent final code/output audit and explicit claim restrictions",
+      "remaining_requirement": "264 scoped independent checks passed; actual semantic provenance and full-program claims remain outside this review",
+      "reference": "independent_review.txt"
+    },
+    {
+      "id": "repository_checkpoint",
+      "status": "included_in_this_checkpoint",
+      "deliverable": "Updated handoff, hashes and GitHub fast-forward checkpoint",
+      "remaining_requirement": "Verify remote fast-forward/tree and BACKUP_MANIFEST; Git commit identifies this checkpoint",
+      "reference": "../../RESUME_CONTEXT.md"
+    }
+  ]
+}

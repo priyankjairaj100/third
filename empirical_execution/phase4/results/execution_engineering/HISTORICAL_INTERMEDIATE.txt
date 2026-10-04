@@ -1,0 +1,10 @@
+Historical intermediate engineering smoke.
+
+This run completed before a request-generator correction removed graph hashes
+from random seeds so that R/S requests remain shared across curator sensitivity
+branches. The execution code also subsequently tightened its generic provenance
+wording and failure records. All original run files are preserved unchanged.
+
+Use ../execution_engineering_final/ for the final frozen integration run and
+independent audit. Do not pool these runs as independent empirical evidence.
+Neither run constitutes semantic confirmation or a systems performance claim.

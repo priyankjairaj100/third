@@ -1,0 +1,174 @@
+PHASE 4 INDEPENDENT REVIEW
+Date: 4 October 2026
+Scope: preparation software, local engineering integration, and exact numerical
+verification. This is not a review approving a completed primary semantic study.
+
+Finding
+-------
+No remaining correctness blocker was found within the reviewed modules' declared
+preparation/engineering scopes. The primary semantic study remains unstarted.
+The review does not establish authentic corpus/model provenance, genuine human
+annotations, semantic quality, natural-source prevalence, practical NLP value,
+systems superiority, or full completion of the original empirical program.
+
+The independent executable audit is audit_phase4_independent.py. Its final
+record is results/independent_phase4_audit.json: 264 checks passed. This file
+records full source hashes for every reviewed Phase4 Python module. The audit
+itself has SHA256:
+  98dd4c87513a538a422c0030303bfbda9140ce448342334815c38ccaff6584ea
+
+Authoritative evidence directories
+---------------------------------
+Ridge integration: results/execution_engineering_final/
+Convex extension: results/convex_engineering_release_v2/
+Admission pack: results/human_admission_engineering_pack/
+
+Earlier execution and convex directories are retained engineering history. In
+particular the first convex run contains an actual failed certificate and an
+unexecuted later checkpoint. The corrected release is a complete rerun under a
+changed candidate-generation algorithm; it is not additional independent data.
+
+Independent checks performed
+----------------------------
+1. Parsers and identity. Separate parser fixtures exercised exact date endpoints,
+   question-only selection, Civil parent/native-ID alignment, preservation of
+   fractional labels and own comment text, missing/community-owner singletons,
+   native duplicate links, HTML quotations/code/negation/numbers/author links,
+   marked-notice removal, and ambiguous legacy-notice retention. Independent PSL
+   cases covered exact/wildcard/exception/private rules and unknown suffixes.
+   News title repetition was removed only under the documented exact-line rule.
+   These transient metadata/parser fixtures are explicitly software tests, not
+   synthetic empirical data or evidence about an original archive.
+
+2. Encoding. Independent chunk tests recovered all 513 content tokens exactly
+   once, checked per-chunk E5 prefixes, tested declared capacity refusal, and
+   compared content-weighted document pooling with a separate numerical oracle.
+   No transformer model was run. Code review checked offline loaders, pinned
+   inventory/version/code bindings, all-chunk preservation, explicit tokenizer
+   boundary convention, row order and record-local batch scope. Actual-model
+   numerical acceptance and resource measurements remain pending.
+
+3. Model selection. All 1,296 combinations of four tied scores from {0,1,2}
+   and four binary labels were checked against an independent exact F1 search.
+   Zero-positive behavior and strictest ties agreed. Test-label traps confirmed
+   that selection refuses a test partition before reading its label fields.
+   Unknown-source questions, including zero-target questions, remain present.
+   A separate augmented least-squares oracle reproduced all six lambda risks
+   on source-group software fixtures (maximum MSE difference
+   3.0531133177191805e-16). Input reversal preserved the complete task lock.
+   Held-out target construction applies an already frozen vocabulary and does
+   not select or modify it. No empirical tag vocabulary or lambda was selected.
+
+4. Requests. Eighty-four checkpoint observations on an explicit graph software
+   fixture were recomputed by direct set predicates. Source sampling used only
+   genuine-declared sources, while the service universe retained unknown and
+   engineering-proxy units. Matched record controls used a single cumulative
+   permutation at source raw-count checkpoints with a separate record horizon.
+   Distinct intervention counts were independently recomputed. R/S/matched-R
+   paths stayed paired when only the graph changed. Exhaustive integer mass
+   draws reproduced the PPS first-step mass law, and the one-percent branch
+   had its separately constructed ceil(N/100) horizon.
+
+5. Natural ridge artifacts. On the reused Civil100 lexical fixture, an
+   independent scalar graph implementation and independent dual-ridge solves
+   checked all 80 final checkpoints and all 480 stored method heads. Maximum
+   head discrepancy was 8.881784197001252e-16. B-F was checked against its own
+   deliberately frozen-selection target, not mislabeled as a correct target.
+   This verifies the stored development outputs within numerical tolerance;
+   it is not an exact-state or outward-rounding certificate for those heads.
+
+6. Convex mathematics and artifacts. Reviewed the positive Taylor tail bound,
+   reciprocal endpoint reversal, monotone squaring, outward dyadic rounding,
+   sign-aware gradient accumulation, and lambda-strong-convexity implications.
+   The resulting rational bound applies to the exact stored FP32/FP64 inputs
+   for single-output mean fractional BCE plus lambda/2 times squared norm.
+   It is an optimization-error certificate, not statistical unlearning.
+   Independent 180-digit Decimal calculations lay inside 102 rational sigmoid
+   enclosures. Empty and half-label symmetric objectives had the expected
+   exact bounds. Signed gradient updates included the changed-count penalty
+   term. All 25 saved certificates, including the persisted initial head,
+   were checked for exact input bindings, independent high-precision gradient
+   containment, exact rational bound arithmetic, upward radius, and unchanged
+   tolerance. Decimal checks support numerical consistency; the reviewed
+   interval derivation, not Decimal agreement, supplies the rigorous guarantee.
+
+7. News and systems. Independent calendar checks covered earliest complete
+   qualifying month, consecutive whole-month prefix, coverage-gap stopping,
+   shortfall, and calibration-year rejection. Coverage declarations remain
+   unauthenticated. The systems harness was independently exercised with fresh
+   success, nonzero-exit and timeout processes. Byte totals and failure-row
+   retention agreed. Child high-water RSS is correctly qualified; this is not
+   whole-process-tree peak memory, enforced isolation, a memory cap, complete
+   method-code pinning, or an actual comparative systems experiment.
+
+8. Human admission preparation. The real-text lexical engineering pack contains
+   a 33-pair declared frame, 24 unique selected pairs and 72 blank assignments.
+   Exact conditional union inclusion probabilities were independently checked,
+   including role overlap. The visible assignments omit arm/method/scores/gold
+   labels/source IDs; pairs are deduplicated before three assignments are made.
+   All responses remain blank and dispatch readiness remains false. Missing
+   corpus quotas are not reassigned. The estimand conditions on the checkpoint
+   union and one realized former-blocker draw per record; it is not an estimate
+   over all possible blocker pairs or deletion requests. Complete neighborhood
+   and surviving-selected-context audits remain pending.
+
+9. Workflow and integrity review. Code review checked per-encoder calibration
+   lineage and E5-only population filtering. MPNet has its own calibrated frame
+   and cannot refilter the E5-retained population. Retained original-row indices
+   are digest-bound. No threshold/quality success is generated from blank human
+   responses. The dossier helper explicitly cannot reconstruct the entire data
+   and panel lineage, and execution_allowed remains false even if declarations
+   match. Independent empty/invalid dossier checks confirmed this boundary.
+
+Concrete corrections made during review
+--------------------------------------
+- Unknown singletons are retained in task vocabulary, targets and CV rather
+  than being silently excluded or treated as genuine withdrawal sources.
+- Projected learner vectors have an explicit lineage contract and are not
+  renormalized or incorrectly required to have native unit norms.
+- R/S/matched request seeds no longer vary with graph threshold or edges.
+- Stack account IDs are schema-validated; Civil numeric ID spelling cannot
+  silently break parent references.
+- MPNet cache roles are compatible with the versioned calibration workflow;
+  dataset/scope, tokenization/pooling and snapshot bindings are checked.
+- Initial graph comparison cannot disappear under Python optimization, and
+  invalid numerical audit tolerances are rejected.
+- Admission assignment IDs bind snapshot/frame context, and retained E5/MPNet
+  row-index mappings are digest-bound.
+- The provisional dossier checker no longer purports to permit primary runs.
+- The initial convex head is saved so all 25 certificates can be independently
+  replayed from artifacts.
+
+The stalled convex candidate was not rescued by loosening the 1e-8 tolerance.
+Its historical exact radius was approximately 1.394e-8 and the failure remains
+recorded. The revised candidate generator uses a fixed narrow objective-
+resolution/gradient-progress safeguard and charges its additional gradient
+passes. This is not an exact objective-monotonicity claim. The unchanged exact
+certificate is the final release criterion.
+
+What remains outside this review's approval
+-----------------------------------------
+Authentic source-rich corpora and archive acceptance; genuine pinned model/cache
+assets and actual transformer execution; authentic human threshold/validation
+and interpretation judgments; full standard SemDeDup refit; Stack multioutput
+convex integration; optimized CSR performance baseline and all registered
+method/source-service comparisons; enforced no-reaccess workers and full memory,
+persistence, timeout/compaction policies; WCEP/replication/ANN boundary work;
+the registered primary semantic experiments and scientific conclusions.
+The evolving complete list is TODO.json. None of these tasks is completed by a
+passing software check or a metadata attestation.
+
+Frozen production SHA256
+------------------------
+adapters.py             7171b59802dff219636a08b53f13d8b3bdbb7bc400f5712f041280e61e8d6f0d
+embeddings.py           bb1af9a6583a90372f7641f406afdb418017797cc8d86ee67f117f215c65d2c1
+calibrate_cache.py      f94f884f6bcb250d489164e67f5b8de9580d0dcb347be9d911f32b0f4d3de5e4
+model_selection.py      b9a73b9cc0d7a2a0531c38e7a606290df52845e3002a6d47c21cc6c3fb459434
+requests.py             71b1d40032c64d4a058ee70b647d58a425827aeaeb2fa271037e26059bb6198d
+requests_extensions.py  e6fdca03cb9b49594997459fa4ac4a211cc6e06316c10746de8c61c6e38320bd
+execution.py            2ecb38e3c36dcd218d8261a37210b557f9da10f16b24ec970b9dabd602d42fa9
+news_calendar.py        d888fa2364e672f49e99084a33490d10274cdb2be8be2e4e624a2b2b3ca8c944
+convex.py               93a59e37ad4597b7018f07b4a49dbaba51d4b762971a2f0520f76cfa42616eb8
+systems.py              cbff2eb551b91fd446667cdf0507b063f36c6834c0e0e35ac1b0d25c7d8b1f44
+admission_audit.py      422ad2ec7ca7ffa3c677566f71917161b73f4f76cdd445ce8ed2389a915700da
+study_lock.py           df80c30fbcf76b5686776d4b1fded9f81bc59662fe32b86c9a16756cc9d576a4

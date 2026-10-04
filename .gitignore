@@ -4,6 +4,8 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 tmp/
+# Large generated trace is preserved byte-for-byte in the adjacent .json.gz.
+empirical_execution/phase4/results/requests_natural_engineering.json
 missfont.log
 *.aux
 *.log

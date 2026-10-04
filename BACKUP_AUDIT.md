@@ -6,7 +6,7 @@ Audit date: 4 October 2026. Scope: the counterfactual semantic-curation project 
 
 Back up the authored research, implementation, delivered reports, experiment outputs, independent audits, public Civil Comments engineering fixture, and context/handoff documentation. Preserve superseded scientific results as explicitly historical evidence. Exclude the locally cached CC-News article bodies and their connector responses, runtime caches, duplicated extraction trees, and rendering/build byproducts. Rescue the unique authored files currently stored under `tmp` before excluding that directory.
 
-This is a completeness and accidental-disclosure check, not a declaration that the primary experiment is complete. `empirical_execution/CURRENT_STATUS.json` correctly records `phase3_preparation_complete_primary_semantic_study_blocked`.
+This is a completeness and accidental-disclosure check, not a declaration that the primary experiment is complete. At this initial inspection, `empirical_execution/CURRENT_STATUS.json` recorded `phase3_preparation_complete_primary_semantic_study_blocked`. The later Phase 4 supplement below supersedes that status reference.
 
 ## Include
 
@@ -66,3 +66,13 @@ Any final repository verification should check the committed tree against its in
 ## Implemented preservation decisions
 
 The publishing agent copied the five unique temporary sources byte-for-byte into `archive/theory_history/` and `tools/legacy_build/`; `archive/RESCUED_SOURCES.json` records original paths and checksums. The superseded calibration pack is retained in its clearly named original folder with `README_SUPERSEDED.txt`. It remains distinct from the current frozen pack. The compiled native helper is retained alongside its source and platform/build instructions. Git attributes disable automatic text normalization so checkpoint checksums survive cross-platform checkouts.
+
+## Phase 4 preservation supplement — 4 October 2026
+
+The checkpoint now includes the complete `empirical_execution/phase4/` authored code, instructions, engineering outputs, independently reviewed audits, blank admission assignments, failed convex run/source snapshot, and explicitly historical intermediate runs. The authoritative ridge run is `results/execution_engineering_final/`; the authoritative convex run is `results/convex_engineering_release_v2/`. Historical positive convex runs omitted the initial head artifact and are not the final replay target.
+
+The 16,463,560-byte request trace exceeds the connected publishing API request limit when encoded. Its deterministic gzip archive preserves every byte; `large_result_archive.json` records the original and compressed hashes. `tools/restore_large_results.py` checks both and restores the original without replacing a differing file. Only the redundant uncompressed generated copy is excluded from Git. This is a storage-format change, not omitted experimental data.
+
+`phase4/results/publication_content_audit.json` records the targeted credential-pattern and excluded-News-body fingerprint scan, including the decompressed archive. The new blank admission pack uses the already published natural Civil preview only; it contains no completed ratings or added News bodies. Transient subprocess software fixtures are outside the backed-up project artifact set.
+
+No authentic primary corpora, semantic encoder assets, genuine human ratings, or complete primary systems/full-refit results are newly claimed. `CURRENT_STATUS.json`, `phase4/TODO.json`, and both root handoffs explicitly preserve those remaining dependencies and implementation gaps. The manifest generator now reads the current status instead of hard-coding the old Phase 3 stage.

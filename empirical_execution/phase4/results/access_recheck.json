@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-04",
+  "method": "inspection of current workspace and available tool registry, not a fresh denied network download attempt",
+  "original_source_rich_corpus_present": false,
+  "pinned_semantic_model_or_cache_present": false,
+  "completed_human_ratings_present": false,
+  "runtimes": {
+    "torch": false,
+    "transformers": false,
+    "sentence_transformers": false,
+    "datasets": false,
+    "pyarrow": false,
+    "onnxruntime": false,
+    "lxml": true
+  },
+  "python": "3.12.14",
+  "logical_cpus": 9,
+  "current_execution_network_allowlist": [
+    "chatgpt.com",
+    "git.chatgpt-team.site",
+    "OpenAI-provided upload/blob hosts"
+  ],
+  "required_direct_download_hosts_on_allowlist": false,
+  "available_hf_operations": "metadata/search/documentation and remote jobs; no callable local corpus/model binary import operation found",
+  "remote_compute_used": false,
+  "new_corpus_or_model_downloaded": false,
+  "blocked_items": [
+    "original source-rich corpus files",
+    "pinned semantic encoder assets and runtime or authenticated embedding cache",
+    "genuine independent blinded human ratings"
+  ],
+  "not_an_inference": "filesystem access is broader than earlier, but the supplied network allowlist remains restrictive"
+}

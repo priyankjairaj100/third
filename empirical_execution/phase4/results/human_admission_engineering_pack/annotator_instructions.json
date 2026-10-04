@@ -1,0 +1,38 @@
+{
+  "status": "blank_pack_not_dispatched",
+  "independence": "Three distinct fluent humans judge independently before any adjudication.",
+  "blinding": "No source record IDs, method, arm, gold labels, similarity score or model outcomes are supplied.",
+  "questions": {
+    "meaning_relation": [
+      "exact_copy",
+      "substantially_same_meaning",
+      "overlapping_information",
+      "merely_related",
+      "unrelated",
+      "uncertain"
+    ],
+    "consequential_distinction": [
+      "yes",
+      "no",
+      "uncertain"
+    ],
+    "distinction_types": [
+      "entity",
+      "number",
+      "negation",
+      "time",
+      "assertion",
+      "other"
+    ],
+    "task_relevance": [
+      "could_matter",
+      "unlikely_to_matter",
+      "uncertain"
+    ]
+  },
+  "content_warning": "Some texts may contain toxic, disturbing or offensive language. Skip any item without providing a substantive rating.",
+  "consent_withdrawal": "Must be finalized before dispatch; no raters recruited or consent assumed.",
+  "payment_and_time": "Pending before dispatch; never inferred or advertised as paid.",
+  "skipped_items": "Preserve all skips and reasons; do not replace with convenient pairs or impute judgments.",
+  "release": "Publish only permitted annotations, stable IDs and short permitted excerpts; not full publisher text."
+}
