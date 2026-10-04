@@ -1,0 +1,42 @@
+{
+  "case_counts": {
+    "exact_normal_equation_coordinates": 20280,
+    "private_word_patterns": 12,
+    "state_cases": 1560
+  },
+  "concrete_findings": [
+    {
+      "finding": "Accepted public str subclasses conflicted with strict deletion-ID input type.",
+      "resolution": "Public contract now rejects non-exact-str identifiers; focused regression passed."
+    },
+    {
+      "finding": "Accepted arbitrary rational lambda could fail later decimal integer serialization.",
+      "preserved_reproduction": "results/codec_review_large_integer_finding",
+      "resolution": "Public and exact-output rational fields use hexadecimal integer strings; large-rational initialization, activation, head and accounting regression passed."
+    }
+  ],
+  "frozen_phases_3_through_9_edited": false,
+  "independent_named_checks": 51,
+  "open_concrete_findings": [],
+  "primary_study_started": false,
+  "qualifications": [
+    "Fixed private-independent public mathematical family only",
+    "Exact rational target on raw stored FP32 features, not floating solver byte equality",
+    "Canonical serialized state and fixed remaining horizon, not physical erasure or anti-rollback",
+    "Conditional e(F)D private information, not total deployment-byte optimality",
+    "Bounded software examples supplement proofs; no empirical dataset or benchmark"
+  ],
+  "schema": "ccu-independent-codec-review-release-1",
+  "source_and_artifact_sha256": {
+    "CODEC.md": "29aacce59369e1b9eea8edd6bc7dece217214ddd1ef521e1747ea93499744d15",
+    "CODEC_REVIEW.md": "5605287126afd7ff1dce67abd60dc67d89047d78b64ccda74b378b8acce53912",
+    "FINITE_WORD_THEORY.md": "5a17e0e3d7d37e5c27c5ac37f1898c2df40a18e75ce12df8b2255c9ac4900bfb",
+    "SCORER_TRANSFER.md": "ee9025a29a8071507c0ea331f9f7a06a38e879b1bf1bb7d6058c5701103f7b0a",
+    "check_codec_review.py": "5726eb6f64fbe93f24c3dee2035ce3788796e7cb371e8daf6b5345b6fd760a66",
+    "finite_word_codec.py": "d3884acc201f80fd3a967db13292f1f1ffbee579bd0c65bf22284ae8877d8456",
+    "results/codec_independent_final/checks.json": "cd6ac29ab95332920bd05b8d2c61f69a38d101df5ec0d9043d8889f717e53b62",
+    "results/codec_review_large_integer_finding/finding.json": "28fb061b099d7092c39748efd3f27862cabe3e88155855d664afa7a2413694d6",
+    "results/codec_review_large_integer_finding/finite_word_codec.py": "7e398da4995c560c9933d3b18f4e4cace3f4d8b338ce59c42de89e51befc04b6"
+  },
+  "status": "passed_scoped_implementation_review"
+}

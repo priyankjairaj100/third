@@ -6,10 +6,12 @@ Research workspace for **counterfactual repair after semantic data curation**, t
 
 ## Current status — 4 October 2026
 
-Phase 9 strengthens the realizable ridge memory theorem and extends experiment assembly and resource qualification.
-Read its [checkpoint](empirical_execution/phase9/CHECKPOINT.md) for verified scope.
-Read the [theory extension](empirical_execution/phase9/THEORY_EXTENSION.md) and [novelty audit](empirical_execution/phase9/NOVELTY_AUDIT.md) together.
-The [remaining-task ledger](empirical_execution/phase9/REMAINING_TASKS.md) separates missing inputs from scientific evidence.
+Phase 10 proves finite-format memory bounds and implements exact sequential repair on the constructed family.
+Read its [checkpoint](empirical_execution/phase10/CHECKPOINT.md) for verified scope.
+Read the [theory](empirical_execution/phase10/FINITE_WORD_THEORY.md), [scorer proof](empirical_execution/phase10/SCORER_TRANSFER.md), and independent reviews together.
+The [literature follow-up](empirical_execution/phase10/LITERATURE_FOLLOWUP.md) narrows the novelty claim using newly retrieved primary material.
+The [remaining-task ledger](empirical_execution/phase10/REMAINING_TASKS.md) separates completed qualification from missing empirical evidence.
+Phase 9 retains multi-family experiment assembly and resource qualification.
 Phase 8 retains pinned archive exports, streaming replay, and staged candidate construction.
 Phase 7 retains the calibration CLI, explicit policy dispatcher, and native work-count preflight.
 Phase 6 implements the experiment routes and adds source replay, measurement, and inference checks.
@@ -65,6 +67,7 @@ The original protocol's narrative resolves omissions in the compact JSON. Later 
 | `empirical_execution/phase7/` | Calibration CLI, explicit policy dispatch, native resource preflight, and acquisition map |
 | `empirical_execution/phase8/` | Pinned archive export, streaming replay, staged dossiers, scoped observed policy selection, and remaining-task ledger |
 | `empirical_execution/phase9/` | Realizable feature-scale memory theorem, novelty audit, multi-family assembly, broader resource evidence, and independent reviews |
+| `empirical_execution/phase10/` | Stored-FP32 construction, exact sequential bit codec, independent reviews, and literature follow-up |
 | `empirical_execution/archive/` | Superseded pilot outputs retained for provenance |
 | `BACKUP_MANIFEST.json` | File sizes, SHA256 checksums and backup exclusions |
 | `BACKUP_AUDIT.md` | Backup scope and public-data handling review |
@@ -86,7 +89,7 @@ python3 -m empirical_execution.phase4.check_systems
 
 Read the phase-specific instructions before running long experiments. Several checks write result files; run in an isolated checkout when preserving the original snapshot. The compiled GMP helper is platform-dependent; its source and build/fallback instructions are included.
 
-For continuation, acquire and accept the actual source-rich files and pinned local semantic assets, then execute the blinded selection/independent validation workflow with genuine humans. Use Phase 9 for the current checkpoint and remaining tasks. Use Phase 8 for original preparation. The frozen Phase 6 acceptance and experiment routes remain authoritative. Completed code and a checksum inventory do not establish scientific input authenticity or complete these experiments.
+For continuation, acquire and accept the actual source-rich files and pinned local semantic assets, then execute the blinded selection/independent validation workflow with genuine humans. Use Phase 10 for the current checkpoint and remaining tasks. Use Phase 9 for experiment assembly. Use Phase 8 for original preparation. The frozen Phase 6 acceptance and experiment routes remain authoritative. Completed code and a checksum inventory do not establish scientific input authenticity or complete these experiments.
 
 ## Backup scope
 

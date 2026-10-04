@@ -1,0 +1,361 @@
+{
+  "schema": "ccu-publication-content-audit-phase10-1",
+  "status": "passed",
+  "scope": "All publishable Phase10 files and other changed or new project files; compressed members included",
+  "files_checked": 63,
+  "archive_members_checked": 0,
+  "byte_streams_checked": 63,
+  "expanded_bytes_checked": 1757543,
+  "news_fingerprint_check": {
+    "source_file_sha256": "2706d91d423fc7d31d8235d4b5095b1c8789cc2aa319b31f05c5f1f549d8a8c4",
+    "news_records": 90,
+    "news_records_shorter_than_120_bytes": 0,
+    "fingerprint_bytes": 120,
+    "distinct_fingerprint_count": 336,
+    "fingerprint_locations": "first, middle and final 120 bytes for raw UTF-8 and JSON-escaped variants; deduplicated",
+    "fingerprints_or_body_text_disclosed": false
+  },
+  "pattern_names": [
+    "private_key_header",
+    "aws_access_key",
+    "github_token",
+    "openai_style_secret",
+    "google_api_key",
+    "jwt_like_token",
+    "url_embedded_credentials",
+    "signed_url_parameter",
+    "quoted_secret_assignment"
+  ],
+  "findings": [],
+  "false_positives": [],
+  "approved_content": "Existing Civil100 text/original labels and official SemDeDup source with included license are permitted by current project release policy",
+  "excluded_file_policy": "Git-ignored News body files and archived per-job source directories are not separately candidate public files; actual jobs.tar.gz members are scanned",
+  "raw_content_or_credentials_printed": false,
+  "input_authenticity_or_scientific_readiness_claim": false,
+  "inventory_sha256": "12d452d87944885fd8355033d0c379564598ac9be81b38f4b601f3db9188fac8",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 2791,
+      "sha256": "e8b280f2bfe92297bcf683af1b9adc691983c570be5632938c8d92f0c3cbcb66"
+    },
+    {
+      "path": "BACKUP_AUDIT.md",
+      "bytes": 18194,
+      "sha256": "fbddddbfb3889b52f9d30abf16f5c8716f1f0bfe9d5b309f7921ac8024026185"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8785,
+      "sha256": "f0055068c418467bd1cebbc6c6fd704aa105a7a831256aea3e6e22338d5622ae"
+    },
+    {
+      "path": "RESUME_CONTEXT.md",
+      "bytes": 33430,
+      "sha256": "7c8e1c34071ecb81fa9a759ada9bb349469b31f882adf195b33721141364a285"
+    },
+    {
+      "path": "THEORY_AND_RESULTS_HANDOFF.md",
+      "bytes": 62264,
+      "sha256": "75ffd493744292fdc3a8ea6231b2d1acd3080621ae6416dcb1a8cffdd6c40157"
+    },
+    {
+      "path": "empirical_execution/CURRENT_STATUS.json",
+      "bytes": 27796,
+      "sha256": "0a121d71884974d3cdf974807353c817d21f2cf0d9bf21314e8b72ae64063027"
+    },
+    {
+      "path": "empirical_execution/phase10/CHECKPOINT.md",
+      "bytes": 5759,
+      "sha256": "e3c18e6645ddb03ca1824f9ca472cf337014bee4cc881295cb599948d6686158"
+    },
+    {
+      "path": "empirical_execution/phase10/CODEC.md",
+      "bytes": 11472,
+      "sha256": "29aacce59369e1b9eea8edd6bc7dece217214ddd1ef521e1747ea93499744d15"
+    },
+    {
+      "path": "empirical_execution/phase10/CODEC_REVIEW.md",
+      "bytes": 8239,
+      "sha256": "5605287126afd7ff1dce67abd60dc67d89047d78b64ccda74b378b8acce53912"
+    },
+    {
+      "path": "empirical_execution/phase10/CONTRIBUTION_POSITION.md",
+      "bytes": 4336,
+      "sha256": "433510bcf5c39529958c35c4247913638a95025b585424f44aca7b89c8392d50"
+    },
+    {
+      "path": "empirical_execution/phase10/FINITE_WORD_REVIEW.md",
+      "bytes": 14399,
+      "sha256": "014da1fa3672fe311fe45795d7470d0662e303bceb8c515522c5360d96c3efa1"
+    },
+    {
+      "path": "empirical_execution/phase10/FINITE_WORD_THEORY.md",
+      "bytes": 25507,
+      "sha256": "5a17e0e3d7d37e5c27c5ac37f1898c2df40a18e75ce12df8b2255c9ac4900bfb"
+    },
+    {
+      "path": "empirical_execution/phase10/LITERATURE_FOLLOWUP.md",
+      "bytes": 11654,
+      "sha256": "101d81a6fbeda49be185adbbf8bb75deb4ab6cd90f7bd179f5610436a85589ce"
+    },
+    {
+      "path": "empirical_execution/phase10/README.md",
+      "bytes": 3411,
+      "sha256": "417236c0ab6404abc11b43f61dbdb6c7bf76d08a95f3d20fde71acda93ac1bf3"
+    },
+    {
+      "path": "empirical_execution/phase10/REMAINING_TASKS.md",
+      "bytes": 3463,
+      "sha256": "0c74fc7593ac57c5f4e5c7daaae96b51d2a15dab843a6c4e923a8a03f1df1950"
+    },
+    {
+      "path": "empirical_execution/phase10/SCORER_TRANSFER.md",
+      "bytes": 12002,
+      "sha256": "ee9025a29a8071507c0ea331f9f7a06a38e879b1bf1bb7d6058c5701103f7b0a"
+    },
+    {
+      "path": "empirical_execution/phase10/TODO.json",
+      "bytes": 3523,
+      "sha256": "16b4576e76164d8d4065a2aa00c81049623d2f5d92d3b979c3887835a66aba00"
+    },
+    {
+      "path": "empirical_execution/phase10/audit_publication.py",
+      "bytes": 1862,
+      "sha256": "0ee5463ca5dd5ffa701da8303a5043dc975259b38d8e01b4ce09498bee2042a7"
+    },
+    {
+      "path": "empirical_execution/phase10/check_codec_review.py",
+      "bytes": 14034,
+      "sha256": "5726eb6f64fbe93f24c3dee2035ce3788796e7cb371e8daf6b5345b6fd760a66"
+    },
+    {
+      "path": "empirical_execution/phase10/check_finite_word_codec.py",
+      "bytes": 18146,
+      "sha256": "41d020e3f94a61407c9051cb69c9c48c52dd0d1e8053192316dd34285ca10ca6"
+    },
+    {
+      "path": "empirical_execution/phase10/check_finite_word_review.py",
+      "bytes": 10284,
+      "sha256": "caa6909ef9ba9835508810cb9eb71ba312936db196d32a5f99b35c324d7b8484"
+    },
+    {
+      "path": "empirical_execution/phase10/check_scorer_transfer.py",
+      "bytes": 9826,
+      "sha256": "4cf580cd0cd4902fcd493946acc57f2bc6226f5c757436befafe96e693c4a635"
+    },
+    {
+      "path": "empirical_execution/phase10/finite_word_codec.py",
+      "bytes": 16833,
+      "sha256": "d3884acc201f80fd3a967db13292f1f1ffbee579bd0c65bf22284ae8877d8456"
+    },
+    {
+      "path": "empirical_execution/phase10/finite_word_theory.tex",
+      "bytes": 16444,
+      "sha256": "c0afedb46c232444bf6b5165ebc492b630fe5255e25d16dde66f5c105d59f6cd"
+    },
+    {
+      "path": "empirical_execution/phase10/history/FINITE_WORD_THEORY_first_announced.md",
+      "bytes": 25504,
+      "sha256": "ecc22574cdc20dded2bb0e82f06935738423e89d92fd3ab3b189f51c43603787"
+    },
+    {
+      "path": "empirical_execution/phase10/history/NOTATION_CORRECTIONS.md",
+      "bytes": 894,
+      "sha256": "fc50668ea8689119d99c30af9604d614232c1fe2e357938659ae871448f51ea3"
+    },
+    {
+      "path": "empirical_execution/phase10/history/finite_word_theory_first_announced.tex",
+      "bytes": 16387,
+      "sha256": "4bf48469bd7a02a87b5a11fba3433fb823d67677665eb6e81f63aa5f37ae190f"
+    },
+    {
+      "path": "empirical_execution/phase10/history/finite_word_theory_softbit_expression_only.tex",
+      "bytes": 16421,
+      "sha256": "9ebf16a82a5acfc44af0a49ef9c97c49f72d0fcaca4fcb94cb95c9cc7680106a"
+    },
+    {
+      "path": "empirical_execution/phase10/history/literature_followup_sources_before_final_theory_correction.json",
+      "bytes": 13415,
+      "sha256": "794a88aa5ca3152568df85b0bd0e9101d9b3e2f3d7e1c27961aff42930e40b55"
+    },
+    {
+      "path": "empirical_execution/phase10/results/checkpoint_verification.json",
+      "bytes": 496335,
+      "sha256": "d8cb2a05a8da64a56d2c5d7108581f2be1e125af6c9581473e6c7a00bbe2797c"
+    },
+    {
+      "path": "empirical_execution/phase10/results/codec_attempt1_failure.json",
+      "bytes": 660,
+      "sha256": "a304461edc857b3d415c8e137107348ed03f1d54d136a898433af67800082279"
+    },
+    {
+      "path": "empirical_execution/phase10/results/codec_attempt1_sources/check_finite_word_codec.py",
+      "bytes": 17577,
+      "sha256": "431fe51ed1ad31b7b88c214e56eb4ee7b0db8b5867d93b776b0add2e8d3538f6"
+    },
+    {
+      "path": "empirical_execution/phase10/results/codec_attempt1_sources/finite_word_codec.py",
+      "bytes": 16696,
+      "sha256": "7e398da4995c560c9933d3b18f4e4cace3f4d8b338ce59c42de89e51befc04b6"
+    },
+    {
+      "path": "empirical_execution/phase10/results/codec_checks_corrected.json",
+      "bytes": 4702,
+      "sha256": "9c136c58dbb91c48d85e53138f08c7e79c8ce232e93deea2a89a0c7b187d5bf4"
+    },
+    {
+      "path": "empirical_execution/phase10/results/codec_checks_corrected_sources/check_finite_word_codec.py",
+      "bytes": 18146,
+      "sha256": "41d020e3f94a61407c9051cb69c9c48c52dd0d1e8053192316dd34285ca10ca6"
+    },
+    {
+      "path": "empirical_execution/phase10/results/codec_checks_corrected_sources/finite_word_codec.py",
+      "bytes": 16833,
+      "sha256": "d3884acc201f80fd3a967db13292f1f1ffbee579bd0c65bf22284ae8877d8456"
+    },
+    {
+      "path": "empirical_execution/phase10/results/codec_independent_final/check_codec_review.py",
+      "bytes": 14034,
+      "sha256": "5726eb6f64fbe93f24c3dee2035ce3788796e7cb371e8daf6b5345b6fd760a66"
+    },
+    {
+      "path": "empirical_execution/phase10/results/codec_independent_final/checks.json",
+      "bytes": 3483,
+      "sha256": "cd6ac29ab95332920bd05b8d2c61f69a38d101df5ec0d9043d8889f717e53b62"
+    },
+    {
+      "path": "empirical_execution/phase10/results/codec_independent_final/finite_word_codec.py",
+      "bytes": 16833,
+      "sha256": "d3884acc201f80fd3a967db13292f1f1ffbee579bd0c65bf22284ae8877d8456"
+    },
+    {
+      "path": "empirical_execution/phase10/results/codec_review_final.json",
+      "bytes": 2436,
+      "sha256": "a2af092e31d767ebe992c4e63389a1bba37a4e73566d34a40fd67b45fa1fc1d1"
+    },
+    {
+      "path": "empirical_execution/phase10/results/codec_review_large_integer_finding/finding.json",
+      "bytes": 881,
+      "sha256": "28fb061b099d7092c39748efd3f27862cabe3e88155855d664afa7a2413694d6"
+    },
+    {
+      "path": "empirical_execution/phase10/results/codec_review_large_integer_finding/finite_word_codec.py",
+      "bytes": 16696,
+      "sha256": "7e398da4995c560c9933d3b18f4e4cace3f4d8b338ce59c42de89e51befc04b6"
+    },
+    {
+      "path": "empirical_execution/phase10/results/finite_word_review_checks_attempt1.json",
+      "bytes": 1740,
+      "sha256": "325258075e93d04ed26115dadde8298fccd473ee0bf14b5e56a306d9fd7036c9"
+    },
+    {
+      "path": "empirical_execution/phase10/results/finite_word_review_checks_attempt1_checker.py",
+      "bytes": 9402,
+      "sha256": "b324fd2ecc6033097a195406690c168707006211f2f60945951e7048c70bf680"
+    },
+    {
+      "path": "empirical_execution/phase10/results/finite_word_review_checks_final.json",
+      "bytes": 1983,
+      "sha256": "0955b7d3c7392da662a535af9f8b7fed3877b3bce098906fce41c83c2138a618"
+    },
+    {
+      "path": "empirical_execution/phase10/results/finite_word_review_checks_final_checker.py",
+      "bytes": 10284,
+      "sha256": "caa6909ef9ba9835508810cb9eb71ba312936db196d32a5f99b35c324d7b8484"
+    },
+    {
+      "path": "empirical_execution/phase10/results/finite_word_review_checks_release.json",
+      "bytes": 1922,
+      "sha256": "c434f3c73efc5a587a78d2bc37c655f2058ac74eed9e404e7fa9fe1216d21276"
+    },
+    {
+      "path": "empirical_execution/phase10/results/finite_word_review_checks_release_checker.py",
+      "bytes": 10093,
+      "sha256": "cfdf2b099ed2cb258113b20dd277517f35a1549bda8d2607477e16223b83c57f"
+    },
+    {
+      "path": "empirical_execution/phase10/results/finite_word_review_final.json",
+      "bytes": 6971,
+      "sha256": "ce1b08f9fadaef80bc8a2dc1a5ed17e39c13a03aa250a2220b7807879239713b"
+    },
+    {
+      "path": "empirical_execution/phase10/results/finite_word_review_sources_final/CODEC.md",
+      "bytes": 11472,
+      "sha256": "29aacce59369e1b9eea8edd6bc7dece217214ddd1ef521e1747ea93499744d15"
+    },
+    {
+      "path": "empirical_execution/phase10/results/finite_word_review_sources_final/CODEC_REVIEW.md",
+      "bytes": 8239,
+      "sha256": "5605287126afd7ff1dce67abd60dc67d89047d78b64ccda74b378b8acce53912"
+    },
+    {
+      "path": "empirical_execution/phase10/results/finite_word_review_sources_final/FINITE_WORD_REVIEW.md",
+      "bytes": 14399,
+      "sha256": "014da1fa3672fe311fe45795d7470d0662e303bceb8c515522c5360d96c3efa1"
+    },
+    {
+      "path": "empirical_execution/phase10/results/finite_word_review_sources_final/FINITE_WORD_THEORY.md",
+      "bytes": 25507,
+      "sha256": "5a17e0e3d7d37e5c27c5ac37f1898c2df40a18e75ce12df8b2255c9ac4900bfb"
+    },
+    {
+      "path": "empirical_execution/phase10/results/finite_word_review_sources_final/SCORER_TRANSFER.md",
+      "bytes": 12002,
+      "sha256": "ee9025a29a8071507c0ea331f9f7a06a38e879b1bf1bb7d6058c5701103f7b0a"
+    },
+    {
+      "path": "empirical_execution/phase10/results/finite_word_review_sources_final/check_codec_review.py",
+      "bytes": 14034,
+      "sha256": "5726eb6f64fbe93f24c3dee2035ce3788796e7cb371e8daf6b5345b6fd760a66"
+    },
+    {
+      "path": "empirical_execution/phase10/results/finite_word_review_sources_final/check_finite_word_codec.py",
+      "bytes": 18146,
+      "sha256": "41d020e3f94a61407c9051cb69c9c48c52dd0d1e8053192316dd34285ca10ca6"
+    },
+    {
+      "path": "empirical_execution/phase10/results/finite_word_review_sources_final/check_finite_word_review.py",
+      "bytes": 10284,
+      "sha256": "caa6909ef9ba9835508810cb9eb71ba312936db196d32a5f99b35c324d7b8484"
+    },
+    {
+      "path": "empirical_execution/phase10/results/finite_word_review_sources_final/check_scorer_transfer.py",
+      "bytes": 9826,
+      "sha256": "4cf580cd0cd4902fcd493946acc57f2bc6226f5c757436befafe96e693c4a635"
+    },
+    {
+      "path": "empirical_execution/phase10/results/finite_word_review_sources_final/finite_word_codec.py",
+      "bytes": 16833,
+      "sha256": "d3884acc201f80fd3a967db13292f1f1ffbee579bd0c65bf22284ae8877d8456"
+    },
+    {
+      "path": "empirical_execution/phase10/results/finite_word_review_sources_final/finite_word_theory.tex",
+      "bytes": 16444,
+      "sha256": "c0afedb46c232444bf6b5165ebc492b630fe5255e25d16dde66f5c105d59f6cd"
+    },
+    {
+      "path": "empirical_execution/phase10/results/frozen_preservation.json",
+      "bytes": 491835,
+      "sha256": "7347dabf083ebcaa9ac0eb30097a60b39aa7ed0adcded12b7ad94680cd489eed"
+    },
+    {
+      "path": "empirical_execution/phase10/results/scorer_transfer_final/checks.json",
+      "bytes": 9597,
+      "sha256": "ca3652e88bef7aef277cfd75423dcc76901572bd04362ef18fc2bbd5f1c8e535"
+    },
+    {
+      "path": "empirical_execution/phase10/sources/literature_followup_sources.json",
+      "bytes": 14143,
+      "sha256": "32c653da44d5995b52b9f8cbf688216f3972fcdc1e4c94a51225cbd346c0707c"
+    }
+  ],
+  "archives": [],
+  "audit_script_sha256": "087f9f626b7fe12c418a620b5acd932a12e5466ed8385c362b391e0cfcf687a1",
+  "refresh_required_if_any_candidate_file_changes": true,
+  "wrapper_sha256": "0ee5463ca5dd5ffa701da8303a5043dc975259b38d8e01b4ce09498bee2042a7",
+  "generated_exclusions": [
+    "This report",
+    "BACKUP_MANIFEST.json; verified separately"
+  ]
+}

@@ -6,7 +6,7 @@ Snapshot: 4 October 2026. Intended venue: ACL 2027. Working paper name: **Unlear
 
 The project has a developed fixed-curator theory, locally implemented repair algorithms, completed natural-text engineering experiments, a strict exact-state/certified-release implementation, and an audited preparation workflow. **The primary semantic empirical study has not started.** There are no actual human ratings, no selected primary semantic threshold, no passed primary semantic-quality gate, and no pinned E5/MPNet embeddings in the available workspace.
 
-`empirical_execution/CURRENT_STATUS.json` is the machine-readable current status. Older `empirical_execution/STATUS.json` and phase-specific reports are historical, not competing current status. Read `empirical_execution/phase8/CHECKPOINT.md` and `REMAINING_TASKS.md` for the current inventory. Earlier phase-specific TODO files are historical. The frozen phase-3 workflow remains a dependency. This handoff is a checkpoint, not a background-run promise.
+`empirical_execution/CURRENT_STATUS.json` is the machine-readable current status. Older `empirical_execution/STATUS.json` and phase-specific reports are historical, not competing current status. Read `empirical_execution/phase10/CHECKPOINT.md` and its `REMAINING_TASKS.md` for the current inventory. Phase 9 retains current experiment assembly. Earlier phase-specific TODO files are historical. The frozen phase-3 workflow remains a dependency. This handoff is a checkpoint, not a background-run promise.
 
 The user has repeatedly requested that all computation be done here, that synthetic empirical datasets be deferred, that weaknesses be solved algorithmically rather than defended, and that actual work continue instead of receiving another plan. The new repository instruction is to preserve all project files and enough context to resume in another chat. Do not substitute generated labels, fake provenance, lexical hashing described as semantic embeddings, or additional repetitions of the small preview for the missing primary study.
 
@@ -632,3 +632,43 @@ The original compact eligible-payload comparison remains unfavorable to larger s
 The experimental preparation update preserves numerical targets and earlier result bytes.
 No primary semantic experiment or human collection occurred.
 Read the Phase 9 checkpoint for software review evidence and remaining requirements.
+
+
+## Phase 10 finite-format and sequential qualification
+
+The new proof closes two implementation-model gaps from Phase 9.
+It keeps earlier sources and conclusions unchanged within their original scopes.
+Read the Phase 10 theory, scorer transfer, and independent review before citing it.
+
+Public signature blocks and private sign blocks occupy orthogonal feature coordinates.
+All coordinates are exact dyadic FP32 values.
+A uniform arithmetic proof transfers every edge decision to the frozen FP64 scorer.
+It covers all private signs, not merely tested fixtures.
+The graph, labels, and forgotten blocker payloads are public and fixed.
+Targets through budget b vanish; designated budget-b+1 requests reveal individual private blocks.
+The resulting exact finite-state lower bound needs no continuity assumption.
+
+The initial private-information minimum is mD bits.
+The conditional minimum after deletion F is e_F D bits.
+The canonical codec keeps only future-eligible blocks under the decreasing cumulative horizon.
+Fresh retained initialization and sequential repair produce identical authoritative bytes under the public construction contract.
+The byte format includes extra metadata and padding.
+Public construction storage, outputs, and workspace remain separately charged.
+The code is a service for this finite family, not a general compressor for semantic corpora.
+
+The approximation theorem uses classical rate-distortion reasoning at an explicit head-error scale.
+Its initial-summary upper bound does not supply an efficient sequential approximate service.
+The certified-release corollary bridges exact targets and sufficiently accurate released heads.
+It does not certify an arbitrary floating solver automatically.
+The output contract remains essential, including signed-zero and rounded-output distinctions.
+
+The literature follow-up sharpens the claim using primary manuscripts and author code.
+The broad memory separation already has a close counterfactual-auditing precedent.
+GRACE selects forget/retain coresets for behavioral unlearning.
+It does not rerun the original training curator under our raw-deletion target.
+Full proof access for the recent auditing paper and the Dominici thesis remains unresolved.
+No exhaustive novelty guarantee is made.
+
+The semantic study, genuine human audits, paper figures, and empirical prose remain pending.
+The missing assets are unchanged.
+The existing compact-payload byte advantage remains visible and unchanged.

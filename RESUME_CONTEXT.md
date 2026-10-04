@@ -1,15 +1,15 @@
 # Resume this research project
 
-Last substantive checkpoint: **4 October 2026, Phase 9 realizable memory theorem and broader experiment preparation**.
+Last substantive checkpoint: **4 October 2026, Phase 10 finite-format memory bounds and canonical sequential repair**.
 The primary semantic study remains unstarted.
-Read the Phase 9 checkpoint and remaining-task ledger, then the frozen Phase 8 and Phase 6 interfaces.
+Read the Phase 10 checkpoint and remaining-task ledger, then the frozen Phase 9, Phase 8, and Phase 6 interfaces.
 Repository: **https://github.com/priyankjairaj100/third**.
 
 This is a project handoff reconstructed from the available conversation and the saved research files. It is not a verbatim export of all chats. It deliberately contains only this project's context.
 
 ## Paste this into a new chat
 
-> Continue the ACL 2027 counterfactual semantic-curation unlearning project at https://github.com/priyankjairaj100/third. Read README.md, RESUME_CONTEXT.md, THEORY_AND_RESULTS_HANDOFF.md, empirical_execution/CURRENT_STATUS.json and empirical_execution/phase9/CHECKPOINT.md, empirical_execution/phase9/README.md, empirical_execution/phase9/REMAINING_TASKS.md, and empirical_execution/phase6/COMPLETION_LEDGER.md, then inspect the relevant code and result files before acting. Preserve the distinction between exact theory, natural-preview engineering evidence, and the unstarted primary semantic study. All work must be carried out in this workspace; do not start paid or external compute without my instruction. Continue the highest-value executable work, keep me informed, and save all project progress back to this repository with an updated handoff. Do not fabricate missing corpus provenance, semantic embeddings, or human ratings.
+> Continue the ACL 2027 counterfactual semantic-curation unlearning project at https://github.com/priyankjairaj100/third. Read README.md, RESUME_CONTEXT.md, THEORY_AND_RESULTS_HANDOFF.md, empirical_execution/CURRENT_STATUS.json and empirical_execution/phase10/CHECKPOINT.md, empirical_execution/phase10/README.md, empirical_execution/phase10/REMAINING_TASKS.md, and empirical_execution/phase6/COMPLETION_LEDGER.md, then inspect the relevant code and result files before acting. Preserve the distinction between exact theory, natural-preview engineering evidence, and the unstarted primary semantic study. All work must be carried out in this workspace; do not start paid or external compute without my instruction. Continue the highest-value executable work, keep me informed, and save all project progress back to this repository with an updated handoff. Do not fabricate missing corpus provenance, semantic embeddings, or human ratings.
 
 ## User objective and preferences
 
@@ -41,7 +41,7 @@ The independent review passed 244 checks; dispatcher and extension integration p
 No background research jobs remain.
 Use Phase 8 for archive export, streaming replay, and staged input assembly.
 Use Phase 7 for accepted blank calibration forms and explicit policy dispatch.
-Start the next chat with the Phase 9 remaining-task ledger and actual input intake.
+Start the next chat with the Phase 10 remaining-task ledger and actual input intake.
 Do not repeat completed lexical checks as new primary evidence.
 Missing original assets and human judgments remain genuine blockers.
 Do not repeat lexical checks as a substitute for collecting that evidence.
@@ -69,6 +69,8 @@ It does not authorize invented provenance, human ratings, paid compute, or conta
 | Phase 6 | All 21 recipe obligations resolved prospectively; 21,332 jobs registered; dispatcher, extensions, acceptance, numerical and state audits passed. Independent review passed 244 checks. See the Phase 6 ledger. |
 | Phase 7 | Explicit resource policy CLI, accepted blank calibration preparation, native resource preflight, and official input map. |
 | Phase 8 | Pinned archive export, streaming replay, staged input assembly, and scoped observed audit-policy selection. Read its checkpoint for tested scope and unfinished routes. |
+| Phase 9 | Realizable ridge-memory theorem, multi-family assembly, broader resource evidence, and independent reviews. |
+| Phase 10 | Stored-FP32 construction, exact private-bit lower bounds, canonical sequential codec, and targeted literature follow-up. |
 | Primary semantic study | **Not started.** No E5/MPNet embeddings, no original source-rich corpus snapshot and no completed human ratings |
 | Paper-ready confirmatory evidence | **Absent.** Do not turn development checks into semantic or source-withdrawal claims |
 
@@ -296,3 +298,44 @@ Do not repeat completed lexical benchmarks as new progress.
 Proceed with authentic input intake and the remaining evidence sequence.
 Keep all frozen Phases 3–8 byte-identical.
 Push substantive completed milestones to the existing repository without force.
+
+
+## Phase 10 continuation checkpoint
+
+This section supersedes earlier fixed-format and sequential-codec gaps.
+The primary semantic study still has zero executed jobs and zero genuine human responses.
+No new corpus, encoder asset, semantic cache, or human judgment was added.
+
+Read `empirical_execution/phase10/CHECKPOINT.md` for final evidence and source bindings.
+Read its theory, scorer proof, and independent reviews together.
+The constructed family uses identical stored FP32 rows for curation and ridge learning.
+The frozen FP64 scorer yields one graph for every private sign assignment.
+The proof assumes ordinary IEEE operations and bounds total dimension by 2^20.
+Its hard requests delete only fixed public blockers with zero labels.
+Candidates have fixed binary labels and private sign features.
+Every head through budget b is zero.
+Budget b+1 exposes individual candidate sign blocks.
+
+The exact initial private-information minimum is mD bits.
+At a fixed cumulative request, it is e_F D bits for the remaining eligible candidates.
+The new immutable codec matches these private payload counts.
+Canonical serialized bytes also contain public-contract binding, deletion metadata, and padding.
+Exact rational heads and temporary workspace have additional costs.
+The solver target is not legacy floating reduction bytes.
+The release-tolerance corollary requires an actual exact-target error certificate.
+No total-byte optimality, natural-encoder realization, or universal task-loss effect is proved.
+All fixtures in this phase are mathematical software checks, not empirical datasets.
+
+The literature follow-up reads the author-hosted GRACE manuscript.
+It also inspects author code for the recent counterfactual-auditing memory paper.
+General prediction-versus-audit memory separation is not our novelty claim.
+That paper's full proof and approximate-success semantics remain unresolved.
+The Dominici thesis remains an explicit full-text comparison task.
+Finite-format and sequential qualifications strengthen the same theorem and paper.
+Do not inflate them into a new coding principle or guaranteed novelty.
+
+The next decisive work needs authentic corpora, encoder assets, and genuine judgments.
+Use Phase 9 for assembly and resource qualification; use Phase 8 for original source preparation.
+Use the frozen Phase 6 acceptance and execution routes.
+Preserve every Phase 3–9 file and all failed attempts.
+Publish substantive progress without force-pushing remote history.

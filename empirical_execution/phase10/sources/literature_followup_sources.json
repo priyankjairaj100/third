@@ -1,0 +1,343 @@
+{
+  "schema": "ccu-phase10-literature-followup-1",
+  "as_of": "2026-10-04",
+  "status": "targeted_primary_followup_not_exhaustive",
+  "audit_path": "empirical_execution/phase10/LITERATURE_FOLLOWUP.md",
+  "audit_sha256": "101d81a6fbeda49be185adbbf8bb75deb4ab6cd90f7bd179f5610436a85589ce",
+  "source_count": 5,
+  "sources": [
+    {
+      "id": "grace_author_manuscript",
+      "title": "GRACE: Gradient-guided Coreset Selection for LLM Unlearning",
+      "authors": [
+        "Praveen Bushipaka",
+        "Andrea D’Angelo",
+        "Lucia Passaro",
+        "Tommaso Cucinotta"
+      ],
+      "urls": [
+        "https://retis.santannapisa.it/~tommaso/publications/EMNLP-2026.pdf",
+        "https://retis.santannapisa.it/~tommaso/papers/emnlp26.php",
+        "https://andrea-dangelo.com/publication/grace_emnlp",
+        "https://github.com/dangeloandrea14/grace"
+      ],
+      "publication": {
+        "arxiv_id": "2608.28361",
+        "verified_arxiv_version": null,
+        "verified_manuscript_revision_date": null,
+        "author_listed_venue": "EMNLP 2026 Findings",
+        "author_listed_conference_dates": [
+          "2026-10-24",
+          "2026-10-26"
+        ],
+        "conference_is_future_at_audit": true
+      },
+      "retrieval_level": "primary_author_full_manuscript",
+      "read_sections": [
+        "3 definitions and retraining target",
+        "4 Algorithm 1",
+        "5.4 metrics",
+        "Appendix B.3",
+        "limitations"
+      ],
+      "supported_comparison": "Coreset-assisted behavioral unlearning is prior; the inspected algorithm does not characterize repair state for the original fixed training curator.",
+      "uncertainty": "Author manuscript not verified identical to arXiv v1.",
+      "tool_refs": [
+        "turn182view0",
+        "turn183view0",
+        "turn185view0",
+        "turn185view1",
+        "turn184view4",
+        "turn184view5"
+      ]
+    },
+    {
+      "id": "ssrn7520178_paper",
+      "title": "Predictive State Is Not Explanatory State: An Exponential Memory Separation Between Forecasting and Counterfactual Auditing",
+      "authors": [
+        "Sai Pranay Tadakamalla",
+        "Surisetty Maruthi Ram Prakash",
+        "Syed Mohammed Asad"
+      ],
+      "urls": [
+        "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7520178",
+        "https://doi.org/10.2139/ssrn.7520178",
+        "https://ssrn.com/abstract=7520178"
+      ],
+      "publication": {
+        "written_date": "2026-09-24",
+        "posted_date": "2026-09-26",
+        "pages": 6,
+        "doi": "10.2139/ssrn.7520178"
+      },
+      "retrieval_level": "primary_cached_abstract_only",
+      "supported_comparison": "General predictive-versus-counterfactual memory separation is a concrete prior claim.",
+      "uncertainty": "Full paper unavailable; approximate-success probability event and formal quantifiers unverified.",
+      "tool_refs": [
+        "turn180search2",
+        "turn181search2",
+        "turn183search1",
+        "turn185search8"
+      ]
+    },
+    {
+      "id": "ssrn7520178_official_code",
+      "title": "Official implementation for Predictive State Is Not Explanatory State",
+      "urls": [
+        "https://github.com/PranayTadakamalla/predictive-state-not-explanatory-state/tree/4143f408843394e21a0622c9eb5d5de10a687a8c",
+        "https://github.com/PranayTadakamalla/predictive-state-not-explanatory-state/blob/4143f408843394e21a0622c9eb5d5de10a687a8c/README.md",
+        "https://github.com/PranayTadakamalla/predictive-state-not-explanatory-state/blob/4143f408843394e21a0622c9eb5d5de10a687a8c/src/predictive_state/queries.py",
+        "https://github.com/PranayTadakamalla/predictive-state-not-explanatory-state/blob/4143f408843394e21a0622c9eb5d5de10a687a8c/src/predictive_state/decoder.py",
+        "https://github.com/PranayTadakamalla/predictive-state-not-explanatory-state/blob/4143f408843394e21a0622c9eb5d5de10a687a8c/src/predictive_state/experiments.py",
+        "https://github.com/PranayTadakamalla/predictive-state-not-explanatory-state/blob/4143f408843394e21a0622c9eb5d5de10a687a8c/tests/test_claims.py",
+        "https://github.com/PranayTadakamalla/predictive-state-not-explanatory-state/blob/4143f408843394e21a0622c9eb5d5de10a687a8c/CITATION.cff"
+      ],
+      "publication": {
+        "git_commit": "4143f408843394e21a0622c9eb5d5de10a687a8c",
+        "software_version": "1.0.0",
+        "release_date": "2026-09-24",
+        "observed_file_modified_at": "2026-09-24T18:19:48Z"
+      },
+      "retrieval_level": "primary_pinned_code_read_not_executed",
+      "supported_comparison": "Exact coordinate-flip threshold answers reconstruct binary history; partition-join sufficiency is explicit prior framing.",
+      "uncertainty": "No paper/TeX in the pinned tree; code does not formalize approximate-success event.",
+      "observed_git_blob_ids": {
+        "README.md": "89c613bee3a14f4054f9435e17036e232053b681",
+        "src/predictive_state/queries.py": "4f8a83a56cc94b8f016a9e1b4b6078cd5658e1ba",
+        "src/predictive_state/decoder.py": "ef26e5137cb47505eb1c3c45ca66df606f784d6b",
+        "CITATION.cff": "eacf5c02f068d5650e2ec238f9cb22a980b6a7b5"
+      },
+      "retrieval_interface": "GitHub connector read-only tree and raw pinned UTF8 files"
+    },
+    {
+      "id": "dominici2025_thesis",
+      "title": "End-to-end Machine Unlearning Through Data Preparation Pipelines and Feature Stores",
+      "authors": [
+        "Leonardo Dominici"
+      ],
+      "urls": [
+        "https://leodom01.github.io/",
+        "https://deem.berlin/"
+      ],
+      "publication": {
+        "type": "MSc thesis",
+        "year": 2025,
+        "institutions": [
+          "University of Amsterdam",
+          "Vrije Universiteit Amsterdam"
+        ],
+        "author_reported_graduation_date": "2025-08-28",
+        "publication_date": null,
+        "version_date": null
+      },
+      "retrieval_level": "author_and_lab_metadata_only",
+      "supported_comparison": "A close preparation/feature-store pipeline lead exists.",
+      "uncertainty": "Thesis and code not obtained; no theorem or performance comparison authorized.",
+      "tool_refs": [
+        "turn181view2",
+        "turn181search0",
+        "turn184view1",
+        "turn185view2",
+        "turn191search0"
+      ]
+    },
+    {
+      "id": "shannon1959",
+      "title": "Coding Theorems for a Discrete Source With a Fidelity Criterion",
+      "authors": [
+        "Claude E. Shannon"
+      ],
+      "urls": [
+        "https://gwern.net/doc/cs/algorithm/information/1959-shannon.pdf",
+        "https://ieeexplore.ieee.org/document/5311476"
+      ],
+      "publication": {
+        "year": 1959,
+        "venue": "IRE International Convention Record",
+        "volume": 7,
+        "part": 4,
+        "original_pages": "142–163",
+        "retrieved_scan": "Collected-papers reprint, printed pp.325–350"
+      },
+      "retrieval_level": "primary_paper_scan_on_secondary_host",
+      "read_sections": [
+        "rate-distortion definition",
+        "product source and sum distortion",
+        "binary error-probability example p.340",
+        "general reproduction alphabet"
+      ],
+      "supported_comparison": "Rate-distortion foundations and binary Hamming curve are classical.",
+      "uncertainty": "Phase10 squared-error scalar expression is separately derived, not the displayed binary Hamming formula.",
+      "tool_refs": [
+        "turn194view0",
+        "turn195view0",
+        "turn195view2"
+      ]
+    }
+  ],
+  "retrieval_routes": [
+    {
+      "lead": "GRACE",
+      "route": "author publication page to linked PDF",
+      "outcome": "full author manuscript retrieved",
+      "url": "https://retis.santannapisa.it/~tommaso/papers/emnlp26.php"
+    },
+    {
+      "lead": "GRACE",
+      "route": "arXiv versioned HTML/PDF",
+      "outcome": "tool disabled; not bypassed",
+      "urls": [
+        "https://arxiv.org/html/2608.28361v1",
+        "https://arxiv.org/pdf/2608.28361v1"
+      ]
+    },
+    {
+      "lead": "GRACE",
+      "route": "author-linked OpenReview",
+      "outcome": "challenge page; not bypassed",
+      "url": "https://openreview.net/forum?id=MnxaQdfDju"
+    },
+    {
+      "lead": "SSRN7520178",
+      "route": "DOI resolution",
+      "outcome": "internal fetch error",
+      "url": "https://doi.org/10.2139/ssrn.7520178"
+    },
+    {
+      "lead": "SSRN7520178",
+      "route": "short SSRN URL",
+      "outcome": "tool encoding failure",
+      "url": "https://ssrn.com/abstract=7520178"
+    },
+    {
+      "lead": "SSRN7520178",
+      "route": "author GitHub code search then pinned recursive tree and raw files",
+      "outcome": "official software retrieved; no paper/TeX present at inspected commit",
+      "url": "https://github.com/PranayTadakamalla/predictive-state-not-explanatory-state/tree/4143f408843394e21a0622c9eb5d5de10a687a8c"
+    },
+    {
+      "lead": "Dominici thesis",
+      "route": "exact title, author, PDF, university-domain and author-code searches",
+      "outcome": "metadata found; no matching full text or implementation retrieved",
+      "queries": [
+        "\"End-to-end Machine Unlearning\" \"Dominici\"",
+        "\"Leonardo Dominici\" thesis Feast pdf",
+        "\"End-to-end Machine Unlearning Through Data Preparation Pipelines and Feature Stores\" filetype:pdf",
+        "\"Leonardo Dominici\" site:vu.nl thesis",
+        "\"Leonardo Dominici\" site:uva.nl thesis",
+        "GitHub author leodom01 code queries unlearning and Feast"
+      ]
+    },
+    {
+      "lead": "Dominici thesis",
+      "route": "UvA thesis portal",
+      "outcome": "timeout",
+      "url": "https://scripties.uba.uva.nl/"
+    },
+    {
+      "lead": "Dominici thesis",
+      "route": "GitHub user repository-list endpoint",
+      "outcome": "connector endpoint unsupported; not absence evidence",
+      "url": "https://api.github.com/users/leodom01/repos?per_page=100"
+    },
+    {
+      "lead": "Dominici thesis",
+      "route": "guessed author-site repository tree",
+      "outcome": "404; not absence evidence",
+      "url": "https://api.github.com/repos/leodom01/leodom01.github.io/git/trees/main?recursive=1"
+    },
+    {
+      "lead": "Shannon1959",
+      "route": "university scan",
+      "outcome": "404",
+      "url": "https://www.mast.queensu.ca/~math474/shannon59.pdf"
+    },
+    {
+      "lead": "Shannon1959",
+      "route": "publisher",
+      "outcome": "JavaScript challenge, not bypassed",
+      "url": "https://ieeexplore.ieee.org/document/5311476"
+    },
+    {
+      "lead": "Shannon1959",
+      "route": "alternate scan of primary paper",
+      "outcome": "full paper retrieved",
+      "url": "https://gwern.net/doc/cs/algorithm/information/1959-shannon.pdf"
+    }
+  ],
+  "local_inputs": [
+    {
+      "path": "empirical_execution/phase9/NOVELTY_AUDIT.md",
+      "sha256": "bf973aa1b46835fbac5c5a7a27daa0bf3fb858acff73aa21754488fcbc00c7d9",
+      "binding_status": "frozen_inspected_source"
+    },
+    {
+      "path": "empirical_execution/phase9/sources/novelty_sources.json",
+      "sha256": "bc98ad5b825fa5a35270f711a5a6677b4829310d59b7d108c969e62e92ddfb68",
+      "binding_status": "frozen_inspected_source"
+    },
+    {
+      "path": "empirical_execution/phase9/THEORY_EXTENSION.md",
+      "sha256": "f4e3878b3af04741c321c398fbdef2edd18bd28a551f1e9cf86e1a9367b8b066",
+      "binding_status": "frozen_inspected_source"
+    },
+    {
+      "path": "empirical_execution/phase9/THEORY_REVIEW.md",
+      "sha256": "56eacc85bf299ddcdeb1236255280f3014b031065c2d02eb3c76572308291696",
+      "binding_status": "frozen_inspected_source"
+    },
+    {
+      "path": "empirical_execution/phase10/FINITE_WORD_THEORY.md",
+      "sha256": "5a17e0e3d7d37e5c27c5ac37f1898c2df40a18e75ce12df8b2255c9ac4900bfb",
+      "binding_status": "frozen_inspected_source"
+    },
+    {
+      "path": "empirical_execution/phase10/SCORER_TRANSFER.md",
+      "sha256": "ee9025a29a8071507c0ea331f9f7a06a38e879b1bf1bb7d6058c5701103f7b0a",
+      "binding_status": "frozen_inspected_source"
+    },
+    {
+      "path": "empirical_execution/phase10/finite_word_codec.py",
+      "sha256": "7e398da4995c560c9933d3b18f4e4cace3f4d8b338ce59c42de89e51befc04b6",
+      "binding_status": "inspected_codec_snapshot_not_final_software_acceptance"
+    },
+    {
+      "path": "empirical_execution/phase10/finite_word_theory.tex",
+      "sha256": "c0afedb46c232444bf6b5165ebc492b630fe5255e25d16dde66f5c105d59f6cd",
+      "binding_status": "frozen_inspected_source"
+    }
+  ],
+  "local_input_binding_scope": "Phase9 stays frozen. FINITE_WORD_THEORY.md, finite_word_theory.tex and SCORER_TRANSFER.md bind final frozen inspected sources after the explicit soft-bit expression and probability-range clarification. Codec hash binds the previously inspected implementation snapshot; final codec checks/review remain independently owned. No proof or software certification is implied by this literature assessment.",
+  "assessment": {
+    "gap_count_at_start": 3,
+    "author_manuscript_gaps_resolved": 1,
+    "exact_code_semantics_gaps_narrowed": 1,
+    "complete_paper_gaps_remaining": 2,
+    "general_memory_principle_new": false,
+    "coding_techniques_new": false,
+    "fixed_format_and_sequential_contract_gaps_materially_narrowed": true,
+    "practical_total_byte_optimality_established": false,
+    "natural_encoder_realizability_established": false,
+    "fixed_test_nlp_loss_established": false,
+    "novelty_exhaustively_certified": false
+  },
+  "search_policy": {
+    "engines": [
+      "system1_search_query",
+      "system2_search_query"
+    ],
+    "primary_comparisons_only": true,
+    "not_exhaustive": true,
+    "exact_title_noise_and_index_gaps": true,
+    "no_person_contact": true,
+    "no_empirical_tests_or_benchmarks": true,
+    "full_source_copies_in_repo": false
+  },
+  "binding_history": [
+    {
+      "path": "empirical_execution/phase10/history/literature_followup_sources_before_final_theory_correction.json",
+      "sha256": "794a88aa5ca3152568df85b0bd0e9101d9b3e2f3d7e1c27961aff42930e40b55",
+      "reason": "Preserves prior inspected theory snapshot; superseded current bindings follow final cross-format clarification. Novelty assessment unchanged."
+    }
+  ]
+}

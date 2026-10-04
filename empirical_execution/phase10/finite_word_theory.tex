@@ -1,0 +1,332 @@
+% New Phase 10 fragment; no prior theory or numerical implementation is edited.
+% Requires amsmath, amssymb, amsthm, hyperref and theorem/corollary environments.
+\section{Finite-word memory forced by counterfactual admissions}
+\label{sec:finite-word-admission-memory}
+
+The continuous-input obstruction can be strengthened to a finite-alphabet
+witness using exactly stored FP32 raw features and public binary labels.
+The same raw features feed cosine curation and ridge learning; normalization
+is confined to graph scoring.  The result is an information requirement for
+prescribed ridge heads, not a total-byte or natural-language utility claim.
+
+\subsection{Finite-format family and access contract}
+Fix $b\ge1$, $m\ge2$, powers of four $k,D\ge1$ satisfying
+$d=2+k+D\le2^{20}$, and a public rational $\lambda>0$.  Fix public signatures
+\[
+ u_i\in\{\pm1/\sqrt k\}^k,\qquad |u_i^Tu_j|\le1/6\quad(i\ne j).
+\]
+The theorem is conditional on this code property.  Orthogonal Hadamard rows
+suffice when $m\le k$.  Normalized independent signs give existence if
+$k\ge\lceil72\log(2m(m-1))\rceil$, by the pairwise bound
+$2e^{-k/72}$ and a union bound; the chosen power of four must still satisfy
+the total-dimension cap.  Arbitrary $m$ at fixed $k$ is not claimed.
+
+Sort $N=1+b+2m$ fixed distinct public identifiers by the frozen hash priority,
+including its ID tie break, independently of private data.  Assign roles in
+that order to anchor $a$, common blockers $S=\{s_1,\ldots,s_b\}$, private
+blockers $p_1,\ldots,p_m$, and candidates $w_1,\ldots,w_m$.  No assumption
+about hash-collision absence is needed.  These are mathematical roles, not
+synthetic empirical records or source-provenance claims.
+
+Use orthogonal blocks $e_0,e_1,U,H$ of dimensions $1,1,k,D$.  Set
+$\alpha=1/128$ and let $z_i\in\{\pm1/\sqrt D\}^D$ encode the only private
+data: $mD$ independently varying signs.  Define the raw feature rows
+\begin{equation}\label{eq:finite-raw-rows}
+\begin{split}
+ a&=e_0,&s_j&=\tfrac12e_0+\tfrac78e_1,\\
+ p_i&=\tfrac12e_0+\tfrac78u_i,&
+ w_i&=\tfrac12e_1+\tfrac78u_i+\alpha z_i.
+\end{split}
+\end{equation}
+Candidate labels are one; all other labels are zero.  Identifiers, role map,
+signatures, graph, labels, dimensions, regularization, and blocker payloads
+are public.  Actual private signs/candidate rows are not.  Count every
+sign-dependent model, cache, ticket, remote store, retained random seed,
+and usable earlier output.  No retained-candidate reread or uncharged
+data-dependent side channel is allowed.  Full forgotten payloads may be
+supplied, but the distinguishing probes delete only fixed public blockers.
+Public randomness is independent of the signs.
+
+A $B$-bit state means at most $2^B$ distinguishable message values,
+conditional on the public contract and public coins.  Fixed-capacity
+$B$-bit storage satisfies this convention; any usable length, framing, or
+allocation choice must be charged.  Strings of length at most $B$ have
+$2^{B+1}-1$ possibilities if their length is free, and do not automatically
+satisfy the convention.  The entropy proof uses $H(M\mid R)\le B$.
+
+For selected $T\ne\varnothing$, the learner is the exact rational minimizer
+of average-loss ridge on the \emph{stored raw} rows:
+\[
+ L_T(\theta)=\frac1{2|T|}\sum_{v\in T}(x_v^T\theta-y_v)^2
+                          +\frac\lambda2\|\theta\|_2^2.
+\]
+For $T=\varnothing$ return zero.  This is not a bitwise FP32/FP64 solver
+output contract.  The learner does not renormalize the stored rows.  All
+claims are for record deletion; singleton-source deletion is formally
+equivalent only when each record is its own owner, and does not establish
+the empirical genuine-source arm.
+
+\subsection{Uniform transfer to the frozen cosine graph}
+The row norms are independent of the private signs:
+\[
+ \|a\|^2=1,\quad\|s_j\|^2=\|p_i\|^2=65/64,\quad
+ \|w_i\|^2=16641/16384=(129/128)^2.
+\]
+All nonzero entries of \eqref{eq:finite-raw-rows} are exactly representable
+normal FP32 values throughout the admitted dimension range.  The stored
+threshold is the binary64 value
+\[
+ \tau=\operatorname{float64}(0.4)=3602879701896397/2^{53}
+                                =2/5+1/(5\,2^{53}).
+\]
+The smallest required ideal edge cosine is
+$448/(129\sqrt{65})>.43$, between a common blocker and a candidate.
+The largest required nonedge cosine is at most
+$18563/49923<.372$, between distinct candidates.  The latter includes the
+worst private correlation $z_i^Tz_j\le1$; hence both bounds are uniform
+over all $2^{mD}$ payloads.
+
+The companion scorer proof analyzes the frozen ordered binary64
+normalization and coordinate dot product.  Norm squares and partial sums
+are exact in this family: each is a multiple of $2^{-34}$ of magnitude
+below two.  With $u=2^{-53}$, its absolute score-error bound is
+\[
+ E_d=2\rho+\rho^2+\gamma(1+\rho)^2<2^{-32},\qquad
+ \rho=\frac{2u}{1-u},\qquad
+ \gamma=\frac{(d+1)u}{1-(d+1)u}.
+\]
+The numerical contract uses ordinary binary32/binary64, round-to-nearest
+ties-to-even, correctly rounded square root/division, and the frozen
+operation order without arithmetic-changing reassociation.  Nonzero
+intermediates remain normal.  The frozen scorer does not clip.  This
+arithmetic proof is not a general hardware certification or native-runtime
+measurement.
+
+These margins imply the same strict graph for every payload, with
+\[
+                          B(w_i)=S\cup\{p_i\}.
+\]
+Curator normalization leaves the raw learner values unchanged.  Using
+normalized learner vectors would define a different target.
+
+\subsection{Exact finite-alphabet state}
+Write $t=16641/16384+2\lambda$ and $n=mD$.  Initially only the zero-label
+anchor is selected.  At horizon $b$ no candidate can lose all $b+1$
+blockers, so every target head remains zero.  At horizon $K=b+1$, the probe
+$F_i=S\cup\{p_i\}$ selects exactly $\{a,w_i\}$; conversely every request
+of size at most $K$ selecting a candidate equals its $F_i$.
+Since $a\perp w_i$, its exact ridge head is
+\begin{equation}\label{eq:finite-probe-head}
+ \theta_i=\frac{w_i}{t}
+   =\underbrace{\frac{\tfrac12e_1+\tfrac78u_i}{t}}_{\theta_i^{\rm pub}}
+                          +\frac\alpha t z_i.
+\end{equation}
+The signs of its $H$ coordinates recover all $D$ private bits for candidate
+$i$.
+
+\begin{theorem}[Exact finite-word transition]
+On this fixed public family the minimum deterministic exact model-query
+state is zero private bits at horizon $b$ and $mD$ private bits at horizon
+$b+1$.  The lower bound also applies to a sequential service's initial
+state and to randomized services that are exactly correct almost surely
+for every fixed input and query.
+\end{theorem}
+\begin{proof}
+Two distinct sign assignments differ on some candidate word, and its fixed
+public probe has different heads by \eqref{eq:finite-probe-head}.  Exact
+state must distinguish all $2^{mD}$ assignments.  Storing the signs suffices:
+reconstruct the indicated head on $F_i$ and return zero on other queries.
+The low horizon always returns zero.  The randomized zero-error lower
+bound also follows from the zero-distortion information bound below.
+Each $F_i$ must be supportable as a sequential service's first request.
+\end{proof}
+
+This is private information, not total bytes: identifiers, public code,
+signatures, graph, ledger, padding, and workspace still cost storage.
+If $D\ge k$, for example $D=k$, then $D\ge(d-2)/2$; for fixed $b$ the
+bound is proportional to $Nd$ on this admitted subfamily.  If most
+dimensions are public, the exact statement remains $mD$, not $md$.
+Fixed 32-bit private words consequently require at least
+$\lceil mD/32\rceil$ words before additional metadata and workspace.
+
+Keep the original horizon $K=b+1$.  For cumulative deletion $F$, let
+\[
+ I(F)=\{i:w_i\notin F,\ |B(w_i)\setminus F|\le K-|F|\}
+     =\{i:F\subseteq S\cup\{p_i\}\},\qquad e(F)=|I(F)|.
+\]
+Empty continuation is allowed, so a currently selected candidate still
+matters when the remaining deletion budget is zero.
+
+\begin{theorem}[Conditional retained-state minimum]
+Fix an admissible cumulative deleted set $F$ and demand correctness for
+every private assignment and every allowed continuation.  Conditional on
+this fixed public construction and ledger, the exact minimum is $e(F)D$
+private bits, counting all usable sign-dependent auxiliary information.
+\end{theorem}
+\begin{proof}
+Every $i\in I(F)$ remains isolatable by completing the deletion with
+$B(w_i)\setminus F$.  Independently varying these words produces
+$2^{e(F)D}$ distinguishable future-head families.  If $e(F)>0$, all records
+in $F$ are fixed public blockers; their forgotten payloads reveal none of
+these words.  For sufficiency store precisely the words indexed by $I(F)$.
+Every current or future nonzero head is one of their probe heads.  Under
+continuation $F'\supseteq F$, $I(F')\subseteq I(F)$, so discarded words
+never become relevant within the fixed original horizon.
+\end{proof}
+
+The separate canonical codec provides concrete atomic updates, bit packing,
+membership/horizon checks, and public-ledger accounting.  The lossy
+query-summary upper bound below does not provide that sequential contract.
+The theorem is a worst-case fixed-$F$ statement, not a claim that a
+particular adaptive request policy reveals no information through its
+realized requests.
+
+\subsection{Expected squared parameter error}
+For $0\le v\le1/4$ define
+\[
+ q(v)=\frac{1-\sqrt{1-4v}}2,\qquad
+ R_{\rm sq}(v)=1-h_2(q(v)),
+\]
+and set $R_{\rm sq}(v)=0$ for $v\ge1/4$.
+
+\begin{theorem}[Finite-word parameter information curve]
+Let a state contain at most $B$ private bits, with public independent
+randomness and fresh randomized repair allowed.  If every fixed input and
+every fixed hard probe satisfies
+$\mathbb E\|\widehat\theta_i-\theta_i\|_2^2\le\varepsilon$, then
+\begin{equation}\label{eq:finite-rate}
+ B\ge nR_{\rm sq}(v),\qquad
+ n=mD,\qquad v=\frac{t^2\varepsilon}{4\alpha^2}.
+\end{equation}
+For this lower bound, average correctness under uniform independent signs
+and a uniform index among the $m$ hard probes already suffices.
+\end{theorem}
+\begin{proof}
+Write the private signs as $2Y_{ij}-1$ for uniform independent bits and
+rescale the returned private coordinates:
+\[
+ \widehat Y_{ij}=\tfrac12\left(1+
+                       \frac{t\sqrt D}\alpha\widehat\theta_i[H_j]\right).
+\]
+Clipping to $[0,1]$ cannot increase squared error, and before clipping
+\[
+ \frac1D\sum_j(\widehat Y_{ij}-Y_{ij})^2
+ \le\frac{t^2}{4\alpha^2}\|\widehat\theta_i-\theta_i\|_2^2.
+\]
+For state $M$ and public coins $R$, posterior means
+$p_l=\Pr(Y_l=1\mid M,R)$ minimize conditional squared error; their average
+variance is at most $v$.  The function
+$g(s)=h_2((1-\sqrt{1-4s})/2)$ is increasing and concave on $[0,1/4]$.
+One direct check substitutes $s=q(1-q)$: the derivative sign reduces to
+$-u+1/u+2\ln u\le0$ for $u\ge1$, since
+$(u-1/u-2\ln u)'=(u-1)^2/u^2\ge0$.
+Therefore conditional subadditivity and Jensen give
+\[
+ H(Y\mid M,R)\le\sum_l\mathbb E h_2(p_l)\le ng(v),\qquad
+ B\ge I(Y;M\mid R)\ge n[1-g(v)].
+\]
+For $v\ge1/4$ the zero bound is immediate.
+\end{proof}
+
+The zero-information squared-error threshold is exactly
+$\varepsilon_0=\alpha^2/t^2$: return $\theta_i^{\rm pub}$ on each hard
+probe, giving this error for every payload.  Any fixed smaller error forces
+a positive rate in \eqref{eq:finite-rate}.  Averaging over \emph{all} valid
+deletion sets would be a weaker, unsuitable condition because zero-target
+queries can dilute the loss.
+
+\paragraph{Finite-length query-summary upper bound.}
+Fix $0<v<1/4$, set $q=q(v)$, $r=\lfloor qn\rfloor$, $q_n=r/n$, and
+\[
+ V(n,r)=\sum_{j=0}^{r}\binom nj,\qquad
+ K_{n,r}=\min\left\{2^n,
+ \left\lceil\frac{2^n}{V(n,r)}(n\ln2+1)\right\rceil\right\}.
+\]
+A Hamming covering code of radius $r$ and size at most $K_{n,r}$ exists:
+independent uniform codewords give expected uncovered population below
+one at the displayed count; all $2^n$ words supply the alternative.
+Fix a code and nearest-codeword rule publicly.  Draw an independent public
+uniform mask and permutation, encode the masked/permuted word by its
+covering-codeword index, and reproduce transformed coordinates as
+$\widehat Y_\ell=q_n+(1-2q_n)c_\ell$, where $c_\ell$ is the codeword bit.
+Undo the mask and permutation.
+The coordinate-average squared error is at most
+\[
+ q_n^2+(1-2q_n)d_H/n\le q_n(1-q_n)\le v.
+\]
+The mask makes the transformed input independent of the permutation; thus
+every fixed original coordinate has expected error at most $v$.  Reproduce
+the public head component exactly and the hidden block from these soft
+bits.  For every fixed input and hard probe this gives
+\[
+ \mathbb E\|\widehat\theta_i-\theta_i\|_2^2
+ \le4\alpha^2v/t^2,\qquad B\le\lceil\log_2K_{n,r}\rceil.
+\]
+Non-hard queries return zero.  The endpoints use exact signs at $v=0$ and
+the public-component predictor at $v=1/4$.
+
+The type bound on $\binom nr$ gives the familiar
+$nR_{\rm sq}(v)+O_v(\log(n+1))$ finite-length expression for fixed interior
+$v$; the displayed finite formula is authoritative on the bounded format
+domain.  The codebook and public randomness may be enormously expensive.
+This is not an efficient, canonical, or sequentially erasable lossy codec,
+and its guarantee is not for a query chosen after observing realized
+state or coins.
+
+\subsection{High-probability and certified-release bridges}
+Fix $0\le\delta<1/2$.  If every fixed hard probe satisfies
+$\|\widehat\theta_i-\theta_i\|_2\le\eta$
+with probability at least $1-\delta$, a wrong coordinate sign costs at
+least $\alpha^2/(t^2D)$ squared error.  The average bit error of sign
+thresholding, or its better Bayes rule, is at most
+\[
+ p=\min\left\{\tfrac12,\ \delta+(1-\delta)
+                              \min\{1,t^2\eta^2/\alpha^2\}\right\}.
+\]
+Binary Fano yields $B\ge n[1-h_2(p)]$.
+
+More strongly set $a_H=\alpha/(t\sqrt D)$.  A successful certified radius
+strictly below $a_H$ identifies the entire candidate word.  Block Fano gives
+\[
+ B\ge m\left[D-h_2(\delta)-\delta\log_2(2^D-1)\right]
+ \ge m\left[(1-\delta)D-h_2(\delta)\right].
+\]
+At deterministic success this is the full $mD$-bit bound.  If
+$0<\lambda\le1$, the dimension cap implies $t<4$ and $\sqrt D\le2^{10}$,
+so $a_H>2^{-19}$; an actual certified parameter radius at most $2^{-20}$ is
+sufficient.  This does not guarantee that a solver returns such a
+certificate: moment error, solve error, and release rounding must all be
+covered.  Distinct exact heads can otherwise collapse under low-precision
+release; numerical zero and signed-zero bit patterns are distinct contracts.
+
+\paragraph{Interpretation and attribution.}
+The added qualification is finite-format realizability under the actual
+frozen scorer and prescribed raw-feature ridge target, with a conditional
+exact-state witness.  Distinguishability, bounded-deletion storage, and
+rate-distortion tools are prior ideas.  The squared-Bernoulli derivation and
+covering symmetrization specialize the earlier repository argument to
+private feature bits; they are not a new general coding theorem.  See
+Shannon, \emph{Coding Theorems for a Discrete Source With a Fidelity
+Criterion} (1959), original-paper scan
+\url{https://gwern.net/doc/cs/algorithm/information/1959-shannon.pdf},
+and Scarlett and Cevher, arXiv:1901.00555v3,
+\url{https://arxiv.org/pdf/1901.00555}.
+Shannon's displayed binary Hamming curve is not the squared-soft-bit
+formula derived here.  Tadakamalla, Surisetty and Asad (2026),
+\emph{Predictive State Is Not Explanatory State}, also study query-relative
+predictive/counterfactual memory; their official source release at commit
+\texttt{4143f408843394e21a0622c9eb5d5de10a687a8c} implements recovery from
+coordinate-flip threshold answers.  We do not claim that general
+separation or partition-based sufficiency principle.  Its inaccessible
+full paper leaves its approximate-success semantics unresolved in the
+present literature pass.
+
+The metric is parameter fidelity.  A public test law uniformly sampling
+an $H$ basis vector has prediction error $\|P_H e\|_2^2/D$; an isotropic
+unit-feature law over all coordinates introduces $1/d$.  Therefore the
+constant parameter obstruction does not establish constant NLP task loss
+or population excess risk.  The mathematical rows are not a demonstrated
+semantic-encoder image.  No total-byte, native-runtime, or privacy-erasure
+optimality follows.  The companion \texttt{SCORER\_TRANSFER.md} and retained
+checker provide the arithmetic proof and bounded examples; separate codec
+and independent proof checks retain their stated scopes.

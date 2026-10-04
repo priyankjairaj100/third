@@ -194,3 +194,21 @@ The Phase 9 publication report covers new and changed files under the existing d
 The final backup manifest covers all staged project artifacts and their hashes.
 News article bodies, credentials, and unrelated account material remain excluded.
 No total-byte optimality, semantic effect, or native speedup follows from this backup.
+
+
+## Phase 10 preservation supplement — 4 October 2026
+
+This checkpoint adds a finite-format theorem and its canonical sequential codec.
+It preserves full Markdown and LaTeX statements, scorer transfer, independent reviews, and bounded algebra checks.
+Prior theorem versions, a checker reporting failure, and input-contract findings remain available.
+The literature follow-up stores primary-source metadata and authored comparisons.
+It does not redistribute full paper copies.
+
+All 2,208 frozen Phase 3–9 files match commit `9b21ef0475134ce6c9f9c5254a1009715cc57c47`.
+Their combined size is 111,668,883 bytes.
+The Phase 10 publication scan covers new and changed files under the established disclosure policy.
+The complete backup manifest records staged project artifacts and checksums.
+
+No original corpus, semantic encoder cache, genuine judgment, or primary experiment was added.
+No new News bodies, credentials, or unrelated account material belong in this release.
+The theorem concerns conditional private information, not total physical memory or natural task value.

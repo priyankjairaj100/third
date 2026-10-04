@@ -1,0 +1,97 @@
+{
+  "schema": "ccu-phase10-remaining-tasks-1",
+  "date": "2026-10-04",
+  "authority": "REMAINING_TASKS.md and narrative empirical protocol",
+  "primary_semantic_study_started": false,
+  "executed_primary_jobs": 0,
+  "actual_human_responses": 0,
+  "registered_jobs": 21332,
+  "all_research_tasks_complete": false,
+  "synthetic_empirical_datasets_created": false,
+  "tasks": [
+    {
+      "task_id": "finite_word_theory",
+      "status": "complete_with_declared_scope",
+      "task": "Stored FP32 family, exact private-state minima, head-error information bounds, and certified-output condition",
+      "evidence": "FINITE_WORD_THEORY.md"
+    },
+    {
+      "task_id": "scorer_transfer",
+      "status": "complete_with_declared_scope",
+      "task": "Uniform frozen-scorer proof under explicit IEEE arithmetic assumptions",
+      "evidence": "SCORER_TRANSFER.md"
+    },
+    {
+      "task_id": "canonical_finite_codec",
+      "status": "complete_with_declared_scope",
+      "task": "Exact sequential sign-state service for the constructed family",
+      "evidence": "CODEC.md"
+    },
+    {
+      "task_id": "novelty_followup",
+      "status": "partly_resolved",
+      "task": "GRACE author manuscript read; SSRN author code read; two complete-paper gaps remain",
+      "evidence": "LITERATURE_FOLLOWUP.md"
+    },
+    {
+      "task_id": "original_input_import",
+      "status": "input_blocked",
+      "task": "Import and accept original source-rich corpora",
+      "evidence": "../phase7/ACQUISITION_REVIEW.md"
+    },
+    {
+      "task_id": "local_models_runtime",
+      "status": "input_blocked",
+      "task": "Import pinned E5/MPNet assets and provide compatible local runtime/storage",
+      "evidence": "../phase7/MODEL_IMPORT.md"
+    },
+    {
+      "task_id": "actual_encoder_replay",
+      "status": "input_blocked",
+      "task": "Build genuine semantic caches and replay official backend",
+      "evidence": "REMAINING_TASKS.md"
+    },
+    {
+      "task_id": "genuine_calibration_validation",
+      "status": "human_evidence_missing",
+      "task": "Collect genuine selection judgments and independent validation",
+      "evidence": "REMAINING_TASKS.md"
+    },
+    {
+      "task_id": "native_development_qualification",
+      "status": "accepted_inputs_and_measurements_missing",
+      "task": "Run source-disjoint development and matching resource measurements",
+      "evidence": "../phase9/RESOURCE_PROFILES.md"
+    },
+    {
+      "task_id": "primary_execution",
+      "status": "not_started",
+      "task": "Execute accepted registered jobs and retain complete failures/zeros",
+      "evidence": "../phase9/STUDY_ASSEMBLY.md"
+    },
+    {
+      "task_id": "human_admission_context",
+      "status": "human_evidence_missing",
+      "task": "Complete admission relevance and both contextual audits",
+      "evidence": "../phase9/GRAPH_DOSSIER.md"
+    },
+    {
+      "task_id": "statistics_claims",
+      "status": "accepted_results_missing",
+      "task": "Run bound statistics and prospective claim decisions",
+      "evidence": "REMAINING_TASKS.md"
+    },
+    {
+      "task_id": "paper_empirical_assets",
+      "status": "accepted_results_missing",
+      "task": "Produce six figures, three tables, empirical prose, and permitted release",
+      "evidence": "REMAINING_TASKS.md"
+    },
+    {
+      "task_id": "remaining_full_text_comparisons",
+      "status": "unresolved",
+      "task": "Read SSRN full proof and Dominici thesis; refresh before submission",
+      "evidence": "LITERATURE_FOLLOWUP.md"
+    }
+  ]
+}

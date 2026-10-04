@@ -1,0 +1,152 @@
+{
+  "actual_semantic_encoder_image_proved": false,
+  "approved_claims": [
+    "Finite binary32 raw-feature family under explicit frozen-scorer IEEE contract; no semantic-encoder-image claim.",
+    "Exact initial private-state minimum mD bits and fixed-F conditional minimum e(F)D bits with all private side information charged.",
+    "Expected squared-parameter information curve with explicit state alphabet, public-random query-summary upper, and finite-length/domain qualification.",
+    "High-probability and certified exact-target release bridges with explicit failure range.",
+    "Canonical sequential sign disposal under a fixed public universe and decreasing cumulative horizon, with separate metadata, padding, output, and workspace costs."
+  ],
+  "arbitrary_runtime_conformance_proved": false,
+  "component_reports": {
+    "empirical_execution/phase10/results/codec_checks_corrected.json": {
+      "counts": {
+        "exact_heads": 5888,
+        "families": 260,
+        "fresh_graphs": 5888,
+        "retained_sets": 5888,
+        "sequential_transitions": 19780
+      },
+      "passed_checks": 51,
+      "rerun_by_this_reviewer": false,
+      "source_bindings_verified": true
+    },
+    "empirical_execution/phase10/results/codec_independent_final/checks.json": {
+      "case_counts": {
+        "exact_normal_equation_coordinates": 20280,
+        "private_word_patterns": 12,
+        "state_cases": 1560
+      },
+      "passed_checks": 51,
+      "rerun_by_this_reviewer": false,
+      "source_bindings_verified": true
+    },
+    "empirical_execution/phase10/results/scorer_transfer_final/checks.json": {
+      "passed_checks": 85,
+      "rerun_by_this_reviewer": false,
+      "source_bindings_verified": true
+    }
+  },
+  "empirical_benchmark": false,
+  "entropy_or_universal_arithmetic_proved_by_finite_tests": false,
+  "final_source_snapshot": "empirical_execution/phase10/results/finite_word_review_sources_final",
+  "global_novelty_proved": false,
+  "independent_case_counts": {
+    "admitted_dimension_pairs": 100,
+    "binary32_scalar_roundtrips": 600,
+    "conditional_state_alphabets": 64,
+    "covering_code_reconstruction_distortion_cases": 12,
+    "full_private_sign_assignments": 256,
+    "hard_pair_queries": 512,
+    "independent_exact_normal_equations": 512,
+    "low_budget_queries": 7424,
+    "private_state_drop_transition_checks": 39424
+  },
+  "independent_review_assertions": 22,
+  "open_mathematical_findings": [],
+  "physical_erasure_proved": false,
+  "primary_study_started": false,
+  "prior_phase9_context_bindings": {
+    "empirical_execution/phase9/THEORY_EXTENSION.md": {
+      "bytes": 20473,
+      "sha256": "f4e3878b3af04741c321c398fbdef2edd18bd28a551f1e9cf86e1a9367b8b066"
+    },
+    "empirical_execution/phase9/THEORY_REVIEW.md": {
+      "bytes": 14693,
+      "sha256": "56eacc85bf299ddcdeb1236255280f3014b031065c2d02eb3c76572308291696"
+    },
+    "empirical_execution/phase9/results/theory_review_final.json": {
+      "bytes": 4673,
+      "sha256": "9b979868ebc12b910c13e683af0a0657f5a2e5d403306d3850e1d227e3fb1f20"
+    }
+  },
+  "proof_assistant_verification": false,
+  "resolved_review_findings": [
+    "Explicit at-most-2^B state alphabet prevents free variable-length framing capacity.",
+    "Conditional retained-state theorem fixes F and universally quantifies over private assignments; it does not infer unchanged entropy under adaptive sign-revealing request policies.",
+    "LaTeX soft reconstruction now has explicit affine expression q_n+(1-2q_n)c.",
+    "LaTeX and Markdown both state 0<=delta<1/2 for substituted high-probability/Fano bounds."
+  ],
+  "retained_boundary_examples": [
+    "Exact binary32 inputs can have a non-dyadic rational ridge coordinate64/49409.",
+    "Large regularization can collapse numerical binary32 coordinates while signed-zero bytes remain distinct.",
+    "A vacuous delta=1 success condition invalidates the unrestricted D=1 block-Fano substitution."
+  ],
+  "review_date": "2026-10-04",
+  "schema": "ccu-phase10-independent-proof-review-1",
+  "scope": "Independent proof and source/state-contract review plus retained bounded algebra; no empirical, privacy, practical-performance, or global-priority conclusion.",
+  "source_bindings": {
+    "empirical_execution/phase10/CODEC.md": {
+      "bytes": 11472,
+      "sha256": "29aacce59369e1b9eea8edd6bc7dece217214ddd1ef521e1747ea93499744d15"
+    },
+    "empirical_execution/phase10/CODEC_REVIEW.md": {
+      "bytes": 8239,
+      "sha256": "5605287126afd7ff1dce67abd60dc67d89047d78b64ccda74b378b8acce53912"
+    },
+    "empirical_execution/phase10/FINITE_WORD_REVIEW.md": {
+      "bytes": 14399,
+      "sha256": "014da1fa3672fe311fe45795d7470d0662e303bceb8c515522c5360d96c3efa1"
+    },
+    "empirical_execution/phase10/FINITE_WORD_THEORY.md": {
+      "bytes": 25507,
+      "sha256": "5a17e0e3d7d37e5c27c5ac37f1898c2df40a18e75ce12df8b2255c9ac4900bfb"
+    },
+    "empirical_execution/phase10/SCORER_TRANSFER.md": {
+      "bytes": 12002,
+      "sha256": "ee9025a29a8071507c0ea331f9f7a06a38e879b1bf1bb7d6058c5701103f7b0a"
+    },
+    "empirical_execution/phase10/check_codec_review.py": {
+      "bytes": 14034,
+      "sha256": "5726eb6f64fbe93f24c3dee2035ce3788796e7cb371e8daf6b5345b6fd760a66"
+    },
+    "empirical_execution/phase10/check_finite_word_codec.py": {
+      "bytes": 18146,
+      "sha256": "41d020e3f94a61407c9051cb69c9c48c52dd0d1e8053192316dd34285ca10ca6"
+    },
+    "empirical_execution/phase10/check_finite_word_review.py": {
+      "bytes": 10284,
+      "sha256": "caa6909ef9ba9835508810cb9eb71ba312936db196d32a5f99b35c324d7b8484"
+    },
+    "empirical_execution/phase10/check_scorer_transfer.py": {
+      "bytes": 9826,
+      "sha256": "4cf580cd0cd4902fcd493946acc57f2bc6226f5c757436befafe96e693c4a635"
+    },
+    "empirical_execution/phase10/finite_word_codec.py": {
+      "bytes": 16833,
+      "sha256": "d3884acc201f80fd3a967db13292f1f1ffbee579bd0c65bf22284ae8877d8456"
+    },
+    "empirical_execution/phase10/finite_word_theory.tex": {
+      "bytes": 16444,
+      "sha256": "c0afedb46c232444bf6b5165ebc492b630fe5255e25d16dde66f5c105d59f6cd"
+    },
+    "empirical_execution/phase10/results/codec_checks_corrected.json": {
+      "bytes": 4702,
+      "sha256": "9c136c58dbb91c48d85e53138f08c7e79c8ce232e93deea2a89a0c7b187d5bf4"
+    },
+    "empirical_execution/phase10/results/codec_independent_final/checks.json": {
+      "bytes": 3483,
+      "sha256": "cd6ac29ab95332920bd05b8d2c61f69a38d101df5ec0d9043d8889f717e53b62"
+    },
+    "empirical_execution/phase10/results/finite_word_review_checks_final.json": {
+      "bytes": 1983,
+      "sha256": "0955b7d3c7392da662a535af9f8b7fed3877b3bce098906fce41c83c2138a618"
+    },
+    "empirical_execution/phase10/results/scorer_transfer_final/checks.json": {
+      "bytes": 9597,
+      "sha256": "ca3652e88bef7aef277cfd75423dcc76901572bd04362ef18fc2bbd5f1c8e535"
+    }
+  },
+  "status": "passed_scoped_mathematical_and_state_contract_review",
+  "total_byte_optimality_proved": false
+}

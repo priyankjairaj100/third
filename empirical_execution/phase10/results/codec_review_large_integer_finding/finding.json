@@ -1,0 +1,19 @@
+{
+  "schema": "ccu-codec-review-finding-1",
+  "evidence_role": "mathematical_input_validation_only",
+  "source_sha256": "7e398da4995c560c9933d3b18f4e4cace3f4d8b338ce59c42de89e51befc04b6",
+  "finding": "Accepted positive rational lambda can exceed Python decimal integer conversion limit during canonical public serialization.",
+  "reproduction": {
+    "b": 1,
+    "D": 1,
+    "m": 2,
+    "k": 4,
+    "lambda": "Fraction(10**5000)",
+    "construction": "succeeded",
+    "initialize_retained": "ValueError: Exceeds the limit (4300 digits) for integer string conversion"
+  },
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "int_max_str_digits": 4300,
+  "remedy_requested": "Use explicit power-of-two integer serialization or validate and document a bounded rational contract; do not change global interpreter limits.",
+  "empirical_benchmark": false
+}

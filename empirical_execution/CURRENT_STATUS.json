@@ -1,7 +1,7 @@
 {
   "date": "2026-10-04",
   "scope": "current status supplement; older STATUS.json describes an earlier run",
-  "stage": "phase9_realizable_ridge_memory_theory_and_broader_preparation_primary_study_unstarted",
+  "stage": "phase10_finite_format_memory_and_canonical_sequential_codec_primary_study_unstarted",
   "all_computation_local": true,
   "synthetic_empirical_data": false,
   "strict_mode_completed_previously": {
@@ -60,7 +60,7 @@
     "primary_threshold_selected": false,
     "primary_quality_gate_passed": false
   },
-  "todo_ledger": "phase9/TODO.json",
+  "todo_ledger": "phase10/TODO.json",
   "all_research_todos_complete": false,
   "primary_semantic_study_started": false,
   "actual_human_ratings": 0,
@@ -579,6 +579,91 @@
       "bound_artifacts": 229,
       "verified_source_references": 530,
       "no_open_concrete_finding_within_scope": true
+    }
+  },
+  "phase10_summary": {
+    "checkpoint": "phase10/CHECKPOINT.md",
+    "remaining_tasks": "phase10/REMAINING_TASKS.md",
+    "theory": "phase10/FINITE_WORD_THEORY.md",
+    "theory_latex": "phase10/finite_word_theory.tex",
+    "fixed_fp32_input_realization": true,
+    "scorer_contract": "frozen ordered FP64 scorer under explicit IEEE assumptions; dimension <= 2^20",
+    "exact_initial_private_bit_minimum": "mD",
+    "exact_conditional_private_bit_minimum": "e(F)D",
+    "bit_capacity_definition": "at most 2^B distinguishable states conditional on public contract and independent public coins",
+    "sequential_codec": "phase10/finite_word_codec.py",
+    "canonical_scope": "immutable authoritative state on the finite-sign family with fixed public universe and decreasing cumulative horizon",
+    "output_contract": "exact rational ridge on stored raw FP32 features; numerical release bridge requires actual certified target error",
+    "public_metadata_padding_output_workspace_separate": true,
+    "total_byte_optimality_claim": false,
+    "natural_encoder_realizability_claim": false,
+    "fixed_test_nlp_loss_claim": false,
+    "physical_erasure_claim": false,
+    "scorer_verification": {
+      "report": "phase10/results/scorer_transfer_final/checks.json",
+      "checks": 85
+    },
+    "independent_algebra": {
+      "report": "phase10/results/finite_word_review_checks_final.json",
+      "assertions": 22,
+      "private_assignments": 256,
+      "normal_equations": 512,
+      "low_budget_queries": 7424,
+      "state_drop_transitions": 39424
+    },
+    "codec_owner": {
+      "report": "phase10/results/codec_checks_corrected.json",
+      "checks": 51,
+      "families": 260,
+      "fresh_graphs_and_heads": 5888,
+      "sequential_transitions": 19780
+    },
+    "novelty": {
+      "audit": "phase10/LITERATURE_FOLLOWUP.md",
+      "sources": "phase10/sources/literature_followup_sources.json",
+      "primary_source_records": 5,
+      "retrieval_routes": 13,
+      "GRACE_author_manuscript_gap_resolved": true,
+      "SSRN_exact_author_code_reviewed": true,
+      "full_paper_gaps_remaining": 2,
+      "exhaustive_novelty_claim": false
+    },
+    "frozen_preservation": {
+      "report": "phase10/results/frozen_preservation.json",
+      "baseline_commit": "9b21ef0475134ce6c9f9c5254a1009715cc57c47",
+      "phases": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "files": 2208,
+      "bytes": 111668883
+    },
+    "primary_jobs_executed": 0,
+    "actual_human_responses": 0,
+    "actual_native_resource_qualification": false,
+    "all_research_tasks_complete": false,
+    "new_original_corpus_or_encoder_assets": false,
+    "codec_independent": {
+      "report": "phase10/results/codec_independent_final/checks.json",
+      "checks": 51,
+      "state_cases": 1560,
+      "normal_equation_coordinates": 20280,
+      "report_sha256": "cd6ac29ab95332920bd05b8d2c61f69a38d101df5ec0d9043d8889f717e53b62"
+    },
+    "independent_proof_review": {
+      "report": "phase10/results/finite_word_review_final.json",
+      "sha256": "ce1b08f9fadaef80bc8a2dc1a5ed17e39c13a03aa250a2220b7807879239713b",
+      "no_open_findings_within_scope": true
+    },
+    "independent_codec_review": {
+      "report": "phase10/results/codec_review_final.json",
+      "sha256": "a2af092e31d767ebe992c4e63389a1bba37a4e73566d34a40fd67b45fa1fc1d1",
+      "no_open_findings_within_scope": true
     }
   }
 }

@@ -1,0 +1,13 @@
+{
+  "schema": "ccu-checker-wrapper-failure-1",
+  "status": "report_serialization_failed",
+  "exception_type": "ValueError",
+  "reason": "Relative snapshot path was passed to Path.relative_to against an absolute ROOT; no check result was persisted.",
+  "algorithm_check_outcome": "unavailable_from_this_attempt",
+  "source_snapshot": "empirical_execution/phase10/results/codec_attempt1_sources",
+  "source_sha256": {
+    "finite_word_codec.py": "7e398da4995c560c9933d3b18f4e4cace3f4d8b338ce59c42de89e51befc04b6",
+    "check_finite_word_codec.py": "431fe51ed1ad31b7b88c214e56eb4ee7b0db8b5867d93b776b0add2e8d3538f6"
+  },
+  "historical_outputs_rewritten": false
+}

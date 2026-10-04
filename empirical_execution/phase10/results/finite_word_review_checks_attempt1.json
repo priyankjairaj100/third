@@ -1,0 +1,40 @@
+{
+  "assertions_passed": 19,
+  "case_counts": {
+    "admitted_dimension_pairs": 100,
+    "binary32_scalar_roundtrips": 600,
+    "conditional_state_alphabets": 64,
+    "full_private_sign_assignments": 256,
+    "hard_pair_queries": 512,
+    "independent_exact_normal_equations": 512,
+    "low_budget_queries": 7424,
+    "private_state_drop_transition_checks": 39424
+  },
+  "checker_sha256": "b324fd2ecc6033097a195406690c168707006211f2f60945951e7048c70bf680",
+  "checker_snapshot": "empirical_execution/phase10/results/finite_word_review_checks_attempt1_checker.py",
+  "checks": [
+    "all_admitted_dyadic_coordinate_types_binary32_exact",
+    "anchor_blocker_edge_margin",
+    "common_private_nonedge",
+    "common_candidate_edge_margin",
+    "own_private_candidate_edge_margin",
+    "wrong_private_candidate_nonedge",
+    "private_private_nonedge",
+    "candidate_candidate_nonedge_even_with_identical_private_signs",
+    "graph_independent_of_all_private_signs",
+    "hard_probe_families_identify_every_private_bit",
+    "exact_heads_satisfy_actual_normal_equations",
+    "all_low_budget_queries_have_zero_cross_moment",
+    "every_admitting_query_is_an_isolated_hard_pair",
+    "eligibility_simplification_and_monotone_private_drop",
+    "conditional_private_state_cardinalities_exact",
+    "posterior_bit_variance_has_correct_dimension_normalization",
+    "rounded_numerical_vectors_can_collapse",
+    "signed_zero_byte_targets_do_not_collapse",
+    "public_lambda_in_release_counterexample_binary64_exact"
+  ],
+  "empirical_benchmark": false,
+  "schema": "ccu-phase10-independent-algebra-checks-1",
+  "scope": "bounded exact algebra and scalar IEEE-format checks only; no entropy or novelty proof by enumeration",
+  "status": "passed"
+}
