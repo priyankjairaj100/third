@@ -1,0 +1,160 @@
+{
+  "schema": "phase6-checkpoint-archives-1",
+  "all_bytes_verified": true,
+  "archive_count": 19,
+  "files_preserved": 16039,
+  "entries": [
+    {
+      "directory": "dispatch_candidate1",
+      "archive": "dispatch_candidate1.tar.gz",
+      "archive_bytes": 2423373,
+      "archive_sha256": "f5f19aea5f678fdb779cddd46e4eeb89bd5bc1ca6e480e0effd417b007471595",
+      "file_count": 5107,
+      "uncompressed_file_bytes": 22595658
+    },
+    {
+      "directory": "dispatch_moment_gate_attempt1",
+      "archive": "dispatch_moment_gate_attempt1.tar.gz",
+      "archive_bytes": 3154686,
+      "archive_sha256": "c67d6fe2cc752ae6b8c6b659f71aa6d43293c351aec43d906a549edb2b0192fd",
+      "file_count": 884,
+      "uncompressed_file_bytes": 23308187
+    },
+    {
+      "directory": "dispatch_release_v3",
+      "archive": "dispatch_release_v3.tar.gz",
+      "archive_bytes": 3467774,
+      "archive_sha256": "c85eeaf0e8c3216f975666e8db6aa3b1d53b2ee8c90eed2076b4cfb1090f35f4",
+      "file_count": 949,
+      "uncompressed_file_bytes": 26822642
+    },
+    {
+      "directory": "dispatch_state_gate_attempt1",
+      "archive": "dispatch_state_gate_attempt1.tar.gz",
+      "archive_bytes": 2992977,
+      "archive_sha256": "de908f5a95e8be17e9f3af9b0b051ae5bffd9bc21fb8958d3f960927027e0fd0",
+      "file_count": 861,
+      "uncompressed_file_bytes": 15819386
+    },
+    {
+      "directory": "dyadic_convex_release",
+      "archive": "dyadic_convex_release.tar.gz",
+      "archive_bytes": 565351,
+      "archive_sha256": "8cb7acaf2551f55eaf3b608e972ae5c27da0e8f6b7e3322e343c394c3395801d",
+      "file_count": 27,
+      "uncompressed_file_bytes": 4669591
+    },
+    {
+      "directory": "dyadic_dense_release",
+      "archive": "dyadic_dense_release.tar.gz",
+      "archive_bytes": 2761320,
+      "archive_sha256": "4cc4abb0716e1775320860ddc336698677736d6fc7c93f32b6550fd4e0f3ae63",
+      "file_count": 16,
+      "uncompressed_file_bytes": 18792761
+    },
+    {
+      "directory": "dyadic_dense_scalar_release",
+      "archive": "dyadic_dense_scalar_release.tar.gz",
+      "archive_bytes": 636720,
+      "archive_sha256": "2c48eead590ec1049bc74d64eebc53c7a19ffda1abf86831adcc1f2b9d10d7e9",
+      "file_count": 16,
+      "uncompressed_file_bytes": 2953020
+    },
+    {
+      "directory": "extensions_candidate1",
+      "archive": "extensions_candidate1.tar.gz",
+      "archive_bytes": 1404736,
+      "archive_sha256": "ae607aa140a297f3163af3931ea896ea45ec7ddef9de1f95cf0dcc4659159b8a",
+      "file_count": 433,
+      "uncompressed_file_bytes": 8511580
+    },
+    {
+      "directory": "extensions_candidate2",
+      "archive": "extensions_candidate2.tar.gz",
+      "archive_bytes": 1509091,
+      "archive_sha256": "7fe78413fccc83eb5955e3ce5c64d61591591f0ca7fe7cefa1e6a7ce1fa7e524",
+      "file_count": 461,
+      "uncompressed_file_bytes": 10423532
+    },
+    {
+      "directory": "extensions_final",
+      "archive": "extensions_final.tar.gz",
+      "archive_bytes": 1571913,
+      "archive_sha256": "832a63c4c20285729d13a598da0f2c3993faa635e3c6f44040f15f8dc73f9945",
+      "file_count": 515,
+      "uncompressed_file_bytes": 11139012
+    },
+    {
+      "directory": "extensions_release_v2",
+      "archive": "extensions_release_v2.tar.gz",
+      "archive_bytes": 1735040,
+      "archive_sha256": "cd53fe8f3ddfc07b28fb8e1c2c3609c66d48163524ccfaef9e66832c0e802e4e",
+      "file_count": 559,
+      "uncompressed_file_bytes": 11864908
+    },
+    {
+      "directory": "extensions_release_v3",
+      "archive": "extensions_release_v3.tar.gz",
+      "archive_bytes": 2254382,
+      "archive_sha256": "3e8b9da3b5c1eaccdfe190c73077b1e8ad598c6a933c00d89de182839bdf226a",
+      "file_count": 691,
+      "uncompressed_file_bytes": 14393202
+    },
+    {
+      "directory": "state_audit_development_attempt1",
+      "archive": "state_audit_development_attempt1.tar.gz",
+      "archive_bytes": 1564884,
+      "archive_sha256": "a5020f7892821fc90ebeeb7a9cbca985e9f217ce9fc8e033986d01e42b98062e",
+      "file_count": 328,
+      "uncompressed_file_bytes": 8452236
+    },
+    {
+      "directory": "state_audit_release",
+      "archive": "state_audit_release.tar.gz",
+      "archive_bytes": 2142140,
+      "archive_sha256": "0651ab2433f8e2e9c297d4ed9cb3c09bf5013cce7c98b3680e3d6495f8a1aaeb",
+      "file_count": 345,
+      "uncompressed_file_bytes": 20330278
+    },
+    {
+      "directory": "state_audit_release_v2",
+      "archive": "state_audit_release_v2.tar.gz",
+      "archive_bytes": 2286670,
+      "archive_sha256": "00a58579c4dd33334de43e52dc098a2c79bde094e7e86e59956eee1813a88ed1",
+      "file_count": 387,
+      "uncompressed_file_bytes": 20978225
+    },
+    {
+      "directory": "state_audit_release_v3",
+      "archive": "state_audit_release_v3.tar.gz",
+      "archive_bytes": 2282835,
+      "archive_sha256": "6eccaf3a5a4a780edb4c6d08f9a9a8ee5f22f5a43f23525f8a85076a306bda80",
+      "file_count": 387,
+      "uncompressed_file_bytes": 20874693
+    },
+    {
+      "directory": "worker_engineering",
+      "archive": "worker_engineering.tar.gz",
+      "archive_bytes": 3871243,
+      "archive_sha256": "89bed8fe06c5cd373070f7179f897c3fde00137a0920b675ec77a5907b913315",
+      "file_count": 931,
+      "uncompressed_file_bytes": 17181767
+    },
+    {
+      "directory": "worker_engineering_final",
+      "archive": "worker_engineering_final.tar.gz",
+      "archive_bytes": 6647078,
+      "archive_sha256": "f8c45cc24dd6a3a53496422bfea4bbc427ba6569de97d4958e80ef383569befc",
+      "file_count": 1571,
+      "uncompressed_file_bytes": 29496461
+    },
+    {
+      "directory": "worker_engineering_release_v2",
+      "archive": "worker_engineering_release_v2.tar.gz",
+      "archive_bytes": 6612793,
+      "archive_sha256": "d84499edb99afa0cb2eb76955ebfe92430e766e8e358929beac5730baa13f7aa",
+      "file_count": 1571,
+      "uncompressed_file_bytes": 29358792
+    }
+  ]
+}

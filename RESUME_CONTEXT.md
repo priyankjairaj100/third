@@ -1,13 +1,15 @@
 # Resume this research project
 
-Last substantive checkpoint: **4 October 2026, Phase 5 method/analysis integrations and isolated natural-text engineering matrix completed; primary semantic evidence and real-input acceptance remain outstanding**.
+Last substantive checkpoint: **4 October 2026, Phase 6 checked and paused at the user’s request**.
+The primary semantic study remains unstarted.
+Read the Phase 6 ledger for exact evidence and remaining input requirements.
 Repository: **https://github.com/priyankjairaj100/third**.
 
 This is a project handoff reconstructed from the available conversation and the saved research files. It is not a verbatim export of all chats. It deliberately contains only this project's context.
 
 ## Paste this into a new chat
 
-> Continue the ACL 2027 counterfactual semantic-curation unlearning project at https://github.com/priyankjairaj100/third. Read README.md, RESUME_CONTEXT.md, THEORY_AND_RESULTS_HANDOFF.md, empirical_execution/CURRENT_STATUS.json and empirical_execution/phase5/COMPLETION_LEDGER.md and phase5/README.md, then inspect the relevant code and result files before acting. Preserve the distinction between exact theory, natural-preview engineering evidence, and the unstarted primary semantic study. All work must be carried out in this workspace; do not start paid or external compute without my instruction. Continue the highest-value executable work, keep me informed, and save all project progress back to this repository with an updated handoff. Do not fabricate missing corpus provenance, semantic embeddings, or human ratings.
+> Continue the ACL 2027 counterfactual semantic-curation unlearning project at https://github.com/priyankjairaj100/third. Read README.md, RESUME_CONTEXT.md, THEORY_AND_RESULTS_HANDOFF.md, empirical_execution/CURRENT_STATUS.json and empirical_execution/phase6/COMPLETION_LEDGER.md and phase6/README.md, then inspect the relevant code and result files before acting. Preserve the distinction between exact theory, natural-preview engineering evidence, and the unstarted primary semantic study. All work must be carried out in this workspace; do not start paid or external compute without my instruction. Continue the highest-value executable work, keep me informed, and save all project progress back to this repository with an updated handoff. Do not fabricate missing corpus provenance, semantic embeddings, or human ratings.
 
 ## User objective and preferences
 
@@ -29,6 +31,23 @@ It need not equal deleting F from the previously selected set and updating that 
 
 The main fixed-curator contract eventually became **global earlier-raw-neighbor suppression** with frozen representations and priorities. It is not greedy suppression against selected neighbors and not connected-component representative selection. Full corpus-fitted SemDeDup refitting is a separate experimental branch. The source theory and handoff specify the finite deletion horizon, output/access model, eligibility and memory bounds.
 
+## Latest continuation rule
+
+Phase 6 supersedes the software gaps listed in earlier sections.
+Do not restart those completed implementations.
+Read its ledger, acceptance documentation, and source-bound review first.
+Use the Phase 6 README restoration command before auditing archived result paths.
+The independent review passed 244 checks; dispatcher and extension integration passed 31 and 48 checks.
+No background research jobs remain.
+Start the next chat with input intake, not another repetition of completed lexical checks.
+Missing original assets and human judgments remain genuine blockers.
+Do not repeat lexical checks as a substitute for collecting that evidence.
+
+The latest user instruction is to save all current work and resume the remaining work in another chat.
+Research execution is paused. No background work should continue.
+The preceding instruction authorized completion with maximum care.
+It does not authorize invented provenance, human ratings, paid compute, or contacting people.
+
 ## Where we actually are
 
 | Stage | Status and scope |
@@ -42,6 +61,7 @@ The main fixed-curator contract eventually became **global earlier-raw-neighbor 
 | Phase 4 core | Original-schema adapters, local encoding interface, task choices, request generation, six-method engineering comparison and measurement harness implemented; authentic-input acceptance still pending |
 | Phase 4 extensions | News calendar/encoding bridge, per-encoder calibration and blank admission pack implemented; fractional-label logistic pilot/certificate completed in its stated single-output scope; consult final audits and `phase4/TODO.json` |
 | Phase 5 | Compact payload/all summary methods, enforced no-reaccess, versioned numerical gate, full-refit adapter, convex/replication/boundary/human/task/statistical integrations and complete prospective registry; see latest completion ledger |
+| Phase 6 | All 21 recipe obligations resolved prospectively; 21,332 jobs registered; dispatcher, extensions, acceptance, numerical and state audits passed. Independent review passed 244 checks. See the Phase 6 ledger. |
 | Primary semantic study | **Not started.** No E5/MPNet embeddings, no original source-rich corpus snapshot and no completed human ratings |
 | Paper-ready confirmatory evidence | **Absent.** Do not turn development checks into semantic or source-withdrawal claims |
 
@@ -53,7 +73,7 @@ The main fixed-curator contract eventually became **global earlier-raw-neighbor 
 4. `empirical_execution/canonical_theory_addendum.tex`, `certified_ridge_contract.txt`, `exact_chart_algorithm_notes.txt`, and `README_strict_mode.txt` describe the strongest implemented numerical guarantee.
 5. `empirical_execution/memory_theory_addendum.tex` and `README_memory_repair.txt` qualify the memory story. Low coordinate dimension is not total-byte optimality.
 6. Phase-specific `independent_review.txt` and JSON audits establish what was independently checked versus implementation self-checks.
-7. `empirical_execution/phase5/README.md` and `COMPLETION_LEDGER.md` are the current implementation/dependency inventory. Phase 4 README/TODO are historical. `results/execution_engineering_final/` is the authoritative Phase 4 core replay. Earlier `execution_engineering/` uses a superseded request seed policy; preserve it as history and never pool the two.
+7. `empirical_execution/phase6/README.md` and `COMPLETION_LEDGER.md` are the current implementation/dependency inventory. Phase 4 README/TODO are historical. `results/execution_engineering_final/` is the authoritative Phase 4 core replay. Earlier `execution_engineering/` uses a superseded request seed policy; preserve it as history and never pool the two.
 
 The newest complete user-facing report is `output/pdf/counterfactual_curation_empirical_preparation.pdf`. Previous reports and ZIPs are retained as historical deliverables, not overwritten.
 

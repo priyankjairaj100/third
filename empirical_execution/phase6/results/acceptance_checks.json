@@ -1,0 +1,373 @@
+{
+  "actual_human_ratings": 0,
+  "actual_transformer_cache_replayed": false,
+  "checks": 85,
+  "code_bindings": {
+    "phase3/panels.py": "bd2409958ac9a9e27faf463b44b2f839260a3195c7cde32fb3bfb76aeb14a04b",
+    "phase3/run_preparation.py": "0408e0be569d7cd7c3fa252a01e651b542de551c3073b54a108d8e84d670373a",
+    "phase4/adapters.py": "7171b59802dff219636a08b53f13d8b3bdbb7bc400f5712f041280e61e8d6f0d",
+    "phase4/calibrate_cache.py": "f94f884f6bcb250d489164e67f5b8de9580d0dcb347be9d911f32b0f4d3de5e4",
+    "phase4/embeddings.py": "bb1af9a6583a90372f7641f406afdb418017797cc8d86ee67f117f215c65d2c1",
+    "phase4/model_selection.py": "b9a73b9cc0d7a2a0531c38e7a606290df52845e3002a6d47c21cc6c3fb459434",
+    "phase4/news_calendar.py": "d888fa2364e672f49e99084a33490d10274cdb2be8be2e4e624a2b2b3ca8c944",
+    "phase5/replication.py": "5ef565958d1744f822a4003604b07bc4a15b13dc002bdc550433f01f215ac7e7",
+    "phase5/replication_encoding.py": "557d6013b9759a80c5d0557faab76a9a553dc4610b11277714ceb33d85db6857",
+    "phase6/acceptance.py": "c324b08f3aa64cf06fa394743edea0a52209928dc4457d15f72cac5f135a2d8f"
+  },
+  "natural_input_sha256": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9",
+  "original_source_rich_archive_accepted": false,
+  "outcomes": [
+    {
+      "check": "all_100_natural_rows_replayed",
+      "passed": true
+    },
+    {
+      "check": "no_original_sources_invented",
+      "passed": true
+    },
+    {
+      "check": "no_duplicate_links_invented",
+      "passed": true
+    },
+    {
+      "check": "original_input_digest_bound",
+      "passed": true
+    },
+    {
+      "check": "original_fractional_targets_preserved",
+      "passed": true
+    },
+    {
+      "check": "preview_cannot_activate_primary",
+      "passed": true
+    },
+    {
+      "check": "preview_has_explicit_blocker",
+      "passed": true
+    },
+    {
+      "check": "preview_records_successful_byte_replay",
+      "passed": true
+    },
+    {
+      "check": "preview_binding_present",
+      "passed": true
+    },
+    {
+      "check": "no_corpus_authenticity_assertion",
+      "passed": true
+    },
+    {
+      "check": "no_human_authenticity_assertion",
+      "passed": true
+    },
+    {
+      "check": "complete_fixed_preparation_replayed",
+      "passed": true
+    },
+    {
+      "check": "source_hash_partitions_recomputed",
+      "passed": true
+    },
+    {
+      "check": "genuine_source_count_remains_zero",
+      "passed": true
+    },
+    {
+      "check": "registered_target_civil_comments_10000",
+      "passed": true
+    },
+    {
+      "check": "registered_target_civil_comments_25000",
+      "passed": true
+    },
+    {
+      "check": "registered_target_civil_comments_100000",
+      "passed": true
+    },
+    {
+      "check": "registered_target_civil_comments_200000",
+      "passed": true
+    },
+    {
+      "check": "registered_target_askubuntu_10000",
+      "passed": true
+    },
+    {
+      "check": "registered_target_askubuntu_25000",
+      "passed": true
+    },
+    {
+      "check": "registered_target_askubuntu_100000",
+      "passed": true
+    },
+    {
+      "check": "registered_target_askubuntu_200000",
+      "passed": true
+    },
+    {
+      "check": "registered_target_cc_news_10000",
+      "passed": true
+    },
+    {
+      "check": "registered_target_cc_news_25000",
+      "passed": true
+    },
+    {
+      "check": "registered_target_cc_news_100000",
+      "passed": true
+    },
+    {
+      "check": "registered_target_cc_news_200000",
+      "passed": true
+    },
+    {
+      "check": "registered_target_english_stackexchange_10000",
+      "passed": true
+    },
+    {
+      "check": "registered_target_english_stackexchange_25000",
+      "passed": true
+    },
+    {
+      "check": "registered_target_english_stackexchange_100000",
+      "passed": true
+    },
+    {
+      "check": "registered_target_english_stackexchange_200000",
+      "passed": true
+    },
+    {
+      "check": "replication_pool_is_explicit",
+      "passed": true
+    },
+    {
+      "check": "calendar_uses_complete_window",
+      "passed": true
+    },
+    {
+      "check": "tiny_registered_target_refused",
+      "passed": true
+    },
+    {
+      "check": "calendar_on_labeled_corpus_refused",
+      "passed": true
+    },
+    {
+      "check": "wcep_source_panel_refused",
+      "passed": true
+    },
+    {
+      "check": "wcep_registered_target",
+      "passed": true
+    },
+    {
+      "check": "refit_excludes_largest_primary_and_second_panel",
+      "passed": true
+    },
+    {
+      "check": "natural_preview_refit_shortfall_preserved",
+      "passed": true
+    },
+    {
+      "check": "refit_whole_source_boundary_software",
+      "passed": true
+    },
+    {
+      "check": "refit_positive_source_disjoint_software",
+      "passed": true
+    },
+    {
+      "check": "refit_source_units_complete_software",
+      "passed": true
+    },
+    {
+      "check": "independent_array_dictionary_loads_compare_safely",
+      "passed": true
+    },
+    {
+      "check": "positive_shared_stack_output_binding_software",
+      "passed": true
+    },
+    {
+      "check": "different_learner_vocabulary_refused",
+      "passed": true
+    },
+    {
+      "check": "different_lambda_vocabulary_refused",
+      "passed": true
+    },
+    {
+      "check": "different_tag_decision_lock_refused",
+      "passed": true
+    },
+    {
+      "check": "different_projected_vocabulary_refused",
+      "passed": true
+    },
+    {
+      "check": "different_logistic_vocabulary_refused",
+      "passed": true
+    },
+    {
+      "check": "source_imputation_refused",
+      "passed": true
+    },
+    {
+      "check": "partition_reassignment_refused",
+      "passed": true
+    },
+    {
+      "check": "changed_labels_refused",
+      "passed": true
+    },
+    {
+      "check": "schema_relabel_refused",
+      "passed": true
+    },
+    {
+      "check": "preview_cannot_parse_as_original",
+      "passed": true
+    },
+    {
+      "check": "missing_native_metadata_reported",
+      "passed": true
+    },
+    {
+      "check": "missing_source_spec_fails_closed",
+      "passed": true
+    },
+    {
+      "check": "missing_actual_original_bytes_refused",
+      "passed": true
+    },
+    {
+      "check": "absent_real_cache_refused",
+      "passed": true
+    },
+    {
+      "check": "failed_cache_refused",
+      "passed": true
+    },
+    {
+      "check": "encoder_fp32_drift_refused",
+      "passed": true
+    },
+    {
+      "check": "encoder_dtype_drift_refused",
+      "passed": true
+    },
+    {
+      "check": "approval_boolean_not_authenticated",
+      "passed": true
+    },
+    {
+      "check": "changed_external_evidence_refused",
+      "passed": true
+    },
+    {
+      "check": "source_input_unchanged_after_checks",
+      "passed": true
+    },
+    {
+      "check": "positive_full_row_replay_with_explicit_mock_backend",
+      "passed": true
+    },
+    {
+      "check": "positive_complete_token_summary_replay_with_mock",
+      "passed": true
+    },
+    {
+      "check": "false_summary_count_refused_with_mock",
+      "passed": true
+    },
+    {
+      "check": "one_cached_coordinate_refused_with_mock",
+      "passed": true
+    },
+    {
+      "check": "mock_fixture_refused_by_real_production_loader",
+      "passed": true
+    },
+    {
+      "check": "positive_machine_control_path_with_explicit_dependency_mocks",
+      "passed": true
+    },
+    {
+      "check": "machine_control_path_does_not_authorize_execution",
+      "passed": true
+    },
+    {
+      "check": "machine_control_path_preserves_external_trust_boundary",
+      "passed": true
+    },
+    {
+      "check": "heldout_source_kinds_recomputed_from_original_rows",
+      "passed": true
+    },
+    {
+      "check": "wrong_evaluation_source_refused_at_acceptance",
+      "passed": true
+    },
+    {
+      "check": "caller_cannot_lower_registered_target",
+      "passed": true
+    },
+    {
+      "check": "changed_original_evaluation_target_refused",
+      "passed": true
+    },
+    {
+      "check": "unknown_source_promotion_refused_at_acceptance",
+      "passed": true
+    },
+    {
+      "check": "changed_training_text_refused_at_acceptance",
+      "passed": true
+    },
+    {
+      "check": "changed_native_training_date_refused_at_acceptance",
+      "passed": true
+    },
+    {
+      "check": "positive_prethreshold_control_path_with_explicit_mocks",
+      "passed": true
+    },
+    {
+      "check": "prethreshold_route_requires_no_response_or_lock",
+      "passed": true
+    },
+    {
+      "check": "prethreshold_route_does_not_authorize_primary",
+      "passed": true
+    },
+    {
+      "check": "test_record_refused_by_prethreshold_route",
+      "passed": true
+    },
+    {
+      "check": "altered_calibration_feature_refused_before_threshold",
+      "passed": true
+    },
+    {
+      "check": "wcep_cannot_select_own_threshold",
+      "passed": true
+    },
+    {
+      "check": "actual_preview_cannot_supply_primary_calibration",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "positive_machine_path_scope": "Explicit dependency mocks test control flow only; actual parser/cache/panel/human gates are not discharged",
+  "positive_mock_backend_scope": "Temporary software fixtures only; invalid production manifests; no primary acceptance artifact retained",
+  "primary_execution_allowed": false,
+  "schema": "ccu-phase6-source-acceptance-checks-1",
+  "scope": "software_and_reused_natural_Civil100_preview_only",
+  "untested_actual_backend_paths": [
+    "full_local_E5_MPNet_inference",
+    "authentic_News_calendar",
+    "authentic_Stack_links",
+    "authentic_WCEP_release"
+  ]
+}

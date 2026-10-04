@@ -26,3 +26,30 @@ empirical_execution/data/cc_news_preview_*_raw.json
 .env.*
 *.pem
 *.key
+
+# Phase 6 worker files are preserved in verified lossless archives.
+/empirical_execution/phase6/results/worker_engineering/
+/empirical_execution/phase6/results/worker_engineering_release_v2/
+/empirical_execution/phase6/results/worker_engineering_final/
+
+# Historical dispatcher candidate is preserved byte-exactly in its archive.
+/empirical_execution/phase6/results/dispatch_candidate1/
+
+# Phase 6 complete checkpoint archives preserve every member of these directories.
+/empirical_execution/phase6/results/dispatch_moment_gate_attempt1/
+/empirical_execution/phase6/results/dispatch_release_v3/
+/empirical_execution/phase6/results/dispatch_state_gate_attempt1/
+/empirical_execution/phase6/results/extensions_candidate1/
+/empirical_execution/phase6/results/extensions_candidate2/
+/empirical_execution/phase6/results/extensions_final/
+/empirical_execution/phase6/results/extensions_release_v2/
+/empirical_execution/phase6/results/extensions_release_v3/
+/empirical_execution/phase6/results/state_audit_development_attempt1/
+/empirical_execution/phase6/results/state_audit_release/
+/empirical_execution/phase6/results/state_audit_release_v2/
+/empirical_execution/phase6/results/state_audit_release_v3/
+
+# Exact verifier raw comparisons remain complete inside their checkpoint archives.
+/empirical_execution/phase6/results/dyadic_convex_release/
+/empirical_execution/phase6/results/dyadic_dense_release/
+/empirical_execution/phase6/results/dyadic_dense_scalar_release/

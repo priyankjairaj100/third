@@ -1,0 +1,1948 @@
+{
+  "schema": "ccu-phase6-result-archive-1",
+  "directory": "state_audit_release_v3",
+  "archive": "state_audit_release_v3.tar.gz",
+  "archive_bytes": 2282835,
+  "archive_sha256": "6eccaf3a5a4a780edb4c6d08f9a9a8ee5f22f5a43f23525f8a85076a306bda80",
+  "file_count": 387,
+  "uncompressed_file_bytes": 20874693,
+  "files": [
+    {
+      "path": "state_audit_release_v3/audit_B-A/audit_progress.json",
+      "bytes": 8893,
+      "sha256": "3fb1b91dfbdb118d24af328ac17ed893fb51e0812c1b58f4f5fe3c787e0c5038"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-A/audit_service/construction/construct_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-A/audit_service/construction/construct_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-A/audit_service/construction/construction_report.json",
+      "bytes": 122871,
+      "sha256": "8dd5c841df3802953e3392b85f409f233a7d4d338dec7b4e725e139a79975e62"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-A/audit_service/construction/initial_head.npy",
+      "bytes": 640,
+      "sha256": "a58841b14b245ebba859df255f15ca60afa0af37e2a2d9d365d8434157946548"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-A/audit_service/construction/state.npz",
+      "bytes": 82296,
+      "sha256": "1395eefb88be599db132e152ffd8c1186982129e40be8cd23cf17124f5331df7"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-A/audit_service/construction.json",
+      "bytes": 1066,
+      "sha256": "d4987882f2634533376ee288115822ed3969c4d12b919ba3342be0151dbb0ff6"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-A/audit_service/forbidden_probe.txt",
+      "bytes": 26,
+      "sha256": "4eedab98617d611c67819dc147fce46a2a5b5bf5faa50717a5ea2a36f6e1840f"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-A/audit_service/persistence_receipt.json",
+      "bytes": 226,
+      "sha256": "e210860c9c5c47d509c8579e55a057ace8382529a7950f911eff7f98d4d41e33"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-A/audit_service/prospective_configuration.json",
+      "bytes": 13823,
+      "sha256": "d3422721d37b20f44c4060670435a37d248cc24f0c334e88931edcc5a02fa257"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-A/audit_service/repair/head_0000.npy",
+      "bytes": 640,
+      "sha256": "4fa2f48662a84a85ed7fea456f143ff53f734a12156e094b72d8f111bfbb113a"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-A/audit_service/repair/head_0001.npy",
+      "bytes": 640,
+      "sha256": "3153c72bfc9cdb9fdb4319286029b89e8d69c1fed14b20fb2bbe8777870338eb"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-A/audit_service/repair/head_0002.npy",
+      "bytes": 640,
+      "sha256": "3153c72bfc9cdb9fdb4319286029b89e8d69c1fed14b20fb2bbe8777870338eb"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-A/audit_service/repair/head_0003.npy",
+      "bytes": 640,
+      "sha256": "76b8850e4f127a8e955b8717dd4e1a69b0ba0ef32c6023709b6f921413ed530f"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-A/audit_service/repair/numerical_failure.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-A/audit_service/repair/repair.json",
+      "bytes": 1330,
+      "sha256": "414e5158825c63c11c5b766f792ce77e82d5d0e80264917e7018f6f59f79665f"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-A/audit_service/repair/repair_report.json",
+      "bytes": 172940,
+      "sha256": "1bba7e7b0ccf820a651ff9e38e6a947367649dbf38daa14d9ca71fbc9964645c"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-A/audit_service/repair/repair_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-A/audit_service/repair/repair_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-A/audit_service/repair/state.npz",
+      "bytes": 82297,
+      "sha256": "e6e7f4b81844b6f6094f4873fe34ec5ad55fbe6938d60bc465674748f0161d8b"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-A/audit_service/service_report.json",
+      "bytes": 32775,
+      "sha256": "6ce992a4c89537a819607b5e8c187fe6f88ab5285844b9a5424ce89acd2a99d8"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-A/state_audit.json",
+      "bytes": 9735,
+      "sha256": "c0a29eabbc2995b94d5c6cabeb56bc4746c05e05e43a0f12279430cdac84635a"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-E/audit_progress.json",
+      "bytes": 8891,
+      "sha256": "a43b96058f36b8af7c1c4ae1c54bdbc80bdbce14a35273aa4d7030688396640c"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-E/audit_service/construction/construct_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-E/audit_service/construction/construct_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-E/audit_service/construction/construction_report.json",
+      "bytes": 122851,
+      "sha256": "8b257cb6cea51f16b7f2dea1ba584fd0526d0c57165db7b5f1bd0153f69fc7bb"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-E/audit_service/construction/initial_head.npy",
+      "bytes": 640,
+      "sha256": "a58841b14b245ebba859df255f15ca60afa0af37e2a2d9d365d8434157946548"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-E/audit_service/construction/state.npz",
+      "bytes": 74151,
+      "sha256": "81f771d02d0d7e562df35f58a03ceafb81be98cd7010fc9e4c45d4ba3983edf1"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-E/audit_service/construction.json",
+      "bytes": 1066,
+      "sha256": "dcc9a1185feb5b140d3764cc8ca11677cbef2a401eb307d386845f1c841b5adc"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-E/audit_service/forbidden_probe.txt",
+      "bytes": 26,
+      "sha256": "4eedab98617d611c67819dc147fce46a2a5b5bf5faa50717a5ea2a36f6e1840f"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-E/audit_service/persistence_receipt.json",
+      "bytes": 226,
+      "sha256": "c4bee766982ea465c8290f78d1f22de793cf01a5c98c3588ce3fd888fe4b3acf"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-E/audit_service/prospective_configuration.json",
+      "bytes": 13823,
+      "sha256": "330d02ba3527dc2146bcf475ccdad28b21285171cbf0549c2359448f4a69df9c"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-E/audit_service/repair/head_0000.npy",
+      "bytes": 640,
+      "sha256": "4fa2f48662a84a85ed7fea456f143ff53f734a12156e094b72d8f111bfbb113a"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-E/audit_service/repair/head_0001.npy",
+      "bytes": 640,
+      "sha256": "3153c72bfc9cdb9fdb4319286029b89e8d69c1fed14b20fb2bbe8777870338eb"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-E/audit_service/repair/head_0002.npy",
+      "bytes": 640,
+      "sha256": "3153c72bfc9cdb9fdb4319286029b89e8d69c1fed14b20fb2bbe8777870338eb"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-E/audit_service/repair/head_0003.npy",
+      "bytes": 640,
+      "sha256": "76b8850e4f127a8e955b8717dd4e1a69b0ba0ef32c6023709b6f921413ed530f"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-E/audit_service/repair/numerical_failure.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-E/audit_service/repair/repair.json",
+      "bytes": 1330,
+      "sha256": "993685aa04986f76d3917789465e3d57329f1e8e3d48a88f34553c457eac5867"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-E/audit_service/repair/repair_report.json",
+      "bytes": 172844,
+      "sha256": "c7a4ba0910349e0293f716f1cec2001e1de79e442ef5ca8e2f226407da7cb8a7"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-E/audit_service/repair/repair_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-E/audit_service/repair/repair_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-E/audit_service/repair/state.npz",
+      "bytes": 66246,
+      "sha256": "1c247d39096c9a561cc68c74b270bf0d5a110dcd9fa7ba3a4449d36e1040dc5b"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-E/audit_service/service_report.json",
+      "bytes": 25546,
+      "sha256": "d21cd9d0592e62cfb44298c15757c007387956065eeca5a87965006fa7860fa2"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-E/state_audit.json",
+      "bytes": 9733,
+      "sha256": "c907bbd26b20a3e556ee706218ff16bf453cd93f3239adc20edaa5d8c596edf5"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-F/audit_progress.json",
+      "bytes": 8575,
+      "sha256": "747f60efc7eae21f3ee9c5188c519a64f86aab943f7717c0e2ab9e4336dcf849"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-F/audit_service/construction/construct_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-F/audit_service/construction/construct_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-F/audit_service/construction/construction_report.json",
+      "bytes": 119227,
+      "sha256": "418153662476c8a1cdf8b6a624bb65e4d6d6e8e7b3073e3192f58304f1510257"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-F/audit_service/construction/initial_head.npy",
+      "bytes": 640,
+      "sha256": "a58841b14b245ebba859df255f15ca60afa0af37e2a2d9d365d8434157946548"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-F/audit_service/construction/state.npz",
+      "bytes": 71166,
+      "sha256": "8bf2576b386a0638778a4b04ec2629f7218f56ba88055ccc015d997d89b0a739"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-F/audit_service/construction.json",
+      "bytes": 1066,
+      "sha256": "be3bd2f84876626adc832e8911f471fdcc3c1e0618965473d5b5bbb7f427d6c6"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-F/audit_service/forbidden_probe.txt",
+      "bytes": 26,
+      "sha256": "4eedab98617d611c67819dc147fce46a2a5b5bf5faa50717a5ea2a36f6e1840f"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-F/audit_service/persistence_receipt.json",
+      "bytes": 226,
+      "sha256": "f265b1ddb71eddb61eac182811d10795057589ffcd93db58be4ddcf3fbdf6756"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-F/audit_service/prospective_configuration.json",
+      "bytes": 13823,
+      "sha256": "393c8dca330bb79a1ddb049c71f04d1feb5db4f8ad0a92574e8c84c6761e4ce8"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-F/audit_service/repair/head_0000.npy",
+      "bytes": 640,
+      "sha256": "8610b19d09261c02266726c082c70a68a30dad303c0dc23f02ed104c2db48ad4"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-F/audit_service/repair/head_0001.npy",
+      "bytes": 640,
+      "sha256": "77cadb03bd090f92b2cb7bd8831a83f75d567153805a3bd5e349996c11f6e135"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-F/audit_service/repair/head_0002.npy",
+      "bytes": 640,
+      "sha256": "77cadb03bd090f92b2cb7bd8831a83f75d567153805a3bd5e349996c11f6e135"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-F/audit_service/repair/head_0003.npy",
+      "bytes": 640,
+      "sha256": "8be0d180555a4dd2d88ff3ceb20a35604607430772e12beada6b64033a3dc2f0"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-F/audit_service/repair/numerical_failure.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-F/audit_service/repair/repair.json",
+      "bytes": 1330,
+      "sha256": "97caadd82ba300ee3f7497252a4bcc050973a246edba869dbb40def365c85987"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-F/audit_service/repair/repair_report.json",
+      "bytes": 143034,
+      "sha256": "e279c25a920c85550b7b7ffa1bde7ff3fe684ccc810cd36f9cbcd790fb7c861a"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-F/audit_service/repair/repair_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-F/audit_service/repair/repair_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-F/audit_service/repair/state.npz",
+      "bytes": 67314,
+      "sha256": "24a772f1b977410a233af3f6a45d3075165de2dd3fe1644625a0ac57d4a998aa"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-F/audit_service/service_report.json",
+      "bytes": 25510,
+      "sha256": "12ebea65f13877e6f37d7099591524fe49c2a9aaa6f37c24cf9d94f8630317f4"
+    },
+    {
+      "path": "state_audit_release_v3/audit_B-F/state_audit.json",
+      "bytes": 9417,
+      "sha256": "402a1070e4433670cd00426268a8d08ea4cbf705a8d1cba90d1aa66227abd5ec"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-G/audit_progress.json",
+      "bytes": 8093,
+      "sha256": "c10c6ce51d83735e520b3834a4ef2bc60271d75b8b613e11c8dd5819baa90821"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-G/audit_service/construction/construct_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-G/audit_service/construction/construct_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-G/audit_service/construction/construction_report.json",
+      "bytes": 119818,
+      "sha256": "c8278c05cd442ed8fdf0772ed39b0b285be16ad4cb6eeedc0c00e1e45fd72eac"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-G/audit_service/construction/initial_head.npy",
+      "bytes": 640,
+      "sha256": "64c0e47a989505e778e1f9035a18c54d65df9ca0c2358cab1ce8fb30eb612681"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-G/audit_service/construction/state.npz",
+      "bytes": 139322,
+      "sha256": "3f5512b0cde47ab2dda29d5342a0653aa155f158545ba3915aac7cb53bc3fe6a"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-G/audit_service/construction.json",
+      "bytes": 1153,
+      "sha256": "9ef9f21c648d185c284a52f5d3f228fcf2e1224139fd2c609f1e1e2deb248413"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-G/audit_service/forbidden_probe.txt",
+      "bytes": 26,
+      "sha256": "4eedab98617d611c67819dc147fce46a2a5b5bf5faa50717a5ea2a36f6e1840f"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-G/audit_service/persistence_receipt.json",
+      "bytes": 225,
+      "sha256": "ff9dabdba4006612d3df9ca4c2baae19ae8be6ce3f7db868ed0034bacf266e54"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-G/audit_service/prospective_configuration.json",
+      "bytes": 13910,
+      "sha256": "c741b8b3a7f58350279db5a381d00d55e7be3a168cd7c40f747eb5a97e12c065"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-G/audit_service/repair/head_0000.npy",
+      "bytes": 640,
+      "sha256": "54101107280982bc4b3b7ddfa257014796ea43b1fc32499a33f5cc5f6521f173"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-G/audit_service/repair/head_0001.npy",
+      "bytes": 640,
+      "sha256": "b33deaa079e0dcc1c11f2dfe29ce75690b354d23461b97b129ca3fca874d0396"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-G/audit_service/repair/head_0002.npy",
+      "bytes": 640,
+      "sha256": "b33deaa079e0dcc1c11f2dfe29ce75690b354d23461b97b129ca3fca874d0396"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-G/audit_service/repair/head_0003.npy",
+      "bytes": 640,
+      "sha256": "75abac35e299f9b5f2319fe7d61ceb5fa38578d0436c7391764f357060f7166f"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-G/audit_service/repair/numerical_failure.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-G/audit_service/repair/repair.json",
+      "bytes": 1330,
+      "sha256": "88427ecb8f414530526488453635693b66fadca9eadaa224919e91041c9763ba"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-G/audit_service/repair/repair_report.json",
+      "bytes": 147634,
+      "sha256": "50d030bad12d10d94b14b32cd3203c9de56b2bc2085cf25e3366b65d02690f17"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-G/audit_service/repair/repair_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-G/audit_service/repair/repair_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-G/audit_service/repair/state.npz",
+      "bytes": 137754,
+      "sha256": "00c9d3d11ec389198946d0816f004fa4020702e6d09ed335ba69e857a0483379"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-G/audit_service/service_report.json",
+      "bytes": 45484,
+      "sha256": "a902dbc4119743370802391a0afa917c6ef105473e513ac8e9f92e99d72a07b4"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-G/state_audit.json",
+      "bytes": 8934,
+      "sha256": "721cef4bf64fe9ba57df4315e7774e907679c166395129b0749e3387cf8ea13c"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-T/audit_progress.json",
+      "bytes": 8099,
+      "sha256": "b1e41dc909cb610a8697c4fed24d48ce149c4b5a35a01ab6a5e751d6cb1b3c48"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-T/audit_service/construction/construct_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-T/audit_service/construction/construct_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-T/audit_service/construction/construction_report.json",
+      "bytes": 119795,
+      "sha256": "b983009cfda92bf609d28acb0cb2946c0d745ece18fa9053a50ab3d9eb830035"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-T/audit_service/construction/initial_head.npy",
+      "bytes": 640,
+      "sha256": "64c0e47a989505e778e1f9035a18c54d65df9ca0c2358cab1ce8fb30eb612681"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-T/audit_service/construction/state.npz",
+      "bytes": 91586,
+      "sha256": "cdee8a7db952455b669ff249c04e5cdae3df1b6efd4143dd39512f0c6369031e"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-T/audit_service/construction.json",
+      "bytes": 1066,
+      "sha256": "3617c3edcd452bfad122f98dfc0e0a45e73389b9721eb0d3f4a93f227f25df2f"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-T/audit_service/forbidden_probe.txt",
+      "bytes": 26,
+      "sha256": "4eedab98617d611c67819dc147fce46a2a5b5bf5faa50717a5ea2a36f6e1840f"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-T/audit_service/persistence_receipt.json",
+      "bytes": 226,
+      "sha256": "4f4fb927e2022064c7cae1055be565c9e595f45893dd918944f32bc7be5739ea"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-T/audit_service/prospective_configuration.json",
+      "bytes": 13823,
+      "sha256": "81bff235d9b10237b5d07e750f17937c58fc13748898bd906d89eeea381553ca"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-T/audit_service/repair/head_0000.npy",
+      "bytes": 640,
+      "sha256": "54101107280982bc4b3b7ddfa257014796ea43b1fc32499a33f5cc5f6521f173"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-T/audit_service/repair/head_0001.npy",
+      "bytes": 640,
+      "sha256": "b33deaa079e0dcc1c11f2dfe29ce75690b354d23461b97b129ca3fca874d0396"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-T/audit_service/repair/head_0002.npy",
+      "bytes": 640,
+      "sha256": "b33deaa079e0dcc1c11f2dfe29ce75690b354d23461b97b129ca3fca874d0396"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-T/audit_service/repair/head_0003.npy",
+      "bytes": 640,
+      "sha256": "75abac35e299f9b5f2319fe7d61ceb5fa38578d0436c7391764f357060f7166f"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-T/audit_service/repair/numerical_failure.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-T/audit_service/repair/repair.json",
+      "bytes": 1330,
+      "sha256": "0dbcc1775a5ea9427928973a6e471222e0ba0d4541c59e126c0930006186881a"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-T/audit_service/repair/repair_report.json",
+      "bytes": 147634,
+      "sha256": "24b3eabd12487bbd3a7a199fdcc3d3db547673174335f3692c0dbe2e922a2ceb"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-T/audit_service/repair/repair_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-T/audit_service/repair/repair_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-T/audit_service/repair/state.npz",
+      "bytes": 90018,
+      "sha256": "4b8dd0517cb64800ae66cac99f10da0973077d139248242a0d76cbfcea6dd433"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-T/audit_service/service_report.json",
+      "bytes": 25315,
+      "sha256": "a9e7dc7e2e09384e902d57bd55102a4d6b91601f11b6f0ef4e1a0d9ce2b8f29e"
+    },
+    {
+      "path": "state_audit_release_v3/audit_O-T/state_audit.json",
+      "bytes": 8941,
+      "sha256": "9acc0bf426482a46afa577372c35de938bed87c2d66d66a258a2bd4f6ecada03"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-I/audit_progress.json",
+      "bytes": 408572,
+      "sha256": "e42c497dcf1cf20a06b22749f8e505f920788175aab2ec5d5a76de43b14a1e8c"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-I/audit_service/construction/construct_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-I/audit_service/construction/construct_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-I/audit_service/construction/construction_report.json",
+      "bytes": 136256,
+      "sha256": "877fffbda98c68c9af5299e707b986fdbd144ca8749441131818ff92b80d4456"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-I/audit_service/construction/initial_head.npy",
+      "bytes": 640,
+      "sha256": "a58841b14b245ebba859df255f15ca60afa0af37e2a2d9d365d8434157946548"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-I/audit_service/construction/state.npz",
+      "bytes": 1707470,
+      "sha256": "01b8bd6163d310669a831be490b0fae7eb6167930f4594bbbb53d867411e390c"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-I/audit_service/construction.json",
+      "bytes": 1066,
+      "sha256": "ea7210cd7cfbe97bbc5d369e4ca4611bff5cf897247b351f9bbd4108cb8a85f3"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-I/audit_service/forbidden_probe.txt",
+      "bytes": 26,
+      "sha256": "4eedab98617d611c67819dc147fce46a2a5b5bf5faa50717a5ea2a36f6e1840f"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-I/audit_service/persistence_receipt.json",
+      "bytes": 226,
+      "sha256": "ac68bbbc1f21585e9c19db21870050a0968d110f463dd2d14bd71d194538da56"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-I/audit_service/prospective_configuration.json",
+      "bytes": 13823,
+      "sha256": "0957eefb112300dfbe9bd0c85f861ad765c0f42ea5de6040f5c995fcde7ae7d3"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-I/audit_service/repair/head_0000.npy",
+      "bytes": 640,
+      "sha256": "4fa2f48662a84a85ed7fea456f143ff53f734a12156e094b72d8f111bfbb113a"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-I/audit_service/repair/head_0001.npy",
+      "bytes": 640,
+      "sha256": "3153c72bfc9cdb9fdb4319286029b89e8d69c1fed14b20fb2bbe8777870338eb"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-I/audit_service/repair/head_0002.npy",
+      "bytes": 640,
+      "sha256": "3153c72bfc9cdb9fdb4319286029b89e8d69c1fed14b20fb2bbe8777870338eb"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-I/audit_service/repair/head_0003.npy",
+      "bytes": 640,
+      "sha256": "4c36e7aa473a900eba99bc3c19753ca5a15b30fe16a5b81b41fe117c9bbfb47f"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-I/audit_service/repair/numerical_failure.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-I/audit_service/repair/repair.json",
+      "bytes": 1330,
+      "sha256": "c880f24a9bd76a0565cb143c25c72cb09cdccbd248d4fa4765f02e12a4d1b5ab"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-I/audit_service/repair/repair_report.json",
+      "bytes": 200347,
+      "sha256": "f1177c881a0864de7adae0504c73650b85b6547c52e8d2c7f12f3fdd7d5ab1c7"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-I/audit_service/repair/repair_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-I/audit_service/repair/repair_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-I/audit_service/repair/state.npz",
+      "bytes": 39430,
+      "sha256": "abf0967db9d53a86abf907717987e8abd3b3da12362a3f95d094beb9b1720f21"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-I/audit_service/service_report.json",
+      "bytes": 25540,
+      "sha256": "22e9bf7526034dd81a1a47970f277183677a0343d0b80b9677a47c2189c82022"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-I/state_audit.json",
+      "bytes": 409413,
+      "sha256": "2abdcac02cb4bf1f87080f7fe2063624a36921b6d5889f5a71798fe1b7739a9d"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-R/audit_progress.json",
+      "bytes": 556819,
+      "sha256": "bce1d1443f81ff80cc9b85e64040a2f62108e6e6f87967f5277b0101c4dce4ac"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-R/audit_service/construction/construct_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-R/audit_service/construction/construct_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-R/audit_service/construction/construction_report.json",
+      "bytes": 132560,
+      "sha256": "06208ac1a0bc68da212f554bfc50326205a2bdef0a42ba1cee56fc5ad83b51ba"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-R/audit_service/construction/initial_head.npy",
+      "bytes": 640,
+      "sha256": "ebe77912861982aaf7a4e1037b4a9fc5adbbdf392133de678bcbdce6c1883b32"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-R/audit_service/construction/state.npz",
+      "bytes": 1471486,
+      "sha256": "5cc9ba9f568df9b95d7863a00f5c382aca1d2323671907809f01ffdb83703d47"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-R/audit_service/construction.json",
+      "bytes": 1066,
+      "sha256": "c1af377a9451960e4e2f6f72dedc84de4b022aa5bcad4867f786c04d24a00b2f"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-R/audit_service/forbidden_probe.txt",
+      "bytes": 26,
+      "sha256": "4eedab98617d611c67819dc147fce46a2a5b5bf5faa50717a5ea2a36f6e1840f"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-R/audit_service/persistence_receipt.json",
+      "bytes": 226,
+      "sha256": "ab93eed4e20f5342324a64fc9f6a4bba251250fa064863e0d00aff3a5355716a"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-R/audit_service/prospective_configuration.json",
+      "bytes": 13823,
+      "sha256": "3fd03f541e908961b1a045c4d56a73cbd0db9b3e92c25d729d3dd502aa1ecd0b"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-R/audit_service/repair/head_0000.npy",
+      "bytes": 640,
+      "sha256": "e00df582fbf7bbe7a2b214af0c0f4c893f6dfcbc7c0e944b9e2e6ac76f89fdd9"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-R/audit_service/repair/head_0001.npy",
+      "bytes": 640,
+      "sha256": "0a0d2d3733efdf20b7a0ba3b953d1c43a9c9d43bb53cab798dc6a45e7911c70f"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-R/audit_service/repair/head_0002.npy",
+      "bytes": 640,
+      "sha256": "0a0d2d3733efdf20b7a0ba3b953d1c43a9c9d43bb53cab798dc6a45e7911c70f"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-R/audit_service/repair/head_0003.npy",
+      "bytes": 640,
+      "sha256": "680155f96db54becbd3b18e29b6068bdfc49383900398ba648e41c3ef850872e"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-R/audit_service/repair/numerical_failure.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-R/audit_service/repair/repair.json",
+      "bytes": 1330,
+      "sha256": "280673ae5ed7f166a3122984b5906540e2dcf7a6df0663edf36f3c4fa6112f08"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-R/audit_service/repair/repair_report.json",
+      "bytes": 188866,
+      "sha256": "6647f1c8cee73984e08d2f8ee9ef1ec787b15c617bd48bc31dd12934f377fb8d"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-R/audit_service/repair/repair_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-R/audit_service/repair/repair_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-R/audit_service/repair/state.npz",
+      "bytes": 39614,
+      "sha256": "a0c3ebc0ffcdaa54109c55dc3ba47b15525af58fd5cada5b8d1aa40295278761"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-R/audit_service/service_report.json",
+      "bytes": 26651,
+      "sha256": "fff68b224ac19e2f922ff1845dd697b15b6997bc20ec5dac47a027e0276a1e9f"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-R/state_audit.json",
+      "bytes": 557661,
+      "sha256": "64e0c92ee82073c42f6eebe28d8cc3d9658542689ea828281df5d253de052c8d"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-S/audit_progress.json",
+      "bytes": 408568,
+      "sha256": "e3cf0769422f40a389605d91e28023e108924f4d35f11ff660ba2b15f0df754f"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-S/audit_service/construction/construct_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-S/audit_service/construction/construct_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-S/audit_service/construction/construction_report.json",
+      "bytes": 134831,
+      "sha256": "9234f497bdedd0fe42517447a402a1955a061461cf2ce092e88e97368a991301"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-S/audit_service/construction/initial_head.npy",
+      "bytes": 640,
+      "sha256": "a58841b14b245ebba859df255f15ca60afa0af37e2a2d9d365d8434157946548"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-S/audit_service/construction/state.npz",
+      "bytes": 1707470,
+      "sha256": "d0d0ff0cdbaefc374405a8ad6e004f3b78a373fcee6067b4253d8e88eeb7c1c3"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-S/audit_service/construction.json",
+      "bytes": 1066,
+      "sha256": "a9eefa4de234c53fd6db364744404d83dec23c6b1991812c74b2c9a49ddf3ae8"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-S/audit_service/forbidden_probe.txt",
+      "bytes": 26,
+      "sha256": "4eedab98617d611c67819dc147fce46a2a5b5bf5faa50717a5ea2a36f6e1840f"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-S/audit_service/persistence_receipt.json",
+      "bytes": 226,
+      "sha256": "3c804b6905e15bee9e1227393a56249c7b5d74e7ae68127d4544a5c7c720b343"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-S/audit_service/prospective_configuration.json",
+      "bytes": 13823,
+      "sha256": "737a228c9348965c7f7268bb537560baf26686daed5529a156eb3585bc1e1999"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-S/audit_service/repair/head_0000.npy",
+      "bytes": 640,
+      "sha256": "4fa2f48662a84a85ed7fea456f143ff53f734a12156e094b72d8f111bfbb113a"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-S/audit_service/repair/head_0001.npy",
+      "bytes": 640,
+      "sha256": "3153c72bfc9cdb9fdb4319286029b89e8d69c1fed14b20fb2bbe8777870338eb"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-S/audit_service/repair/head_0002.npy",
+      "bytes": 640,
+      "sha256": "3153c72bfc9cdb9fdb4319286029b89e8d69c1fed14b20fb2bbe8777870338eb"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-S/audit_service/repair/head_0003.npy",
+      "bytes": 640,
+      "sha256": "4c36e7aa473a900eba99bc3c19753ca5a15b30fe16a5b81b41fe117c9bbfb47f"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-S/audit_service/repair/numerical_failure.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-S/audit_service/repair/repair.json",
+      "bytes": 1330,
+      "sha256": "5a7c5237a93cce9a4491371ded656de5ae71a6aa728895958366d8ec143fc8bf"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-S/audit_service/repair/repair_report.json",
+      "bytes": 195520,
+      "sha256": "2b58043e91311ae9076a5a46162e0e3b29bfabdae1fda5ef98bc578bc01476d4"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-S/audit_service/repair/repair_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-S/audit_service/repair/repair_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-S/audit_service/repair/state.npz",
+      "bytes": 39430,
+      "sha256": "53736013bd0f3687b721df06ff40841e0d2dddd17971b2a00e2173c1d2405acf"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-S/audit_service/service_report.json",
+      "bytes": 25533,
+      "sha256": "f9ea259601a0b741ca72d0f604e35a82e6075a3ead844a232d082c008483beb2"
+    },
+    {
+      "path": "state_audit_release_v3/audit_P-S/state_audit.json",
+      "bytes": 409410,
+      "sha256": "2e1c35d282e3bd7f8ff11c4222538e72de73df426eda6ce1adccc980c7b21953"
+    },
+    {
+      "path": "state_audit_release_v3/checks.json",
+      "bytes": 2930,
+      "sha256": "661b30c32dc6dd2025aa02db13fc73f55da1b16b616f7540c1c65d5e55aa63c7"
+    },
+    {
+      "path": "state_audit_release_v3/design_lock.json",
+      "bytes": 1498,
+      "sha256": "8212f76fe3fe3390d3d849c4f12b5e6e22806b1b5970e851389acac147494c74"
+    },
+    {
+      "path": "state_audit_release_v3/inputs/bundle.json",
+      "bytes": 817,
+      "sha256": "50ecf8f6d90b2d12892ee36e0806262af35da30f1931bebbfbe3267e2d6a00b2"
+    },
+    {
+      "path": "state_audit_release_v3/inputs/curator.npy",
+      "bytes": 51328,
+      "sha256": "b72049cbe54c279863101f6af3d4ac113a46de6f1c6eba68ce50bbdce50142ac"
+    },
+    {
+      "path": "state_audit_release_v3/inputs/graph.npz",
+      "bytes": 5024,
+      "sha256": "92e1f18603b4e25f80b918c7fdb886529d946246e5d34f2a35b26b8a9f70b35f"
+    },
+    {
+      "path": "state_audit_release_v3/inputs/learner.npy",
+      "bytes": 25728,
+      "sha256": "717fff2e12a1411148ea9e797768d875bad1dd39d5416fea90336c5fdd19bcaf"
+    },
+    {
+      "path": "state_audit_release_v3/inputs/metadata.json",
+      "bytes": 10762,
+      "sha256": "70c5d12e9d4c1d0b8d550f0e3348647b7d9356a4486e9b1d7863e6e6a798cb81"
+    },
+    {
+      "path": "state_audit_release_v3/inputs/targets.npy",
+      "bytes": 928,
+      "sha256": "e9ac4ab560e21f279621b10cd74fca31e7392c47f05ff2b8846959c50bd79199"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-A/construction/construct_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-A/construction/construct_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-A/construction/construction_report.json",
+      "bytes": 122865,
+      "sha256": "d3ae886758558fbbe0a8b3f5f8cd80ef58ba7032a50704d0ea2e11343161e137"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-A/construction/initial_head.npy",
+      "bytes": 640,
+      "sha256": "a58841b14b245ebba859df255f15ca60afa0af37e2a2d9d365d8434157946548"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-A/construction/state.npz",
+      "bytes": 82296,
+      "sha256": "1395eefb88be599db132e152ffd8c1186982129e40be8cd23cf17124f5331df7"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-A/construction.json",
+      "bytes": 1066,
+      "sha256": "d4987882f2634533376ee288115822ed3969c4d12b919ba3342be0151dbb0ff6"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-A/forbidden_probe.txt",
+      "bytes": 26,
+      "sha256": "4eedab98617d611c67819dc147fce46a2a5b5bf5faa50717a5ea2a36f6e1840f"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-A/persistence_receipt.json",
+      "bytes": 226,
+      "sha256": "e2c18a3fc16ea30f5b8d8b3d32279cd57a648eacdd64f088b37454254645fab1"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-A/prospective_configuration.json",
+      "bytes": 13815,
+      "sha256": "46fab843b53128fab0052f0ddc224cd863f387a7869865cdcf6b98505dc22aa1"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-A/repair/head_0000.npy",
+      "bytes": 640,
+      "sha256": "4fa2f48662a84a85ed7fea456f143ff53f734a12156e094b72d8f111bfbb113a"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-A/repair/head_0001.npy",
+      "bytes": 640,
+      "sha256": "3153c72bfc9cdb9fdb4319286029b89e8d69c1fed14b20fb2bbe8777870338eb"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-A/repair/head_0002.npy",
+      "bytes": 640,
+      "sha256": "3153c72bfc9cdb9fdb4319286029b89e8d69c1fed14b20fb2bbe8777870338eb"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-A/repair/head_0003.npy",
+      "bytes": 640,
+      "sha256": "76b8850e4f127a8e955b8717dd4e1a69b0ba0ef32c6023709b6f921413ed530f"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-A/repair/numerical_failure.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-A/repair/repair.json",
+      "bytes": 1311,
+      "sha256": "84dcc7713803eb426c4287c3e3a3d464ed77bd02bf905253e46ecd0efd962465"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-A/repair/repair_report.json",
+      "bytes": 162029,
+      "sha256": "d474d20c07268bbad364fd68b6beb19825773d85220c6d4092c9ecabeaba80d0"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-A/repair/repair_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-A/repair/repair_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-A/repair/state.npz",
+      "bytes": 82297,
+      "sha256": "e6e7f4b81844b6f6094f4873fe34ec5ad55fbe6938d60bc465674748f0161d8b"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-A/service_report.json",
+      "bytes": 34292,
+      "sha256": "b70cff6c6885c02857dbd2a6a82820648aac4f75a6be33ca1fb3eb27ce384a72"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-E/construction/construct_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-E/construction/construct_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-E/construction/construction_report.json",
+      "bytes": 122849,
+      "sha256": "db5d3cc97c0d0b06bf6cf13b3365c4e9928d65cbf44c4a4760d3b5f5a14c5867"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-E/construction/initial_head.npy",
+      "bytes": 640,
+      "sha256": "a58841b14b245ebba859df255f15ca60afa0af37e2a2d9d365d8434157946548"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-E/construction/state.npz",
+      "bytes": 74151,
+      "sha256": "81f771d02d0d7e562df35f58a03ceafb81be98cd7010fc9e4c45d4ba3983edf1"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-E/construction.json",
+      "bytes": 1066,
+      "sha256": "dcc9a1185feb5b140d3764cc8ca11677cbef2a401eb307d386845f1c841b5adc"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-E/forbidden_probe.txt",
+      "bytes": 26,
+      "sha256": "4eedab98617d611c67819dc147fce46a2a5b5bf5faa50717a5ea2a36f6e1840f"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-E/persistence_receipt.json",
+      "bytes": 226,
+      "sha256": "f192c1430c56cf876a4956ba826a68a574010bd5112b45bc1dea1e6803021296"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-E/prospective_configuration.json",
+      "bytes": 13815,
+      "sha256": "2598500566c8b52c38453a30bf89489e666394b894eeee6a2976b0a51b8000fe"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-E/repair/head_0000.npy",
+      "bytes": 640,
+      "sha256": "4fa2f48662a84a85ed7fea456f143ff53f734a12156e094b72d8f111bfbb113a"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-E/repair/head_0001.npy",
+      "bytes": 640,
+      "sha256": "3153c72bfc9cdb9fdb4319286029b89e8d69c1fed14b20fb2bbe8777870338eb"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-E/repair/head_0002.npy",
+      "bytes": 640,
+      "sha256": "3153c72bfc9cdb9fdb4319286029b89e8d69c1fed14b20fb2bbe8777870338eb"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-E/repair/head_0003.npy",
+      "bytes": 640,
+      "sha256": "76b8850e4f127a8e955b8717dd4e1a69b0ba0ef32c6023709b6f921413ed530f"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-E/repair/numerical_failure.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-E/repair/repair.json",
+      "bytes": 1311,
+      "sha256": "52599fcc2a79d10ee93d9afcd435f26583b47bf09d5c4e29ccbd15a4684cc667"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-E/repair/repair_report.json",
+      "bytes": 161944,
+      "sha256": "f54c4836ab85566f4c522fd7d14d458a32c0933c587ed1cab0b278d2d366af49"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-E/repair/repair_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-E/repair/repair_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-E/repair/state.npz",
+      "bytes": 66246,
+      "sha256": "1c247d39096c9a561cc68c74b270bf0d5a110dcd9fa7ba3a4449d36e1040dc5b"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-E/service_report.json",
+      "bytes": 27939,
+      "sha256": "5fc6a79101ebe796acefc6a4ebeeae259b47e7102e20ebfb9370bfa147566a1c"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-F/construction/construct_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-F/construction/construct_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-F/construction/construction_report.json",
+      "bytes": 119223,
+      "sha256": "d89899791faa013e13601bb4fbf37cd8765d4770204aa0229c06819e45048a53"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-F/construction/initial_head.npy",
+      "bytes": 640,
+      "sha256": "a58841b14b245ebba859df255f15ca60afa0af37e2a2d9d365d8434157946548"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-F/construction/state.npz",
+      "bytes": 71166,
+      "sha256": "8bf2576b386a0638778a4b04ec2629f7218f56ba88055ccc015d997d89b0a739"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-F/construction.json",
+      "bytes": 1066,
+      "sha256": "be3bd2f84876626adc832e8911f471fdcc3c1e0618965473d5b5bbb7f427d6c6"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-F/forbidden_probe.txt",
+      "bytes": 26,
+      "sha256": "4eedab98617d611c67819dc147fce46a2a5b5bf5faa50717a5ea2a36f6e1840f"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-F/persistence_receipt.json",
+      "bytes": 225,
+      "sha256": "dc7dd1f9c5d1f42c514172fc32ea8d412aedb9e0188194c7e32e8a7a947c4c07"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-F/prospective_configuration.json",
+      "bytes": 13815,
+      "sha256": "6e4eedfaa18eab2e88a06929c66d914e990dd874dc144f6150f3ec7a01108ec0"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-F/repair/head_0000.npy",
+      "bytes": 640,
+      "sha256": "8610b19d09261c02266726c082c70a68a30dad303c0dc23f02ed104c2db48ad4"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-F/repair/head_0001.npy",
+      "bytes": 640,
+      "sha256": "77cadb03bd090f92b2cb7bd8831a83f75d567153805a3bd5e349996c11f6e135"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-F/repair/head_0002.npy",
+      "bytes": 640,
+      "sha256": "77cadb03bd090f92b2cb7bd8831a83f75d567153805a3bd5e349996c11f6e135"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-F/repair/head_0003.npy",
+      "bytes": 640,
+      "sha256": "8be0d180555a4dd2d88ff3ceb20a35604607430772e12beada6b64033a3dc2f0"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-F/repair/numerical_failure.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-F/repair/repair.json",
+      "bytes": 1311,
+      "sha256": "1650b5585ccbdbc3a7003d9b6c371a0d3f1e1775d690d7e2bb52fc60c27ce795"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-F/repair/repair_report.json",
+      "bytes": 139661,
+      "sha256": "c0bab3a28372f47bf1677cb6e99cfaf808477987518e04fb0c871a855ea331c9"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-F/repair/repair_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-F/repair/repair_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-F/repair/state.npz",
+      "bytes": 67314,
+      "sha256": "24a772f1b977410a233af3f6a45d3075165de2dd3fe1644625a0ac57d4a998aa"
+    },
+    {
+      "path": "state_audit_release_v3/measured_B-F/service_report.json",
+      "bytes": 25530,
+      "sha256": "e17e4d6dcd286892abf0302cd51e58785616b5c765ea1c0f6fa0d4096b1902cd"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-G/construction/construct_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-G/construction/construct_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-G/construction/construction_report.json",
+      "bytes": 119815,
+      "sha256": "732c6853aa9a757b2069eb7a61bfc2b6c7d276c9ec157ac5a72c924e67c921a1"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-G/construction/initial_head.npy",
+      "bytes": 640,
+      "sha256": "64c0e47a989505e778e1f9035a18c54d65df9ca0c2358cab1ce8fb30eb612681"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-G/construction/state.npz",
+      "bytes": 139322,
+      "sha256": "3f5512b0cde47ab2dda29d5342a0653aa155f158545ba3915aac7cb53bc3fe6a"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-G/construction.json",
+      "bytes": 1153,
+      "sha256": "9ef9f21c648d185c284a52f5d3f228fcf2e1224139fd2c609f1e1e2deb248413"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-G/forbidden_probe.txt",
+      "bytes": 26,
+      "sha256": "4eedab98617d611c67819dc147fce46a2a5b5bf5faa50717a5ea2a36f6e1840f"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-G/persistence_receipt.json",
+      "bytes": 225,
+      "sha256": "17fbc9bcc7f45641a52bc392547da4ac3b400eebb950e320ff79d4ea116605b2"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-G/prospective_configuration.json",
+      "bytes": 13902,
+      "sha256": "0cd1fa187b40bd04c482b1ea9443fc861582c59054b9c5c80e3bdcf1c453d2e7"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-G/repair/head_0000.npy",
+      "bytes": 640,
+      "sha256": "54101107280982bc4b3b7ddfa257014796ea43b1fc32499a33f5cc5f6521f173"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-G/repair/head_0001.npy",
+      "bytes": 640,
+      "sha256": "b33deaa079e0dcc1c11f2dfe29ce75690b354d23461b97b129ca3fca874d0396"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-G/repair/head_0002.npy",
+      "bytes": 640,
+      "sha256": "b33deaa079e0dcc1c11f2dfe29ce75690b354d23461b97b129ca3fca874d0396"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-G/repair/head_0003.npy",
+      "bytes": 640,
+      "sha256": "75abac35e299f9b5f2319fe7d61ceb5fa38578d0436c7391764f357060f7166f"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-G/repair/numerical_failure.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-G/repair/repair.json",
+      "bytes": 1311,
+      "sha256": "a9ed45672ff477eb1c4a5f866ea10ee7a3ca89dc577e45091da8d53f5ed67f4e"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-G/repair/repair_report.json",
+      "bytes": 142410,
+      "sha256": "d73723fb92a1830b6e7ff9ea1b3b283b035543b3a3eb89c466da47298ae4a61d"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-G/repair/repair_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-G/repair/repair_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-G/repair/state.npz",
+      "bytes": 137754,
+      "sha256": "00c9d3d11ec389198946d0816f004fa4020702e6d09ed335ba69e857a0483379"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-G/service_report.json",
+      "bytes": 45477,
+      "sha256": "e5231405b9cf37c93afef8f9dbdb7ecd5361e41e80fff938868ca6c97450a504"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-T/construction/construct_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-T/construction/construct_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-T/construction/construction_report.json",
+      "bytes": 119798,
+      "sha256": "cab2ab4729274157b014d925557cd45d3ea8d1cf80ee521dcba9ceadac41cffd"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-T/construction/initial_head.npy",
+      "bytes": 640,
+      "sha256": "64c0e47a989505e778e1f9035a18c54d65df9ca0c2358cab1ce8fb30eb612681"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-T/construction/state.npz",
+      "bytes": 91586,
+      "sha256": "cdee8a7db952455b669ff249c04e5cdae3df1b6efd4143dd39512f0c6369031e"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-T/construction.json",
+      "bytes": 1066,
+      "sha256": "3617c3edcd452bfad122f98dfc0e0a45e73389b9721eb0d3f4a93f227f25df2f"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-T/forbidden_probe.txt",
+      "bytes": 26,
+      "sha256": "4eedab98617d611c67819dc147fce46a2a5b5bf5faa50717a5ea2a36f6e1840f"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-T/persistence_receipt.json",
+      "bytes": 226,
+      "sha256": "77f13f01136c5f4831d6ba5757197a7a352a5b95cfbfd0f3a57f481f246ca651"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-T/prospective_configuration.json",
+      "bytes": 13815,
+      "sha256": "523ce654519ca6c057a7ea72be0ca168bd86891bb73c16ea6d98fc8352807ce1"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-T/repair/head_0000.npy",
+      "bytes": 640,
+      "sha256": "54101107280982bc4b3b7ddfa257014796ea43b1fc32499a33f5cc5f6521f173"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-T/repair/head_0001.npy",
+      "bytes": 640,
+      "sha256": "b33deaa079e0dcc1c11f2dfe29ce75690b354d23461b97b129ca3fca874d0396"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-T/repair/head_0002.npy",
+      "bytes": 640,
+      "sha256": "b33deaa079e0dcc1c11f2dfe29ce75690b354d23461b97b129ca3fca874d0396"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-T/repair/head_0003.npy",
+      "bytes": 640,
+      "sha256": "75abac35e299f9b5f2319fe7d61ceb5fa38578d0436c7391764f357060f7166f"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-T/repair/numerical_failure.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-T/repair/repair.json",
+      "bytes": 1311,
+      "sha256": "9d2fa27d0420162648ea5ca2b74f79253d9b86f93e818d86edfb17a1fdbd447b"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-T/repair/repair_report.json",
+      "bytes": 142410,
+      "sha256": "5301b08f2f7e06a64ca6841a41b469d8b1065b8b0d7c8a7366a4a46f5187b73b"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-T/repair/repair_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-T/repair/repair_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-T/repair/state.npz",
+      "bytes": 90018,
+      "sha256": "4b8dd0517cb64800ae66cac99f10da0973077d139248242a0d76cbfcea6dd433"
+    },
+    {
+      "path": "state_audit_release_v3/measured_O-T/service_report.json",
+      "bytes": 25041,
+      "sha256": "93e93c1c64f48da47a837a27da0c0f37435428e8a40197a372b1ce4ef9f9634c"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-I/construction/construct_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-I/construction/construct_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-I/construction/construction_report.json",
+      "bytes": 136255,
+      "sha256": "ce0169daee5ba6c7e0e2077379edfd1b765d57013ca887d12f49b036bb001272"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-I/construction/initial_head.npy",
+      "bytes": 640,
+      "sha256": "a58841b14b245ebba859df255f15ca60afa0af37e2a2d9d365d8434157946548"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-I/construction/state.npz",
+      "bytes": 1707470,
+      "sha256": "01b8bd6163d310669a831be490b0fae7eb6167930f4594bbbb53d867411e390c"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-I/construction.json",
+      "bytes": 1066,
+      "sha256": "ea7210cd7cfbe97bbc5d369e4ca4611bff5cf897247b351f9bbd4108cb8a85f3"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-I/forbidden_probe.txt",
+      "bytes": 26,
+      "sha256": "4eedab98617d611c67819dc147fce46a2a5b5bf5faa50717a5ea2a36f6e1840f"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-I/persistence_receipt.json",
+      "bytes": 224,
+      "sha256": "40c18d40d00b3eb2c4685f61fff04d454db6dd0d7177988ad9658f02bae294e4"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-I/prospective_configuration.json",
+      "bytes": 13815,
+      "sha256": "067e8f5be7d83105df067b90f664743773cf4d4dbff4c47d530ee232d8977041"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-I/repair/head_0000.npy",
+      "bytes": 640,
+      "sha256": "4fa2f48662a84a85ed7fea456f143ff53f734a12156e094b72d8f111bfbb113a"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-I/repair/head_0001.npy",
+      "bytes": 640,
+      "sha256": "3153c72bfc9cdb9fdb4319286029b89e8d69c1fed14b20fb2bbe8777870338eb"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-I/repair/head_0002.npy",
+      "bytes": 640,
+      "sha256": "3153c72bfc9cdb9fdb4319286029b89e8d69c1fed14b20fb2bbe8777870338eb"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-I/repair/head_0003.npy",
+      "bytes": 640,
+      "sha256": "4c36e7aa473a900eba99bc3c19753ca5a15b30fe16a5b81b41fe117c9bbfb47f"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-I/repair/numerical_failure.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-I/repair/repair.json",
+      "bytes": 1311,
+      "sha256": "ff88c3f8e81af73cd8988f27790af55d94c075ef04ec5d327230c9533c3223ef"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-I/repair/repair_report.json",
+      "bytes": 197373,
+      "sha256": "b62ab3f01d56dfc7999d0077444764843c2246baf864d2b7dfb980573350e5d0"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-I/repair/repair_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-I/repair/repair_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-I/repair/state.npz",
+      "bytes": 39430,
+      "sha256": "abf0967db9d53a86abf907717987e8abd3b3da12362a3f95d094beb9b1720f21"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-I/service_report.json",
+      "bytes": 30574,
+      "sha256": "db3ae6a997f7d206cfef1d8ed9696c3d3f522e82e14b7f4d118ae5333014d7a6"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-R/construction/construct_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-R/construction/construct_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-R/construction/construction_report.json",
+      "bytes": 132562,
+      "sha256": "0beef8efee3350d3bbd74cc2c422c3fbf0781d9c88d9712f4665c4aed0ffd279"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-R/construction/initial_head.npy",
+      "bytes": 640,
+      "sha256": "ebe77912861982aaf7a4e1037b4a9fc5adbbdf392133de678bcbdce6c1883b32"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-R/construction/state.npz",
+      "bytes": 1471486,
+      "sha256": "5cc9ba9f568df9b95d7863a00f5c382aca1d2323671907809f01ffdb83703d47"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-R/construction.json",
+      "bytes": 1066,
+      "sha256": "c1af377a9451960e4e2f6f72dedc84de4b022aa5bcad4867f786c04d24a00b2f"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-R/forbidden_probe.txt",
+      "bytes": 26,
+      "sha256": "4eedab98617d611c67819dc147fce46a2a5b5bf5faa50717a5ea2a36f6e1840f"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-R/persistence_receipt.json",
+      "bytes": 225,
+      "sha256": "25a5d4546e985aa3d447f33269a0b679791e2bd1c11300086478a0184dbba911"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-R/prospective_configuration.json",
+      "bytes": 13815,
+      "sha256": "fc6fce8e0ef1afd4c68a4b73ae34b56e87a4753732607c2d8a7bfe1c2c49768c"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-R/repair/head_0000.npy",
+      "bytes": 640,
+      "sha256": "e00df582fbf7bbe7a2b214af0c0f4c893f6dfcbc7c0e944b9e2e6ac76f89fdd9"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-R/repair/head_0001.npy",
+      "bytes": 640,
+      "sha256": "0a0d2d3733efdf20b7a0ba3b953d1c43a9c9d43bb53cab798dc6a45e7911c70f"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-R/repair/head_0002.npy",
+      "bytes": 640,
+      "sha256": "0a0d2d3733efdf20b7a0ba3b953d1c43a9c9d43bb53cab798dc6a45e7911c70f"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-R/repair/head_0003.npy",
+      "bytes": 640,
+      "sha256": "680155f96db54becbd3b18e29b6068bdfc49383900398ba648e41c3ef850872e"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-R/repair/numerical_failure.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-R/repair/repair.json",
+      "bytes": 1311,
+      "sha256": "3cb4fa0a5ae61cd3958d8a3fedc3f9eb8be94c6a6599a551a793ccfaf9eb8153"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-R/repair/repair_report.json",
+      "bytes": 185893,
+      "sha256": "37ff02f4a2038732ff9dd9031490b5d614b81ee890e9133d428ef14079c9d1b9"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-R/repair/repair_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-R/repair/repair_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-R/repair/state.npz",
+      "bytes": 39614,
+      "sha256": "a0c3ebc0ffcdaa54109c55dc3ba47b15525af58fd5cada5b8d1aa40295278761"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-R/service_report.json",
+      "bytes": 27495,
+      "sha256": "48df0ffe7f41a54f32d03a1873ca6d5da8b863bce04eb887ebd0552decd4782b"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-S/construction/construct_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-S/construction/construct_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-S/construction/construction_report.json",
+      "bytes": 134827,
+      "sha256": "ef83c0988becf6141f3beb589a715cef8e6885850d8367303408574134c94151"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-S/construction/initial_head.npy",
+      "bytes": 640,
+      "sha256": "a58841b14b245ebba859df255f15ca60afa0af37e2a2d9d365d8434157946548"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-S/construction/state.npz",
+      "bytes": 1707470,
+      "sha256": "d0d0ff0cdbaefc374405a8ad6e004f3b78a373fcee6067b4253d8e88eeb7c1c3"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-S/construction.json",
+      "bytes": 1066,
+      "sha256": "a9eefa4de234c53fd6db364744404d83dec23c6b1991812c74b2c9a49ddf3ae8"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-S/forbidden_probe.txt",
+      "bytes": 26,
+      "sha256": "4eedab98617d611c67819dc147fce46a2a5b5bf5faa50717a5ea2a36f6e1840f"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-S/persistence_receipt.json",
+      "bytes": 226,
+      "sha256": "e816cb873c811eb61febb5060c0349c348e344175bfbc32ff28ec7230cae80dc"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-S/prospective_configuration.json",
+      "bytes": 13815,
+      "sha256": "beeb1cd1839a4387be0c1053c82b6424a03c1b0007b394b3b02ab7da8b61dabe"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-S/repair/head_0000.npy",
+      "bytes": 640,
+      "sha256": "4fa2f48662a84a85ed7fea456f143ff53f734a12156e094b72d8f111bfbb113a"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-S/repair/head_0001.npy",
+      "bytes": 640,
+      "sha256": "3153c72bfc9cdb9fdb4319286029b89e8d69c1fed14b20fb2bbe8777870338eb"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-S/repair/head_0002.npy",
+      "bytes": 640,
+      "sha256": "3153c72bfc9cdb9fdb4319286029b89e8d69c1fed14b20fb2bbe8777870338eb"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-S/repair/head_0003.npy",
+      "bytes": 640,
+      "sha256": "4c36e7aa473a900eba99bc3c19753ca5a15b30fe16a5b81b41fe117c9bbfb47f"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-S/repair/numerical_failure.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-S/repair/repair.json",
+      "bytes": 1311,
+      "sha256": "5ac331a9156de176d1aefbaf6a15f597f8af5372d2999e2188f7f780155dbd43"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-S/repair/repair_report.json",
+      "bytes": 192537,
+      "sha256": "65bf6fb03fbf63c524cf981d1ac55e7bc8dc91d1138c55e6fa0edcbf12856d6a"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-S/repair/repair_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-S/repair/repair_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-S/repair/state.npz",
+      "bytes": 39430,
+      "sha256": "53736013bd0f3687b721df06ff40841e0d2dddd17971b2a00e2173c1d2405acf"
+    },
+    {
+      "path": "state_audit_release_v3/measured_P-S/service_report.json",
+      "bytes": 25740,
+      "sha256": "60053c7d002d18c6e8ea5d5615bc1fc105533d85e346c3bc54f0526a8ee48a21"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_audit_P-R/audit_progress.json",
+      "bytes": 4777,
+      "sha256": "dc54b56c4a5c375a53ea41bd884b733b19f6d2e98b5d77f9e6ae2e8628169c19"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_audit_P-R/audit_service/construction/construct_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_audit_P-R/audit_service/construction/construct_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_audit_P-R/audit_service/construction/construction_report.json",
+      "bytes": 119098,
+      "sha256": "5a2bc834426394c7e682a0bf4fd064aa88f008a5be7cb95aaf04859ce014c5d8"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_audit_P-R/audit_service/construction/initial_head.npy",
+      "bytes": 640,
+      "sha256": "6db4236112b082b5a539358d481e5f9e71734c3213fea2a58301ed00ebb8f203"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_audit_P-R/audit_service/construction/state.npz",
+      "bytes": 18854,
+      "sha256": "d8785f793246b3564c3f4f8494f97c1913fba10780c4b7c993a980781cf4e1e4"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_audit_P-R/audit_service/construction.json",
+      "bytes": 1076,
+      "sha256": "14505372742a1c46f2dd58091c8baa70cf756d42e3820ec86bfc3c086549b123"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_audit_P-R/audit_service/forbidden_probe.txt",
+      "bytes": 26,
+      "sha256": "4eedab98617d611c67819dc147fce46a2a5b5bf5faa50717a5ea2a36f6e1840f"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_audit_P-R/audit_service/persistence_receipt.json",
+      "bytes": 226,
+      "sha256": "bc570a2ded7cd758862494d15a0a07c24935a6989a1bdd6226bc4f06fe402ef5"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_audit_P-R/audit_service/prospective_configuration.json",
+      "bytes": 13411,
+      "sha256": "84650378c8a6ce8a10cff1685019e39ef1ed5e266cdffbde38360e8816439e57"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_audit_P-R/audit_service/repair/head_0000.npy",
+      "bytes": 640,
+      "sha256": "6db4236112b082b5a539358d481e5f9e71734c3213fea2a58301ed00ebb8f203"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_audit_P-R/audit_service/repair/numerical_failure.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_audit_P-R/audit_service/repair/repair.json",
+      "bytes": 919,
+      "sha256": "4bbe0c0591e3a101d4b403d90fd7f1e5e0cbd542cc52c293b5018e348c572086"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_audit_P-R/audit_service/repair/repair_report.json",
+      "bytes": 122408,
+      "sha256": "a95dc5d94eaa25487a95305b1098a991d3ad913f1a9a8ddebf9ad3eaaa2296b0"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_audit_P-R/audit_service/repair/repair_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_audit_P-R/audit_service/repair/repair_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_audit_P-R/audit_service/repair/state.npz",
+      "bytes": 1658,
+      "sha256": "c495e84a0b6d65c3663e88d64fcae61b53591d93e36c43d7f8fe9c06e436ba4f"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_audit_P-R/audit_service/service_report.json",
+      "bytes": 25038,
+      "sha256": "f158cdc8e9e32509c471135719407c65852f587d89f7cba6da345e274af981b3"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_audit_P-R/state_audit.json",
+      "bytes": 5617,
+      "sha256": "c487285973d929818ceb64b6ab3cdf8a78566ec1478acb02f0572df064a8c02a"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_input/bundle.json",
+      "bytes": 810,
+      "sha256": "4e598811e897556c78bb12ce4832fe7b09289a235f7cc61af87f0b88cfffbb09"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_input/curator.npy",
+      "bytes": 640,
+      "sha256": "72480f3006a5113ee36a59f58c4b85c9570aa5ae6d13416181cd81d32f13cbac"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_input/graph.npz",
+      "bytes": 784,
+      "sha256": "fc75b8a60ee8a56738b0fe17926f22126407be9fea5cbafdec0c488b8fb1aa49"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_input/learner.npy",
+      "bytes": 384,
+      "sha256": "a2ecbdeea87a7b76b6de1110951a593467cf2eed94f925675c7367c459e437f4"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_input/metadata.json",
+      "bytes": 286,
+      "sha256": "1561037b86948fa96314c1d5b3bb2f66088ab5093143d4cc8de32d0c5f336b16"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_input/targets.npy",
+      "bytes": 136,
+      "sha256": "2cabcb9773848419128d4465abee37919bc98536ae2a4bf90135f88a885cc8a1"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_measured_P-R/construction/construct_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_measured_P-R/construction/construct_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_measured_P-R/construction/construction_report.json",
+      "bytes": 119101,
+      "sha256": "64ca17b117a889ca4f729b61ad1450cfd57a68ca009f64c6105fcd33a70bfaa2"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_measured_P-R/construction/initial_head.npy",
+      "bytes": 640,
+      "sha256": "6db4236112b082b5a539358d481e5f9e71734c3213fea2a58301ed00ebb8f203"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_measured_P-R/construction/state.npz",
+      "bytes": 18854,
+      "sha256": "d8785f793246b3564c3f4f8494f97c1913fba10780c4b7c993a980781cf4e1e4"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_measured_P-R/construction.json",
+      "bytes": 1076,
+      "sha256": "14505372742a1c46f2dd58091c8baa70cf756d42e3820ec86bfc3c086549b123"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_measured_P-R/forbidden_probe.txt",
+      "bytes": 26,
+      "sha256": "4eedab98617d611c67819dc147fce46a2a5b5bf5faa50717a5ea2a36f6e1840f"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_measured_P-R/persistence_receipt.json",
+      "bytes": 226,
+      "sha256": "05c0bb9805c145ba2363df50e94a22e66c7751a1b2aef3af4b50cdae7e46ee6c"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_measured_P-R/prospective_configuration.json",
+      "bytes": 13403,
+      "sha256": "6ffb611680a6356545b7a70726648cc6462b62b0b29ded1b0bf797a7a0fb75ec"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_measured_P-R/repair/head_0000.npy",
+      "bytes": 640,
+      "sha256": "6db4236112b082b5a539358d481e5f9e71734c3213fea2a58301ed00ebb8f203"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_measured_P-R/repair/numerical_failure.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_measured_P-R/repair/repair.json",
+      "bytes": 900,
+      "sha256": "0fe8eb1dd708f0545ef3a835f6ad4d023b27486e5c9776226e18cfde79444f17"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_measured_P-R/repair/repair_report.json",
+      "bytes": 122406,
+      "sha256": "2f88be997ce1b150fe98a6868ea7dc4783ae58d0f6603ca7a28c4fb36a6c220a"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_measured_P-R/repair/repair_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_measured_P-R/repair/repair_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_measured_P-R/repair/state.npz",
+      "bytes": 1658,
+      "sha256": "c495e84a0b6d65c3663e88d64fcae61b53591d93e36c43d7f8fe9c06e436ba4f"
+    },
+    {
+      "path": "state_audit_release_v3/one_record_measured_P-R/service_report.json",
+      "bytes": 25008,
+      "sha256": "55b668da5c928bd9376402bded3b77f499d23c169929b069c122fc04b7b59c23"
+    },
+    {
+      "path": "state_audit_release_v3/outcomes.json",
+      "bytes": 1675,
+      "sha256": "90cb5d2625a7256ed9bce055f5638613ce2f698fe35fbb1f13e5edb5c13dc84a"
+    }
+  ],
+  "results_omitted": false,
+  "archive_tool_sha256": "8eb6f435865b1b63bf1a1bff847a364e6cb1740c01986cecc8f87f9b328a0495"
+}

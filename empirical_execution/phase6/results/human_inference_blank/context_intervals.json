@@ -1,0 +1,5439 @@
+{
+  "schema": "ccu-human-design-inference-v1",
+  "manifest_sha256": "8bec5ba6d05cf78633c94d457c0920097cfb965b3b6abd4b8efded99a239e829",
+  "response_bundle_sha256": "575027e57d09e08fe52bb6b0a956b105f5a858ffd4273780cdc714e139e7a2de",
+  "alpha": {
+    "numerator": 1,
+    "denominator": 40
+  },
+  "family": "all reported nonempty corpus/population/context/question/category endpoints in this one manifest",
+  "nonempty_endpoint_count": 72,
+  "coverage": "simultaneous finite-population design coverage at least 1-alpha",
+  "estimand": "fixed original three-rater protocol outcomes conditional on frame, blocker choices and context occurrence choices",
+  "assumptions": [
+    "each recorded stratum sample follows its declared SRSWOR design",
+    "potential original three-rater outcomes do not change with sample selection",
+    "sampling seeds and frame choices precede response inspection"
+  ],
+  "nonresponse": "arbitrary outcome-dependent missingness allowed; all binary completions retained",
+  "owner_rule": "highest stratum inclusion probability, then original manifest stratum index",
+  "owner_sha256": "577d5e4b61b2443edc370d3cecf78d000f091551edf9b32297786298c4ea28c4",
+  "raters_or_repeated_roles_counted_as_independent_units": false,
+  "human_origin_authenticated": false,
+  "actual_human_response_count": 0,
+  "evidence_role": "engineering_nonconfirmatory",
+  "semantic_truth_coverage": false,
+  "new_rater_population_coverage": false,
+  "point_estimates": "use unchanged Phase 5 HT/Hajek estimates; these intervals target finite-frame prevalence",
+  "results": [
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "yes",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "no",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "uncertain",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "no_majority",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "yes",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "no",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "uncertain",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "no_majority",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "could_matter",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "unlikely_to_matter",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "uncertain",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "no_majority",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:entity",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:number",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:negation",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:time",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:assertion",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:other",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "yes",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "no",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "uncertain",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "no_majority",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "yes",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "no",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "uncertain",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "no_majority",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "could_matter",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "unlikely_to_matter",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "uncertain",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "no_majority",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:entity",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:number",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:negation",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:time",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:assertion",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:other",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 0,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "yes",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "no",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "uncertain",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "no_majority",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "yes",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "no",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "uncertain",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "no_majority",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "could_matter",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "unlikely_to_matter",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "uncertain",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "no_majority",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:entity",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:number",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:negation",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:time",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:assertion",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:other",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "yes",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "no",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "uncertain",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "no_majority",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "yes",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "no",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "uncertain",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "no_majority",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "could_matter",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "unlikely_to_matter",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "uncertain",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "no_majority",
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:entity",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:number",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:negation",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:time",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:assertion",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "civil_comments",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:other",
+      "category": 1,
+      "frame_units": 10,
+      "observed_units": 0,
+      "count_interval": [
+        0,
+        10
+      ],
+      "prevalence_interval": [
+        0.0,
+        1.0
+      ],
+      "empty_confidence_set": false,
+      "point_estimate_identified": false,
+      "census_prevalence": null,
+      "strata": [
+        {
+          "stratum_index": 1,
+          "stratum_population": 10,
+          "stratum_sample": 10,
+          "owned_domain_units": 10,
+          "owned_sample_positive": 0,
+          "owned_sample_missing": 10,
+          "known_union_positive": 0,
+          "known_union_negative": 0,
+          "alpha": {
+            "numerator": 1,
+            "denominator": 2880
+          },
+          "count_interval": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "yes",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "no",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "yes",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "no",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "could_matter",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "unlikely_to_matter",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:entity",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:number",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:negation",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:time",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:assertion",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:other",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "yes",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "no",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "yes",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "no",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "could_matter",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "unlikely_to_matter",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:entity",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:number",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:negation",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:time",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:assertion",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:other",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "yes",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "no",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "yes",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "no",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "could_matter",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "unlikely_to_matter",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:entity",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:number",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:negation",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:time",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:assertion",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:other",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "yes",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "no",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "yes",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "no",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "could_matter",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "unlikely_to_matter",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:entity",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:number",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:negation",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:time",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:assertion",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "askubuntu",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:other",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "yes",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "no",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "yes",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "no",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "could_matter",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "unlikely_to_matter",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:entity",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:number",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:negation",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:time",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:assertion",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:other",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "yes",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "no",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "yes",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "no",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "could_matter",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "unlikely_to_matter",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:entity",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:number",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:negation",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:time",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:assertion",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:other",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "yes",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "no",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "yes",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "no",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "could_matter",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "unlikely_to_matter",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:entity",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:number",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:negation",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:time",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:assertion",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:other",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "yes",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "no",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "yes",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "no",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "could_matter",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "unlikely_to_matter",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "uncertain",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "no_majority",
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:entity",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:number",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:negation",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:time",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:assertion",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    },
+    {
+      "corpus": "cc_news",
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:other",
+      "category": 1,
+      "frame_units": 0,
+      "count_interval": null,
+      "prevalence_interval": null,
+      "observed_units": 0,
+      "point_estimate_identified": false,
+      "strata": []
+    }
+  ],
+  "equal_corpus_balanced": [
+    {
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "no",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "no_majority",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "uncertain",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "yes",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "no",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "no_majority",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "uncertain",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "yes",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:assertion",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:entity",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:negation",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:number",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:other",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:time",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "could_matter",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "no_majority",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "uncertain",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "unlikely_to_matter",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "no",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "no_majority",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "uncertain",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "yes",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "no",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "no_majority",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "uncertain",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "yes",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:assertion",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:entity",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:negation",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:number",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:other",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:time",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "could_matter",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "no_majority",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "uncertain",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "former_neighborhood",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "unlikely_to_matter",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "no",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "no_majority",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "uncertain",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "consequential_distinction",
+      "category": "yes",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "no",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "no_majority",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "uncertain",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinct_information",
+      "category": "yes",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:assertion",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:entity",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:negation",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:number",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:other",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "distinction_type:time",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "could_matter",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "no_majority",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "uncertain",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "complete_original_context",
+      "question": "task_relevance",
+      "category": "unlikely_to_matter",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "no",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "no_majority",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "uncertain",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "consequential_distinction",
+      "category": "yes",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "no",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "no_majority",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "uncertain",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinct_information",
+      "category": "yes",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:assertion",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:entity",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:negation",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:number",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:other",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "distinction_type:time",
+      "category": 1,
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "could_matter",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "no_majority",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "uncertain",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    },
+    {
+      "population": "nearest_surviving_selected",
+      "context_scope": "displayed_context_only",
+      "question": "task_relevance",
+      "category": "unlikely_to_matter",
+      "prevalence_interval": null,
+      "definition": "unweighted mean of the three specified corpus prevalences; no missing-corpus reweighting",
+      "inherits_same_simultaneous_event": true
+    }
+  ],
+  "code_sha256": "0deca3f4810b49b3bd4a08f7ef27a230190c5d04bfabe1dc19bf7be4190fc7d5",
+  "dependency_sha256": {
+    "phase5/human_analysis.py": "562d1987ae4116f37464ab9a649638bc45543c0eee4d1a5c1864dcdbb76b2f6b",
+    "phase5/context_audit.py": "fbb71af5ff848f910d44a5d90d63d3c02ff449a8e6bbf2bd978fc8c588431951",
+    "phase4/admission_audit.py": "422ad2ec7ca7ffa3c677566f71917161b73f4f76cdd445ce8ed2389a915700da"
+  },
+  "sha256": "253c6503e0eb86921e3288444faf4564580580efa9d8ae4d0ae24c81a3d537ef"
+}

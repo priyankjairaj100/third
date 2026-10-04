@@ -1,0 +1,102 @@
+{
+  "schema": "ccu-statistics-evidence-checks-1",
+  "scope": "software_metadata_fixtures_around_unchanged_saved_Civil_predictions",
+  "primary_evidence_created": false,
+  "worker_benchmarks_rerun": false,
+  "check_count": 22,
+  "checks": [
+    {
+      "check": "bound_saved_predictions_pass",
+      "passed": true
+    },
+    {
+      "check": "relabelled_identity_rejected",
+      "passed": true
+    },
+    {
+      "check": "wrong_job_rejected",
+      "passed": true
+    },
+    {
+      "check": "omitted_record_rejected",
+      "passed": true
+    },
+    {
+      "check": "omitted_binding_rejected",
+      "passed": true
+    },
+    {
+      "check": "omitted_compiled_outcome_rejected",
+      "passed": true
+    },
+    {
+      "check": "omitted_planned_cell_rejected",
+      "passed": true
+    },
+    {
+      "check": "source_partition_override_rejected",
+      "passed": true
+    },
+    {
+      "check": "source_kind_override_rejected",
+      "passed": true
+    },
+    {
+      "check": "decision_threshold_override_rejected",
+      "passed": true
+    },
+    {
+      "check": "prediction_mutation_rejected",
+      "passed": true
+    },
+    {
+      "check": "unbound_success_status_rejected",
+      "passed": true
+    },
+    {
+      "check": "failed_rows_preserve_denominator_without_output_acceptance",
+      "passed": true
+    },
+    {
+      "check": "unplanned_system_receipt_rejected",
+      "passed": true
+    },
+    {
+      "check": "paired_receipts_and_repeat_averaging_pass",
+      "passed": true
+    },
+    {
+      "check": "wrong_method_receipt_rejected",
+      "passed": true
+    },
+    {
+      "check": "reused_receipt_rejected",
+      "passed": true
+    },
+    {
+      "check": "omitted_timing_repeat_rejected",
+      "passed": true
+    },
+    {
+      "check": "wrong_repeat_mean_rejected",
+      "passed": true
+    },
+    {
+      "check": "mismatched_saved_requests_rejected",
+      "passed": true
+    },
+    {
+      "check": "failed_pair_keeps_trajectory_unavailable",
+      "passed": true
+    },
+    {
+      "check": "accepted_label_hash_override_rejected",
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "source_sha256": {
+    "statistics_evidence.py": "b3f7521de3b9a98be358fb4c3bb5c16e5c8d2ad4bf503136e761c41c201fa56c",
+    "check_statistics_evidence.py": "37a345fb22c501ab65ab0aba6eb97437de737cb8bc450484fe415abe31dd68e6"
+  }
+}

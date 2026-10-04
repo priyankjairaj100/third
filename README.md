@@ -6,11 +6,25 @@ Research workspace for **counterfactual repair after semantic data curation**, t
 
 ## Current status — 4 October 2026
 
-Theory, memory qualifications, strict certification and the Phase 3–5 preparation and method software are available. Phase 5 adds compact CSR baselines, all main summary methods, actual isolated repair workers, a pinned SemDeDup adapter, multioutput convex repair, boundary/replication tools and analysis workflows. **The primary semantic study has not started.** Authentic source-rich corpora, real E5/MPNet assets/runtime and genuine independent human responses are still absent; real-backend acceptance and the final primary execution lock remain outstanding.
+Phase 6 completes the remaining experiment routes and adds source replay, measurement, and inference checks.
+It resolves the 21 prior recipe obligations prospectively.
+The final results and limits are in the [completion ledger](empirical_execution/phase6/COMPLETION_LEDGER.md).
 
-The new isolated natural-text development matrix completed **216 jobs**. Independent audit checked **1,080 original/repaired heads**, with maximum difference **9.44e-16**. All workers enforced the declared no-new-input boundary using kernel seccomp TSYNC. These results use the reused Civil100 lexical preview, not semantic embeddings or genuine source-withdrawal experiments. Compact eligible payload remains smaller than joint-span/dense summaries on this fixture, and no paper speedup is claimed.
+**The primary semantic study has not started.**
+Original source-rich corpora, real encoder assets, and genuine human responses remain unavailable.
+See [required inputs](empirical_execution/phase6/REQUIRED_INPUTS.md).
+No external compute or human collection was started.
 
-See the [Phase 5 README](empirical_execution/phase5/README.md), [completion ledger](empirical_execution/phase5/COMPLETION_LEDGER.md) and [current status](empirical_execution/CURRENT_STATUS.json). They distinguish tested software, natural-text engineering evidence, unexecuted scientific work and remaining inputs. Historical Phase 4 results and its TODO file are preserved unchanged.
+The available natural checks reuse Civil100 with lexical features.
+They verify software within that scope.
+They do not establish semantic task value, source withdrawal effects, or a publication speedup.
+The earlier memory finding remains unfavorable to large summaries.
+Compact eligible payload remains the essential comparator.
+
+The [Phase 6 README](empirical_execution/phase6/README.md) identifies current code and result files.
+The [machine-readable status](empirical_execution/CURRENT_STATUS.json) separates completed software from missing scientific evidence.
+Earlier phases remain unchanged.
+Their results and failures retain their original scope.
 
 ## Read in this order
 
@@ -19,7 +33,7 @@ See the [Phase 5 README](empirical_execution/phase5/README.md), [completion ledg
 3. [Current machine-readable status](empirical_execution/CURRENT_STATUS.json).
 4. [Empirical protocol source](output/empirical_program/counterfactual_curation_empirical_protocol.tex) and [study design](output/empirical_program/study_design.json).
 5. [Phase 3 preparation README](empirical_execution/phase3/README.txt), [prospective amendment](empirical_execution/phase3/PREPARATION_AMENDMENT.txt), and [independent review](empirical_execution/phase3/independent_review.txt).
-6. [Phase 5 methods and integrations](empirical_execution/phase5/README.md), [completion ledger](empirical_execution/phase5/COMPLETION_LEDGER.md), and final independent audit; Phase 4 documents remain historical context.
+6. [Phase 6 implementation](empirical_execution/phase6/README.md), [completion ledger](empirical_execution/phase6/COMPLETION_LEDGER.md), and final independent audit. Earlier phases remain historical context.
 
 The original protocol's narrative resolves omissions in the compact JSON. Later explicit corrections and qualifications supersede older drafts only within their stated scope. Historical results remain historical.
 
@@ -40,6 +54,7 @@ The original protocol's narrative resolves omissions in the compact JSON. Later 
 | `empirical_execution/phase3/` | Source panels, shared scorer, calibration, exact quality gate, intake v2, CLI and audits |
 | `empirical_execution/phase4/` | Original-schema adapters, offline encoding, task choices, request manifests, engineering comparison, systems harness and explicitly tracked unfinished integrations |
 | `empirical_execution/phase5/` | Compact and summary method services, kernel access boundary, numerical/convex/refit/replication/analysis integrations, natural development matrix and final review |
+| `empirical_execution/phase6/` | Complete routes, source acceptance, precision variants, measured workers, exact verification, human inference, and independent review |
 | `empirical_execution/archive/` | Superseded pilot outputs retained for provenance |
 | `BACKUP_MANIFEST.json` | File sizes, SHA256 checksums and backup exclusions |
 | `BACKUP_AUDIT.md` | Backup scope and public-data handling review |
@@ -61,7 +76,7 @@ python3 -m empirical_execution.phase4.check_systems
 
 Read the phase-specific instructions before running long experiments. Several checks write result files; run in an isolated checkout when preserving the original snapshot. The compiled GMP helper is platform-dependent; its source and build/fallback instructions are included.
 
-For continuation, acquire and accept the actual source-rich files and pinned local semantic assets, then execute the blinded selection/independent validation workflow with genuine humans. Use the Phase 5 completion ledger and study registry to resolve final acceptance, recipe and instrumentation requirements. Completed code and a checksum inventory do not establish scientific input authenticity or complete these experiments.
+For continuation, acquire and accept the actual source-rich files and pinned local semantic assets, then execute the blinded selection/independent validation workflow with genuine humans. Use the Phase 6 ledger, recipe book, and dispatcher for current acceptance and execution requirements. Completed code and a checksum inventory do not establish scientific input authenticity or complete these experiments.
 
 ## Backup scope
 

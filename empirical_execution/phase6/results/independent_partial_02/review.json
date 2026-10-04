@@ -1,0 +1,56 @@
+{
+  "schema": "ccu-phase6-independent-review-1",
+  "status": "incomplete_review",
+  "check_count": 18,
+  "checks": [
+    "human exact hypergeometric tails independently enumerated",
+    "human finite-population coverage independently enumerated",
+    "human arbitrary missingness preserves every complete-data interval",
+    "human no sample gives complete unidentified count range",
+    "human census gives exact count",
+    "human overlapping-route owner construction has exact design coverage",
+    "human fractional count rejected",
+    "human impossible missing count rejected",
+    "human zero alpha rejected",
+    "B-F target and FP32 own precision checked across record/source subsets",
+    "B-F and FP32 snapshots preserve their own target and precision",
+    "FP32 uses the unchanged common residual gate",
+    "B-F malformed mixed request is atomic",
+    "B-F malformed request leaves identical snapshot",
+    "B-F repeated request consumes no new budget",
+    "state inventory counts array roots once",
+    "state inventory keeps allocator and physical traffic unknown",
+    "serialization member bytes plus headers reconcile"
+  ],
+  "sections": {
+    "human_intervals": {
+      "evidence_role": "mathematical software checks",
+      "independent_tail_comparisons": 9098,
+      "independent_coverage_cases": 818,
+      "least_observed_exact_coverage": "425/462",
+      "overlapping_route_coverage_cases": 32,
+      "actual_human_responses_created": 0
+    },
+    "methods_and_measurements": {
+      "evidence_role": "algebraic software checks",
+      "states": 34,
+      "maximum_FP32_dyadic_moment_error": 0.0,
+      "residual_tolerance_unchanged": 1e-10,
+      "physical_memory_traffic_measured": false
+    }
+  },
+  "reviewed_sources": {
+    "empirical_execution/phase6/audit_independent.py": "c1a871686b86d19d93f8a73e0d898aca261e52e59daf73c55b8d343afcc53716",
+    "empirical_execution/phase6/dispatch.py": "05b17df46b39058fa54f24cfc17806d08cc59a49c8b2123be75cfed9443015d6",
+    "empirical_execution/phase6/human_inference.py": "a37237670ca51cf42c4ef012b2695d346598d39c641619b3ff0796fbc484efce",
+    "empirical_execution/phase6/logistic_selection.py": "8225138da7e69b36d7d416e6354a6ff2a1d05adf32b167de313bbb764fe59901",
+    "empirical_execution/phase6/measurement.py": "8e3c62f16c02a9cc370ef7060fcc61360b25cb00a720bc685bcc984ef213530c",
+    "empirical_execution/phase6/methods.py": "14cf6964f9b6dfbb27b4e03c96ebbf2848d5228778ff1d9ac8e2b126b0cd6f72",
+    "empirical_execution/phase6/run_isolated.py": "64c3b66334b6e9e6a6c05d7992baec5b18e5ecf9bed0b1ad14392c376ecea485",
+    "empirical_execution/phase6/workers.py": "a40e7c7142498225bbc88c92d653831d533c153f9ec480475ce77614b57ad3d7"
+  },
+  "primary_semantic_study_completed": false,
+  "authentic_data_provenance_verified": false,
+  "genuine_human_collection_verified": false,
+  "scope": "Independent mathematical and software checks only"
+}

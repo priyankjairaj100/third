@@ -1,7 +1,7 @@
 {
   "date": "2026-10-04",
   "scope": "current status supplement; older STATUS.json describes an earlier run",
-  "stage": "phase5_component_integrations_and_isolated_natural_engineering_complete_primary_acceptance_blocked",
+  "stage": "phase6_checked_checkpoint_paused_by_user_primary_inputs_unavailable",
   "all_computation_local": true,
   "synthetic_empirical_data": false,
   "strict_mode_completed_previously": {
@@ -9,8 +9,8 @@
     "history_comparisons": 10,
     "result": "canonical_results/summary.json"
   },
-  "next_required_inputs": "phase5/README.md",
-  "primary_asset_readiness": "phase5/results/study_registry_release/preflight.json",
+  "next_required_inputs": "phase6/REQUIRED_INPUTS.md",
+  "primary_asset_readiness": "phase6/results/access_recheck.json",
   "no_background_jobs": true,
   "previous_phase2_development": {
     "status": "completed_development_not_confirmation",
@@ -60,7 +60,7 @@
     "primary_threshold_selected": false,
     "primary_quality_gate_passed": false
   },
-  "todo_ledger": "phase5/COMPLETION_LEDGER.md",
+  "todo_ledger": "phase6/COMPLETION_LEDGER.md",
   "all_research_todos_complete": false,
   "primary_semantic_study_started": false,
   "actual_human_ratings": 0,
@@ -309,12 +309,88 @@
     }
   },
   "remaining_requirements": [
-    "Authentic original source-rich corpora, complete archive/calendar/source/rights acceptance",
-    "Pinned local E5/MPNet assets and real runtime execution or independently accepted cache lineage",
-    "Official torch/Faiss SemDeDup backend acceptance on authentic 5k panels",
-    "Genuine independently collected threshold/validation and interpretation responses",
-    "Disjoint development-derived precision/resource/refit choices and final protocol lock",
-    "Resolve 21 registry recipe/input obligations and remaining exact cost instrumentation scope",
-    "Exercise final study-wide primary acceptance/activation and full natural semantic/source matrix"
-  ]
+    "Authentic original source-rich corpora and reviewed archive coverage",
+    "Pinned local E5 and MPNet files with compatible runtime and full replay",
+    "Official torch and Faiss backend acceptance on real panels",
+    "Genuine independent threshold, validation, and admission responses",
+    "Disjoint development measurements and resulting configuration locks",
+    "Accepted primary execution and the complete natural semantic study"
+  ],
+  "pause_requested_by_user": true,
+  "phase6_summary": {
+    "scope": "Completed software and natural-preview lexical engineering; primary semantic study unstarted",
+    "recipes": {
+      "checks": 44,
+      "resolved_obligations": 21,
+      "planned_jobs": 21332,
+      "executed_primary_jobs": 0,
+      "registry": "phase6/results/recipes_release"
+    },
+    "acceptance": {
+      "checks": 85,
+      "actual_original_archive_acceptance": false,
+      "actual_transformer_replay": false
+    },
+    "workers": {
+      "checks": 1708,
+      "services": 98,
+      "restricted_releases": 196,
+      "saved_head_recheck_checks": 857,
+      "saved_heads": 294,
+      "summary": "phase6/results/worker_final_summary.json"
+    },
+    "dispatcher": {
+      "checks": 31,
+      "planned_engineering_jobs": 38,
+      "completed": 17,
+      "unavailable": 18,
+      "missing_inputs": 3,
+      "head_checks": 84,
+      "state_checkpoints": 36,
+      "coefficient_coordinates": 66198,
+      "report": "phase6/results/dispatch_release_v3/checks.json"
+    },
+    "extensions": {
+      "checks": 48,
+      "route_classes": 16,
+      "natural_positive_classes": 10,
+      "primary_positive_classes": 0,
+      "report": "phase6/results/extensions_release_v3/checks.json"
+    },
+    "statistics_evidence": {
+      "checks": 22,
+      "report": "phase6/results/statistics_evidence_checks_v2.json"
+    },
+    "state_audit": {
+      "checks": 10,
+      "methods": 8,
+      "states": 32,
+      "coefficient_coordinates": 1801800,
+      "report": "phase6/results/state_audit_release_v3/checks.json",
+      "separate_transition_contract_checks": 1104,
+      "transition_report": "phase6/results/state_audit_semantics_release_v2/checks.json",
+      "scope": "Exact symbolic construction and declared floating diagnostics; separate audit worker snapshots; no private original intermediate-state exposure"
+    },
+    "human_inference": {
+      "checks": 15,
+      "exact_coverage_cases": 284,
+      "blank_admission_assignments": 132,
+      "actual_responses": 0
+    },
+    "logistic_selection_checks": 14,
+    "dyadic_convex": {
+      "comparison_process_runs": 40,
+      "rational_endpoints_unchanged": true,
+      "metadata_erratum_checks": 10,
+      "native_primary_run": false
+    },
+    "independent_review": {
+      "checks": 244,
+      "status": "passed_scoped_independent_review",
+      "report": "phase6/results/independent_final/review.json",
+      "sha256": "e1a2a1829aa08d1127f81f7daee1846b024e5252709a51c6a6c7545882451927"
+    },
+    "next_action": "Read the handoff and required input list; obtain authentic inputs before further primary execution",
+    "no_primary_or_paper_completion_claim": true
+  }
 }

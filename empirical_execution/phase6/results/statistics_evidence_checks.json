@@ -1,0 +1,74 @@
+{
+  "schema": "ccu-statistics-evidence-checks-1",
+  "scope": "software_metadata_fixtures_around_unchanged_saved_Civil_predictions",
+  "primary_evidence_created": false,
+  "worker_benchmarks_rerun": false,
+  "check_count": 15,
+  "checks": [
+    {
+      "check": "bound_saved_predictions_pass",
+      "passed": true
+    },
+    {
+      "check": "relabelled_identity_rejected",
+      "passed": true
+    },
+    {
+      "check": "wrong_job_rejected",
+      "passed": true
+    },
+    {
+      "check": "omitted_record_rejected",
+      "passed": true
+    },
+    {
+      "check": "omitted_binding_rejected",
+      "passed": true
+    },
+    {
+      "check": "omitted_compiled_outcome_rejected",
+      "passed": true
+    },
+    {
+      "check": "omitted_planned_cell_rejected",
+      "passed": true
+    },
+    {
+      "check": "source_partition_override_rejected",
+      "passed": true
+    },
+    {
+      "check": "source_kind_override_rejected",
+      "passed": true
+    },
+    {
+      "check": "decision_threshold_override_rejected",
+      "passed": true
+    },
+    {
+      "check": "prediction_mutation_rejected",
+      "passed": true
+    },
+    {
+      "check": "unbound_success_status_rejected",
+      "passed": true
+    },
+    {
+      "check": "failed_rows_preserve_denominator_without_output_acceptance",
+      "passed": true
+    },
+    {
+      "check": "unplanned_system_receipt_rejected",
+      "passed": true
+    },
+    {
+      "check": "accepted_label_hash_override_rejected",
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "source_sha256": {
+    "statistics_evidence.py": "8b68dd4a1b533356059d44b8a4575c67c5bd9f3dd8e5908daf5207a918903d81",
+    "check_statistics_evidence.py": "1b607f63b611ebd38f23a57c873d67537a48c22b5b5238d59362f9c2ed9874b6"
+  }
+}

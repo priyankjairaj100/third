@@ -1,0 +1,45 @@
+{
+  "schema": "ccu-dyadic-memory-metadata-erratum-v1",
+  "status": "passed",
+  "checks": {
+    "original_source_bytes_preserved": true,
+    "shared_reference_counterexample_is_explicit": true,
+    "metric_is_descriptive_shallow_sum": true,
+    "natural_joint_bounds_unchanged": true,
+    "natural_gradient_endpoints_unchanged": true,
+    "counter_value_unchanged_only_description_corrected": true,
+    "incorrect_lower_bound_key_removed": true,
+    "new_scope_disclaims_total_memory_bounds": true,
+    "empty_shared_zero_arithmetic_unchanged": true,
+    "all_40_historical_timing_runs_bind_preserved_source": true
+  },
+  "passed": 10,
+  "total": 10,
+  "historical_source_path": "phase6/history/dyadic_metadata_v1/dyadic_convex.py",
+  "historical_source_sha256": "eaf003048efdf9e59975f5a1e2ba26e646a362b8fc68862c1aab0447448e13f1",
+  "corrected_source_sha256": "f160229da54c19f38fcb9a965913a64574b7b02bbb585b304606ece017342293",
+  "focused_check_sha256": "64be22017263a16e4421c9f17b8d4454ec955c7bd5c2e6f669d6ccc2f6694247",
+  "natural_candidate_sha256": "b761bd71403af73f258e81f8e05a8f901a2119fec87d510d96792c453d428fc9",
+  "correction": "Rename the shallow referenced-byte sum; shared objects can count repeatedly. It is not a lower bound on memory.",
+  "arithmetic_or_sigmoid_changed": false,
+  "timing_benchmarks_repeated": false,
+  "historical_timing_reports_modified": false,
+  "historical_reports": [
+    {
+      "directory": "phase6/results/dyadic_convex_release",
+      "checks_sha256": "4489e9508462c4f9008ec75832149ee583ef7016380abdf9d4be81814c93aef6",
+      "runs_sha256": "45365d1871263e6d201ccfcc58767ca6ae2d4e054bcc788f8bee21e676673dc9"
+    },
+    {
+      "directory": "phase6/results/dyadic_dense_release",
+      "checks_sha256": "43bad3332792bb8a48b56b69e67c23c5756b5e792fb12e93f5c7c2d4ba332bdb",
+      "runs_sha256": "12f6f6a8024f745e010a5f1e5dc4818dee4a6a366cde09fb6a8c235d884d1bf2"
+    },
+    {
+      "directory": "phase6/results/dyadic_dense_scalar_release",
+      "checks_sha256": "aa11ed14fd8f9e1fa1438fa6942201330a336fe8c6f1264fd296d2af2c859cac",
+      "runs_sha256": "14855e16c6771ab42cffba41b63edb74548722bf2c7b3d7367bcb98ce6cf832d"
+    }
+  ],
+  "focused_checks_are_new_timing_evidence": false
+}

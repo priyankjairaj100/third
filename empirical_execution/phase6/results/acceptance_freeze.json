@@ -1,0 +1,15 @@
+{
+  "schema": "ccu-phase6-acceptance-freeze-1",
+  "status": "component_source_and_checks_frozen_pending_consolidated_independent_review",
+  "checks": 85,
+  "passed": true,
+  "actual_source_archive_acceptance_executed": false,
+  "actual_transformer_cache_replay_executed": false,
+  "primary_execution_allowed": false,
+  "files": {
+    "acceptance.py": "c324b08f3aa64cf06fa394743edea0a52209928dc4457d15f72cac5f135a2d8f",
+    "check_acceptance.py": "34c14ff92084ede2db66fa16459d59a259ee1c247e87ff45255fd76ff294a48e",
+    "ACCEPTANCE_README.md": "88ecd3bc5212f36c3e25a2241677f925504a4032fe3cad4a7bedef75731c4a44",
+    "results/acceptance_checks.json": "bb55e0f6503f16b5c269a837948c423d8c772158c1c34ec9b2373400cbf678a7"
+  }
+}

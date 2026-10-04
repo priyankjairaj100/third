@@ -1,0 +1,45 @@
+{
+  "schema": "ccu-human-inference-checks-v1",
+  "status": "passed",
+  "checks": {
+    "exact_small_population_coverage": true,
+    "arbitrary_missingness_never_narrows_complete_interval": true,
+    "census_is_exact": true,
+    "blank_census_unidentified": true,
+    "empty_sample_unidentified": true,
+    "exact_tail_matches_manual": true,
+    "overlap_deduplicated_known_union_constraints": true,
+    "pair_actual_zero_human_responses": true,
+    "pair_blank_nonempty_frames_have_full_intervals": true,
+    "pair_empty_frames_remain_undefined": true,
+    "pair_missing_corpora_not_reweighted": true,
+    "context_actual_zero_human_responses": true,
+    "context_blank_nonempty_frames_have_full_intervals": true,
+    "context_empty_frames_remain_undefined": true,
+    "context_missing_corpora_not_reweighted": true
+  },
+  "passed": 15,
+  "total": 15,
+  "exact_coverage_cases": 284,
+  "minimum_coverage_at_nominal_90_percent": "20/21",
+  "actual_blank_packs": {
+    "pair": {
+      "manifest_sha256": "469578fc39b9986715a764751b2e76ed173a8c344dfcf2beef4622db11b32fc1",
+      "nonempty_endpoints": 84,
+      "actual_human_responses": 0,
+      "per_report_alpha": "1/40"
+    },
+    "context": {
+      "manifest_sha256": "8bec5ba6d05cf78633c94d457c0920097cfb965b3b6abd4b8efded99a239e829",
+      "nonempty_endpoints": 72,
+      "actual_human_responses": 0,
+      "per_report_alpha": "1/40"
+    }
+  },
+  "software_fixtures_are_empirical_data": false,
+  "human_collection_performed": false,
+  "source_sha256": {
+    "check_human_inference.py": "9b40aa82f4aeac064db6bfd1325496f91791a063e210abe4211e09043fc7435a",
+    "human_inference.py": "0deca3f4810b49b3bd4a08f7ef27a230190c5d04bfabe1dc19bf7be4190fc7d5"
+  }
+}

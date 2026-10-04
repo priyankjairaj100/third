@@ -114,3 +114,28 @@ explicitly retains missing authentic data/model/human inputs, real-backend and
 primary activation acceptance, prospective recipe obligations and measurement
 limits. The final GitHub tree/backup-manifest check establishes preservation,
 not an ACL-ready empirical study.
+
+
+## Phase 6 preservation checkpoint — 4 October 2026
+
+The user requested a pause and a complete checkpoint for another chat.
+No new scientific work was started after that request.
+The already-running independent audit finished with 244 passed checks.
+Phase 6 preserves all authored code, reports, recipe decisions, input requirements, and source-bound audit evidence.
+The primary semantic study remains unstarted.
+
+Verbose result directories are preserved as complete deterministic tar/gzip archives.
+Each adjacent JSON manifest records every member, byte count, and SHA256 hash.
+The archive tool verifies every saved member and refuses differing restoration targets.
+Loose duplicate directories remain locally available but are excluded from Git.
+No failed or interrupted result is replaced by a later successful run.
+The archive inventory is recorded in phase6/results/archive_checkpoint_inventory.json.
+
+The publication scan covers new project files and recursively decompressed archive members.
+It checks excluded News-body fingerprints and common credential patterns.
+Its report is phase6/results/publication_content_audit.json.
+This targeted scan does not establish universal absence or corpus authenticity.
+The final BACKUP_MANIFEST and remote tree are verified separately during publishing.
+
+Real corpora, model files, human ratings, and primary execution remain absent.
+See RESUME_CONTEXT.md and phase6/COMPLETION_LEDGER.md for continuation.

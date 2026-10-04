@@ -1,0 +1,13 @@
+{
+  "schema": "ccu-dyadic-memory-erratum-check-history-v1",
+  "attempts": [
+    {
+      "status": "failed_check_logic",
+      "reason": "The first focused audit incorrectly required original comparator reports to use the historical dyadic source hash.",
+      "correction": "Check dyadic reports against the preserved dyadic source. Check original reports against their unchanged scalar and multioutput source hashes.",
+      "certificate_arithmetic_changed": false,
+      "historical_timing_reports_changed": false
+    }
+  ],
+  "final_result": "dyadic_metadata_erratum.json"
+}

@@ -1,0 +1,5679 @@
+{
+  "schema": "ccu-worker-head-evaluator-correction-1",
+  "all_passed": true,
+  "old_result_sha256": "60948fc7c9ec4e8a5646c9624b907d2b9dc75a477fd0d712a7831535b66bd8f0",
+  "old_evaluator_sha256": "f6b380565b3e9cc3b9cfd7569f6035e97ac2f7a3e80c0585ff436bc434bf74ea",
+  "old_evaluator_preserved_sha256": "f6b380565b3e9cc3b9cfd7569f6035e97ac2f7a3e80c0585ff436bc434bf74ea",
+  "corrected_evaluator_sha256": "da4339b6bace85be8968fa2a382e28e220c576c9027cbeef32861bcd661a0589",
+  "recheck_source_sha256": "2438117cd6eafac05019bf30866a4f55dbe37a508f7c2a6008de4ff118d989ca",
+  "worker_production_sources_unchanged": true,
+  "original_archive_modified": false,
+  "service_rerun": false,
+  "head_count": 294,
+  "checkpoint_count": 196,
+  "check_count": 857,
+  "checks": [
+    {
+      "case": "000_16_B-E_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "000_16_B-E_cholesky_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "000_16_B-E_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "000_16_B-E_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "000_16_B-E_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "000_16_B-E_cholesky_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "000_16_B-E_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "000_16_B-E_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "000_16_B-E_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "000_16_B-E_cholesky_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "001_16_B-A_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "001_16_B-A_cholesky_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "001_16_B-A_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "001_16_B-A_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "001_16_B-A_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "001_16_B-A_cholesky_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "001_16_B-A_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "001_16_B-A_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "001_16_B-A_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "001_16_B-A_cholesky_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "002_16_P-I_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "002_16_P-I_cholesky_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "002_16_P-I_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "002_16_P-I_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "002_16_P-I_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "002_16_P-I_cholesky_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "002_16_P-I_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "002_16_P-I_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "002_16_P-I_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "002_16_P-I_cholesky_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "003_16_P-S_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "003_16_P-S_cholesky_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "003_16_P-S_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "003_16_P-S_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "003_16_P-S_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "003_16_P-S_cholesky_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "003_16_P-S_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "003_16_P-S_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "003_16_P-S_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "003_16_P-S_cholesky_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "004_16_P-R_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "004_16_P-R_cholesky_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "004_16_P-R_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "004_16_P-R_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "004_16_P-R_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "004_16_P-R_cholesky_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "004_16_P-R_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "004_16_P-R_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "004_16_P-R_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "004_16_P-R_cholesky_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "005_16_P-I-jointspan_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "005_16_P-I-jointspan_cholesky_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "005_16_P-I-jointspan_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "005_16_P-I-jointspan_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "005_16_P-I-jointspan_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "005_16_P-I-jointspan_cholesky_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "005_16_P-I-jointspan_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "005_16_P-I-jointspan_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "005_16_P-I-jointspan_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "005_16_P-I-jointspan_cholesky_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "006_16_B-E-compact_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "006_16_B-E-compact_cholesky_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "006_16_B-E-compact_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "006_16_B-E-compact_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "006_16_B-E-compact_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "006_16_B-E-compact_cholesky_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "006_16_B-E-compact_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "006_16_B-E-compact_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "006_16_B-E-compact_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "006_16_B-E-compact_cholesky_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "007_16_O-G_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "007_16_O-G_cholesky_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "007_16_O-G_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "007_16_O-G_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "007_16_O-G_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "007_16_O-G_cholesky_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "007_16_O-G_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "007_16_O-G_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "007_16_O-G_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "007_16_O-G_cholesky_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "008_16_O-T_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "008_16_O-T_cholesky_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "008_16_O-T_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "008_16_O-T_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "008_16_O-T_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "008_16_O-T_cholesky_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "008_16_O-T_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "008_16_O-T_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "008_16_O-T_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "008_16_O-T_cholesky_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "009_16_B-F_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "009_16_B-F_cholesky_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "009_16_B-F_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "009_16_B-F_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "009_16_B-F_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "009_16_B-F_cholesky_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "009_16_B-F_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "009_16_B-F_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "009_16_B-F_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "009_16_B-F_cholesky_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "010_16_O-G-FP32_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "010_16_O-G-FP32_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "010_16_O-G-FP32_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "010_16_O-G-FP32_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "010_16_O-G-FP32_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "010_16_O-G-FP32_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "010_16_O-G-FP32_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "011_16_O-T-FP32_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "011_16_O-T-FP32_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "011_16_O-T-FP32_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "011_16_O-T-FP32_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "011_16_O-T-FP32_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "011_16_O-T-FP32_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "011_16_O-T-FP32_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "012_16_B-E-FP32_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "012_16_B-E-FP32_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "012_16_B-E-FP32_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "012_16_B-E-FP32_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "012_16_B-E-FP32_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "012_16_B-E-FP32_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "012_16_B-E-FP32_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "013_16_B-A-FP32_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "013_16_B-A-FP32_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "013_16_B-A-FP32_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "013_16_B-A-FP32_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "013_16_B-A-FP32_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "013_16_B-A-FP32_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "013_16_B-A-FP32_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "014_16_P-I-FP32_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "014_16_P-I-FP32_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "014_16_P-I-FP32_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "014_16_P-I-FP32_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "014_16_P-I-FP32_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "014_16_P-I-FP32_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "014_16_P-I-FP32_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "015_16_P-S-FP32_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "015_16_P-S-FP32_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "015_16_P-S-FP32_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "015_16_P-S-FP32_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "015_16_P-S-FP32_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "015_16_P-S-FP32_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "015_16_P-S-FP32_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "016_16_P-R-FP32_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "016_16_P-R-FP32_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "016_16_P-R-FP32_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "016_16_P-R-FP32_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "016_16_P-R-FP32_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "016_16_P-R-FP32_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "016_16_P-R-FP32_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "017_16_B-F-FP32_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "017_16_B-F-FP32_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "017_16_B-F-FP32_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "017_16_B-F-FP32_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "017_16_B-F-FP32_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "017_16_B-F-FP32_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "017_16_B-F-FP32_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "018_16_O-G-cached_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "018_16_O-G-cached_cholesky_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "018_16_O-G-cached_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "018_16_O-G-cached_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "018_16_O-G-cached_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "018_16_O-G-cached_cholesky_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "018_16_O-G-cached_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "018_16_O-G-cached_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "018_16_O-G-cached_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "018_16_O-G-cached_cholesky_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "019_16_B-E_cholesky_warm_service",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "019_16_B-E_cholesky_warm_service",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "019_16_B-E_cholesky_warm_service",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "019_16_B-E_cholesky_warm_service",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "019_16_B-E_cholesky_warm_service",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "019_16_B-E_cholesky_warm_service",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "019_16_B-E_cholesky_warm_service",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "019_16_B-E_cholesky_warm_service",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "019_16_B-E_cholesky_warm_service",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "019_16_B-E_cholesky_warm_service",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "020_16_B-A_cholesky_warm_service",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "020_16_B-A_cholesky_warm_service",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "020_16_B-A_cholesky_warm_service",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "020_16_B-A_cholesky_warm_service",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "020_16_B-A_cholesky_warm_service",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "020_16_B-A_cholesky_warm_service",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "020_16_B-A_cholesky_warm_service",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "020_16_B-A_cholesky_warm_service",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "020_16_B-A_cholesky_warm_service",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "020_16_B-A_cholesky_warm_service",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "021_16_P-I_cholesky_warm_service",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "021_16_P-I_cholesky_warm_service",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "021_16_P-I_cholesky_warm_service",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "021_16_P-I_cholesky_warm_service",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "021_16_P-I_cholesky_warm_service",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "021_16_P-I_cholesky_warm_service",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "021_16_P-I_cholesky_warm_service",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "021_16_P-I_cholesky_warm_service",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "021_16_P-I_cholesky_warm_service",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "021_16_P-I_cholesky_warm_service",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "022_16_P-S_cholesky_warm_service",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "022_16_P-S_cholesky_warm_service",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "022_16_P-S_cholesky_warm_service",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "022_16_P-S_cholesky_warm_service",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "022_16_P-S_cholesky_warm_service",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "022_16_P-S_cholesky_warm_service",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "022_16_P-S_cholesky_warm_service",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "022_16_P-S_cholesky_warm_service",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "022_16_P-S_cholesky_warm_service",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "022_16_P-S_cholesky_warm_service",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "023_16_P-R_cholesky_warm_service",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "023_16_P-R_cholesky_warm_service",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "023_16_P-R_cholesky_warm_service",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "023_16_P-R_cholesky_warm_service",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "023_16_P-R_cholesky_warm_service",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "023_16_P-R_cholesky_warm_service",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "023_16_P-R_cholesky_warm_service",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "023_16_P-R_cholesky_warm_service",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "023_16_P-R_cholesky_warm_service",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "023_16_P-R_cholesky_warm_service",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "024_16_P-I-jointspan_cholesky_warm_service",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "024_16_P-I-jointspan_cholesky_warm_service",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "024_16_P-I-jointspan_cholesky_warm_service",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "024_16_P-I-jointspan_cholesky_warm_service",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "024_16_P-I-jointspan_cholesky_warm_service",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "024_16_P-I-jointspan_cholesky_warm_service",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "024_16_P-I-jointspan_cholesky_warm_service",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "024_16_P-I-jointspan_cholesky_warm_service",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "024_16_P-I-jointspan_cholesky_warm_service",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "024_16_P-I-jointspan_cholesky_warm_service",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "025_16_B-E-compact_cholesky_warm_service",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "025_16_B-E-compact_cholesky_warm_service",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "025_16_B-E-compact_cholesky_warm_service",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "025_16_B-E-compact_cholesky_warm_service",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "025_16_B-E-compact_cholesky_warm_service",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "025_16_B-E-compact_cholesky_warm_service",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "025_16_B-E-compact_cholesky_warm_service",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "025_16_B-E-compact_cholesky_warm_service",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "025_16_B-E-compact_cholesky_warm_service",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "025_16_B-E-compact_cholesky_warm_service",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "026_16_O-G_cholesky_warm_service",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "026_16_O-G_cholesky_warm_service",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "026_16_O-G_cholesky_warm_service",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "026_16_O-G_cholesky_warm_service",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "026_16_O-G_cholesky_warm_service",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "026_16_O-G_cholesky_warm_service",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "026_16_O-G_cholesky_warm_service",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "026_16_O-G_cholesky_warm_service",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "026_16_O-G_cholesky_warm_service",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "026_16_O-G_cholesky_warm_service",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "027_16_O-T_cholesky_warm_service",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "027_16_O-T_cholesky_warm_service",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "027_16_O-T_cholesky_warm_service",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "027_16_O-T_cholesky_warm_service",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "027_16_O-T_cholesky_warm_service",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "027_16_O-T_cholesky_warm_service",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "027_16_O-T_cholesky_warm_service",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "027_16_O-T_cholesky_warm_service",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "027_16_O-T_cholesky_warm_service",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "027_16_O-T_cholesky_warm_service",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "028_16_B-F_cholesky_warm_service",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "028_16_B-F_cholesky_warm_service",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "028_16_B-F_cholesky_warm_service",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "028_16_B-F_cholesky_warm_service",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "028_16_B-F_cholesky_warm_service",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "028_16_B-F_cholesky_warm_service",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "028_16_B-F_cholesky_warm_service",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "028_16_B-F_cholesky_warm_service",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "028_16_B-F_cholesky_warm_service",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "028_16_B-F_cholesky_warm_service",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "029_16_O-G-FP32_cholesky_warm_service",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "029_16_O-G-FP32_cholesky_warm_service",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "029_16_O-G-FP32_cholesky_warm_service",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "029_16_O-G-FP32_cholesky_warm_service",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "029_16_O-G-FP32_cholesky_warm_service",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "029_16_O-G-FP32_cholesky_warm_service",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "029_16_O-G-FP32_cholesky_warm_service",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "030_16_O-T-FP32_cholesky_warm_service",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "030_16_O-T-FP32_cholesky_warm_service",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "030_16_O-T-FP32_cholesky_warm_service",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "030_16_O-T-FP32_cholesky_warm_service",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "030_16_O-T-FP32_cholesky_warm_service",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "030_16_O-T-FP32_cholesky_warm_service",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "030_16_O-T-FP32_cholesky_warm_service",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "031_16_B-E-FP32_cholesky_warm_service",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "031_16_B-E-FP32_cholesky_warm_service",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "031_16_B-E-FP32_cholesky_warm_service",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "031_16_B-E-FP32_cholesky_warm_service",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "031_16_B-E-FP32_cholesky_warm_service",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "031_16_B-E-FP32_cholesky_warm_service",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "031_16_B-E-FP32_cholesky_warm_service",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "032_16_B-A-FP32_cholesky_warm_service",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "032_16_B-A-FP32_cholesky_warm_service",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "032_16_B-A-FP32_cholesky_warm_service",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "032_16_B-A-FP32_cholesky_warm_service",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "032_16_B-A-FP32_cholesky_warm_service",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "032_16_B-A-FP32_cholesky_warm_service",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "032_16_B-A-FP32_cholesky_warm_service",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "033_16_P-I-FP32_cholesky_warm_service",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "033_16_P-I-FP32_cholesky_warm_service",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "033_16_P-I-FP32_cholesky_warm_service",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "033_16_P-I-FP32_cholesky_warm_service",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "033_16_P-I-FP32_cholesky_warm_service",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "033_16_P-I-FP32_cholesky_warm_service",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "033_16_P-I-FP32_cholesky_warm_service",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "034_16_P-S-FP32_cholesky_warm_service",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "034_16_P-S-FP32_cholesky_warm_service",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "034_16_P-S-FP32_cholesky_warm_service",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "034_16_P-S-FP32_cholesky_warm_service",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "034_16_P-S-FP32_cholesky_warm_service",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "034_16_P-S-FP32_cholesky_warm_service",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "034_16_P-S-FP32_cholesky_warm_service",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "035_16_P-R-FP32_cholesky_warm_service",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "035_16_P-R-FP32_cholesky_warm_service",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "035_16_P-R-FP32_cholesky_warm_service",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "035_16_P-R-FP32_cholesky_warm_service",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "035_16_P-R-FP32_cholesky_warm_service",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "035_16_P-R-FP32_cholesky_warm_service",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "035_16_P-R-FP32_cholesky_warm_service",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "036_16_B-F-FP32_cholesky_warm_service",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "036_16_B-F-FP32_cholesky_warm_service",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "036_16_B-F-FP32_cholesky_warm_service",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "036_16_B-F-FP32_cholesky_warm_service",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "036_16_B-F-FP32_cholesky_warm_service",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "036_16_B-F-FP32_cholesky_warm_service",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "036_16_B-F-FP32_cholesky_warm_service",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "037_16_O-G-cached_cholesky_warm_service",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "037_16_O-G-cached_cholesky_warm_service",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "037_16_O-G-cached_cholesky_warm_service",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "037_16_O-G-cached_cholesky_warm_service",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "037_16_O-G-cached_cholesky_warm_service",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "037_16_O-G-cached_cholesky_warm_service",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "037_16_O-G-cached_cholesky_warm_service",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "037_16_O-G-cached_cholesky_warm_service",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "037_16_O-G-cached_cholesky_warm_service",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "037_16_O-G-cached_cholesky_warm_service",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "038_16_B-E_cholesky_every_release",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "038_16_B-E_cholesky_every_release",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "038_16_B-E_cholesky_every_release",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "038_16_B-E_cholesky_every_release",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "038_16_B-E_cholesky_every_release",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "038_16_B-E_cholesky_every_release",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "038_16_B-E_cholesky_every_release",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "038_16_B-E_cholesky_every_release",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "038_16_B-E_cholesky_every_release",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "038_16_B-E_cholesky_every_release",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "039_16_B-A_cholesky_every_release",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "039_16_B-A_cholesky_every_release",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "039_16_B-A_cholesky_every_release",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "039_16_B-A_cholesky_every_release",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "039_16_B-A_cholesky_every_release",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "039_16_B-A_cholesky_every_release",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "039_16_B-A_cholesky_every_release",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "039_16_B-A_cholesky_every_release",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "039_16_B-A_cholesky_every_release",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "039_16_B-A_cholesky_every_release",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "040_16_P-I_cholesky_every_release",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "040_16_P-I_cholesky_every_release",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "040_16_P-I_cholesky_every_release",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "040_16_P-I_cholesky_every_release",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "040_16_P-I_cholesky_every_release",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "040_16_P-I_cholesky_every_release",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "040_16_P-I_cholesky_every_release",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "040_16_P-I_cholesky_every_release",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "040_16_P-I_cholesky_every_release",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "040_16_P-I_cholesky_every_release",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "041_16_P-S_cholesky_every_release",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "041_16_P-S_cholesky_every_release",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "041_16_P-S_cholesky_every_release",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "041_16_P-S_cholesky_every_release",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "041_16_P-S_cholesky_every_release",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "041_16_P-S_cholesky_every_release",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "041_16_P-S_cholesky_every_release",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "041_16_P-S_cholesky_every_release",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "041_16_P-S_cholesky_every_release",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "041_16_P-S_cholesky_every_release",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "042_16_P-R_cholesky_every_release",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "042_16_P-R_cholesky_every_release",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "042_16_P-R_cholesky_every_release",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "042_16_P-R_cholesky_every_release",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "042_16_P-R_cholesky_every_release",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "042_16_P-R_cholesky_every_release",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "042_16_P-R_cholesky_every_release",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "042_16_P-R_cholesky_every_release",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "042_16_P-R_cholesky_every_release",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "042_16_P-R_cholesky_every_release",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "043_16_P-I-jointspan_cholesky_every_release",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "043_16_P-I-jointspan_cholesky_every_release",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "043_16_P-I-jointspan_cholesky_every_release",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "043_16_P-I-jointspan_cholesky_every_release",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "043_16_P-I-jointspan_cholesky_every_release",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "043_16_P-I-jointspan_cholesky_every_release",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "043_16_P-I-jointspan_cholesky_every_release",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "043_16_P-I-jointspan_cholesky_every_release",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "043_16_P-I-jointspan_cholesky_every_release",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "043_16_P-I-jointspan_cholesky_every_release",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "044_16_B-E-compact_cholesky_every_release",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "044_16_B-E-compact_cholesky_every_release",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "044_16_B-E-compact_cholesky_every_release",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "044_16_B-E-compact_cholesky_every_release",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "044_16_B-E-compact_cholesky_every_release",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "044_16_B-E-compact_cholesky_every_release",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "044_16_B-E-compact_cholesky_every_release",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "044_16_B-E-compact_cholesky_every_release",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "044_16_B-E-compact_cholesky_every_release",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "044_16_B-E-compact_cholesky_every_release",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "045_16_O-G_cholesky_every_release",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "045_16_O-G_cholesky_every_release",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "045_16_O-G_cholesky_every_release",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "045_16_O-G_cholesky_every_release",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "045_16_O-G_cholesky_every_release",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "045_16_O-G_cholesky_every_release",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "045_16_O-G_cholesky_every_release",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "045_16_O-G_cholesky_every_release",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "045_16_O-G_cholesky_every_release",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "045_16_O-G_cholesky_every_release",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "046_16_O-T_cholesky_every_release",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "046_16_O-T_cholesky_every_release",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "046_16_O-T_cholesky_every_release",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "046_16_O-T_cholesky_every_release",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "046_16_O-T_cholesky_every_release",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "046_16_O-T_cholesky_every_release",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "046_16_O-T_cholesky_every_release",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "046_16_O-T_cholesky_every_release",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "046_16_O-T_cholesky_every_release",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "046_16_O-T_cholesky_every_release",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "047_16_B-F_cholesky_every_release",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "047_16_B-F_cholesky_every_release",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "047_16_B-F_cholesky_every_release",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "047_16_B-F_cholesky_every_release",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "047_16_B-F_cholesky_every_release",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "047_16_B-F_cholesky_every_release",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "047_16_B-F_cholesky_every_release",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "047_16_B-F_cholesky_every_release",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "047_16_B-F_cholesky_every_release",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "047_16_B-F_cholesky_every_release",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "048_16_O-G-FP32_cholesky_every_release",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "048_16_O-G-FP32_cholesky_every_release",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "048_16_O-G-FP32_cholesky_every_release",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "048_16_O-G-FP32_cholesky_every_release",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "048_16_O-G-FP32_cholesky_every_release",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "048_16_O-G-FP32_cholesky_every_release",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "048_16_O-G-FP32_cholesky_every_release",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "049_16_O-T-FP32_cholesky_every_release",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "049_16_O-T-FP32_cholesky_every_release",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "049_16_O-T-FP32_cholesky_every_release",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "049_16_O-T-FP32_cholesky_every_release",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "049_16_O-T-FP32_cholesky_every_release",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "049_16_O-T-FP32_cholesky_every_release",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "049_16_O-T-FP32_cholesky_every_release",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "050_16_B-E-FP32_cholesky_every_release",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "050_16_B-E-FP32_cholesky_every_release",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "050_16_B-E-FP32_cholesky_every_release",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "050_16_B-E-FP32_cholesky_every_release",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "050_16_B-E-FP32_cholesky_every_release",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "050_16_B-E-FP32_cholesky_every_release",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "050_16_B-E-FP32_cholesky_every_release",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "051_16_B-A-FP32_cholesky_every_release",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "051_16_B-A-FP32_cholesky_every_release",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "051_16_B-A-FP32_cholesky_every_release",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "051_16_B-A-FP32_cholesky_every_release",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "051_16_B-A-FP32_cholesky_every_release",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "051_16_B-A-FP32_cholesky_every_release",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "051_16_B-A-FP32_cholesky_every_release",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "052_16_P-I-FP32_cholesky_every_release",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "052_16_P-I-FP32_cholesky_every_release",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "052_16_P-I-FP32_cholesky_every_release",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "052_16_P-I-FP32_cholesky_every_release",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "052_16_P-I-FP32_cholesky_every_release",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "052_16_P-I-FP32_cholesky_every_release",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "052_16_P-I-FP32_cholesky_every_release",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "053_16_P-S-FP32_cholesky_every_release",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "053_16_P-S-FP32_cholesky_every_release",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "053_16_P-S-FP32_cholesky_every_release",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "053_16_P-S-FP32_cholesky_every_release",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "053_16_P-S-FP32_cholesky_every_release",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "053_16_P-S-FP32_cholesky_every_release",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "053_16_P-S-FP32_cholesky_every_release",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "054_16_P-R-FP32_cholesky_every_release",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "054_16_P-R-FP32_cholesky_every_release",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "054_16_P-R-FP32_cholesky_every_release",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "054_16_P-R-FP32_cholesky_every_release",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "054_16_P-R-FP32_cholesky_every_release",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "054_16_P-R-FP32_cholesky_every_release",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "054_16_P-R-FP32_cholesky_every_release",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "055_16_B-F-FP32_cholesky_every_release",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "055_16_B-F-FP32_cholesky_every_release",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "055_16_B-F-FP32_cholesky_every_release",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "055_16_B-F-FP32_cholesky_every_release",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "055_16_B-F-FP32_cholesky_every_release",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "055_16_B-F-FP32_cholesky_every_release",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "055_16_B-F-FP32_cholesky_every_release",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "056_16_O-G-cached_cholesky_every_release",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "056_16_O-G-cached_cholesky_every_release",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "056_16_O-G-cached_cholesky_every_release",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "056_16_O-G-cached_cholesky_every_release",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "056_16_O-G-cached_cholesky_every_release",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "056_16_O-G-cached_cholesky_every_release",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "056_16_O-G-cached_cholesky_every_release",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "056_16_O-G-cached_cholesky_every_release",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "056_16_O-G-cached_cholesky_every_release",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "056_16_O-G-cached_cholesky_every_release",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "057_16_B-E_cg_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "057_16_B-E_cg_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "057_16_B-E_cg_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "057_16_B-E_cg_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "057_16_B-E_cg_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "057_16_B-E_cg_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "057_16_B-E_cg_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "057_16_B-E_cg_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "057_16_B-E_cg_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "057_16_B-E_cg_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "058_16_B-A_cg_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "058_16_B-A_cg_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "058_16_B-A_cg_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "058_16_B-A_cg_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "058_16_B-A_cg_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "058_16_B-A_cg_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "058_16_B-A_cg_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "058_16_B-A_cg_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "058_16_B-A_cg_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "058_16_B-A_cg_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "059_16_P-I_cg_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "059_16_P-I_cg_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "059_16_P-I_cg_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "059_16_P-I_cg_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "059_16_P-I_cg_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "059_16_P-I_cg_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "059_16_P-I_cg_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "059_16_P-I_cg_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "059_16_P-I_cg_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "059_16_P-I_cg_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "060_16_P-S_cg_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "060_16_P-S_cg_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "060_16_P-S_cg_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "060_16_P-S_cg_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "060_16_P-S_cg_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "060_16_P-S_cg_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "060_16_P-S_cg_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "060_16_P-S_cg_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "060_16_P-S_cg_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "060_16_P-S_cg_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "061_16_P-R_cg_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "061_16_P-R_cg_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "061_16_P-R_cg_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "061_16_P-R_cg_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "061_16_P-R_cg_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "061_16_P-R_cg_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "061_16_P-R_cg_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "061_16_P-R_cg_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "061_16_P-R_cg_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "061_16_P-R_cg_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "062_16_P-I-jointspan_cg_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "062_16_P-I-jointspan_cg_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "062_16_P-I-jointspan_cg_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "062_16_P-I-jointspan_cg_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "062_16_P-I-jointspan_cg_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "062_16_P-I-jointspan_cg_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "062_16_P-I-jointspan_cg_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "062_16_P-I-jointspan_cg_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "062_16_P-I-jointspan_cg_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "062_16_P-I-jointspan_cg_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "063_16_B-E-compact_cg_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "063_16_B-E-compact_cg_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "063_16_B-E-compact_cg_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "063_16_B-E-compact_cg_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "063_16_B-E-compact_cg_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "063_16_B-E-compact_cg_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "063_16_B-E-compact_cg_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "063_16_B-E-compact_cg_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "063_16_B-E-compact_cg_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "063_16_B-E-compact_cg_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "064_16_O-G_cg_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "064_16_O-G_cg_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "064_16_O-G_cg_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "064_16_O-G_cg_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "064_16_O-G_cg_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "064_16_O-G_cg_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "064_16_O-G_cg_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "064_16_O-G_cg_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "064_16_O-G_cg_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "064_16_O-G_cg_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "065_16_O-T_cg_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "065_16_O-T_cg_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "065_16_O-T_cg_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "065_16_O-T_cg_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "065_16_O-T_cg_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "065_16_O-T_cg_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "065_16_O-T_cg_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "065_16_O-T_cg_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "065_16_O-T_cg_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "065_16_O-T_cg_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "066_16_B-F_cg_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "066_16_B-F_cg_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "066_16_B-F_cg_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "066_16_B-F_cg_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "066_16_B-F_cg_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "066_16_B-F_cg_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "066_16_B-F_cg_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "066_16_B-F_cg_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "066_16_B-F_cg_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "066_16_B-F_cg_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "067_16_O-G-FP32_cg_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "067_16_O-G-FP32_cg_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "067_16_O-G-FP32_cg_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "067_16_O-G-FP32_cg_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "067_16_O-G-FP32_cg_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "067_16_O-G-FP32_cg_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "067_16_O-G-FP32_cg_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "068_16_O-T-FP32_cg_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "068_16_O-T-FP32_cg_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "068_16_O-T-FP32_cg_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "068_16_O-T-FP32_cg_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "068_16_O-T-FP32_cg_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "068_16_O-T-FP32_cg_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "068_16_O-T-FP32_cg_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "069_16_B-E-FP32_cg_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "069_16_B-E-FP32_cg_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "069_16_B-E-FP32_cg_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "069_16_B-E-FP32_cg_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "069_16_B-E-FP32_cg_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "069_16_B-E-FP32_cg_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "069_16_B-E-FP32_cg_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "070_16_B-A-FP32_cg_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "070_16_B-A-FP32_cg_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "070_16_B-A-FP32_cg_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "070_16_B-A-FP32_cg_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "070_16_B-A-FP32_cg_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "070_16_B-A-FP32_cg_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "070_16_B-A-FP32_cg_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "071_16_P-I-FP32_cg_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "071_16_P-I-FP32_cg_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "071_16_P-I-FP32_cg_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "071_16_P-I-FP32_cg_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "071_16_P-I-FP32_cg_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "071_16_P-I-FP32_cg_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "071_16_P-I-FP32_cg_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "072_16_P-S-FP32_cg_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "072_16_P-S-FP32_cg_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "072_16_P-S-FP32_cg_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "072_16_P-S-FP32_cg_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "072_16_P-S-FP32_cg_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "072_16_P-S-FP32_cg_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "072_16_P-S-FP32_cg_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "073_16_P-R-FP32_cg_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "073_16_P-R-FP32_cg_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "073_16_P-R-FP32_cg_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "073_16_P-R-FP32_cg_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "073_16_P-R-FP32_cg_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "073_16_P-R-FP32_cg_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "073_16_P-R-FP32_cg_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "074_16_B-F-FP32_cg_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "074_16_B-F-FP32_cg_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "074_16_B-F-FP32_cg_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "074_16_B-F-FP32_cg_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "074_16_B-F-FP32_cg_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "074_16_B-F-FP32_cg_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "074_16_B-F-FP32_cg_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "075_16_O-G-cached_cg_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "075_16_O-G-cached_cg_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "075_16_O-G-cached_cg_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "075_16_O-G-cached_cg_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "075_16_O-G-cached_cg_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "075_16_O-G-cached_cg_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "075_16_O-G-cached_cg_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "075_16_O-G-cached_cg_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "075_16_O-G-cached_cg_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "075_16_O-G-cached_cg_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "076_768_B-E_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "076_768_B-E_cholesky_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "076_768_B-E_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "076_768_B-E_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "076_768_B-E_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "076_768_B-E_cholesky_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "076_768_B-E_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "076_768_B-E_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "076_768_B-E_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "076_768_B-E_cholesky_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "077_768_B-A_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "077_768_B-A_cholesky_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "077_768_B-A_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "077_768_B-A_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "077_768_B-A_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "077_768_B-A_cholesky_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "077_768_B-A_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "077_768_B-A_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "077_768_B-A_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "077_768_B-A_cholesky_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "078_768_P-I_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "078_768_P-I_cholesky_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "078_768_P-I_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "078_768_P-I_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "078_768_P-I_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "078_768_P-I_cholesky_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "078_768_P-I_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "078_768_P-I_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "078_768_P-I_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "078_768_P-I_cholesky_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "079_768_P-S_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "079_768_P-S_cholesky_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "079_768_P-S_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "079_768_P-S_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "079_768_P-S_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "079_768_P-S_cholesky_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "079_768_P-S_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "079_768_P-S_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "079_768_P-S_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "079_768_P-S_cholesky_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "080_768_P-R_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "080_768_P-R_cholesky_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "080_768_P-R_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "080_768_P-R_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "080_768_P-R_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "080_768_P-R_cholesky_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "080_768_P-R_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "080_768_P-R_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "080_768_P-R_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "080_768_P-R_cholesky_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "081_768_P-I-jointspan_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "081_768_P-I-jointspan_cholesky_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "081_768_P-I-jointspan_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "081_768_P-I-jointspan_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "081_768_P-I-jointspan_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "081_768_P-I-jointspan_cholesky_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "081_768_P-I-jointspan_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "081_768_P-I-jointspan_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "081_768_P-I-jointspan_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "081_768_P-I-jointspan_cholesky_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "082_768_B-E-compact_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "082_768_B-E-compact_cholesky_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "082_768_B-E-compact_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "082_768_B-E-compact_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "082_768_B-E-compact_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "082_768_B-E-compact_cholesky_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "082_768_B-E-compact_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "082_768_B-E-compact_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "082_768_B-E-compact_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "082_768_B-E-compact_cholesky_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "083_768_O-G_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "083_768_O-G_cholesky_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "083_768_O-G_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "083_768_O-G_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "083_768_O-G_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "083_768_O-G_cholesky_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "083_768_O-G_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "083_768_O-G_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "083_768_O-G_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "083_768_O-G_cholesky_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "084_768_O-T_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "084_768_O-T_cholesky_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "084_768_O-T_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "084_768_O-T_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "084_768_O-T_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "084_768_O-T_cholesky_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "084_768_O-T_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "084_768_O-T_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "084_768_O-T_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "084_768_O-T_cholesky_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "085_768_B-F_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "085_768_B-F_cholesky_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "085_768_B-F_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "085_768_B-F_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "085_768_B-F_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "085_768_B-F_cholesky_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "085_768_B-F_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "085_768_B-F_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "085_768_B-F_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "085_768_B-F_cholesky_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "086_768_O-G-FP32_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "086_768_O-G-FP32_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "086_768_O-G-FP32_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "086_768_O-G-FP32_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "086_768_O-G-FP32_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "086_768_O-G-FP32_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "086_768_O-G-FP32_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "087_768_O-T-FP32_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "087_768_O-T-FP32_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "087_768_O-T-FP32_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "087_768_O-T-FP32_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "087_768_O-T-FP32_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "087_768_O-T-FP32_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "087_768_O-T-FP32_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "088_768_B-E-FP32_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "088_768_B-E-FP32_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "088_768_B-E-FP32_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "088_768_B-E-FP32_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "088_768_B-E-FP32_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "088_768_B-E-FP32_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "088_768_B-E-FP32_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "089_768_B-A-FP32_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "089_768_B-A-FP32_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "089_768_B-A-FP32_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "089_768_B-A-FP32_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "089_768_B-A-FP32_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "089_768_B-A-FP32_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "089_768_B-A-FP32_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "090_768_P-I-FP32_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "090_768_P-I-FP32_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "090_768_P-I-FP32_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "090_768_P-I-FP32_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "090_768_P-I-FP32_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "090_768_P-I-FP32_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "090_768_P-I-FP32_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "091_768_P-S-FP32_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "091_768_P-S-FP32_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "091_768_P-S-FP32_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "091_768_P-S-FP32_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "091_768_P-S-FP32_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "091_768_P-S-FP32_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "091_768_P-S-FP32_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "092_768_P-R-FP32_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "092_768_P-R-FP32_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "092_768_P-R-FP32_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "092_768_P-R-FP32_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "092_768_P-R-FP32_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "092_768_P-R-FP32_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "092_768_P-R-FP32_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "093_768_B-F-FP32_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "093_768_B-F-FP32_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "093_768_B-F-FP32_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "093_768_B-F-FP32_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "093_768_B-F-FP32_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "093_768_B-F-FP32_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "093_768_B-F-FP32_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "094_768_O-G-cached_cholesky_cold_process",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "094_768_O-G-cached_cholesky_cold_process",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "094_768_O-G-cached_cholesky_cold_process",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "094_768_O-G-cached_cholesky_cold_process",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "094_768_O-G-cached_cholesky_cold_process",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "094_768_O-G-cached_cholesky_cold_process",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "094_768_O-G-cached_cholesky_cold_process",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "094_768_O-G-cached_cholesky_cold_process",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "094_768_O-G-cached_cholesky_cold_process",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "094_768_O-G-cached_cholesky_cold_process",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "095_768_B-F_cg_warm_service",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "095_768_B-F_cg_warm_service",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "095_768_B-F_cg_warm_service",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "095_768_B-F_cg_warm_service",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "095_768_B-F_cg_warm_service",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "095_768_B-F_cg_warm_service",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "095_768_B-F_cg_warm_service",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "095_768_B-F_cg_warm_service",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "095_768_B-F_cg_warm_service",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "095_768_B-F_cg_warm_service",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "096_768_B-E_cg_warm_service",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "096_768_B-E_cg_warm_service",
+      "check": "initial_FP64_dual_agreement",
+      "passed": true
+    },
+    {
+      "case": "096_768_B-E_cg_warm_service",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "096_768_B-E_cg_warm_service",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "096_768_B-E_cg_warm_service",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "096_768_B-E_cg_warm_service",
+      "check": "FP64_dual_agreement_0",
+      "passed": true
+    },
+    {
+      "case": "096_768_B-E_cg_warm_service",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "096_768_B-E_cg_warm_service",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "096_768_B-E_cg_warm_service",
+      "check": "gate_1",
+      "passed": true
+    },
+    {
+      "case": "096_768_B-E_cg_warm_service",
+      "check": "FP64_dual_agreement_1",
+      "passed": true
+    },
+    {
+      "case": "097_768_B-E-FP32_cg_warm_service",
+      "check": "initial_shape_and_finite",
+      "passed": true
+    },
+    {
+      "case": "097_768_B-E-FP32_cg_warm_service",
+      "check": "count_0",
+      "passed": true
+    },
+    {
+      "case": "097_768_B-E-FP32_cg_warm_service",
+      "check": "head_hash_0",
+      "passed": true
+    },
+    {
+      "case": "097_768_B-E-FP32_cg_warm_service",
+      "check": "gate_0",
+      "passed": true
+    },
+    {
+      "case": "097_768_B-E-FP32_cg_warm_service",
+      "check": "count_1",
+      "passed": true
+    },
+    {
+      "case": "097_768_B-E-FP32_cg_warm_service",
+      "check": "head_hash_1",
+      "passed": true
+    },
+    {
+      "case": "097_768_B-E-FP32_cg_warm_service",
+      "check": "gate_1",
+      "passed": true
+    }
+  ],
+  "cases": [
+    {
+      "case": "000_16_B-E_cholesky_cold_process",
+      "method": "B-E",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "001_16_B-A_cholesky_cold_process",
+      "method": "B-A",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "002_16_P-I_cholesky_cold_process",
+      "method": "P-I",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "003_16_P-S_cholesky_cold_process",
+      "method": "P-S",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "004_16_P-R_cholesky_cold_process",
+      "method": "P-R",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "005_16_P-I-jointspan_cholesky_cold_process",
+      "method": "P-I-jointspan",
+      "initial_head_error_fro": 1.7621770284560141e-15,
+      "checkpoint_head_error_fro": [
+        1.7621770284560141e-15,
+        1.7621770284560141e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "006_16_B-E-compact_cholesky_cold_process",
+      "method": "B-E-compact",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "007_16_O-G_cholesky_cold_process",
+      "method": "O-G",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "008_16_O-T_cholesky_cold_process",
+      "method": "O-T",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "009_16_B-F_cholesky_cold_process",
+      "method": "B-F",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "retained_original_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "010_16_O-G-FP32_cholesky_cold_process",
+      "method": "O-G-FP32",
+      "initial_head_error_fro": 2.7414492357803816e-07,
+      "checkpoint_head_error_fro": [
+        2.7414492357803816e-07,
+        2.7414492357803816e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "011_16_O-T-FP32_cholesky_cold_process",
+      "method": "O-T-FP32",
+      "initial_head_error_fro": 2.7414492357803816e-07,
+      "checkpoint_head_error_fro": [
+        2.7414492357803816e-07,
+        2.7414492357803816e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "012_16_B-E-FP32_cholesky_cold_process",
+      "method": "B-E-FP32",
+      "initial_head_error_fro": 2.8830824586716957e-07,
+      "checkpoint_head_error_fro": [
+        2.8830824586716957e-07,
+        2.8830824586716957e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "013_16_B-A-FP32_cholesky_cold_process",
+      "method": "B-A-FP32",
+      "initial_head_error_fro": 2.8830824586716957e-07,
+      "checkpoint_head_error_fro": [
+        2.8830824586716957e-07,
+        2.8830824586716957e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "014_16_P-I-FP32_cholesky_cold_process",
+      "method": "P-I-FP32",
+      "initial_head_error_fro": 2.2244009740694603e-07,
+      "checkpoint_head_error_fro": [
+        2.2244009740694603e-07,
+        2.2244009740694603e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "015_16_P-S-FP32_cholesky_cold_process",
+      "method": "P-S-FP32",
+      "initial_head_error_fro": 2.2244009740694603e-07,
+      "checkpoint_head_error_fro": [
+        2.2244009740694603e-07,
+        2.2244009740694603e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "016_16_P-R-FP32_cholesky_cold_process",
+      "method": "P-R-FP32",
+      "initial_head_error_fro": 9.506396867663798e-07,
+      "checkpoint_head_error_fro": [
+        9.506396867663798e-07,
+        9.506396867663798e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "017_16_B-F-FP32_cholesky_cold_process",
+      "method": "B-F-FP32",
+      "initial_head_error_fro": 2.8830824586716957e-07,
+      "checkpoint_head_error_fro": [
+        2.8830824586716957e-07,
+        2.8830824586716957e-07
+      ],
+      "target": "retained_original_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "018_16_O-G-cached_cholesky_cold_process",
+      "method": "O-G-cached",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "019_16_B-E_cholesky_warm_service",
+      "method": "B-E",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "020_16_B-A_cholesky_warm_service",
+      "method": "B-A",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "021_16_P-I_cholesky_warm_service",
+      "method": "P-I",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "022_16_P-S_cholesky_warm_service",
+      "method": "P-S",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "023_16_P-R_cholesky_warm_service",
+      "method": "P-R",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "024_16_P-I-jointspan_cholesky_warm_service",
+      "method": "P-I-jointspan",
+      "initial_head_error_fro": 1.7621770284560141e-15,
+      "checkpoint_head_error_fro": [
+        1.7621770284560141e-15,
+        1.7621770284560141e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "025_16_B-E-compact_cholesky_warm_service",
+      "method": "B-E-compact",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "026_16_O-G_cholesky_warm_service",
+      "method": "O-G",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "027_16_O-T_cholesky_warm_service",
+      "method": "O-T",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "028_16_B-F_cholesky_warm_service",
+      "method": "B-F",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "retained_original_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "029_16_O-G-FP32_cholesky_warm_service",
+      "method": "O-G-FP32",
+      "initial_head_error_fro": 2.7414492357803816e-07,
+      "checkpoint_head_error_fro": [
+        2.7414492357803816e-07,
+        2.7414492357803816e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "030_16_O-T-FP32_cholesky_warm_service",
+      "method": "O-T-FP32",
+      "initial_head_error_fro": 2.7414492357803816e-07,
+      "checkpoint_head_error_fro": [
+        2.7414492357803816e-07,
+        2.7414492357803816e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "031_16_B-E-FP32_cholesky_warm_service",
+      "method": "B-E-FP32",
+      "initial_head_error_fro": 2.8830824586716957e-07,
+      "checkpoint_head_error_fro": [
+        2.8830824586716957e-07,
+        2.8830824586716957e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "032_16_B-A-FP32_cholesky_warm_service",
+      "method": "B-A-FP32",
+      "initial_head_error_fro": 2.8830824586716957e-07,
+      "checkpoint_head_error_fro": [
+        2.8830824586716957e-07,
+        2.8830824586716957e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "033_16_P-I-FP32_cholesky_warm_service",
+      "method": "P-I-FP32",
+      "initial_head_error_fro": 2.2244009740694603e-07,
+      "checkpoint_head_error_fro": [
+        2.2244009740694603e-07,
+        2.2244009740694603e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "034_16_P-S-FP32_cholesky_warm_service",
+      "method": "P-S-FP32",
+      "initial_head_error_fro": 2.2244009740694603e-07,
+      "checkpoint_head_error_fro": [
+        2.2244009740694603e-07,
+        2.2244009740694603e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "035_16_P-R-FP32_cholesky_warm_service",
+      "method": "P-R-FP32",
+      "initial_head_error_fro": 9.506396867663798e-07,
+      "checkpoint_head_error_fro": [
+        9.506396867663798e-07,
+        9.506396867663798e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "036_16_B-F-FP32_cholesky_warm_service",
+      "method": "B-F-FP32",
+      "initial_head_error_fro": 2.8830824586716957e-07,
+      "checkpoint_head_error_fro": [
+        2.8830824586716957e-07,
+        2.8830824586716957e-07
+      ],
+      "target": "retained_original_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "037_16_O-G-cached_cholesky_warm_service",
+      "method": "O-G-cached",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "038_16_B-E_cholesky_every_release",
+      "method": "B-E",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "039_16_B-A_cholesky_every_release",
+      "method": "B-A",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "040_16_P-I_cholesky_every_release",
+      "method": "P-I",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "041_16_P-S_cholesky_every_release",
+      "method": "P-S",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "042_16_P-R_cholesky_every_release",
+      "method": "P-R",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "043_16_P-I-jointspan_cholesky_every_release",
+      "method": "P-I-jointspan",
+      "initial_head_error_fro": 1.7621770284560141e-15,
+      "checkpoint_head_error_fro": [
+        1.7621770284560141e-15,
+        1.7621770284560141e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "044_16_B-E-compact_cholesky_every_release",
+      "method": "B-E-compact",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "045_16_O-G_cholesky_every_release",
+      "method": "O-G",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "046_16_O-T_cholesky_every_release",
+      "method": "O-T",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "047_16_B-F_cholesky_every_release",
+      "method": "B-F",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "retained_original_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "048_16_O-G-FP32_cholesky_every_release",
+      "method": "O-G-FP32",
+      "initial_head_error_fro": 2.7414492357803816e-07,
+      "checkpoint_head_error_fro": [
+        2.7414492357803816e-07,
+        2.7414492357803816e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "049_16_O-T-FP32_cholesky_every_release",
+      "method": "O-T-FP32",
+      "initial_head_error_fro": 2.7414492357803816e-07,
+      "checkpoint_head_error_fro": [
+        2.7414492357803816e-07,
+        2.7414492357803816e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "050_16_B-E-FP32_cholesky_every_release",
+      "method": "B-E-FP32",
+      "initial_head_error_fro": 2.8830824586716957e-07,
+      "checkpoint_head_error_fro": [
+        2.8830824586716957e-07,
+        2.8830824586716957e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "051_16_B-A-FP32_cholesky_every_release",
+      "method": "B-A-FP32",
+      "initial_head_error_fro": 2.8830824586716957e-07,
+      "checkpoint_head_error_fro": [
+        2.8830824586716957e-07,
+        2.8830824586716957e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "052_16_P-I-FP32_cholesky_every_release",
+      "method": "P-I-FP32",
+      "initial_head_error_fro": 2.2244009740694603e-07,
+      "checkpoint_head_error_fro": [
+        2.2244009740694603e-07,
+        2.2244009740694603e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "053_16_P-S-FP32_cholesky_every_release",
+      "method": "P-S-FP32",
+      "initial_head_error_fro": 2.2244009740694603e-07,
+      "checkpoint_head_error_fro": [
+        2.2244009740694603e-07,
+        2.2244009740694603e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "054_16_P-R-FP32_cholesky_every_release",
+      "method": "P-R-FP32",
+      "initial_head_error_fro": 9.506396867663798e-07,
+      "checkpoint_head_error_fro": [
+        9.506396867663798e-07,
+        9.506396867663798e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "055_16_B-F-FP32_cholesky_every_release",
+      "method": "B-F-FP32",
+      "initial_head_error_fro": 2.8830824586716957e-07,
+      "checkpoint_head_error_fro": [
+        2.8830824586716957e-07,
+        2.8830824586716957e-07
+      ],
+      "target": "retained_original_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "056_16_O-G-cached_cholesky_every_release",
+      "method": "O-G-cached",
+      "initial_head_error_fro": 1.6652552527665693e-15,
+      "checkpoint_head_error_fro": [
+        1.6652552527665693e-15,
+        1.6652552527665693e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "057_16_B-E_cg_cold_process",
+      "method": "B-E",
+      "initial_head_error_fro": 1.4576717199913652e-13,
+      "checkpoint_head_error_fro": [
+        1.4576717199913652e-13,
+        1.4576717199913652e-13
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "058_16_B-A_cg_cold_process",
+      "method": "B-A",
+      "initial_head_error_fro": 1.4576717199913652e-13,
+      "checkpoint_head_error_fro": [
+        1.4576717199913652e-13,
+        1.4576717199913652e-13
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "059_16_P-I_cg_cold_process",
+      "method": "P-I",
+      "initial_head_error_fro": 1.4576717199913652e-13,
+      "checkpoint_head_error_fro": [
+        1.4576717199913652e-13,
+        1.4576717199913652e-13
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "060_16_P-S_cg_cold_process",
+      "method": "P-S",
+      "initial_head_error_fro": 1.4576717199913652e-13,
+      "checkpoint_head_error_fro": [
+        1.4576717199913652e-13,
+        1.4576717199913652e-13
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "061_16_P-R_cg_cold_process",
+      "method": "P-R",
+      "initial_head_error_fro": 1.4576717199913652e-13,
+      "checkpoint_head_error_fro": [
+        1.4576717199913652e-13,
+        1.4576717199913652e-13
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "062_16_P-I-jointspan_cg_cold_process",
+      "method": "P-I-jointspan",
+      "initial_head_error_fro": 1.537031044074857e-14,
+      "checkpoint_head_error_fro": [
+        1.537031044074857e-14,
+        1.537031044074857e-14
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "063_16_B-E-compact_cg_cold_process",
+      "method": "B-E-compact",
+      "initial_head_error_fro": 1.4576717199913652e-13,
+      "checkpoint_head_error_fro": [
+        1.4576717199913652e-13,
+        1.4576717199913652e-13
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "064_16_O-G_cg_cold_process",
+      "method": "O-G",
+      "initial_head_error_fro": 1.4576717199913652e-13,
+      "checkpoint_head_error_fro": [
+        1.4576717199913652e-13,
+        1.4576717199913652e-13
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "065_16_O-T_cg_cold_process",
+      "method": "O-T",
+      "initial_head_error_fro": 1.4576717199913652e-13,
+      "checkpoint_head_error_fro": [
+        1.4576717199913652e-13,
+        1.4576717199913652e-13
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "066_16_B-F_cg_cold_process",
+      "method": "B-F",
+      "initial_head_error_fro": 1.4576717199913652e-13,
+      "checkpoint_head_error_fro": [
+        1.4576717199913652e-13,
+        1.4576717199913652e-13
+      ],
+      "target": "retained_original_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "067_16_O-G-FP32_cg_cold_process",
+      "method": "O-G-FP32",
+      "initial_head_error_fro": 2.7414463700380866e-07,
+      "checkpoint_head_error_fro": [
+        2.7414463700380866e-07,
+        2.7414463700380866e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "068_16_O-T-FP32_cg_cold_process",
+      "method": "O-T-FP32",
+      "initial_head_error_fro": 2.7414463700380866e-07,
+      "checkpoint_head_error_fro": [
+        2.7414463700380866e-07,
+        2.7414463700380866e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "069_16_B-E-FP32_cg_cold_process",
+      "method": "B-E-FP32",
+      "initial_head_error_fro": 2.883078552863512e-07,
+      "checkpoint_head_error_fro": [
+        2.883078552863512e-07,
+        2.883078552863512e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "070_16_B-A-FP32_cg_cold_process",
+      "method": "B-A-FP32",
+      "initial_head_error_fro": 2.883078552863512e-07,
+      "checkpoint_head_error_fro": [
+        2.883078552863512e-07,
+        2.883078552863512e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "071_16_P-I-FP32_cg_cold_process",
+      "method": "P-I-FP32",
+      "initial_head_error_fro": 2.2244060889065253e-07,
+      "checkpoint_head_error_fro": [
+        2.2244060889065253e-07,
+        2.2244060889065253e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "072_16_P-S-FP32_cg_cold_process",
+      "method": "P-S-FP32",
+      "initial_head_error_fro": 2.2244060889065253e-07,
+      "checkpoint_head_error_fro": [
+        2.2244060889065253e-07,
+        2.2244060889065253e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "073_16_P-R-FP32_cg_cold_process",
+      "method": "P-R-FP32",
+      "initial_head_error_fro": 9.50639713690056e-07,
+      "checkpoint_head_error_fro": [
+        9.50639713690056e-07,
+        9.50639713690056e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "074_16_B-F-FP32_cg_cold_process",
+      "method": "B-F-FP32",
+      "initial_head_error_fro": 2.883078552863512e-07,
+      "checkpoint_head_error_fro": [
+        2.883078552863512e-07,
+        2.883078552863512e-07
+      ],
+      "target": "retained_original_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "075_16_O-G-cached_cg_cold_process",
+      "method": "O-G-cached",
+      "initial_head_error_fro": 1.4576717199913652e-13,
+      "checkpoint_head_error_fro": [
+        1.4576717199913652e-13,
+        1.4576717199913652e-13
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "076_768_B-E_cholesky_cold_process",
+      "method": "B-E",
+      "initial_head_error_fro": 1.4093906311976292e-15,
+      "checkpoint_head_error_fro": [
+        1.4093906311976292e-15,
+        1.4093906311976292e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "077_768_B-A_cholesky_cold_process",
+      "method": "B-A",
+      "initial_head_error_fro": 1.4093906311976292e-15,
+      "checkpoint_head_error_fro": [
+        1.4093906311976292e-15,
+        1.4093906311976292e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "078_768_P-I_cholesky_cold_process",
+      "method": "P-I",
+      "initial_head_error_fro": 1.4093906311976292e-15,
+      "checkpoint_head_error_fro": [
+        1.4093906311976292e-15,
+        1.4093906311976292e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "079_768_P-S_cholesky_cold_process",
+      "method": "P-S",
+      "initial_head_error_fro": 1.4093906311976292e-15,
+      "checkpoint_head_error_fro": [
+        1.4093906311976292e-15,
+        1.4093906311976292e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "080_768_P-R_cholesky_cold_process",
+      "method": "P-R",
+      "initial_head_error_fro": 1.4093906311976292e-15,
+      "checkpoint_head_error_fro": [
+        1.4093906311976292e-15,
+        1.4093906311976292e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "081_768_P-I-jointspan_cholesky_cold_process",
+      "method": "P-I-jointspan",
+      "initial_head_error_fro": 2.9148702572588444e-15,
+      "checkpoint_head_error_fro": [
+        2.9148702572588444e-15,
+        2.9148702572588444e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "082_768_B-E-compact_cholesky_cold_process",
+      "method": "B-E-compact",
+      "initial_head_error_fro": 1.4093906311976292e-15,
+      "checkpoint_head_error_fro": [
+        1.4093906311976292e-15,
+        1.4093906311976292e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "083_768_O-G_cholesky_cold_process",
+      "method": "O-G",
+      "initial_head_error_fro": 1.4093906311976292e-15,
+      "checkpoint_head_error_fro": [
+        1.4093906311976292e-15,
+        1.4093906311976292e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "084_768_O-T_cholesky_cold_process",
+      "method": "O-T",
+      "initial_head_error_fro": 1.4093906311976292e-15,
+      "checkpoint_head_error_fro": [
+        1.4093906311976292e-15,
+        1.4093906311976292e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "085_768_B-F_cholesky_cold_process",
+      "method": "B-F",
+      "initial_head_error_fro": 1.4093906311976292e-15,
+      "checkpoint_head_error_fro": [
+        1.4093906311976292e-15,
+        1.4093906311976292e-15
+      ],
+      "target": "retained_original_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "086_768_O-G-FP32_cholesky_cold_process",
+      "method": "O-G-FP32",
+      "initial_head_error_fro": 1.4333481727958435e-07,
+      "checkpoint_head_error_fro": [
+        1.4333481727958435e-07,
+        1.4333481727958435e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "087_768_O-T-FP32_cholesky_cold_process",
+      "method": "O-T-FP32",
+      "initial_head_error_fro": 1.4333481727958435e-07,
+      "checkpoint_head_error_fro": [
+        1.4333481727958435e-07,
+        1.4333481727958435e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "088_768_B-E-FP32_cholesky_cold_process",
+      "method": "B-E-FP32",
+      "initial_head_error_fro": 8.81153701263249e-08,
+      "checkpoint_head_error_fro": [
+        8.81153701263249e-08,
+        8.81153701263249e-08
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "089_768_B-A-FP32_cholesky_cold_process",
+      "method": "B-A-FP32",
+      "initial_head_error_fro": 8.81153701263249e-08,
+      "checkpoint_head_error_fro": [
+        8.81153701263249e-08,
+        8.81153701263249e-08
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "090_768_P-I-FP32_cholesky_cold_process",
+      "method": "P-I-FP32",
+      "initial_head_error_fro": 8.877266138073808e-08,
+      "checkpoint_head_error_fro": [
+        8.877266138073808e-08,
+        8.877266138073808e-08
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "091_768_P-S-FP32_cholesky_cold_process",
+      "method": "P-S-FP32",
+      "initial_head_error_fro": 8.877266138073808e-08,
+      "checkpoint_head_error_fro": [
+        8.877266138073808e-08,
+        8.877266138073808e-08
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "092_768_P-R-FP32_cholesky_cold_process",
+      "method": "P-R-FP32",
+      "initial_head_error_fro": 3.148071702908888e-07,
+      "checkpoint_head_error_fro": [
+        3.148071702908888e-07,
+        3.148071702908888e-07
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "093_768_B-F-FP32_cholesky_cold_process",
+      "method": "B-F-FP32",
+      "initial_head_error_fro": 8.81153701263249e-08,
+      "checkpoint_head_error_fro": [
+        8.81153701263249e-08,
+        8.81153701263249e-08
+      ],
+      "target": "retained_original_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "094_768_O-G-cached_cholesky_cold_process",
+      "method": "O-G-cached",
+      "initial_head_error_fro": 1.4093906311976292e-15,
+      "checkpoint_head_error_fro": [
+        1.4093906311976292e-15,
+        1.4093906311976292e-15
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "095_768_B-F_cg_warm_service",
+      "method": "B-F",
+      "initial_head_error_fro": 2.5014327561183496e-16,
+      "checkpoint_head_error_fro": [
+        2.5014327561183496e-16,
+        2.5014327561183496e-16
+      ],
+      "target": "retained_original_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "096_768_B-E_cg_warm_service",
+      "method": "B-E",
+      "initial_head_error_fro": 2.5014327561183496e-16,
+      "checkpoint_head_error_fro": [
+        2.5014327561183496e-16,
+        2.5014327561183496e-16
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "097_768_B-E-FP32_cg_warm_service",
+      "method": "B-E-FP32",
+      "initial_head_error_fro": 8.811536777897055e-08,
+      "checkpoint_head_error_fro": [
+        8.811536777897055e-08,
+        8.811536777897055e-08
+      ],
+      "target": "full_counterfactual_selection",
+      "counterfactual_additions_absent_from_wrong_target": [
+        0,
+        0
+      ]
+    }
+  ],
+  "maximum_FP64_checkpoint_head_error_fro": 1.4576717199913652e-13,
+  "maximum_FP32_checkpoint_head_error_fro": 9.50639713690056e-07,
+  "scope": "same_Civil20_lexical_saved_heads;no_new_empirical_dataset_or_primary_semantic_result"
+}

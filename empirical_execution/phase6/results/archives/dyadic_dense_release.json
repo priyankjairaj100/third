@@ -1,0 +1,93 @@
+{
+  "schema": "ccu-phase6-result-archive-1",
+  "directory": "dyadic_dense_release",
+  "archive": "dyadic_dense_release.tar.gz",
+  "archive_bytes": 2761320,
+  "archive_sha256": "4cc4abb0716e1775320860ddc336698677736d6fc7c93f32b6550fd4e0f3ae63",
+  "file_count": 16,
+  "uncompressed_file_bytes": 18792761,
+  "files": [
+    {
+      "path": "dyadic_dense_release/candidate.json",
+      "bytes": 17144,
+      "sha256": "e8ca1e8483d906b9e3e6b32632c80512d3b179aafcf77d052162a913fe5f07f6"
+    },
+    {
+      "path": "dyadic_dense_release/candidate_dense_d768_q7.npz",
+      "bytes": 356532,
+      "sha256": "9c6e6cb28bb3531248d5f9ea41648f88cd3f61c2615fa6da5d63e18dd73edcff"
+    },
+    {
+      "path": "dyadic_dense_release/checks.json",
+      "bytes": 1335,
+      "sha256": "43bad3332792bb8a48b56b69e67c23c5756b5e792fb12e93f5c7c2d4ba332bdb"
+    },
+    {
+      "path": "dyadic_dense_release/design_lock.json",
+      "bytes": 854,
+      "sha256": "e914ed95ceb44ccea8c70e250644a72b1f6ea2bdc3878ceddd433bd8b215cfdc"
+    },
+    {
+      "path": "dyadic_dense_release/run_00_r3_exact_dyadic_integer_v1.json",
+      "bytes": 1843806,
+      "sha256": "f764af9987d67f7d0a171a38ef8ded20d04e22ed2b43fe1410ea1336b20ab11a"
+    },
+    {
+      "path": "dyadic_dense_release/run_01_r1_original_fraction_v1.json",
+      "bytes": 1838446,
+      "sha256": "5d11af6df1790a6c75ad6b08df52032ee350a92a5a5366345b47dce66ccbf479"
+    },
+    {
+      "path": "dyadic_dense_release/run_02_r0_original_fraction_v1.json",
+      "bytes": 1838442,
+      "sha256": "d0973ab7d620cc8cfcf1dd3e89d7ccc12dd7f96823ee1a06cb93996ee334d0c7"
+    },
+    {
+      "path": "dyadic_dense_release/run_03_r1_exact_dyadic_integer_v1.json",
+      "bytes": 1843806,
+      "sha256": "981a657a160b2d1b13f7b26b4a67adae048b4ab1a11d4ae27c9546ab56b9521d"
+    },
+    {
+      "path": "dyadic_dense_release/run_04_r2_original_fraction_v1.json",
+      "bytes": 1838446,
+      "sha256": "b803659fa06a85c71da960cb6dd0d654c492600ade4734b34f5b4e4855b0ef22"
+    },
+    {
+      "path": "dyadic_dense_release/run_05_r4_original_fraction_v1.json",
+      "bytes": 1838446,
+      "sha256": "d7e57bc244fb3643cd37f0e2b547b0f39f487b2f45869ee3c01195d544e22049"
+    },
+    {
+      "path": "dyadic_dense_release/run_06_r2_exact_dyadic_integer_v1.json",
+      "bytes": 1843807,
+      "sha256": "6b5c741ae8903d4d9219d291878a7c76aeac003d5c88db6e25ef1843034ef9d1"
+    },
+    {
+      "path": "dyadic_dense_release/run_07_r4_exact_dyadic_integer_v1.json",
+      "bytes": 1843807,
+      "sha256": "30abd3d59631ac5dbeb0430b576e32d9010aed7a02a6cea6842a40dfb4e5abcb"
+    },
+    {
+      "path": "dyadic_dense_release/run_08_r3_original_fraction_v1.json",
+      "bytes": 1838445,
+      "sha256": "1fe6dc661d31076378d63531b8e869e8e4953ac22b6441e6e08542b71ac75e5b"
+    },
+    {
+      "path": "dyadic_dense_release/run_09_r0_exact_dyadic_integer_v1.json",
+      "bytes": 1843806,
+      "sha256": "f875517193fccd25db801610f39da4a4418b1e772398a3eadf99d0f27b131a09"
+    },
+    {
+      "path": "dyadic_dense_release/run_plan.json",
+      "bytes": 658,
+      "sha256": "672419ee4f3a4fd7aa599f7984fc20b519a331e8753b4059668bff99ef8c7d1a"
+    },
+    {
+      "path": "dyadic_dense_release/runs.json",
+      "bytes": 4981,
+      "sha256": "12f6f6a8024f745e010a5f1e5dc4818dee4a6a366cde09fb6a8c235d884d1bf2"
+    }
+  ],
+  "results_omitted": false,
+  "archive_tool_sha256": "8eb6f435865b1b63bf1a1bff847a364e6cb1740c01986cecc8f87f9b328a0495"
+}

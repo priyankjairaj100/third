@@ -1,0 +1,30 @@
+{
+  "schema": "ccu-logistic-selection-checks-v1",
+  "status": "passed",
+  "checks": {
+    "same_frozen_ridge_lambda": true,
+    "five_separate_logistic_folds": true,
+    "source_folds_unchanged": true,
+    "not_a_primary_or_optimizer_certificate": true,
+    "stable_input_order": true,
+    "independent_BFGS_probability_oracle": true,
+    "independent_exact_F1_and_strictest_tie": true,
+    "probabilities_not_ridge_scores": true,
+    "ridge_threshold_lock_rejected": true,
+    "out_of_range_probability_rejected": true,
+    "rehashed_wrong_lambda_rejected": true,
+    "test_partition_rejected_before_selection": true,
+    "zero_positive_never_positive": true,
+    "actual_Civil_missing_sources_cannot_supply_task_lock": true
+  },
+  "passed": 14,
+  "total": 14,
+  "independent_probability_max_abs_error": 3.292237593655045e-10,
+  "genuine_Civil_input_sha256": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9",
+  "genuine_empirical_logistic_configuration_selected": false,
+  "software_fixtures_are_empirical_data": false,
+  "source_sha256": {
+    "check_logistic_selection.py": "a05079a71c0541f918234bffdaae981e139335c14434de841a833ec0ffe905f7",
+    "logistic_selection.py": "8225138da7e69b36d7d416e6354a6ff2a1d05adf32b167de313bbb764fe59901"
+  }
+}

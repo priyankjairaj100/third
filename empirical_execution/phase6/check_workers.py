@@ -1,0 +1,94 @@
+"""Actual isolated integration on real Civil text. No semantic inference claim."""
+from pathlib import Path
+import sys
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
+import hashlib,json,shutil,tempfile
+import numpy as np
+from ccu.data import read_natural_jsonl,lexical_engineering_features
+from phase4.execution import independent_edges
+from phase6.run_isolated import run_service,prepare_bundle,METHODS
+from phase6.measurement import state_inventory
+from phase6.methods import FrozenSelection,FP32_METHODS,build_method,load_method
+from phase3.reference_graph import build_reference_graph
+
+def dual_head(x,y,ix,lam=.01):
+    if not ix:return np.zeros((x.shape[1],y.shape[1]))
+    z=x[ix].astype(np.float64);yy=y[ix]
+    return z.T@np.linalg.solve(z@z.T+lam*len(ix)*np.eye(len(ix)),yy)
+
+def run(destination):
+    out=Path(destination);out.mkdir(parents=True,exist_ok=False)
+    rows=read_natural_jsonl(ROOT/'data/civil_comments_engineering_preview.jsonl',require_labels=True)[:20]
+    ids=[r['record_id'] for r in rows];cx,_=lexical_engineering_features(rows,32)
+    y=np.asarray([r['label'] for r in rows],np.float64)[:,None]
+    # The known natural sample defines every case before execution.
+    schedule=[(16,m,'cholesky',p) for p in ('cold_process','warm_service','every_release') for m in METHODS]
+    schedule += [(16,m,'cg','cold_process') for m in METHODS]
+    schedule += [(768,m,'cholesky','cold_process') for m in METHODS]
+    schedule += [(768,m,'cg','warm_service') for m in ('B-F','B-E','B-E-FP32')]
+    (out/'prospective_schedule.json').write_text(json.dumps(schedule,indent=2)+'\n')
+    cases=[];checks=[];requests=[[ids[0]],[ids[1],ids[2]]]
+    with tempfile.TemporaryDirectory(prefix='phase6-worker-check-',dir=str(ROOT.parent/'tmp')) as tmp:
+        tmp=Path(tmp);bundles={};arrays={}
+        for d in (16,768):
+            x,_=lexical_engineering_features(rows,d);arrays[d]=x
+            bundles[d]=prepare_bundle(cx,x,y,ids,tmp/f'bundle{d}',threshold=.6)
+        _,original=independent_edges(cx,ids,.6,set())
+        for number,(d,m,solver,panel) in enumerate(schedule):
+            case=f'{number:03d}_{d}_{m}_{solver}_{panel}';work=tmp/case;dest=out/case;dest.mkdir()
+            result=run_service(bundles[d],m,requests,work,horizon=3,solver=solver,panel=panel)
+            flags={'service_success':result['success']};head_errors=[]
+            if result['success']:
+                cr=json.loads((work/'construction/construction_report.json').read_text());rr=json.loads((work/'repair/repair_report.json').read_text())
+                flags.update(kernel_denial=rr['isolation']['denied_existing_file_probes']>0,
+                    original_gate=cr['numerical_decoder']['release_allowed'],
+                    sampled_tree_nonzero=all(result[s]['sampled_process_tree_peak_rss_sum_bytes']>0 for s in ('construction','repair')),
+                    sampled_tree_no_exact_claim=not result['repair']['process_tree_exact_peak_claim'],
+                    dependency_scope_honest=not rr['imported_dependencies']['full_transitive_distribution_or_build_dependency_closure'],
+                    warmup_panel=(rr['library_warmup'] is not None)==(panel=='warm_service'),
+                    metadata_wire_positive=cr['logical_state_inventory']['canonical_metadata_utf8_bytes']>0,
+                    snapshot_category_sum=rr['snapshot_load_binary_read_categories']['returned_binary_read_bytes_total']==sum(rr['snapshot_load_binary_read_categories']['returned_binary_read_bytes_by_category'].values()),
+                    snapshot_categories_measured=rr['snapshot_load_binary_read_categories']['read_calls']>0 and rr['snapshot_load_binary_read_categories']['returned_binary_read_bytes_by_category']['metadata_array_bytes']>0,
+                    every_release_persistence=all('snapshot_seconds' in r for r in rr['releases']) if panel=='every_release' else 'snapshot_seconds' not in rr['releases'][0])
+                dead=set()
+                for i,b in enumerate(requests):
+                    dead.update(b);_,ix=independent_edges(cx,ids,.6,dead)
+                    if m in ('B-F','B-F-FP32'):ix=[j for j in original if ids[j] not in dead]
+                    head=np.load(work/f'repair/head_{i:04d}.npy');err=float(np.linalg.norm(head-dual_head(arrays[d],y,ix)));head_errors.append(err)
+                    r=rr['releases'][i];flags[f'count_{i}']=r['count']==len(ix)
+                    flags[f'gate_{i}']=r['numerical_decoder']['release_allowed'] and r['numerical_decoder']['normalized_residual_eta']<=1e-10
+                    # FP32 has no FP64 equality assertion. Record its actual error.
+                    if not m.endswith('-FP32'):flags[f'fresh_dual_head_{i}']=err<1e-7
+                flags['initial_head_shape']=np.load(work/'construction/initial_head.npy').shape==(d,1)
+            for file in work.rglob('*'):
+                if file.is_file() and not file.name.startswith('state.npz'):
+                    target=dest/file.relative_to(work);target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(file,target)
+            checks.extend({'case':case,'check':name,'passed':bool(value)} for name,value in flags.items())
+            cases.append({'case':case,'method':m,'dimension':d,'solver':solver,'panel':panel,'passed':all(flags.values()),'head_error_fro':head_errors,
+                'FP32_errors_are_accuracy_frontier_not_exactness_check':m.endswith('-FP32'),'service_report':str(dest/'service_report.json')})
+            shutil.rmtree(work)
+            print(case,all(flags.values()),flush=True)
+        # Full-deletion precision/schema checks use the same natural rows.
+        graph=build_reference_graph(cx,ids,.6,ids,seed=0)
+        for method in FP32_METHODS:
+            state=build_method(method,graph,arrays[16],y,len(ids),curator=cx)
+            state.delete(ids);state.snapshot(tmp/'empty.npz');restored=load_method(method,tmp/'empty.npz')
+            left,right=state.moments(),restored.moments()
+            for name,ok in {'empty_count':right.count==0,'restored_gram':np.array_equal(left.gram,right.gram),'restored_cross':np.array_equal(left.cross,right.cross)}.items():
+                checks.append({'case':method+'_empty_roundtrip','check':name,'passed':bool(ok)})
+        # Deliberately impossible forecast is a schema test, not an empirical OOM.
+        r=run_service(bundles[16],'B-E',requests,tmp/'forecast',horizon=3,memory_forecast={
+            'forecast_peak_bytes':2**50,'development_evidence_sha256':'0'*64,'scope':'software_refusal_fixture_not_a_development_forecast'})
+        checks.extend([{'case':'forecast_schema_fixture','check':'no_child_spawned','passed':r['construction'] is None},
+                       {'case':'forecast_schema_fixture','check':'forecast_not_observed_oom','passed':r['status']=='forecast_infeasible' and not r['observed_oom']}])
+        shutil.copyfile(tmp/'forecast/service_report.json',out/'forecast_refusal_software_fixture.json')
+    result={'schema':'ccu-phase6-worker-check-1','evidence_role':'reused_Civil20_lexical_software_integration',
+        'primary_semantic_study_started':False,'cases':cases,'checks':checks,'check_count':len(checks),
+        'service_count':len(schedule),'restricted_release_count':2*sum(c['passed'] for c in cases),
+        'all_passed':all(c['passed'] for c in checks),'source_sha256':{n:hashlib.sha256((Path(__file__).parent/n).read_bytes()).hexdigest() for n in ('methods.py','measurement.py','workers.py','run_isolated.py','check_workers.py')}}
+    (out/'verification.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
+    if not result['all_passed']:raise AssertionError('Preserved failed Phase6 worker check')
+    return result
+if __name__=='__main__':
+    import argparse
+    p=argparse.ArgumentParser();p.add_argument('--destination',required=True);a=p.parse_args();run(a.destination)

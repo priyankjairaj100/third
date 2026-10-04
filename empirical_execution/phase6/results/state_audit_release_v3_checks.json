@@ -1,0 +1,85 @@
+{
+  "schema": "ccu-complete-state-audit-checks-v1",
+  "status": "passed",
+  "checks": {
+    "all_eight_core_methods_present": true,
+    "all_measured_services_completed": true,
+    "all_full_state_audits_passed": true,
+    "all_32_checkpoint_states_compared": true,
+    "actual_worker_snapshots_bound_at_every_checkpoint": true,
+    "canonical_symbolic_states_equal_at_every_checkpoint": true,
+    "measured_and_audit_heads_bitwise_equal": true,
+    "all_summary_checkpoint_coordinates_compared": true,
+    "all_BE_memberships_and_payloads_match": true,
+    "all_deleted_forced_zero_group_quotient_is_explicit": true
+  },
+  "passed": 10,
+  "total": 10,
+  "natural_checkpoint_states": 32,
+  "full_coefficient_coordinates_compared": 1801800,
+  "additional_natural_single_record_total_withdrawal_checks": 1,
+  "outcomes": [
+    {
+      "method": "O-G",
+      "service_success": true,
+      "audit_passed": true,
+      "audit_status": "passed",
+      "audit_report_sha256": "721cef4bf64fe9ba57df4315e7774e907679c166395129b0749e3387cf8ea13c"
+    },
+    {
+      "method": "O-T",
+      "service_success": true,
+      "audit_passed": true,
+      "audit_status": "passed",
+      "audit_report_sha256": "9acc0bf426482a46afa577372c35de938bed87c2d66d66a258a2bd4f6ecada03"
+    },
+    {
+      "method": "B-E",
+      "service_success": true,
+      "audit_passed": true,
+      "audit_status": "passed",
+      "audit_report_sha256": "c907bbd26b20a3e556ee706218ff16bf453cd93f3239adc20edaa5d8c596edf5"
+    },
+    {
+      "method": "B-A",
+      "service_success": true,
+      "audit_passed": true,
+      "audit_status": "passed",
+      "audit_report_sha256": "c0a29eabbc2995b94d5c6cabeb56bc4746c05e05e43a0f12279430cdac84635a"
+    },
+    {
+      "method": "P-I",
+      "service_success": true,
+      "audit_passed": true,
+      "audit_status": "passed",
+      "audit_report_sha256": "2abdcac02cb4bf1f87080f7fe2063624a36921b6d5889f5a71798fe1b7739a9d"
+    },
+    {
+      "method": "P-S",
+      "service_success": true,
+      "audit_passed": true,
+      "audit_status": "passed",
+      "audit_report_sha256": "2e1c35d282e3bd7f8ff11c4222538e72de73df426eda6ce1adccc980c7b21953"
+    },
+    {
+      "method": "P-R",
+      "service_success": true,
+      "audit_passed": true,
+      "audit_status": "passed",
+      "audit_report_sha256": "64e0c92ee82073c42f6eebe28d8cc3d9658542689ea828281df5d253de052c8d"
+    },
+    {
+      "method": "B-F",
+      "service_success": true,
+      "audit_passed": true,
+      "audit_status": "passed",
+      "audit_report_sha256": "402a1070e4433670cd00426268a8d08ea4cbf705a8d1cba90d1aa66227abd5ec"
+    }
+  ],
+  "primary_semantic_or_genuine_source_evidence": false,
+  "all_16_R_and_16_S_native_paths_completed": false,
+  "source_sha256": {
+    "check_state_audit.py": "18a972bc73e9682397152f49c5879cf9a69aac54701a618fa70b23a7ca615b76",
+    "state_audit.py": "e27f535cdbcb12204c3b00ad7afbce9b61b5c69e6fdba36bad62effd3d76f21a"
+  }
+}

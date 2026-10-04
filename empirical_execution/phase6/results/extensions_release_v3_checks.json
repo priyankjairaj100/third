@@ -1,0 +1,384 @@
+{
+  "status": "passed",
+  "checks": [
+    "cache_panel_alias_cannot_reuse_acceptance",
+    "cache_corpus_alias_cannot_reuse_acceptance",
+    "cache_changed_design_cannot_reuse_acceptance",
+    "cache_changed_base_cannot_reuse_acceptance",
+    "structure_mass_PPS_0_expected_status",
+    "structure_mass_PPS_0_no_primary_promotion",
+    "structure_one_percent_horizon_1_expected_status",
+    "structure_one_percent_horizon_1_no_primary_promotion",
+    "excluded_blocker_stress_2_expected_status",
+    "excluded_blocker_stress_2_no_primary_promotion",
+    "fresh_graph_audit_3_expected_status",
+    "fresh_graph_audit_3_no_primary_promotion",
+    "graph_envelope_conditional_4_expected_status",
+    "graph_envelope_conditional_4_no_primary_promotion",
+    "head_normalization_error_diagnostic_5_expected_status",
+    "head_normalization_error_diagnostic_5_no_primary_promotion",
+    "utility_reference_6_expected_status",
+    "utility_reference_6_no_primary_promotion",
+    "common_cached_graph_oracle_7_expected_status",
+    "common_cached_graph_oracle_7_no_primary_promotion",
+    "cold_warm_scope_8_expected_status",
+    "cold_warm_scope_8_no_primary_promotion",
+    "every_release_persistence_9_expected_status",
+    "every_release_persistence_9_no_primary_promotion",
+    "negative_controls_10_expected_status",
+    "negative_controls_10_no_primary_promotion",
+    "negative_controls_11_expected_status",
+    "negative_controls_11_no_primary_promotion",
+    "negative_controls_12_expected_status",
+    "negative_controls_12_no_primary_promotion",
+    "human_admission_main_actual_blank_response_not_completion",
+    "human_admission_main_no_primary_promotion",
+    "human_admission_context_actual_blank_response_not_completion",
+    "human_admission_context_no_primary_promotion",
+    "chronological_schema_whole_dates",
+    "actual_pair_replay_does_not_create_ratings",
+    "resigned_but_changed_sample_rejected",
+    "complete_statistics_route_uses_saved_predictions",
+    "statistics_runs_locked10000_resamples",
+    "statistics_does_not_invent_source_population",
+    "statistics_does_not_invent_significance",
+    "news_chronological_missing_actual_inputs_refused",
+    "human_threshold_calibration_missing_actual_inputs_refused",
+    "human_admission_main_missing_actual_inputs_refused",
+    "human_admission_context_missing_actual_inputs_refused",
+    "test_source_bootstrap_missing_actual_inputs_refused",
+    "engineering_label_cannot_bypass_primary_review",
+    "all16_extension_routes_have_explicit_coverage"
+  ],
+  "check_count": 48,
+  "routes": [
+    {
+      "recipe_id": "structure_mass_PPS",
+      "curator": null,
+      "status": "structural_zero_or_unavailable_arm",
+      "evidence": "natural_Civil40_lexical_route_execution",
+      "artifact": "route_00"
+    },
+    {
+      "recipe_id": "structure_one_percent_horizon",
+      "curator": null,
+      "status": "completed",
+      "evidence": "natural_Civil40_lexical_route_execution",
+      "artifact": "route_01"
+    },
+    {
+      "recipe_id": "excluded_blocker_stress",
+      "curator": null,
+      "status": "completed",
+      "evidence": "natural_Civil40_lexical_route_execution",
+      "artifact": "route_02"
+    },
+    {
+      "recipe_id": "fresh_graph_audit",
+      "curator": null,
+      "status": "completed",
+      "evidence": "natural_Civil40_lexical_route_execution",
+      "artifact": "route_03"
+    },
+    {
+      "recipe_id": "graph_envelope_conditional",
+      "curator": null,
+      "status": "completed",
+      "evidence": "natural_Civil40_lexical_route_execution",
+      "artifact": "route_04"
+    },
+    {
+      "recipe_id": "head_normalization_error_diagnostic",
+      "curator": null,
+      "status": "completed",
+      "evidence": "natural_Civil40_lexical_route_execution",
+      "artifact": "route_05"
+    },
+    {
+      "recipe_id": "utility_reference",
+      "curator": null,
+      "status": "completed",
+      "evidence": "natural_Civil40_lexical_route_execution",
+      "artifact": "route_06"
+    },
+    {
+      "recipe_id": "common_cached_graph_oracle",
+      "curator": null,
+      "status": "completed",
+      "evidence": "natural_Civil40_lexical_route_execution",
+      "artifact": "route_07"
+    },
+    {
+      "recipe_id": "cold_warm_scope",
+      "curator": null,
+      "status": "completed",
+      "evidence": "natural_Civil40_lexical_route_execution",
+      "artifact": "route_08"
+    },
+    {
+      "recipe_id": "every_release_persistence",
+      "curator": null,
+      "status": "completed",
+      "evidence": "natural_Civil40_lexical_route_execution",
+      "artifact": "route_09"
+    },
+    {
+      "recipe_id": "negative_controls",
+      "curator": "exact_text",
+      "status": "structural_zero_or_unavailable_arm",
+      "evidence": "natural_Civil40_lexical_route_execution",
+      "artifact": "route_10"
+    },
+    {
+      "recipe_id": "negative_controls",
+      "curator": "fixed_order_greedy",
+      "status": "completed",
+      "evidence": "natural_Civil40_lexical_route_execution",
+      "artifact": "route_11"
+    },
+    {
+      "recipe_id": "negative_controls",
+      "curator": "none",
+      "status": "completed",
+      "evidence": "natural_Civil40_lexical_route_execution",
+      "artifact": "route_12"
+    },
+    {
+      "recipe_id": "human_admission_main",
+      "status": "awaiting_real_human_responses",
+      "evidence": "actual_Civil_blank_frame_reconstructed_and_analyzed"
+    },
+    {
+      "recipe_id": "human_admission_context",
+      "status": "awaiting_real_human_responses",
+      "evidence": "actual_Civil_blank_frame_reconstructed_and_analyzed"
+    },
+    {
+      "recipe_id": "news_chronological",
+      "status": "software_path_check_passed",
+      "evidence": "two_symbol_date_schema_only"
+    },
+    {
+      "recipe_id": "human_threshold_calibration",
+      "status": "blank_human_input_refused",
+      "evidence": "actual_Civil_pair_sampling_recomputed_no_judgments"
+    },
+    {
+      "recipe_id": "test_source_bootstrap",
+      "status": "software_statistics_route_completed",
+      "evidence": "explicit_metadata_fixture_around_unchanged_saved_natural_predictions_no_genuine_source_bootstrap"
+    },
+    {
+      "recipe_id": "news_chronological",
+      "status": "blocked_missing_actual_input",
+      "evidence": "input_refusal_only"
+    },
+    {
+      "recipe_id": "human_threshold_calibration",
+      "status": "blocked_missing_actual_input",
+      "evidence": "input_refusal_only"
+    },
+    {
+      "recipe_id": "human_admission_main",
+      "status": "blocked_missing_actual_input",
+      "evidence": "input_refusal_only"
+    },
+    {
+      "recipe_id": "human_admission_context",
+      "status": "blocked_missing_actual_input",
+      "evidence": "input_refusal_only"
+    },
+    {
+      "recipe_id": "test_source_bootstrap",
+      "status": "blocked_missing_actual_input",
+      "evidence": "input_refusal_only"
+    }
+  ],
+  "route_execution_coverage": {
+    "cold_warm_scope": {
+      "natural_positive_execution": true,
+      "exercised_evidence": [
+        "natural_Civil40_lexical_route_execution"
+      ],
+      "observed_statuses": [
+        "completed"
+      ],
+      "primary_positive_execution": false
+    },
+    "common_cached_graph_oracle": {
+      "natural_positive_execution": true,
+      "exercised_evidence": [
+        "natural_Civil40_lexical_route_execution"
+      ],
+      "observed_statuses": [
+        "completed"
+      ],
+      "primary_positive_execution": false
+    },
+    "every_release_persistence": {
+      "natural_positive_execution": true,
+      "exercised_evidence": [
+        "natural_Civil40_lexical_route_execution"
+      ],
+      "observed_statuses": [
+        "completed"
+      ],
+      "primary_positive_execution": false
+    },
+    "excluded_blocker_stress": {
+      "natural_positive_execution": true,
+      "exercised_evidence": [
+        "natural_Civil40_lexical_route_execution"
+      ],
+      "observed_statuses": [
+        "completed"
+      ],
+      "primary_positive_execution": false
+    },
+    "fresh_graph_audit": {
+      "natural_positive_execution": true,
+      "exercised_evidence": [
+        "natural_Civil40_lexical_route_execution"
+      ],
+      "observed_statuses": [
+        "completed"
+      ],
+      "primary_positive_execution": false
+    },
+    "graph_envelope_conditional": {
+      "natural_positive_execution": true,
+      "exercised_evidence": [
+        "natural_Civil40_lexical_route_execution"
+      ],
+      "observed_statuses": [
+        "completed"
+      ],
+      "primary_positive_execution": false
+    },
+    "head_normalization_error_diagnostic": {
+      "natural_positive_execution": true,
+      "exercised_evidence": [
+        "natural_Civil40_lexical_route_execution"
+      ],
+      "observed_statuses": [
+        "completed"
+      ],
+      "primary_positive_execution": false
+    },
+    "human_admission_context": {
+      "natural_positive_execution": false,
+      "exercised_evidence": [
+        "actual_Civil_blank_frame_reconstructed_and_analyzed",
+        "input_refusal_only"
+      ],
+      "observed_statuses": [
+        "awaiting_real_human_responses",
+        "blocked_missing_actual_input"
+      ],
+      "primary_positive_execution": false
+    },
+    "human_admission_main": {
+      "natural_positive_execution": false,
+      "exercised_evidence": [
+        "actual_Civil_blank_frame_reconstructed_and_analyzed",
+        "input_refusal_only"
+      ],
+      "observed_statuses": [
+        "awaiting_real_human_responses",
+        "blocked_missing_actual_input"
+      ],
+      "primary_positive_execution": false
+    },
+    "human_threshold_calibration": {
+      "natural_positive_execution": false,
+      "exercised_evidence": [
+        "actual_Civil_pair_sampling_recomputed_no_judgments",
+        "input_refusal_only"
+      ],
+      "observed_statuses": [
+        "blank_human_input_refused",
+        "blocked_missing_actual_input"
+      ],
+      "primary_positive_execution": false
+    },
+    "negative_controls": {
+      "natural_positive_execution": true,
+      "exercised_evidence": [
+        "natural_Civil40_lexical_route_execution"
+      ],
+      "observed_statuses": [
+        "completed",
+        "structural_zero_or_unavailable_arm"
+      ],
+      "primary_positive_execution": false
+    },
+    "news_chronological": {
+      "natural_positive_execution": false,
+      "exercised_evidence": [
+        "input_refusal_only",
+        "two_symbol_date_schema_only"
+      ],
+      "observed_statuses": [
+        "blocked_missing_actual_input",
+        "software_path_check_passed"
+      ],
+      "primary_positive_execution": false
+    },
+    "structure_mass_PPS": {
+      "natural_positive_execution": false,
+      "exercised_evidence": [
+        "natural_Civil40_lexical_route_execution"
+      ],
+      "observed_statuses": [
+        "structural_zero_or_unavailable_arm"
+      ],
+      "primary_positive_execution": false
+    },
+    "structure_one_percent_horizon": {
+      "natural_positive_execution": true,
+      "exercised_evidence": [
+        "natural_Civil40_lexical_route_execution"
+      ],
+      "observed_statuses": [
+        "completed"
+      ],
+      "primary_positive_execution": false
+    },
+    "test_source_bootstrap": {
+      "natural_positive_execution": false,
+      "exercised_evidence": [
+        "explicit_metadata_fixture_around_unchanged_saved_natural_predictions_no_genuine_source_bootstrap",
+        "input_refusal_only"
+      ],
+      "observed_statuses": [
+        "blocked_missing_actual_input",
+        "software_statistics_route_completed"
+      ],
+      "primary_positive_execution": false
+    },
+    "utility_reference": {
+      "natural_positive_execution": true,
+      "exercised_evidence": [
+        "natural_Civil40_lexical_route_execution"
+      ],
+      "observed_statuses": [
+        "completed"
+      ],
+      "primary_positive_execution": false
+    }
+  },
+  "source_sha256": {
+    "recipes.py": "e6a3159da2330031c044006d057beac334b544c058ff5a9cbe2d192d7b8ed367",
+    "extensions.py": "21aa34c8efd4c31235a9facf3e9b439143ec5635a0d0bc34648ebaec337846d4",
+    "check_extensions.py": "ce144c1f08cd91143d1d6a19d25f5e4f016fba36b67d01aff1fa0e787cc98a66"
+  },
+  "natural_records_train": 40,
+  "natural_records_evaluation": 20,
+  "curator": "lexical32",
+  "learner": "lexical16",
+  "genuine_source_withdrawal_evidence": false,
+  "actual_human_responses": 0,
+  "primary_semantic_study_started": false,
+  "development_evaluation_is_not_untouched_test": true,
+  "timings_not_systems_evidence": true
+}

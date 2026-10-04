@@ -488,3 +488,61 @@ The exact helper is platform-specific; use its provided source/compile instructi
 Readable PDFs are in `output/pdf/`: theory, empirical protocol, execution_01, memory_repair, strict_mode, empirical_phase2, and empirical_preparation. Their corresponding ZIPs preserve stage-specific source/results. `output/counterfactual_curation_reproducibility.zip` is earlier theory/reproducibility material, not the complete latest state. Use the repository's live source plus explicit current status for continuation; do not resume only from an old archive.
 
 There is not yet a finished ACL submission backed by the promised semantic study. The algorithmic qualifications addressed above are real progress, but “reviewer-proof,” superiority to strong incremental baselines, broad learned-curator exactness, and semantic task value are not established facts. A new chat should resume from `phase4/TODO.json`: acquire/accept authentic inputs, execute the phase-3 plus versioned phase-4 preparation workflows, and finish the remaining primary integrations while preserving theorem scope and all unfavorable results.
+
+
+## Phase 6: complete routes and stronger verification
+
+This section supersedes earlier software gaps.
+The Phase 6 completion ledger gives the final counts and review bindings.
+The primary semantic study remains unstarted.
+
+The main fixed-curator theorem is unchanged.
+Selection still uses every earlier raw neighbor, including previously excluded records.
+The finite horizon and complete source partition remain mandatory.
+No algorithmic result establishes minimum total bytes for the compressed summaries.
+Compact eligible payload remains the key comparison.
+
+The dispatcher now joins the registered branches and methods.
+The recipe book resolves the 21 prior design obligations prospectively.
+Its expanded registry preserves the original experiment jobs.
+It distinguishes unavailable inputs from implementation choices.
+These decisions are not an externally submitted preregistration.
+
+Acceptance replays source parsing, preparation, caches, guards, panels, and original labels.
+The registered panel contract determines the target population.
+The registered request contract determines the cumulative horizons.
+External evidence remains necessary for archive identity, coverage, permissions, and independent human work.
+Positive control tests use explicit mocks where the real backend is unavailable.
+They do not establish authentic corpus or transformer acceptance.
+
+The worker layer now includes B-F, a cached graph tier, and all eight named FP32 variants.
+It also joins common CG, fresh process, warm service, and every-release panels.
+Memory reports distinguish logical state, process observations, and unmeasured physical traffic.
+Process sampling does not guarantee capture of every transient peak.
+The no-reaccess boundary remains a trusted-code contract.
+It does not establish physical erasure or general adversarial security.
+
+The exact convex verifier gains a dyadic integer backend.
+It preserves the original sigmoid intervals and every rational gradient endpoint.
+It therefore preserves the existing strong-convexity certificate.
+Tests include empty targets, subnormal values, and genuine Civil labels.
+Forty separate process runs compare sparse and dense lexical representations.
+The dense representations use a fixed orthogonal transformation.
+They are not semantic model outputs.
+The native primary problem has not run.
+Work caps and resource forecasts remain explicit.
+A larger cap must be locked from suitable development measurements before confirmation.
+
+Logistic decisions now use separate source-fold calibration probabilities.
+They retain the registered ridge regularization choice.
+They do not reuse ridge score thresholds on logistic probabilities.
+Human category intervals now invert the actual finite population sampling distribution.
+The analysis handles overlapping sampling routes and arbitrary missing outcomes.
+Simultaneous coverage uses the declared Bonferroni allocation.
+Its target is the fixed protocol outcome, not latent truth or new-rater variation.
+All actual human responses remain absent.
+
+The remaining scientific questions require genuine primary inputs.
+They concern meaningful additions, task effects, source behavior, memory, runtime, and full-refit scope.
+Repeated engineering checks cannot answer those questions.
+The next productive action is original input intake, followed by accepted local execution.

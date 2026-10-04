@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "real_archive_restored": "dispatch_candidate1",
+  "restored_files": 5107,
+  "all_restored_bytes_reverified": true,
+  "differing_destination_refused": true,
+  "original_results_modified": false,
+  "archive_sha256": "f5f19aea5f678fdb779cddd46e4eeb89bd5bc1ca6e480e0effd417b007471595",
+  "sources": {
+    "tools/check_phase6_archive.py": "cab4c9cdbfe1eedb1e8d279546a4dcb8a6af244a2bf0577eae7869532e606fb3",
+    "tools/phase6_result_archive.py": "8eb6f435865b1b63bf1a1bff847a364e6cb1740c01986cecc8f87f9b328a0495"
+  }
+}

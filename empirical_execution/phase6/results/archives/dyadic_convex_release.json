@@ -1,0 +1,148 @@
+{
+  "schema": "ccu-phase6-result-archive-1",
+  "directory": "dyadic_convex_release",
+  "archive": "dyadic_convex_release.tar.gz",
+  "archive_bytes": 565351,
+  "archive_sha256": "8cb7acaf2551f55eaf3b608e972ae5c27da0e8f6b7e3322e343c394c3395801d",
+  "file_count": 27,
+  "uncompressed_file_bytes": 4669591,
+  "files": [
+    {
+      "path": "dyadic_convex_release/candidate_d64_q7.npz",
+      "bytes": 35508,
+      "sha256": "7f317a598f4c0f924f539809fc103729986da561c1ff6dde37bae3f8deaf9a4c"
+    },
+    {
+      "path": "dyadic_convex_release/candidate_d768_q1.npz",
+      "bytes": 314868,
+      "sha256": "f3cde89de2c2a86b345a8a8fd1d015aa3225a703450038ad08d9c92216f29142"
+    },
+    {
+      "path": "dyadic_convex_release/candidates.json",
+      "bytes": 22614,
+      "sha256": "505b1aefa1357fc16b68424a0fd32e72d306ee7038ed72417b84f7e152d82983"
+    },
+    {
+      "path": "dyadic_convex_release/checks.json",
+      "bytes": 1993,
+      "sha256": "4489e9508462c4f9008ec75832149ee583ef7016380abdf9d4be81814c93aef6"
+    },
+    {
+      "path": "dyadic_convex_release/design_lock.json",
+      "bytes": 1059,
+      "sha256": "dacefe3cb7f86c21d1dda54f2a553d1d6c3cb63b4f3249f079578a2d027bebd9"
+    },
+    {
+      "path": "dyadic_convex_release/run_00_d768_q1_r3_original_fraction_v1.json",
+      "bytes": 255138,
+      "sha256": "d48687fb6f0322dc02110258882835978c459fc94f0773a82d9d2757413bcbce"
+    },
+    {
+      "path": "dyadic_convex_release/run_01_d768_q1_r1_original_fraction_v1.json",
+      "bytes": 255139,
+      "sha256": "af7f27aa7d0498792ae9e5697ce14b311f94d95a6d71c8e61a28d2580e0cbffd"
+    },
+    {
+      "path": "dyadic_convex_release/run_02_d768_q1_r2_original_fraction_v1.json",
+      "bytes": 255139,
+      "sha256": "24e7c43e458b1bdfd30fd40770fb15a76e6a7bb3712463d81916e799f11a121f"
+    },
+    {
+      "path": "dyadic_convex_release/run_03_d64_q7_r3_exact_dyadic_integer_v1.json",
+      "bytes": 175162,
+      "sha256": "65e366d623e682dca93b1b666da8227ed7b828767a99c3632aa701d82e18b07d"
+    },
+    {
+      "path": "dyadic_convex_release/run_04_d768_q1_r3_exact_dyadic_integer_v1.json",
+      "bytes": 255970,
+      "sha256": "b7d925a299d277be077c6f4fc3770620774f14441dbe7abf22818b8fda1ae04d"
+    },
+    {
+      "path": "dyadic_convex_release/run_05_d64_q7_r2_exact_dyadic_integer_v1.json",
+      "bytes": 175163,
+      "sha256": "6d69cd28bac9ebe7723aa8b2fcf895e10f376486a8a2f764d61eaecf0f35b040"
+    },
+    {
+      "path": "dyadic_convex_release/run_06_d768_q1_r4_original_fraction_v1.json",
+      "bytes": 255140,
+      "sha256": "527d26006d92a3d888f51d1935a8c88712438008c3cb8b65eee94217ebf23fa0"
+    },
+    {
+      "path": "dyadic_convex_release/run_07_d64_q7_r1_exact_dyadic_integer_v1.json",
+      "bytes": 175160,
+      "sha256": "a618185baa4742b8b1879836deb80c9fadd89ed2f143a0707c2b2fdfc8f66514"
+    },
+    {
+      "path": "dyadic_convex_release/run_08_d64_q7_r0_exact_dyadic_integer_v1.json",
+      "bytes": 175160,
+      "sha256": "c02efde08a3b7391cb08b70ba6455a810923b4c226b118a7f1908265ad894d32"
+    },
+    {
+      "path": "dyadic_convex_release/run_09_d64_q7_r2_original_fraction_v1.json",
+      "bytes": 169836,
+      "sha256": "54f5e434a8535d725aec23b952c681cfafe1f10191afa4bdf7ee3d236ecb8d42"
+    },
+    {
+      "path": "dyadic_convex_release/run_10_d768_q1_r2_exact_dyadic_integer_v1.json",
+      "bytes": 255969,
+      "sha256": "b49265bbf6697bfcf854e2fb8c8da281ab16ef032a53050e1ecf3567be88df45"
+    },
+    {
+      "path": "dyadic_convex_release/run_11_d768_q1_r1_exact_dyadic_integer_v1.json",
+      "bytes": 255969,
+      "sha256": "58c5e1c5551a2611612ff88852b13a8f8c37fc92b112f0b14686398d071b3690"
+    },
+    {
+      "path": "dyadic_convex_release/run_12_d64_q7_r3_original_fraction_v1.json",
+      "bytes": 169837,
+      "sha256": "74175d6f5adb31b22c980bb145e18468181bb2b551423448711dacd29ccdf6c3"
+    },
+    {
+      "path": "dyadic_convex_release/run_13_d768_q1_r0_original_fraction_v1.json",
+      "bytes": 255140,
+      "sha256": "7447b26cb3f0fbd219c06246eecbe2029c77be0f7756186439ffb5fdd50b391b"
+    },
+    {
+      "path": "dyadic_convex_release/run_14_d768_q1_r4_exact_dyadic_integer_v1.json",
+      "bytes": 255970,
+      "sha256": "4219ebdfc5044a817a1fb314733c3010c1990505aeaf6f74da9148605acd81bb"
+    },
+    {
+      "path": "dyadic_convex_release/run_15_d64_q7_r0_original_fraction_v1.json",
+      "bytes": 169836,
+      "sha256": "d4933e1a49653755f1a3161f56fa2d5e79277ab335326d709efb5246fb6af6e7"
+    },
+    {
+      "path": "dyadic_convex_release/run_16_d64_q7_r4_exact_dyadic_integer_v1.json",
+      "bytes": 175162,
+      "sha256": "14808c77a4e1f0793c5d0f8f41e69909af6bc0144c74a6d9b720e2c51033b840"
+    },
+    {
+      "path": "dyadic_convex_release/run_17_d768_q1_r0_exact_dyadic_integer_v1.json",
+      "bytes": 255970,
+      "sha256": "d122f1bfb2a4e33b811421bae2eec27cecb749242e20c388a3a6c5e001a6d7f3"
+    },
+    {
+      "path": "dyadic_convex_release/run_18_d64_q7_r4_original_fraction_v1.json",
+      "bytes": 169837,
+      "sha256": "ea1ce6a5c9a1e14e66918d9b87a977212f2a26d75737efc6ad7653a96308318b"
+    },
+    {
+      "path": "dyadic_convex_release/run_19_d64_q7_r1_original_fraction_v1.json",
+      "bytes": 169838,
+      "sha256": "1f766c2da1204620b017af0923945d0cc7df910b07c1a96a26c6623483a0b8dc"
+    },
+    {
+      "path": "dyadic_convex_release/run_plan.json",
+      "bytes": 2103,
+      "sha256": "98a73faf0ded88a1cd061973f47bd7f9a95e1408c044284a6dcbb116fe36e893"
+    },
+    {
+      "path": "dyadic_convex_release/runs.json",
+      "bytes": 10911,
+      "sha256": "45365d1871263e6d201ccfcc58767ca6ae2d4e054bcc788f8bee21e676673dc9"
+    }
+  ],
+  "results_omitted": false,
+  "archive_tool_sha256": "8eb6f435865b1b63bf1a1bff847a364e6cb1740c01986cecc8f87f9b328a0495"
+}

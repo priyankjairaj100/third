@@ -1,0 +1,37 @@
+{
+  "schema": "ccu-phase6-independent-review-1",
+  "status": "incomplete_review",
+  "check_count": 9,
+  "checks": [
+    "human exact hypergeometric tails independently enumerated",
+    "human finite-population coverage independently enumerated",
+    "human arbitrary missingness preserves every complete-data interval",
+    "human no sample gives complete unidentified count range",
+    "human census gives exact count",
+    "human overlapping-route owner construction has exact design coverage",
+    "human fractional count rejected",
+    "human impossible missing count rejected",
+    "human zero alpha rejected"
+  ],
+  "sections": {
+    "human_intervals": {
+      "evidence_role": "mathematical software checks",
+      "independent_tail_comparisons": 9098,
+      "independent_coverage_cases": 818,
+      "least_observed_exact_coverage": "425/462",
+      "overlapping_route_coverage_cases": 32,
+      "actual_human_responses_created": 0
+    }
+  },
+  "reviewed_sources": {
+    "empirical_execution/phase6/audit_independent.py": "6ca01434bfe321efe59e6442d8a602029d6272ce774d7078e7224a18ade14cfb",
+    "empirical_execution/phase6/human_inference.py": "a37237670ca51cf42c4ef012b2695d346598d39c641619b3ff0796fbc484efce",
+    "empirical_execution/phase6/methods.py": "14cf6964f9b6dfbb27b4e03c96ebbf2848d5228778ff1d9ac8e2b126b0cd6f72",
+    "empirical_execution/phase6/run_isolated.py": "7fe0fee2678f8e3716a19a341b8a7e0b9df148efa19e053baf5215e6949934d8",
+    "empirical_execution/phase6/workers.py": "fd80cb41f0f77d6733586e29dd9bd6875fa5a400ae658fc7b79f16ba7d655bd6"
+  },
+  "primary_semantic_study_completed": false,
+  "authentic_data_provenance_verified": false,
+  "genuine_human_collection_verified": false,
+  "scope": "Independent mathematical and software checks only"
+}

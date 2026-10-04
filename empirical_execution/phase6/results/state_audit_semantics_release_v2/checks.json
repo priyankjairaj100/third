@@ -1,0 +1,6498 @@
+{
+  "schema": "ccu-state-transition-contract-checks-1",
+  "scope": "software_contract_checks_only",
+  "primary_semantic_study_started": false,
+  "actual_source_empirical_results": false,
+  "methods": [
+    "O-G",
+    "O-T",
+    "B-E",
+    "B-A",
+    "P-I",
+    "P-S",
+    "P-R",
+    "B-F"
+  ],
+  "absolute_tolerance": 1e-11,
+  "relative_tolerance": 1e-10,
+  "FP64_history_claim": "diagnostic coordinate agreement; exact structure and symbolic integer substitutions",
+  "cases": [
+    {
+      "fixture": "Civil20_record_lexical_contract",
+      "role": "natural_preview_software_contract_not_semantic_evidence",
+      "records": 20,
+      "unit": "record",
+      "horizon": 3,
+      "paths": {
+        "singleton": [
+          [
+            "civil_comments_connector_preview:train:row:2"
+          ],
+          [
+            "civil_comments_connector_preview:train:row:0"
+          ],
+          [
+            "civil_comments_connector_preview:train:row:1"
+          ]
+        ],
+        "batch": [
+          [
+            "civil_comments_connector_preview:train:row:2",
+            "civil_comments_connector_preview:train:row:0",
+            "civil_comments_connector_preview:train:row:1"
+          ]
+        ],
+        "reverse": [
+          [
+            "civil_comments_connector_preview:train:row:1"
+          ],
+          [
+            "civil_comments_connector_preview:train:row:0"
+          ],
+          [
+            "civil_comments_connector_preview:train:row:2"
+          ]
+        ],
+        "duplicate": [
+          [
+            "civil_comments_connector_preview:train:row:2",
+            "civil_comments_connector_preview:train:row:2"
+          ],
+          [
+            "civil_comments_connector_preview:train:row:2"
+          ],
+          [
+            "civil_comments_connector_preview:train:row:0",
+            "civil_comments_connector_preview:train:row:1"
+          ]
+        ]
+      },
+      "initial_graph_edges": 70,
+      "initial_selected": 7
+    },
+    {
+      "fixture": "tiny_source_algebra_software_fixture",
+      "role": "algebraic_source_contract_fixture_no_corpus_or_empirical_provenance_claim",
+      "records": 6,
+      "unit": "source",
+      "horizon": 3,
+      "paths": {
+        "singleton": [
+          [
+            "algebra-source-a"
+          ],
+          [
+            "algebra-source-b"
+          ],
+          [
+            "algebra-source-c"
+          ]
+        ],
+        "batch": [
+          [
+            "algebra-source-a",
+            "algebra-source-b",
+            "algebra-source-c"
+          ]
+        ],
+        "reverse": [
+          [
+            "algebra-source-c"
+          ],
+          [
+            "algebra-source-b"
+          ],
+          [
+            "algebra-source-a"
+          ]
+        ],
+        "duplicate": [
+          [
+            "algebra-source-a",
+            "algebra-source-a"
+          ],
+          [
+            "algebra-source-a"
+          ],
+          [
+            "algebra-source-b",
+            "algebra-source-c"
+          ]
+        ]
+      },
+      "initial_graph_edges": 6,
+      "initial_selected": 3
+    }
+  ],
+  "checks": [
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "singleton/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "singleton/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "singleton/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "singleton/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "singleton/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "singleton/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "singleton/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "singleton/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "singleton/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "singleton/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "singleton/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "singleton/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "batch/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "batch/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "batch/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "batch/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "reverse/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "reverse/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "reverse/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "reverse/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "reverse/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "reverse/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "reverse/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "reverse/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "reverse/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "reverse/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "reverse/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "reverse/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "duplicate/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "duplicate/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "duplicate/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "duplicate/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "duplicate/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "duplicate/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "duplicate/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "duplicate/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "duplicate/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "duplicate/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "duplicate/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "duplicate/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "singleton/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "batch/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "reverse/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "duplicate/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "save_resume/same_history_snapshot_bytes",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "save_resume/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "save_resume/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "unknown/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "non_string/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "over_budget_batch/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "exhausted_horizon/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "exhausted_duplicate/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "exhausted_duplicate/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "exhausted_duplicate/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "exhausted_empty/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "exhausted_empty/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "exhausted_empty/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-G",
+      "check": "all_deleted/zero_roundtrip",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "singleton/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "singleton/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "singleton/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "singleton/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "singleton/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "singleton/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "singleton/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "singleton/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "singleton/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "singleton/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "singleton/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "singleton/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "batch/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "batch/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "batch/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "batch/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "reverse/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "reverse/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "reverse/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "reverse/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "reverse/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "reverse/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "reverse/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "reverse/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "reverse/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "reverse/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "reverse/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "reverse/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "duplicate/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "duplicate/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "duplicate/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "duplicate/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "duplicate/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "duplicate/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "duplicate/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "duplicate/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "duplicate/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "duplicate/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "duplicate/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "duplicate/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "singleton/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "batch/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "reverse/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "duplicate/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "save_resume/same_history_snapshot_bytes",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "save_resume/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "save_resume/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "unknown/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "non_string/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "over_budget_batch/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "exhausted_horizon/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "exhausted_duplicate/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "exhausted_duplicate/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "exhausted_duplicate/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "exhausted_empty/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "exhausted_empty/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "exhausted_empty/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/O-T",
+      "check": "all_deleted/zero_roundtrip",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "singleton/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "singleton/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "singleton/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "singleton/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "singleton/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "singleton/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "singleton/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "singleton/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "singleton/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "singleton/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "singleton/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "singleton/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "batch/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "batch/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "batch/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "batch/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "reverse/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "reverse/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "reverse/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "reverse/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "reverse/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "reverse/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "reverse/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "reverse/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "reverse/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "reverse/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "reverse/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "reverse/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "duplicate/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "duplicate/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "duplicate/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "duplicate/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "duplicate/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "duplicate/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "duplicate/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "duplicate/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "duplicate/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "duplicate/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "duplicate/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "duplicate/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "singleton/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "batch/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "reverse/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "duplicate/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "save_resume/same_history_snapshot_bytes",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "save_resume/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "save_resume/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "unknown/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "non_string/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "over_budget_batch/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "exhausted_horizon/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "exhausted_duplicate/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "exhausted_duplicate/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "exhausted_duplicate/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "exhausted_empty/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "exhausted_empty/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "exhausted_empty/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-E",
+      "check": "all_deleted/zero_roundtrip",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "singleton/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "singleton/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "singleton/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "singleton/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "singleton/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "singleton/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "singleton/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "singleton/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "singleton/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "singleton/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "singleton/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "singleton/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "batch/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "batch/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "batch/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "batch/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "reverse/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "reverse/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "reverse/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "reverse/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "reverse/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "reverse/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "reverse/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "reverse/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "reverse/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "reverse/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "reverse/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "reverse/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "duplicate/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "duplicate/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "duplicate/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "duplicate/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "duplicate/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "duplicate/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "duplicate/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "duplicate/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "duplicate/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "duplicate/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "duplicate/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "duplicate/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "singleton/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "batch/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "reverse/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "duplicate/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "save_resume/same_history_snapshot_bytes",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "save_resume/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "save_resume/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "unknown/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "non_string/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "over_budget_batch/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "exhausted_horizon/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "exhausted_duplicate/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "exhausted_duplicate/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "exhausted_duplicate/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "exhausted_empty/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "exhausted_empty/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "exhausted_empty/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-A",
+      "check": "all_deleted/zero_roundtrip",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "singleton/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "singleton/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "singleton/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "singleton/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 1683
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "singleton/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "singleton/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "singleton/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "singleton/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "singleton/1/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 1377
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "singleton/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "singleton/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "singleton/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "singleton/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "singleton/2/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 153
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "singleton/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "batch/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "batch/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "batch/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "batch/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 153
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "batch/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "reverse/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "reverse/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "reverse/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "reverse/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 1683
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "reverse/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "reverse/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "reverse/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "reverse/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "reverse/1/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 1377
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "reverse/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "reverse/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "reverse/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "reverse/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "reverse/2/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 153
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "reverse/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "duplicate/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "duplicate/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "duplicate/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "duplicate/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 1683
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "duplicate/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "duplicate/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "duplicate/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "duplicate/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "duplicate/1/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 1683
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "duplicate/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "duplicate/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "duplicate/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "duplicate/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "duplicate/2/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 153
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "duplicate/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "singleton/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "singleton/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "singleton/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "batch/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "batch/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "batch/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "reverse/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "reverse/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "reverse/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "duplicate/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "duplicate/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "duplicate/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "save_resume/same_history_snapshot_bytes",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "save_resume/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "save_resume/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "save_resume/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 153
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "unknown/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "non_string/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "over_budget_batch/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "exhausted_horizon/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "exhausted_duplicate/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "exhausted_duplicate/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "exhausted_duplicate/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "exhausted_duplicate/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 153
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "exhausted_empty/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "exhausted_empty/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "exhausted_empty/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "exhausted_empty/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 153
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-I",
+      "check": "all_deleted/zero_roundtrip",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "singleton/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "singleton/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "singleton/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "singleton/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 1683
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "singleton/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "singleton/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "singleton/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "singleton/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "singleton/1/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 1377
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "singleton/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "singleton/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "singleton/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "singleton/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "singleton/2/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 153
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "singleton/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "batch/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "batch/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "batch/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "batch/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 153
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "batch/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "reverse/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "reverse/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "reverse/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "reverse/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 1683
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "reverse/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "reverse/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "reverse/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "reverse/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "reverse/1/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 1377
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "reverse/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "reverse/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "reverse/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "reverse/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "reverse/2/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 153
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "reverse/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "duplicate/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "duplicate/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "duplicate/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "duplicate/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 1683
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "duplicate/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "duplicate/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "duplicate/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "duplicate/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "duplicate/1/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 1683
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "duplicate/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "duplicate/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "duplicate/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "duplicate/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "duplicate/2/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 153
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "duplicate/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "singleton/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "singleton/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "singleton/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "batch/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "batch/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "batch/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "reverse/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "reverse/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "reverse/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "duplicate/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "duplicate/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "duplicate/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "save_resume/same_history_snapshot_bytes",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "save_resume/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "save_resume/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "save_resume/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 153
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "unknown/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "non_string/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "over_budget_batch/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "exhausted_horizon/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "exhausted_duplicate/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "exhausted_duplicate/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "exhausted_duplicate/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "exhausted_duplicate/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 153
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "exhausted_empty/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "exhausted_empty/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "exhausted_empty/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "exhausted_empty/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 153
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-S",
+      "check": "all_deleted/zero_roundtrip",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "singleton/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "singleton/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "singleton/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "singleton/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 1683
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "singleton/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "singleton/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "singleton/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "singleton/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "singleton/1/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 1377
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "singleton/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "singleton/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "singleton/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "singleton/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "singleton/2/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 153
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "singleton/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "batch/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "batch/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "batch/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "batch/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 153
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "batch/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "reverse/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "reverse/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "reverse/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "reverse/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 1683
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "reverse/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "reverse/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "reverse/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "reverse/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "reverse/1/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 1377
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "reverse/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "reverse/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "reverse/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "reverse/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "reverse/2/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 153
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "reverse/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "duplicate/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "duplicate/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "duplicate/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "duplicate/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 1683
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "duplicate/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "duplicate/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "duplicate/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "duplicate/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "duplicate/1/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 1683
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "duplicate/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "duplicate/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "duplicate/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "duplicate/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "duplicate/2/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 153
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "duplicate/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "singleton/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "singleton/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "singleton/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "batch/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "batch/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "batch/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "reverse/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "reverse/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "reverse/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "duplicate/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "duplicate/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "duplicate/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "save_resume/same_history_snapshot_bytes",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "save_resume/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "save_resume/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "save_resume/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 153
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "unknown/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "non_string/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "over_budget_batch/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "exhausted_horizon/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "exhausted_duplicate/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "exhausted_duplicate/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "exhausted_duplicate/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "exhausted_duplicate/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 153
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "exhausted_empty/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "exhausted_empty/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "exhausted_empty/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "exhausted_empty/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 153
+    },
+    {
+      "case": "Civil20_record_lexical_contract/P-R",
+      "check": "all_deleted/zero_roundtrip",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "singleton/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "singleton/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "singleton/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "singleton/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "singleton/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "singleton/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "singleton/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "singleton/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "singleton/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "singleton/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "singleton/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "singleton/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "batch/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "batch/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "batch/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "batch/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "reverse/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "reverse/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "reverse/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "reverse/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "reverse/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "reverse/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "reverse/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "reverse/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "reverse/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "reverse/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "reverse/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "reverse/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "duplicate/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "duplicate/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "duplicate/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "duplicate/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "duplicate/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "duplicate/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "duplicate/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "duplicate/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "duplicate/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "duplicate/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "duplicate/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "duplicate/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "singleton/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "batch/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "reverse/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "duplicate/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "save_resume/same_history_snapshot_bytes",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "save_resume/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "save_resume/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "unknown/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "non_string/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "over_budget_batch/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "exhausted_horizon/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "exhausted_duplicate/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "exhausted_duplicate/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "exhausted_duplicate/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "exhausted_empty/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "exhausted_empty/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "exhausted_empty/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "Civil20_record_lexical_contract/B-F",
+      "check": "all_deleted/zero_roundtrip",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture",
+      "check": "fixture/own_source_blocker_present",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture",
+      "check": "fixture/repeated_blocker_source_present",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "singleton/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "singleton/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "singleton/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "singleton/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "singleton/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "singleton/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "singleton/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "singleton/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "singleton/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "singleton/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "singleton/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "singleton/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "batch/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "batch/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "batch/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "batch/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "reverse/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "reverse/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "reverse/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "reverse/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "reverse/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "reverse/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "reverse/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "reverse/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "reverse/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "reverse/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "reverse/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "reverse/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "duplicate/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "duplicate/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "duplicate/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "duplicate/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "duplicate/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "duplicate/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "duplicate/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "duplicate/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "duplicate/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "duplicate/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "duplicate/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "duplicate/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "singleton/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "batch/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "reverse/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "duplicate/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "save_resume/same_history_snapshot_bytes",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "save_resume/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "save_resume/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "unknown/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "non_string/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "over_budget_batch/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "exhausted_horizon/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "exhausted_duplicate/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "exhausted_duplicate/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "exhausted_duplicate/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "exhausted_empty/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "exhausted_empty/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "exhausted_empty/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "all_deleted/zero_roundtrip",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "source_expansion/0/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "source_expansion/0/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 2,
+      "remaining_record_horizon": 3
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "source_expansion/1/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "source_expansion/1/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 1,
+      "remaining_record_horizon": 1
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "source_expansion/2/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-G",
+      "check": "source_expansion/2/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 0,
+      "remaining_record_horizon": 0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "singleton/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "singleton/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "singleton/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "singleton/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "singleton/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "singleton/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "singleton/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "singleton/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "singleton/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "singleton/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "singleton/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "singleton/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "batch/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "batch/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "batch/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "batch/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "reverse/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "reverse/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "reverse/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "reverse/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "reverse/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "reverse/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "reverse/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "reverse/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "reverse/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "reverse/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "reverse/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "reverse/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "duplicate/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "duplicate/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "duplicate/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "duplicate/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "duplicate/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "duplicate/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "duplicate/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "duplicate/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "duplicate/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "duplicate/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "duplicate/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "duplicate/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "singleton/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "batch/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "reverse/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "duplicate/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "save_resume/same_history_snapshot_bytes",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "save_resume/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "save_resume/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "unknown/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "non_string/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "over_budget_batch/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "exhausted_horizon/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "exhausted_duplicate/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "exhausted_duplicate/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "exhausted_duplicate/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "exhausted_empty/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "exhausted_empty/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "exhausted_empty/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "all_deleted/zero_roundtrip",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "source_expansion/0/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "source_expansion/0/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 2,
+      "remaining_record_horizon": 3
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "source_expansion/1/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "source_expansion/1/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 1,
+      "remaining_record_horizon": 1
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "source_expansion/2/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/O-T",
+      "check": "source_expansion/2/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 0,
+      "remaining_record_horizon": 0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "singleton/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "singleton/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "singleton/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "singleton/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "singleton/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "singleton/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "singleton/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "singleton/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "singleton/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "singleton/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "singleton/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "singleton/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "batch/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "batch/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "batch/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "batch/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "reverse/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "reverse/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "reverse/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "reverse/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "reverse/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "reverse/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "reverse/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "reverse/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "reverse/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "reverse/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "reverse/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "reverse/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "duplicate/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "duplicate/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "duplicate/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "duplicate/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "duplicate/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "duplicate/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "duplicate/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "duplicate/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "duplicate/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "duplicate/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "duplicate/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "duplicate/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "singleton/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "batch/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "reverse/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "duplicate/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "save_resume/same_history_snapshot_bytes",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "save_resume/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "save_resume/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "unknown/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "non_string/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "over_budget_batch/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "exhausted_horizon/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "exhausted_duplicate/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "exhausted_duplicate/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "exhausted_duplicate/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "exhausted_empty/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "exhausted_empty/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "exhausted_empty/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "all_deleted/zero_roundtrip",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "source_expansion/0/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "source_expansion/0/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 2,
+      "remaining_record_horizon": 3
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "source_expansion/1/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "source_expansion/1/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 1,
+      "remaining_record_horizon": 1
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "source_expansion/2/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-E",
+      "check": "source_expansion/2/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 0,
+      "remaining_record_horizon": 0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "singleton/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "singleton/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "singleton/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "singleton/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "singleton/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "singleton/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "singleton/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "singleton/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "singleton/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "singleton/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "singleton/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "singleton/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "batch/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "batch/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "batch/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "batch/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "reverse/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "reverse/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "reverse/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "reverse/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "reverse/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "reverse/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "reverse/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "reverse/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "reverse/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "reverse/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "reverse/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "reverse/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "duplicate/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "duplicate/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "duplicate/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "duplicate/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "duplicate/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "duplicate/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "duplicate/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "duplicate/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "duplicate/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "duplicate/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "duplicate/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "duplicate/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "singleton/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "batch/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "reverse/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "duplicate/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "save_resume/same_history_snapshot_bytes",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "save_resume/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "save_resume/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "unknown/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "non_string/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "over_budget_batch/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "exhausted_horizon/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "exhausted_duplicate/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "exhausted_duplicate/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "exhausted_duplicate/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "exhausted_empty/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "exhausted_empty/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "exhausted_empty/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "all_deleted/zero_roundtrip",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "source_expansion/0/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "source_expansion/0/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 2,
+      "remaining_record_horizon": 3
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "source_expansion/1/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "source_expansion/1/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 1,
+      "remaining_record_horizon": 1
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "source_expansion/2/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-A",
+      "check": "source_expansion/2/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 0,
+      "remaining_record_horizon": 0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "singleton/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "singleton/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "singleton/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "singleton/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 24
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "singleton/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "singleton/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "singleton/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "singleton/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "singleton/1/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 18
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "singleton/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "singleton/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "singleton/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "singleton/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "singleton/2/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 6
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "singleton/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "batch/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "batch/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "batch/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "batch/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 6
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "batch/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "reverse/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "reverse/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "reverse/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "reverse/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 24
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "reverse/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "reverse/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "reverse/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "reverse/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "reverse/1/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 18
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "reverse/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "reverse/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "reverse/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "reverse/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "reverse/2/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 6
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "reverse/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "duplicate/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "duplicate/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "duplicate/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "duplicate/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 24
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "duplicate/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "duplicate/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "duplicate/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "duplicate/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "duplicate/1/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 24
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "duplicate/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "duplicate/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "duplicate/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "duplicate/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "duplicate/2/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 6
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "duplicate/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "singleton/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "singleton/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "singleton/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "batch/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "batch/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "batch/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "reverse/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "reverse/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "reverse/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "duplicate/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "duplicate/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "duplicate/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "save_resume/same_history_snapshot_bytes",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "save_resume/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "save_resume/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "save_resume/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 6
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "unknown/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "non_string/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "over_budget_batch/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "exhausted_horizon/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "exhausted_duplicate/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "exhausted_duplicate/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "exhausted_duplicate/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "exhausted_duplicate/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 6
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "exhausted_empty/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "exhausted_empty/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "exhausted_empty/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "exhausted_empty/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 6
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "all_deleted/zero_roundtrip",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "source_expansion/0/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "source_expansion/0/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 2,
+      "remaining_record_horizon": 3
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "source_expansion/1/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "source_expansion/1/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 1,
+      "remaining_record_horizon": 1
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "source_expansion/2/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-I",
+      "check": "source_expansion/2/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 0,
+      "remaining_record_horizon": 0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "singleton/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "singleton/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "singleton/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "singleton/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 24
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "singleton/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "singleton/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "singleton/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "singleton/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "singleton/1/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 18
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "singleton/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "singleton/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "singleton/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "singleton/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "singleton/2/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 6
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "singleton/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "batch/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "batch/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "batch/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "batch/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 6
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "batch/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "reverse/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "reverse/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "reverse/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "reverse/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 24
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "reverse/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "reverse/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "reverse/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "reverse/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "reverse/1/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 18
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "reverse/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "reverse/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "reverse/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "reverse/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "reverse/2/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 6
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "reverse/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "duplicate/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "duplicate/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "duplicate/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "duplicate/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 24
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "duplicate/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "duplicate/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "duplicate/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "duplicate/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "duplicate/1/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 24
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "duplicate/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "duplicate/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "duplicate/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "duplicate/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "duplicate/2/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 6
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "duplicate/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "singleton/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "singleton/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "singleton/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "batch/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "batch/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "batch/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "reverse/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "reverse/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "reverse/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "duplicate/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "duplicate/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "duplicate/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "save_resume/same_history_snapshot_bytes",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "save_resume/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "save_resume/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "save_resume/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 6
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "unknown/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "non_string/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "over_budget_batch/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "exhausted_horizon/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "exhausted_duplicate/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "exhausted_duplicate/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "exhausted_duplicate/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "exhausted_duplicate/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 6
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "exhausted_empty/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "exhausted_empty/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "exhausted_empty/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "exhausted_empty/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 6
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "all_deleted/zero_roundtrip",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "source_expansion/0/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "source_expansion/0/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 2,
+      "remaining_record_horizon": 3
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "source_expansion/1/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "source_expansion/1/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 1,
+      "remaining_record_horizon": 1
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "source_expansion/2/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-S",
+      "check": "source_expansion/2/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 0,
+      "remaining_record_horizon": 0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "singleton/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "singleton/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "singleton/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "singleton/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 24
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "singleton/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "singleton/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "singleton/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "singleton/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "singleton/1/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 18
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "singleton/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "singleton/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "singleton/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "singleton/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "singleton/2/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 6
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "singleton/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "batch/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "batch/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "batch/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "batch/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 6
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "batch/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "reverse/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "reverse/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "reverse/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "reverse/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 24
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "reverse/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "reverse/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "reverse/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "reverse/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "reverse/1/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 18
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "reverse/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "reverse/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "reverse/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "reverse/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "reverse/2/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 6
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "reverse/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "duplicate/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "duplicate/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "duplicate/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "duplicate/0/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 24
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "duplicate/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "duplicate/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "duplicate/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "duplicate/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "duplicate/1/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 24
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "duplicate/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "duplicate/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "duplicate/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "duplicate/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "duplicate/2/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 6
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "duplicate/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "singleton/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "singleton/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "singleton/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "batch/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "batch/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "batch/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "reverse/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "reverse/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "reverse/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "duplicate/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "duplicate/history_coefficients",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "duplicate/history_rank_groups",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "save_resume/same_history_snapshot_bytes",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "save_resume/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "save_resume/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "save_resume/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 6
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "unknown/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "non_string/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "over_budget_batch/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "exhausted_horizon/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "exhausted_duplicate/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "exhausted_duplicate/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "exhausted_duplicate/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "exhausted_duplicate/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 6
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "exhausted_empty/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "exhausted_empty/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "exhausted_empty/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "exhausted_empty/complete_coefficients",
+      "passed": true,
+      "coordinates_checked": 6
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "all_deleted/zero_roundtrip",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "source_expansion/0/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "source_expansion/0/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 2,
+      "remaining_record_horizon": 3
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "source_expansion/1/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "source_expansion/1/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 1,
+      "remaining_record_horizon": 1
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "source_expansion/2/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/P-R",
+      "check": "source_expansion/2/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 0,
+      "remaining_record_horizon": 0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "singleton/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "singleton/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "singleton/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "singleton/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "singleton/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "singleton/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "singleton/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "singleton/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "singleton/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "singleton/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "singleton/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "singleton/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "batch/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "batch/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "batch/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "batch/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "reverse/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "reverse/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "reverse/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "reverse/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "reverse/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "reverse/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "reverse/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "reverse/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "reverse/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "reverse/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "reverse/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "reverse/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "duplicate/0/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "duplicate/0/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "duplicate/0/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "duplicate/0/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "duplicate/1/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "duplicate/1/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "duplicate/1/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "duplicate/1/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "duplicate/2/fresh_deletions",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "duplicate/2/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "duplicate/2/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "duplicate/2/exact_record_symbol_substitution",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "singleton/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "batch/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "reverse/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "duplicate/history_diagnostic",
+      "passed": true,
+      "bitwise_state_history_independence_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "save_resume/same_history_snapshot_bytes",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "save_resume/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "save_resume/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "unknown/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "non_string/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "over_budget_batch/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "exhausted_horizon/atomic_refusal",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "exhausted_duplicate/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "exhausted_duplicate/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "exhausted_duplicate/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "exhausted_empty/zero_fresh",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "exhausted_empty/alive_horizon",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "exhausted_empty/fresh_moments_membership",
+      "passed": true,
+      "count_exact": true,
+      "max_gram_difference": 0.0,
+      "max_cross_difference": 0.0
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "all_deleted/zero_roundtrip",
+      "passed": true
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "source_expansion/0/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "source_expansion/0/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 2,
+      "remaining_record_horizon": 3
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "source_expansion/1/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "source_expansion/1/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 1,
+      "remaining_record_horizon": 1
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "source_expansion/2/same_current_target",
+      "passed": true,
+      "equal_coefficient_state_claim": false
+    },
+    {
+      "case": "tiny_source_algebra_software_fixture/B-F",
+      "check": "source_expansion/2/separate_horizons",
+      "passed": true,
+      "remaining_source_horizon": 0,
+      "remaining_record_horizon": 0
+    }
+  ],
+  "check_count": 1104,
+  "all_passed": true,
+  "source_sha256": {
+    "phase6/check_state_audit_semantics.py": "872facf85b291c60b368f437c63477017194a84b0b83f9e7abb32e28d312bb3d",
+    "phase6/state_audit.py": "e27f535cdbcb12204c3b00ad7afbce9b61b5c69e6fdba36bad62effd3d76f21a",
+    "phase6/methods.py": "1bd87879b3ed3d692466362f914d63c0b8f74b3048abc34a76e80c2629f15606",
+    "phase5/methods.py": "75294db32fe8ed7976a24fe95de76eccbb5e611aeb870ea49760cbbf11d10691",
+    "phase5/payload.py": "7759fee20847bd7e6d7216802b27a26480c1a852489dba05a4642414765b1815",
+    "ccu/summary.py": "4ba0f4ad3cf386f2493461d4924c6fda6467a6399f266a13f61f4966cef3e498",
+    "data/civil_comments_engineering_preview.jsonl": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9"
+  }
+}
