@@ -1,0 +1,95 @@
+{
+  "actual_native_observations_accepted": 0,
+  "benchmarks_run_by_profile_qualifier_checks": false,
+  "native_policy_exported": false,
+  "preserved_attempts": [
+    {
+      "checks": 77,
+      "exact_sources": {
+        "phase9/check_resource_profiles.py": {
+          "matches_recorded_source": true,
+          "path": "history/resource_attempt1/check_resource_profiles.py",
+          "sha256": "2d7fab96085c771e5d9bcf474d9af6189685385245290c1f3ee96875be6eab13"
+        },
+        "phase9/resource_profiles.py": {
+          "matches_recorded_source": true,
+          "path": "history/resource_attempt1/resource_profiles.py",
+          "sha256": "c5bc596a1a4e2bf1cbc67a3bccffb505619ff9837bed8ee97e78f73032f198c3"
+        }
+      },
+      "report": "results/resource_checks_attempt1/checks.json",
+      "sha256": "dcacd68445d6eedbedea0d23d16c7b808e1b8e93ee4f7b20157d445e7b158eea"
+    },
+    {
+      "checks": 85,
+      "exact_sources": {
+        "phase9/check_resource_profiles.py": {
+          "matches_recorded_source": true,
+          "path": "history/resource_attempt2/check_resource_profiles.py",
+          "sha256": "7028044c63757352e91184836430bc6ad1a50c4e6172a51d72640771c9998a9b"
+        },
+        "phase9/resource_measurement.py": {
+          "matches_recorded_source": true,
+          "path": "history/resource_attempt2/resource_measurement.py",
+          "sha256": "aa5defe0902d05fcda74eb0335c7176b1e9bd17aade27b3fc38e37c4a06a7f6e"
+        },
+        "phase9/resource_profiles.py": {
+          "matches_recorded_source": true,
+          "path": "history/resource_attempt2/resource_profiles.py",
+          "sha256": "3bb5141e768928921f686819d419c7f0b523fd4f0d8c2c911b786bb39a067287"
+        }
+      },
+      "report": "results/resource_checks_attempt2/checks.json",
+      "sha256": "7112fc60a7987993d8bb1ca191069dbae06deb979ccb8a717455e73eaa5418e9"
+    },
+    {
+      "checks": 85,
+      "exact_sources": {
+        "phase9/check_resource_profiles.py": {
+          "matches_recorded_source": true,
+          "path": "history/resource_attempt3/check_resource_profiles.py",
+          "sha256": "7028044c63757352e91184836430bc6ad1a50c4e6172a51d72640771c9998a9b"
+        },
+        "phase9/resource_measurement.py": {
+          "matches_recorded_source": true,
+          "path": "history/resource_attempt3/resource_measurement.py",
+          "sha256": "aa5defe0902d05fcda74eb0335c7176b1e9bd17aade27b3fc38e37c4a06a7f6e"
+        },
+        "phase9/resource_profiles.py": {
+          "matches_recorded_source": true,
+          "path": "history/resource_attempt3/resource_profiles.py",
+          "sha256": "3bb5141e768928921f686819d419c7f0b523fd4f0d8c2c911b786bb39a067287"
+        }
+      },
+      "report": "results/resource_checks_attempt3/checks.json",
+      "sha256": "7112fc60a7987993d8bb1ca191069dbae06deb979ccb8a717455e73eaa5418e9"
+    }
+  ],
+  "primary_study_started": false,
+  "producer_checks": 26,
+  "remaining_evidence_or_execution_requirements": [
+    "Actual original sources, accepted semantic caches and genuine calibration/human evidence",
+    "Actual source-disjoint matching worker/audit/graph/pointwise dense convex observations",
+    "External historical-authenticity and complete input reviews",
+    "Native end-to-end qualification/preparation resource measurements",
+    "Convex optimization-time evidence and branch-specific full-refit/ANN gates",
+    "Complete registered primary study"
+  ],
+  "resource_profile_checks": 86,
+  "schema": "ccu-resource-profile-release-manifest-1",
+  "software_scope": "Tiny algebra, metadata contracts, explicit upstream acceptance mocks, and direct real verifier attachment/final-testimony stability. Same toy input fails unmocked acceptance. Producer checks are separate tiny software subprocesses, not benchmarks.",
+  "source_and_artifact_sha256": {
+    "RESOURCE_PROFILES.md": "d88701808d8070d6e7afbdb3d4af82f62d026e9a22ca7b897017d693150869e4",
+    "check_resource_profiles.py": "66f0c60ad32b518b4432603d290c9559e36e7521f602dbcbffdd9eddea65bea7",
+    "resource_measurement.py": "aa5defe0902d05fcda74eb0335c7176b1e9bd17aade27b3fc38e37c4a06a7f6e",
+    "resource_profiles.py": "fd4efce4ca2fe720af182742a7ba93c4287ba1a6e54bfb414ba70245d1eba25a",
+    "results/resource_checks_final/checks.json": "17ce1ccb36412c1f22f9c3fd27ba9fe33d0b40e3ad7b7caec2ba0bbc03163353",
+    "results/resource_measurement_checks_v2/checks.json": "b0867d335a82fc53991f1ffcd9d4c300f10e6c1ab69fcfe4cfa5c71aea946bd4",
+    "results/resource_missing_native/invocation.json": "8dadca50ae94aa6e2aa91cdb8267f89d57665c1706519835a95a42ec68a9f7b3",
+    "results/resource_missing_native/qualification.json": "a174c04203329462ed42860dc768d7e66b69acec6b9cdb5b2b1c1c692db34094",
+    "results/resource_missing_native_input/request.json": "48dd613071d9abb6fc2f5224b4d0f0967cfd3f227fa3fb52a509c6e48cd6f52f"
+  },
+  "status": "software_qualified_actual_native_inputs_missing",
+  "unchanged_phases": "3-8",
+  "unmocked_refusal": "Missing actual development dossier; no execution_policy.json emitted."
+}

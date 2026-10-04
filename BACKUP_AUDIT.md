@@ -177,3 +177,20 @@ The final backup manifest records every included file and checksum.
 No News article body or real rater identity belongs in this checkpoint.
 Future private inputs and derivations remain excluded from ordinary Git additions.
 Frozen Phase 3–7 preservation is verified against the previous checkpoint manifest.
+
+## Phase 9 preservation supplement — 4 October 2026
+
+This checkpoint adds a realizable ridge-memory theorem and a public binary-label corollary.
+It preserves full proofs, independent review, exact-rational checks, and source snapshots.
+The novelty audit distinguishes established machinery and unresolved full-text leads.
+
+New preparation code covers canonical multi-family assembly, broader resource evidence, executable measurements, and human graph serialization.
+Its tests preserve explicit mocks and software-only evidence roles.
+Natural human-interface checks use existing lexical inputs and blank responses.
+No genuine human judgment, original corpus, semantic cache, or primary experiment was added.
+
+All 2,005 frozen Phase 3–8 files are checked against commit `26f2b3c3b5447f6c88e26b1720362273299c398b`.
+The Phase 9 publication report covers new and changed files under the existing disclosure policy.
+The final backup manifest covers all staged project artifacts and their hashes.
+News article bodies, credentials, and unrelated account material remain excluded.
+No total-byte optimality, semantic effect, or native speedup follows from this backup.

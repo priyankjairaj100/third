@@ -1,0 +1,17 @@
+[
+  {
+    "admissions": 1,
+    "checkpoint": 1,
+    "deleted_records": 1,
+    "deleted_units": 1,
+    "independent_graph_checked": true,
+    "selected_count": 2,
+    "selected_ids": [
+      "fixture-a",
+      "fixture-d"
+    ],
+    "status": "completed",
+    "unit": "record",
+    "zero_admission": false
+  }
+]

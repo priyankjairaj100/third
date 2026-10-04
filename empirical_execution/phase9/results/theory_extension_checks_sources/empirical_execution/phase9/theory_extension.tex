@@ -1,0 +1,275 @@
+% New standalone fragment, not a modification of the frozen integrated theory.
+% Requires amsmath, amssymb, amsthm, hyperref and theorem environments.
+\section{Feature-scale memory from realizable counterfactual ridge heads}
+\label{sec:realizable-feature-memory}
+
+The arbitrary-statistic query-rank lower bound does not apply directly to
+the constrained positive-semidefinite, rank-one contributions of ridge
+regression.  The binary-label activation-frontier construction establishes
+one hidden bit per candidate, but does not account for feature dimension.
+We close this particular gap with a family of actual ridge problems whose
+same unit features determine curation and prediction.  This is a worst-case
+model-query state theorem, not a total-byte optimality or empirical claim.
+
+\subsection{Access and learner contract}
+For $S$ with $n>0$, the prescribed average-loss learner minimizes
+\[
+ L_S(W)=\frac1{2n}\sum_{v\in S}\|z_v^TW-y_v^T\|_2^2
+                      +\frac\lambda2\|W\|_F^2,
+ \qquad W\in\mathbb R^{d\times q},\quad\lambda>0.
+\]
+For $n=0$ the target is zero.  Curation is earlier-raw-neighbor suppression
+at strict cosine threshold $2/5$, with fixed order.  Queries are cumulative
+identifier sets of size at most the stated horizon.  Public information
+includes the fixed graph, identifiers, construction parameters, candidate
+cap centers and frames, and fixed zero-label blockers.  The actual candidate
+features and responses are private.  Every candidate-dependent deployment
+head, cache, feature table, remote store, ticket, and retained private random
+seed counts as state.  There is no retained-candidate reread or uncharged
+data-dependent side channel.  Full forgotten payloads may accompany a
+request; all probes below delete only fixed public records.
+
+The exact-coordinate theorem assumes a deterministic encoder into a fixed
+$\mathbb R^s$, continuous on the specified open parameter domain.  No
+decoder continuity is required.  Its upper bound is a model-query summary,
+not a canonical deletion-clean state implementation.  The separate bit
+theorem permits arbitrary encoders and randomization, with a state alphabet
+of size at most $2^B$.
+
+\subsection{A rational fixed-margin construction}
+Fix $b\ge1$, $m\ge2$, $q\ge1$, and an ambient dimension $d$ admitting unit
+signatures $u_1,\ldots,u_m\in\mathbb R^{d-2}$ such that
+$|u_i^Tu_j|\le1/6$ for $i\ne j$.  One sufficient condition is
+\[
+ d-2\ge\left\lceil72\log(2m(m-1))\right\rceil:
+\]
+normalized independent sign vectors have pairwise failure probability at
+most $2e^{-(d-2)/72}$, and a union bound gives positive success probability.
+Alternatively orthogonal signatures suffice when $d\ge m+2$; zero padding
+allows larger dimensions.  Arbitrarily large $m$ at fixed $d$ is not claimed.
+
+In priority order put an anchor $a$, common blockers
+$S_0=\{s_1,\ldots,s_b\}$, private blockers $p_1,\ldots,p_m$, and candidates
+$w_1,\ldots,w_m$.  Let $e_0,e_1$ be orthogonal to the signature subspace and set
+\[
+ a=e_0,\qquad
+ s_j=\tfrac8{17}e_0+\tfrac{15}{17}e_1,\qquad
+ p_i=\tfrac8{17}e_0+\tfrac{15}{17}u_i,\qquad
+ w_i^0=\tfrac8{17}e_1+\tfrac{15}{17}u_i.
+\]
+All have norm one.  At these centers, anchor--blocker similarity is $8/17$,
+common--candidate similarity is $120/289$, and matching private--candidate
+similarity is $225/289$.  Nonmatching private--candidate similarity is at
+most $75/578$; distinct candidate or private-blocker similarity is at most
+$203/578$; common--private similarity is $64/289$; anchor--candidate
+similarity is zero.  The common blockers form a harmless clique.
+
+Let $r=1/100$.  Vary each $w_i$ independently on the unit-sphere cap
+$\|w_i-w_i^0\|_2<r$, while keeping every blocker fixed.  A single varying
+endpoint changes an inner product by less than $r$, and two varying
+endpoints change it by less than $2r$.  The tight required margins satisfy
+\[
+ \frac{120}{289}-\frac25=\frac{22}{1445}>r,\qquad
+ \frac25-\frac{203}{578}=\frac{141}{2890}>2r.
+\]
+All other relevant margins are larger.  Consequently the full graph is
+unchanged throughout the parameter family and
+$B(w_i)=S_0\cup\{p_i\}$.  In particular, the forgotten feature $p_i$ does
+not vary with the hidden feature $w_i$.
+
+Define
+\[
+ C=aa^T+2\lambda I_d,\qquad c=1+2\lambda,\qquad
+ \beta_0=\frac\lambda{2c}.
+\]
+Choose $\beta_i\in(\beta_0,2\beta_0)^q$ and set
+\[
+ y_i=(1+w_i^TC^{-1}w_i)\beta_i.
+\]
+Every non-candidate response is zero.  Since
+$1+w_i^TC^{-1}w_i\le c/(2\lambda)$, each response coordinate is in
+$(0,1/2)$.  This is a coordinatewise bound, not a dimension-independent
+bound on $\|y_i\|_2$.
+
+Initially only $a$ is selected and its head is zero.  No candidate can be
+selected within budget $b$, so every such target is zero.  At budget $b+1$,
+request $F_i=S_0\cup\{p_i\}$ selects exactly $\{a,w_i\}$.  Conversely any
+request of size at most $b+1$ selecting a candidate must equal its $F_i$.
+Its normal equations and Sherman--Morrison solution are
+\begin{equation}\label{eq:phase9-realizable-head}
+ (C+w_iw_i^T)W_i=w_i y_i^T,
+ \qquad W_i=C^{-1}w_i\beta_i^T.
+\end{equation}
+Thus the actual ridge output identifies the private parameters:
+\[
+ w_i=\frac{CW_i[:,1]}{\|CW_i[:,1]\|_2},\qquad
+ \beta_{ij}=\|CW_i[:,j]\|_2.
+\]
+Positivity fixes the sign.  This argument uses realizable ridge heads,
+without treating Gram and cross moments as independent free coordinates.
+
+\subsection{Exact coordinate requirement}
+\begin{theorem}[Realizable adjacent-budget dimension transition]
+Under the preceding dimension/signature and access assumptions, restrict
+the private features to the open cap charts below.  The minimum fixed
+number of real coordinates in a continuous deterministic exact model-query
+encoder is zero at horizon $b$, and exactly $m(d-1+q)$ at horizon $b+1$.
+\end{theorem}
+\begin{proof}
+For each center take a public orthonormal tangent frame $V_i$ and write
+\[
+ w_i(t_i)=\sqrt{1-\|t_i\|_2^2}\,w_i^0+V_i t_i,
+ \qquad \|t_i\|_2<r/2.
+\]
+The displacement from $w_i^0$ is less than $r$, and
+$t_i=V_i^Tw_i$.  Together with the open response intervals this gives an
+open domain in $\mathbb R^M$, where $M=m(d-1+q)$.
+If two parameter tuples produced the same encoded state, exact responses
+to every $F_i$, using their identical public forgotten payloads, would be
+identical.  The recovery formulas force all parameters to agree.  The
+encoder is therefore injective.  A continuous injection from an open
+subset of $\mathbb R^M$ into $\mathbb R^s$ with $s<M$ is impossible:
+composition with coordinate inclusion into $\mathbb R^M$ contradicts
+invariance of domain, since the image lies in a proper coordinate subspace.
+Hence $s\ge M$.
+
+For sufficiency store $(t_i,\beta_i)_{i=1}^m$, use
+\eqref{eq:phase9-realizable-head} on $F_i$, and return zero on every other
+allowed request.  This is a continuous encoder using $M$ coordinates.
+At horizon $b$ always return zero.
+\end{proof}
+
+Any sequential exact service with a continuous initial encoder inherits
+the lower bound, since each $F_i$ must be supportable as its first request.
+The mathematical distinguishability argument does not require operational
+rollback.  The upper bound remains a model-query summary rather than a
+canonical state-repair theorem.  An arbitrary discontinuous encoder can
+encode many reals into one; continuity of the decoder alone would not
+justify this lower bound.
+
+For fixed $b$, the high-budget eligible count is
+$E=N=1+b+2m=\Theta(m)$, so the lower bound is
+$\Theta(E(d+q))$.  This matches the feature/response order of the existing
+joint-span representation in a worst-case coordinate sense.  It excludes
+metadata, precision, temporary memory, and bit complexity and does not
+show a physical-byte improvement over the compact eligible-payload baseline.
+
+\subsection{Finite-bit obstruction with explicit approximation scale}
+For unit $w,w'$ the exact identity
+\[
+ \|w\beta^T-w'\beta'^T\|_F^2
+ =\|\beta-\beta'\|_2^2+(\beta^T\beta')\|w-w'\|_2^2
+\]
+and $\sigma_{\min}(C^{-1})=1/c$ imply
+\begin{equation}\label{eq:phase9-separation}
+ \|W-W'\|_F\ge\frac1c
+ \sqrt{\|\beta-\beta'\|_2^2+\beta_0^2\|w-w'\|_2^2}.
+\end{equation}
+The same cap chart obeys
+$\|w(t)-w(t')\|_2\ge\|t-t'\|_2$ by tangent projection.
+For packing only, allow the closed radius-$r/2$ chart ball and the closed
+intervals $[\beta_0,2\beta_0]$; they still obey the cap and response bounds,
+with responses at most $1/2$.
+
+Fix $0<\eta<r\beta_0/(16c)$.  A maximal
+$4c\eta/\beta_0$-separated packing of the chart ball has at least
+\[
+ L_w\ge\left(\frac{r\beta_0}{8c\eta}\right)^{d-1}
+\]
+points: balls of the separation radius cover the original ball, and volume
+comparison proves the count.  A coordinate grid of spacing $4c\eta$ in
+$[\beta_0,2\beta_0]^q$ has
+\[
+ L_\beta=\left(\left\lfloor\frac{\beta_0}{4c\eta}\right\rfloor+1\right)^q
+\]
+points.  The product code has $L=L_wL_\beta$ distinct heads separated by at
+least $4\eta$, by \eqref{eq:phase9-separation}.
+
+\begin{theorem}[Realizable feature-scale finite-bit bound]
+Suppose a summary with at most $B$ private bits answers every fixed input
+in the finite product construction and every $F_i$ to Frobenius error at
+most $\eta$ with probability at least $1-\delta$, where
+$0\le\delta<1/2$.  Public randomness independent of the private data and
+fresh repair randomness are allowed.  Then
+\[
+ B\ge m\bigl[(1-\delta)\log_2 L-h_2(\delta)\bigr]
+   \ge m\bigl[(1-\delta)(d-1+q)-h_2(\delta)\bigr].
+\]
+The explicit packing expressions give the stronger logarithmic bound at
+smaller error.  The admissible fixed error depends on $\lambda$ and $r$,
+but not on $m,d,q$.
+\end{theorem}
+\begin{proof}
+Choose independent uniform packing symbols $Z_1,\ldots,Z_m$.  Let $M_s$
+denote the private state and $R$ the public randomness.  Nearest-head
+decoding recovers $Z_i$ on every successful answer.  The optimal decoder
+from $(M_s,R,i)$ is no worse than randomized repair.  M-ary Fano yields
+\[
+ H(Z_i\mid M_s,R)\le h_2(\delta)+\delta\log_2(L-1)
+                      \le h_2(\delta)+\delta\log_2 L.
+\]
+Conditional subadditivity and independence now give
+\[
+ B\ge I(Z_1,\ldots,Z_m;M_s\mid R)
+ \ge m\log_2L-\sum_i H(Z_i\mid M_s,R).
+\]
+There is no simultaneous-success assumption.  If correctness is required
+only on average over the uniform probe index, apply Fano with the individual
+error probabilities and use concavity of binary entropy to average them.
+All forgotten probe payloads are fixed independently of the symbols.
+\end{proof}
+
+\subsection{The feature obstruction with fixed public binary labels}
+The feature-dimension conclusion does not require variable or
+feature-dependent labels.  In the same graph/cap family take one response
+coordinate, give every candidate the public label one, and give every
+anchor/blocker the public label zero.  These responses are in $\{0,1\}$;
+this is a separate response class from the preceding at-most-$1/2$ family.
+
+\begin{corollary}[Public binary labels]
+Under the same feature and access assumptions the exact continuous
+model-query state minimum is zero at horizon $b$ and $m(d-1)$ coordinates
+at horizon $b+1$.  For $0<\eta<r\lambda/(8c^2)$ a finite packing gives
+\[
+ L_w\ge\left(\frac{r\lambda}{4c^2\eta}\right)^{d-1},\qquad
+ B\ge m\bigl[(1-\delta)\log_2L_w-h_2(\delta)\bigr]
+\]
+under the preceding finite-bit randomized correctness contract.
+\end{corollary}
+\begin{proof}
+The hard head is $W=C^{-1}w\beta(w)$, where
+$\beta(w)=1/(1+w^TC^{-1}w)\ge2\lambda/c>0$.
+Normalization of $CW$ recovers $w$.  Continuous injectivity and chart
+storage prove the exact dimension statement.  The same rank-one identity
+gives
+\[
+ \|W-W'\|_2\ge\frac{2\lambda}{c^2}\|w-w'\|_2.
+\]
+A chart packing with separation $2c^2\eta/\lambda$ has the displayed
+cardinality and head separation at least $4\eta$; apply the same Fano proof.
+\end{proof}
+
+The finite-bit theorem is separate from the continuous-coordinate theorem.
+It uses a separated real-valued input family, not a demonstrated packing in
+the repository's fixed FP32 domain.  Quantization must preserve graph margins
+and head separation before claiming such a transfer.  The error scale can
+be numerically small; no practical large-tolerance or optimal lossy-codec
+claim follows.  Nor do these theorems establish privacy erasure, a uniform
+natural-corpus lower bound, or NLP empirical evidence.
+
+\paragraph{Attribution and reproducible checks.}
+This extends the earlier activation-frontier architecture.  The additional
+content is independent private feature variation with fixed forgotten
+payloads, full-sphere identifiable realizable ridge heads, and the resulting
+feature/response memory dependence.  Sherman--Morrison, invariance of domain,
+volumetric packing, and Fano/random-access lower bounds are classical.
+For invariance of domain see Hatcher, \emph{Algebraic Topology}, Theorem~2B.3,
+\url{https://pi.math.cornell.edu/~hatcher/AT/AT.pdf}; for Fano with side
+information and packing see Scarlett and Cevher, arXiv:1901.00555v3,
+Theorem~1 and Sections~2.3 and~5.2,
+\url{https://arxiv.org/pdf/1901.00555}.
+The retained standard-library checker
+\texttt{empirical\_execution/phase9/check\_theory\_extension.py} verifies
+bounded algebraic instances with exact rational arithmetic and source-bound
+reports.  Those fixtures do not prove the topological or information-theoretic
+statements by testing and are not synthetic empirical evidence.

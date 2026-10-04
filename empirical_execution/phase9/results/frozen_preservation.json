@@ -1,0 +1,16 @@
+{
+  "schema": "ccu-phase9-frozen-preservation-1",
+  "base_commit": "26f2b3c3b5447f6c88e26b1720362273299c398b",
+  "frozen_phases": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "files_checked": 2005,
+  "passed": true,
+  "failures": [],
+  "scope": "Historical byte preservation only; not new empirical evidence"
+}

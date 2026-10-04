@@ -1,0 +1,10 @@
+{
+  "deleted_unit_ids": [
+    "fixture-c"
+  ],
+  "selected_record_ids": [
+    "fixture-a",
+    "fixture-d"
+  ],
+  "unit": "record"
+}

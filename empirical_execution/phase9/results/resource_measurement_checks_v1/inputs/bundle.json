@@ -1,0 +1,27 @@
+{
+  "files": {
+    "curator.npy": {
+      "bytes": 160,
+      "sha256": "641e2be45051c58a4c7bb2fe9362a0262b6889a2c9dff5db156605d537f03059"
+    },
+    "graph.npz": {
+      "bytes": 848,
+      "sha256": "c90b82eccebfb361cf07927a77066c15627d8c9a8faccc5c88499d190db081ea"
+    },
+    "learner.npy": {
+      "bytes": 160,
+      "sha256": "641e2be45051c58a4c7bb2fe9362a0262b6889a2c9dff5db156605d537f03059"
+    },
+    "metadata.json": {
+      "bytes": 317,
+      "sha256": "a1173420e7043ec7b78e3b2c0f9eb037e400b02dabcdcb4a6b51f54efa7ffdbf"
+    },
+    "targets.npy": {
+      "bytes": 160,
+      "sha256": "209da59217e6e42168f0869ef7d59c8a168183feace331c8a2d98f8195ce3abe"
+    }
+  },
+  "shared_graph_build_seconds": 0.000599248000071384,
+  "shared_input_bytes": 1645,
+  "total_prepare_seconds": 0.0018433910008752719
+}

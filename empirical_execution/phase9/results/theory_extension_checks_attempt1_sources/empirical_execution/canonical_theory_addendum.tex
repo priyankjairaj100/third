@@ -1,0 +1,274 @@
+% Standalone fragment. Requires amsmath, amssymb, amsthm, hyperref.
+% Exact canonical mode supplements, rather than retroactively strengthens,
+% the floating-point implementation in memory_theory_addendum.tex.
+\section{Exact canonical repair with a rigorous numerical release certificate}
+\label{sec:exact-canonical-repair}
+
+\paragraph{Numerical target.}
+Interpret each frozen finite FP32 feature coordinate and FP64 response
+coordinate as its exact dyadic rational value. The graph, priority order,
+source ownership, and curation threshold decisions are already frozen.
+All coefficient aggregation and repair in this section use exact rational
+arithmetic. This specifies a new exact-aggregation implementation of the
+same mathematical learner. Bytewise equality is to a fresh construction
+under this specification; it is not a claim of bytewise equality to the
+previous implementation's ordered FP64 summation and Cholesky routine.
+The latter remains a separate numerical comparison.
+
+\subsection{A unique rational coordinate chart}
+For a current coefficient let
+\[
+ M=[G\ H],\qquad G=G^\top\in\mathbb Q^{d\times d},\quad
+ H\in\mathbb Q^{d\times c},\quad \rho=\operatorname{rank}M.
+\]
+Compute the unique reduced row echelon form of $M^\top$ over
+$\mathbb Q$, remove its zero rows, and transpose. Call the resulting
+$d\times\rho$ matrix $U$. Let $P=(p_1,\ldots,p_\rho)$ be its ascending
+pivot row indices. Then $U[P,:]=I_\rho$. Define
+\[
+ A=G[P,P],\qquad B=H[P,:],\qquad
+ F=U[P^c,:].
+\]
+Store $(P,F,A,B,n)$, packing the symmetric $A$. The identity pivot rows
+of $U$ are implicit and are never stored. For $\rho=0$ only the count is
+needed; a key is removed precisely when $\rho=0$ and $n=0$.
+Every rational is stored in lowest terms with a positive denominator.
+
+\begin{theorem}[Unique exact coefficient encoding]
+The tuple $(P,F,A,B,n)$ is a function only of the exact current coefficient
+$(G,H,n)$ and the fixed ambient coordinate order. It reconstructs
+\[
+ G=UAU^\top,\qquad H=UB.
+\]
+In particular, it is independent of contributor ordering, prior bases,
+collision order, and whether an earlier representation happened to be dense.
+\end{theorem}
+\begin{proof}
+Reduced row echelon form uniquely identifies a row space. Hence $U$ and
+$P$ depend only on the joint column space of $G$ and $H$. Every column of
+both lies in $\operatorname{range}(U)$; because $G$ is symmetric, its row
+space lies there too. Thus $G=UCU^\top$ for some $C$, and restricting both
+coordinates to $P$ gives $C=G[P,P]=A$. Likewise restricting $H=UD$ to
+$P$ gives $D=B$. Canonical rational normalization removes numerator and
+denominator representation choices.
+\end{proof}
+
+\begin{theorem}[Current-eligibility entry bound without a mode bit]
+Let $E_h$ be the number of currently eligible records at remaining horizon
+$h$. Across all live keys, the number of stored rational coefficient
+entries, including counts, is at most
+\[
+ \sum_J\left[(d-\rho_J)\rho_J+
+       \frac{\rho_J(\rho_J+1)}2+c\rho_J+1\right]
+ \le 2E_h(d+c+1).
+\]
+There are at most $2E_h$ pivot indices, at most $2E_h$ live keys, and
+$O(hE_h)$ key incidences. A public alive-unit registry adds $O(U)$
+identifiers. For every individual rank, the coefficient entry count
+excluding its count is no greater than the packed dense Gram/cross count.
+\end{theorem}
+\begin{proof}
+As before, each eligible record contributes to at most two endpoints and
+$\sum_J\rho_J\le2E_h$. For integer $\rho\ge0$,
+\[
+ (d-\rho)\rho+\rho(\rho+1)/2+c\rho
+   =(d+c)\rho-\rho(\rho-1)/2\le(d+c)\rho.
+\]
+Add at most $2E_h$ counts. The pivot index sum is $\sum_J\rho_J$.
+The displayed quadratic expression is nondecreasing on integer
+$0\le\rho\le d$ and at $\rho=d$ equals
+$d(d+1)/2+dc$. At full rank $U=I_d$ is entirely implicit. Therefore no
+history-dependent dense/compact choice is necessary.
+\end{proof}
+
+The theorem counts rational entries, not eight-byte floating-point words.
+It neither promises that exact rational storage is smaller in bytes than
+FP64 factors nor transfers a measured floating-point compression ratio.
+
+\subsection{Exact merge without ambient Gram materialization}
+For two entries reconstruct their thin bases $U_1,U_2$ from their free
+rows and implicit pivot identities, and put
+\[
+ L=[U_1\ U_2],\quad
+ D=\operatorname{diag}(A_1,A_2),\quad
+ E=\begin{bmatrix}B_1\\B_2\end{bmatrix}.
+\]
+The sum is $(LDL^\top,LE,n_1+n_2)$. Canonicalize the column space of $L$
+to a full-column-rank chart $V$ with pivot rows $P_V$. With
+$T=L[P_V,:]$, one has $L=VT$. Form only the small matrices
+\[
+ K=TDT^\top,\qquad Q=TE.
+\]
+Let $R$ span the column space of $[K\ Q]$. Canonicalize the column space
+of $VR$ to the final $U$, with pivot rows $P$. The final cores can be
+computed directly from rows of $L$:
+\[
+ A=L[P,:]D L[P,:]^\top,\qquad B=L[P,:]E.
+\]
+All ranks and zero tests are exact. The intermediate basis choices do not
+affect the final canonical chart. For colliding total width
+$s=\rho_1+\rho_2$, a conventional elimination implementation uses
+$O(ds+s^2+sc)$ rational workspace and
+$O(ds^2+s^3+s^2c)$ rational arithmetic operations. This excludes integer
+bit complexity. Processing one collision at a time avoids any persistent
+$K d^2$ array family. Construction must likewise stream or aggregate into
+bounded per-key workspaces, not first construct the old dense state.
+
+\begin{theorem}[Byte-canonical history-independent repair]
+Fix the initial universe and frozen configuration, the final retained
+records, and the remaining horizon. Exact coefficient substitution, exact
+collision merging, degree pruning, and zero-key pruning produce the same
+canonical coefficient state as fresh construction from those retained
+records. Its serialization is identical under a fixed canonical format.
+\end{theorem}
+\begin{proof}
+Exact substitution and pruning obey the finite-horizon polynomial
+identity, hence produce the same decoded coefficient map as fresh
+construction. The preceding theorem gives a unique encoding of each
+coefficient. Sorting keys and alive public identifiers, normalizing each
+rational, and fixing metadata and byte encoding therefore give identical
+bytes. The remaining horizon is included in the state and must agree.
+\end{proof}
+
+A canonical format must not include request logs, previous bases, insertion
+order, allocator identity, pickle object IDs, nondeterministic compression
+metadata, timestamps, or a floating solver result. Configuration hashes,
+unit-order conventions, dimensions, remaining horizon, sorted alive-unit
+IDs, sorted keys, pivot indices, and normalized exact numbers suffice.
+If numerical releases are retained as state, they require their own
+canonical numerical specification or must be excluded from this theorem.
+The contract concerns reachable current logical state, not erasure of
+allocator remnants, backups, or previously released models.
+
+\paragraph{Implemented repair work and staging.}
+The current exact implementation sorts and scans every live coefficient key;
+it does not yet use its reconstructed inverse and degree indexes to restrict
+work to touched keys. For $K$ keys of degree at most $h$, charge
+$O(K(h+1)\log(K+1))$ comparison and key-processing work in addition to
+the exact collision arithmetic above. The harmless $+1$ terms cover empty
+keys, $h=0$, and $K=0$. An update stages its new coefficient map before
+committing, while the old live map remains available for atomic failure.
+Unchanged factor objects can be shared, but changed factors and old factors
+can coexist temporarily. This transient old/new-state overlap, canonical
+serialization copies, and exact-number temporaries are outside the persistent
+entry bound and must be included in measured peak memory.
+
+\subsection{Bit complexity and the price of exactness}
+Because the inputs are finite binary floats, every exact coefficient entry
+has a finite common power-of-two denominator. For a nonzero coefficient,
+choose $Q\ge0$ such that $2^Q[G\ H]$ is integral. Define $L$ to bound
+both $Q+1$ and the signed bit length of every entry of this integer matrix.
+Thus $L$ accounts for input exponents as well as summation growth; merely
+bounding scaled integer numerators would not suffice for tiny dyadics.
+Use the maximum such $L$ across live coefficients; when no coefficient is
+live the numerical-storage bound is zero without defining $L$.
+At rank $\rho$, every free
+entry of the canonical chart is a ratio of minors of order at most
+$\rho$. By Hadamard's inequality, its numerator and denominator have
+\[
+ O\!\left(\rho(L+\log(\rho+1))\right)
+\]
+bits. The cores $A$ and $B$ are submatrices of the exact moments and retain
+their dyadic form. Thus a conservative uniform persistent bit bound is
+\[
+ O\!\left(E_h(d+c)\,d(L+\log(d+1))\right)
+\]
+plus the key and public-identifier encoding. This is deliberately a worst
+case; actual bit lengths, serialized bytes, process peak memory, and time
+must be measured. The loss of the $K d^2$ \emph{entry-count} term does not
+imply fixed-width rational entries or a universal physical-byte win.
+
+Use fraction-free elimination or normalized rational arithmetic with exact
+zero pivots; numerical rank thresholds are not part of this mode. The
+rational-operation work bound above must be multiplied by appropriate
+integer-arithmetic costs at the encountered bit lengths. Final rational
+normalization controls persistent representation; temporary numerator growth
+must still be charged. It can make an exact mode substantially slower than
+the floating mode. This section supplies a correctness construction, not a
+claim that exact elimination is a competitive high-throughput kernel.
+
+\subsection{Rigorous certification of a floating release}
+Let $(G,H,n)$ be the exact current selected-set coefficient, with
+$G\succeq0$ and $n>0$. Interpret the positive regularization input
+$\lambda$ exactly as a rational and write $\alpha=\lambda n$. The exact
+mathematical ridge head is
+\[
+ W_*=(G+\alpha I)^{-1}H.
+\]
+The rational chart is not orthonormal. A reduced exact equation is
+\[
+ W_*=UZ,\qquad (A(U^\top U)+\alpha I)Z=B.
+\]
+The older equation $(A+\alpha I)Z=B$ is valid only for an orthonormal basis
+and must not be reused for this chart. An approximate head may be obtained
+by any finite-precision solver, including a QR-transformed small system.
+Let its returned finite binary-float matrix be $\widehat W$, itself
+interpreted exactly as a dyadic matrix for certification.
+
+\begin{theorem}[Exact-residual roundoff certificate]
+Compute the exact rational residual and its squared norm by
+\[
+ R=U\left[B-A(U^\top\widehat W)\right]-\alpha\widehat W,
+ \qquad S=\sum_{i,j}R_{ij}^2.
+\]
+Then
+\[
+ \|\widehat W-W_*\|_F^2\le \frac{S}{\alpha^2}.
+\]
+This bound includes all floating error in the solver and coordinate
+transformations that produced $\widehat W$. It requires no ambient
+$d\times d$ Gram allocation and no floating backward-error assumption.
+\end{theorem}
+\begin{proof}
+The residual is exactly $H-(G+\alpha I)\widehat W$. Since
+$G\succeq0$, the smallest eigenvalue of $G+\alpha I$ is at least
+$\alpha$. Therefore
+$\widehat W-W_*=-(G+\alpha I)^{-1}R$ and
+$\|\widehat W-W_*\|_F\le\|R\|_F/\alpha$.
+All arithmetic used in $R$ and $S$ is exact, so this is a certified bound,
+not merely a floating residual diagnostic.
+\end{proof}
+
+The PSD premise follows from the valid exact selected-set construction; it
+is not a promise for arbitrary signed keys or an untrusted corrupted state.
+Counts remain exact integers. At $n=0$, use the prescribed zero head
+exactly and report the empty-target case separately rather than divide by
+zero. If a solver returns nonfinite values, issue no certificate and fall
+back or fail explicitly.
+
+The exact fraction $S/\alpha^2$ is itself a machine-checkable squared error
+bound. To produce a decimal or binary upper radius, use an upward-rounded
+square root. For a rational $T=a/b\ge0$ and chosen precision $p$, compute
+an integer $k$ such that
+\[
+ k^2 b\ge a2^{2p},\qquad (k-1)^2b<a2^{2p}
+\]
+with integer square roots and exact comparisons. Then $k2^{-p}\ge\sqrt T$.
+A subsequent binary64 conversion must also be rounded upward, or the exact
+rational radius should be exposed directly. Ordinary nearest-rounded
+\texttt{sqrt} and a printed floating residual are insufficient.
+
+For any query vector $z$ with certified $\|z\|_2\le R_z$, this yields
+$\|z^\top(\widehat W-W_*)\|_2\le R_z\sqrt{S}/\alpha$.
+The certificate bounds numerical fidelity to the exact mathematical ridge
+head. It does not certify that upstream semantic curation is accurate,
+that the feature map forgot its own training data, or that the polynomial
+coefficients conceal individual records.
+
+\subsection{Migration cannot recover discarded precision}
+Canonicalizing an existing floating summary can canonically encode the
+exact dyadic values of that \emph{approximate} summary. It cannot in
+general recover the exact original-input aggregate. Floating aggregation
+is many-to-one: in binary64, both $1+0$ and $1+2^{-54}$ round to $1$ under
+round-to-nearest. Such ambiguity can occur in a cross-moment sum with the
+same Gram and count. A procedure given only the rounded aggregate cannot
+know which exact target preceded it.
+
+Consequently the exact mode must be built from authorized retained inputs,
+or from previously maintained exact sufficient state. If only the old
+floating summary survives, the strongest justified migration is an exact
+encoding of that approximate state plus a separately proved bound on its
+initial moment error. A fresh exact rebuild in an authorized local
+workspace is a one-time cost and must be disclosed. Subsequent exact
+repairs require only the exact current coefficient state and public request
+metadata; they do not reread the original rows.

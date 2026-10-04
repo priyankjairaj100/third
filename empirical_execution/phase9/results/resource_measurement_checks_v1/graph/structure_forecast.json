@@ -1,0 +1,85 @@
+{
+  "blocker_degree_histogram": {
+    "0": 2,
+    "1": 2
+  },
+  "blocker_signature_multiplicity_histogram": {
+    "1": 2,
+    "2": 1
+  },
+  "byte_forecasts_are_not_measured_total_memory": true,
+  "distinct_nonzero_blocker_signatures": 3,
+  "edges": 2,
+  "horizons": [
+    {
+      "boundary_columns": 2,
+      "eligible_records": 4,
+      "horizon": 1,
+      "identically_zero_owner_blocker_records": 0,
+      "independent_reduced_signature_rank": 3,
+      "interior_columns": 2,
+      "key_incidence_entries": 2,
+      "key_tuple_work_potential": 2,
+      "nonzero_count_coordinate_keys": 1,
+      "query_rank": 3,
+      "storage_forecasts": [
+        {
+          "dense_structural_key_values_bytes_upper_bound": 144,
+          "dimension": 2,
+          "eligible_feature_and_target_bytes": 64,
+          "eligible_payload_plus_current_packed_moments_bytes": 112,
+          "feature_bytes_per_coordinate": 4,
+          "generic_rank_basis_values_bytes": 144,
+          "moment_bytes_per_coordinate": 8,
+          "outputs": 1,
+          "packed_statistic_coordinates": 6,
+          "packed_vector_bytes": 48,
+          "status": "arithmetic forecast; metadata, workspace and actual measurements excluded",
+          "target_bytes_per_coordinate": 8
+        }
+      ],
+      "structural_coefficient_keys": 3,
+      "ungrounded_components": 0,
+      "workload_expectation": {
+        "blockers_outside_sampling_frame_records": 0,
+        "expected_admissions": 0.5,
+        "initially_excluded_records": 2,
+        "interpretation": "mean number, not probability of any admission",
+        "own_source_blocker_records": 0,
+        "request_size": 1,
+        "sampling_frame_size": 4,
+        "service_universe_size": 4,
+        "unit": "record"
+      }
+    }
+  ],
+  "identically_zero_owner_blocker_records": 0,
+  "initially_selected_records": 2,
+  "rank_profile": [
+    {
+      "eligible_records": 2,
+      "horizon": 0,
+      "query_rank": 1
+    },
+    {
+      "eligible_records": 4,
+      "horizon": 1,
+      "query_rank": 3
+    },
+    {
+      "eligible_records": 4,
+      "horizon": 2,
+      "query_rank": 4
+    }
+  ],
+  "records": 4,
+  "sampling_frame_size": 4,
+  "sampling_law": "R",
+  "scope": "ranks and eligibility use complete service universe; expectations use explicit sampling frame",
+  "service_universe_size": 4,
+  "source_size_histogram": {
+    "1": 4
+  },
+  "unit": "record",
+  "unlabeled_output_counts_are_explicit_hypothetical_forecasts": false
+}

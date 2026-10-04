@@ -1,0 +1,10 @@
+{
+  "candidate_sha256": "0bf7270fd6da6fd2171b71e078fe4accf680f6f751e7631a51483ab6de69bc5b",
+  "certificate_seconds": 0.0006785040022805333,
+  "certificate_sha256": "700cf109f879daa174578899d1b7d513105cef26d1e7ba6550cbb44d13120482",
+  "measured_operation": "pointwise_exact_convex_verification_only",
+  "meets_parameter_tolerance": true,
+  "optimization_performed": false,
+  "status": "completed",
+  "trajectory_execution_claim": false
+}

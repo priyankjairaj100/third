@@ -1,0 +1,138 @@
+{
+  "canonical_state_claim": false,
+  "code_sha256": "f160229da54c19f38fcb9a965913a64574b7b02bbb585b304606ece017342293",
+  "elapsed_seconds": 0.0005708170028810855,
+  "input_bindings": {
+    "features": "de3108da73ca4347e5ef8830c8aabcdfb9737534d81e2248657ca4c120966399",
+    "targets": "987c14edf571dca19add46d5fd5d8be3efa7c950905b6e6bee1750834ed2b65e",
+    "weights": "9f93a3e1a6574b851310ebb4e788d8b31eaf1353a845b4418772b467e5be31ed"
+  },
+  "meets_parameter_tolerance": true,
+  "objective_gap_upper": {
+    "denominator": "1",
+    "numerator": "0"
+  },
+  "objective_normalization": "sum_over_outputs_mean_over_rows",
+  "original_sigmoid_code_sha256": "93a59e37ad4597b7018f07b4a49dbaba51d4b762971a2f0520f76cfa42616eb8",
+  "outputs": 1,
+  "parameter_error_frobenius_squared_upper": {
+    "denominator": "1",
+    "numerator": "0"
+  },
+  "parameter_error_frobenius_upper": {
+    "denominator": "1",
+    "numerator": "0"
+  },
+  "parameter_tolerance": {
+    "denominator": "100000000",
+    "numerator": "1"
+  },
+  "privacy_claim": false,
+  "radius_float_for_display_only": 0.0,
+  "records": 2,
+  "scalar_certificates": [
+    {
+      "canonical_state_claim": false,
+      "dimension": 2,
+      "dyadic_work": {
+        "accumulator_rescalings": 1,
+        "final_common_binary_exponent": 155,
+        "integer_products_for_gradient_endpoints": 8,
+        "integer_products_for_logits": 4,
+        "max_gradient_integer_bits": 0,
+        "max_logit_integer_bits": 0,
+        "memory_metadata_revision": 2,
+        "memory_scope": "sum of list storage and integer size per reference; shared integers can count repeatedly; excludes conversion temporaries, sigmoid workspace, inputs, and output serialization; neither a lower bound nor an upper bound on total memory",
+        "rational_coordinate_accumulation_operations": 0,
+        "tracked_integer_list_shallow_byte_sum": 576
+      },
+      "elapsed_seconds": 0.00015140199684537947,
+      "empty_target": "zero data loss; unique minimizer zero",
+      "gradient_lower": [
+        {
+          "denominator": "1",
+          "numerator": "0"
+        },
+        {
+          "denominator": "1",
+          "numerator": "0"
+        }
+      ],
+      "gradient_norm_squared_upper": {
+        "denominator": "1",
+        "numerator": "0"
+      },
+      "gradient_upper": [
+        {
+          "denominator": "1",
+          "numerator": "0"
+        },
+        {
+          "denominator": "1",
+          "numerator": "0"
+        }
+      ],
+      "input_bindings": {
+        "code_sha256": "f160229da54c19f38fcb9a965913a64574b7b02bbb585b304606ece017342293",
+        "features_sha256": "de3108da73ca4347e5ef8830c8aabcdfb9737534d81e2248657ca4c120966399",
+        "original_sigmoid_code_sha256": "93a59e37ad4597b7018f07b4a49dbaba51d4b762971a2f0520f76cfa42616eb8",
+        "targets_sha256": "235cbb1e665f2e1c86d7f2372053309443f949962c66b326e86d17d08200d010",
+        "weights_sha256": "bcd08b58e759db4e70e36d4780559986628b3360910a72ba45c34f155c9a3dcb"
+      },
+      "lambda_exact": {
+        "denominator": "36028797018963968",
+        "numerator": "3602879701896397"
+      },
+      "meets_parameter_tolerance": true,
+      "objective": "single-output mean fractional BCE + lambda/2 * squared Euclidean weight norm; no intercept",
+      "objective_gap_upper": {
+        "denominator": "1",
+        "numerator": "0"
+      },
+      "parameter_error_norm_upper": {
+        "denominator": "1",
+        "numerator": "0"
+      },
+      "parameter_error_squared_upper": {
+        "denominator": "1",
+        "numerator": "0"
+      },
+      "parameter_tolerance": {
+        "denominator": "100000000",
+        "numerator": "1"
+      },
+      "peak_memory_measured": false,
+      "privacy_claim": false,
+      "radius_float_for_display_only": 0.0,
+      "records": 2,
+      "resource_limits": {
+        "max_coordinates": 100,
+        "max_squarings": 64,
+        "max_terms": 256
+      },
+      "schema": "ccu-fractional-logistic-dyadic-certificate-v1",
+      "sha256": "b2b2865c82821ff2e7ccb397cf3539ea67b740ac141451eaeddfb2c0e221a4ef",
+      "sigmoid_interval_precision_bits": 128,
+      "statistical_unlearning_certificate": false,
+      "status": "certified_stored_value_optimization_bound",
+      "verification_backend": "exact_dyadic_integer_v1",
+      "work": {
+        "exact_feature_coordinates": 4,
+        "exact_logit_row_evaluations": 2,
+        "squarings": 0,
+        "taylor_terms": 0
+      }
+    }
+  ],
+  "schema": "ccu-multioutput-logistic-dyadic-certificate-v1",
+  "sha256": "d7cee98217ec9940af96a3fd734a92b20da7bfe8de15698b6824a8daf184e59c",
+  "statistical_unlearning_certificate": false,
+  "total_coordinate_budget": 100,
+  "verification_backend": "exact_dyadic_integer_v1",
+  "work": {
+    "exact_feature_coordinates": 4,
+    "exact_logit_row_evaluations": 2,
+    "squarings": 0,
+    "taylor_terms": 0
+  }
+}

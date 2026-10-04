@@ -1,0 +1,61 @@
+{
+  "evidence_role": "software_only",
+  "fresh_graph": false,
+  "input_package": "inputs",
+  "kind": "graph",
+  "policy": {
+    "convex_certificate_coordinates": 100,
+    "convex_verifier": "exact_dyadic_integer_v1",
+    "cpu_seconds": 30,
+    "memory_bytes": 2147483648,
+    "threads": 1,
+    "wall_seconds": 30
+  },
+  "profile_signature": {
+    "checkpoint_schedule": [
+      1
+    ],
+    "curator": {
+      "id": "algebraic",
+      "name": "software",
+      "revision": "1"
+    },
+    "curator_dimension": 2,
+    "fresh_graph": false,
+    "horizon": 1,
+    "kind": "graph",
+    "lambda_reg": 0.1,
+    "learner": {
+      "id": "algebraic",
+      "name": "software",
+      "revision": "1"
+    },
+    "learner_dimension": 2,
+    "method": null,
+    "outputs": 1,
+    "priority_seed": 0,
+    "projection_seed": null,
+    "projection_sha256": null,
+    "threads": 1,
+    "threshold": 0.8,
+    "unit": "record"
+  },
+  "schema": "ccu-resource-measurement-request-1",
+  "source_kinds": {
+    "fixture-a": "unknown_singleton",
+    "fixture-b": "unknown_singleton",
+    "fixture-c": "unknown_singleton",
+    "fixture-d": "unknown_singleton"
+  },
+  "trajectory": {
+    "arm": "R",
+    "checkpoints": [
+      1
+    ],
+    "deletion_order": [
+      "fixture-c"
+    ],
+    "trajectory_id": "software-one",
+    "unit": "record"
+  }
+}

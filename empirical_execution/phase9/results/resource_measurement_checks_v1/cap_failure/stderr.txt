@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/35d4d4d8ba2c/empirical_execution/phase9/resource_measurement.py", line 296, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/scratch/35d4d4d8ba2c/empirical_execution/phase9/resource_measurement.py", line 290, in main
+    worker(args.config);return
+    ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/35d4d4d8ba2c/empirical_execution/phase9/resource_measurement.py", line 192, in worker
+    certificate = verifier(x,y,s['lambda_reg'],w,max_coordinates=policy.get(pf.CONVEX_CAP,2_000_000),
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/35d4d4d8ba2c/empirical_execution/phase6/dyadic_convex.py", line 148, in certify_multioutput
+    raise original.CertificateBudgetError('Total output-row-coordinate budget exceeded before verification')
+phase4.convex.CertificateBudgetError: Total output-row-coordinate budget exceeded before verification

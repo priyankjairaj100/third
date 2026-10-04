@@ -1,0 +1,1063 @@
+{
+  "schema": "ccu-phase9-novelty-sources-1",
+  "as_of": "2026-10-04",
+  "audit_path": "empirical_execution/phase9/NOVELTY_AUDIT.md",
+  "audit_sha256": "bf973aa1b46835fbac5c5a7a27daa0bf3fb858acff73aa21754488fcbc00c7d9",
+  "status": "targeted_primary_source_audit_not_exhaustive",
+  "source_count": 29,
+  "search": {
+    "engines": [
+      "system1_search_query",
+      "system2_search_query"
+    ],
+    "primary_policy": "Primary papers, official code, author/institution publication pages; inaccessible leads retained without theorem conclusions.",
+    "query_families": [
+      "pipeline-aware machine unlearning and preprocessing",
+      "representative selection and ARCANE",
+      "DBSP incremental negation/antijoin maintenance",
+      "PrIU F-IVM regression provenance",
+      "deletion-robust summaries and coresets",
+      "bounded-deletion learning-unlearning space complexity",
+      "exact frozen-feature ridge unlearning",
+      "random row-scaled matrix generic rank and matroid union",
+      "semantic deduplication and 2025–2026 LLM curation",
+      "Fano packing and invariance of domain"
+    ],
+    "exact_recent_query_examples": [
+      "\"Beweis der Invarianz des n-dimensionalen Gebiets\"",
+      "\"Fano\" \"Scarlett\" \"Cevher\" \"pdf\""
+    ],
+    "coverage_limits": [
+      "Not an exhaustive bibliographic or forward-citation search.",
+      "Some long stronger-engine searches returned irrelevant single-term matches; direct retrieval and the second engine partly repaired coverage.",
+      "No theorem-level conclusion is drawn from search snippets.",
+      "Publication dates are precise only when primary metadata supports them.",
+      "No empirical experiments or benchmarks were run for this audit."
+    ]
+  },
+  "local_inputs": [
+    {
+      "path": "THEORY_AND_RESULTS_HANDOFF.md",
+      "sha256": "9af2374ddbef854a4f36e87bc9f96e68e38e03f716d179449f5559b9c94cc312"
+    },
+    {
+      "path": "literature_notes.md",
+      "sha256": "60f02e09fc2d7489aacacf569a7d118e49dabf429732eb5094ecdf2845cb395b"
+    },
+    {
+      "path": "round2_literature.md",
+      "sha256": "48e1f8f842c0b0c9bd61efa1dce3378354957145f1b3d0dbf32530a62d897779"
+    },
+    {
+      "path": "round3_related.md",
+      "sha256": "3579003ec24e7c9a31d1ef1cd6ec228cf60921b8f3c39876199fdb80ae0229ce"
+    },
+    {
+      "path": "output/pdf/counterfactual_curation_theory.tex",
+      "sha256": "8e7662935d0caf6cddede9cd12460d1362c67fddc227d8051424e4dce51d61aa"
+    },
+    {
+      "path": "empirical_execution/memory_theory_addendum.tex",
+      "sha256": "a994631a07146c0de4358034d4f254ba2b79b1e184447423c57a97613c62cc02"
+    },
+    {
+      "path": "empirical_execution/canonical_theory_addendum.tex",
+      "sha256": "54c933dcf5b3382824dcc2cfeee373a15435771cd79ede33d175da8339e774c2"
+    },
+    {
+      "path": "empirical_execution/phase5/vendor/SemDeDup/UPSTREAM_MANIFEST.json",
+      "sha256": "0c2a2ecf3ba287e80bb5b09d4549a841401946f358a50bb962dd9fa90465e543"
+    },
+    {
+      "path": "empirical_execution/phase5/vendor/SemDeDup/semdedup.py",
+      "sha256": "9280d5feb84e6c65d2e24229db3ce8efc71a0ad585c41921539ccc3cc96cc293"
+    }
+  ],
+  "new_theory_status": "Candidate construction communicated by theory agent; proof acceptance belongs to separate Phase9 review. No frozen theory file modified.",
+  "sources": [
+    {
+      "id": "cao2015",
+      "title": "Towards Making Systems Forget with Machine Unlearning",
+      "authors": [
+        "Yinzhi Cao",
+        "Junfeng Yang"
+      ],
+      "publication": {
+        "year": 2015,
+        "venue": "IEEE Symposium on Security and Privacy",
+        "date": null,
+        "date_precision": "year",
+        "doi": null
+      },
+      "urls": [
+        "https://www.cs.columbia.edu/~junfeng/papers/unlearning-sp15.pdf"
+      ],
+      "retrieval_level": "primary_full_text",
+      "supported_comparison": "Pipeline stages and summation-form maintenance are prior.",
+      "our_scope_distinction": "We study one nonmonotone curator and its bounded-future information requirement.",
+      "tool_refs": [
+        "turn151view0"
+      ],
+      "versions": [],
+      "limitations": [],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "arcane2022",
+      "title": "ARCANE: An Efficient Architecture for Exact Machine Unlearning",
+      "authors": [
+        "Haonan Yan",
+        "Xiaoguang Li",
+        "Ziyao Guo",
+        "Hui Li",
+        "Fenghua Li",
+        "Xiaodong Lin"
+      ],
+      "publication": {
+        "year": 2022,
+        "venue": "IJCAI",
+        "date": null,
+        "date_precision": "year",
+        "doi": null
+      },
+      "urls": [
+        "https://www.ijcai.org/proceedings/2022/0556.pdf"
+      ],
+      "retrieval_level": "primary_full_text",
+      "supported_comparison": "Section 3.2 uses representative selection and treats unselected-example removal as requiring no retraining.",
+      "our_scope_distinction": "Different full-curator rerun target; not a blanket refutation of ARCANE.",
+      "tool_refs": [
+        "turn162view1"
+      ],
+      "versions": [],
+      "limitations": [],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "dbsp2023",
+      "title": "DBSP: Automatic Incremental View Maintenance for Rich Query Languages",
+      "authors": [
+        "Mihai Budiu",
+        "Tej Chajed",
+        "Frank McSherry",
+        "Leonid Ryzhyk",
+        "Val Tannen"
+      ],
+      "publication": {
+        "year": 2023,
+        "venue": "PVLDB 16(7):1601–1614",
+        "date": null,
+        "date_precision": "year",
+        "doi": "10.14778/3587136.3587137"
+      },
+      "urls": [
+        "https://www.vldb.org/pvldb/vol16/p1601-budiu.pdf"
+      ],
+      "retrieval_level": "primary_full_text",
+      "supported_comparison": "Nonmonotone relational maintenance, negation, and aggregation are established.",
+      "our_scope_distinction": "Antijoin formulation is our application; restricted future-state information is the proposed distinction.",
+      "tool_refs": [
+        "turn150view2",
+        "turn158view1"
+      ],
+      "versions": [],
+      "limitations": [],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "priu2020",
+      "title": "PrIU: A Provenance-Based Approach for Incrementally Updating Regression Models",
+      "authors": [
+        "Yinjun Wu",
+        "Val Tannen",
+        "Susan B. Davidson"
+      ],
+      "publication": {
+        "year": 2020,
+        "venue": "SIGMOD",
+        "date": null,
+        "date_precision": "year",
+        "doi": "10.1145/3318464.3380571"
+      },
+      "urls": [
+        "https://arxiv.org/abs/2002.11791",
+        "https://arxiv.org/pdf/2002.11791"
+      ],
+      "retrieval_level": "primary_full_text",
+      "supported_comparison": "Polynomial vector/matrix provenance updates regression models.",
+      "our_scope_distinction": "Selector-specific bounded-horizon state, not first provenance model repair.",
+      "tool_refs": [
+        "turn160view5",
+        "turn168view1"
+      ],
+      "versions": [
+        {
+          "version": "v1",
+          "date": "2020-02-26"
+        }
+      ],
+      "limitations": [],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "fivm2018",
+      "title": "F-IVM: Incremental View Maintenance with Triple Lock Factorization Benefits",
+      "authors": [
+        "Milos Nikolic",
+        "Dan Olteanu"
+      ],
+      "publication": {
+        "year": 2018,
+        "venue": "SIGMOD",
+        "date": null,
+        "date_precision": "year",
+        "doi": null
+      },
+      "urls": [
+        "https://www.cs.ox.ac.uk/dan.olteanu/papers/no-sigmod18.pdf"
+      ],
+      "retrieval_level": "primary_full_text",
+      "supported_comparison": "Section 7.2 maintains regression cofactor aggregates over changing relational data.",
+      "our_scope_distinction": "Ridge moments and signed updates are supporting tools.",
+      "tool_refs": [
+        "turn160view3"
+      ],
+      "versions": [],
+      "limitations": [],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "dbtoaster2012",
+      "title": "DBToaster: Higher-order Delta Processing for Dynamic, Frequently Fresh Views",
+      "authors": [
+        "Yanif Ahmad",
+        "Oliver Kennedy",
+        "Christoph Koch",
+        "Milos Nikolic"
+      ],
+      "publication": {
+        "year": 2012,
+        "venue": "PVLDB 5(10)",
+        "date": null,
+        "date_precision": "year",
+        "doi": null
+      },
+      "urls": [
+        "https://www.vldb.org/pvldb/vol5/p968_yanifahmad_vldb2012.pdf"
+      ],
+      "retrieval_level": "primary_full_text",
+      "supported_comparison": "Higher-order deltas and materialized dynamic views predate this work.",
+      "our_scope_distinction": "Our finite-horizon selector representation is a specialization.",
+      "tool_refs": [
+        "turn160view4"
+      ],
+      "versions": [],
+      "limitations": [],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "quan2026",
+      "title": "Exact Federated Continual Unlearning for Ridge Heads on Frozen Foundation Models",
+      "authors": [
+        "Yijun Quan",
+        "Wentai Wu",
+        "Giovanni Montana"
+      ],
+      "publication": {
+        "year": 2026,
+        "venue": "arXiv; abstract reports ECML-PKDD 2026 acceptance",
+        "date": null,
+        "date_precision": "year",
+        "doi": null
+      },
+      "urls": [
+        "https://arxiv.org/abs/2603.12977",
+        "https://arxiv.org/html/2603.12977v3"
+      ],
+      "retrieval_level": "primary_full_text",
+      "supported_comparison": "Additive Gram/cross moments give exact-arithmetic ridge add/delete maintenance.",
+      "our_scope_distinction": "Raw withdrawal must determine and recover newly admitted retained contributions.",
+      "tool_refs": [
+        "turn150view1",
+        "turn156view2",
+        "turn158view3"
+      ],
+      "versions": [
+        {
+          "version": "v1",
+          "date": "2026-03-13"
+        },
+        {
+          "version": "v2",
+          "date": "2026-03-16"
+        },
+        {
+          "version": "v3",
+          "date": "2026-06-14"
+        }
+      ],
+      "limitations": [],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "space2025",
+      "title": "The Space Complexity of Learning-Unlearning Algorithms",
+      "authors": [
+        "Yeshwanth Cherapanamjeri",
+        "Sumegha Garg",
+        "Nived Rajaraman",
+        "Ayush Sekhari",
+        "Abhishek Shetty"
+      ],
+      "publication": {
+        "year": 2025,
+        "venue": "COLT, PMLR 291:1185–1193",
+        "date": "2025-06-30/2025-07-04",
+        "date_precision": "conference_interval",
+        "doi": null
+      },
+      "urls": [
+        "https://proceedings.mlr.press/v291/cherapanamjeri25b.html",
+        "https://arxiv.org/html/2506.13048v1"
+      ],
+      "retrieval_level": "primary_full_text_and_archival_metadata",
+      "supported_comparison": "Bounded-deletion memory lower bounds and entropy reductions already exist; full version Section 6 addresses realizability.",
+      "our_scope_distinction": "Prescribed ridge output, shared semantic geometry, and fixed forgotten payloads distinguish the proposed family.",
+      "tool_refs": [
+        "turn150view0",
+        "turn156view1",
+        "turn158view2"
+      ],
+      "versions": [],
+      "limitations": [
+        "PMLR item is an extended abstract; detailed theorem comparison uses arXiv v1.",
+        "The 25a PMLR URL is unrelated."
+      ],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "ticketed2023",
+      "title": "Ticketed Learning–Unlearning Schemes",
+      "authors": [
+        "Badih Ghazi",
+        "Pritish Kamath",
+        "Ravi Kumar",
+        "Pasin Manurangsi",
+        "Ayush Sekhari",
+        "Chiyuan Zhang"
+      ],
+      "publication": {
+        "year": 2023,
+        "venue": "COLT, PMLR 195:5110–5139",
+        "date": null,
+        "date_precision": "year",
+        "doi": null
+      },
+      "urls": [
+        "https://proceedings.mlr.press/v195/ghazi23a.html"
+      ],
+      "retrieval_level": "primary_archival_abstract",
+      "supported_comparison": "Ticketed state changes the central-memory model.",
+      "our_scope_distinction": "Charge tickets, deleted payloads, and external hidden-information caches explicitly.",
+      "tool_refs": [
+        "turn151view2"
+      ],
+      "versions": [],
+      "limitations": [
+        "Full proof comparison also appears in the earlier local literature audit; this refresh retrieved archival metadata/abstract."
+      ],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "robust2017",
+      "title": "Deletion-Robust Submodular Maximization: Data Summarization with the Right to be Forgotten",
+      "authors": [
+        "Baharan Mirzasoleiman",
+        "Amin Karbasi",
+        "Andreas Krause"
+      ],
+      "publication": {
+        "year": 2017,
+        "venue": "ICML, PMLR 70:2449–2458",
+        "date": "2017-08-06/2017-08-11",
+        "date_precision": "conference_interval",
+        "doi": null
+      },
+      "urls": [
+        "https://proceedings.mlr.press/v70/mirzasoleiman17a.html"
+      ],
+      "retrieval_level": "primary_archival_abstract",
+      "supported_comparison": "Deletion-robust summaries and approximate recovery are prior.",
+      "our_scope_distinction": "A designated curator/model output differs from any high-value feasible solution.",
+      "tool_refs": [
+        "turn152view0"
+      ],
+      "versions": [],
+      "limitations": [],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "robust2018",
+      "title": "Scalable Deletion-Robust Submodular Maximization: Data Summarization with Privacy and Fairness Constraints",
+      "authors": [
+        "Ehsan Kazemi",
+        "Morteza Zadimoghaddam",
+        "Amin Karbasi"
+      ],
+      "publication": {
+        "year": 2018,
+        "venue": "ICML, PMLR 80:2544–2553",
+        "date": "2018-07-10/2018-07-15",
+        "date_precision": "conference_interval",
+        "doi": null
+      },
+      "urls": [
+        "https://proceedings.mlr.press/v80/kazemi18a.html"
+      ],
+      "retrieval_level": "primary_archival_abstract",
+      "supported_comparison": "Scalable central, streaming, and distributed robust summarization is established.",
+      "our_scope_distinction": "Exact pipeline reproduction is a different target from objective approximation.",
+      "tool_refs": [
+        "turn152view1"
+      ],
+      "versions": [],
+      "limitations": [],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "coresets2022",
+      "title": "Coresets remembered and items forgotten: submodular maximization with deletions",
+      "authors": [
+        "Guangyi Zhang",
+        "Nikolaj Tatti",
+        "Aristides Gionis"
+      ],
+      "publication": {
+        "year": 2022,
+        "venue": "arXiv",
+        "date": null,
+        "date_precision": "year",
+        "doi": null
+      },
+      "urls": [
+        "https://arxiv.org/abs/2203.01241"
+      ],
+      "retrieval_level": "primary_abstract",
+      "supported_comparison": "Explicitly studies the number of items remembered before bounded adversarial deletions.",
+      "our_scope_distinction": "Memory dependence on deletion budget alone is not novel.",
+      "tool_refs": [
+        "turn154view3",
+        "turn168view3"
+      ],
+      "versions": [
+        {
+          "version": "v1",
+          "date": "2022-03-02"
+        },
+        {
+          "version": "v3",
+          "date": "2022-09-14"
+        }
+      ],
+      "limitations": [],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "matroid2025",
+      "title": "Deletion Robust Non-Monotone Submodular Maximization over Matroids",
+      "authors": [
+        "Paul Dütting",
+        "Federico Fusco",
+        "Silvio Lattanzi",
+        "Ashkan Norouzi-Fard",
+        "Morteza Zadimoghaddam"
+      ],
+      "publication": {
+        "year": 2025,
+        "venue": "JMLR 26(66):1–28",
+        "date": null,
+        "date_precision": "year",
+        "doi": null
+      },
+      "urls": [
+        "https://www.jmlr.org/papers/v26/23-1219.html"
+      ],
+      "retrieval_level": "primary_archival_abstract",
+      "supported_comparison": "Small robust summaries extend to nonmonotone objectives and matroid constraints.",
+      "our_scope_distinction": "Not an exact designated-curator/model reconstruction theorem.",
+      "tool_refs": [
+        "turn163view2"
+      ],
+      "versions": [],
+      "limitations": [],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "kcenter2024",
+      "title": "Coresets for Deletion-Robust k-Center Clustering",
+      "authors": [
+        "Ruien Li",
+        "Yanhao Wang",
+        "Michael Mathioudakis"
+      ],
+      "publication": {
+        "year": 2024,
+        "venue": "CIKM, pp. 3877–3881",
+        "date": "2024-10-21",
+        "date_precision": "day",
+        "doi": "10.1145/3627673.3679890"
+      },
+      "urls": [
+        "https://researchportal.helsinki.fi/en/publications/coresets-for-deletion-robust-k-center-clustering/",
+        "https://github.com/HonokaKousaka/DRkC"
+      ],
+      "retrieval_level": "author_institution_metadata_and_abstract",
+      "supported_comparison": "Geometric robust coresets with approximation guarantees are prior.",
+      "our_scope_distinction": "Our specified ridge output has a different recovery objective.",
+      "tool_refs": [
+        "turn148search0",
+        "turn153search1"
+      ],
+      "versions": [],
+      "limitations": [
+        "Linked author PDF https://honokakousaka.github.io/files/sp2604-li.pdf returned 404; no proof-level comparison."
+      ],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "dynamic2026",
+      "title": "A General Framework for Dynamic Consistent Submodular Maximization",
+      "authors": [
+        "Paul Dütting",
+        "Federico Fusco",
+        "Silvio Lattanzi",
+        "Ashkan Norouzi-Fard",
+        "Ola Svensson",
+        "Morteza Zadimoghaddam"
+      ],
+      "publication": {
+        "year": 2026,
+        "venue": "arXiv; metadata reports ICML 2026 acceptance",
+        "date": null,
+        "date_precision": "year",
+        "doi": null
+      },
+      "urls": [
+        "https://arxiv.org/abs/2606.04946",
+        "https://arxiv.org/html/2606.04946v1"
+      ],
+      "retrieval_level": "primary_full_text",
+      "supported_comparison": "Dynamic approximate solutions with controlled recourse/consistency are established.",
+      "our_scope_distinction": "Low replacement count and backup summaries alone are insufficient novelty.",
+      "tool_refs": [
+        "turn154view2",
+        "turn156view0"
+      ],
+      "versions": [
+        {
+          "version": "v1",
+          "date": "2026-06-03"
+        }
+      ],
+      "limitations": [],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "control2023",
+      "title": "Control, Confidentiality, and the Right to be Forgotten",
+      "authors": [
+        "Aloni Cohen",
+        "Adam Smith",
+        "Marika Swanberg",
+        "Prashant Nalini Vasudevan"
+      ],
+      "publication": {
+        "year": 2023,
+        "venue": "ACM CCS",
+        "date": null,
+        "date_precision": "year",
+        "doi": "10.1145/3576915.3616585"
+      },
+      "urls": [
+        "https://aloni.net/wp-content/uploads/2023/10/Control-Confidentiality-and-RTBF-CCS-23-FINAL.pdf"
+      ],
+      "retrieval_level": "primary_full_text",
+      "supported_comparison": "Adaptive history independence and deletion/privacy distinctions are established.",
+      "our_scope_distinction": "Logical canonical state is narrower than physical or transcript guarantees.",
+      "tool_refs": [
+        "turn161view7"
+      ],
+      "versions": [],
+      "limitations": [],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "history2007",
+      "title": "Strongly History-Independent Hashing with Applications",
+      "authors": [
+        "Guy E. Blelloch",
+        "Daniel Golovin"
+      ],
+      "publication": {
+        "year": 2007,
+        "venue": "FOCS",
+        "date": null,
+        "date_precision": "year",
+        "doi": null
+      },
+      "urls": [
+        "https://www.cs.cmu.edu/~guyb/papers/BG07.pdf"
+      ],
+      "retrieval_level": "primary_full_text",
+      "supported_comparison": "Strong history-independent data structures predate this work.",
+      "our_scope_distinction": "Our canonical summary representation is application-specific, not a new general history-independence result.",
+      "tool_refs": [
+        "turn161view6"
+      ],
+      "versions": [],
+      "limitations": [],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "retroactive2026",
+      "title": "Machine Unlearning as Private Retroactive Algorithms",
+      "authors": [
+        "Haim Kaplan",
+        "Refael Kohen",
+        "Yishay Mansour",
+        "Kobbi Nissim",
+        "Uri Stemmer"
+      ],
+      "publication": {
+        "year": 2026,
+        "venue": "arXiv",
+        "date": null,
+        "date_precision": "year",
+        "doi": null
+      },
+      "urls": [
+        "https://arxiv.org/abs/2609.05329",
+        "https://arxiv.org/html/2609.05329v1"
+      ],
+      "retrieval_level": "primary_full_text",
+      "supported_comparison": "Retroactive maintenance and continual-observation privacy are distinguished explicitly.",
+      "our_scope_distinction": "Retraining equivalence alone does not establish release-sequence privacy.",
+      "tool_refs": [
+        "turn156view3",
+        "turn168view2"
+      ],
+      "versions": [
+        {
+          "version": "v1",
+          "date": "2026-09-04"
+        }
+      ],
+      "limitations": [],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "scaledrank2015",
+      "title": "When Does an Ensemble of Matrices with Randomly Scaled Rows Lose Rank?",
+      "authors": [
+        "Navid Naderializadeh",
+        "Aly El Gamal",
+        "A. Salman Avestimehr"
+      ],
+      "publication": {
+        "year": 2015,
+        "venue": "arXiv; metadata mentions ISIT short version and IEEE IT submission",
+        "date": null,
+        "date_precision": "year",
+        "doi": null
+      },
+      "urls": [
+        "https://arxiv.org/abs/1501.07544",
+        "https://arxiv.org/pdf/1501.07544"
+      ],
+      "retrieval_level": "primary_full_text",
+      "supported_comparison": "Theorem 1 and Section III derive generic rank for row-scaled concatenated blocks using matroid union.",
+      "our_scope_distinction": "Our public-feature tensor-column matrix transposes to this established family.",
+      "tool_refs": [
+        "turn160view0",
+        "turn160view2"
+      ],
+      "versions": [
+        {
+          "version": "v1",
+          "date": "2015-01-29"
+        },
+        {
+          "version": "v2",
+          "date": "2015-04-22"
+        }
+      ],
+      "limitations": [
+        "No journal publication date is inferred from submission metadata."
+      ],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "semdedup2023",
+      "title": "SemDeDup: Data-efficient learning at web-scale through semantic deduplication",
+      "authors": [
+        "Amro Abbas",
+        "Kushal Tirumala",
+        "Dániel Simig",
+        "Surya Ganguli",
+        "Ari S. Morcos"
+      ],
+      "publication": {
+        "year": 2023,
+        "venue": "arXiv",
+        "date": null,
+        "date_precision": "year",
+        "doi": null
+      },
+      "urls": [
+        "https://arxiv.org/abs/2303.09540"
+      ],
+      "retrieval_level": "primary_metadata_abstract_and_official_code",
+      "supported_comparison": "Fixed within-cluster earlier-raw-neighbor suppression is supported by the pinned implementation.",
+      "our_scope_distinction": "Full clustering/order refitting is not automatically restriction-consistent.",
+      "tool_refs": [
+        "turn162view0"
+      ],
+      "versions": [
+        {
+          "version": "v1",
+          "date": "2023-03-16"
+        },
+        {
+          "version": "v3",
+          "date": "2023-03-22"
+        }
+      ],
+      "limitations": [],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "semdedup_code",
+      "title": "Official SemDeDup implementation",
+      "authors": [
+        "Meta SemDeDup authors"
+      ],
+      "publication": {
+        "year": null,
+        "venue": "GitHub",
+        "date": null,
+        "date_precision": "unknown",
+        "doi": null
+      },
+      "urls": [
+        "https://github.com/facebookresearch/SemDeDup/blob/6b4194511202c29b0e1ac8c730996777449ea2a4/semdedup.py"
+      ],
+      "retrieval_level": "pinned_primary_code_locally_inspected",
+      "supported_comparison": "Upper-triangle maximum and strict threshold predicate implement raw-neighbor suppression.",
+      "our_scope_distinction": "Fixed graph/global variant must be named separately from corpus-fitted full replay.",
+      "tool_refs": [
+        "local:empirical_execution/phase5/vendor/SemDeDup/semdedup.py"
+      ],
+      "versions": [
+        {
+          "commit": "6b4194511202c29b0e1ac8c730996777449ea2a4",
+          "date": null
+        }
+      ],
+      "limitations": [
+        "Web blob rendering failed in this pass; exact vendored bytes and acquisition manifest were inspected.",
+        "Padding zeros and singleton special case matter for boundary thresholds."
+      ],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "d42023",
+      "title": "D4: Improving LLM pretraining via document de-duplication and diversification",
+      "authors": [
+        "Kushal Tirumala",
+        "Dániel Simig",
+        "Armen Aghajanyan",
+        "Ari S. Morcos"
+      ],
+      "publication": {
+        "year": 2023,
+        "venue": "NeurIPS Datasets and Benchmarks",
+        "date": null,
+        "date_precision": "year",
+        "doi": null
+      },
+      "urls": [
+        "https://arxiv.org/abs/2308.12284",
+        "https://papers.nips.cc/paper_files/paper/2023/file/a8f8cbd7f7a5fb2c837e578c75e5b615-Paper-Datasets_and_Benchmarks.pdf"
+      ],
+      "retrieval_level": "primary_full_text",
+      "supported_comparison": "Reclustering occurs after semantic deduplication and is explicitly ablated.",
+      "our_scope_distinction": "Frozen-curator repair does not reproduce full D4.",
+      "tool_refs": [
+        "turn161view1",
+        "turn161view2"
+      ],
+      "versions": [
+        {
+          "version": "v1",
+          "date": "2023-08-23"
+        }
+      ],
+      "limitations": [],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "forgetcuration2026",
+      "title": "What to Forget in Unlearning? Forget Set Curation for Language Models",
+      "authors": [
+        "Animesh Jha",
+        "Arpandeep Khatua",
+        "Youssef Allouah",
+        "Sanmi Koyejo"
+      ],
+      "publication": {
+        "year": 2026,
+        "venue": "arXiv; metadata reports ICML 2026 workshops",
+        "date": null,
+        "date_precision": "year",
+        "doi": null
+      },
+      "urls": [
+        "https://arxiv.org/abs/2608.14855",
+        "https://arxiv.org/html/2608.14855v1"
+      ],
+      "retrieval_level": "primary_full_text",
+      "supported_comparison": "Maps behavioral suppression requests to unlearning forget sets.",
+      "our_scope_distinction": "Our input withdrawal is specified; the original training curator is rerun.",
+      "tool_refs": [
+        "turn163view0",
+        "turn165view1"
+      ],
+      "versions": [
+        {
+          "version": "v1",
+          "date": "2026-08-14"
+        }
+      ],
+      "limitations": [],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "nulls2026",
+      "title": "Natively Unlearnable Large Language Models",
+      "authors": [
+        "Gaurav R. Ghosal",
+        "Pratyush Maini",
+        "Aditi Raghunathan"
+      ],
+      "publication": {
+        "year": 2026,
+        "venue": "arXiv",
+        "date": null,
+        "date_precision": "year",
+        "doi": null
+      },
+      "urls": [
+        "https://arxiv.org/abs/2606.13873"
+      ],
+      "retrieval_level": "primary_abstract",
+      "supported_comparison": "Source-specific neural parameter allocation supports source unlearning.",
+      "our_scope_distinction": "Different mechanism and target from counterfactual semantic selection.",
+      "tool_refs": [
+        "turn166view3"
+      ],
+      "versions": [
+        {
+          "version": "v1",
+          "date": "2026-06-11"
+        }
+      ],
+      "limitations": [],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "fano2019",
+      "title": "An Introductory Guide to Fano's Inequality with Applications in Statistical Estimation",
+      "authors": [
+        "Jonathan Scarlett",
+        "Volkan Cevher"
+      ],
+      "publication": {
+        "year": 2019,
+        "venue": "arXiv; author-written book chapter",
+        "date": null,
+        "date_precision": "year",
+        "doi": null
+      },
+      "urls": [
+        "https://arxiv.org/abs/1901.00555",
+        "https://arxiv.org/pdf/1901.00555"
+      ],
+      "retrieval_level": "author_primary_exposition_full_text",
+      "supported_comparison": "Theorem 1 and Section 5.2 give standard finite-alphabet Fano and packing reductions.",
+      "our_scope_distinction": "The realized ridge/cosine family is the proposed new application, not the information inequality.",
+      "tool_refs": [
+        "turn164view0",
+        "turn165view0",
+        "turn166view2"
+      ],
+      "versions": [
+        {
+          "version": "v1",
+          "date": "2019-01-02"
+        },
+        {
+          "version": "v3",
+          "date": "2019-11-25"
+        }
+      ],
+      "limitations": [],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "hatcher",
+      "title": "Algebraic Topology, Theorem 2B.3",
+      "authors": [
+        "Allen Hatcher"
+      ],
+      "publication": {
+        "year": null,
+        "venue": "Author-hosted textbook",
+        "date": null,
+        "date_precision": "not_verified_in_this_pass",
+        "doi": null
+      },
+      "urls": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf"
+      ],
+      "retrieval_level": "author_primary_exposition_full_text",
+      "supported_comparison": "Classical invariance of domain rules out lower-dimensional continuous injective encodings of an open chart.",
+      "our_scope_distinction": "Does not apply to unrestricted discontinuous real encodings.",
+      "tool_refs": [
+        "turn167view0",
+        "turn168view0"
+      ],
+      "versions": [],
+      "limitations": [
+        "The theorem is attributed to Brouwer; this is an author-hosted proof exposition, not a claim of original discovery by Hatcher."
+      ],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "dominici_gap",
+      "title": "End-to-end machine unlearning through data preparation pipelines and feature stores",
+      "authors": [
+        "Leonardo Dominici"
+      ],
+      "publication": {
+        "year": 2025,
+        "venue": "MSc thesis; full text unavailable",
+        "date": null,
+        "date_precision": "year",
+        "doi": null
+      },
+      "urls": [
+        "https://leodom01.github.io/",
+        "https://deem.berlin/"
+      ],
+      "retrieval_level": "author_and_lab_metadata_only",
+      "supported_comparison": "Author/lab metadata identifies a highly relevant pipeline thesis.",
+      "our_scope_distinction": "Theorem-level comparison remains unresolved.",
+      "tool_refs": [
+        "turn154view5",
+        "turn151search3"
+      ],
+      "versions": [],
+      "limitations": [
+        "No thesis full text obtained.",
+        "Graduation 2025-08-28 is not asserted as publication date."
+      ],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "counterfactual_ssrn_gap",
+      "title": "Predictive State Is Not Explanatory State: An Exponential Memory Separation Between Forecasting and Counterfactual Auditing",
+      "authors": [
+        "Sai Pranay Tadakamalla",
+        "Surisetty Maruthi Ram Prakash",
+        "Syed Mohammed Asad"
+      ],
+      "publication": {
+        "year": 2026,
+        "venue": "SSRN 7520178",
+        "date": "2026-09-26",
+        "date_precision": "day",
+        "doi": "10.2139/ssrn.7520178"
+      },
+      "urls": [
+        "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7520178",
+        "https://papers.ssrn.com/sol3/Delivery.cfm/7520178.pdf?abstractid=7520178&mirid=1"
+      ],
+      "retrieval_level": "primary_cached_abstract",
+      "supported_comparison": "Abstract claims logarithmic predictive bits versus linear counterfactual bits for binary-history processes, also under approximate recovery. General prediction-versus-audit memory separation is therefore a concrete prior claim.",
+      "our_scope_distinction": "Realizable shared-cosine ridge-head family and exact success-model comparison still need full-text review.",
+      "tool_refs": [
+        "turn175search0"
+      ],
+      "versions": [
+        {
+          "version": "written",
+          "date": "2026-09-24"
+        },
+        {
+          "version": "posted",
+          "date": "2026-09-26"
+        }
+      ],
+      "limitations": [
+        "Direct landing/PDF retrieval failed; search returned the primary cached abstract.",
+        "Proof, precise query family, and approximate-success semantics remain unresolved."
+      ],
+      "retrieved_on": "2026-10-04"
+    },
+    {
+      "id": "grace_gap",
+      "title": "GRACE: Gradient-guided Coreset Selection for LLM Unlearning",
+      "authors": [],
+      "publication": {
+        "year": 2026,
+        "venue": "arXiv lead 2608.28361",
+        "date": null,
+        "date_precision": "unverified",
+        "doi": null
+      },
+      "urls": [
+        "https://arxiv.org/abs/2608.28361"
+      ],
+      "retrieval_level": "unresolved_primary_retrieval",
+      "supported_comparison": "Earlier audit found an abstract-level coreset-selection lead.",
+      "our_scope_distinction": "Detailed comparison remains unavailable.",
+      "tool_refs": [
+        "turn161view4",
+        "turn166view1"
+      ],
+      "versions": [],
+      "limitations": [
+        "Direct primary retrieval failed in this pass.",
+        "Do not infer exact date or theorem scope from identifier alone."
+      ],
+      "retrieved_on": "2026-10-04"
+    }
+  ],
+  "unresolved_lead_ids": [
+    "dominici_gap",
+    "counterfactual_ssrn_gap",
+    "grace_gap"
+  ],
+  "not_claimed": [
+    "first pipeline-aware unlearning",
+    "first nonmonotone maintenance",
+    "first provenance-polynomial model updates",
+    "first exact ridge add-delete updates",
+    "new generic matroid-union rank theorem",
+    "first deletion-budget storage lower bound",
+    "exhaustive novelty",
+    "primary semantic empirical evidence"
+  ],
+  "local_inputs_git_revision": "26f2b3c3b5447f6c88e26b1720362273299c398b",
+  "local_input_binding_scope": "Historical inputs inspected before Phase 9 handoff edits; retrieve their exact bytes from this prior commit."
+}

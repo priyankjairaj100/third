@@ -1,0 +1,12 @@
+{
+  "artifact": "structure.json",
+  "checkpoint_count": 1,
+  "forecast_initial_horizon": 1,
+  "fresh_similarity_each_checkpoint": false,
+  "independent_graph_bytes": 56,
+  "independent_graph_seconds": 0.00014281899711932056,
+  "measured_operation": "frozen_structural_job_with_input_graph_reconstruction",
+  "status": "completed",
+  "structural_forecast": "structure_forecast.json",
+  "zero_admission_checkpoints": 0
+}

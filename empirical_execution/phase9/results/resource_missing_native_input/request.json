@@ -1,0 +1,17 @@
+{
+  "owner_key": "civil_comments/primary-10000",
+  "bundle": {
+    "phase9_stable_root": "/workspace/scratch/35d4d4d8ba2c/empirical_execution/phase9/results/resource_missing_native_input",
+    "_dossier_group_ids": [
+      "C_full_methods/civil_comments/primary-10000/native"
+    ],
+    "phase9_scope": {
+      "key": "civil_comments/primary-10000",
+      "group_ids": [
+        "C_full_methods/civil_comments/primary-10000/native"
+      ],
+      "extension_recipes": []
+    }
+  },
+  "evidence": {}
+}

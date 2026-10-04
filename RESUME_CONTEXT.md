@@ -1,15 +1,15 @@
 # Resume this research project
 
-Last substantive checkpoint: **4 October 2026, Phase 8 input assembly and scoped policy qualification**.
+Last substantive checkpoint: **4 October 2026, Phase 9 realizable memory theorem and broader experiment preparation**.
 The primary semantic study remains unstarted.
-Read the Phase 8 checkpoint and remaining-task ledger, then the frozen Phase 6 implementation ledger.
+Read the Phase 9 checkpoint and remaining-task ledger, then the frozen Phase 8 and Phase 6 interfaces.
 Repository: **https://github.com/priyankjairaj100/third**.
 
 This is a project handoff reconstructed from the available conversation and the saved research files. It is not a verbatim export of all chats. It deliberately contains only this project's context.
 
 ## Paste this into a new chat
 
-> Continue the ACL 2027 counterfactual semantic-curation unlearning project at https://github.com/priyankjairaj100/third. Read README.md, RESUME_CONTEXT.md, THEORY_AND_RESULTS_HANDOFF.md, empirical_execution/CURRENT_STATUS.json and empirical_execution/phase8/CHECKPOINT.md, empirical_execution/phase8/README.md, empirical_execution/phase8/REMAINING_TASKS.md, and empirical_execution/phase6/COMPLETION_LEDGER.md, then inspect the relevant code and result files before acting. Preserve the distinction between exact theory, natural-preview engineering evidence, and the unstarted primary semantic study. All work must be carried out in this workspace; do not start paid or external compute without my instruction. Continue the highest-value executable work, keep me informed, and save all project progress back to this repository with an updated handoff. Do not fabricate missing corpus provenance, semantic embeddings, or human ratings.
+> Continue the ACL 2027 counterfactual semantic-curation unlearning project at https://github.com/priyankjairaj100/third. Read README.md, RESUME_CONTEXT.md, THEORY_AND_RESULTS_HANDOFF.md, empirical_execution/CURRENT_STATUS.json and empirical_execution/phase9/CHECKPOINT.md, empirical_execution/phase9/README.md, empirical_execution/phase9/REMAINING_TASKS.md, and empirical_execution/phase6/COMPLETION_LEDGER.md, then inspect the relevant code and result files before acting. Preserve the distinction between exact theory, natural-preview engineering evidence, and the unstarted primary semantic study. All work must be carried out in this workspace; do not start paid or external compute without my instruction. Continue the highest-value executable work, keep me informed, and save all project progress back to this repository with an updated handoff. Do not fabricate missing corpus provenance, semantic embeddings, or human ratings.
 
 ## User objective and preferences
 
@@ -41,7 +41,7 @@ The independent review passed 244 checks; dispatcher and extension integration p
 No background research jobs remain.
 Use Phase 8 for archive export, streaming replay, and staged input assembly.
 Use Phase 7 for accepted blank calibration forms and explicit policy dispatch.
-Start the next chat with the Phase 8 remaining-task ledger and actual input intake.
+Start the next chat with the Phase 9 remaining-task ledger and actual input intake.
 Do not repeat completed lexical checks as new primary evidence.
 Missing original assets and human judgments remain genuine blockers.
 Do not repeat lexical checks as a substitute for collecting that evidence.
@@ -249,3 +249,50 @@ Complete actual source-disjoint development and baseline qualification before co
 Do not recycle lexical engineering evidence as semantic development evidence.
 The remaining paper assets are six figures, three tables, analyses, and empirical prose.
 They require accepted study results.
+
+
+## Phase 9 continuation checkpoint
+
+This section supersedes earlier software-pending continuation lists.
+Read `empirical_execution/phase9/CHECKPOINT.md` for final verified counts and component limits.
+Read `empirical_execution/phase9/REMAINING_TASKS.md` for the complete scientific work order.
+
+The main new scientific contribution is a realizable ridge memory theorem.
+The curator and learner use the same unit features.
+All hard-family instances share one strict cosine graph.
+Every forgotten blocker payload remains fixed and public.
+The original model and all targets through budget b are zero.
+At budget b+1, designated requests reveal individual hidden feature and response parameters.
+Exact continuous initial query summaries require exactly m(d-1+q) private real coordinates.
+A separate randomized finite-bit bound holds at an explicit fixed error scale.
+A fixed public binary-label corollary requires m(d-1) continuous coordinates.
+Thus feature-scale memory does not require private continuous labels.
+The construction requires suitable public signatures; sufficient dimension grows logarithmically with m.
+
+Do not infer fixed-FP32 realizability, arbitrary-real lower bounds, total-byte optimality, or practical speedup.
+The chart upper bound answers counterfactual queries from the initial state.
+It is not the implemented canonical sequential repair state.
+All private caches, tickets, models, and data-dependent side information count toward the lower bound.
+The independent proof review records these distinctions and counterexamples.
+The retained algebraic fixtures are software checks, not empirical datasets.
+
+The novelty audit identifies close database, ridge, bounded-memory, and robust-summary precedents.
+Do not claim generic incremental maintenance, ridge updates, or prediction-versus-audit separation as new.
+A recent SSRN abstract establishes another close conceptual comparison.
+Its full proof and exact success semantics remain unreviewed.
+Other inaccessible leads remain explicit pre-submission tasks.
+
+The versioned scheduler preserves one global canonical job ledger.
+Each family retains its immutable root and finally reviewed resource evidence.
+Statistics consume an unchanged completed prior dispatch ledger.
+Completed accounting can contain failures, blocked cells, and structural zeros.
+It does not mean all experiments succeeded.
+The broader resource adapters bind actual configurations and development observations.
+Pointwise convex verification costs do not qualify optimization or trajectory costs.
+No native observation, accepted semantic cache, original corpus, or human response was added.
+
+The primary semantic study remains unstarted.
+Do not repeat completed lexical benchmarks as new progress.
+Proceed with authentic input intake and the remaining evidence sequence.
+Keep all frozen Phases 3–8 byte-identical.
+Push substantive completed milestones to the existing repository without force.

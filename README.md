@@ -6,9 +6,11 @@ Research workspace for **counterfactual repair after semantic data curation**, t
 
 ## Current status — 4 October 2026
 
-Phase 8 adds pinned archive exports, staged input assembly, and scoped resource-policy qualification.
-Read its [checkpoint](empirical_execution/phase8/CHECKPOINT.md) for verified results.
-The [remaining-task ledger](empirical_execution/phase8/REMAINING_TASKS.md) separates software work from missing scientific evidence.
+Phase 9 strengthens the realizable ridge memory theorem and extends experiment assembly and resource qualification.
+Read its [checkpoint](empirical_execution/phase9/CHECKPOINT.md) for verified scope.
+Read the [theory extension](empirical_execution/phase9/THEORY_EXTENSION.md) and [novelty audit](empirical_execution/phase9/NOVELTY_AUDIT.md) together.
+The [remaining-task ledger](empirical_execution/phase9/REMAINING_TASKS.md) separates missing inputs from scientific evidence.
+Phase 8 retains pinned archive exports, streaming replay, and staged candidate construction.
 Phase 7 retains the calibration CLI, explicit policy dispatcher, and native work-count preflight.
 Phase 6 implements the experiment routes and adds source replay, measurement, and inference checks.
 It resolves the 21 prior recipe obligations prospectively.
@@ -62,6 +64,7 @@ The original protocol's narrative resolves omissions in the compact JSON. Later 
 | `empirical_execution/phase6/` | Complete routes, source acceptance, precision variants, measured workers, exact verification, human inference, and independent review |
 | `empirical_execution/phase7/` | Calibration CLI, explicit policy dispatch, native resource preflight, and acquisition map |
 | `empirical_execution/phase8/` | Pinned archive export, streaming replay, staged dossiers, scoped observed policy selection, and remaining-task ledger |
+| `empirical_execution/phase9/` | Realizable feature-scale memory theorem, novelty audit, multi-family assembly, broader resource evidence, and independent reviews |
 | `empirical_execution/archive/` | Superseded pilot outputs retained for provenance |
 | `BACKUP_MANIFEST.json` | File sizes, SHA256 checksums and backup exclusions |
 | `BACKUP_AUDIT.md` | Backup scope and public-data handling review |
@@ -83,7 +86,7 @@ python3 -m empirical_execution.phase4.check_systems
 
 Read the phase-specific instructions before running long experiments. Several checks write result files; run in an isolated checkout when preserving the original snapshot. The compiled GMP helper is platform-dependent; its source and build/fallback instructions are included.
 
-For continuation, acquire and accept the actual source-rich files and pinned local semantic assets, then execute the blinded selection/independent validation workflow with genuine humans. Use Phase 8 for current preparation and remaining tasks. The frozen Phase 6 acceptance and experiment routes remain authoritative. Completed code and a checksum inventory do not establish scientific input authenticity or complete these experiments.
+For continuation, acquire and accept the actual source-rich files and pinned local semantic assets, then execute the blinded selection/independent validation workflow with genuine humans. Use Phase 9 for the current checkpoint and remaining tasks. Use Phase 8 for original preparation. The frozen Phase 6 acceptance and experiment routes remain authoritative. Completed code and a checksum inventory do not establish scientific input authenticity or complete these experiments.
 
 ## Backup scope
 

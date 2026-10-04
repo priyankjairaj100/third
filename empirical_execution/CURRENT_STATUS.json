@@ -1,7 +1,7 @@
 {
   "date": "2026-10-04",
   "scope": "current status supplement; older STATUS.json describes an earlier run",
-  "stage": "phase8_archive_and_scoped_dossier_policy_tools_checked_primary_study_unstarted",
+  "stage": "phase9_realizable_ridge_memory_theory_and_broader_preparation_primary_study_unstarted",
   "all_computation_local": true,
   "synthetic_empirical_data": false,
   "strict_mode_completed_previously": {
@@ -60,7 +60,7 @@
     "primary_threshold_selected": false,
     "primary_quality_gate_passed": false
   },
-  "todo_ledger": "phase8/TODO.json",
+  "todo_ledger": "phase9/TODO.json",
   "all_research_todos_complete": false,
   "primary_semantic_study_started": false,
   "actual_human_ratings": 0,
@@ -312,10 +312,10 @@
     "Authorized import of exact original corpora, complete pinned model/tokenizer assets, and compatible local runtime",
     "Actual original export/preparation/cache replay and official backend acceptance",
     "Genuine threshold selection, fresh validation, admission, and context judgments",
-    "Shared-root multi-family assembly and resource qualification adapters beyond native core C",
     "Genuine source-disjoint development, strong baseline/correctness checks, and feasible native resource qualification",
     "All registered semantic/source/task/replication/systems experiments with zeros and failures retained",
-    "Bound statistical analysis, six figures, three tables, empirical paper, and permitted reproducibility release"
+    "Bound statistical analysis, six figures, three tables, empirical paper, and permitted reproducibility release",
+    "Pre-submission novelty refresh and full-text comparison for unresolved close leads"
   ],
   "pause_requested_by_user": false,
   "phase6_summary": {
@@ -494,6 +494,91 @@
       "report": "phase8/results/independent_review.json",
       "sha256": "4544eee10f9a011656e5d85189d6b86b6c0977d0f4cd6248715017ac5ef13960",
       "bound_artifacts": 141
+    }
+  },
+  "phase9_summary": {
+    "scope": "Realizable mathematical lower bounds and preparation software; no new primary empirical evidence",
+    "theory": {
+      "continuous_query_state_minimum": "m(d-1+q)",
+      "binary_public_label_corollary": "m(d-1)",
+      "adjacent_budgets": [
+        "b",
+        "b+1"
+      ],
+      "same_curation_and_learning_unit_features": true,
+      "fixed_public_forgotten_payloads": true,
+      "finite_bit_theorem_separate": true,
+      "owner_exact_rational_checks": 7158,
+      "independent_assertions": 28,
+      "independent_review": "phase9/results/theory_review_final.json",
+      "theory_file": "phase9/THEORY_EXTENSION.md",
+      "fixed_fp32_realization_claim": false,
+      "total_byte_optimality_claim": false,
+      "natural_semantic_evidence": false
+    },
+    "novelty": {
+      "audit": "phase9/NOVELTY_AUDIT.md",
+      "source_registry": "phase9/sources/novelty_sources.json",
+      "source_and_lead_records": 29,
+      "exhaustive_novelty_claim": false,
+      "unresolved_full_text_leads_remain": true
+    },
+    "software_review_status": "passed_scoped_source_and_evidence_review",
+    "frozen_preservation": {
+      "phases": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "files": 2005,
+      "report": "phase9/results/frozen_preservation.json"
+    },
+    "primary_jobs_executed": 0,
+    "actual_human_responses": 0,
+    "actual_native_resource_qualification": false,
+    "all_research_tasks_complete": false,
+    "study_assembly": {
+      "checks": 69,
+      "report": "phase9/results/study_assembly_final.json",
+      "planned_jobs": 21332,
+      "groups": 43,
+      "owner_keys": 28,
+      "task_families_with_scope_agreement": 20,
+      "primary_jobs_executed": 0,
+      "automatic_crash_resume": false,
+      "automatic_cross_invocation_pooling": false
+    },
+    "resource_profiles": {
+      "checks": 86,
+      "report": "phase9/results/resource_checks_final/checks.json",
+      "release_manifest": "phase9/results/resource_release_manifest.json",
+      "native_observations_accepted": 0,
+      "native_policy_exported": false,
+      "unmocked_refusal": "phase9/results/resource_missing_native/qualification.json",
+      "convex_cost_scope": "pointwise exact verification; no optimization or trajectory qualification"
+    },
+    "resource_measurement": {
+      "checks": 26,
+      "report": "phase9/results/resource_measurement_checks_v2/checks.json",
+      "scope": "tiny algebraic software processes, not empirical benchmarks"
+    },
+    "human_graph_adapter": {
+      "checks": 68,
+      "report": "phase9/results/graph_dossier_final/checks.json",
+      "blank_admission_assignments": 93,
+      "blank_context_assignments": 24,
+      "actual_human_responses": 0,
+      "scope": "existing natural lexical input interface checks; both frozen routes await genuine responses"
+    },
+    "independent_software_review": {
+      "report": "phase9/results/independent_review.json",
+      "sha256": "e25e75481a7a43a1fecbe8601215311891cf19ff9cc05130d00a191d16663f92",
+      "bound_artifacts": 229,
+      "verified_source_references": 530,
+      "no_open_concrete_finding_within_scope": true
     }
   }
 }

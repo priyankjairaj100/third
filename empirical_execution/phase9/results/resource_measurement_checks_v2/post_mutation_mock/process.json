@@ -1,0 +1,6 @@
+{
+  "exit_code": 0,
+  "software_mock_not_observation": true,
+  "spawn_to_reap_seconds": 0,
+  "timeout": false
+}

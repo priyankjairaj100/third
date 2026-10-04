@@ -586,3 +586,49 @@ Graph structure, symbolic overlap, conditioning, serialization, and host behavio
 Unknown future symbolic-key counts remain unknown.
 Neither matching coordinate counts nor larger configured limits prove practical native feasibility.
 The main semantic study, human collection, and paper-ready empirical conclusions remain absent.
+
+
+## Phase 9: realizable feature-scale memory
+
+Read `empirical_execution/phase9/THEORY_EXTENSION.md` and its independent `THEORY_REVIEW.md`.
+The LaTeX fragment is `empirical_execution/phase9/theory_extension.tex`.
+The novelty audit and contribution-position note define the intended paper claims.
+Earlier theory files remain frozen.
+
+The new hard family closes the arbitrary-statistics versus realizable-ridge gap.
+It varies hidden unit features inside strict-margin caps while keeping the complete cosine graph fixed.
+The curator and learner use those same features.
+Forgotten blockers have fixed public payloads.
+Every initial trained model is zero.
+All targets through deletion budget b are zero.
+At budget b+1, a probe selects exactly the anchor and one hidden retained candidate.
+
+With C = aa-transpose + 2 lambda I, its head is C-inverse w beta-transpose.
+Positive response factors make the unit feature and response coordinates identifiable.
+This gives the exact continuous query-summary minimum m(d-1+q).
+All actual response coordinates are bounded.
+A separate finite packing yields a randomized information lower bound at an explicit positive error scale.
+The proof uses classical topology, packing, and Fano arguments.
+The new content is the simultaneously realizable geometry, outputs, and access/budget construction.
+
+The binary-label corollary fixes every candidate label to one and every blocker label to zero.
+Only candidate features remain private.
+Normalizing C times the resulting head still recovers each feature direction.
+The exact continuous minimum becomes m(d-1), with a separate finite-bit packing bound.
+
+The coordinate result requires a continuous deterministic encoder into a fixed-dimensional Euclidean state.
+An unrestricted discontinuous real encoding can invalidate such a coordinate claim.
+The finite-bit result counts all candidate-dependent state and permits independent public randomness.
+Its approximation scale depends on regularization and can be small.
+No simultaneous-success event across all probes is assumed.
+The adjacent-budget lower bound already applies to possible first requests of a sequential service.
+Its matching chart upper bound has only the initial query-summary contract.
+
+For fixed b, this construction matches O(E(d+q)) numerical scaling in a worst-case coordinate sense.
+It does not prove optimal total bytes, rational bit complexity, update time, or workspace.
+It does not establish a fixed-FP32 packing or natural encoder realizability.
+The original compact eligible-payload comparison remains unfavorable to larger summaries.
+
+The experimental preparation update preserves numerical targets and earlier result bytes.
+No primary semantic experiment or human collection occurred.
+Read the Phase 9 checkpoint for software review evidence and remaining requirements.

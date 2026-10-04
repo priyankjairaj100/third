@@ -1,0 +1,1038 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,booktabs,longtable,array}
+\usepackage{xcolor,enumitem,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!55!black,citecolor=blue!45!black]{hyperref}
+\definecolor{ink}{HTML}{19374C}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small Counterfactual data curation}\fancyhead[R]{\small Theory specification, version 3}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}
+\setlist{nosep,leftmargin=1.5em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\newcommand{\R}{\mathbb R}\newcommand{\E}{\mathbb E}\newcommand{\1}{\mathbf 1}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\minus}{\setminus}
+\title{\color{ink}\textbf{Unlearning What Was Never Trained}\\[5pt]\Large A Theory and Algorithm Specification\\for Counterfactual Semantic Data Curation}
+\author{ACL 2027 research project --- final scoped theory and algorithms}
+\date{3 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Deleting raw text can admit documents that were excluded from training. For an ordered suppression curator with restriction-consistent features, partitions, and priorities, we characterize the exact retained training set and construct a finite-horizon statistic summary with path-independent repair. An indexed algorithm avoids whole-summary scans and uses at most twice the optimal number of linear statistic coordinates; the factor is sharp. An incidence graph yields the exact query dimension and a direct rank-profile algorithm. Ridge decoding from current moments completes the runtime accounting without retained-payload reads. Increasing the deletion budget from $b$ to $b+1$ can change required hidden-label information from zero to $\Omega(m)$ bits at constant prediction error on one fixed test distribution. A coding argument gives a matching information--distortion benchmark for the constructed family. The graph uses a fixed cosine threshold and $O(\log m)$ dimensions, with the same embeddings used for curation and ridge learning. Source withdrawal preserves the incidence characterization. Certified graph envelopes additionally give a sharp, count-based curation-mismatch bound. The scoped theory has complete proofs and executable checks; publication novelty and natural-language utility remain separate research questions.
+\end{abstract}
+
+\textbf{Paper thesis.} Semantic curation changes the information that must be retained for future unlearning. The admissible deletion family determines both an exact repair summary and a sharp memory obstruction. A record can be absent from model training and still control this obstruction through curation.
+
+\textbf{Status.} Version 3 incorporates a further adversarial proof and algorithm audit. The core theorem statements, assumptions, proof dependencies, and algorithm contracts are fixed here; no unproved conjecture is needed for that scoped stack. This is a research specification, not a machine-checked proof or an assurance of publication novelty. Literature was audited through 3 October 2026, including database incremental maintenance, history independence, and exact continual ridge unlearning. Natural-language experiments remain outstanding.
+
+\textbf{Primary scope.} Fixed public encoder and partition/order rules; earlier-raw-neighbor suppression; record or whole-source deletion; a declared cumulative budget; no access to discarded retained payloads except where explicitly permitted; exact additive-statistic learning as the main positive result. General reclustering, a learned encoder, unrestricted future deletion budgets, and deep-network training are outside the main guarantee.
+
+\newpage
+\begingroup
+\small\setlength{\parskip}{0pt}
+\tableofcontents
+\endgroup
+\newpage
+
+\section{The target must include the curator}
+Let $D$ be a finite set of documents with stable unique identifiers. A record may contain text, a label, a source identifier, and other training fields. Let $C$ be a deterministic curator and $A$ a specified training algorithm. For a deletion request $F\subseteq D$, define
+\begin{equation}
+ S=C(D),\qquad S_F=C(D\minus F),\qquad \theta_F=A(S_F).
+\end{equation}
+The commonly used frozen-selection target $A(S\minus F)$ can differ from $\theta_F$. Decompose the change into
+\begin{equation}
+ R_F=S\minus S_F,\qquad P_F=S_F\minus S,\qquad
+ S_F=(S\minus R_F)\cup P_F.
+\end{equation}
+Here $P_F$ consists of surviving documents that become selected. It is not permission to reintroduce any member of $F$.
+
+There are three different correctness contracts:
+\begin{enumerate}
+\item \textbf{Corpus recovery:} output exactly $S_F$, including required record payloads.
+\item \textbf{Model recovery:} output $A(S_F)$, or its specified distribution if training is randomized.
+\item \textbf{State recovery:} leave a state identical in distribution to the state produced by the prescribed retained-data learner, with the same remaining deletion budget.
+\end{enumerate}
+These contracts need different amounts of information. A lower bound for recovering documents does not automatically lower-bound recovery of a model. A model-only certificate says nothing about deletion from an original-data-dependent cache.
+
+\paragraph{State and access models.} The exact-state theorem concerns the designated abstract state: the coefficient map, current identifier membership, remaining horizon, and deterministic functions of these objects. Physical addresses, hash-table layout, timing, historical outputs, logs, and backups are not part of that abstract object. If a byte-canonical exported state is required, serialization and cleanup have a separate cost. No record-dependent decoder metadata may be silently excluded from a stronger all-state claim.
+
+The linear-sketch rank theorem uses a public fixed graph and identifier-only requests. The finite-bit lower bound allows full forgotten-record payloads but no free dataset-dependent tickets or retained-label lookup service. All hidden-label-dependent information available to repair counts toward its memory. Public graph/feature metadata are free only in that information-theoretic comparison; an implementation must count their bytes. Counterfactual maintenance and privacy of a release sequence are distinct established contracts~\cite{cohen2023,kaplan2026}; this note does not claim transcript privacy. The compared logical state includes the remaining horizon, so different horizons are not identified merely because the retained records agree.
+
+\paragraph{Final theorem stack.} The main dependency chain is: exact blocker activation; finite-horizon statistic/state correctness; indexed repair with a total-work bound; exact linear query dimension and its structural computation; a randomized constant-accuracy memory obstruction; and the source-withdrawal extension. Convex numerical certification is a supporting module. General-curator comparisons and full-refit stability are boundaries, not prerequisites for the core claims.
+
+\paragraph{Request semantics.} The core results use deletion of records with fixed identities. Source-level deletion is developed in Section~\ref{sec:sources}. A request to suppress a fact, person, or work requires a separate procedure for defining $F$. Retained paraphrases may remain under record deletion. The recent forget-set curation problem~\cite{jha2026} is adjacent but different: it determines what records a suppression request should designate.
+
+\paragraph{Algorithm semantics.} A fixed random seed is not sufficient to make every randomized pipeline deletion-consistent. Shuffling a shorter input with the same seed can change relative order. Fix an order using stable identifier keys if restriction consistency is required. If the intended learner uses an input-dependent shuffle, its actual distribution is the target. The exact results below use deterministic curation and unique convex optima; they do not promise bitwise agreement with arbitrary SGD retraining.
+
+\section{Which semantic deduplicator? A consequential distinction}
+Let $G=(V,E)$ be a threshold similarity graph on documents and let $\prec$ be a total priority order. Its edges may be restricted to documents in the same cluster. Use normalized embeddings, strict adjacency $\langle e_u,e_v\rangle>\tau$, and $0\le\tau\le1$. The released SemDeDup implementation computes an upper-triangular similarity matrix, takes the maximum in each column, and rejects a document if an earlier document exceeds the threshold~\cite{semdedup,semcode}. The nonnegative threshold matters because the code pads the diagonal and lower triangle with zeros. An earlier document can suppress later documents even when it is itself rejected. This is not greedy maximal-independent-set selection.
+
+\begin{center}\small
+\begin{tabular}{p{0.23\linewidth}p{0.30\linewidth}p{0.36\linewidth}}
+\toprule
+Rule & Selection condition & Effect of deleting only excluded documents\\
+\midrule
+Earlier-neighbor suppression & No earlier raw neighbor exists & Can add selected documents; no surviving selected document is lost\\
+Greedy independent set & No earlier \emph{selected} neighbor exists & No change, for a fixed graph and order\\
+Component representative & Lowest-priority-key vertex in each connected component & Can add representatives after a component splits\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{The central assumption is restriction consistency.} Retained embeddings, within-cluster edge eligibility, thresholds, and relative priorities must remain the same when deleting records. This holds if these objects are externally fixed functions of a record and its identifier. It need not hold if clusters or priorities were fitted to $D$ and should be refitted to $D\minus F$. We analyze that boundary separately in Section~\ref{sec:refit}.
+
+\subsection{An exact three-document example}
+Let $a\prec b\prec c$, with edges $ab,bc$ but no edge $ac$. Earlier-neighbor suppression selects only $a$. Delete $b$, which never trained the model. The remaining graph selects both $a$ and $c$:
+\[
+ C(\{a,b,c\})=\{a\},\qquad C(\{a,c\})=\{a,c\}.
+\]
+This graph has an ordinary cosine realization: unit vectors at angles $0^\circ,30^\circ,60^\circ$ and threshold $0.8$ have exactly these edges. Thus the example does not require an impossible similarity graph. It uses a stipulated order; claiming that a particular fitted centroid order realizes it requires an additional check.
+
+Under greedy selection, $a$ and $c$ were both already selected. Under component-minimum selection, only $a$ was selected and deleting the bridge again introduces $c$. The same picture conceals different mechanisms, storage requirements, and repair algorithms.
+
+\section{Exact activation and deletion amplification}
+For each document $v$, define its blocker set
+\[
+ B(v)=\{u\prec v:(u,v)\in E\},\qquad b_v=|B(v)|.
+\]
+The curator selects $v$ exactly when $B(v)=\varnothing$.
+
+\begin{theorem}[Exact retained selection]\label{thm:activation}
+Under restriction consistency, for every $F\subseteq V$,
+\begin{equation}\label{eq:activation}
+ S_F=\{v\notin F:B(v)\subseteq F\}.
+\end{equation}
+Consequently
+\[
+ R_F=S\cap F,\qquad
+ P_F=\{v\notin F:0<|B(v)|,\ B(v)\subseteq F\}.
+\]
+\end{theorem}
+\begin{proof}
+The surviving blockers of $v\notin F$ are precisely $B(v)\minus F$. Its selection test succeeds iff this set is empty. An originally selected surviving vertex has no blockers before or after deletion, so it remains selected.
+\end{proof}
+
+For a singleton $F=\{u\}$, the additions are exactly $\{v:B(v)=\{u\}\}$. There is no recursive propagation of selection flags under this rule. A repaired document was already capable of blocking later documents before it became selected. Any claim of a multi-step selected-status cascade would be analyzing a different rule.
+
+\begin{corollary}[Deletion-budget activation set]\label{cor:eligible}
+For a cumulative budget $k$, a document can be selected after some request of size at most $k$ iff $b_v\le k$. Thus
+\[
+ E_k=\bigcup_{|F|\le k} S_F=\{v:b_v\le k\}.
+\]
+\end{corollary}
+\begin{proof}
+Necessity follows because every blocker must be deleted. For sufficiency choose $F=B(v)$; a vertex never blocks itself.
+\end{proof}
+
+This gives a simple exact buffer policy: store training payloads for $E_k$, full blocker lists for its members, and inverse blocker-to-candidate lists. With a cumulative deletion set, maintain the count of surviving blockers for eligible candidates. Each candidate enters at most once, then can only leave through its own deletion. Processing a request costs the number of touched inverse-list entries plus the output change, rather than a full graph scan. Over the entire budget the touched entries are at most $\sum_{v\in E_k}b_v\le k|E_k|$. Initial graph construction, embeddings, payload storage, and bookkeeping still cost time and space. A budget exhaustion fallback requires access to retained raw data or a larger precomputed summary.
+
+\begin{proposition}[One deletion can admit linearly many documents]
+There are $N$-vertex graphs for which $|P_F|=N-2$ with $|F|=1$ and $F\cap S=\varnothing$.
+\end{proposition}
+\begin{proof}
+Use an early anchor $a$, a later blocker $b$ adjacent to $a$, and $N-2$ later leaves adjacent only to $b$. Originally only $a$ is selected. Removing the excluded $b$ admits every leaf. A cosine realization exists: center $b=e_0$, with $a$ and leaves $(e_0+e_i)/\sqrt2$ for distinct $i$, and threshold strictly between $1/2$ and $1/\sqrt2$; order $a,b,\text{leaves}$.
+\end{proof}
+
+\subsection{Expected and adversarial amplification}
+If every raw record is independently deleted with probability $p$, then
+\begin{equation}
+ \E|P_F|=\sum_{v:b_v>0}(1-p)p^{b_v}.
+\end{equation}
+For a uniformly random size-$k$ request,
+\begin{equation}
+ \E|P_F|=\sum_{v:b_v>0}
+ \frac{\binom{N-b_v-1}{k-b_v}}{\binom Nk},
+\end{equation}
+where invalid binomial coefficients are zero. Both follow by requiring deletion of all blockers and retention of $v$. The blocker histogram therefore predicts the random-deletion mean exactly. It does not determine variance or worst-case amplification, which depend on blocker overlap.
+
+\begin{proposition}[Worst-case activation audit is hard]
+Maximizing $|P_F|$ under $|F|\le k$ is NP-hard even when every initially excluded candidate has two blockers, with deletion eligible only among earlier vertices.
+\end{proposition}
+\begin{proof}
+For a graph $H=(U,E_H)$, create early deletion-eligible vertices $U$ with no edges among themselves, and one later vertex $v_e$ for every $e=\{u,w\}\in E_H$, with $B(v_e)=\{u,w\}$. Deleting $F\subseteq U$ activates exactly the candidates for edges induced by $F$. Reaching $\binom k2$ additions decides whether $H$ has a $k$-clique. The general-graph reduction is not a fixed-low-dimensional embedding hardness theorem.
+\end{proof}
+
+\section{What must be remembered? Separate documents from learning}
+If only $S$ and the original model are stored, exact repair is generally impossible. In the three-document path, keep the same curation features and label of $a$, but change a training label attached to $c$. The original selected corpus and model are unchanged. Deleting $b$ creates different retained-data training problems. Any procedure with identical saved state and identical request has the same output law in the two worlds, so it cannot reproduce both distinct deterministic retraining targets.
+
+This argument is conditional on the discarded label not being encoded elsewhere. It does not say all payloads must always be stored. If downstream training needs only the sum of a group of labels, that sum may suffice.
+
+\begin{proposition}[Payload recovery lower bound]
+Suppose a fixed graph and order contain $m$ potentially activated records whose payloads range independently over $2^q$ possibilities without changing that graph or the originally selected payloads. If a no-reaccess summary must recover their exact payloads under all permitted deletion requests, its total payload-dependent state needs at least $mq$ bits.
+\end{proposition}
+\begin{proof}
+Every potentially activated record appears in at least one allowed output. If two payload assignments shared a state, choose a coordinate on which they differ and a request activating it. The outputs would have to differ. Hence the state map is injective on $2^{mq}$ assignments.
+\end{proof}
+This is an elementary indexing argument and not a general lower bound for all semantic-text distributions. Correlated payloads, permitted rereads, and learner-specific sufficient statistics can reduce storage. State means all retained information, including model parameters, auxiliary caches, and any external service used by the repair.
+
+\section{The main construction: a polynomial of counterfactual statistics}\label{sec:polynomial}
+Let $t(v)\in\R^s$ be a fixed, record-local statistic. It must not depend on an optimizer or feature extractor fitted to the deletable corpus if exact state recovery is intended. Define
+\[
+ T(F)=\sum_{v\in S_F}t(v),\qquad x_u=\1\{u\in F\},\qquad x_J=\prod_{u\in J}x_u.
+\]
+By Theorem~\ref{thm:activation},
+\begin{equation}\label{eq:poly}
+ T(x)=\sum_v t(v)(1-x_v)x_{B(v)}
+      =\sum_{J\subseteq V}\alpha_J x_J,
+\end{equation}
+where
+\begin{equation}\label{eq:coeff}
+ \alpha_J=\sum_{v:B(v)=J}t(v)
+          -\sum_{v:B(v)\cup\{v\}=J}t(v).
+\end{equation}
+Each document contributes to at most two keys. There are at most $2N$ contributions before grouping, even though the possible request family is exponential. This is a signed Boolean provenance representation, not a new invention of polynomial provenance; the database literature is an essential antecedent~\cite{green2007,amsterdamer2011}.
+
+\begin{theorem}[Exact finite-horizon statistics]\label{thm:poly}
+Let $\alpha^{(k)}$ retain only coefficients with $|J|\le k$. For every $|F|\le k$,
+\begin{equation}\label{eq:query}
+ T(F)=\sum_{J\subseteq F}\alpha^{(k)}_J.
+\end{equation}
+The summary can be built using at most $2|E_k|$ statistic-vector contributions. A direct subset query takes $O(2^{|F|}s)$ arithmetic plus key-processing cost, or one may scan the sparse keys. For singleton requests,
+\[
+ T(\{u\})=T(\varnothing)+
+ \underbrace{\sum_{v:B(v)=\{u\}}t(v)-\1\{B(u)=\varnothing\}t(u)}_{\alpha_{\{u\}}}.
+\]
+\end{theorem}
+\begin{proof}
+Evaluating a Boolean monomial on $F$ gives one iff its key is contained in $F$. Monomials of degree greater than $k$ vanish whenever $|F|\le k$. Equation~\eqref{eq:coeff} is the expansion of $(1-x_v)x_{B(v)}$.
+\end{proof}
+
+\paragraph{Exact ridge recovery.} For fixed text features $z_v\in\R^d$ and scalar responses $y_v$, take
+\[
+ t(v)=(z_vz_v^\top,z_vy_v,1),\qquad T(F)=(M_F,h_F,n_F).
+\]
+For the prescribed average-loss objective
+\[
+ L_{S_F}(\theta)=\frac1{2n_F}\sum_{v\in S_F}(z_v^\top\theta-y_v)^2+
+                 \frac\lambda2\norm{\theta}^2,
+\]
+the exact unique optimum is
+\begin{equation}\label{eq:ridge}
+ \theta_F=(M_F+\lambda n_F I)^{-1}h_F.
+\end{equation}
+Use $\theta_F=0$ as an explicit empty-corpus convention. Multiclass ridge uses a response matrix without changing the argument. A dense solve costs $O(d^3)$; the summary stores $O(d^2)$ numbers per key, so it is not automatically smaller than retaining embeddings. Setup cost and feature extraction must be counted.
+
+\section{Exact sequential repair of the summary itself}\label{sec:canonical}
+A useful distinction from an output-only query is that the coefficient map can itself be made the learner's canonical state. Suppose the current remaining horizon is $k$, and a request $F$ has $r=|F|\le k$. Substitute $x_u=1$ for $u\in F$, combine like terms, and retain only degree at most $k-r$:
+\begin{equation}\label{eq:state}
+ \beta_K=\sum_{J:J\minus F=K}\alpha_J^{(k)},
+ \qquad K\subseteq V\minus F,\quad |K|\le k-r.
+\end{equation}
+
+\begin{theorem}[Canonical state equality]\label{thm:state}
+Under restriction consistency and record-local statistics, $\beta$ is exactly the coefficient map obtained by rebuilding on $D\minus F$ with remaining horizon $k-r$. Consequently, a learner whose state consists of this canonical map and the remaining identifiers/horizon admits exact sequential state repair, and its ridge model equals retained-data ridge retraining after every request within the cumulative budget.
+\end{theorem}
+\begin{proof}
+For a retained vertex $v$, substitution changes its factor to
+$(1-x_v)x_{B(v)\minus F}$, the correct retained blocker expression. For a deleted vertex, the factor $(1-x_v)$ becomes zero. Thus substitution in the full polynomial equals rebuilding on the retained graph.
+
+Any omitted original monomial has degree at least $k+1$. Substitution removes at most $r$ variables, so its remaining degree is at least $k+1-r>k-r$; it cannot affect a kept coefficient. The same conclusion handles a deleted record whose negative term had been truncated: its uncancelled positive term has degree above the new cutoff and is discarded. Uniqueness of multilinear Boolean coefficients yields exact equality of canonical maps. Repeating the argument proves sequential equality.
+\end{proof}
+
+\textbf{The horizon is essential.} The comparison is to $A_{k-r}(D\minus F)$, not a fresh learner $A_k(D\minus F)$ with a replenished budget. Model weights do not depend on this auxiliary horizon, but the recoverable future query family does.
+
+\textbf{The state contract is explicit.} Do not retain original coefficients, original payload-dependent model checkpoints, request logs containing deleted contents, or training-dependent feature maps and then claim they are covered by the theorem. The result concerns the specified canonical algebraic state. It is not a claim about every file, historical output, or system backup. Public record-ID universes can be treated as fixed; a private-ID contract needs explicit removal as well.
+
+\begin{corollary}[Composition and path independence]\label{cor:composition}
+Write $U_F^k$ for the summary substitution with cutoff $k-|F|$. For disjoint requests $F,G$ with $|F|+|G|\le k$,
+\[
+ U_G^{k-|F|}\,U_F^k=U_{F\cup G}^k.
+\]
+Thus sequential singleton processing, batches, and any ordering of the same cumulative deletion set produce the same designated abstract state and ridge optimizer.
+\end{corollary}
+\begin{proof}
+Substitution commutes. A monomial discarded at an intermediate cutoff cannot lose more variables than the remaining deletion count, so it cannot fall below the final cutoff. Alternatively, both sides equal the canonical retained-data construction from Theorem~\ref{thm:state}.
+\end{proof}
+The identity holds for each realized valid request sequence, including adaptively chosen requests. It does not erase information in previously released outputs. The required future-query rank also cannot increase along the sequence: pad the retained query matrix with zero columns on $F$; its rows are original rows indexed by $F\cup G$. Therefore
+\[
+ r_{k-|F|}(D\minus F)\le r_k(D).
+\]
+The curated corpus can grow while its remaining-horizon query dimension decreases. Resetting the budget to $k$ would invalidate this reasoning and may demand information already discarded.
+
+\textbf{Numerical meaning.} Exact arithmetic gives algebraic equality; floating-point cancellation may differ from fresh recomputation. An empirical error near machine precision is not a formal roundoff certificate. Use exact/rational statistics, interval arithmetic, or explicit forward-error allowances for a rigorous numeric guarantee. The indexed implementation below is exact on integer test statistics. A canonical export removes zero keys, orders identifiers and keys, and omits history-dependent handles.
+
+\section{An indexed repair algorithm with a sequence-wide work bound}\label{sec:indexed}
+The first draft scanned every coefficient after each deletion. That is unnecessary. Store the nonzero coefficients as entries with stable internal handles. Each entry has a sorted tuple key $J$ and a vector value. Maintain (i) a dictionary from key to entry, (ii) inverse sets $I[u]$ of entry handles whose keys contain $u$, and (iii) degree buckets containing entry handles. Handles are internal references, not extra saved provenance.
+
+\paragraph{Delete one current identifier $u$.} With remaining horizon $h>0$:
+\begin{enumerate}
+\item Repeatedly remove an entry from $I[u]$. Erase its old dictionary key and degree-bucket membership; remove the incidence at $u$; replace $J$ by $J\minus\{u\}$.
+\item If its new key is absent, move the same entry and value into that key and the new degree bucket. Its surviving inverse incidences still point to the same handle; do not rebuild them.
+\item If the new key already has an entry, add the two values into the destination. Remove the source entry from every surviving inverse set. If the sum is zero, remove the destination and all its incidences too. Retire any discarded entry and value.
+\item Remove all remaining degree-$h$ entries. They did not contain $u$ and cannot affect any future request of size $h-1$.
+\item Remove $u$ from current membership and set $h\leftarrow h-1$.
+\end{enumerate}
+The new keys in steps 2--3 never contain $u$, so the loop cannot revisit them. A batch is processed by consecutive singleton updates; Corollary~\ref{cor:composition} establishes equivalence to one batch substitution. A declared public identifier universe distinguishes invalid identifiers from previously deleted identifiers. Previously deleted identifiers are idempotent no-ops and do not consume the budget. Invalid identifiers and an over-budget batch are rejected before mutation.
+
+\begin{theorem}[Correctness and amortized work]\label{thm:algorithm}
+Let the initial nonzero coefficient keys be $\mathcal K_0$, with
+\[
+ M_0=|\mathcal K_0|,\quad L_0=\sum_{J\in\mathcal K_0}|J|,\quad
+ \Phi_0=\sum_{J\in\mathcal K_0}\frac{|J|(|J|+1)}2.
+\]
+Over any valid deletion sequence within the initial horizon $k$, the indexed algorithm maintains exactly the canonical coefficient map. It performs at most $L_0$ identifier touches, at most $L_0$ inverse-incidence removals, and at most $M_0$ vector merges. With sparse sorted-tuple keys and expected constant-time dictionary operations excluding tuple processing, total update work is
+\begin{equation}\label{eq:runtime}
+ O(Q+\Phi_0+sM_0)\subseteq O(Q+kL_0+sM_0),
+\end{equation}
+where $Q$ counts request identifiers including repeats. Coefficient values and metadata occupy $O(sM_0+M_0+L_0)$ words, plus current identifier-membership storage. Key count never increases. The bound excludes construction, model solves, and byte-canonical exports.
+\end{theorem}
+\begin{proof}
+Singleton substitution sends a key containing $u$ to $J\minus\{u\}$ and leaves all other keys unchanged. Combining destination collisions performs exactly coefficient addition. After the horizon decreases, the only excessive degree is the old degree $h$, so the final bucket deletion is exactly truncation.
+
+Give every initial incidence a token. A moved entry keeps its surviving tokens; a touched incidence, a discarded source after a merge, or a pruned entry deletes its tokens. No update creates a token. Hence at most $L_0$ touches and incidence removals occur. Moving an entry preserves the number of entries; a merge or prune strictly reduces it, so at most $M_0$ merges occur. Values are transferred by reference on moves, and only merges require $O(s)$ arithmetic and a zero test.
+
+A tuple shrink from size $d$ costs $O(d)$. The potential $d(d+1)/2$ decreases by $d$ when that key shrinks. A collision or prune only removes additional nonnegative potential. Hashing, comparisons, and removal of a key can be charged to these decreases and its discarded incidences; constant-key work is charged to $M_0$. Thus tuple work is $O(\Phi_0)$ and vector arithmetic is $O(sM_0)$. Input and degree-bucket work is $O(Q+L_0+M_0)$. This proves~\eqref{eq:runtime} under the stated dictionary model.
+\end{proof}
+
+\paragraph{Practical meaning and limitations.} An untouched low-degree key is not scanned. A deletion can nevertheless touch all keys, so there is no uniform sublinear per-request bound. The coefficient-update theorem does not include the $O(d^3)$ dense ridge solve after each requested release. For vector elements of growing bit length, multiply arithmetic cost by the appropriate bit-operation cost; this is an arithmetic/word bound, not a bit-complexity miracle. Hash collisions affect runtime, not correctness, because equality is exact.
+
+The implementation's logical map and incidence relations are canonical modulo internal handle renaming. Allocator layout and historical handle counters are not. Exporting a literal canonical snapshot requires at least $\Omega(sM+L)$ output work and key ordering. Calling the fast online update a byte-for-byte fresh-memory rebuild would be incorrect. This export cost is not an impossibility theorem for all history-independent data structures; such structures and their relation to unlearning are established subjects~\cite{cohen2023}. Python's built-in dictionaries are the reference implementation, while the formal expected-time bound assumes the stated dictionary model; operation-count tests do not prove adversarial hashing guarantees.
+
+\subsection{Closing the model-decoding cost}\label{sec:ridge-decode}
+The ridge normal equations alone do not give a complete runtime bound. Use the current empty coefficient $(M,h,n)$ and set $A=M+\lambda nI$ for $n>0$. Zero-start conjugate gradients (CG) is a deterministic decoder of the current moments; no retained rows or historical model cache are needed. This is classical numerical algebra~\cite{hestenes1952}, and exact continual ridge updates are established~\cite{quan2026}; their role here is to complete the curation algorithm's cost accounting.
+
+\begin{proposition}[Rank-sensitive exact decoding]\label{prop:cg}
+In exact arithmetic, zero-start CG solves $A\theta=h$ in at most $\operatorname{rank}(M)\le\min(d,n)$ iterations. Each iteration uses $O(d^2)$ arithmetic with dense stored moments. For scalar ridge and releases with selected counts $n_t$, the combined sequence-wide cost is
+\begin{equation}\label{eq:total-ridge}
+ O\!\left(Q+\Phi_0+d^2M_0+d^2\sum_t\max\{1,\min(d,n_t)\}\right),
+\end{equation}
+excluding initial curation/statistic construction, bit costs, and full serialization. The zero-count case returns the prescribed zero head.
+\end{proposition}
+\begin{proof}
+If $u\in\ker M$, then $0=u^\top Mu=\sum_v(z_v^\top u)^2$, so $u^\top h=0$. Therefore $h\in\operatorname{range}(M)$, an $A$-invariant space of dimension $r=\operatorname{rank}(M)$. The inverse of $A$ on $h$ is a polynomial in $A$ of degree at most $r-1$, by interpolation at at most $r$ distinct positive eigenvalues. CG minimizes the quadratic on its current Krylov space, which contains the exact solution by iteration $r$. Each step is one dense matrix-vector product and $O(d)$ vector work. Combine this with Theorem~\ref{thm:algorithm}, where ridge statistic dimension is $\Theta(d^2)$.
+\end{proof}
+The rank is used only in the analysis, not computed by the algorithm. The worst case remains cubic per release. A matrix-view implementation uses $O(d)$ additional solver workspace; the rational verification code materializes a system matrix and uses $O(d^2)$. Multiple response columns require corresponding solve work or a shared factorization, not the scalar cost unchanged.
+
+For early stopping, an explicitly validated linear residual $R=\|A\theta-h\|$ gives
+\[
+ \|\theta-\theta^*\|\le\frac{R}{\lambda n},\qquad
+ L(\theta)-L(\theta^*)\le\frac{R^2}{2\lambda n^2}.
+\]
+These follow from $\lambda_{\min}(A)\ge\lambda n$ and the quadratic objective. Also
+\[
+ \kappa(A)\le\bar\kappa:=1+\frac{\operatorname{tr}M}{\lambda n}
+ \le1+\frac{R_z^2}{\lambda}\quad\text{if }\|z_v\|\le R_z.
+\]
+The standard CG energy bound implies
+$\|A\theta_j-h\|\le2\sqrt{\bar\kappa}\,q^j\|h\|$ for $q=(\sqrt{\bar\kappa}-1)/(\sqrt{\bar\kappa}+1)$. This gives a logarithmic accuracy dependence at bounded conditioning without retained-data passes. Roundoff and moment errors must enter the validated residual; a raw floating-point norm is not a rigorous certificate. A dense SPD fallback costs $O(d^3)$ and still uses only current moments.
+
+\textbf{A consequential normalization boundary.} A corpus change gives
+\[
+ A'-A=\Delta M+\lambda\Delta n I.
+\]
+This is generally full rank even for one added row. With $\lambda=1$, old record $(e_1,1)$ and added record $(e_2,1)$, correct new coordinates are both $1/3$; omitting the count shift produces $1/2$. Signed low-rank Woodbury is valid when the \emph{actual} matrix change has a low-rank factor, with factor construction and inverse storage charged. Such a factor can be formed from the aggregate matrix; free access to changed rows must not be assumed. Fixed sum-loss regularization is a different valid target and cannot be substituted silently.
+
+An exact warm start needs at most $\min(d,r+1)$ CG iterations because it can add only the nullspace eigenvalue $\lambda n$. An early-stopped warm-start head can depend on previous releases. Zero start with a specified stopping rule is a function of current moments, but its early-stopped output is still approximate relative to exact ridge. Keep historical solver state outside the exact canonical-state claim.
+
+\section{How much summary space is necessary?}\label{sec:rank}
+Fix a graph, order, and budget $k$. Requests in this section supply identifiers only: unknown deleted statistics are not furnished as free side information. First consider arbitrary scalar statistics $t\in\R^N$. Index rows by all $F\subseteq V$ with $|F|\le k$. Define the selection-query matrix and coefficient matrix
+\begin{align}
+ Q_k[F,v]&=\1\{v\notin F,\ B(v)\subseteq F\},\\
+ A_k[J,v]&=\1\{B(v)=J\}-\1\{B(v)\cup\{v\}=J\},\quad |J|\le k.
+\end{align}
+Let $Z[F,J]=\1\{J\subseteq F\}$. Ordered by set size, $Z$ is square unitriangular. The polynomial identity gives
+\begin{equation}
+ Q_k=ZA_k,\qquad r_k:=\operatorname{rank}Q_k=\operatorname{rank}A_k.
+\end{equation}
+
+\begin{theorem}[Optimal linear summary dimension]\label{thm:rank}
+Any linear sketch of arbitrary scalar record statistics that answers all size-at-most-$k$ queries exactly requires at least $r_k$ scalar coordinates; $r_k$ coordinates suffice. For $s$ independent statistic coordinates the minimum is $sr_k$. Over a finite field $\mathbb F_q$, any exact deterministic encoding, including nonlinear encodings, requires at least $r_k\log_2q$ bits, with rank evaluated over that field.
+\end{theorem}
+\begin{proof}
+If a linear sketch $Lt$ supports every query, then $\ker L\subseteq\ker Q_k$: otherwise two inputs with identical sketches have different answers. Hence $\operatorname{rank}L\ge r_k$. Storing a row-space basis of $Q_k$ is sufficient, using a decoder that depends on the fixed graph. Independent coordinates give a block diagonal query operator. Over $\mathbb F_q$, the image of $Q_k$ contains $q^{r_k}$ distinct answer vectors, which the stored state must distinguish.
+\end{proof}
+
+This lower bound treats graph-dependent decoder metadata as fixed side information. It lower-bounds stored statistic values, not the total bits needed to represent an unknown graph, subset keys, or a rank factorization. Nor does arbitrary-statistic optimality automatically prove optimality for constrained ridge moments, which have positive-semidefinite structure. Section~\ref{sec:phase} gives a model-level lower bound that avoids this gap.
+
+\subsection{A combinatorial interpretation of the rank}
+Construct an undirected multigraph $\Gamma_k$ on subset keys and a ground vertex $\bot$. For every $v$ with $b_v\le k$, add an oriented edge from $B(v)$ to $B(v)\cup\{v\}$ if the latter has size at most $k$, otherwise to $\bot$. Ignore unused subset nodes. Then $A_k$ is its signed incidence matrix with the ground row removed.
+
+If $p$ is the number of incident non-ground nodes and $c_0$ the number of connected components not containing ground, standard incidence-matrix rank gives
+\begin{equation}
+ r_k=p-c_0.
+\end{equation}
+The formula holds over every field. Without truncation, an edge adds the largest-priority element of its target set. A target therefore has at most one incoming edge, and the untruncated graph is a forest; at full horizon its $N$ columns have rank $N$. Truncation merges omitted targets into ground and can create dependencies.
+
+There is a sharper expression specific to these blockers. Form the forest of interior edges, those for which $b_v<k$, retaining isolated tail nodes for boundary edges with $b_v=k$. Let $c_{\partial}$ be the number of its components touched by at least one boundary edge. Then
+\begin{equation}\label{eq:forest}
+ r_k=|\{v:b_v<k\}|+c_{\partial}.
+\end{equation}
+Every interior edge is independent because the interior graph is a forest. Its edge columns span precisely the vectors with coordinate sum zero on each component. A boundary column is a unit vector at its tail; one such column adds one dimension per touched component, and further ones in that component add none. This proves~\eqref{eq:forest}.
+
+Thus compression of arbitrary unknown statistic coordinates is confined to the activation frontier $b_v=k$. Once the budget exceeds a record's blocker count, its column joins the independent interior forest. If deletion requests supply forgotten statistics, these are additional query-dependent information and the rank lower bound as stated need not apply.
+
+\subsection{The fast implementation is within a sharp factor two of rank}
+\begin{theorem}[Storage approximation and sharpness]\label{thm:twofactor}
+At any retained state and remaining horizon $h$, let $M$ be the number of nonzero coefficient vectors, $p$ the number of incident nonground coefficient nodes, and $r=p-c_0$ the linear query rank. For both record and partition-source deletion,
+\[
+ M\le p\le2r.
+\]
+Thus the indexed implementation stores at most $2sr$ statistic-value coordinates, compared with the linear minimum $sr$ for $s$ arbitrary independent statistic coordinates. Its live keys and indices satisfy $L\le hM\le2hr$, giving total logical storage $O((s+h+1)r+N_{\rm alive})$ words. The factor two is asymptotically sharp even at fixed cosine threshold and horizon three.
+\end{theorem}
+\begin{proof}
+Every nonzero coefficient belongs to an incident row, so $M\le p$. After omitting unused nodes and identically zero source columns, every ungrounded component contains an edge between distinct nodes and hence at least two nodes. Therefore $2c_0\le p$ and $p\le2(p-c_0)$. A grounded component contributes all its nonground nodes to rank. These facts apply to each current retained-data incidence graph over any field. The metadata bound follows because all stored keys have degree at most $h$.
+
+For sharpness, take $q$ early anchors with orthonormal embeddings $e_i$, and one later record $v_{ij}$ with embedding $(e_i+e_j)/\sqrt2$ for each pair $i<j$. At threshold $3/5$, its only earlier neighbors are its two anchors: incident anchor similarity is $1/\sqrt2$, while distinct pair embeddings have similarity at most $1/2$. At $h=3$, every coefficient edge is interior. The anchor edges form one component with $q+1$ nodes; each of the $m=\binom q2$ pair records gives a separate two-node component. Thus
+\[
+ p=q+1+2m,\qquad c_0=m+1,\qquad r=q+m.
+\]
+With scalar statistics all equal to one, no coefficient vanishes: they are $q$ at the empty key, $-1$ at each anchor singleton, and $+1,-1$ at the two keys for each pair record. Hence $M/r=(q+1+2m)/(q+m)\to2$.
+\end{proof}
+This closes the quantitative gap between the fast summary and the rank characterization. Since $\Phi_0\le k(k+1)r_k$ and $M_0\le2r_k$, the total update bound also implies $O(Q+(k^2+s)r_k)$. This is not total-bit optimality, nonlinear-real-encoding optimality, or a lower bound for constrained ridge moments. Identifier membership, key sizes, arithmetic precision, and physical hash-table capacity must still be reported. Appendix~\ref{app:algorithms} also gives a slower rank-optimal representation with explicitly repaired eligible-record metadata.
+
+\subsection{Computing the entire rank curve without query matrices}
+For a subset key $J$, repeatedly remove its maximum-priority element $u$ whenever $B(u)=J\minus\{u\}$; stop at the first failure. Denote the final key by $\rho(J)$. This is the root of $J$ in the untruncated coefficient forest. All edges on this ancestral path have degree at most $|J|$, so the root is independent of the horizon at which $J$ appears.
+
+\begin{theorem}[Reduced-signature rank profile]\label{thm:profile}
+For record deletions,
+\begin{equation}\label{eq:profile}
+ r_k=\#\{v:b_v<k\}+
+       \left|\{\rho(B(v)):b_v=k\}\right|.
+\end{equation}
+Given blocker lists, all roots and the full rank profile can be computed in expected $O(N+L)$ tuple-processing work, where $L=\sum_v b_v$, plus the cost of reading the graph and dictionary operations on the represented keys. One need not enumerate deletion sets, construct $Q_k$, or run elimination.
+\end{theorem}
+\begin{proof}
+The interior components touched by degree-$k$ boundary tails are exactly their distinct forest roots, giving~\eqref{eq:profile} from~\eqref{eq:forest}. To compute them, process records in priority order. Keep a dictionary mapping each prior head $B(u)\cup\{u\}$ to its root. If $B(v)$ is such a head, reuse its saved root; otherwise $B(v)$ is a new root. Then store the head $B(v)\cup\{v\}$ with that root. Heads are unique because their maximum element identifies their record, and every possible predecessor was processed earlier. Store roots as interned handles to avoid repeated copying. Finally group distinct pairs $(b_v,\rho(B(v)))$, count blocker sizes, and take a prefix sum. Reading, forming, and hashing the two keys per record costs $O(N+L)$ under the stated expected dictionary model.
+\end{proof}
+This algorithm computes the optimal \emph{number of linear statistic coordinates}. A rank-optimal decoder may retain graph-dependent structure that the indexed canonical map does not retain. The two algorithms serve different contracts: rank optimality is not a proof that a physical deletion-clean representation uses only $r_k$ total words.
+
+\begin{center}\small
+\begin{tabular}{p{0.28\linewidth}p{0.21\linewidth}p{0.38\linewidth}}
+\toprule
+Blocker structure & Query rank & Meaning\\
+\midrule
+Ordered $N$-clique & $\min(N,k+1)$ & Only the first $k+1$ potential representatives matter\\
+One early hub, $m\ge2$ leaves; $k=1$ & $2$ & Hub statistic and sum of all leaves suffice\\
+Same star; $k=2$ & $m+1$ & Hub-plus-one-leaf requests reveal each leaf statistic\\
+No edges & $N$ for $k\ge1$ & Singleton deletions identify every selected statistic\\
+\bottomrule
+\end{tabular}
+\end{center}
+The star gives the central separation: a linear number of newly selected records can have a constant-dimensional effect-query summary, but increasing the allowed request size by one eliminates that compression.
+
+\section{A constant-accuracy randomized storage obstruction}\label{sec:phase}
+The first note proved an exact aggregate-to-individual storage transition but needed error of order $1/m$ to decode bounded labels. We now separate that example from a stronger activation-frontier construction. The new lower bound tolerates constant error and randomized per-query failure, and it does not require reconstructing raw documents.
+
+\subsection{The finite-bit central-state model}
+Fix a public identifier universe, curation embeddings, order, all zero-label records, and a budget. The only varying inputs are independent hidden labels $Y=(Y_1,\ldots,Y_m)$. Preprocessing sees them and saves a message $M$ from an alphabet of size at most $2^B$. Count every hidden-label-dependent model, cache, remote store, and retained private coin in $M$. Public randomness $R$ independent of $Y$ and fresh repair randomness are allowed. The request may provide its full forgotten-record payloads. Repair may not reread the hidden retained labels or receive free dataset-dependent tickets.
+
+Correctness requires, for each fixed input and allowed request, parameter error at most $\eta$ with probability at least $1-\delta$. The proof needs only average correctness under uniform independent labels and a uniform query index. It does not require simultaneous success on all queries. Public feature/graph metadata are not charged to $B$, so the upper-versus-lower separation is explicitly about hidden-label information, not zero versus linear total system metadata.
+
+\subsection{An activation frontier}
+Let $b\ge1$. Order an anchor $a$ first, then $b$ common blockers $S_0=\{s_1,\ldots,s_b\}$ and $m$ private blockers $p_i$, then $m$ candidates $w_i$. The anchor is adjacent to every common and private blocker and no candidate. Set
+\[
+ B(w_i)=S_0\cup\{p_i\}.
+\]
+The common blockers may form a clique; there are no other edges affecting candidate blocker sets. All non-candidate labels are zero. Candidate labels $Y_i$ are in $\{0,1\}$. Initially only $a$ is selected, so every hidden candidate and every record in the hard requests was excluded from training.
+
+\begin{theorem}[Adjacent-budget randomized memory separation]\label{thm:frontier}
+For the scalar constant-feature average-loss ridge learner with $\lambda>0$:
+\begin{enumerate}
+\item At cumulative budget $b$, zero hidden-label-dependent bits suffice for exact model repair and its remaining-horizon statistic state.
+\item At budget $b+1$, any randomized repair with per-query error
+\[
+ \eta<\frac{1}{4(1+\lambda)},\qquad 0\le\delta<\frac12,
+\]
+needs
+\begin{equation}\label{eq:entropy}
+ B\ge m[1-h_2(\delta)]
+\end{equation}
+bits, where $h_2$ is binary entropy. Full forgotten payload access does not weaken this conclusion.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+At budget $b$, no candidate can lose all $b+1$ blockers. Every selected label is therefore zero, and the optimizer is zero. After $r$ deletions a surviving candidate still has at least $b+1-r$ blockers, greater than the remaining budget $b-r$, so its label never enters the remaining-horizon summary.
+
+At budget $b+1$, request $F_i=S_0\cup\{p_i\}$. The selected set is exactly $\{a,w_i\}$: every other candidate keeps its private blocker, and every surviving private blocker is still suppressed by $a$. Thus
+\[
+ \theta_i(Y)=\frac{Y_i}{2(1+\lambda)}.
+\]
+Every forgotten record has a fixed zero-label payload independent of $Y$. Thresholding an accurate answer at $1/[4(1+\lambda)]$ decodes $Y_i$ with bit-error probability at most $\delta$.
+
+Take uniform independent bits $Y_i$. The optimal decoder from $(M,R,i)$ has no larger error than randomized repair, so binary Fano gives $H(Y_i\mid M,R)\le h_2(\delta)$. Conditional subadditivity yields
+\[
+ B\ge H(M\mid R)\ge I(Y;M\mid R)
+ =m-H(Y\mid M,R)
+ \ge m-\sum_i H(Y_i\mid M,R)
+ \ge m[1-h_2(\delta)].
+\]
+For a bound on mean error over indices, use concavity of $h_2$. Fresh decoder randomness cannot outperform the optimal decision rule. There is no union bound over many queried outputs. The entropy argument is a standard random-access encoding bound~\cite{nayak1999}; the specialized object here is the curation family.
+\end{proof}
+For fixed $b$, $N=1+b+2m$ and the lower bound is $\Omega(N)$; for growing $b$, retain the precise $\Omega(N-b)$ statement. The reference scalar model has one parameter. This does not contradict small dimension of the original model: future counterfactual queries reveal information the original optimizer never needed.
+
+\subsection{Fixed-threshold cosine geometry and shared features}
+Choose unit signatures $u_1,\ldots,u_m$ with $|\langle u_i,u_j\rangle|\le1/6$ for distinct pairs. In two additional orthogonal directions $e_0,e_1$, define
+\begin{align*}
+ a&=e_0,&s_j&=\tfrac12e_0+\tfrac{\sqrt3}2e_1,\\
+ p_i&=\tfrac12e_0+\tfrac{\sqrt3}2u_i,&
+ w_i&=\tfrac12e_1+\tfrac{\sqrt3}2u_i.
+\end{align*}
+All vectors have unit norm. Use strict cosine threshold $\tau=2/5$.
+\begin{center}\small
+\begin{tabular}{lll}\toprule
+Pair & Inner product or upper bound & Required effect\\\midrule
+$a,s_j$ and $a,p_i$ & $1/2$ & Suppress the blockers\\
+$a,w_i$ & $0$ & Keep anchor from blocking candidates\\
+$s_j,w_i$ & $\sqrt3/4>2/5$ & All common blockers apply\\
+$p_i,w_i$ & $3/4$ & Private blocker applies\\
+$p_i,w_j$, $i\ne j$ & $1/8$ & No wrong private blocker\\
+$p_i,p_j$ and $w_i,w_j$, $i\ne j$ & $3/8<2/5$ & No additional pairwise blockers\\
+$s_j,p_i$ & $1/4$ & No common/private edge\\\bottomrule
+\end{tabular}
+\end{center}
+The identical common-blocker vectors form a harmless clique. These inequalities realize exactly the required candidate blocker sets with a fixed positive threshold.
+
+Independent random sign vectors in $d$ dimensions satisfy
+\[
+ \Pr(|\langle u_i,u_j\rangle|>1/6)\le2e^{-d/72}.
+\]
+For $m\ge2$, choosing $d\ge\lceil72\log(2m(m-1))\rceil$ gives positive probability that all pairs satisfy the constraint. Hence ambient dimension is $O(\log m)$, not fixed independently of $m$. For this common-neighbor, pairwise-nonadjacent architecture that order is necessary: with distance threshold $r=\sqrt{2(1-\tau)}$, $m$ disjoint radius-$r/2$ balls around the candidates fit in a radius-$3r/2$ ball around a common blocker, so $m\le3^{d+2}$.
+
+\begin{corollary}[Same-embedding vector ridge]\label{cor:shared}
+Use those same full unit embeddings as downstream ridge features. After $F_i$, since $a\perp w_i$,
+\[
+ \theta_i(Y)=Y_i\frac{w_i}{1+2\lambda}.
+\]
+The memory lower bound~\eqref{eq:entropy} holds for Euclidean parameter error $\eta<1/[2(1+2\lambda)]$.
+\end{corollary}
+\begin{proof}
+The ridge normal equations are $(aa^\top+w_iw_i^\top+2\lambda I)\theta=Y_iw_i$. Orthogonality gives the displayed solution. Its two possible values are separated by $1/(1+2\lambda)$, so nearest-target decoding reduces to Theorem~\ref{thm:frontier}.
+\end{proof}
+The lower bound also holds for predicting the logit on the known unit vector $w_i$. More strongly, one fixed test distribution can witness the obstruction for every request, as proved next.
+
+For a one-parameter head that explicitly uses the curation vectors, append a common coordinate: $e'_v=\alpha e_*+\sqrt{1-\alpha^2}e_v$, with public $0<\alpha<1$. Threshold $\tau'=\alpha^2+(1-\alpha^2)\tau$ preserves the graph. The scalar feature $z_v=\langle e_*,e'_v\rangle=\alpha$ gives target $\alpha Y_i/[2(\alpha^2+\lambda)]$ and the same bound for $\eta<\alpha/[4(\alpha^2+\lambda)]$. The full-embedding corollary is the more natural experimental comparator.
+
+\subsection{Fixed-distribution prediction and a sharp distortion benchmark}
+Write $c=1+2\lambda$ and $f_i(x)=x^\top w_i/c$. The two possible retained-data predictors after $F_i$ are $0$ and $f_i$. Let $\nu$ be uniform on the public candidate features $w_1,\ldots,w_m$, independent of the hidden labels and request. Every support point survives every hard request. Since $w_i^\top w_j\ge1/8$ for distinct $i,j$,
+\[
+ \|f_i\|_{L_2(\nu)}^2\ge\frac{1+(m-1)/64}{mc^2}\ge\frac1{64c^2}.
+\]
+\begin{corollary}[One fixed test distribution]\label{cor:prediction}
+If repair returns any predictor $\widehat f_i$ with root-mean-square prediction error below $1/(16c)$ relative to the retained-data oracle on $\nu$, with per-query probability at least $1-\delta$, then $B\ge m[1-h_2(\delta)]$.
+\end{corollary}
+\begin{proof}
+The two possible predictor functions have $L_2(\nu)$ separation at least $1/(8c)$. Selecting the closer template decodes the hidden bit on the accuracy event, so the existing entropy proof applies. The predictor need not be linear.
+\end{proof}
+This is prediction fidelity to the counterfactual oracle on a fixed public distribution. It is not excess risk on an arbitrary supervised population: a zero predictor could outperform the oracle when all population labels are zero.
+
+For a quantitative expected-error statement, define
+\[
+ q(D)=\frac{1-\sqrt{1-4D}}2,\qquad
+ \mathcal R(D)=1-h_2(q(D)),\quad 0\le D\le\tfrac14,
+\]
+and $\mathcal R(D)=0$ for $D\ge1/4$.
+\begin{theorem}[Tight query-summary information rate]\label{thm:distortion}
+In the same activation family, expected normalized prediction error
+\[
+ \mathbb E\frac{\|\widehat f_i-Y_if_i\|_{L_2(\nu)}^2}{\|f_i\|_{L_2(\nu)}^2}\le D
+\]
+for every fixed input and request requires $B\ge m\mathcal R(D)$. For each fixed $D\in(0,1/4)$, a public randomized query summary achieves this with $m\mathcal R(D)+O(\log m)$ hidden-label bits. Equivalently, if the required expected excess of the retained empirical ridge objective is at most $\epsilon$, the necessary and asymptotically sufficient information is
+\[
+ B=m\mathcal R(4c\epsilon)+O(\log m),
+ \qquad 0<\epsilon<\frac1{16c},
+\]
+where the lower bound has no additive $O(\log m)$ term. Zero hidden-label information suffices at $\epsilon=1/(16c)$; zero error requires $m$ bits.
+\end{theorem}
+\begin{proof}[Proof outline; full coding argument in Appendix~\ref{app:coding}]
+Project any predictor onto $f_i$. Its normalized squared error lower-bounds the squared error for estimating $Y_i$. With posterior $p_i=\Pr(Y_i=1\mid M,R)$, minimum conditional squared error is $p_i(1-p_i)$. The function $g(v)=h_2(q(v))$ is increasing and concave, so conditional entropy is at most $mg(D)$ and $B\ge m[1-g(D)]$. Hamming covering codes with public mask/permutation symmetrization attain this rate using soft reconstructions $q$ and $1-q$.
+
+For retained ridge loss $L_i$, orthogonality of $a,w_i$ gives
+\[
+ L_i(\widehat\theta)-L_i(\theta_i)
+ \ge\frac{(c\,w_i^\top\widehat\theta-Y_i)^2}{4c}.
+\]
+Equality holds for $\widehat\theta=\widehat Y_iw_i/c$, proving the excess-objective specialization.
+\end{proof}
+The coding argument is a standard rate--distortion tool~\cite{shannon1959} applied to this curation family. Its upper bound is for each fixed query averaged over public randomness, not a query chosen after observing the realized code/state. Codebooks may be expensive; this does not provide a practical or canonical deletion-clean codec. The exact indexed algorithm remains the deployed-state construction. The high-probability bit bound also has a matching $m[1-h_2(\delta)]+O(\log m)$ query-summary upper bound by binary rather than soft reconstruction.
+
+\subsection{The previous aggregate transition has a sharp accuracy limit}
+A different family includes both $v_i$ with $B(v_i)=S_0$ and $w_i$ with $B(w_i)=S_0\cup\{p_i\}$, carrying the same binary label $Y_i$, plus the zero-label anchor. At budget $b$, the sum $Y_\Sigma=\sum_iY_i$ suffices. At budget $b+1$, queries $S_0\cup\{p_i\}$ give
+\[
+ \theta_i=\frac{Y_\Sigma+Y_i}{(m+2)(1+\lambda)}.
+\]
+Exact repair must retain all labels. More precisely, per-query randomized error below $1/[2(m+2)(1+\lambda)]$ requires
+\[
+ B\ge m[1-h_2(\delta)]-\log_2(m+1).
+\]
+Give a decoder the exact sum as at most $\log_2(m+1)$ additional bits and apply the preceding entropy proof to one query per coordinate.
+
+At the threshold error itself, an $O(\log m)$-bit sum summary suffices: replace the unknown $Y_i$ by $1/2$. All other allowable requests can be answered exactly from the sum, public counts, and full forgotten payloads. If a common blocker remains, the model is zero. Otherwise the request is $S_0$ plus at most one record: a removed $v_i$ supplies its label; a removed $w_i$ has no effect; a removed anchor admits all $m$ zero-label private blockers alongside the $m$ base candidates, so the selected count is $2m$. This last normalization must not be omitted. The $1/m$ limitation of the earlier example is intrinsic. Theorem~\ref{thm:frontier}, not this aggregate example, supplies the constant-accuracy obstruction.
+
+\section{Learning beyond additive sufficient statistics}\label{sec:convex}
+Let $S=C(D)$ have size $n>0$, $S'=C(D\minus F)$ size $n'>0$, and $R=S\minus S'$, $P=S'\minus S$. Consider
+\[
+ L_S(\theta)=\frac1n\sum_{v\in S}\ell_v(\theta)+\frac\lambda2\norm\theta^2,
+\]
+with convex twice-differentiable losses and $\lambda>0$. Let $\theta_0$ be the exact original optimum, $g_v=\nabla\ell_v(\theta_0)$, $H_v=\nabla^2\ell_v(\theta_0)$, and $H_0=\nabla^2L_S(\theta_0)$.
+
+\begin{proposition}[Correctly normalized signed derivatives]\label{prop:derivatives}
+The exact retained objective gradient and Hessian at the original optimizer are
+\begin{align}
+ g&=\nabla L_{S'}(\theta_0)
+ =\frac{\sum_{v\in P}g_v-\sum_{v\in R}g_v}{n'}
+   +\lambda\left(1-\frac n{n'}\right)\theta_0,\label{eq:gradient}\\
+ H&=\nabla^2L_{S'}(\theta_0)
+ =\frac n{n'}(H_0-\lambda I)
+ +\frac{\sum_{v\in P}H_v-\sum_{v\in R}H_v}{n'}+\lambda I.
+ \label{eq:hessian}
+\end{align}
+\end{proposition}
+\begin{proof}
+Use $\sum_{v\in S}g_v=-n\lambda\theta_0$ and
+$\sum_{v\in S}H_v=n(H_0-\lambda I)$, then subtract $R$ and add $P$ before dividing by the new size $n'$.
+\end{proof}
+Omitting the normalization correction in~\eqref{eq:gradient} changes the target. If $\theta_0$ has residual $r_0=\nabla L_S(\theta_0)$, add $(n/n')r_0$ to that equation.
+
+\begin{theorem}[One-step parameter certificate]\label{thm:newton}
+Suppose the target Hessian is $\rho$-Lipschitz on the segment from $\theta_0$ to $\theta_1=\theta_0+s$, with $s=-H^{-1}g$. Then
+\begin{equation}
+ \norm{\nabla L_{S'}(\theta_1)}\le\frac\rho2\norm{s}^2,
+ \qquad
+ \norm{\theta_1-\theta^*_{S'}}\le\frac\rho{2\lambda}\norm{s}^2.
+\end{equation}
+For an inexact solve with $\norm{Hs+g}\le\xi$, replace the numerators by $\xi+(\rho/2)\norm{s}^2$.
+\end{theorem}
+\begin{proof}
+The integral Taylor remainder for the gradient has norm at most
+$\int_0^1\rho t\norm{s}^2dt=\rho\norm{s}^2/2$. The linear term vanishes for the exact solve. Strong convexity implies
+$\lambda\norm{\theta_1-\theta^*}\le\norm{\nabla L_{S'}(\theta_1)}$.
+\end{proof}
+For logistic regression with $\norm{z_v}\le B$, the safe global bound $\rho\le B^3/4$ suffices. The regularizer adds no Hessian variation. These Newton tools belong to established certified-removal methodology~\cite{guo2020}; their role here is to handle the \emph{correct counterfactual signed training change}.
+
+Original-anchor gradients and Hessians can use the polynomial summary from Section~\ref{sec:polynomial}, giving exact $g,H$ for each budgeted counterfactual without reading newly selected records. They are record-local only \emph{conditional on the original anchor}. Because $\theta_0$ depends on deleted data, the resulting cache is not a canonical retained-data state. A public data-independent anchor avoids that issue but may yield a poor one-step approximation.
+
+\subsection{A certificate that includes computational errors}
+The previous result is insufficient for an implementation that uses approximate curvature or numerical solves. Let $F_*$ be the intended strongly convex target objective, and let computed quantities at an arbitrary anchor $w$ satisfy certified bounds
+\[
+ \norm{\widehat g-\nabla F_*(w)}\le a,\qquad
+ \norm{\widehat H-\nabla^2F_*(w)}_{\rm op}\le e,\qquad
+ \norm{\widehat g+\widehat Hs}\le\xi.
+\]
+\begin{theorem}[Unified residual certificate]\label{thm:residual}
+If $F_*$ is $\lambda$-strongly convex and has $\rho$-Lipschitz Hessian on the update segment, set
+\begin{equation}\label{eq:residual}
+ r=a+\xi+e\norm{s}+\frac\rho2\norm{s}^2.
+\end{equation}
+Then
+\[
+ \norm{\nabla F_*(w+s)}\le r,\qquad
+ \norm{w+s-w_*}\le\frac r\lambda,\qquad
+ F_*(w+s)-F_*(w_*)\le\frac{r^2}{2\lambda}.
+\]
+\end{theorem}
+\begin{proof}
+Write the target gradient as
+\[
+ (\nabla F_*(w)-\widehat g)+(\widehat g+\widehat Hs)
+ +(\nabla^2F_*(w)-\widehat H)s+R,
+\]
+where $\norm R\le\rho\norm{s}^2/2$. The triangle inequality proves the first statement. Strong monotonicity gives the distance bound. Strong convexity implies
+$F_*(w+s)-F_*(w_*)\le\norm{\nabla F_*(w+s)}^2/(2\lambda)$ by maximizing the upper quadratic in the displacement to $w_*$.
+\end{proof}
+An approximate inverse is merely a way to produce $s$; its actual linear residual belongs in $\xi$. Damping $\widehat H$ by $\gamma I$ increases a conservative curvature-error allowance by $\gamma$. The errors $a,e,\xi$ must include roundoff if the certificate is intended to be numerically rigorous. A printed floating-point residual without an error allowance is diagnostic evidence, not a mathematical roundoff guarantee.
+
+\paragraph{Two implementation contracts.} A fixed-anchor derivative summary can be evaluated afresh at each request, so its Taylor error does not secretly accumulate across prior model steps. Its dense statistic dimension is $\Theta(d+d^2)$ per key. If its certificate fails, rebuilding at a new anchor generally requires all currently activation-eligible retained payloads, not just the currently selected corpus. First and second derivatives at one anchor do not determine arbitrary future logistic derivatives. A no-reread system that discarded those payloads cannot promise unrestricted reanchoring.
+
+Alternatively, keep an eligible-payload buffer and use a moving anchor. With average-loss objectives $F_t$ and per-record regularized losses $f_v=\ell_v+\lambda\norm w^2/2$, update approximate gradient and curvature by
+\begin{align*}
+ \bar g&=\frac{n_t}{n_{t+1}}\widehat g_t+
+ \frac{\sum_{P}\nabla f_v(w_t)-\sum_R\nabla f_v(w_t)}{n_{t+1}},\\
+ \bar H&=\frac{n_t}{n_{t+1}}\widehat H_t+
+ \frac{\sum_{P}\nabla^2 f_v(w_t)-\sum_R\nabla^2 f_v(w_t)}{n_{t+1}}.
+\end{align*}
+With exact changed-record evaluations, inherited error bounds are $\bar a=(n_t/n_{t+1})a_t$, $\bar e=(n_t/n_{t+1})e_t$. After a step with linear residual $\xi$, setting the next stored gradient approximation to zero and retaining $\bar H$ is valid with
+\[
+ a_{t+1}=\bar a+\xi+\bar e\norm s+\tfrac\rho2\norm{s}^2,
+ \qquad e_{t+1}=\bar e+\rho\norm s.
+\]
+These are explicit error recurrences, not a guarantee they remain small. Add changed-record numerical errors as needed. A failed Taylor bound triggers a validated target-gradient pass; if that still exceeds tolerance, optimize the retained objective and refresh the certificate. Such fallback requires the stated payload access and costs at least the corresponding data pass. Empty selected sets use the specified zero-model convention.
+
+\subsection{A distributional certificate needs a randomized target}
+Parameter proximity alone does not imply indistinguishability from deterministic retraining: two unequal deterministic vectors have disjoint point-mass laws. Define the learner from inception as
+$A_\sigma(S)=\theta^*_S+Z$, $Z\sim N(0,\sigma^2I)$ with fixed public $\sigma$. Let repair release $\theta_1+Z'$ with fresh noise of the same covariance, and let a proved bound on the center difference be $\eta$. For $a=\eta/\sigma$ and $\delta\in(0,1)$, the two output laws satisfy both directions of
+\begin{equation}
+ \Pr[U\in E]\le e^\epsilon\Pr[A_\sigma(S')\in E]+\delta,
+ \qquad \epsilon=\frac{a^2}{2}+a\sqrt{2\log(1/\delta)}.
+\end{equation}
+Indeed the Gaussian log-likelihood ratio has mean at most $a^2/2$ and standard deviation at most $a$ in either direction, so its tail above $\epsilon$ is at most $\delta$. This is a marginal model-output comparison for the specified noisy learner and a fixed request. It does not certify the original-anchor cache or automatically give a joint adaptive-transcript guarantee. Choosing a data-dependent noise scale or reusing old output noise requires a separate proof.
+
+\subsection{Large corpus churn need not mean large model change}
+Let $\mu_S=n^{-1}\sum_{v\in S}\delta_v$ and $\mu_{S'}$ be the normalized empirical training measures. If, at $\theta_0$,
+\[
+ \norm{\nabla\ell_z(\theta_0)-\nabla\ell_{z'}(\theta_0)}
+ \le L_g\,d(z,z'),
+\]
+then integrating any coupling gives
+\begin{equation}
+ \norm g\le L_g W_1(\mu_S,\mu_{S'}),\qquad
+ \norm{\theta^*_{S'}-\theta_0}\le\frac{L_g}{\lambda}W_1(\mu_S,\mu_{S'}).
+\end{equation}
+This handles unequal sample counts through normalized measures. It explains when replacements approximately cancel in gradient space. The metric must control training gradients, including labels. High cosine similarity between text embeddings alone does not do so: opposite-label identical-feature logistic examples have different gradients. Measure both semantic proximity and label/task disagreement instead of assuming one implies the other.
+
+\section{Full refitting: a conditional error bound, not an exact claim}\label{sec:refit}
+SemDeDup fits clusters and orders examples using centroid information. If these quantities are learned from $D$, its full target is
+\[
+ A\!\left(C_{\psi(D\minus F)}(D\minus F)\right),
+\]
+which need not equal the fixed-curator target. No theorem in the core stack silently freezes an originally fitted $\psi(D)$ while claiming to match a fresh refit. The main algorithm's externally fixed partition and order are part of its prescribed learner.
+
+A useful robustness theorem does not require pretending that every curation decision stays fixed. Let $\mu$ be the uniform empirical measure on the exactly repaired fixed-curator corpus, and $\nu$ that on the full-refit corpus. Assume both are nonempty, shared records have the same loss, and regularization is unchanged. At a repaired model $w$ with validated proxy residual at most $r$, define
+\[
+ c_w=\norm{\mathbb E_\nu\nabla\ell_v(w)-\mathbb E_\mu\nabla\ell_v(w)}.
+\]
+\begin{theorem}[Modular curation-mismatch certificate]\label{thm:mismatch}
+For a $\lambda$-strongly convex full-refit objective and its optimum $w_\nu^*$,
+\[
+ \norm{w-w_\nu^*}\le\frac{r+c_w}{\lambda},\qquad
+ F_\nu(w)-F_\nu(w_\nu^*)\le\frac{(r+c_w)^2}{2\lambda}.
+\]
+If relevant loss gradients have norm at most $G$, then
+\[
+ c_w\le2G\,\mathrm{TV}(\mu,\nu),\qquad
+ \mathrm{TV}(\mu,\nu)=1-\frac{|S_\mu\cap S_\nu|}{\max(|S_\mu|,|S_\nu|)}.
+\]
+\end{theorem}
+\begin{proof}
+The regularization gradients cancel in the difference, so $\norm{\nabla F_\nu(w)}\le r+c_w$. Apply strong convexity as in Theorem~\ref{thm:residual}. Integrating bounded gradients against the signed measure gives $2G\,\mathrm{TV}$. For uniform sets, the common probability mass is $|S_\mu\cap S_\nu|/\max(|S_\mu|,|S_\nu|)$, proving the identity.
+\end{proof}
+A proved bound $|S_\mu\triangle S_\nu|\le u$ implies $\mathrm{TV}\le\min(1,u/|S_\mu|)$. Task-gradient Lipschitz continuity instead gives $c_w\le L_gW_1(\mu,\nu)$, or an upper bound from any explicit feasible coupling. Shared identifiers are not automatically identical loss terms if the refit also changes features or labels; use their actual training representations in that case.
+
+For a test vector with norm at most $B_{\rm test}$, the linear-logit error is at most $B_{\rm test}(r+c_w)/\lambda$. A binary prediction is unchanged relative to the full-refit optimum whenever the repaired model's absolute logit exceeds this quantity. Logistic probability error is at most one quarter of it.
+
+\textbf{What this does not solve.} A bound on $c_w$ must itself be certified or obtained from an actual full-refit audit. Computing the entire refit to measure it does not supply a faster unlearning algorithm. Empirically small mismatch on past requests is not a guarantee for future requests.
+
+One may additionally prove trajectory stability for a particular clustering routine: removing $r$ members from a cluster of size $n$ and mean $\mu$ changes its mean, conditional on membership, by
+\[
+ \mu^- -\mu=-\frac{1}{n-r}\sum_{v\in F\cap K}(z_v-\mu).
+\]
+Sufficient assignment and priority margins can certify a complete deterministic Lloyd trajectory with data-independent initialization. Checking only a final fixed point does not show that fresh iterations reach it; same random seed does not preserve data-dependent initialization. Such a refit theorem is outside this finalized core. Q-kmeans already uses stored trajectory information, centroid checks, and fallback~\cite{ginart2019}.
+
+\subsection{A computable certificate from fixed blocker envelopes}\label{sec:envelopes}
+The conditional mismatch theorem becomes operational under a stronger, explicit hypothesis. Fix three ordered blocker graphs satisfying
+\[
+ B_{\rm lo}(v)\subseteq B_0(v)\subseteq B_{\rm hi}(v).
+\]
+Assume uniformly for every permitted cumulative request $F$ that the actual retained blocker relation obeys
+\[
+ B_{\rm lo}(v)\minus F\subseteq B_{{\rm actual},F}(v)
+ \subseteq B_{\rm hi}(v)\minus F.
+\]
+The proxy graph is $B_0$; the actual graph can vary with $F$ within these bounds. Define
+\[
+ I=\{v\notin F:B_{\rm hi}(v)\subseteq F\},\quad
+ P=\{v\notin F:B_0(v)\subseteq F\},\quad
+ O=\{v\notin F:B_{\rm lo}(v)\subseteq F\}.
+\]
+Then $I\subseteq P\subseteq O$ and the actual selected set $T$ satisfies $I\subseteq T\subseteq O$. Here $P$ denotes the proxy selected set locally, not the additions used in earlier sections. If retained records are nonempty, their earliest record lies in $I$, so $a=|I|\ge1$.
+
+\begin{theorem}[Sharp count-based curation certificate]\label{thm:envelope}
+Let $p=|P|$ and $c=|O|-p$. Then
+\begin{equation}\label{eq:envelope}
+ \max_{I\subseteq T\subseteq O}\mathrm{TV}(\operatorname{Unif}P,\operatorname{Unif}T)
+ =1-\frac{a}{\max(p,a+c)}=: \Delta.
+\end{equation}
+Consequently, if the proxy model $w$ has residual at most $r$ and all relevant loss gradients have norm at most $G$, then
+\[
+ \|w-w^*_{\rm actual}\|\le\frac{r+2G\Delta}{\lambda},\qquad
+ F_{\rm actual}(w)-F_{\rm actual}(w^*_{\rm actual})
+ \le\frac{(r+2G\Delta)^2}{2\lambda}.
+\]
+Two additional count-valued indexed summaries supply $|I|$ and $|O|$ without evaluating the actual refitted curator, once the uniform envelope hypothesis is certified.
+\end{theorem}
+\begin{proof}
+Selection follows from the absence of possible blockers and presence of mandatory blockers. For any feasible $T$, put $x=|T\cap P|$, $y=|T\minus P|$. Then $a\le x\le p$, $0\le y\le c$, and common probability mass is $x/\max(p,x+y)$. Taking $y=c$ cannot increase this mass; it is then nondecreasing in $x$, so its minimum is $a/\max(p,a+c)$. If $a+c\le p$, choose $T=I$; otherwise choose $T=I\cup(O\minus P)$. This proves sharpness. Every interval selection is realizable by an intermediate ordered graph: optional incoming edges for each uncertain vertex can be removed to select it or one can be kept to exclude it. Cosine perturbations may couple those choices, in which case the bound remains valid but need not be attained. The model bounds follow from Theorem~\ref{thm:mismatch}.
+\end{proof}
+An informative exactness case is $|I|=|O|$: the curation target is then certified unchanged even if many pairwise similarity scores are uncertain. A certified diameter bound $D_w$ on the gradient set improves $2G\Delta$ to $D_w\Delta$ by coupling the common probability mass identically. Appendix~\ref{app:envelope-moments} gives a task-sensitive moment bound when this diameter is unavailable.
+
+\textbf{Constructing valid envelopes.} Suppose eligibility and order are fixed, curation vectors before and after a request are unit norm, and uniformly over allowed requests
+\[
+ \|z_u^F-z_u\|\le\epsilon_u,\qquad
+ |\tau_{uv}^F-\tau_{uv}|\le\epsilon_{\tau,uv}.
+\]
+For baseline margin $m_{uv}=z_u^\top z_v-\tau_{uv}$, put $d_{uv}=\epsilon_u+\epsilon_v+\epsilon_{\tau,uv}$. The actual margin differs by at most $d_{uv}$, using unit norms. With the strict edge test, mandatory edges satisfy $m_{uv}>d_{uv}$ and possible edges satisfy $m_{uv}>-d_{uv}$. Both inequalities must remain strict at equality. A learned partition needs its own certified eligibility envelope; arbitrary learned priorities are outside this module. An approximate neighbor search is not a certified upper graph without a recall guarantee over the relevant margin band.
+
+\textbf{Cost and state.} Apply the polynomial/indexed construction with scalar statistic one to $B_{\rm lo}$ and $B_{\rm hi}$. Their constant coefficients give $|O|$ and $|I|$ after each request, while the proxy provides $p$. The additional sequence-wide update cost is
+\[
+ O(Q+\Phi_{\rm lo}+\Phi_{\rm hi}+M_{\rm lo}+M_{\rm hi}),
+\]
+and computing $\Delta$ from the counts costs $O(1)$. Initial envelope construction is separate and can be expensive. Query-specific changes to the envelope graphs are not covered by this cost.
+
+For canonical summary state, these envelopes must be prescribed external inputs or have a separate valid state-repair argument. Historically fitted envelopes can support a conditional model certificate if valid, but are not thereby fresh retained-pipeline state. Training losses must also remain fixed: if the drifting curation encoder changes downstream loss gradients by at most a certified $\beta$, add $\beta$ to the mismatch allowance. This module proves neither free encoder stability nor exact unlearning of a fully refitted pipeline.
+
+\section{Other curators: useful boundaries, not the main paper}
+For greedy independent-set selection, deleting only vertices outside the original selected set leaves the set unchanged. Proof: induct over priority; removed vertices were never selected and so never suppressed later decisions. Deleting an early selected vertex on an ordered path can flip every later alternating decision. Dynamic greedy-MIS maintenance is an established algorithmic subject, including recent batch work~\cite{assadi2019,dhulipala2026}.
+
+For one minimum-priority representative per connected component, define $\kappa(v)$ as the minimum number of vertices other than $v$ whose deletion disconnects $v$ from every earlier-priority vertex; earlier endpoints may themselves be deleted. Then $v$ is selectable after at most $k$ deletions iff $\kappa(v)\le k$. Necessity and sufficiency are exactly the absence of any earlier vertex in $v$'s surviving component. In a clique only the first $k+1$ vertices can become representatives; an articulation structure can make linearly many eligible under a single deletion. This vertex-separator characterization is useful, but standard dynamic connectivity and separator theory are substantial prior art. Keep it as a comparison unless natural-text evidence makes this curator central.
+
+\section{Source withdrawal and correlated deletions}\label{sec:sources}
+Let $s(v)$ be the source of a document and let $H$ be the set of withdrawn sources. Define the distinct blocker-source set $U(v)=\{s(u):u\in B(v)\}$. Then
+\begin{equation}
+ v\in S_H\ \Longleftrightarrow\ s(v)\notin H\ \text{and}\ U(v)\subseteq H.
+\end{equation}
+If $s(v)\in U(v)$, that document can never become selected under pure whole-source deletion while it survives. Otherwise its minimum source-deletion budget is $|U(v)|$, which may be much smaller than $|B(v)|$. The statistic polynomial becomes
+\[
+ \sum_v t(v)(1-x_{s(v)})\prod_{a\in U(v)}x_a.
+\]
+Apply Boolean idempotence $x_a^2=x_a$; same-source blocker factors cancel identically. The truncation, indexed updates, and substitution results then hold with source-budget degree. Contrary to the first note's overly cautious wording, the \emph{incidence} representation survives exactly; only the \emph{forest} property can fail.
+
+\begin{theorem}[Exact source-query dimension]\label{thm:source}
+Omit every record with $s(v)\in U(v)$. For each remaining record with $|U(v)|\le k$, make an edge from key $U(v)$ to $U(v)\cup\{s(v)\}$, replacing its head by ground if its degree exceeds $k$. If this multigraph has $p$ incident non-ground nodes and $c_0$ components not containing ground, the exact linear source-query rank is $p-c_0$, over every field. It is computable by disjoint-set union without enumerating source-deletion requests.
+\end{theorem}
+\begin{proof}
+Every remaining coefficient column is exactly $e_{U(v)}-e_{U(v)\cup\{s(v)\}}$, with the latter row omitted at the horizon. Thus the coefficient matrix is an incidence matrix with ground row removed. The same invertible subset-zeta transform relates coefficients to query answers. Standard incidence rank gives the expression.
+\end{proof}
+Given distinct blocker-source lists $U(v)$, forming and hashing keys plus disjoint-set operations for one horizon costs $O(N+L_s+N\alpha(N))$ expected work, where $L_s=\sum_v|U(v)|$ and $\alpha$ is the inverse Ackermann function. Deriving these lists from record-level blockers additionally costs $O(N+\sum_v|B(v)|)$ expected work. This is a metadata/linear-query calculation, not a proof that all metadata are free or erased.
+
+A small example shows why the forest shortcut cannot be reused. Order four records $a,b,w,z$ with sources $A,B,B,A$ and edges $a$--$w$ and $b$--$z$. The coefficient edges form a diamond:
+$\varnothing\to A$, $\varnothing\to B$, $A\to AB$, $B\to AB$.
+The source-query sums are
+\[
+ T(\varnothing)=t_a+t_b,\quad T(\{A\})=t_b+t_w,
+ \quad T(\{B\})=t_a+t_z,\quad T(\{A,B\})=0.
+\]
+The full source-horizon rank is three, although there are four record statistics. Grouping sources can preserve compression even at the full source horizon; the full record-horizon rank is $N$.
+
+If sources are independently withdrawn with probability $p$, a document with no same-source blocker and $u$ distinct blocker sources activates with probability $(1-p)p^u$ (for initially excluded documents). Independent document-deletion estimates can therefore substantially misrepresent publisher-level withdrawal. This extension supplies an NLP-specific motivation, especially for syndicated news and multi-source web corpora; the magnitude is an empirical question.
+
+\newpage
+\section{Literature positioning and what can be claimed}
+\begin{longtable}{p{0.27\linewidth}p{0.32\linewidth}p{0.32\linewidth}}
+\toprule
+Closest work & Already established & Required distinction\\\midrule\endhead
+Cao and Yang (2015)~\cite{cao2015} & Pipeline stages, dependencies, summation-form unlearning & Do not claim first pipeline-aware or sufficient-statistic unlearning\\[4pt]
+ARCANE (2022)~\cite{arcane} & Representative selection before unlearning; its stated protocol skips retraining for unselected deletions & Evaluate the full curator-rerun target; do not call its different contract universally incorrect\\[4pt]
+Deletion-robust summaries~\cite{mirzasoleiman2017,kazemi2018} & Backup summaries that remain useful after deletions & Exact reconstruction of a prescribed counterfactual learner, not only summary quality\\[4pt]
+Provenance~\cite{green2007,amsterdamer2011} & Algebraic dependency and aggregation representations & Budgeted canonical unlearning state, learner-level lower bounds, and empirical curation consequences\\[4pt]
+DBSP / DBToaster / F-IVM~\cite{dbsp2023,dbtoaster2012,fivm2023} & Nonmonotone query maintenance, higher-order deltas, and incremental statistics & Finite-horizon information requirements and canonical summary repair beyond dynamic antijoin maintenance\\[4pt]
+PrIU~\cite{priu2020} & Provenance-based incremental regression updates & Curation-induced admissions and their exact finite-horizon information requirements\\[4pt]
+Continual ridge / graph repair~\cite{quan2026,gaur2026} & Exact signed moment updates and downstream re-solves & Recover endogenous admissions without rereading discarded retained payloads\\[4pt]
+History independence / retroactivity~\cite{cohen2023,kaplan2026} & State/history semantics and separation from transcript privacy & A specific canonical finite-horizon summary, not a new privacy definition\\[4pt]
+Ginart et al. (2019)~\cite{ginart2019} & Efficient deletion and Q-kmeans stability/fallback & Any new refit certificate must improve or specialize this meaningfully\\[4pt]
+Ticketed / central unlearning~\cite{ghazi2023,cherapanamjeri2025} & Memory models and bounded-deletion upper/lower bounds, including randomized decoding arguments & Blocker-specific query dimension and a constant-accuracy ridge separation at adjacent budgets\\[4pt]
+Certified removal~\cite{guo2020} & Convex residual-based removal guarantees & Correctly incorporate deletion-induced additions and curation error\\[4pt]
+SemDeDup / D4 / text deduplication~\cite{semdedup,d4,lee2022} & Semantic curation and its NLP benefits & Counterfactual deletion effect and exact/approximate repair, with algorithm-faithful oracles\\
+\bottomrule
+\end{longtable}
+
+\textbf{Theoretical contribution statement, subject to external novelty review.} We characterize the finite-budget counterfactual statistic family of a fixed semantic-suppression curator, give a canonical repair algorithm within a sharp factor two of optimal linear statistic storage, and prove an adjacent-budget memory separation for fixed-distribution prediction fidelity and retained-objective ridge accuracy. Structural rank computation and the source extension make the characterization measurable; end-to-end solving costs are explicit. Certified envelopes form a conditional supporting module. Empirical NLP consequences remain to be established.
+
+Do not advertise the blocker test, Boolean expansion, Newton/CG/ridge formulas, incidence rank, or deletion-induced additions alone as a major original theorem. Our selection is expressible as a retained-record antijoin against surviving blockers; positive output changes after deletion are standard nonmonotone-query behavior. Bounded-deletion memory complexity is already studied in Sections 5--6 of~\cite{cherapanamjeri2025}. The candidate contribution is the blocker-specific finite-horizon information characterization and algorithmic contract, with the fixed-threshold, bounded-label learner obstruction. An argument of the form ``we use polynomials for deletion'' or ``we update ridge after additions'' is insufficient. Literature checks through 3 October 2026 did not establish an identical treatment of this complete specialization; they do not certify novelty.
+
+\section{Experiments that actually test this theory}
+\textbf{First audit: no large-model training.} Start with a manageable text corpus containing natural near-duplicates and source identifiers. A public news corpus with syndication or a documented web-text subset is preferable to synthetic paraphrases alone. Use classification corpora for controlled label-dependent tests, and keep natural-text and constructed stress tests separate. The examples below are designs, not completed measurements.
+
+For each frozen-curation configuration, measure the distribution of $b_v$, sizes of blocker-signature groups, $|E_k|$, sparse coefficient-key counts, the full rank curve using Theorem~\ref{thm:profile}, and source-collapsed blocker counts. Report random-record, random-source, exclusively unselected, and targeted high-amplification requests. A targeting heuristic is not an optimal adversarial audit; the hardness result explains why.
+
+\textbf{Oracles and baselines.}
+\begin{enumerate}
+\item Full raw-data rerun with refitted curator and retrained model.
+\item Fixed-curator rerun with retrained model: the exact theorem's oracle.
+\item Frozen-selection retraining $A(C(D)\minus F)$: isolates the target mismatch.
+\item Exact blocker-count/antijoin repair with raw eligible payloads and ridge updates: the strong incremental-maintenance baseline.
+\item Indexed polynomial-statistic repair with the moment-only ridge decoder, and the rank-optimal scanning baseline.
+\item Signed convex Newton repair, with a residual certificate and fallback.
+\end{enumerate}
+Match data, thresholds, seeds/order contracts, regularization normalization, and training tolerances. Compare each method against the oracle it claims to reproduce.
+
+\textbf{Outcomes.} Measure corpus precision/recall against the oracle, additions, actual selected removals, gradient change, parameter discrepancy, prediction disagreement, held-out loss, and task metrics such as macro-F1. Stratify additions by label disagreement, source, language/domain, and similarity to their former blockers. The transport analysis predicts that semantic churn without task-gradient change may have little learning impact. Class/group shifts are possible, not asserted in advance.
+
+\textbf{Costs.} Report initial curation and summary construction, metadata bytes, payload or embedding bytes, statistic-vector bytes, request query time, canonical state-update time, matrix-solve time, and amortized total time over a declared request sequence. State the memory budget and whether retained raw data can be reread. A fast model query with an expensive state rewrite is not a fast complete deletion procedure.
+
+\textbf{Three decisive plots.} (i) Allowed cumulative budget versus summary bytes and query rank; (ii) newly admitted documents versus actual gradient/model change; (iii) savings versus full-refit disagreement and fallback rate. The star construction predicts a budget transition; the real-data question is whether blocker-signature structure produces a useful regime before storage approaches per-record retention.
+
+\paragraph{Publication gates.}
+\begin{itemize}
+\item Continue if naturally occurring excluded-record/source withdrawals introduce retained information that measurably changes the retraining target and if the theory predicts this effect.
+\item Strengthen the paper if a budgeted summary achieves a real space--repair advantage after accounting for its construction and state maintenance.
+\item Narrow the claim if full refitting frequently invalidates the fixed-graph contract. An honest frozen-curator paper may still work, but it needs a clear deployment motivation.
+\item Stop or redirect if effects are confined to artificial graphs, if almost all additions are task-equivalent copies, or if the algorithm reduces to standard anti-join maintenance plus an uncompetitive cache.
+\end{itemize}
+
+\section{Finalized theory specification and submission boundary}
+The third pass closes the main quantitative gaps: fast summary storage is within a sharp factor two of the linear optimum; exact ridge solving is included in the work bound; the storage obstruction holds on one fixed prediction distribution and has a matching query-information tradeoff; and fixed certified graph envelopes produce a computable curation-mismatch certificate. These statements have complete arguments and independent internal checks. They are not externally peer-reviewed results or established novelty claims.
+
+\begin{center}\small
+\begin{tabular}{p{0.24\linewidth}p{0.67\linewidth}}
+\toprule
+Component & Final contract\\\midrule
+Activation & $S_F=\{v\notin F:B(v)\subseteq F\}$ for fixed earlier-raw-neighbor suppression\\[3pt]
+Exact state and learner & Truncated statistic coefficients repair by substitution and horizon decrement; ridge decodes exactly in exact arithmetic\\[3pt]
+Efficient repair & Indexed work $O(Q+\Phi_0+sM_0)$ plus rank-sensitive moment-only ridge solving; explicit construction and export costs\\[3pt]
+Information dimension & Structural rank curve and source rank; $M\le2r$ for the fast method; a slower rank-optimal canonical baseline\\[3pt]
+Approximation limits & Constant-error fixed-distribution prediction lower bound and a matching query-summary information--distortion benchmark\\[3pt]
+Numerical and curation errors & Explicit solve/derivative error allowances; sharp three-count mismatch certificate under uniform graph envelopes\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Chosen primary theorem setting.} Use fixed text embeddings, a fixed partition or globally defined edge rule, fixed identifier priorities, strict nonnegative similarity threshold, cumulative record or partition-source deletion, and regularized ridge regression. State equality is equality of the designated abstract retained-data summary, modulo implementation handles. The fast method is within factor two of linear statistic-coordinate optimality; its total metadata and bit costs remain explicit. Real arithmetic, finite-bit information, and practical floating-point error are stated separately.
+
+\textbf{Supporting settings.} Smooth strongly convex training receives parameter/objective certificates. The graph-envelope module gives a cheap comparison after uniformly valid envelopes are established; certifying tight envelopes for arbitrary reclustering is outside the core. The covering-code benchmark characterizes query information and does not provide canonical state erasure or an efficient practical codec. These are supporting results, not replacements for the exact ridge state theorem.
+
+\textbf{What remains before an ACL submission.} The outstanding core work is empirical: quantify natural-text activation, task-relevant target changes, and total storage/repair cost against both fixed-curator and full-refit oracles. External novelty review and independent proof review remain normal publication requirements. Simultaneously rank-optimal values and the fast indexed update bound, overlapping source ownership, efficient general reclustering, nonconvex fine-tuning, and whole-machine history-independent erasure are deliberately excluded rather than left as gaps inside a claimed theorem.
+
+The paper can now be organized around \emph{Unlearning What Was Never Trained: Counterfactual Semantic Curation under a Deletion Budget}. Its central claim is that a curator's blocker structure determines both what retained information can enter training after deletion and how much of that information must remain recoverable. The theory stack is closed for the chosen contract; usefulness for NLP is the remaining decisive test.
+
+\appendix
+\section{Algorithm specification}\label{app:algorithms}
+\textbf{Build$(D,k)$:}
+\begin{enumerate}
+\item Construct or receive the fixed embedding/partition/priority contract and compute each blocker set $B(v)$.
+\item Initialize a sparse map of statistic vectors $\alpha$.
+\item For each $v$ with $|B(v)|\le k$, add $t(v)$ to key $B(v)$.
+\item If $|B(v)|+1\le k$, subtract $t(v)$ from key $B(v)\cup\{v\}$.
+\item Canonicalize the map (combine identical keys and remove zeros). Retain only the declared state. For ridge, compute the model from $\alpha_\varnothing$.
+\end{enumerate}
+\textbf{Query$(\alpha,F)$:} Sum coefficients indexed by subsets of $F$ and decode the sufficient statistics into the prescribed model. This operation alone does not erase the old state.
+
+\textbf{ScanDelete$(\alpha,k,F)$, a simple reference oracle:}
+\begin{enumerate}
+\item Check that the request contains only current records and $r=|F|\le k$.
+\item For every current key $J$, compute $K=J\minus F$. If $|K|\le k-r$, add $\alpha_J$ to a new map at $K$.
+\item Canonicalize the new map, replace the old map, remove deleted identifiers from private membership metadata, and set remaining horizon to $k-r$.
+\item Decode the new constant coefficient into the model. Apply the empty-set convention if needed.
+\end{enumerate}
+This scanning oracle is not the efficient implementation. The indexed algorithm of Section~\ref{sec:indexed}, implemented in \texttt{algorithm\_round2.py}, mutates only incident keys and the expired degree bucket. It prevalidates the complete request, rejects unknown identifiers and over-budget fresh requests atomically, and treats repeated or already-deleted identifiers as no-ops. Source-level requests use source variables after the idempotent simplification in Section~\ref{sec:sources}. A public identifier universe and current membership determine retry behavior without a private deletion-history log.
+
+\textbf{Rank-optimal storage versus fast redundant storage.} Let $A=CB$ where $B$ is a row basis of the coefficient operator, and store $z=Bt$. Let $R_F$ be canonical substitution and truncation. The retained operator padded by forgotten zero columns is $A'=R_FA$. If $H'$ selects a row basis of $A'$, then
+\[
+ z'=H'R_FCz
+\]
+is a new rank-optimal sketch. This proves transformability without original statistics, but a dense application costs $O(sr'r)$ plus basis/metadata work. It does not inherit the indexed sparse update bound. In the incidence representation, a row basis omits one node per ungrounded component and retains every nonground node in grounded components; the omitted coefficient is minus the others' sum. Reconstructing these coefficients repeatedly can still require nonlocal work.
+
+\subsection{A canonical rank-optimal scanning baseline}
+The basis formula can be realized with explicit current metadata. At horizon $h$, retain current membership and the sorted blocker lists of only eligible records $E_h=\{v:|B(v)|\le h\}$. A currently ineligible surviving record remains ineligible after $r$ deletions because $|B(v)\minus F|\ge|B(v)|-r>h-r$. Hence updating these lists by deletion and dropping newly ineligible owners equals rebuilding eligible metadata from retained data. Ineligible owners' IDs may still occur as blockers in eligible lists; their blocking role is not discarded. The same argument applies to distinct blocker-source lists after removing same-source zero columns.
+
+Build the incidence components from these current lists. In each ungrounded component omit the coefficient of its lexicographically least key; retain every nonground coefficient in grounded components. Recover an omitted value as minus the sum of the others in its component. This stores exactly $r$ vector coordinates in the worst case and is a canonical row-basis choice.
+
+For a batch: reconstruct coefficients; specialize and truncate once; update eligible metadata; rebuild components; store the new canonical basis and discard temporary values. Every resulting object equals a fresh retained-data build. No original graph or original statistic values are required. Let $e=|E_h|$ and $D_h=\sum_{v\in E_h}(1+|B(v)|)$. Sorted tuples, interned integer disjoint-set nodes, and one-pass component minima give expected batch work
+\[
+ O(Q+D_h+e\alpha(e)+sr),
+\]
+where $p\le2r$ bounds reconstruction/merging and new rank is at most old rank. Metadata costs $O(D_h)$ plus membership, and statistic workspace is $O(sr)$. Full exports and model solves are separate. This implementation may rescan all eligible metadata per batch and therefore does not inherit the indexed method's cumulative bound. The two proved options are sharp factor-two statistic storage with fast updates, or optimal linear statistic storage with explicitly charged reconstruction.
+
+\section{Complete information--distortion argument}\label{app:coding}
+This appendix proves Theorem~\ref{thm:distortion} under its fixed-query, public-randomness contract. All codebook construction, search, and public metadata are outside the hidden-label information count; this is an information-theoretic benchmark, not a practical unlearning codec.
+
+\textbf{Converse.} Project a released predictor onto $f_i$ by
+$\widehat Y_i=\langle\widehat f_i,f_i\rangle/\|f_i\|^2$ and clip to $[0,1]$. Its squared bit error is at most the normalized prediction error. For uniform independent hidden bits, the posterior $p_i=\Pr(Y_i=1\mid M,R)$ has minimum conditional squared error $p_i(1-p_i)$. Thus their mean posterior variance is at most $D$.
+
+The function $g(v)=h_2((1-\sqrt{1-4v})/2)$ is increasing and concave on $[0,1/4]$. For completeness, write $v=q(1-q)$ with $q\le1/2$. The sign of the derivative of $g'(v)$ is the sign of
+\[
+ -\frac{1-2q}{q(1-q)}+2\log\frac{1-q}{q}.
+\]
+Putting $t=(1-q)/q\ge1$ gives $-t+1/t+2\log t\le0$: the negative expression's opposite is zero at one and has derivative $(t-1)^2/t^2\ge0$. Continuity handles endpoints. Since $h_2(p)=g(p(1-p))$, conditional subadditivity and Jensen give
+\[
+ H(Y\mid M,R)\le\sum_i\mathbb E h_2(p_i)\le mg(D),\qquad
+ B\ge I(Y;M\mid R)\ge m[1-g(D)].
+\]
+
+\textbf{Achievability.} For fixed $D\in(0,1/4)$ set $q=q(D)$, $r=\lfloor qm\rfloor$, $q_m=r/m$, and $V(m,r)=\sum_{j=0}^r\binom mj$. A binary covering code of radius $r$ exists with size at most
+\[
+ K=\left\lceil\frac{2^m}{V(m,r)}(m\log 2+1)\right\rceil.
+\]
+Indeed choose $K$ independent uniform codewords. The expected number of uncovered strings is at most $2^m\exp(-KV/2^m)\le e^{-1}<1$, so some code covers every string. Fix it and a deterministic nearest-codeword encoder publicly.
+
+Draw a public uniform binary mask $Z$ and uniform permutation $\pi$, independently of $Y$. Encode $U=\pi(Y\mathbin{\mathrm{xor}}Z)$ by storing the index of a covering codeword $C(U)$. At query $i$, with $j=\pi(i)$, reconstruct
+$\widehat U_j=q_m+(1-2q_m)C(U)_j$ and undo mask bit $Z_i$. For each transformed string, coordinate-mean squared error is at most
+\[
+ q_m^2+(1-2q_m)\frac{d_H(U,C(U))}{m}
+ \le q_m(1-q_m)\le D.
+\]
+For every fixed $Y,i$, $U$ is uniform independently of $\pi$, so $j$ is a uniform coordinate independently of $U$. The same expected bound therefore holds for that fixed query. The code index uses
+\[
+ \lceil\log_2 K\rceil
+ \le m-\log_2 V(m,r)+O(\log m)
+ \le m[1-h_2(q_m)]+O(\log m)
+ =m\mathcal R(D)+O(\log m),
+\]
+using $\binom mr\ge2^{mh_2(r/m)}/(m+1)$ and fixed interior $D$. Return $\widehat Y_i f_i$ for hard requests; every other allowed request has zero target, because selecting a hidden record already consumes its entire $b+1$ blocker budget. At $D=0$ store all $m$ bits, and at $D=1/4$ return $f_i/2$ with no hidden-label information. For fixed failure tolerance $\delta$, a radius-$\lfloor\delta m\rfloor$ covering code with binary outputs instead gives matching $m[1-h_2(\delta)]+O(\log m)$ bits.
+
+\textbf{Ridge excess objective.} At the hard query the Hessian is
+$H_i=\lambda I+(aa^\top+w_iw_i^\top)/2$. Orthogonality yields
+\[
+ L_i(\widehat\theta)-L_i(\theta_i)
+ =\tfrac12(\widehat\theta-\theta_i)^\top H_i(\widehat\theta-\theta_i)
+ \ge\frac{(c\,w_i^\top\widehat\theta-Y_i)^2}{4c}.
+\]
+The bound is equality for $\widehat\theta=\widehat Y_iw_i/c$, giving the matching rate at $D=4c\epsilon$. For a high-probability excess-objective tolerance strictly below $1/(16c)$, nearest-bit decoding gives the same $m[1-h_2(\delta)]$ lower bound.
+
+\textbf{An ordinary-MSE variant.} If signatures occupy $d$ dimensions, give test vectors $e_0,e_1$ probability $1/4$ each and each signature-basis vector probability $1/(2d)$. This one public unit-feature distribution has full-rank second moment, and every $f_i$ has equal energy $a_d^2=(1/16+3/(8d))/c^2$. Ordinary expected MSE $\epsilon$ then has rate $\mathcal R(\epsilon/a_d^2)$, with constant zero-information threshold $a_d^2/4$. This constructed test distribution is not a claim about natural-language populations.
+
+\section{Task-sensitive envelope refinement}\label{app:envelope-moments}
+Use the notation $I,P,O,a,p,c$ of Section~\ref{sec:envelopes}. At a fixed parameter $w$, let $g_v=\nabla\ell_v(w)$, $\bar g=|O|^{-1}\sum_{v\in O}g_v$, and $C_O=\sum_{v\in O}(g_v-\bar g)(g_v-\bar g)^\top$. Define
+\[
+ H(a,p,c)=
+ \begin{cases}
+ 1/a-1/p,&2a\le p,\\
+ 1/p+(p-2a)/(p(a+c)),&2a\ge p.
+ \end{cases}
+\]
+Then every $I\subseteq T\subseteq O$ satisfies
+\[
+ \left\|\operatorname{mean}_{T}g-\operatorname{mean}_{P}g\right\|
+ \le\sqrt{\lambda_{\max}(C_O)\,H(a,p,c)}.
+\]
+To prove it, let $h_v=\mathbf1_T(v)/|T|-\mathbf1_P(v)/p$. Since $\sum h_v=0$, the gradient difference is the centered gradient matrix times $h$. With $x=|T\cap P|$ and $y=|T\minus P|$,
+\[
+ \|h\|^2=1/p+(p-2x)/(p(x+y)).
+\]
+For fixed $y$ this decreases with $x$, so choose $x=a$. The maximizing endpoint is $y=0$ if $p\ge2a$ and $y=c$ otherwise, giving $H$. The coefficient-norm maximization is exact; the covariance inequality need not be attained by a particular gradient set.
+
+For usable record-local statistics, fix an external reference $w_0$ and assume individual gradients are $L$-Lipschitz between $w_0$ and $w$. The mismatch at $w$ is at most
+\[
+ \sqrt{\lambda_{\max}(C_O(w_0))H(a,p,c)}
+ +2L\|w-w_0\|\Delta.
+\]
+The correction follows from applying the TV bound to $g_v(w)-g_v(w_0)$. The outer count summary can be enriched with $g_v(w_0)$ and its second moment. A cheaper trace bound replaces $\lambda_{\max}(C_O)$ by $\operatorname{tr}(C_O)$ and requires only count, $d$ gradient coordinates, and $\|g_v(w_0)\|^2$ per statistic vector; computing the trace from sums costs $O(d)$. Take the minimum with the count/diameter certificate when both apply. A historically trained anchor is not automatically canonical retained-data state.
+
+\section{Reproducibility and verification limits}
+The accompanying scripts use integer statistics for exact polynomial and sequential-state checks, rational/binary rank checks, and numerical ridge solves for model comparison. Exact enumerations are finite bug-finding checks, not proof substitutes. No neural model was trained and no NLP dataset was downloaded for this note.
+
+With seed 20261003, verification passed for all 1,100 ordered graphs on zero through five vertices and 6,505 graph/horizon pairs. It checked 117,940 query-indicator vectors, 117,940 canonical sequential updates, 39,030 modular rank equalities over three finite fields, 1,100 full-horizon rank identities, and 368 star/clique rank examples through 24 vertices. On 300 random graphs, 7,200 ridge queries and 965 sequential ridge-state updates passed. The largest absolute ridge-parameter discrepancy was $6.56\times10^{-15}$. These counts concern the core algebra; the storage lower-bound proof and full-refit certificate are not corpus experiments.
+
+The second-pass indexed implementation passed all 4,301 horizon-limited ordered deletion sequences on the 76 ordered graphs through four vertices, with 12,821 intermediate retained-data rebuild comparisons and as many retry checks. A further 200 random graphs and six adversarial constructions checked cancellation, pruning, batch order, and invalid-request atomicity. For 2,048 edgeless records and 128 deletions, it used 128 key-shrink events and 2,048 total incidence removals, versus 254,144 key visits for the scanning oracle. For a 256-record clique at horizon 128, tuple work was 357,760, exactly the potential $\Phi_0$: sparse-key costs cannot be ignored. These are operation counts, not end-to-end NLP speedups.
+
+Independent structural checks used 240 random ordered graphs: 2,160 reduced-signature rank comparisons over each of the rationals and $\mathbb F_2$, 659 source-rank comparisons over each field, 2,742 source query/rebuild comparisons, 8,117 source path-independence checks, and 531 comparisons with the strict nonnegative-threshold triangular suppression rule. A negative-threshold counterexample confirms the stated code-equivalence boundary. The lower-bound construction was checked on 32 binary-label assignments, 92 low-budget requests, and 160 indexed high-budget targets; the maximum shared-embedding ridge discrepancy was $6.80\times10^{-17}$. This verifies finite geometry/optimizer calculations, not the entropy or asymptotic-dimension proofs.
+
+\textbf{Third-pass checks.} The independent generic-map audit passed 2,000 arbitrary vector-valued Boolean-polynomial trials and 2,805 intermediate cumulative-update comparisons. The compressed baseline passed 22,290 exact rebuild comparisons, 8,165 complete deletion sequences, 19,515 field-rank checks, and 360 larger document/source sequences. Its fixed-cosine sharpness example reaches $M/r=4097/2080$ at 64 anchors. The moment-only decoder matched rational Gaussian elimination at all 442 releases on 120 graphs, with 407 warm-start checks and 320 floating residual/conditioning cases. Floating checks illustrate the bounds; they are not interval-certified computations.
+
+The new prediction/coding checks cover 24,576 exhaustive mask/permutation coordinate cases and 1,400 quadratic-objective comparisons. The envelope module passed 15,812 sharp-TV comparisons, 11,134 interval-realizability checks, 648 coefficient-norm maximizations, 4,665 gradient bounds, and 2,000 score-drift checks. Complete counts, assumptions, and executable commands are in the accompanying README and JSON reports. Classical entropy, coding, and CG arguments are proved in the text; finite enumerations do not establish their universal validity or the paper's novelty.
+
+\begin{thebibliography}{99}\small
+\bibitem{semdedup} Abbas, A., Tirumala, K., Simig, D., Ganguli, S., and Morcos, A. S. (2023). \emph{SemDeDup: Data-efficient learning at web-scale through semantic deduplication}. \href{https://arxiv.org/abs/2303.09540}{arXiv:2303.09540}.
+\bibitem{semcode} Meta/Facebook Research. \emph{SemDeDup official implementation, semdedup.py}. Inspected 3 October 2026. \url{https://github.com/facebookresearch/SemDeDup/blob/main/semdedup.py}. The analyzed rule is the upper-triangle column maximum followed by a threshold test.
+\bibitem{d4} Tirumala, K., Simig, D., Aghajanyan, A., and Morcos, A. S. (2023). \emph{D4: Improving LLM Pretraining via Document De-Duplication and Diversification}. \href{https://arxiv.org/abs/2308.12284}{arXiv:2308.12284}.
+\bibitem{lee2022} Lee, K., Ippolito, D., Nystrom, A., Zhang, C., Eck, D., Callison-Burch, C., and Carlini, N. (2022). \emph{Deduplicating Training Data Makes Language Models Better}. ACL. \url{https://aclanthology.org/2022.acl-long.577/}.
+\bibitem{cao2015} Cao, Y., and Yang, J. (2015). \emph{Towards Making Systems Forget with Machine Unlearning}. IEEE Symposium on Security and Privacy. \url{https://www.ieee-security.org/TC/SP2015/papers-archived/6949a463.pdf}.
+\bibitem{arcane} Yan, H., Li, X., Guo, Z., Li, H., Li, F., and Lin, X. (2022). \emph{ARCANE: An Efficient Architecture for Exact Machine Unlearning}. IJCAI. \url{https://www.ijcai.org/proceedings/2022/0556.pdf}. See Section 3.2 for the unselected-record protocol.
+\bibitem{mirzasoleiman2017} Mirzasoleiman, B., Karbasi, A., and Krause, A. (2017). \emph{Deletion-Robust Submodular Maximization: Data Summarization with ``the Right to be Forgotten''}. ICML. \url{https://proceedings.mlr.press/v70/mirzasoleiman17a.html}.
+\bibitem{kazemi2018} Kazemi, E., Zadimoghaddam, M., and Karbasi, A. (2018). \emph{Scalable Deletion-Robust Submodular Maximization: Data Summarization with Privacy and Fairness Constraints}. ICML. \url{https://proceedings.mlr.press/v80/kazemi18a.html}.
+\bibitem{green2007} Green, T. J., Karvounarakis, G., and Tannen, V. (2007). \emph{Provenance Semirings}. PODS. \url{https://www.cs.ucdavis.edu/~green/papers/pods07.pdf}.
+\bibitem{amsterdamer2011} Amsterdamer, Y., Deutch, D., and Tannen, V. (2011). \emph{Provenance for Aggregate Queries}. PODS. \href{https://arxiv.org/abs/1101.1110}{arXiv:1101.1110}.
+\bibitem{ginart2019} Ginart, A., Guan, M., Valiant, G., and Zou, J. (2019). \emph{Making AI Forget You: Data Deletion in Machine Learning}. NeurIPS. \url{https://papers.neurips.cc/paper/2019/file/cb79f8fa58b91d3af6c9c991f63962d3-Paper.pdf}.
+\bibitem{guo2020} Guo, C., Goldstein, T., Hannun, A., and van der Maaten, L. (2020). \emph{Certified Data Removal from Machine Learning Models}. ICML. \url{https://proceedings.mlr.press/v119/guo20c.html}.
+\bibitem{cherapanamjeri2025} Cherapanamjeri, Y., et al. (2025). \emph{The Space Complexity of Learning-Unlearning Algorithms}. COLT. \url{https://proceedings.mlr.press/v291/cherapanamjeri25b.html}.
+\bibitem{assadi2019} Behnezhad, S., Derakhshan, M., Hajiaghayi, M., Stein, C., and Sudan, M. (2019). \emph{Fully Dynamic Maximal Independent Set with Polylogarithmic Update Time}. FOCS. \href{https://arxiv.org/abs/1909.03478}{arXiv:1909.03478}.
+\bibitem{dhulipala2026} Blelloch, G., Brady, A., Dhulipala, L., Fineman, J., and Lo, J. (2026). \emph{Parallel Batch-Dynamic Maximal Independent Set}. \href{https://arxiv.org/abs/2604.07515}{arXiv:2604.07515}.
+\bibitem{jha2026} Jha, A., Khatua, A., Allouah, Y., and Koyejo, S. (2026). \emph{What to Forget in Unlearning? Forget Set Curation for Language Models}. \href{https://arxiv.org/abs/2608.14855}{arXiv:2608.14855}.
+\bibitem{dbtoaster2012} Ahmad, Y., Kennedy, O., Koch, C., and Nikoli\'{c}, M. (2012). \emph{DBToaster: Higher-order Delta Processing for Dynamic, Frequently Fresh Views}. PVLDB 5(10), 968--979. \url{https://vldb.org/pvldb/vol5/p968_yanifahmad_vldb2012.pdf}.
+\bibitem{fivm2023} Kara, A., Nikoli\'{c}, M., Olteanu, D., and Zhang, H. (2023). \emph{F-IVM: Analytics over Relational Databases under Updates}. \href{https://arxiv.org/abs/2303.08583}{arXiv:2303.08583}.
+\bibitem{priu2020} Wu, Y., Tannen, V., and Davidson, S. B. (2020). \emph{PrIU: A Provenance-Based Approach for Incrementally Updating Regression Models}. SIGMOD, 447--462. \href{https://arxiv.org/abs/2002.11791}{arXiv:2002.11791}.
+\bibitem{ghazi2023} Ghazi, B., Kamath, P., Kumar, R., Manurangsi, P., Sekhari, A., and Zhang, C. (2023). \emph{Ticketed Learning-Unlearning Schemes}. COLT, PMLR 195, 5110--5139. \url{https://proceedings.mlr.press/v195/ghazi23a.html}.
+\bibitem{nayak1999} Nayak, A. (1999). \emph{Optimal lower bounds for quantum automata and random access codes}. FOCS. \href{https://arxiv.org/abs/quant-ph/9904093}{arXiv:quant-ph/9904093}. The classical binary-entropy argument used here is a standard random-access-code lower-bound method.
+\bibitem{dbsp2023} Budiu, M., Chajed, T., McSherry, F., Ryzhyk, L., and Tannen, V. (2023). \emph{DBSP: Automatic Incremental View Maintenance for Rich Query Languages}. PVLDB 16(7), 1601--1614. \url{https://www.vldb.org/pvldb/vol16/p1601-budiu.pdf}.
+\bibitem{quan2026} Quan, Y., Wu, W., and Montana, G. (2026). \emph{Exact Federated Continual Unlearning for Ridge Heads on Frozen Foundation Models}. ECML-PKDD; arXiv version 3, 14 June 2026. \url{https://arxiv.org/abs/2603.12977v3}.
+\bibitem{gaur2026} Gaur, A., and Sharma, C. (2026). \emph{Closed-Form Node Classification with Exact Graph Unlearning}. \href{https://arxiv.org/abs/2605.25662v1}{arXiv:2605.25662v1}.
+\bibitem{cohen2023} Cohen, A., Smith, A., Swanberg, M., and Vasudevan, P. N. (2023). \emph{Control, Confidentiality, and the Right to be Forgotten}. ACM CCS. \href{https://doi.org/10.1145/3576915.3616585}{doi:10.1145/3576915.3616585}.
+\bibitem{kaplan2026} Kaplan, H., Kohen, R., Mansour, Y., Nissim, K., and Stemmer, U. (2026). \emph{Machine Unlearning as Private Retroactive Algorithms}. \href{https://arxiv.org/abs/2609.05329v1}{arXiv:2609.05329v1}.
+\bibitem{hestenes1952} Hestenes, M. R., and Stiefel, E. (1952). \emph{Methods of Conjugate Gradients for Solving Linear Systems}. Journal of Research of the National Bureau of Standards 49(6), 409--436. \url{https://math.nist.gov/~JBernal/JBernal_Cgm.html}.
+\bibitem{shannon1959} Shannon, C. E. (1959). \emph{Coding Theorems for a Discrete Source with a Fidelity Criterion}. IRE National Convention Record 7(4), 142--163. \url{https://ieeexplore.ieee.org/document/5311476}.
+\end{thebibliography}
+\end{document}

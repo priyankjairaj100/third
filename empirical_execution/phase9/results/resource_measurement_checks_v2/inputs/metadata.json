@@ -1,0 +1,18 @@
+{
+  "evidence_role": "development_engineering_only",
+  "graph_seconds": 0.0003233940005884506,
+  "priority_seed": 0,
+  "record_ids": [
+    "fixture-a",
+    "fixture-b",
+    "fixture-c",
+    "fixture-d"
+  ],
+  "source_ids": [
+    "fixture-a",
+    "fixture-b",
+    "fixture-c",
+    "fixture-d"
+  ],
+  "threshold": 0.8
+}

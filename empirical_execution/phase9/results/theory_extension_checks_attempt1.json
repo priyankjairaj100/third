@@ -1,0 +1,82 @@
+{
+  "checks": 7158,
+  "checks_by_category": {
+    "C_inverse_separation": 80,
+    "anchor_blocker_margin": 1,
+    "beta_positive_interval": 120,
+    "binary_label_beta_lower": 80,
+    "binary_label_exact_head": 80,
+    "binary_label_head_separation": 80,
+    "bound_source_unchanged_during_check": 7,
+    "chart_ball": 120,
+    "chart_reconstruction": 120,
+    "common_private_nonedge": 1,
+    "different_private_parameters_change_probe_head": 80,
+    "every_low_budget_query_has_zero_cross_moment": 1092,
+    "exact_candidate_blockers": 120,
+    "exact_unit_feature": 360,
+    "feature_cap_displacement": 120,
+    "fixed_error_range_positive": 4,
+    "fixed_forgotten_payloads": 48,
+    "full_sphere_not_only_anchor_orthogonal": 1,
+    "hard_selected_pair": 120,
+    "independent_exact_ridge_solve": 120,
+    "initial_head_zero": 48,
+    "initial_selected_anchor": 48,
+    "local_parameter_rank": 120,
+    "only_hard_queries_admit": 3036,
+    "packing_feature_ratio": 48,
+    "packing_grid_count": 48,
+    "packing_output_separation": 48,
+    "positive_beta_separation": 80,
+    "positive_factor_identifiability": 120,
+    "private_cross_bound": 1,
+    "private_match_margin": 1,
+    "rank_one_distance_identity": 80,
+    "rational_common_margin": 1,
+    "rational_pair_margin": 1,
+    "response_coordinate_bound": 120,
+    "response_upper_bound_algebra": 4,
+    "ridge_rank_one_recovery": 120,
+    "tangent_orthonormal": 120,
+    "whole_graph_preserved": 360
+  },
+  "floating_point_tolerance_used": false,
+  "rational_family_instances": 48,
+  "schema": "phase9_theory_extension_algebra_checks_v1",
+  "scope": "bounded_exact_rational_proof_software_checks_not_empirical_evidence",
+  "signature_scope": "orthogonal_signatures_only; logarithmic_signature_existence_is_proved_not_tested",
+  "source_bindings": {
+    "empirical_execution/canonical_theory_addendum.tex": {
+      "bytes": 13650,
+      "sha256": "54c933dcf5b3382824dcc2cfeee373a15435771cd79ede33d175da8339e774c2"
+    },
+    "empirical_execution/memory_theory_addendum.tex": {
+      "bytes": 20670,
+      "sha256": "a994631a07146c0de4358034d4f254ba2b79b1e184447423c57a97613c62cc02"
+    },
+    "empirical_execution/phase9/THEORY_EXTENSION.md": {
+      "bytes": 20473,
+      "sha256": "f4e3878b3af04741c321c398fbdef2edd18bd28a551f1e9cf86e1a9367b8b066"
+    },
+    "empirical_execution/phase9/check_theory_extension.py": {
+      "bytes": 15020,
+      "sha256": "44eed09670209e192408b2f62687f54be184b0af6c44e398baec9090beea8729"
+    },
+    "empirical_execution/phase9/theory_extension.tex": {
+      "bytes": 13264,
+      "sha256": "31446e70c4d6931ee97e1d87916f50385e734e7fb4666bcb7f19c71b56a0f10b"
+    },
+    "output/pdf/counterfactual_curation_theory.tex": {
+      "bytes": 109926,
+      "sha256": "8e7662935d0caf6cddede9cd12460d1362c67fddc227d8051424e4dce51d61aa"
+    },
+    "round3_lower.md": {
+      "bytes": 14818,
+      "sha256": "1ab055d3b349c4291ca244f65d42a6d3cba0d6504d836f4b77c7617af84cf511"
+    }
+  },
+  "source_snapshot": "empirical_execution/phase9/results/theory_extension_checks_attempt1_sources",
+  "status": "passed",
+  "topology_entropy_or_packing_existence_proved_by_finite_tests": false
+}
