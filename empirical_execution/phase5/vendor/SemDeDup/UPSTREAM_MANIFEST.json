@@ -1,0 +1,71 @@
+{
+  "repository": "https://github.com/facebookresearch/SemDeDup",
+  "commit": "6b4194511202c29b0e1ac8c730996777449ea2a4",
+  "retrieved_date": "2026-10-04",
+  "retrieval": "Connected GitHub repository API at pinned commit; exact Git blob SHA1 checked against tree API",
+  "license": "Creative Commons Attribution-NonCommercial 4.0 International",
+  "copyright": "Meta Platforms, Inc. and affiliates.",
+  "vendor_files_modified": false,
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "bc8f60ee50544b2dd70b4bc90e22de503aa23b317d284046a479811f2e06f396",
+      "git_blob_sha1": "fdd1be61996623799869b25e05046e89f4321c11",
+      "bytes": 19333
+    },
+    {
+      "path": "README.md",
+      "sha256": "3030a6378ebc7f7d221d76bf114f79c647f6d3b4bf7c1b5be9e04f4d73d0a538",
+      "git_blob_sha1": "2656ee76c6fdd2233a6bd3aaad2eb18e51e7d369",
+      "bytes": 7556
+    },
+    {
+      "path": "clustering/clustering.py",
+      "sha256": "204b0e554d5ca7cb6983758c57a158f0740ad0586ab6b99ca15e7506a60cda31",
+      "git_blob_sha1": "91f2ccee4df4a6964a35325a4d084fc77873b34d",
+      "bytes": 8185
+    },
+    {
+      "path": "clustering/configs/openclip/clustering_configs.yaml",
+      "sha256": "30744623fcfbfa3839c169f5bd521008f2a3dd2451b8c6fb8b24d5a5e78603a6",
+      "git_blob_sha1": "29a4a3949e8c5c9151f46bbe4cf9b76ac4c6ade4",
+      "bytes": 463
+    },
+    {
+      "path": "clustering/sort_clusters.py",
+      "sha256": "e743e76898910c3aafdf313dc364770bacc5f3cc5e7c9d2953b89e96fc20ce42",
+      "git_blob_sha1": "138fbfd03be9fde18e34914e9fdbb2ac8c366868",
+      "bytes": 13320
+    },
+    {
+      "path": "clustering/utils.py",
+      "sha256": "b9cd7f678cce1e67d3a5ec233508f5e08d34a52ef5bb134830a5859643f6af27",
+      "git_blob_sha1": "4f79e9b1f167ac39270fd0ff0eb1d52f52858056",
+      "bytes": 3497
+    },
+    {
+      "path": "constants.py",
+      "sha256": "bf0ffa1454a6b9688470ab1af2c84b86130a660e0a3777d0fc41adaeed99e78f",
+      "git_blob_sha1": "3d31880879644b15a83814229a5f57d3439ebf81",
+      "bytes": 650
+    },
+    {
+      "path": "semdedup.py",
+      "sha256": "9280d5feb84e6c65d2e24229db3ce8efc71a0ad585c41921539ccc3cc96cc293",
+      "git_blob_sha1": "4eb3bc2ea4491a602caf4ce90b1e113327015e5d",
+      "bytes": 7864
+    },
+    {
+      "path": "semdedup_conda_env.yml",
+      "sha256": "68fd91df7edd77f8b2c4a357a010c78e1d6f464f4b0a1181bf16de13abd3e2b4",
+      "git_blob_sha1": "9a8f9c9c10860d7febde7b785408a5b4f851e7e1",
+      "bytes": 1725
+    },
+    {
+      "path": "semdedup_configs.yaml",
+      "sha256": "6b371944c40da6c1b0e20b5fabcbef951e5daba3eb1f6e77c9817f5b0a53ce1f",
+      "git_blob_sha1": "8e67cf042a555109290ff00f8be213ebdd854423",
+      "bytes": 568
+    }
+  ]
+}

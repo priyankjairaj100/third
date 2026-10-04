@@ -1,0 +1,32 @@
+{
+  "schema": "ccu-task-program-1",
+  "scope": "engineering evaluator on frozen inputs; no primary promotion, no speed claim",
+  "planned_task_groups": 21,
+  "observed_task_groups": 21,
+  "planned_task_jobs": 4064,
+  "observed_task_jobs": 4064,
+  "completed_task_jobs": 0,
+  "blocked_or_other_jobs": 4064,
+  "checkpoint_rows": 0,
+  "failed_checkpoint_rows": 0,
+  "zero_admission_rows": 0,
+  "all_planned_task_cells_preserved": true,
+  "execution_integrity_passed": true,
+  "primary_study": false,
+  "run_lock_sha256": "34096420a38d7d641cfb75409798b162dbd12c87b15b9abc3cb3a40529ff1939",
+  "code_bindings": {
+    "phase5/task_program.py": "7f406e0d92b1e32418f60eb6dda76ad24084ad05674c8933f80b08186695eac2",
+    "phase5/task_metrics.py": "3ead5f662edf154d0f14b3bf7e18ae50961ac340100d1f71ff326564421917c0",
+    "phase5/convex_multioutput.py": "612619978ccf277b3d25acb8f0cb3c445100ae468d23369791d9a35c2b3a7eb2",
+    "phase3/reference_graph.py": "efc41498648f6f7f7969768fbcd050619d7ed5d6e82eafadb1b9a3a2158e9d1c",
+    "phase4/model_selection.py": "b9a73b9cc0d7a2a0531c38e7a606290df52845e3002a6d47c21cc6c3fb459434",
+    "ccu/core.py": "d89f6affd566103c65aa92f10e02ac86e394f7a1f88ff2e6b098720b8cef7df3",
+    "phase3/panels.py": "bd2409958ac9a9e27faf463b44b2f839260a3195c7cde32fb3bfb76aeb14a04b",
+    "phase3/calibration.py": "2a6ce3b19de3063f32b010ebfa19ffc4003ffc09acfc41a1ead4f74bc6c81b13",
+    "phase4/convex.py": "93a59e37ad4597b7018f07b4a49dbaba51d4b762971a2f0520f76cfa42616eb8",
+    "phase4/requests.py": "71b1d40032c64d4a058ee70b647d58a425827aeaeb2fa271037e26059bb6198d",
+    "phase5/boundary.py": "e241185365635781be3e608896afdd4a9cc0e8ee24b4f6027b8a2131a4d3ce04",
+    "phase5/statistics.py": "428c5e9ad45225df1110d677cfee33732477723e7e421b0b14a0ec065cd4b9fd",
+    "phase5/study_registry.py": "3d4419bde7efeac3654ec4aba091eab877e547d0384a147fddbcfc6ed13c72ef"
+  }
+}

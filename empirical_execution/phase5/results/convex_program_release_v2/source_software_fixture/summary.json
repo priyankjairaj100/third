@@ -1,0 +1,20 @@
+{
+  "audit_json_output_outside_method_service_times": true,
+  "checkpoint_rows": 2,
+  "evaluation_scope": "algebraic software fixture only; no corpus, native source or empirical evidence",
+  "executed_trajectories": 1,
+  "failures": [],
+  "joint_certificates": 9,
+  "lock_sha256": "e3a7aff180737fe1b609203f7ab4e447fe69181429d40cb795c2dadd62f43b8e",
+  "max_certificate_radius_display": 1.9611968291087482e-12,
+  "method_releases": 6,
+  "missing_trajectories": 0,
+  "planned_trajectories": 1,
+  "primary_study_started": false,
+  "process_isolation_claim": false,
+  "scalar_certificates": 18,
+  "semantic_quality_established": false,
+  "source_authenticity_verified": false,
+  "speedup_claim": false,
+  "status": "completed_engineering"
+}

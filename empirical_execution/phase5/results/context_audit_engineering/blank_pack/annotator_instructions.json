@@ -1,0 +1,43 @@
+{
+  "status": "blank_local_preparation_not_dispatched",
+  "independence": "Three distinct fluent humans independently; no model-generated answers or reused pair judgments.",
+  "blinding": "Methods, arm, scores, labels, outcomes, source/record IDs and sampling weights are hidden.",
+  "questions": {
+    "distinct_information": [
+      "yes",
+      "no",
+      "uncertain"
+    ],
+    "consequential_distinction": [
+      "yes",
+      "no",
+      "uncertain"
+    ],
+    "distinction_types": [
+      "entity",
+      "number",
+      "negation",
+      "time",
+      "assertion",
+      "other"
+    ],
+    "task_relevance": [
+      "could_matter",
+      "unlikely_to_matter",
+      "uncertain"
+    ]
+  },
+  "context_limits": "Character limits fixed in manifest. Context-complete=false means the original neighborhood/target is not fully shown. Judge only displayed information.",
+  "empty_comparison": "If comparison_available=false, mark skipped and explain unavailable comparison; never infer novelty.",
+  "skip_policy": "Offensive/toxic/disturbing text may be skipped. Preserve skips, uncertainty, missingness and truncation. Never refill or impute.",
+  "missingness_analysis": "Report weighted response/skip/truncation rates by audit/corpus. Full-frame novelty rates require explicit missing-outcome bounds, not complete-case claims.",
+  "interpretation": "Former neighborhood is not all prior selected data. Nearest selected is one current text and excludes the target; neither proves global novelty.",
+  "before_dispatch": [
+    "recruitment and fluency",
+    "fair payment and duration",
+    "consent and withdrawal",
+    "permission for protected text",
+    "content protections"
+  ],
+  "release": "Do not redistribute publisher article bodies."
+}

@@ -1,0 +1,268 @@
+[
+  {
+    "job_id": "B_relevance/civil_comments/reused-82/native/R000",
+    "group_id": "B_relevance/civil_comments/reused-82/native",
+    "arm": "R",
+    "trajectory_id": "R000",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "B_relevance/civil_comments/reused-82/native/R001",
+    "group_id": "B_relevance/civil_comments/reused-82/native",
+    "arm": "R",
+    "trajectory_id": "R001",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "B_relevance/civil_comments/reused-82/native/U000",
+    "group_id": "B_relevance/civil_comments/reused-82/native",
+    "arm": "U",
+    "trajectory_id": "U000",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "B_relevance/civil_comments/reused-82/native/A000",
+    "group_id": "B_relevance/civil_comments/reused-82/native",
+    "arm": "A",
+    "trajectory_id": "A000",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "B_relevance/civil_comments/reused-82/native/R005",
+    "group_id": "B_relevance/civil_comments/reused-82/native",
+    "arm": "R",
+    "trajectory_id": "R005",
+    "status": "blocked_missing_frozen_path",
+    "message": "'R005'"
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/lexical-cross-128-64/R000",
+    "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-128-64",
+    "arm": "R",
+    "trajectory_id": "R000",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/lexical-cross-128-64/R001",
+    "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-128-64",
+    "arm": "R",
+    "trajectory_id": "R001",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/lexical-cross-128-128/R000",
+    "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-128-128",
+    "arm": "R",
+    "trajectory_id": "R000",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/lexical-cross-128-128/R001",
+    "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-128-128",
+    "arm": "R",
+    "trajectory_id": "R001",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/lexical-cross-256-64/R000",
+    "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-256-64",
+    "arm": "R",
+    "trajectory_id": "R000",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/lexical-cross-256-64/R001",
+    "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-256-64",
+    "arm": "R",
+    "trajectory_id": "R001",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/lexical-cross-256-128/R000",
+    "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-256-128",
+    "arm": "R",
+    "trajectory_id": "R000",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/lexical-cross-256-128/R001",
+    "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-256-128",
+    "arm": "R",
+    "trajectory_id": "R001",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/priority-1/R000",
+    "group_id": "G_boundary/civil_comments/reused-82/priority-1",
+    "arm": "R",
+    "trajectory_id": "R000",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/priority-1/R001",
+    "group_id": "G_boundary/civil_comments/reused-82/priority-1",
+    "arm": "R",
+    "trajectory_id": "R001",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/priority-2/R000",
+    "group_id": "G_boundary/civil_comments/reused-82/priority-2",
+    "arm": "R",
+    "trajectory_id": "R000",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/priority-2/R001",
+    "group_id": "G_boundary/civil_comments/reused-82/priority-2",
+    "arm": "R",
+    "trajectory_id": "R001",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/threshold-minus/R000",
+    "group_id": "G_boundary/civil_comments/reused-82/threshold-minus",
+    "arm": "R",
+    "trajectory_id": "R000",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/threshold-minus/R001",
+    "group_id": "G_boundary/civil_comments/reused-82/threshold-minus",
+    "arm": "R",
+    "trajectory_id": "R001",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/threshold-plus/R000",
+    "group_id": "G_boundary/civil_comments/reused-82/threshold-plus",
+    "arm": "R",
+    "trajectory_id": "R000",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/threshold-plus/R001",
+    "group_id": "G_boundary/civil_comments/reused-82/threshold-plus",
+    "arm": "R",
+    "trajectory_id": "R001",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/projection-32/R000",
+    "group_id": "G_boundary/civil_comments/reused-82/projection-32",
+    "arm": "R",
+    "trajectory_id": "R000",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/projection-32/R001",
+    "group_id": "G_boundary/civil_comments/reused-82/projection-32",
+    "arm": "R",
+    "trajectory_id": "R001",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/lambda-lower/R000",
+    "group_id": "G_boundary/civil_comments/reused-82/lambda-lower",
+    "arm": "R",
+    "trajectory_id": "R000",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/lambda-lower/R001",
+    "group_id": "G_boundary/civil_comments/reused-82/lambda-lower",
+    "arm": "R",
+    "trajectory_id": "R001",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/lambda-higher/R000",
+    "group_id": "G_boundary/civil_comments/reused-82/lambda-higher",
+    "arm": "R",
+    "trajectory_id": "R000",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/lambda-higher/R001",
+    "group_id": "G_boundary/civil_comments/reused-82/lambda-higher",
+    "arm": "R",
+    "trajectory_id": "R001",
+    "status": "completed",
+    "checkpoints": 4,
+    "failed_checkpoints": 0
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/missing-semantic-encoder/R000",
+    "group_id": "G_boundary/civil_comments/reused-82/missing-semantic-encoder",
+    "status": "blocked_missing_input",
+    "message": "'e5'"
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/missing-semantic-encoder/R001",
+    "group_id": "G_boundary/civil_comments/reused-82/missing-semantic-encoder",
+    "status": "blocked_missing_input",
+    "message": "'e5'"
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/FP32-outside-task-slice/R000",
+    "group_id": "G_boundary/civil_comments/reused-82/FP32-outside-task-slice",
+    "status": "outside_task_executor",
+    "message": "FP32/CG state methods belong to their separate method executor; no silent FP64 substitution"
+  },
+  {
+    "job_id": "G_boundary/civil_comments/reused-82/FP32-outside-task-slice/R001",
+    "group_id": "G_boundary/civil_comments/reused-82/FP32-outside-task-slice",
+    "status": "outside_task_executor",
+    "message": "FP32/CG state methods belong to their separate method executor; no silent FP64 substitution"
+  }
+]

@@ -1,0 +1,1258 @@
+{
+  "arm": "S",
+  "checkpoint": 2,
+  "deleted_ids": [
+    "fixture-a",
+    "fixture-b",
+    "fixture-c"
+  ],
+  "methods": {
+    "certified_convex_repair": {
+      "certificate": {
+        "canonical_state_claim": false,
+        "code_sha256": "612619978ccf277b3d25acb8f0cb3c445100ae468d23369791d9a35c2b3a7eb2",
+        "elapsed_seconds": 0.0003933059997507371,
+        "input_bindings": {
+          "features": "94d75f6868a13caca68c20af0fef76a0027a380a4265777332c4f84a8295af79",
+          "targets": "14a964d51c330daa5c3c81b75ae54f37c7322e395b08201c33b512bf6c79e0aa",
+          "weights": "8746b7925fcf72764a42fc6732d6ec84b839c4785f63ac50f9983a0f123eaabb"
+        },
+        "meets_parameter_tolerance": true,
+        "objective_gap_upper": {
+          "denominator": "1",
+          "numerator": "0"
+        },
+        "objective_normalization": "sum_over_outputs_mean_over_rows",
+        "outputs": 2,
+        "parameter_error_frobenius_squared_upper": {
+          "denominator": "1",
+          "numerator": "0"
+        },
+        "parameter_error_frobenius_upper": {
+          "denominator": "1",
+          "numerator": "0"
+        },
+        "parameter_tolerance": {
+          "denominator": "100000000",
+          "numerator": "1"
+        },
+        "privacy_claim": false,
+        "radius_float_for_display_only": 0.0,
+        "records": 0,
+        "scalar_certificates": [
+          {
+            "canonical_state_claim": false,
+            "dimension": 2,
+            "elapsed_seconds": 4.815000283997506e-05,
+            "empty_target": "zero data loss; unique minimizer zero",
+            "gradient_lower": [
+              {
+                "denominator": "1",
+                "numerator": "0"
+              },
+              {
+                "denominator": "1",
+                "numerator": "0"
+              }
+            ],
+            "gradient_norm_squared_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "gradient_upper": [
+              {
+                "denominator": "1",
+                "numerator": "0"
+              },
+              {
+                "denominator": "1",
+                "numerator": "0"
+              }
+            ],
+            "input_bindings": {
+              "code_sha256": "93a59e37ad4597b7018f07b4a49dbaba51d4b762971a2f0520f76cfa42616eb8",
+              "features_sha256": "94d75f6868a13caca68c20af0fef76a0027a380a4265777332c4f84a8295af79",
+              "targets_sha256": "76a2f5019ae9afe3b13060506bc1e323b1f66d1916218d911af48e3bf8ff8065",
+              "weights_sha256": "bcd08b58e759db4e70e36d4780559986628b3360910a72ba45c34f155c9a3dcb"
+            },
+            "lambda_exact": {
+              "denominator": "4",
+              "numerator": "1"
+            },
+            "meets_parameter_tolerance": true,
+            "objective": "single-output mean fractional BCE + lambda/2 * squared Euclidean weight norm; no intercept",
+            "objective_gap_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "parameter_error_norm_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "parameter_error_squared_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "parameter_tolerance": {
+              "denominator": "100000000",
+              "numerator": "1"
+            },
+            "peak_memory_measured": false,
+            "privacy_claim": false,
+            "radius_float_for_display_only": 0.0,
+            "records": 0,
+            "resource_limits": {
+              "max_coordinates": 2000000,
+              "max_squarings": 64,
+              "max_terms": 256
+            },
+            "schema": "ccu-fractional-logistic-certificate-v1",
+            "sha256": "53021d81fb886900badc3f6f8f2276e0cf618eaec2f62d71ebd0693ad7eb659f",
+            "sigmoid_interval_precision_bits": 128,
+            "statistical_unlearning_certificate": false,
+            "status": "certified_stored_value_optimization_bound",
+            "work": {
+              "exact_feature_coordinates": 0,
+              "exact_logit_row_evaluations": 0,
+              "squarings": 0,
+              "taylor_terms": 0
+            }
+          },
+          {
+            "canonical_state_claim": false,
+            "dimension": 2,
+            "elapsed_seconds": 4.862200148636475e-05,
+            "empty_target": "zero data loss; unique minimizer zero",
+            "gradient_lower": [
+              {
+                "denominator": "1",
+                "numerator": "0"
+              },
+              {
+                "denominator": "1",
+                "numerator": "0"
+              }
+            ],
+            "gradient_norm_squared_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "gradient_upper": [
+              {
+                "denominator": "1",
+                "numerator": "0"
+              },
+              {
+                "denominator": "1",
+                "numerator": "0"
+              }
+            ],
+            "input_bindings": {
+              "code_sha256": "93a59e37ad4597b7018f07b4a49dbaba51d4b762971a2f0520f76cfa42616eb8",
+              "features_sha256": "94d75f6868a13caca68c20af0fef76a0027a380a4265777332c4f84a8295af79",
+              "targets_sha256": "76a2f5019ae9afe3b13060506bc1e323b1f66d1916218d911af48e3bf8ff8065",
+              "weights_sha256": "bcd08b58e759db4e70e36d4780559986628b3360910a72ba45c34f155c9a3dcb"
+            },
+            "lambda_exact": {
+              "denominator": "4",
+              "numerator": "1"
+            },
+            "meets_parameter_tolerance": true,
+            "objective": "single-output mean fractional BCE + lambda/2 * squared Euclidean weight norm; no intercept",
+            "objective_gap_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "parameter_error_norm_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "parameter_error_squared_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "parameter_tolerance": {
+              "denominator": "100000000",
+              "numerator": "1"
+            },
+            "peak_memory_measured": false,
+            "privacy_claim": false,
+            "radius_float_for_display_only": 0.0,
+            "records": 0,
+            "resource_limits": {
+              "max_coordinates": 2000000,
+              "max_squarings": 64,
+              "max_terms": 256
+            },
+            "schema": "ccu-fractional-logistic-certificate-v1",
+            "sha256": "39469d78584efe23621588660a1b3988cebbe7889c97f8125577c3950a167fe5",
+            "sigmoid_interval_precision_bits": 128,
+            "statistical_unlearning_certificate": false,
+            "status": "certified_stored_value_optimization_bound",
+            "work": {
+              "exact_feature_coordinates": 0,
+              "exact_logit_row_evaluations": 0,
+              "squarings": 0,
+              "taylor_terms": 0
+            }
+          }
+        ],
+        "scalar_code_sha256": "93a59e37ad4597b7018f07b4a49dbaba51d4b762971a2f0520f76cfa42616eb8",
+        "schema": "ccu-multioutput-logistic-certificate-v1",
+        "sha256": "7124db6ccea8df4c0ab3b8b5b914597459d8e78010073a92516ef0226e62bc5c",
+        "statistical_unlearning_certificate": false,
+        "total_coordinate_budget": 2000000,
+        "work": {
+          "exact_feature_coordinates": 0,
+          "exact_logit_row_evaluations": 0,
+          "squarings": 0,
+          "taylor_terms": 0
+        }
+      },
+      "cost": {
+        "accounting": {
+          "eligibility_counter": {
+            "access_capability": "horizon-eligible learner payload",
+            "allocated_array_bytes": 78,
+            "allocated_rows": 0,
+            "array_bytes_by_field": {
+              "blocker_idx": 0,
+              "blocker_ptr": 8,
+              "bucket_head": 4,
+              "bucket_next": 0,
+              "bucket_prev": 0,
+              "counts": 0,
+              "cross": 8,
+              "gram": 8,
+              "live": 0,
+              "owner": 0,
+              "owner_idx": 0,
+              "owner_ptr": 24,
+              "reverse_idx": 0,
+              "reverse_ptr": 24,
+              "selected": 0,
+              "unit_alive": 2,
+              "x": 0,
+              "y": 0
+            },
+            "compaction_fraction": 0.5,
+            "cumulative_operations": {
+              "blas_batches": 2,
+              "compaction_incidences_scanned": 2,
+              "compaction_rows_scanned": 4,
+              "compactions": 2,
+              "expired_rows": 0,
+              "fresh_units": 2,
+              "incidence_touches": 3,
+              "payload_rows_read": 2,
+              "peak_blas_workspace_array_bytes": 36,
+              "requests": 2,
+              "statistic_coordinate_additions": 4
+            },
+            "live_blocker_incidences": 0,
+            "live_payload_bytes": 0,
+            "live_payload_rows": 0,
+            "method": "B-E",
+            "peak_rss_measured_here": false,
+            "physical_erasure_claim": false,
+            "python_owned_bytes_estimate": 7181,
+            "registry_utf8_bytes": 22,
+            "remaining_horizon": 0,
+            "schema": "ccu-packed-payload-1",
+            "selected_count": 0,
+            "stale_blocker_incidences": 0,
+            "stale_csr_value_bytes": 0,
+            "stale_payload_bytes": 0,
+            "stale_payload_rows": 0,
+            "stale_row_slot_metadata_bytes": 0
+          },
+          "graph_or_curator_vectors_retained": false,
+          "logical_deletion_not_physical_erasure": true,
+          "meter": {
+            "construction_dummy_array_bytes": 36,
+            "constructor_payload_read_bytes": 72,
+            "real_payload_compaction_read_bytes": 24,
+            "real_payload_compaction_written_bytes": 24,
+            "real_payload_gathered_bytes": 48,
+            "real_payload_gathered_rows": 2
+          },
+          "peak_rss_measured": false,
+          "raw_constructor_arrays_retained": false,
+          "real_feature_dimension": 2,
+          "real_outputs": 2,
+          "real_payload_allocated_bytes": 0,
+          "real_payload_live_bytes": 0,
+          "real_payload_stale_bytes": 0,
+          "real_payload_touches_required": true
+        },
+        "head_file_sha256": "7f23df45f96f5c4c013a1fd754eb49fe33ff5d113c6464ad649a1e15a79f0ab5",
+        "head_release_bytes": 160,
+        "head_release_seconds": 0.0001372719998471439,
+        "head_released": true,
+        "maintenance": {
+          "admitted_ids": [],
+          "compacted": true,
+          "discarded_payload_records": 1,
+          "fresh_deletions": 1,
+          "input_identifiers": 1,
+          "operations": {
+            "blas_batches": 1,
+            "compaction_incidences_scanned": 0,
+            "compaction_rows_scanned": 1,
+            "compactions": 1,
+            "expired_rows": 0,
+            "fresh_units": 1,
+            "incidence_touches": 1,
+            "payload_rows_read": 1,
+            "peak_blas_workspace_array_bytes": 0,
+            "requests": 1,
+            "statistic_coordinate_additions": 2
+          },
+          "remaining_horizon": 0,
+          "removed_selected_ids": [
+            "fixture-c"
+          ],
+          "requested_units": [
+            "fixture-two"
+          ],
+          "selected_count": 0,
+          "touched_records": 0
+        },
+        "method_seconds_before_output": 0.0009009709974634461,
+        "output_hash_read_is_audit_work": true,
+        "release_total_seconds": 0.00103824299731059
+      },
+      "evaluation": {
+        "forward_coordinate_output_operations": 12,
+        "fractional_bce_mean_over_rows_and_outputs": 0.6931471805599453,
+        "fractional_target_probability_mse": 0.25,
+        "probabilities": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "rows": 3,
+        "score_logits": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "released": true,
+      "solver": {
+        "elapsed_seconds": 8.265100041171536e-05,
+        "meter": {
+          "accepted_steps": 0,
+          "backtracks": 0,
+          "complete_retained_payload_queries_charged": true,
+          "counter_units": "row counters count output-row evaluations; outputs are solved sequentially",
+          "forward_rows": 0,
+          "gradient_rows": 0,
+          "hessian_rows": 0,
+          "joint_objective_gradient_hessian_evaluations": 0,
+          "line_search_objective_evaluations": 0,
+          "linear_solves": 0,
+          "objective_rows": 0,
+          "output_fp64_head_bytes": 32,
+          "peak_rss_measured": false,
+          "resolution_gradient_evaluations": 0,
+          "resolution_gradient_progress_steps": 0,
+          "sequential_hessian_bytes": 32,
+          "sequential_promoted_feature_bytes": 0,
+          "shared_fp32_feature_bytes": 0,
+          "shared_fp64_target_bytes": 0
+        },
+        "objective": 0.0,
+        "objective_normalization": "sum_over_outputs_mean_over_rows",
+        "output_results": [
+          {
+            "elapsed_seconds": 2.0229999790899456e-06,
+            "gradient_norm_diagnostic": 0.0,
+            "iterations": 0,
+            "meter": {
+              "accepted_steps": 0,
+              "backtracks": 0,
+              "candidate_weight_bytes": 16,
+              "feature_fp32_input_bytes": 0,
+              "forward_rows": 0,
+              "gradient_rows": 0,
+              "hessian_matrix_bytes": 32,
+              "hessian_rows": 0,
+              "joint_objective_gradient_hessian_evaluations": 0,
+              "line_search_objective_evaluations": 0,
+              "linear_solves": 0,
+              "objective_rows": 0,
+              "peak_rss_measured": false,
+              "promoted_feature_workspace_bytes": 0,
+              "resolution_gradient_evaluations": 0,
+              "resolution_gradient_progress_steps": 0,
+              "selected_records": 0,
+              "target_fp64_input_bytes": 0
+            },
+            "objective": 0.0,
+            "status": "empty_target_exact_zero",
+            "trace": []
+          },
+          {
+            "elapsed_seconds": 1.1320007615722716e-06,
+            "gradient_norm_diagnostic": 0.0,
+            "iterations": 0,
+            "meter": {
+              "accepted_steps": 0,
+              "backtracks": 0,
+              "candidate_weight_bytes": 16,
+              "feature_fp32_input_bytes": 0,
+              "forward_rows": 0,
+              "gradient_rows": 0,
+              "hessian_matrix_bytes": 32,
+              "hessian_rows": 0,
+              "joint_objective_gradient_hessian_evaluations": 0,
+              "line_search_objective_evaluations": 0,
+              "linear_solves": 0,
+              "objective_rows": 0,
+              "peak_rss_measured": false,
+              "promoted_feature_workspace_bytes": 0,
+              "resolution_gradient_evaluations": 0,
+              "resolution_gradient_progress_steps": 0,
+              "selected_records": 0,
+              "target_fp64_input_bytes": 0
+            },
+            "objective": 0.0,
+            "status": "empty_target_exact_zero",
+            "trace": []
+          }
+        ],
+        "outputs": 2,
+        "schema": "ccu-multioutput-logistic-v1"
+      },
+      "status": "released",
+      "weights": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    "eligible_payload_retraining": {
+      "certificate": {
+        "canonical_state_claim": false,
+        "code_sha256": "612619978ccf277b3d25acb8f0cb3c445100ae468d23369791d9a35c2b3a7eb2",
+        "elapsed_seconds": 0.00035029400169150904,
+        "input_bindings": {
+          "features": "94d75f6868a13caca68c20af0fef76a0027a380a4265777332c4f84a8295af79",
+          "targets": "14a964d51c330daa5c3c81b75ae54f37c7322e395b08201c33b512bf6c79e0aa",
+          "weights": "8746b7925fcf72764a42fc6732d6ec84b839c4785f63ac50f9983a0f123eaabb"
+        },
+        "meets_parameter_tolerance": true,
+        "objective_gap_upper": {
+          "denominator": "1",
+          "numerator": "0"
+        },
+        "objective_normalization": "sum_over_outputs_mean_over_rows",
+        "outputs": 2,
+        "parameter_error_frobenius_squared_upper": {
+          "denominator": "1",
+          "numerator": "0"
+        },
+        "parameter_error_frobenius_upper": {
+          "denominator": "1",
+          "numerator": "0"
+        },
+        "parameter_tolerance": {
+          "denominator": "100000000",
+          "numerator": "1"
+        },
+        "privacy_claim": false,
+        "radius_float_for_display_only": 0.0,
+        "records": 0,
+        "scalar_certificates": [
+          {
+            "canonical_state_claim": false,
+            "dimension": 2,
+            "elapsed_seconds": 4.606799848261289e-05,
+            "empty_target": "zero data loss; unique minimizer zero",
+            "gradient_lower": [
+              {
+                "denominator": "1",
+                "numerator": "0"
+              },
+              {
+                "denominator": "1",
+                "numerator": "0"
+              }
+            ],
+            "gradient_norm_squared_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "gradient_upper": [
+              {
+                "denominator": "1",
+                "numerator": "0"
+              },
+              {
+                "denominator": "1",
+                "numerator": "0"
+              }
+            ],
+            "input_bindings": {
+              "code_sha256": "93a59e37ad4597b7018f07b4a49dbaba51d4b762971a2f0520f76cfa42616eb8",
+              "features_sha256": "94d75f6868a13caca68c20af0fef76a0027a380a4265777332c4f84a8295af79",
+              "targets_sha256": "76a2f5019ae9afe3b13060506bc1e323b1f66d1916218d911af48e3bf8ff8065",
+              "weights_sha256": "bcd08b58e759db4e70e36d4780559986628b3360910a72ba45c34f155c9a3dcb"
+            },
+            "lambda_exact": {
+              "denominator": "4",
+              "numerator": "1"
+            },
+            "meets_parameter_tolerance": true,
+            "objective": "single-output mean fractional BCE + lambda/2 * squared Euclidean weight norm; no intercept",
+            "objective_gap_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "parameter_error_norm_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "parameter_error_squared_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "parameter_tolerance": {
+              "denominator": "100000000",
+              "numerator": "1"
+            },
+            "peak_memory_measured": false,
+            "privacy_claim": false,
+            "radius_float_for_display_only": 0.0,
+            "records": 0,
+            "resource_limits": {
+              "max_coordinates": 2000000,
+              "max_squarings": 64,
+              "max_terms": 256
+            },
+            "schema": "ccu-fractional-logistic-certificate-v1",
+            "sha256": "cd6972634d30ebf8a20905cd9c96b2f5847981f796260a5e595395b7fd4bf26e",
+            "sigmoid_interval_precision_bits": 128,
+            "statistical_unlearning_certificate": false,
+            "status": "certified_stored_value_optimization_bound",
+            "work": {
+              "exact_feature_coordinates": 0,
+              "exact_logit_row_evaluations": 0,
+              "squarings": 0,
+              "taylor_terms": 0
+            }
+          },
+          {
+            "canonical_state_claim": false,
+            "dimension": 2,
+            "elapsed_seconds": 4.666899985750206e-05,
+            "empty_target": "zero data loss; unique minimizer zero",
+            "gradient_lower": [
+              {
+                "denominator": "1",
+                "numerator": "0"
+              },
+              {
+                "denominator": "1",
+                "numerator": "0"
+              }
+            ],
+            "gradient_norm_squared_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "gradient_upper": [
+              {
+                "denominator": "1",
+                "numerator": "0"
+              },
+              {
+                "denominator": "1",
+                "numerator": "0"
+              }
+            ],
+            "input_bindings": {
+              "code_sha256": "93a59e37ad4597b7018f07b4a49dbaba51d4b762971a2f0520f76cfa42616eb8",
+              "features_sha256": "94d75f6868a13caca68c20af0fef76a0027a380a4265777332c4f84a8295af79",
+              "targets_sha256": "76a2f5019ae9afe3b13060506bc1e323b1f66d1916218d911af48e3bf8ff8065",
+              "weights_sha256": "bcd08b58e759db4e70e36d4780559986628b3360910a72ba45c34f155c9a3dcb"
+            },
+            "lambda_exact": {
+              "denominator": "4",
+              "numerator": "1"
+            },
+            "meets_parameter_tolerance": true,
+            "objective": "single-output mean fractional BCE + lambda/2 * squared Euclidean weight norm; no intercept",
+            "objective_gap_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "parameter_error_norm_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "parameter_error_squared_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "parameter_tolerance": {
+              "denominator": "100000000",
+              "numerator": "1"
+            },
+            "peak_memory_measured": false,
+            "privacy_claim": false,
+            "radius_float_for_display_only": 0.0,
+            "records": 0,
+            "resource_limits": {
+              "max_coordinates": 2000000,
+              "max_squarings": 64,
+              "max_terms": 256
+            },
+            "schema": "ccu-fractional-logistic-certificate-v1",
+            "sha256": "6fa37202287bdfa2d995c0b1ab08dc9158badcab1b9c09aa58a9efb7f759ea3c",
+            "sigmoid_interval_precision_bits": 128,
+            "statistical_unlearning_certificate": false,
+            "status": "certified_stored_value_optimization_bound",
+            "work": {
+              "exact_feature_coordinates": 0,
+              "exact_logit_row_evaluations": 0,
+              "squarings": 0,
+              "taylor_terms": 0
+            }
+          }
+        ],
+        "scalar_code_sha256": "93a59e37ad4597b7018f07b4a49dbaba51d4b762971a2f0520f76cfa42616eb8",
+        "schema": "ccu-multioutput-logistic-certificate-v1",
+        "sha256": "7c83ad4442a01f235914831cf3cee6a93183cf2e700dfcb2a82c1861f4e68c0f",
+        "statistical_unlearning_certificate": false,
+        "total_coordinate_budget": 2000000,
+        "work": {
+          "exact_feature_coordinates": 0,
+          "exact_logit_row_evaluations": 0,
+          "squarings": 0,
+          "taylor_terms": 0
+        }
+      },
+      "cost": {
+        "accounting": {
+          "eligibility_counter": {
+            "access_capability": "horizon-eligible learner payload",
+            "allocated_array_bytes": 78,
+            "allocated_rows": 0,
+            "array_bytes_by_field": {
+              "blocker_idx": 0,
+              "blocker_ptr": 8,
+              "bucket_head": 4,
+              "bucket_next": 0,
+              "bucket_prev": 0,
+              "counts": 0,
+              "cross": 8,
+              "gram": 8,
+              "live": 0,
+              "owner": 0,
+              "owner_idx": 0,
+              "owner_ptr": 24,
+              "reverse_idx": 0,
+              "reverse_ptr": 24,
+              "selected": 0,
+              "unit_alive": 2,
+              "x": 0,
+              "y": 0
+            },
+            "compaction_fraction": 0.5,
+            "cumulative_operations": {
+              "blas_batches": 2,
+              "compaction_incidences_scanned": 2,
+              "compaction_rows_scanned": 4,
+              "compactions": 2,
+              "expired_rows": 0,
+              "fresh_units": 2,
+              "incidence_touches": 3,
+              "payload_rows_read": 2,
+              "peak_blas_workspace_array_bytes": 36,
+              "requests": 2,
+              "statistic_coordinate_additions": 4
+            },
+            "live_blocker_incidences": 0,
+            "live_payload_bytes": 0,
+            "live_payload_rows": 0,
+            "method": "B-E",
+            "peak_rss_measured_here": false,
+            "physical_erasure_claim": false,
+            "python_owned_bytes_estimate": 7181,
+            "registry_utf8_bytes": 22,
+            "remaining_horizon": 0,
+            "schema": "ccu-packed-payload-1",
+            "selected_count": 0,
+            "stale_blocker_incidences": 0,
+            "stale_csr_value_bytes": 0,
+            "stale_payload_bytes": 0,
+            "stale_payload_rows": 0,
+            "stale_row_slot_metadata_bytes": 0
+          },
+          "graph_or_curator_vectors_retained": false,
+          "logical_deletion_not_physical_erasure": true,
+          "meter": {
+            "construction_dummy_array_bytes": 36,
+            "constructor_payload_read_bytes": 72,
+            "real_payload_compaction_read_bytes": 24,
+            "real_payload_compaction_written_bytes": 24,
+            "real_payload_gathered_bytes": 48,
+            "real_payload_gathered_rows": 2
+          },
+          "peak_rss_measured": false,
+          "raw_constructor_arrays_retained": false,
+          "real_feature_dimension": 2,
+          "real_outputs": 2,
+          "real_payload_allocated_bytes": 0,
+          "real_payload_live_bytes": 0,
+          "real_payload_stale_bytes": 0,
+          "real_payload_touches_required": true
+        },
+        "head_file_sha256": "7f23df45f96f5c4c013a1fd754eb49fe33ff5d113c6464ad649a1e15a79f0ab5",
+        "head_release_bytes": 160,
+        "head_release_seconds": 0.00010408299931441434,
+        "head_released": true,
+        "maintenance": {
+          "admitted_ids": [],
+          "compacted": true,
+          "discarded_payload_records": 1,
+          "fresh_deletions": 1,
+          "input_identifiers": 1,
+          "operations": {
+            "blas_batches": 1,
+            "compaction_incidences_scanned": 0,
+            "compaction_rows_scanned": 1,
+            "compactions": 1,
+            "expired_rows": 0,
+            "fresh_units": 1,
+            "incidence_touches": 1,
+            "payload_rows_read": 1,
+            "peak_blas_workspace_array_bytes": 0,
+            "requests": 1,
+            "statistic_coordinate_additions": 2
+          },
+          "remaining_horizon": 0,
+          "removed_selected_ids": [
+            "fixture-c"
+          ],
+          "requested_units": [
+            "fixture-two"
+          ],
+          "selected_count": 0,
+          "touched_records": 0
+        },
+        "method_seconds_before_output": 0.0007864119979785755,
+        "output_hash_read_is_audit_work": true,
+        "release_total_seconds": 0.0008904949972929899
+      },
+      "evaluation": {
+        "forward_coordinate_output_operations": 12,
+        "fractional_bce_mean_over_rows_and_outputs": 0.6931471805599453,
+        "fractional_target_probability_mse": 0.25,
+        "probabilities": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "rows": 3,
+        "score_logits": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "released": true,
+      "solver": {
+        "elapsed_seconds": 4.91720020363573e-05,
+        "meter": {
+          "accepted_steps": 0,
+          "backtracks": 0,
+          "complete_retained_payload_queries_charged": true,
+          "counter_units": "row counters count output-row evaluations; outputs are solved sequentially",
+          "forward_rows": 0,
+          "gradient_rows": 0,
+          "hessian_rows": 0,
+          "joint_objective_gradient_hessian_evaluations": 0,
+          "line_search_objective_evaluations": 0,
+          "linear_solves": 0,
+          "objective_rows": 0,
+          "output_fp64_head_bytes": 32,
+          "peak_rss_measured": false,
+          "resolution_gradient_evaluations": 0,
+          "resolution_gradient_progress_steps": 0,
+          "sequential_hessian_bytes": 32,
+          "sequential_promoted_feature_bytes": 0,
+          "shared_fp32_feature_bytes": 0,
+          "shared_fp64_target_bytes": 0
+        },
+        "objective": 0.0,
+        "objective_normalization": "sum_over_outputs_mean_over_rows",
+        "output_results": [
+          {
+            "elapsed_seconds": 1.0410003596916795e-06,
+            "gradient_norm_diagnostic": 0.0,
+            "iterations": 0,
+            "meter": {
+              "accepted_steps": 0,
+              "backtracks": 0,
+              "candidate_weight_bytes": 16,
+              "feature_fp32_input_bytes": 0,
+              "forward_rows": 0,
+              "gradient_rows": 0,
+              "hessian_matrix_bytes": 32,
+              "hessian_rows": 0,
+              "joint_objective_gradient_hessian_evaluations": 0,
+              "line_search_objective_evaluations": 0,
+              "linear_solves": 0,
+              "objective_rows": 0,
+              "peak_rss_measured": false,
+              "promoted_feature_workspace_bytes": 0,
+              "resolution_gradient_evaluations": 0,
+              "resolution_gradient_progress_steps": 0,
+              "selected_records": 0,
+              "target_fp64_input_bytes": 0
+            },
+            "objective": 0.0,
+            "status": "empty_target_exact_zero",
+            "trace": []
+          },
+          {
+            "elapsed_seconds": 6.810005288571119e-07,
+            "gradient_norm_diagnostic": 0.0,
+            "iterations": 0,
+            "meter": {
+              "accepted_steps": 0,
+              "backtracks": 0,
+              "candidate_weight_bytes": 16,
+              "feature_fp32_input_bytes": 0,
+              "forward_rows": 0,
+              "gradient_rows": 0,
+              "hessian_matrix_bytes": 32,
+              "hessian_rows": 0,
+              "joint_objective_gradient_hessian_evaluations": 0,
+              "line_search_objective_evaluations": 0,
+              "linear_solves": 0,
+              "objective_rows": 0,
+              "peak_rss_measured": false,
+              "promoted_feature_workspace_bytes": 0,
+              "resolution_gradient_evaluations": 0,
+              "resolution_gradient_progress_steps": 0,
+              "selected_records": 0,
+              "target_fp64_input_bytes": 0
+            },
+            "objective": 0.0,
+            "status": "empty_target_exact_zero",
+            "trace": []
+          }
+        ],
+        "outputs": 2,
+        "schema": "ccu-multioutput-logistic-v1"
+      },
+      "status": "released",
+      "weights": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    "fresh_optimum": {
+      "certificate": {
+        "canonical_state_claim": false,
+        "code_sha256": "612619978ccf277b3d25acb8f0cb3c445100ae468d23369791d9a35c2b3a7eb2",
+        "elapsed_seconds": 0.00037103400245541707,
+        "input_bindings": {
+          "features": "94d75f6868a13caca68c20af0fef76a0027a380a4265777332c4f84a8295af79",
+          "targets": "14a964d51c330daa5c3c81b75ae54f37c7322e395b08201c33b512bf6c79e0aa",
+          "weights": "8746b7925fcf72764a42fc6732d6ec84b839c4785f63ac50f9983a0f123eaabb"
+        },
+        "meets_parameter_tolerance": true,
+        "objective_gap_upper": {
+          "denominator": "1",
+          "numerator": "0"
+        },
+        "objective_normalization": "sum_over_outputs_mean_over_rows",
+        "outputs": 2,
+        "parameter_error_frobenius_squared_upper": {
+          "denominator": "1",
+          "numerator": "0"
+        },
+        "parameter_error_frobenius_upper": {
+          "denominator": "1",
+          "numerator": "0"
+        },
+        "parameter_tolerance": {
+          "denominator": "100000000",
+          "numerator": "1"
+        },
+        "privacy_claim": false,
+        "radius_float_for_display_only": 0.0,
+        "records": 0,
+        "scalar_certificates": [
+          {
+            "canonical_state_claim": false,
+            "dimension": 2,
+            "elapsed_seconds": 4.874200021731667e-05,
+            "empty_target": "zero data loss; unique minimizer zero",
+            "gradient_lower": [
+              {
+                "denominator": "1",
+                "numerator": "0"
+              },
+              {
+                "denominator": "1",
+                "numerator": "0"
+              }
+            ],
+            "gradient_norm_squared_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "gradient_upper": [
+              {
+                "denominator": "1",
+                "numerator": "0"
+              },
+              {
+                "denominator": "1",
+                "numerator": "0"
+              }
+            ],
+            "input_bindings": {
+              "code_sha256": "93a59e37ad4597b7018f07b4a49dbaba51d4b762971a2f0520f76cfa42616eb8",
+              "features_sha256": "94d75f6868a13caca68c20af0fef76a0027a380a4265777332c4f84a8295af79",
+              "targets_sha256": "76a2f5019ae9afe3b13060506bc1e323b1f66d1916218d911af48e3bf8ff8065",
+              "weights_sha256": "bcd08b58e759db4e70e36d4780559986628b3360910a72ba45c34f155c9a3dcb"
+            },
+            "lambda_exact": {
+              "denominator": "4",
+              "numerator": "1"
+            },
+            "meets_parameter_tolerance": true,
+            "objective": "single-output mean fractional BCE + lambda/2 * squared Euclidean weight norm; no intercept",
+            "objective_gap_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "parameter_error_norm_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "parameter_error_squared_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "parameter_tolerance": {
+              "denominator": "100000000",
+              "numerator": "1"
+            },
+            "peak_memory_measured": false,
+            "privacy_claim": false,
+            "radius_float_for_display_only": 0.0,
+            "records": 0,
+            "resource_limits": {
+              "max_coordinates": 2000000,
+              "max_squarings": 64,
+              "max_terms": 256
+            },
+            "schema": "ccu-fractional-logistic-certificate-v1",
+            "sha256": "0fd53f57981bc2f290f8adc80151b4b81673a4c8471351d478141a5d1547df44",
+            "sigmoid_interval_precision_bits": 128,
+            "statistical_unlearning_certificate": false,
+            "status": "certified_stored_value_optimization_bound",
+            "work": {
+              "exact_feature_coordinates": 0,
+              "exact_logit_row_evaluations": 0,
+              "squarings": 0,
+              "taylor_terms": 0
+            }
+          },
+          {
+            "canonical_state_claim": false,
+            "dimension": 2,
+            "elapsed_seconds": 4.997300129616633e-05,
+            "empty_target": "zero data loss; unique minimizer zero",
+            "gradient_lower": [
+              {
+                "denominator": "1",
+                "numerator": "0"
+              },
+              {
+                "denominator": "1",
+                "numerator": "0"
+              }
+            ],
+            "gradient_norm_squared_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "gradient_upper": [
+              {
+                "denominator": "1",
+                "numerator": "0"
+              },
+              {
+                "denominator": "1",
+                "numerator": "0"
+              }
+            ],
+            "input_bindings": {
+              "code_sha256": "93a59e37ad4597b7018f07b4a49dbaba51d4b762971a2f0520f76cfa42616eb8",
+              "features_sha256": "94d75f6868a13caca68c20af0fef76a0027a380a4265777332c4f84a8295af79",
+              "targets_sha256": "76a2f5019ae9afe3b13060506bc1e323b1f66d1916218d911af48e3bf8ff8065",
+              "weights_sha256": "bcd08b58e759db4e70e36d4780559986628b3360910a72ba45c34f155c9a3dcb"
+            },
+            "lambda_exact": {
+              "denominator": "4",
+              "numerator": "1"
+            },
+            "meets_parameter_tolerance": true,
+            "objective": "single-output mean fractional BCE + lambda/2 * squared Euclidean weight norm; no intercept",
+            "objective_gap_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "parameter_error_norm_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "parameter_error_squared_upper": {
+              "denominator": "1",
+              "numerator": "0"
+            },
+            "parameter_tolerance": {
+              "denominator": "100000000",
+              "numerator": "1"
+            },
+            "peak_memory_measured": false,
+            "privacy_claim": false,
+            "radius_float_for_display_only": 0.0,
+            "records": 0,
+            "resource_limits": {
+              "max_coordinates": 2000000,
+              "max_squarings": 64,
+              "max_terms": 256
+            },
+            "schema": "ccu-fractional-logistic-certificate-v1",
+            "sha256": "82341ccbb65979a32fb01396fcdb1fbae41ed68347919db71203a89bb5d13c19",
+            "sigmoid_interval_precision_bits": 128,
+            "statistical_unlearning_certificate": false,
+            "status": "certified_stored_value_optimization_bound",
+            "work": {
+              "exact_feature_coordinates": 0,
+              "exact_logit_row_evaluations": 0,
+              "squarings": 0,
+              "taylor_terms": 0
+            }
+          }
+        ],
+        "scalar_code_sha256": "93a59e37ad4597b7018f07b4a49dbaba51d4b762971a2f0520f76cfa42616eb8",
+        "schema": "ccu-multioutput-logistic-certificate-v1",
+        "sha256": "3d68fea506f315740203a40ebebc356e13a02d6d0441fd7b05ff558b45fa5d46",
+        "statistical_unlearning_certificate": false,
+        "total_coordinate_budget": 2000000,
+        "work": {
+          "exact_feature_coordinates": 0,
+          "exact_logit_row_evaluations": 0,
+          "squarings": 0,
+          "taylor_terms": 0
+        }
+      },
+      "cost": {
+        "curator_rebuild_seconds": 3.2397001632489264e-05,
+        "head_file_sha256": "7f23df45f96f5c4c013a1fd754eb49fe33ff5d113c6464ad649a1e15a79f0ab5",
+        "head_release_bytes": 160,
+        "head_release_seconds": 0.00013430699982563965,
+        "head_released": true,
+        "method_seconds_before_output": 0.0005963240000710357,
+        "oracle_gather_bytes": 0,
+        "output_hash_read_is_audit_work": true,
+        "release_total_seconds": 0.0007630280015291646,
+        "retained_raw_records": 0,
+        "selected_records": 0
+      },
+      "evaluation": {
+        "forward_coordinate_output_operations": 12,
+        "fractional_bce_mean_over_rows_and_outputs": 0.6931471805599453,
+        "fractional_target_probability_mse": 0.25,
+        "probabilities": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "rows": 3,
+        "score_logits": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "released": true,
+      "solver": {
+        "elapsed_seconds": 5.575100294663571e-05,
+        "meter": {
+          "accepted_steps": 0,
+          "backtracks": 0,
+          "complete_retained_payload_queries_charged": true,
+          "counter_units": "row counters count output-row evaluations; outputs are solved sequentially",
+          "forward_rows": 0,
+          "gradient_rows": 0,
+          "hessian_rows": 0,
+          "joint_objective_gradient_hessian_evaluations": 0,
+          "line_search_objective_evaluations": 0,
+          "linear_solves": 0,
+          "objective_rows": 0,
+          "output_fp64_head_bytes": 32,
+          "peak_rss_measured": false,
+          "resolution_gradient_evaluations": 0,
+          "resolution_gradient_progress_steps": 0,
+          "sequential_hessian_bytes": 32,
+          "sequential_promoted_feature_bytes": 0,
+          "shared_fp32_feature_bytes": 0,
+          "shared_fp64_target_bytes": 0
+        },
+        "objective": 0.0,
+        "objective_normalization": "sum_over_outputs_mean_over_rows",
+        "output_results": [
+          {
+            "elapsed_seconds": 2.073000359814614e-06,
+            "gradient_norm_diagnostic": 0.0,
+            "iterations": 0,
+            "meter": {
+              "accepted_steps": 0,
+              "backtracks": 0,
+              "candidate_weight_bytes": 16,
+              "feature_fp32_input_bytes": 0,
+              "forward_rows": 0,
+              "gradient_rows": 0,
+              "hessian_matrix_bytes": 32,
+              "hessian_rows": 0,
+              "joint_objective_gradient_hessian_evaluations": 0,
+              "line_search_objective_evaluations": 0,
+              "linear_solves": 0,
+              "objective_rows": 0,
+              "peak_rss_measured": false,
+              "promoted_feature_workspace_bytes": 0,
+              "resolution_gradient_evaluations": 0,
+              "resolution_gradient_progress_steps": 0,
+              "selected_records": 0,
+              "target_fp64_input_bytes": 0
+            },
+            "objective": 0.0,
+            "status": "empty_target_exact_zero",
+            "trace": []
+          },
+          {
+            "elapsed_seconds": 1.3419994502328336e-06,
+            "gradient_norm_diagnostic": 0.0,
+            "iterations": 0,
+            "meter": {
+              "accepted_steps": 0,
+              "backtracks": 0,
+              "candidate_weight_bytes": 16,
+              "feature_fp32_input_bytes": 0,
+              "forward_rows": 0,
+              "gradient_rows": 0,
+              "hessian_matrix_bytes": 32,
+              "hessian_rows": 0,
+              "joint_objective_gradient_hessian_evaluations": 0,
+              "line_search_objective_evaluations": 0,
+              "linear_solves": 0,
+              "objective_rows": 0,
+              "peak_rss_measured": false,
+              "promoted_feature_workspace_bytes": 0,
+              "resolution_gradient_evaluations": 0,
+              "resolution_gradient_progress_steps": 0,
+              "selected_records": 0,
+              "target_fp64_input_bytes": 0
+            },
+            "objective": 0.0,
+            "status": "empty_target_exact_zero",
+            "trace": []
+          }
+        ],
+        "outputs": 2,
+        "schema": "ccu-multioutput-logistic-v1"
+      },
+      "status": "released",
+      "weights": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    }
+  },
+  "released_head_distance_checks_passed": true,
+  "selected_ids": [],
+  "trajectory": "S000"
+}

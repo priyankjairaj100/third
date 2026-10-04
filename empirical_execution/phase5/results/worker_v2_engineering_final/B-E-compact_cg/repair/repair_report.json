@@ -1,0 +1,526 @@
+{
+  "OS_page_cache_cold_claim": false,
+  "confirmatory_study_ready": false,
+  "decoder_schema": "ccu-common-ridge-decoder-1",
+  "empty_request_persistence": null,
+  "evidence_role": "development_engineering_only",
+  "input_snapshot_logical_bytes": 7124,
+  "isolation": {
+    "all_new_file_opens_denied": true,
+    "backend": "seccomp_fd_only",
+    "boundary": "after imports and own-method snapshot load; before first deletion",
+    "denied_existing_file_probes": 1,
+    "input_file_descriptors_closed_before_repair": true,
+    "kernel_denied_syscalls": [
+      2,
+      85,
+      257,
+      437,
+      304,
+      59,
+      322,
+      101,
+      310,
+      311,
+      438,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      49,
+      50,
+      53,
+      288,
+      29,
+      30,
+      31,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      56,
+      57,
+      58,
+      435,
+      425,
+      426,
+      427
+    ],
+    "malicious_native_code_security_proof": false,
+    "native_threads_at_restriction": 1,
+    "only_output_file_descriptors_opened_before_restriction": true,
+    "physical_erasure_claim": false,
+    "seccomp_thread_synchronization": "TSYNC"
+  },
+  "load_seconds": 0.0010977080019074492,
+  "loaded_native_dependencies": {
+    "files": [
+      {
+        "logical_bytes": 30894944,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7"
+      },
+      {
+        "logical_bytes": 15912,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/charset_normalizer/md.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "b19eee9ad24b8ca7c0f3734527b9e99220f2af4eb30d3f1c5ad97ab88c7632c3"
+      },
+      {
+        "logical_bytes": 290584,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/charset_normalizer/md__mypyc.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "27659680b05088ef2ca9d16c10da7dbb957db841f4b53c2f4cbb333ddaa1b2fd"
+      },
+      {
+        "logical_bytes": 2833617,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0",
+        "sha256": "c6090048eccc763522c12ef016f81da6b627cb3a044f55cf0479a839c41c0980"
+      },
+      {
+        "logical_bytes": 250985,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0",
+        "sha256": "6ed5137f412781ad7863439fb543613f620b43c32b63292a0029246162f5bbc6"
+      },
+      {
+        "logical_bytes": 25034001,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-fdde5778.so",
+        "sha256": "ee2039cf13a45e1e89f04d0cea9585657d93ffaa425594e1935161013fdf4e12"
+      },
+      {
+        "logical_bytes": 10808937,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_multiarray_umath.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "ba96467ae494babaf7c3458b09cc03c4200c2e10010860d80e452ffb8b01c8cd"
+      },
+      {
+        "logical_bytes": 539072,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/fft/_pocketfft_umath.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "e849dc89e717b2a315948dd0127786098372c7a2206cfd130fa818b73e69164d"
+      },
+      {
+        "logical_bytes": 231833,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/linalg/_umath_linalg.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "64bfb8bb8a1a09ca31f7a6e307a87b4c78a75f3489aaf3c61ed8aa4ffada9845"
+      },
+      {
+        "logical_bytes": 320144,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_bounded_integers.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "53a8bd2e993d32c304b91020970c8b67fa178e142137f525743ba92755524b84"
+      },
+      {
+        "logical_bytes": 241288,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_common.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "e7fb21cc610f6e22f1f40a365b0fe6c573132b6c22199ed21dbe51c0e7c73620"
+      },
+      {
+        "logical_bytes": 809096,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_generator.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "d7fed73c3e361b6ff683a9148b74d982f1702b1af3631e496066034cd1cba7ad"
+      },
+      {
+        "logical_bytes": 130384,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_mt19937.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "a3a98159adbf86abf95b34b4989840f0f0bfbde3a5c87ad2a3e01ea7c0428d4d"
+      },
+      {
+        "logical_bytes": 145528,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_pcg64.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "2b9bc903a5ab4f857e169e93cf59a824564f1361b1fc4ff5bb336a54ece72ba9"
+      },
+      {
+        "logical_bytes": 121968,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_philox.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "9fb7e485037c7f00aa3e4aa1056f15f7f9b964aa4f04657952194efaa9174356"
+      },
+      {
+        "logical_bytes": 91560,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_sfc64.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "62906d05604056ee4de2ce978cd9d23e0de603c80a769a648ceac74d8ab680b6"
+      },
+      {
+        "logical_bytes": 218080,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/bit_generator.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "d15c630c101e132de14d924facadf581f5e004b0974b17afa2f0dea1bcf5fe6e"
+      },
+      {
+        "logical_bytes": 619416,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/mtrand.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "70b2d9942f3d35be9f95c7bc3ba19e78e3db00e2b0a323ca02363cee9c9e128c"
+      },
+      {
+        "logical_bytes": 2714697,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy.libs/libgfortran-8f1e9814.so.5.0.0",
+        "sha256": "a95cc4ac4afad889f2d83088f46b5e6fa6cd5efd729db887e1e639147ec55b73"
+      },
+      {
+        "logical_bytes": 272193,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy.libs/libquadmath-828275a7.so.0.0.0",
+        "sha256": "71bdc2ec57ab2fc939360597968f73230426b1c6764048e62a2cb6c8d8c3a1fd"
+      },
+      {
+        "logical_bytes": 24805561,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+        "sha256": "8fb864c29cac4b25f6e2c139491ea96f2724dde42d51394f84e9c4a622e34790"
+      },
+      {
+        "logical_bytes": 210784,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/_cyutility.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "c8f23fe8fe7bb1c0e321c2c95f9f13c042f690f9bc1048afea9ac32ac5ee5fbc"
+      },
+      {
+        "logical_bytes": 95528,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/_lib/_ccallback_c.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "bbf5afe1395eb9a1a580d25c6b2af38e709070aa2661b525578dba12cbd0f6bb"
+      },
+      {
+        "logical_bytes": 175041,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/linalg/_batched_linalg.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "80a13dbbd3867c7c2e07fad4e41cb28c9e37e9a842901747a68e2916adde9784"
+      },
+      {
+        "logical_bytes": 324040,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/linalg/_cythonized_array_utils.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "e7a1dc128b814415ec9a40a373a3f983b9e54629a8489ae241c8f4742c52ead8"
+      },
+      {
+        "logical_bytes": 120648,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/linalg/_decomp_lu_cython.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "4cbc41f15710c4d24a86c6fc37c537e0b92655bee551c47dd86d11f6d21fc116"
+      },
+      {
+        "logical_bytes": 328872,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/linalg/_decomp_update.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "48a85fabe01430512aefd3749d6c9a2d519e717b678daf6979ea3d84057b9649"
+      },
+      {
+        "logical_bytes": 1032665,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/linalg/_fblas.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "0e03bbae64d3a3a947a21db865aff984afa8867fa292273faf56dfc887fa71ac"
+      },
+      {
+        "logical_bytes": 2568753,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/linalg/_flapack.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "95502d302bd1c2889c1ce7f0583c86baf06a9128e0c9c07640214dde988bbf85"
+      },
+      {
+        "logical_bytes": 122792,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/linalg/_linalg_pythran.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "271c437d186ccacad419a2b59b38d1ac434771207c612e972b9c029aec26b497"
+      },
+      {
+        "logical_bytes": 511433,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/linalg/_matfuncs_expm.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "c3b0f51595e73e1ef080b79dd420c7c5643503bc6f5998ef8a788dce37633b6e"
+      },
+      {
+        "logical_bytes": 486881,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/linalg/_matfuncs_schur_sqrtm.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "952f3db167ad104b4570458751d653a2fc7b08c9d5a093c237ba7d1ac899e263"
+      },
+      {
+        "logical_bytes": 126728,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/linalg/_solve_toeplitz.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "d250989739cbc53d5b64a15be6fe790df9020b0c488625a04859c5ee143a910e"
+      },
+      {
+        "logical_bytes": 172649,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/linalg/cython_blas.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "5a770e0b90ad7bd0ec173b3dcdb132e6da8ac24b43a976bcace543a174a412cf"
+      },
+      {
+        "logical_bytes": 580657,
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/linalg/cython_lapack.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "aaddde84bdcade6f7acddd089b857ac3daa6a17d90c6185bba7ca827375563ea"
+      },
+      {
+        "logical_bytes": 236616,
+        "path": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+        "sha256": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      {
+        "logical_bytes": 2125328,
+        "path": "/usr/lib/x86_64-linux-gnu/libc.so.6",
+        "sha256": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0"
+      },
+      {
+        "logical_bytes": 14408,
+        "path": "/usr/lib/x86_64-linux-gnu/libdl.so.2",
+        "sha256": "feee7549138dc862300b9ba9b2b02502059c838a6c0b92d2ea4c0a357e8e0b45"
+      },
+      {
+        "logical_bytes": 183024,
+        "path": "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1",
+        "sha256": "d93224d2b0dab4247598be683adca02f5cf00586f99c187579cd7e92058fb7cb"
+      },
+      {
+        "logical_bytes": 952616,
+        "path": "/usr/lib/x86_64-linux-gnu/libm.so.6",
+        "sha256": "f06f2ce1f1833df5f41cf13b6447ff07bea993ad9b27297d3428c2f70ab3f0e7"
+      },
+      {
+        "logical_bytes": 14408,
+        "path": "/usr/lib/x86_64-linux-gnu/libpthread.so.0",
+        "sha256": "4472cde19acc87a431ad1eefe9e86f8238dd1f26f8dac692cff7040474d9d085"
+      },
+      {
+        "logical_bytes": 14624,
+        "path": "/usr/lib/x86_64-linux-gnu/librt.so.1",
+        "sha256": "4b3a59575a0812a466235bc745814ca5b13825ef5f8ad5680637872ac64cc7ca"
+      },
+      {
+        "logical_bytes": 2592224,
+        "path": "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33",
+        "sha256": "1fd75fe70354a416d75aef22bcae68c47bd25d20e2d0568c30b1a9838cf62f11"
+      },
+      {
+        "logical_bytes": 14408,
+        "path": "/usr/lib/x86_64-linux-gnu/libutil.so.1",
+        "sha256": "b88de5f440af504c5a7f7fa933ee7272c44e18e4613c44b2cc6b5ca40f99d6ba"
+      },
+      {
+        "logical_bytes": 113000,
+        "path": "/usr/lib/x86_64-linux-gnu/libz.so.1.3",
+        "sha256": "9b64150b28505a33d6bc3ecf709c279f6de97a1c184dbda65d06ee4537f6d286"
+      }
+    ],
+    "numpy_version": "2.3.5",
+    "post_restriction_new_library_file_opens_denied": true,
+    "python_version": "3.12.14",
+    "schema": "ccu-loaded-ELF-provenance-1",
+    "scope": "currently_mapped_ELF_files_only_not_complete_environment_authentication",
+    "seconds": 0.07960562199878041
+  },
+  "method": "B-E-compact",
+  "output_write_call_bytes_before_report": 6896,
+  "peak_rss_bytes": 117186560,
+  "persistent_head_only_output": true,
+  "releases": [
+    {
+      "algorithm_read_meter": {
+        "algorithm_payload_rows_read": null,
+        "algorithm_payload_value_bytes_read": null,
+        "cache_or_hardware_traffic_bytes": null,
+        "compaction_copy_bytes": null,
+        "metadata_bytes_read": null,
+        "scope": "summary_has_no_record_payload; other_uncounted_access_is_explicitly_unknown"
+      },
+      "count": 7,
+      "head_release_seconds": 0.00011615000039455481,
+      "head_sha256": "eea81e9148ac49d651b08edce888821e623d34b0d13e9db800357e528387a821",
+      "index": 0,
+      "moments_and_solve_seconds": 0.0020125789997109678,
+      "numerical_decoder": {
+        "absolute_residual_fro": 5.27669603593739e-13,
+        "audit_requested": false,
+        "condition_log10_estimate": 1.713672590717687,
+        "condition_number_2_estimate": 51.72167615626811,
+        "conditioning_estimator": "FP64_symmetric_eigvalsh_not_certificate",
+        "conditioning_seconds": 0.00010658600149326958,
+        "count": 7,
+        "cross_fro": 1.334188303548979,
+        "cross_sha256": "873dd69caec6f365aaf5db10463eb62069c29cb1b8b6cb8c9a50bb58abef5b0e",
+        "dimension": 16,
+        "fallback_performed": false,
+        "gram_minimum_eigenvalue_shift_estimate": -8.326672684688674e-17,
+        "gram_sha256": "2aa79b1d2a4b0a13611009f66b01e30655a8264df9ab5073a7111534e11e866f",
+        "iteration_counts": [
+          7
+        ],
+        "lambda_hex": "0x1.47ae147ae147bp-7",
+        "matrix_norm_2_estimate": 3.6205173309387635,
+        "maximum_eigenvalue_estimate": 3.6205173309387635,
+        "minimum_eigenvalue_estimate": 0.06999999999999992,
+        "moment_extraction": "stored_method_moments",
+        "normalization_denominator_decimal": "5.582910623372494866",
+        "normalized_residual_eta": 9.451514437374015e-14,
+        "numerically_certified": false,
+        "outputs": 1,
+        "parameter_diagnostic_assumption": "Exact target Gram PSD and no moment accumulation error; not an original-data certificate",
+        "parameter_error_bound_is_diagnostic": true,
+        "parameter_error_from_stored_moments_diagnostic": 7.53813719419627e-12,
+        "parameter_error_from_stored_moments_diagnostic_decimal": "7.538137194196270199e-12",
+        "policy": {
+          "cg_initialization": "zero",
+          "cg_max_iterations_per_dimension": 10,
+          "empty_target_policy": "reject_nonzero_moments",
+          "failure_policy": "retain_failure_no_fallback_no_tolerance_relaxation",
+          "normalized_residual_limit": 1e-10,
+          "residual_accumulation": "coordinate_order_Neumaier_FP64",
+          "schema": "ccu-common-ridge-decoder-1"
+        },
+        "release_allowed": true,
+        "residual_seconds": 8.896000144886784e-05,
+        "schema": "ccu-common-ridge-decoder-1",
+        "solve_seconds": 0.001473178002925124,
+        "solver": "cg",
+        "status": "passed_residual_verified",
+        "system_formation_seconds": 3.429999924264848e-05,
+        "total_seconds": 0.0018662430011318065,
+        "weights_fro": 1.1735124932330776,
+        "weights_sha256": "3ae1243f9c56881c0bc6bf994e270bbfc2118e87d17f7578824696b10fef7440"
+      },
+      "operation": {
+        "discarded_payload_records": 3,
+        "fresh_deletions": 1,
+        "input_identifiers": 1,
+        "remaining_horizon": 2,
+        "selected_count": 7,
+        "touched_records": 0
+      },
+      "repair_seconds": 6.64569997752551e-05,
+      "request_bytes": 48,
+      "ridge_residual": 5.27669603593739e-13,
+      "state_accounting": {
+        "alive_service_units": 19,
+        "all_array_bytes": 648,
+        "blocker_incidences": 2,
+        "eligible_payload_records": 9,
+        "feature_array_bytes": 576,
+        "kernel_array_bytes": 0,
+        "metadata_backend": "legacy_Python_dictionary_not_CSR",
+        "method": "B-E-compact",
+        "moment_array_bytes": 0,
+        "persistent_Gram": false,
+        "python_live_bytes_estimate": 15380,
+        "python_metadata_bytes_estimate": 14732,
+        "release_selected_copy_bytes": 952,
+        "release_solver": "dual",
+        "release_system_and_factor_bytes_estimate": 784,
+        "release_system_dimension": 7,
+        "remaining_horizon": 2,
+        "selected_records": 7,
+        "state_contract": "eligible FP32 payload retained; no persistent moments",
+        "target_array_bytes": 72,
+        "unit": "record",
+        "unit_id_utf8_bytes": 890,
+        "workspace_estimate_note": "Partial named arrays only; excludes response/output/residual and BLAS workspaces; measure process peak separately"
+      }
+    },
+    {
+      "algorithm_read_meter": {
+        "algorithm_payload_rows_read": null,
+        "algorithm_payload_value_bytes_read": null,
+        "cache_or_hardware_traffic_bytes": null,
+        "compaction_copy_bytes": null,
+        "metadata_bytes_read": null,
+        "scope": "summary_has_no_record_payload; other_uncounted_access_is_explicitly_unknown"
+      },
+      "count": 7,
+      "full_serialization_buffer_bytes": 6384,
+      "head_release_seconds": 4.829099998460151e-05,
+      "head_sha256": "eea81e9148ac49d651b08edce888821e623d34b0d13e9db800357e528387a821",
+      "index": 1,
+      "moments_and_solve_seconds": 0.0016165779998118524,
+      "numerical_decoder": {
+        "absolute_residual_fro": 5.27669603593739e-13,
+        "audit_requested": false,
+        "condition_log10_estimate": 1.713672590717687,
+        "condition_number_2_estimate": 51.72167615626811,
+        "conditioning_estimator": "FP64_symmetric_eigvalsh_not_certificate",
+        "conditioning_seconds": 2.88419978460297e-05,
+        "count": 7,
+        "cross_fro": 1.334188303548979,
+        "cross_sha256": "873dd69caec6f365aaf5db10463eb62069c29cb1b8b6cb8c9a50bb58abef5b0e",
+        "dimension": 16,
+        "fallback_performed": false,
+        "gram_minimum_eigenvalue_shift_estimate": -8.326672684688674e-17,
+        "gram_sha256": "2aa79b1d2a4b0a13611009f66b01e30655a8264df9ab5073a7111534e11e866f",
+        "iteration_counts": [
+          7
+        ],
+        "lambda_hex": "0x1.47ae147ae147bp-7",
+        "matrix_norm_2_estimate": 3.6205173309387635,
+        "maximum_eigenvalue_estimate": 3.6205173309387635,
+        "minimum_eigenvalue_estimate": 0.06999999999999992,
+        "moment_extraction": "stored_method_moments",
+        "normalization_denominator_decimal": "5.582910623372494866",
+        "normalized_residual_eta": 9.451514437374015e-14,
+        "numerically_certified": false,
+        "outputs": 1,
+        "parameter_diagnostic_assumption": "Exact target Gram PSD and no moment accumulation error; not an original-data certificate",
+        "parameter_error_bound_is_diagnostic": true,
+        "parameter_error_from_stored_moments_diagnostic": 7.53813719419627e-12,
+        "parameter_error_from_stored_moments_diagnostic_decimal": "7.538137194196270199e-12",
+        "policy": {
+          "cg_initialization": "zero",
+          "cg_max_iterations_per_dimension": 10,
+          "empty_target_policy": "reject_nonzero_moments",
+          "failure_policy": "retain_failure_no_fallback_no_tolerance_relaxation",
+          "normalized_residual_limit": 1e-10,
+          "residual_accumulation": "coordinate_order_Neumaier_FP64",
+          "schema": "ccu-common-ridge-decoder-1"
+        },
+        "release_allowed": true,
+        "residual_seconds": 9.007200060295872e-05,
+        "schema": "ccu-common-ridge-decoder-1",
+        "solve_seconds": 0.0013843880005879328,
+        "solver": "cg",
+        "status": "passed_residual_verified",
+        "system_formation_seconds": 1.2528002116596326e-05,
+        "total_seconds": 0.0015853719996812288,
+        "weights_fro": 1.1735124932330776,
+        "weights_sha256": "3ae1243f9c56881c0bc6bf994e270bbfc2118e87d17f7578824696b10fef7440"
+      },
+      "operation": {
+        "discarded_payload_records": 2,
+        "fresh_deletions": 2,
+        "input_identifiers": 2,
+        "remaining_horizon": 0,
+        "selected_count": 7,
+        "touched_records": 0
+      },
+      "persistence": {
+        "current_logical_bytes": 6896,
+        "fsync_seconds": 6.088001100579277e-06
+      },
+      "repair_seconds": 2.4836001102812588e-05,
+      "request_bytes": 95,
+      "ridge_residual": 5.27669603593739e-13,
+      "snapshot_seconds": 0.00027956000121776015,
+      "state_accounting": {
+        "alive_service_units": 17,
+        "all_array_bytes": 504,
+        "blocker_incidences": 0,
+        "eligible_payload_records": 7,
+        "feature_array_bytes": 448,
+        "kernel_array_bytes": 0,
+        "metadata_backend": "legacy_Python_dictionary_not_CSR",
+        "method": "B-E-compact",
+        "moment_array_bytes": 0,
+        "persistent_Gram": false,
+        "python_live_bytes_estimate": 13248,
+        "python_metadata_bytes_estimate": 12744,
+        "release_selected_copy_bytes": 952,
+        "release_solver": "dual",
+        "release_system_and_factor_bytes_estimate": 784,
+        "release_system_dimension": 7,
+        "remaining_horizon": 0,
+        "selected_records": 7,
+        "state_contract": "eligible FP32 payload retained; no persistent moments",
+        "target_array_bytes": 56,
+        "unit": "record",
+        "unit_id_utf8_bytes": 890,
+        "workspace_estimate_note": "Partial named arrays only; excludes response/output/residual and BLAS workspaces; measure process peak separately"
+      }
+    }
+  ],
+  "selected_ID_exports": false,
+  "snapshot_hash_and_load_read_meter": {
+    "hardware_memory_traffic_bytes": null,
+    "kernel_storage_read_bytes": 0,
+    "per_metadata_category_bytes": null,
+    "read_call_bytes": 56521,
+    "scope": "all_process_reads_inside_named_stage_with_initial_meter_bytes_removed"
+  },
+  "stage": "repair",
+  "state_hashes": {
+    "state.npz": "3f995eb3c7ad06f31b932f3ec5ef74f78399bb874751caf08fd35a619b6eb1d3"
+  },
+  "unit": "record",
+  "worker_version": 2
+}

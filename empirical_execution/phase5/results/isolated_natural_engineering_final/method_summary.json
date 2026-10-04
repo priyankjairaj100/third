@@ -1,0 +1,1763 @@
+{
+  "scope": "Development only; two R paths, one U path, one A path; no genuine S",
+  "dimensions": {
+    "64": "five repeats per fixed path",
+    "768": "one feasibility pass per fixed path"
+  },
+  "timing_limitation": "Shared development host; other project checks ran concurrently. No paper speedup inference.",
+  "memory_limitation": "Serialized state and child peak RSS are separate quantities; shared bundle and parent/oracle memory not included in process RSS",
+  "shared_preparation_files": [
+    "bundle_d64.json",
+    "bundle_d768.json"
+  ],
+  "joint_span_total_memory_optimality_claim": false,
+  "table": [
+    {
+      "dimension": 64,
+      "method": "B-A",
+      "planned": 20,
+      "successes": 20,
+      "failures": 0,
+      "all_jobs": [
+        {
+          "job_id": "d64-r0-R000-B-A",
+          "initial_serialized_state_bytes": 82296,
+          "final_serialized_state_bytes": 82297,
+          "maximum_process_peak_rss_bytes": 119787520,
+          "charged_lifecycle_seconds": 0.5103228730004048
+        },
+        {
+          "job_id": "d64-r0-R001-B-A",
+          "initial_serialized_state_bytes": 82296,
+          "final_serialized_state_bytes": 82297,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.4708277530007763
+        },
+        {
+          "job_id": "d64-r0-U000-B-A",
+          "initial_serialized_state_bytes": 82296,
+          "final_serialized_state_bytes": 82296,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.57042951800031
+        },
+        {
+          "job_id": "d64-r0-A000-B-A",
+          "initial_serialized_state_bytes": 82296,
+          "final_serialized_state_bytes": 82298,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.5109745459994883
+        },
+        {
+          "job_id": "d64-r1-R000-B-A",
+          "initial_serialized_state_bytes": 82296,
+          "final_serialized_state_bytes": 82297,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.4905210309989343
+        },
+        {
+          "job_id": "d64-r1-R001-B-A",
+          "initial_serialized_state_bytes": 82296,
+          "final_serialized_state_bytes": 82297,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.46997879199989256
+        },
+        {
+          "job_id": "d64-r1-U000-B-A",
+          "initial_serialized_state_bytes": 82296,
+          "final_serialized_state_bytes": 82296,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.49077841300095315
+        },
+        {
+          "job_id": "d64-r1-A000-B-A",
+          "initial_serialized_state_bytes": 82296,
+          "final_serialized_state_bytes": 82298,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.45542552000006253
+        },
+        {
+          "job_id": "d64-r2-R000-B-A",
+          "initial_serialized_state_bytes": 82296,
+          "final_serialized_state_bytes": 82297,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.4553849489984714
+        },
+        {
+          "job_id": "d64-r2-R001-B-A",
+          "initial_serialized_state_bytes": 82296,
+          "final_serialized_state_bytes": 82297,
+          "maximum_process_peak_rss_bytes": 119967744,
+          "charged_lifecycle_seconds": 0.4494733339997765
+        },
+        {
+          "job_id": "d64-r2-U000-B-A",
+          "initial_serialized_state_bytes": 82296,
+          "final_serialized_state_bytes": 82296,
+          "maximum_process_peak_rss_bytes": 120033280,
+          "charged_lifecycle_seconds": 0.4495309450012428
+        },
+        {
+          "job_id": "d64-r2-A000-B-A",
+          "initial_serialized_state_bytes": 82296,
+          "final_serialized_state_bytes": 82298,
+          "maximum_process_peak_rss_bytes": 120098816,
+          "charged_lifecycle_seconds": 0.4495271039995714
+        },
+        {
+          "job_id": "d64-r3-R000-B-A",
+          "initial_serialized_state_bytes": 82296,
+          "final_serialized_state_bytes": 82297,
+          "maximum_process_peak_rss_bytes": 120127488,
+          "charged_lifecycle_seconds": 0.4698349890004465
+        },
+        {
+          "job_id": "d64-r3-R001-B-A",
+          "initial_serialized_state_bytes": 82296,
+          "final_serialized_state_bytes": 82297,
+          "maximum_process_peak_rss_bytes": 120147968,
+          "charged_lifecycle_seconds": 0.47599761600031343
+        },
+        {
+          "job_id": "d64-r3-U000-B-A",
+          "initial_serialized_state_bytes": 82296,
+          "final_serialized_state_bytes": 82296,
+          "maximum_process_peak_rss_bytes": 120250368,
+          "charged_lifecycle_seconds": 0.5101015780001035
+        },
+        {
+          "job_id": "d64-r3-A000-B-A",
+          "initial_serialized_state_bytes": 82296,
+          "final_serialized_state_bytes": 82298,
+          "maximum_process_peak_rss_bytes": 120270848,
+          "charged_lifecycle_seconds": 0.490552712999488
+        },
+        {
+          "job_id": "d64-r4-R000-B-A",
+          "initial_serialized_state_bytes": 82296,
+          "final_serialized_state_bytes": 82297,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.4705853659997956
+        },
+        {
+          "job_id": "d64-r4-R001-B-A",
+          "initial_serialized_state_bytes": 82296,
+          "final_serialized_state_bytes": 82297,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.469969019999553
+        },
+        {
+          "job_id": "d64-r4-U000-B-A",
+          "initial_serialized_state_bytes": 82296,
+          "final_serialized_state_bytes": 82296,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.5308811610011617
+        },
+        {
+          "job_id": "d64-r4-A000-B-A",
+          "initial_serialized_state_bytes": 82296,
+          "final_serialized_state_bytes": 82298,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.4707314219995169
+        }
+      ],
+      "initial_state_bytes_mean": 82296.0,
+      "final_state_bytes_mean": 82297.0,
+      "process_peak_rss_bytes_max": 122634240,
+      "completed_lifecycle_seconds_mean": 0.48309143215001316
+    },
+    {
+      "dimension": 64,
+      "method": "B-E",
+      "planned": 20,
+      "successes": 20,
+      "failures": 0,
+      "all_jobs": [
+        {
+          "job_id": "d64-r0-R000-B-E",
+          "initial_serialized_state_bytes": 74151,
+          "final_serialized_state_bytes": 66246,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.490878487998998
+        },
+        {
+          "job_id": "d64-r0-R001-B-E",
+          "initial_serialized_state_bytes": 74151,
+          "final_serialized_state_bytes": 65905,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.4715617679994466
+        },
+        {
+          "job_id": "d64-r0-U000-B-E",
+          "initial_serialized_state_bytes": 74151,
+          "final_serialized_state_bytes": 68298,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.5327608670013433
+        },
+        {
+          "job_id": "d64-r0-A000-B-E",
+          "initial_serialized_state_bytes": 74151,
+          "final_serialized_state_bytes": 69668,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.46988668700032576
+        },
+        {
+          "job_id": "d64-r1-R000-B-E",
+          "initial_serialized_state_bytes": 74151,
+          "final_serialized_state_bytes": 66246,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.4908290860003035
+        },
+        {
+          "job_id": "d64-r1-R001-B-E",
+          "initial_serialized_state_bytes": 74151,
+          "final_serialized_state_bytes": 65905,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.47314778399959323
+        },
+        {
+          "job_id": "d64-r1-U000-B-E",
+          "initial_serialized_state_bytes": 74151,
+          "final_serialized_state_bytes": 68298,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.5127807910012052
+        },
+        {
+          "job_id": "d64-r1-A000-B-E",
+          "initial_serialized_state_bytes": 74151,
+          "final_serialized_state_bytes": 69668,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.4557544700001017
+        },
+        {
+          "job_id": "d64-r2-R000-B-E",
+          "initial_serialized_state_bytes": 74151,
+          "final_serialized_state_bytes": 66246,
+          "maximum_process_peak_rss_bytes": 119951360,
+          "charged_lifecycle_seconds": 0.44916918399940187
+        },
+        {
+          "job_id": "d64-r2-R001-B-E",
+          "initial_serialized_state_bytes": 74151,
+          "final_serialized_state_bytes": 65905,
+          "maximum_process_peak_rss_bytes": 119996416,
+          "charged_lifecycle_seconds": 0.4696897900012118
+        },
+        {
+          "job_id": "d64-r2-U000-B-E",
+          "initial_serialized_state_bytes": 74151,
+          "final_serialized_state_bytes": 68298,
+          "maximum_process_peak_rss_bytes": 120033280,
+          "charged_lifecycle_seconds": 0.45002190500053985
+        },
+        {
+          "job_id": "d64-r2-A000-B-E",
+          "initial_serialized_state_bytes": 74151,
+          "final_serialized_state_bytes": 69668,
+          "maximum_process_peak_rss_bytes": 120098816,
+          "charged_lifecycle_seconds": 0.44996541000000434
+        },
+        {
+          "job_id": "d64-r3-R000-B-E",
+          "initial_serialized_state_bytes": 74151,
+          "final_serialized_state_bytes": 66246,
+          "maximum_process_peak_rss_bytes": 120147968,
+          "charged_lifecycle_seconds": 0.495250792000661
+        },
+        {
+          "job_id": "d64-r3-R001-B-E",
+          "initial_serialized_state_bytes": 74151,
+          "final_serialized_state_bytes": 65905,
+          "maximum_process_peak_rss_bytes": 120147968,
+          "charged_lifecycle_seconds": 0.4552438219998294
+        },
+        {
+          "job_id": "d64-r3-U000-B-E",
+          "initial_serialized_state_bytes": 74151,
+          "final_serialized_state_bytes": 68298,
+          "maximum_process_peak_rss_bytes": 120225792,
+          "charged_lifecycle_seconds": 0.4756774699999369
+        },
+        {
+          "job_id": "d64-r3-A000-B-E",
+          "initial_serialized_state_bytes": 74151,
+          "final_serialized_state_bytes": 69668,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.47086156099976506
+        },
+        {
+          "job_id": "d64-r4-R000-B-E",
+          "initial_serialized_state_bytes": 74151,
+          "final_serialized_state_bytes": 66246,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.5047783380014152
+        },
+        {
+          "job_id": "d64-r4-R001-B-E",
+          "initial_serialized_state_bytes": 74151,
+          "final_serialized_state_bytes": 65905,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.44958817200131307
+        },
+        {
+          "job_id": "d64-r4-U000-B-E",
+          "initial_serialized_state_bytes": 74151,
+          "final_serialized_state_bytes": 68298,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.4498955429990019
+        },
+        {
+          "job_id": "d64-r4-A000-B-E",
+          "initial_serialized_state_bytes": 74151,
+          "final_serialized_state_bytes": 69668,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.4923186590003752
+        }
+      ],
+      "initial_state_bytes_mean": 74151.0,
+      "final_state_bytes_mean": 67529.25,
+      "process_peak_rss_bytes_max": 122634240,
+      "completed_lifecycle_seconds_mean": 0.47550302935023864
+    },
+    {
+      "dimension": 64,
+      "method": "B-E-compact",
+      "planned": 20,
+      "successes": 20,
+      "failures": 0,
+      "all_jobs": [
+        {
+          "job_id": "d64-r0-R000-B-E-compact",
+          "initial_serialized_state_bytes": 49260,
+          "final_serialized_state_bytes": 41700,
+          "maximum_process_peak_rss_bytes": 119787520,
+          "charged_lifecycle_seconds": 0.49000078799872426
+        },
+        {
+          "job_id": "d64-r0-R001-B-E-compact",
+          "initial_serialized_state_bytes": 49260,
+          "final_serialized_state_bytes": 41400,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.5119222930006799
+        },
+        {
+          "job_id": "d64-r0-U000-B-E-compact",
+          "initial_serialized_state_bytes": 49260,
+          "final_serialized_state_bytes": 43572,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.5114627670009213
+        },
+        {
+          "job_id": "d64-r0-A000-B-E-compact",
+          "initial_serialized_state_bytes": 49260,
+          "final_serialized_state_bytes": 44832,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.44960429000093427
+        },
+        {
+          "job_id": "d64-r1-R000-B-E-compact",
+          "initial_serialized_state_bytes": 49260,
+          "final_serialized_state_bytes": 41700,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.4699215280015778
+        },
+        {
+          "job_id": "d64-r1-R001-B-E-compact",
+          "initial_serialized_state_bytes": 49260,
+          "final_serialized_state_bytes": 41400,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.45006232600098883
+        },
+        {
+          "job_id": "d64-r1-U000-B-E-compact",
+          "initial_serialized_state_bytes": 49260,
+          "final_serialized_state_bytes": 43572,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.5535946399995737
+        },
+        {
+          "job_id": "d64-r1-A000-B-E-compact",
+          "initial_serialized_state_bytes": 49260,
+          "final_serialized_state_bytes": 44832,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.45494356699964555
+        },
+        {
+          "job_id": "d64-r2-R000-B-E-compact",
+          "initial_serialized_state_bytes": 49260,
+          "final_serialized_state_bytes": 41700,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.4503075810007431
+        },
+        {
+          "job_id": "d64-r2-R001-B-E-compact",
+          "initial_serialized_state_bytes": 49260,
+          "final_serialized_state_bytes": 41400,
+          "maximum_process_peak_rss_bytes": 119967744,
+          "charged_lifecycle_seconds": 0.4701370250004402
+        },
+        {
+          "job_id": "d64-r2-U000-B-E-compact",
+          "initial_serialized_state_bytes": 49260,
+          "final_serialized_state_bytes": 43572,
+          "maximum_process_peak_rss_bytes": 120033280,
+          "charged_lifecycle_seconds": 0.5104881150000438
+        },
+        {
+          "job_id": "d64-r2-A000-B-E-compact",
+          "initial_serialized_state_bytes": 49260,
+          "final_serialized_state_bytes": 44832,
+          "maximum_process_peak_rss_bytes": 120098816,
+          "charged_lifecycle_seconds": 0.4490502490007202
+        },
+        {
+          "job_id": "d64-r3-R000-B-E-compact",
+          "initial_serialized_state_bytes": 49260,
+          "final_serialized_state_bytes": 41700,
+          "maximum_process_peak_rss_bytes": 120127488,
+          "charged_lifecycle_seconds": 0.46970043100009207
+        },
+        {
+          "job_id": "d64-r3-R001-B-E-compact",
+          "initial_serialized_state_bytes": 49260,
+          "final_serialized_state_bytes": 41400,
+          "maximum_process_peak_rss_bytes": 120147968,
+          "charged_lifecycle_seconds": 0.4547889410005155
+        },
+        {
+          "job_id": "d64-r3-U000-B-E-compact",
+          "initial_serialized_state_bytes": 49260,
+          "final_serialized_state_bytes": 43572,
+          "maximum_process_peak_rss_bytes": 120225792,
+          "charged_lifecycle_seconds": 0.455474130998482
+        },
+        {
+          "job_id": "d64-r3-A000-B-E-compact",
+          "initial_serialized_state_bytes": 49260,
+          "final_serialized_state_bytes": 44832,
+          "maximum_process_peak_rss_bytes": 120270848,
+          "charged_lifecycle_seconds": 0.45003238299977966
+        },
+        {
+          "job_id": "d64-r4-R000-B-E-compact",
+          "initial_serialized_state_bytes": 49260,
+          "final_serialized_state_bytes": 41700,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.4901847729997826
+        },
+        {
+          "job_id": "d64-r4-R001-B-E-compact",
+          "initial_serialized_state_bytes": 49260,
+          "final_serialized_state_bytes": 41400,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.4910423300007096
+        },
+        {
+          "job_id": "d64-r4-U000-B-E-compact",
+          "initial_serialized_state_bytes": 49260,
+          "final_serialized_state_bytes": 43572,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.4500975880000624
+        },
+        {
+          "job_id": "d64-r4-A000-B-E-compact",
+          "initial_serialized_state_bytes": 49260,
+          "final_serialized_state_bytes": 44832,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.4924684690013237
+        }
+      ],
+      "initial_state_bytes_mean": 49260.0,
+      "final_state_bytes_mean": 42876.0,
+      "process_peak_rss_bytes_max": 122634240,
+      "completed_lifecycle_seconds_mean": 0.476264210750287
+    },
+    {
+      "dimension": 64,
+      "method": "O-G",
+      "planned": 20,
+      "successes": 20,
+      "failures": 0,
+      "all_jobs": [
+        {
+          "job_id": "d64-r0-R000-O-G",
+          "initial_serialized_state_bytes": 139322,
+          "final_serialized_state_bytes": 137754,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 1.1547844119995716
+        },
+        {
+          "job_id": "d64-r0-R001-O-G",
+          "initial_serialized_state_bytes": 139322,
+          "final_serialized_state_bytes": 137758,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 1.2205986639983166
+        },
+        {
+          "job_id": "d64-r0-U000-O-G",
+          "initial_serialized_state_bytes": 139322,
+          "final_serialized_state_bytes": 137754,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 1.1369510019994777
+        },
+        {
+          "job_id": "d64-r0-A000-O-G",
+          "initial_serialized_state_bytes": 139322,
+          "final_serialized_state_bytes": 137758,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 1.1550623420007469
+        },
+        {
+          "job_id": "d64-r1-R000-O-G",
+          "initial_serialized_state_bytes": 139322,
+          "final_serialized_state_bytes": 137754,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 1.156891127999188
+        },
+        {
+          "job_id": "d64-r1-R001-O-G",
+          "initial_serialized_state_bytes": 139322,
+          "final_serialized_state_bytes": 137758,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 1.1350670249994437
+        },
+        {
+          "job_id": "d64-r1-U000-O-G",
+          "initial_serialized_state_bytes": 139322,
+          "final_serialized_state_bytes": 137754,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 1.2552836790000583
+        },
+        {
+          "job_id": "d64-r1-A000-O-G",
+          "initial_serialized_state_bytes": 139322,
+          "final_serialized_state_bytes": 137758,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 1.1744633219987008
+        },
+        {
+          "job_id": "d64-r2-R000-O-G",
+          "initial_serialized_state_bytes": 139322,
+          "final_serialized_state_bytes": 137754,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 1.157497129001058
+        },
+        {
+          "job_id": "d64-r2-R001-O-G",
+          "initial_serialized_state_bytes": 139322,
+          "final_serialized_state_bytes": 137758,
+          "maximum_process_peak_rss_bytes": 119996416,
+          "charged_lifecycle_seconds": 1.1555499770001916
+        },
+        {
+          "job_id": "d64-r2-U000-O-G",
+          "initial_serialized_state_bytes": 139322,
+          "final_serialized_state_bytes": 137754,
+          "maximum_process_peak_rss_bytes": 120033280,
+          "charged_lifecycle_seconds": 1.1337174990003405
+        },
+        {
+          "job_id": "d64-r2-A000-O-G",
+          "initial_serialized_state_bytes": 139322,
+          "final_serialized_state_bytes": 137758,
+          "maximum_process_peak_rss_bytes": 120033280,
+          "charged_lifecycle_seconds": 1.1332742129998223
+        },
+        {
+          "job_id": "d64-r3-R000-O-G",
+          "initial_serialized_state_bytes": 139322,
+          "final_serialized_state_bytes": 137754,
+          "maximum_process_peak_rss_bytes": 120127488,
+          "charged_lifecycle_seconds": 1.153639350000958
+        },
+        {
+          "job_id": "d64-r3-R001-O-G",
+          "initial_serialized_state_bytes": 139322,
+          "final_serialized_state_bytes": 137758,
+          "maximum_process_peak_rss_bytes": 120147968,
+          "charged_lifecycle_seconds": 1.1394211580009141
+        },
+        {
+          "job_id": "d64-r3-U000-O-G",
+          "initial_serialized_state_bytes": 139322,
+          "final_serialized_state_bytes": 137754,
+          "maximum_process_peak_rss_bytes": 120225792,
+          "charged_lifecycle_seconds": 1.141500134001035
+        },
+        {
+          "job_id": "d64-r3-A000-O-G",
+          "initial_serialized_state_bytes": 139322,
+          "final_serialized_state_bytes": 137758,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 1.1757364850000158
+        },
+        {
+          "job_id": "d64-r4-R000-O-G",
+          "initial_serialized_state_bytes": 139322,
+          "final_serialized_state_bytes": 137754,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 1.1745809109997936
+        },
+        {
+          "job_id": "d64-r4-R001-O-G",
+          "initial_serialized_state_bytes": 139322,
+          "final_serialized_state_bytes": 137758,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 1.1740357830003632
+        },
+        {
+          "job_id": "d64-r4-U000-O-G",
+          "initial_serialized_state_bytes": 139322,
+          "final_serialized_state_bytes": 137754,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 1.155748487000892
+        },
+        {
+          "job_id": "d64-r4-A000-O-G",
+          "initial_serialized_state_bytes": 139322,
+          "final_serialized_state_bytes": 137758,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 1.1370251259995712
+        }
+      ],
+      "initial_state_bytes_mean": 139322.0,
+      "final_state_bytes_mean": 137756.0,
+      "process_peak_rss_bytes_max": 122634240,
+      "completed_lifecycle_seconds_mean": 1.161041391300023
+    },
+    {
+      "dimension": 64,
+      "method": "O-T",
+      "planned": 20,
+      "successes": 20,
+      "failures": 0,
+      "all_jobs": [
+        {
+          "job_id": "d64-r0-R000-O-T",
+          "initial_serialized_state_bytes": 91586,
+          "final_serialized_state_bytes": 90018,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.47073414100123046
+        },
+        {
+          "job_id": "d64-r0-R001-O-T",
+          "initial_serialized_state_bytes": 91586,
+          "final_serialized_state_bytes": 90022,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.5355972139986989
+        },
+        {
+          "job_id": "d64-r0-U000-O-T",
+          "initial_serialized_state_bytes": 91586,
+          "final_serialized_state_bytes": 90018,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.45077652399959334
+        },
+        {
+          "job_id": "d64-r0-A000-O-T",
+          "initial_serialized_state_bytes": 91586,
+          "final_serialized_state_bytes": 90022,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.5328325320006115
+        },
+        {
+          "job_id": "d64-r1-R000-O-T",
+          "initial_serialized_state_bytes": 91586,
+          "final_serialized_state_bytes": 90018,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.47083466700132703
+        },
+        {
+          "job_id": "d64-r1-R001-O-T",
+          "initial_serialized_state_bytes": 91586,
+          "final_serialized_state_bytes": 90022,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.47123877800004266
+        },
+        {
+          "job_id": "d64-r1-U000-O-T",
+          "initial_serialized_state_bytes": 91586,
+          "final_serialized_state_bytes": 90018,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.4714743489985267
+        },
+        {
+          "job_id": "d64-r1-A000-O-T",
+          "initial_serialized_state_bytes": 91586,
+          "final_serialized_state_bytes": 90022,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.47049107999919215
+        },
+        {
+          "job_id": "d64-r2-R000-O-T",
+          "initial_serialized_state_bytes": 91586,
+          "final_serialized_state_bytes": 90018,
+          "maximum_process_peak_rss_bytes": 119967744,
+          "charged_lifecycle_seconds": 0.45124622600087605
+        },
+        {
+          "job_id": "d64-r2-R001-O-T",
+          "initial_serialized_state_bytes": 91586,
+          "final_serialized_state_bytes": 90022,
+          "maximum_process_peak_rss_bytes": 119996416,
+          "charged_lifecycle_seconds": 0.4496003140011453
+        },
+        {
+          "job_id": "d64-r2-U000-O-T",
+          "initial_serialized_state_bytes": 91586,
+          "final_serialized_state_bytes": 90018,
+          "maximum_process_peak_rss_bytes": 120033280,
+          "charged_lifecycle_seconds": 0.44960978099879867
+        },
+        {
+          "job_id": "d64-r2-A000-O-T",
+          "initial_serialized_state_bytes": 91586,
+          "final_serialized_state_bytes": 90022,
+          "maximum_process_peak_rss_bytes": 120033280,
+          "charged_lifecycle_seconds": 0.4904746720003459
+        },
+        {
+          "job_id": "d64-r3-R000-O-T",
+          "initial_serialized_state_bytes": 91586,
+          "final_serialized_state_bytes": 90018,
+          "maximum_process_peak_rss_bytes": 120127488,
+          "charged_lifecycle_seconds": 0.4494838950013218
+        },
+        {
+          "job_id": "d64-r3-R001-O-T",
+          "initial_serialized_state_bytes": 91586,
+          "final_serialized_state_bytes": 90022,
+          "maximum_process_peak_rss_bytes": 120147968,
+          "charged_lifecycle_seconds": 0.47584779699900537
+        },
+        {
+          "job_id": "d64-r3-U000-O-T",
+          "initial_serialized_state_bytes": 91586,
+          "final_serialized_state_bytes": 90018,
+          "maximum_process_peak_rss_bytes": 120225792,
+          "charged_lifecycle_seconds": 0.449698817999888
+        },
+        {
+          "job_id": "d64-r3-A000-O-T",
+          "initial_serialized_state_bytes": 91586,
+          "final_serialized_state_bytes": 90022,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.47035930899983214
+        },
+        {
+          "job_id": "d64-r4-R000-O-T",
+          "initial_serialized_state_bytes": 91586,
+          "final_serialized_state_bytes": 90018,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.4700465959995199
+        },
+        {
+          "job_id": "d64-r4-R001-O-T",
+          "initial_serialized_state_bytes": 91586,
+          "final_serialized_state_bytes": 90022,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.47121748099925753
+        },
+        {
+          "job_id": "d64-r4-U000-O-T",
+          "initial_serialized_state_bytes": 91586,
+          "final_serialized_state_bytes": 90018,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.4915263849998155
+        },
+        {
+          "job_id": "d64-r4-A000-O-T",
+          "initial_serialized_state_bytes": 91586,
+          "final_serialized_state_bytes": 90022,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.4913026410013117
+        }
+      ],
+      "initial_state_bytes_mean": 91586.0,
+      "final_state_bytes_mean": 90020.0,
+      "process_peak_rss_bytes_max": 122634240,
+      "completed_lifecycle_seconds_mean": 0.47421966000001703
+    },
+    {
+      "dimension": 64,
+      "method": "P-I",
+      "planned": 20,
+      "successes": 20,
+      "failures": 0,
+      "all_jobs": [
+        {
+          "job_id": "d64-r0-R000-P-I",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39430,
+          "maximum_process_peak_rss_bytes": 119926784,
+          "charged_lifecycle_seconds": 0.5136487599993416
+        },
+        {
+          "job_id": "d64-r0-R001-P-I",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39434,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.4737817500008532
+        },
+        {
+          "job_id": "d64-r0-U000-P-I",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39430,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.4534851480002544
+        },
+        {
+          "job_id": "d64-r0-A000-P-I",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39434,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.5159787830016285
+        },
+        {
+          "job_id": "d64-r1-R000-P-I",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39430,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.49442344099952606
+        },
+        {
+          "job_id": "d64-r1-R001-P-I",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39434,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.49355223100064904
+        },
+        {
+          "job_id": "d64-r1-U000-P-I",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39430,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.5150133410006674
+        },
+        {
+          "job_id": "d64-r1-A000-P-I",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39434,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.4533372790010617
+        },
+        {
+          "job_id": "d64-r2-R000-P-I",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39430,
+          "maximum_process_peak_rss_bytes": 119951360,
+          "charged_lifecycle_seconds": 0.4735820860005333
+        },
+        {
+          "job_id": "d64-r2-R001-P-I",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39434,
+          "maximum_process_peak_rss_bytes": 119984128,
+          "charged_lifecycle_seconds": 0.47304867599996214
+        },
+        {
+          "job_id": "d64-r2-U000-P-I",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39430,
+          "maximum_process_peak_rss_bytes": 120020992,
+          "charged_lifecycle_seconds": 0.4731036929988477
+        },
+        {
+          "job_id": "d64-r2-A000-P-I",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39434,
+          "maximum_process_peak_rss_bytes": 120127488,
+          "charged_lifecycle_seconds": 0.4530635089995485
+        },
+        {
+          "job_id": "d64-r3-R000-P-I",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39430,
+          "maximum_process_peak_rss_bytes": 120147968,
+          "charged_lifecycle_seconds": 0.4788515969994478
+        },
+        {
+          "job_id": "d64-r3-R001-P-I",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39434,
+          "maximum_process_peak_rss_bytes": 120221696,
+          "charged_lifecycle_seconds": 0.4605371779998677
+        },
+        {
+          "job_id": "d64-r3-U000-P-I",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39430,
+          "maximum_process_peak_rss_bytes": 120225792,
+          "charged_lifecycle_seconds": 0.4554091959998914
+        },
+        {
+          "job_id": "d64-r3-A000-P-I",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39434,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.4939350570002716
+        },
+        {
+          "job_id": "d64-r4-R000-P-I",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39430,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.4931189919989265
+        },
+        {
+          "job_id": "d64-r4-R001-P-I",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39434,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.47443904300052964
+        },
+        {
+          "job_id": "d64-r4-U000-P-I",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39430,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.494386061998739
+        },
+        {
+          "job_id": "d64-r4-A000-P-I",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39434,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.5969609659987327
+        }
+      ],
+      "initial_state_bytes_mean": 1707470.0,
+      "final_state_bytes_mean": 39432.0,
+      "process_peak_rss_bytes_max": 122634240,
+      "completed_lifecycle_seconds_mean": 0.486682839399964
+    },
+    {
+      "dimension": 64,
+      "method": "P-I-jointspan",
+      "planned": 20,
+      "successes": 20,
+      "failures": 0,
+      "all_jobs": [
+        {
+          "job_id": "d64-r0-R000-P-I-jointspan",
+          "initial_serialized_state_bytes": 161632,
+          "final_serialized_state_bytes": 24907,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.4911458260012296
+        },
+        {
+          "job_id": "d64-r0-R001-P-I-jointspan",
+          "initial_serialized_state_bytes": 161632,
+          "final_serialized_state_bytes": 24907,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.5107273070007068
+        },
+        {
+          "job_id": "d64-r0-U000-P-I-jointspan",
+          "initial_serialized_state_bytes": 161632,
+          "final_serialized_state_bytes": 24907,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.49045528099850344
+        },
+        {
+          "job_id": "d64-r0-A000-P-I-jointspan",
+          "initial_serialized_state_bytes": 161632,
+          "final_serialized_state_bytes": 24907,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.5532954289992631
+        },
+        {
+          "job_id": "d64-r1-R000-P-I-jointspan",
+          "initial_serialized_state_bytes": 161632,
+          "final_serialized_state_bytes": 24907,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.55183278199911
+        },
+        {
+          "job_id": "d64-r1-R001-P-I-jointspan",
+          "initial_serialized_state_bytes": 161632,
+          "final_serialized_state_bytes": 24907,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.49098881000099937
+        },
+        {
+          "job_id": "d64-r1-U000-P-I-jointspan",
+          "initial_serialized_state_bytes": 161632,
+          "final_serialized_state_bytes": 24907,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.5559682169987354
+        },
+        {
+          "job_id": "d64-r1-A000-P-I-jointspan",
+          "initial_serialized_state_bytes": 161632,
+          "final_serialized_state_bytes": 24907,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.4950828349992662
+        },
+        {
+          "job_id": "d64-r2-R000-P-I-jointspan",
+          "initial_serialized_state_bytes": 161632,
+          "final_serialized_state_bytes": 24907,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.4966513819999818
+        },
+        {
+          "job_id": "d64-r2-R001-P-I-jointspan",
+          "initial_serialized_state_bytes": 161632,
+          "final_serialized_state_bytes": 24907,
+          "maximum_process_peak_rss_bytes": 119996416,
+          "charged_lifecycle_seconds": 0.49065336599960574
+        },
+        {
+          "job_id": "d64-r2-U000-P-I-jointspan",
+          "initial_serialized_state_bytes": 161632,
+          "final_serialized_state_bytes": 24907,
+          "maximum_process_peak_rss_bytes": 120033280,
+          "charged_lifecycle_seconds": 0.5102418949991261
+        },
+        {
+          "job_id": "d64-r2-A000-P-I-jointspan",
+          "initial_serialized_state_bytes": 161632,
+          "final_serialized_state_bytes": 24907,
+          "maximum_process_peak_rss_bytes": 120033280,
+          "charged_lifecycle_seconds": 0.5107905829991068
+        },
+        {
+          "job_id": "d64-r3-R000-P-I-jointspan",
+          "initial_serialized_state_bytes": 161632,
+          "final_serialized_state_bytes": 24907,
+          "maximum_process_peak_rss_bytes": 120147968,
+          "charged_lifecycle_seconds": 0.516530505999981
+        },
+        {
+          "job_id": "d64-r3-R001-P-I-jointspan",
+          "initial_serialized_state_bytes": 161632,
+          "final_serialized_state_bytes": 24907,
+          "maximum_process_peak_rss_bytes": 120147968,
+          "charged_lifecycle_seconds": 0.4960208110005624
+        },
+        {
+          "job_id": "d64-r3-U000-P-I-jointspan",
+          "initial_serialized_state_bytes": 161632,
+          "final_serialized_state_bytes": 24907,
+          "maximum_process_peak_rss_bytes": 120270848,
+          "charged_lifecycle_seconds": 0.5719113279992598
+        },
+        {
+          "job_id": "d64-r3-A000-P-I-jointspan",
+          "initial_serialized_state_bytes": 161632,
+          "final_serialized_state_bytes": 24907,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.5114518629998202
+        },
+        {
+          "job_id": "d64-r4-R000-P-I-jointspan",
+          "initial_serialized_state_bytes": 161632,
+          "final_serialized_state_bytes": 24907,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.49125502099923324
+        },
+        {
+          "job_id": "d64-r4-R001-P-I-jointspan",
+          "initial_serialized_state_bytes": 161632,
+          "final_serialized_state_bytes": 24907,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.6518719850009802
+        },
+        {
+          "job_id": "d64-r4-U000-P-I-jointspan",
+          "initial_serialized_state_bytes": 161632,
+          "final_serialized_state_bytes": 24907,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.511479925000458
+        },
+        {
+          "job_id": "d64-r4-A000-P-I-jointspan",
+          "initial_serialized_state_bytes": 161632,
+          "final_serialized_state_bytes": 24907,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.5762373389989079
+        }
+      ],
+      "initial_state_bytes_mean": 161632.0,
+      "final_state_bytes_mean": 24907.0,
+      "process_peak_rss_bytes_max": 122634240,
+      "completed_lifecycle_seconds_mean": 0.5237296245497418
+    },
+    {
+      "dimension": 64,
+      "method": "P-R",
+      "planned": 20,
+      "successes": 20,
+      "failures": 0,
+      "all_jobs": [
+        {
+          "job_id": "d64-r0-R000-P-R",
+          "initial_serialized_state_bytes": 1471486,
+          "final_serialized_state_bytes": 39614,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.5137882429989986
+        },
+        {
+          "job_id": "d64-r0-R001-P-R",
+          "initial_serialized_state_bytes": 1471486,
+          "final_serialized_state_bytes": 39618,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.5140857160004089
+        },
+        {
+          "job_id": "d64-r0-U000-P-R",
+          "initial_serialized_state_bytes": 1471486,
+          "final_serialized_state_bytes": 39614,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.45562546200017096
+        },
+        {
+          "job_id": "d64-r0-A000-P-R",
+          "initial_serialized_state_bytes": 1471486,
+          "final_serialized_state_bytes": 39618,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.47294344900001306
+        },
+        {
+          "job_id": "d64-r1-R000-P-R",
+          "initial_serialized_state_bytes": 1471486,
+          "final_serialized_state_bytes": 39614,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.5383203769997635
+        },
+        {
+          "job_id": "d64-r1-R001-P-R",
+          "initial_serialized_state_bytes": 1471486,
+          "final_serialized_state_bytes": 39618,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.538247983000474
+        },
+        {
+          "job_id": "d64-r1-U000-P-R",
+          "initial_serialized_state_bytes": 1471486,
+          "final_serialized_state_bytes": 39614,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.5360358470006759
+        },
+        {
+          "job_id": "d64-r1-A000-P-R",
+          "initial_serialized_state_bytes": 1471486,
+          "final_serialized_state_bytes": 39618,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.46094230499875266
+        },
+        {
+          "job_id": "d64-r2-R000-P-R",
+          "initial_serialized_state_bytes": 1471486,
+          "final_serialized_state_bytes": 39614,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.4801740439997957
+        },
+        {
+          "job_id": "d64-r2-R001-P-R",
+          "initial_serialized_state_bytes": 1471486,
+          "final_serialized_state_bytes": 39618,
+          "maximum_process_peak_rss_bytes": 119967744,
+          "charged_lifecycle_seconds": 0.4753546890005964
+        },
+        {
+          "job_id": "d64-r2-U000-P-R",
+          "initial_serialized_state_bytes": 1471486,
+          "final_serialized_state_bytes": 39614,
+          "maximum_process_peak_rss_bytes": 120033280,
+          "charged_lifecycle_seconds": 0.47319746100038174
+        },
+        {
+          "job_id": "d64-r2-A000-P-R",
+          "initial_serialized_state_bytes": 1471486,
+          "final_serialized_state_bytes": 39618,
+          "maximum_process_peak_rss_bytes": 120098816,
+          "charged_lifecycle_seconds": 0.472905771999649
+        },
+        {
+          "job_id": "d64-r3-R000-P-R",
+          "initial_serialized_state_bytes": 1471486,
+          "final_serialized_state_bytes": 39614,
+          "maximum_process_peak_rss_bytes": 120127488,
+          "charged_lifecycle_seconds": 0.47229432099993574
+        },
+        {
+          "job_id": "d64-r3-R001-P-R",
+          "initial_serialized_state_bytes": 1471486,
+          "final_serialized_state_bytes": 39618,
+          "maximum_process_peak_rss_bytes": 120147968,
+          "charged_lifecycle_seconds": 0.45973953799875744
+        },
+        {
+          "job_id": "d64-r3-U000-P-R",
+          "initial_serialized_state_bytes": 1471486,
+          "final_serialized_state_bytes": 39614,
+          "maximum_process_peak_rss_bytes": 120270848,
+          "charged_lifecycle_seconds": 0.513151191000361
+        },
+        {
+          "job_id": "d64-r3-A000-P-R",
+          "initial_serialized_state_bytes": 1471486,
+          "final_serialized_state_bytes": 39618,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.5134290690002672
+        },
+        {
+          "job_id": "d64-r4-R000-P-R",
+          "initial_serialized_state_bytes": 1471486,
+          "final_serialized_state_bytes": 39614,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.49334186900159693
+        },
+        {
+          "job_id": "d64-r4-R001-P-R",
+          "initial_serialized_state_bytes": 1471486,
+          "final_serialized_state_bytes": 39618,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.4765701420001278
+        },
+        {
+          "job_id": "d64-r4-U000-P-R",
+          "initial_serialized_state_bytes": 1471486,
+          "final_serialized_state_bytes": 39614,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.5241633280002134
+        },
+        {
+          "job_id": "d64-r4-A000-P-R",
+          "initial_serialized_state_bytes": 1471486,
+          "final_serialized_state_bytes": 39618,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.49373478699999396
+        }
+      ],
+      "initial_state_bytes_mean": 1471486.0,
+      "final_state_bytes_mean": 39616.0,
+      "process_peak_rss_bytes_max": 122634240,
+      "completed_lifecycle_seconds_mean": 0.4939022796500467
+    },
+    {
+      "dimension": 64,
+      "method": "P-S",
+      "planned": 20,
+      "successes": 20,
+      "failures": 0,
+      "all_jobs": [
+        {
+          "job_id": "d64-r0-R000-P-S",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39430,
+          "maximum_process_peak_rss_bytes": 119783424,
+          "charged_lifecycle_seconds": 0.5216419850003149
+        },
+        {
+          "job_id": "d64-r0-R001-P-S",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39434,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.514903499999491
+        },
+        {
+          "job_id": "d64-r0-U000-P-S",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39430,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.49390824399961275
+        },
+        {
+          "job_id": "d64-r0-A000-P-S",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39434,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.5148054940000293
+        },
+        {
+          "job_id": "d64-r1-R000-P-S",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39430,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.4753779820002819
+        },
+        {
+          "job_id": "d64-r1-R001-P-S",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39434,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.49381476099915744
+        },
+        {
+          "job_id": "d64-r1-U000-P-S",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39430,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.4564059650001582
+        },
+        {
+          "job_id": "d64-r1-A000-P-S",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39434,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.5196307860005618
+        },
+        {
+          "job_id": "d64-r2-R000-P-S",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39430,
+          "maximum_process_peak_rss_bytes": 119947264,
+          "charged_lifecycle_seconds": 0.47356274300000223
+        },
+        {
+          "job_id": "d64-r2-R001-P-S",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39434,
+          "maximum_process_peak_rss_bytes": 119975936,
+          "charged_lifecycle_seconds": 0.49329075000059674
+        },
+        {
+          "job_id": "d64-r2-U000-P-S",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39430,
+          "maximum_process_peak_rss_bytes": 119996416,
+          "charged_lifecycle_seconds": 0.47357350799939013
+        },
+        {
+          "job_id": "d64-r2-A000-P-S",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39434,
+          "maximum_process_peak_rss_bytes": 120053760,
+          "charged_lifecycle_seconds": 0.4532251010004984
+        },
+        {
+          "job_id": "d64-r3-R000-P-S",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39430,
+          "maximum_process_peak_rss_bytes": 120143872,
+          "charged_lifecycle_seconds": 0.476219050000509
+        },
+        {
+          "job_id": "d64-r3-R001-P-S",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39434,
+          "maximum_process_peak_rss_bytes": 120184832,
+          "charged_lifecycle_seconds": 0.48034932500013383
+        },
+        {
+          "job_id": "d64-r3-U000-P-S",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39430,
+          "maximum_process_peak_rss_bytes": 120250368,
+          "charged_lifecycle_seconds": 0.47335932299938577
+        },
+        {
+          "job_id": "d64-r3-A000-P-S",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39434,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.5136565669999982
+        },
+        {
+          "job_id": "d64-r4-R000-P-S",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39430,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.4723473379999632
+        },
+        {
+          "job_id": "d64-r4-R001-P-S",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39434,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.493437160999747
+        },
+        {
+          "job_id": "d64-r4-U000-P-S",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39430,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.45275439100078074
+        },
+        {
+          "job_id": "d64-r4-A000-P-S",
+          "initial_serialized_state_bytes": 1707470,
+          "final_serialized_state_bytes": 39434,
+          "maximum_process_peak_rss_bytes": 122634240,
+          "charged_lifecycle_seconds": 0.540580092001619
+        }
+      ],
+      "initial_state_bytes_mean": 1707470.0,
+      "final_state_bytes_mean": 39432.0,
+      "process_peak_rss_bytes_max": 122634240,
+      "completed_lifecycle_seconds_mean": 0.4893422033001116
+    },
+    {
+      "dimension": 768,
+      "method": "B-A",
+      "planned": 4,
+      "successes": 4,
+      "failures": 0,
+      "all_jobs": [
+        {
+          "job_id": "d768-r0-R000-B-A",
+          "initial_serialized_state_bytes": 5055357,
+          "final_serialized_state_bytes": 5055358,
+          "maximum_process_peak_rss_bytes": 123748352,
+          "charged_lifecycle_seconds": 0.6023496359994169
+        },
+        {
+          "job_id": "d768-r0-R001-B-A",
+          "initial_serialized_state_bytes": 5055357,
+          "final_serialized_state_bytes": 5055358,
+          "maximum_process_peak_rss_bytes": 123748352,
+          "charged_lifecycle_seconds": 0.6216411469995364
+        },
+        {
+          "job_id": "d768-r0-U000-B-A",
+          "initial_serialized_state_bytes": 5055357,
+          "final_serialized_state_bytes": 5055358,
+          "maximum_process_peak_rss_bytes": 123748352,
+          "charged_lifecycle_seconds": 0.6210237769992091
+        },
+        {
+          "job_id": "d768-r0-A000-B-A",
+          "initial_serialized_state_bytes": 5055357,
+          "final_serialized_state_bytes": 5055359,
+          "maximum_process_peak_rss_bytes": 123879424,
+          "charged_lifecycle_seconds": 0.6412223740007903
+        }
+      ],
+      "initial_state_bytes_mean": 5055357.0,
+      "final_state_bytes_mean": 5055358.25,
+      "process_peak_rss_bytes_max": 123879424,
+      "completed_lifecycle_seconds_mean": 0.6215592334997382
+    },
+    {
+      "dimension": 768,
+      "method": "B-E",
+      "planned": 4,
+      "successes": 4,
+      "failures": 0,
+      "all_jobs": [
+        {
+          "job_id": "d768-r0-R000-B-E",
+          "initial_serialized_state_bytes": 5002156,
+          "final_serialized_state_bytes": 4932299,
+          "maximum_process_peak_rss_bytes": 123748352,
+          "charged_lifecycle_seconds": 0.7094494839984691
+        },
+        {
+          "job_id": "d768-r0-R001-B-E",
+          "initial_serialized_state_bytes": 5002156,
+          "final_serialized_state_bytes": 4929142,
+          "maximum_process_peak_rss_bytes": 123748352,
+          "charged_lifecycle_seconds": 0.6020785309992789
+        },
+        {
+          "job_id": "d768-r0-U000-B-E",
+          "initial_serialized_state_bytes": 5002156,
+          "final_serialized_state_bytes": 4951248,
+          "maximum_process_peak_rss_bytes": 123879424,
+          "charged_lifecycle_seconds": 0.683276386000216
+        },
+        {
+          "job_id": "d768-r0-A000-B-E",
+          "initial_serialized_state_bytes": 5002156,
+          "final_serialized_state_bytes": 4963881,
+          "maximum_process_peak_rss_bytes": 123879424,
+          "charged_lifecycle_seconds": 0.5806844439994165
+        }
+      ],
+      "initial_state_bytes_mean": 5002156.0,
+      "final_state_bytes_mean": 4944142.5,
+      "process_peak_rss_bytes_max": 123879424,
+      "completed_lifecycle_seconds_mean": 0.6438722112493451
+    },
+    {
+      "dimension": 768,
+      "method": "B-E-compact",
+      "planned": 4,
+      "successes": 4,
+      "failures": 0,
+      "all_jobs": [
+        {
+          "job_id": "d768-r0-R000-B-E-compact",
+          "initial_serialized_state_bytes": 285808,
+          "final_serialized_state_bytes": 216296,
+          "maximum_process_peak_rss_bytes": 122830848,
+          "charged_lifecycle_seconds": 0.5741042520003248
+        },
+        {
+          "job_id": "d768-r0-R001-B-E-compact",
+          "initial_serialized_state_bytes": 285808,
+          "final_serialized_state_bytes": 213180,
+          "maximum_process_peak_rss_bytes": 123748352,
+          "charged_lifecycle_seconds": 0.5715544449994923
+        },
+        {
+          "job_id": "d768-r0-U000-B-E-compact",
+          "initial_serialized_state_bytes": 285808,
+          "final_serialized_state_bytes": 235064,
+          "maximum_process_peak_rss_bytes": 123879424,
+          "charged_lifecycle_seconds": 0.5520988139996916
+        },
+        {
+          "job_id": "d768-r0-A000-B-E-compact",
+          "initial_serialized_state_bytes": 285808,
+          "final_serialized_state_bytes": 247588,
+          "maximum_process_peak_rss_bytes": 123879424,
+          "charged_lifecycle_seconds": 0.5513368900010391
+        }
+      ],
+      "initial_state_bytes_mean": 285808.0,
+      "final_state_bytes_mean": 228032.0,
+      "process_peak_rss_bytes_max": 123879424,
+      "completed_lifecycle_seconds_mean": 0.562273600250137
+    },
+    {
+      "dimension": 768,
+      "method": "O-G",
+      "planned": 4,
+      "successes": 4,
+      "failures": 0,
+      "all_jobs": [
+        {
+          "job_id": "d768-r0-R000-O-G",
+          "initial_serialized_state_bytes": 420922,
+          "final_serialized_state_bytes": 419354,
+          "maximum_process_peak_rss_bytes": 122830848,
+          "charged_lifecycle_seconds": 1.2770474860008107
+        },
+        {
+          "job_id": "d768-r0-R001-O-G",
+          "initial_serialized_state_bytes": 420922,
+          "final_serialized_state_bytes": 419358,
+          "maximum_process_peak_rss_bytes": 123748352,
+          "charged_lifecycle_seconds": 1.2758093860011286
+        },
+        {
+          "job_id": "d768-r0-U000-O-G",
+          "initial_serialized_state_bytes": 420922,
+          "final_serialized_state_bytes": 419354,
+          "maximum_process_peak_rss_bytes": 123879424,
+          "charged_lifecycle_seconds": 1.3154884449995734
+        },
+        {
+          "job_id": "d768-r0-A000-O-G",
+          "initial_serialized_state_bytes": 420922,
+          "final_serialized_state_bytes": 419358,
+          "maximum_process_peak_rss_bytes": 123879424,
+          "charged_lifecycle_seconds": 1.2356849179996061
+        }
+      ],
+      "initial_state_bytes_mean": 420922.0,
+      "final_state_bytes_mean": 419356.0,
+      "process_peak_rss_bytes_max": 123879424,
+      "completed_lifecycle_seconds_mean": 1.2760075587502797
+    },
+    {
+      "dimension": 768,
+      "method": "O-T",
+      "planned": 4,
+      "successes": 4,
+      "failures": 0,
+      "all_jobs": [
+        {
+          "job_id": "d768-r0-R000-O-T",
+          "initial_serialized_state_bytes": 373186,
+          "final_serialized_state_bytes": 371618,
+          "maximum_process_peak_rss_bytes": 122830848,
+          "charged_lifecycle_seconds": 0.6735893390014098
+        },
+        {
+          "job_id": "d768-r0-R001-O-T",
+          "initial_serialized_state_bytes": 373186,
+          "final_serialized_state_bytes": 371622,
+          "maximum_process_peak_rss_bytes": 123748352,
+          "charged_lifecycle_seconds": 0.6423234339999908
+        },
+        {
+          "job_id": "d768-r0-U000-O-T",
+          "initial_serialized_state_bytes": 373186,
+          "final_serialized_state_bytes": 371618,
+          "maximum_process_peak_rss_bytes": 123879424,
+          "charged_lifecycle_seconds": 0.63160303100085
+        },
+        {
+          "job_id": "d768-r0-A000-O-T",
+          "initial_serialized_state_bytes": 373186,
+          "final_serialized_state_bytes": 371622,
+          "maximum_process_peak_rss_bytes": 123879424,
+          "charged_lifecycle_seconds": 0.5715122629990219
+        }
+      ],
+      "initial_state_bytes_mean": 373186.0,
+      "final_state_bytes_mean": 371620.0,
+      "process_peak_rss_bytes_max": 123879424,
+      "completed_lifecycle_seconds_mean": 0.6297570167503181
+    },
+    {
+      "dimension": 768,
+      "method": "P-I",
+      "planned": 4,
+      "successes": 4,
+      "failures": 0,
+      "all_jobs": [
+        {
+          "job_id": "d768-r0-R000-P-I",
+          "initial_serialized_state_bytes": 232140762,
+          "final_serialized_state_bytes": 2390802,
+          "maximum_process_peak_rss_bytes": 764551168,
+          "charged_lifecycle_seconds": 2.3663374070001737
+        },
+        {
+          "job_id": "d768-r0-R001-P-I",
+          "initial_serialized_state_bytes": 232140762,
+          "final_serialized_state_bytes": 2390806,
+          "maximum_process_peak_rss_bytes": 764555264,
+          "charged_lifecycle_seconds": 1.8566986320001888
+        },
+        {
+          "job_id": "d768-r0-U000-P-I",
+          "initial_serialized_state_bytes": 232140762,
+          "final_serialized_state_bytes": 2390802,
+          "maximum_process_peak_rss_bytes": 764551168,
+          "charged_lifecycle_seconds": 1.9308827220011153
+        },
+        {
+          "job_id": "d768-r0-A000-P-I",
+          "initial_serialized_state_bytes": 232140762,
+          "final_serialized_state_bytes": 2390806,
+          "maximum_process_peak_rss_bytes": 764551168,
+          "charged_lifecycle_seconds": 1.8784347029995843
+        }
+      ],
+      "initial_state_bytes_mean": 232140762.0,
+      "final_state_bytes_mean": 2390804.0,
+      "process_peak_rss_bytes_max": 764555264,
+      "completed_lifecycle_seconds_mean": 2.0080883660002655
+    },
+    {
+      "dimension": 768,
+      "method": "P-I-jointspan",
+      "planned": 4,
+      "successes": 4,
+      "failures": 0,
+      "all_jobs": [
+        {
+          "job_id": "d768-r0-R000-P-I-jointspan",
+          "initial_serialized_state_bytes": 1144264,
+          "final_serialized_state_bytes": 472267,
+          "maximum_process_peak_rss_bytes": 123748352,
+          "charged_lifecycle_seconds": 0.6563798540009884
+        },
+        {
+          "job_id": "d768-r0-R001-P-I-jointspan",
+          "initial_serialized_state_bytes": 1144264,
+          "final_serialized_state_bytes": 479003,
+          "maximum_process_peak_rss_bytes": 123748352,
+          "charged_lifecycle_seconds": 0.6742069110005104
+        },
+        {
+          "job_id": "d768-r0-U000-P-I-jointspan",
+          "initial_serialized_state_bytes": 1144264,
+          "final_serialized_state_bytes": 445403,
+          "maximum_process_peak_rss_bytes": 123748352,
+          "charged_lifecycle_seconds": 0.6329845689997455
+        },
+        {
+          "job_id": "d768-r0-A000-P-I-jointspan",
+          "initial_serialized_state_bytes": 1144264,
+          "final_serialized_state_bytes": 512803,
+          "maximum_process_peak_rss_bytes": 123879424,
+          "charged_lifecycle_seconds": 0.6750346449989593
+        }
+      ],
+      "initial_state_bytes_mean": 1144264.0,
+      "final_state_bytes_mean": 477369.0,
+      "process_peak_rss_bytes_max": 123879424,
+      "completed_lifecycle_seconds_mean": 0.6596514947500509
+    },
+    {
+      "dimension": 768,
+      "method": "P-R",
+      "planned": 4,
+      "successes": 4,
+      "failures": 0,
+      "all_jobs": [
+        {
+          "job_id": "d768-r0-R000-P-R",
+          "initial_serialized_state_bytes": 198985738,
+          "final_serialized_state_bytes": 2390986,
+          "maximum_process_peak_rss_bytes": 714571776,
+          "charged_lifecycle_seconds": 4.190802496999822
+        },
+        {
+          "job_id": "d768-r0-R001-P-R",
+          "initial_serialized_state_bytes": 198985738,
+          "final_serialized_state_bytes": 2390990,
+          "maximum_process_peak_rss_bytes": 714579968,
+          "charged_lifecycle_seconds": 3.356066420001298
+        },
+        {
+          "job_id": "d768-r0-U000-P-R",
+          "initial_serialized_state_bytes": 198985738,
+          "final_serialized_state_bytes": 2390986,
+          "maximum_process_peak_rss_bytes": 714571776,
+          "charged_lifecycle_seconds": 2.714916949998951
+        },
+        {
+          "job_id": "d768-r0-A000-P-R",
+          "initial_serialized_state_bytes": 198985738,
+          "final_serialized_state_bytes": 2390990,
+          "maximum_process_peak_rss_bytes": 714571776,
+          "charged_lifecycle_seconds": 2.5767306679990725
+        }
+      ],
+      "initial_state_bytes_mean": 198985738.0,
+      "final_state_bytes_mean": 2390988.0,
+      "process_peak_rss_bytes_max": 714579968,
+      "completed_lifecycle_seconds_mean": 3.209629133749786
+    },
+    {
+      "dimension": 768,
+      "method": "P-S",
+      "planned": 4,
+      "successes": 4,
+      "failures": 0,
+      "all_jobs": [
+        {
+          "job_id": "d768-r0-R000-P-S",
+          "initial_serialized_state_bytes": 232140762,
+          "final_serialized_state_bytes": 2390802,
+          "maximum_process_peak_rss_bytes": 740941824,
+          "charged_lifecycle_seconds": 2.1909808039999916
+        },
+        {
+          "job_id": "d768-r0-R001-P-S",
+          "initial_serialized_state_bytes": 232140762,
+          "final_serialized_state_bytes": 2390806,
+          "maximum_process_peak_rss_bytes": 740941824,
+          "charged_lifecycle_seconds": 2.3587716330002877
+        },
+        {
+          "job_id": "d768-r0-U000-P-S",
+          "initial_serialized_state_bytes": 232140762,
+          "final_serialized_state_bytes": 2390802,
+          "maximum_process_peak_rss_bytes": 740941824,
+          "charged_lifecycle_seconds": 2.355329604999497
+        },
+        {
+          "job_id": "d768-r0-A000-P-S",
+          "initial_serialized_state_bytes": 232140762,
+          "final_serialized_state_bytes": 2390806,
+          "maximum_process_peak_rss_bytes": 738582528,
+          "charged_lifecycle_seconds": 2.329171782999765
+        }
+      ],
+      "initial_state_bytes_mean": 232140762.0,
+      "final_state_bytes_mean": 2390804.0,
+      "process_peak_rss_bytes_max": 740941824,
+      "completed_lifecycle_seconds_mean": 2.3085634562498853
+    }
+  ],
+  "source_sha256": "9b05437220017f572e417941470384b7f93a1cb397ff1c7a515e2893039b737d"
+}

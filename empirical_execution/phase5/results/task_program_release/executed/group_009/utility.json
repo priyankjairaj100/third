@@ -1,0 +1,470 @@
+{
+  "group_id": "G_boundary/civil_comments/reused-82/projection-32",
+  "geometry": {
+    "threshold": 0.6,
+    "lambda": 0.01,
+    "threshold_lock_sha256": "3de838d269a73631b2dc33d2581598004c063096c2edd3364a3c3928a5be5adb",
+    "lambda_lock_sha256": "ab7308f36618df8f87e0888b74ed06d2d5cff9646fc3428091e6e493d7552e6a",
+    "projection_sha256": "a8072fae462f6a19d4edee312e11de85ec1640f20a1aef4b74adc32389498f84",
+    "projection_output_sha256": "30e81dc12c39be0a379c250c2876b86a56f9610929d78bdabd77a5fe9ce69fbf",
+    "tag_threshold_status": "not_applicable",
+    "threshold_quality": {
+      "status": "base_threshold_contract"
+    },
+    "reference_graph_code": "efc41498648f6f7f7969768fbcd050619d7ed5d6e82eafadb1b9a3a2158e9d1c"
+  },
+  "references": [
+    {
+      "method": "curated_ridge",
+      "selected_records": 55,
+      "status": "completed",
+      "metrics": {
+        "task": "original_fractional_toxicity",
+        "n": 18,
+        "weight": 18.0,
+        "mse": 0.018017120076551228,
+        "mae": 0.10928669537014474,
+        "auroc_at_toxicity_ge_05": 0.6470588235294118,
+        "average_precision_at_toxicity_ge_05": 0.14285714285714285,
+        "positive_weight": 1.0,
+        "score_clipping": false
+      }
+    },
+    {
+      "method": "uncurated_ridge",
+      "selected_records": 82,
+      "status": "completed",
+      "metrics": {
+        "task": "original_fractional_toxicity",
+        "n": 18,
+        "weight": 18.0,
+        "mse": 0.016564619560468032,
+        "mae": 0.09531473834042993,
+        "auroc_at_toxicity_ge_05": 0.7058823529411765,
+        "average_precision_at_toxicity_ge_05": 0.16666666666666666,
+        "positive_weight": 1.0,
+        "score_clipping": false
+      }
+    },
+    {
+      "method": "same_size_hash_ridge",
+      "selected_records": 55,
+      "status": "completed",
+      "metrics": {
+        "task": "original_fractional_toxicity",
+        "n": 18,
+        "weight": 18.0,
+        "mse": 0.01612627867547935,
+        "mae": 0.1021528178817651,
+        "auroc_at_toxicity_ge_05": 0.8823529411764706,
+        "average_precision_at_toxicity_ge_05": 0.3333333333333333,
+        "positive_weight": 1.0,
+        "score_clipping": false
+      }
+    },
+    {
+      "method": "curated_logistic",
+      "selected_records": 55,
+      "status": "completed",
+      "metrics": {
+        "task": "original_fractional_toxicity",
+        "n": 18,
+        "weight": 18.0,
+        "mse": 0.058778737533604235,
+        "mae": 0.2156247104387348,
+        "auroc_at_toxicity_ge_05": 0.29411764705882354,
+        "average_precision_at_toxicity_ge_05": 0.07692307692307693,
+        "positive_weight": 1.0,
+        "score_clipping": false
+      },
+      "logistic_task_thresholds": "Civil fixed fractional-toxicity endpoint",
+      "output_solver_statuses": [
+        "numerically_converged"
+      ],
+      "meter": {
+        "joint_objective_gradient_hessian_evaluations": 6,
+        "line_search_objective_evaluations": 5,
+        "resolution_gradient_evaluations": 1,
+        "resolution_gradient_progress_steps": 1,
+        "forward_rows": 660,
+        "gradient_rows": 385,
+        "hessian_rows": 330,
+        "objective_rows": 605,
+        "linear_solves": 5,
+        "accepted_steps": 5,
+        "backtracks": 0,
+        "counter_units": "row counters count output-row evaluations; outputs are solved sequentially",
+        "shared_fp32_feature_bytes": 7040,
+        "shared_fp64_target_bytes": 440,
+        "output_fp64_head_bytes": 256,
+        "sequential_promoted_feature_bytes": 14080,
+        "sequential_hessian_bytes": 8192,
+        "peak_rss_measured": false,
+        "complete_retained_payload_queries_charged": true
+      },
+      "certificate": {
+        "schema": "ccu-multioutput-logistic-certificate-v1",
+        "outputs": 1,
+        "records": 55,
+        "objective_normalization": "sum_over_outputs_mean_over_rows",
+        "scalar_certificates": [
+          {
+            "schema": "ccu-fractional-logistic-certificate-v1",
+            "status": "certified_stored_value_optimization_bound",
+            "objective": "single-output mean fractional BCE + lambda/2 * squared Euclidean weight norm; no intercept",
+            "empty_target": "zero data loss; unique minimizer zero",
+            "records": 55,
+            "dimension": 32,
+            "lambda_exact": {
+              "numerator": "5764607523034235",
+              "denominator": "576460752303423488"
+            },
+            "sigmoid_interval_precision_bits": 128,
+            "gradient_lower": [
+              {
+                "numerator": "13692840366129078210045886005259",
+                "denominator": "14615016373309029182036848327162830196559325429760"
+              },
+              {
+                "numerator": "1574703919203797233910095944497",
+                "denominator": "5023911878324978781325166612462222880067268116480"
+              },
+              {
+                "numerator": "35606553511842322442388136759319",
+                "denominator": "80382590053199660501202665799395566081076289863680"
+              },
+              {
+                "numerator": "-5005037026894113393017622900341",
+                "denominator": "5023911878324978781325166612462222880067268116480"
+              },
+              {
+                "numerator": "-1195978093095159948520103554921",
+                "denominator": "2009564751329991512530066644984889152026907246592"
+              },
+              {
+                "numerator": "-5627971479343448411862310300897",
+                "denominator": "20095647513299915125300666449848891520269072465920"
+              },
+              {
+                "numerator": "-1050482400338567305988477153318821",
+                "denominator": "643060720425597284009621326395164528648610318909440"
+              },
+              {
+                "numerator": "767890436392509060531385336179",
+                "denominator": "3653754093327257295509212081790707549139831357440"
+              },
+              {
+                "numerator": "-129617831485725592753357292450797",
+                "denominator": "80382590053199660501202665799395566081076289863680"
+              },
+              {
+                "numerator": "3760314890293282761148057401",
+                "denominator": "251195593916248939066258330623111144003363405824"
+              },
+              {
+                "numerator": "-61293179715746748115257554999977",
+                "denominator": "80382590053199660501202665799395566081076289863680"
+              },
+              {
+                "numerator": "-1526736302719918118823904160061263",
+                "denominator": "1286121440851194568019242652790329057297220637818880"
+              },
+              {
+                "numerator": "170761558170363153510311233823",
+                "denominator": "1461501637330902918203684832716283019655932542976"
+              },
+              {
+                "numerator": "420090815362911279625430639507",
+                "denominator": "913438523331814323877303020447676887284957839360"
+              },
+              {
+                "numerator": "-5898739208714495010452123559667",
+                "denominator": "40191295026599830250601332899697783040538144931840"
+              },
+              {
+                "numerator": "91657110473487537079332877724201",
+                "denominator": "128612144085119456801924265279032905729722063781888"
+              },
+              {
+                "numerator": "1018427407113404396569457384367",
+                "denominator": "40191295026599830250601332899697783040538144931840"
+              },
+              {
+                "numerator": "-1301204217428258894588827091650847",
+                "denominator": "1286121440851194568019242652790329057297220637818880"
+              },
+              {
+                "numerator": "802960552234521501149046069567",
+                "denominator": "3653754093327257295509212081790707549139831357440"
+              },
+              {
+                "numerator": "-30981248973990085200605249797681",
+                "denominator": "20095647513299915125300666449848891520269072465920"
+              },
+              {
+                "numerator": "674185333756506004880563661521",
+                "denominator": "8038259005319966050120266579939556608107628986368"
+              },
+              {
+                "numerator": "-47534893844068723137024066771281",
+                "denominator": "40191295026599830250601332899697783040538144931840"
+              },
+              {
+                "numerator": "20642864888807812922692950546047",
+                "denominator": "40191295026599830250601332899697783040538144931840"
+              },
+              {
+                "numerator": "58544347492643473747032156304417",
+                "denominator": "643060720425597284009621326395164528648610318909440"
+              },
+              {
+                "numerator": "-136762040887682823359979618388143",
+                "denominator": "643060720425597284009621326395164528648610318909440"
+              },
+              {
+                "numerator": "12944807828621591594659648559001",
+                "denominator": "40191295026599830250601332899697783040538144931840"
+              },
+              {
+                "numerator": "262084339108926508883198845064081",
+                "denominator": "321530360212798642004810663197582264324305159454720"
+              },
+              {
+                "numerator": "-19151787431855456916293215175851",
+                "denominator": "20095647513299915125300666449848891520269072465920"
+              },
+              {
+                "numerator": "-438710144076619197056161451107",
+                "denominator": "5023911878324978781325166612462222880067268116480"
+              },
+              {
+                "numerator": "-25632582048621341964910662824091",
+                "denominator": "160765180106399321002405331598791132162152579727360"
+              },
+              {
+                "numerator": "-186324651268176860889011297337",
+                "denominator": "125597796958124469533129165311555572001681702912"
+              },
+              {
+                "numerator": "168174504658309732486812841703",
+                "denominator": "456719261665907161938651510223838443642478919680"
+              }
+            ],
+            "gradient_upper": [
+              {
+                "numerator": "602484976109679441242171179796609",
+                "denominator": "643060720425597284009621326395164528648610318909440"
+              },
+              {
+                "numerator": "1259763135363037787129065998341",
+                "denominator": "4019129502659983025060133289969778304053814493184"
+              },
+              {
+                "numerator": "8901638377960580610601553507689",
+                "denominator": "20095647513299915125300666449848891520269072465920"
+              },
+              {
+                "numerator": "-1001007405378822678603150726797",
+                "denominator": "1004782375664995756265033322492444576013453623296"
+              },
+              {
+                "numerator": "-2989945232737899871298899566401",
+                "denominator": "5023911878324978781325166612462222880067268116480"
+              },
+              {
+                "numerator": "-2813985739671724205928370652053",
+                "denominator": "10047823756649957562650333224924445760134536232960"
+              },
+              {
+                "numerator": "-525241200169283652994127792466169",
+                "denominator": "321530360212798642004810663197582264324305159454720"
+              },
+              {
+                "numerator": "2111698700079399916463424533871",
+                "denominator": "10047823756649957562650333224924445760134536232960"
+              },
+              {
+                "numerator": "-51847132594290237101334958437715",
+                "denominator": "32153036021279864200481066319758226432430515945472"
+              },
+              {
+                "numerator": "300825191223462620901726728587",
+                "denominator": "20095647513299915125300666449848891520269072465920"
+              },
+              {
+                "numerator": "-122586359431493496230456634183159",
+                "denominator": "160765180106399321002405331598791132162152579727360"
+              },
+              {
+                "numerator": "-763368151359959059411800695189493",
+                "denominator": "643060720425597284009621326395164528648610318909440"
+              },
+              {
+                "numerator": "4695942849684986721544668473159",
+                "denominator": "40191295026599830250601332899697783040538144931840"
+              },
+              {
+                "numerator": "2310499484496012037941284033743",
+                "denominator": "5023911878324978781325166612462222880067268116480"
+              },
+              {
+                "numerator": "-5898739208714495010442946167729",
+                "denominator": "40191295026599830250601332899697783040538144931840"
+              },
+              {
+                "numerator": "229142776183718842698427876494119",
+                "denominator": "321530360212798642004810663197582264324305159454720"
+              },
+              {
+                "numerator": "407370962845361758631360489491",
+                "denominator": "16076518010639932100240533159879113216215257972736"
+              },
+              {
+                "numerator": "-130120421742825889458843539291361",
+                "denominator": "128612144085119456801924265279032905729722063781888"
+              },
+              {
+                "numerator": "110407075932246706408116087099",
+                "denominator": "502391187832497878132516661246222288006726811648"
+              },
+              {
+                "numerator": "-61962497947980170401194364795173",
+                "denominator": "40191295026599830250601332899697783040538144931840"
+              },
+              {
+                "numerator": "6741853337565060048823012376011",
+                "denominator": "80382590053199660501202665799395566081076289863680"
+              },
+              {
+                "numerator": "-47534893844068723137008964249791",
+                "denominator": "40191295026599830250601332899697783040538144931840"
+              },
+              {
+                "numerator": "10321432444403906461355595247307",
+                "denominator": "20095647513299915125300666449848891520269072465920"
+              },
+              {
+                "numerator": "117088694985286947494368285921313",
+                "denominator": "1286121440851194568019242652790329057297220637818880"
+              },
+              {
+                "numerator": "-273524081775365646719702271095033",
+                "denominator": "1286121440851194568019242652790329057297220637818880"
+              },
+              {
+                "numerator": "2588961565724318318934014366765",
+                "denominator": "8038259005319966050120266579939556608107628986368"
+              },
+              {
+                "numerator": "131042169554463254441648759814211",
+                "denominator": "160765180106399321002405331598791132162152579727360"
+              },
+              {
+                "numerator": "-1915178743185545691628475235885",
+                "denominator": "2009564751329991512530066644984889152026907246592"
+              },
+              {
+                "numerator": "-438710144076619197054582523981",
+                "denominator": "5023911878324978781325166612462222880067268116480"
+              },
+              {
+                "numerator": "-12816291024310670982435783243281",
+                "denominator": "80382590053199660501202665799395566081076289863680"
+              },
+              {
+                "numerator": "-5962388840581659548447418780233",
+                "denominator": "4019129502659983025060133289969778304053814493184"
+              },
+              {
+                "numerator": "2959871281986251291770407387033",
+                "denominator": "8038259005319966050120266579939556608107628986368"
+              }
+            ],
+            "gradient_norm_squared_upper": {
+              "numerator": "32873810932751068407650903878240919006454791653164424026260432344031",
+              "denominator": "1654108360617152767806704809257701157548334382112991905046989021097526955644528041937781840123684454400"
+            },
+            "parameter_error_squared_upper": {
+              "numerator": "32873810932751068407650903878240919006454791653164424026260432344031",
+              "denominator": "165410836061715283667279932858774608758838831850938323407907300713474347050004305872421870632960000"
+            },
+            "parameter_error_norm_upper": {
+              "numerator": "445803063065797",
+              "denominator": "1000000000000000000000000000000"
+            },
+            "objective_gap_upper": {
+              "numerator": "32873810932751068407650903878240919006454791653164424026260432344031",
+              "denominator": "33082167212343056044795041378454465283549375315050231764214861062503904556648280306746120717991936000"
+            },
+            "parameter_tolerance": {
+              "numerator": "1",
+              "denominator": "100000000"
+            },
+            "meets_parameter_tolerance": true,
+            "radius_float_for_display_only": 4.45803063065797e-16,
+            "work": {
+              "exact_logit_row_evaluations": 55,
+              "exact_feature_coordinates": 1760,
+              "taylor_terms": 1623,
+              "squarings": 103
+            },
+            "elapsed_seconds": 0.05511915999886696,
+            "input_bindings": {
+              "features_sha256": "98da5887789130b331028e486f1551a6eac1bf042dfec25ae94d7b303d12642f",
+              "targets_sha256": "d29fbbcb89fc7d79b385dc901943f7b5eb8ea47e3755922955e38dcec717cd0b",
+              "weights_sha256": "b2b8354034836ef3daeb7d490da3b2c2196e06f70ad5021cc5152c47ad1c11e4",
+              "code_sha256": "93a59e37ad4597b7018f07b4a49dbaba51d4b762971a2f0520f76cfa42616eb8"
+            },
+            "statistical_unlearning_certificate": false,
+            "privacy_claim": false,
+            "canonical_state_claim": false,
+            "peak_memory_measured": false,
+            "resource_limits": {
+              "max_coordinates": 2000000,
+              "max_terms": 256,
+              "max_squarings": 64
+            },
+            "sha256": "7d43d3661cd48daf3a126447e2d985b53948b8b57fa99df5c365fdf42de0f6d2"
+          }
+        ],
+        "parameter_error_frobenius_squared_upper": {
+          "numerator": "32873810932751068407650903878240919006454791653164424026260432344031",
+          "denominator": "165410836061715283667279932858774608758838831850938323407907300713474347050004305872421870632960000"
+        },
+        "parameter_error_frobenius_upper": {
+          "numerator": "445803063065797",
+          "denominator": "1000000000000000000000000000000"
+        },
+        "objective_gap_upper": {
+          "numerator": "32873810932751068407650903878240919006454791653164424026260432344031",
+          "denominator": "33082167212343056044795041378454465283549375315050231764214861062503904556648280306746120717991936000"
+        },
+        "parameter_tolerance": {
+          "numerator": "1",
+          "denominator": "100000000"
+        },
+        "meets_parameter_tolerance": true,
+        "radius_float_for_display_only": 4.45803063065797e-16,
+        "work": {
+          "exact_logit_row_evaluations": 55,
+          "exact_feature_coordinates": 1760,
+          "taylor_terms": 1623,
+          "squarings": 103
+        },
+        "total_coordinate_budget": 2000000,
+        "input_bindings": {
+          "features": "98da5887789130b331028e486f1551a6eac1bf042dfec25ae94d7b303d12642f",
+          "targets": "75f6e9bce9271e13534b06bb0176e402a8f83df6a9d9cee7cc01c81fd9c4ea9a",
+          "weights": "09c9a820c252229d1affd380b8a0fdf6cddb676e8719f84102874f12a74fdc0f"
+        },
+        "code_sha256": "612619978ccf277b3d25acb8f0cb3c445100ae468d23369791d9a35c2b3a7eb2",
+        "scalar_code_sha256": "93a59e37ad4597b7018f07b4a49dbaba51d4b762971a2f0520f76cfa42616eb8",
+        "elapsed_seconds": 0.05552875899957144,
+        "statistical_unlearning_certificate": false,
+        "canonical_state_claim": false,
+        "privacy_claim": false,
+        "sha256": "a37dfb35985618b3e3c36ceb1c7ce1521417894ba12320b20048c596bbaf01d2"
+      }
+    }
+  ]
+}

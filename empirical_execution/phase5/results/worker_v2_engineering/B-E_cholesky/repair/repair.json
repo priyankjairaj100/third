@@ -1,0 +1,29 @@
+{
+  "denied_probe_paths": [
+    "/workspace/scratch/35d4d4d8ba2c/empirical_execution/phase5/results/worker_v2_engineering/B-E_cholesky/forbidden_probe.txt"
+  ],
+  "lambda_reg": 0.01,
+  "method": "B-E",
+  "persistence": "final",
+  "policy": {
+    "cpu_seconds": 60,
+    "memory_bytes": 1073741824,
+    "policy_role": "prospective_development_envelope_not_primary_resource_lock",
+    "threads": 1,
+    "wall_seconds": 60
+  },
+  "requests": [
+    [
+      "civil_comments_connector_preview:train:row:0"
+    ],
+    [
+      "civil_comments_connector_preview:train:row:1",
+      "civil_comments_connector_preview:train:row:2"
+    ]
+  ],
+  "solver": "cholesky",
+  "state_hashes": {
+    "state.npz": "33d2f57c5abff91e9fa10fecf7e750bcf14cbb1057b14c7eeac97e5d55fed922"
+  },
+  "unit": "record"
+}

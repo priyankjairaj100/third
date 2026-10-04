@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "scope": "tiny algebraic software fixtures ONLY; no empirical source study",
+  "checkpoints": [
+    {
+      "source_checkpoint": 1,
+      "deleted_records": 2,
+      "selected_records": 2,
+      "changed_count_identity_max_error": 5.551115123125783e-17,
+      "matrix_certificates_passed": 2,
+      "output_dimension": 20,
+      "resume_head_equal": true
+    },
+    {
+      "source_checkpoint": 2,
+      "deleted_records": 3,
+      "selected_records": 1,
+      "changed_count_identity_max_error": 5.551115123125783e-17,
+      "matrix_certificates_passed": 2,
+      "output_dimension": 20,
+      "resume_head_equal": true
+    },
+    {
+      "source_checkpoint": 3,
+      "deleted_records": 4,
+      "selected_records": 0,
+      "changed_count_identity_max_error": 0.0,
+      "matrix_certificates_passed": 2,
+      "output_dimension": 20,
+      "resume_head_equal": true
+    }
+  ],
+  "empty_after_all_source_deletions": true,
+  "code_sha256": "4f5ffa2799b6ba9681b763aef472938c0baf53ca18b4652c11a5cb71f30e43e5",
+  "implementation_sha256": "612619978ccf277b3d25acb8f0cb3c445100ae468d23369791d9a35c2b3a7eb2"
+}

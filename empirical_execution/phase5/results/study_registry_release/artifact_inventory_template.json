@@ -1,0 +1,638 @@
+{
+  "schema": "ccu-study-artifact-inventory-1",
+  "artifacts": {
+    "askubuntu.duplicate_links": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.e5.cache": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.e5.cache_manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.e5.model_tokenizer_assets": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.e5.quality_report": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.e5.selection_lock": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.e5.selection_manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.e5.selection_responses": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.e5.semantic_guard": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.e5.validation_manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.e5.validation_responses": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.external_provenance_review": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.lambda_lock": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.original_corpus": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.parser_audit": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.primary-10000.manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.primary-10000.requests": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.primary-100000.manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.primary-100000.requests": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.primary-200000.manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.primary-200000.requests": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.primary-25000.manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.primary-25000.requests": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.second-disjoint-10000.manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.second-disjoint-10000.requests": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.semdedup_development_configuration": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.separate-refit-5000.manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.separate-refit-5000.requests": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.source_partition": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.tag_thresholds": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.tag_vocabulary": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.test_cache": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.test_labels": {
+      "path": null,
+      "sha256": null
+    },
+    "askubuntu.test_manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.ANN_missed_pair_sampling_lock": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.calendar_cohort_lock": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.complete-calendar-window.manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.complete-calendar-window.requests": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.complete_month_evidence": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.e5.cache": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.e5.cache_manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.e5.model_tokenizer_assets": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.e5.quality_report": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.e5.selection_lock": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.e5.selection_manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.e5.selection_responses": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.e5.semantic_guard": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.e5.validation_manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.e5.validation_responses": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.external_provenance_review": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.original_corpus": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.parser_audit": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.pinned_PSL": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.primary-10000.manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.primary-10000.requests": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.primary-100000.manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.primary-100000.requests": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.primary-200000.manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.primary-200000.requests": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.primary-25000.manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.primary-25000.requests": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.second-disjoint-10000.manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.second-disjoint-10000.requests": {
+      "path": null,
+      "sha256": null
+    },
+    "cc_news.source_partition": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.e5.cache": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.e5.cache_manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.e5.lambda_projection_128": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.e5.lambda_projection_256": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.e5.lambda_projection_32": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.e5.lambda_projection_64": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.e5.model_tokenizer_assets": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.e5.quality_report": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.e5.selection_lock": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.e5.selection_manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.e5.selection_responses": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.e5.semantic_guard": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.e5.threshold-+1.quality_audit": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.e5.threshold--1.quality_audit": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.e5.validation_manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.e5.validation_responses": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.external_provenance_review": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.lambda_lock": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.mpnet.cache": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.mpnet.cache_manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.mpnet.lambda_lock": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.mpnet.model_tokenizer_assets": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.mpnet.quality_report": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.mpnet.selection_lock": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.mpnet.selection_manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.mpnet.selection_responses": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.mpnet.test_cache": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.mpnet.validation_manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.mpnet.validation_responses": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.original_corpus": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.parser_audit": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.primary-10000.manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.primary-10000.requests": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.primary-100000.manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.primary-100000.requests": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.primary-200000.manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.primary-200000.requests": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.primary-25000.manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.primary-25000.requests": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.second-disjoint-10000.manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.second-disjoint-10000.requests": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.semdedup_development_configuration": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.separate-refit-5000.manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.separate-refit-5000.requests": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.source_partition": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.test_cache": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.test_labels": {
+      "path": null,
+      "sha256": null
+    },
+    "civil_comments.test_manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "english_stackexchange.duplicate_links": {
+      "path": null,
+      "sha256": null
+    },
+    "english_stackexchange.e5.cache": {
+      "path": null,
+      "sha256": null
+    },
+    "english_stackexchange.e5.cache_manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "english_stackexchange.e5.model_tokenizer_assets": {
+      "path": null,
+      "sha256": null
+    },
+    "english_stackexchange.e5.quality_report": {
+      "path": null,
+      "sha256": null
+    },
+    "english_stackexchange.e5.selection_lock": {
+      "path": null,
+      "sha256": null
+    },
+    "english_stackexchange.e5.selection_manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "english_stackexchange.e5.selection_responses": {
+      "path": null,
+      "sha256": null
+    },
+    "english_stackexchange.e5.semantic_guard": {
+      "path": null,
+      "sha256": null
+    },
+    "english_stackexchange.e5.validation_manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "english_stackexchange.e5.validation_responses": {
+      "path": null,
+      "sha256": null
+    },
+    "english_stackexchange.external_provenance_review": {
+      "path": null,
+      "sha256": null
+    },
+    "english_stackexchange.lambda_lock": {
+      "path": null,
+      "sha256": null
+    },
+    "english_stackexchange.original_corpus": {
+      "path": null,
+      "sha256": null
+    },
+    "english_stackexchange.parser_audit": {
+      "path": null,
+      "sha256": null
+    },
+    "english_stackexchange.primary-10000.manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "english_stackexchange.primary-10000.requests": {
+      "path": null,
+      "sha256": null
+    },
+    "english_stackexchange.source_partition": {
+      "path": null,
+      "sha256": null
+    },
+    "english_stackexchange.tag_thresholds": {
+      "path": null,
+      "sha256": null
+    },
+    "english_stackexchange.tag_vocabulary": {
+      "path": null,
+      "sha256": null
+    },
+    "english_stackexchange.test_cache": {
+      "path": null,
+      "sha256": null
+    },
+    "english_stackexchange.test_labels": {
+      "path": null,
+      "sha256": null
+    },
+    "english_stackexchange.test_manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "global.ANN_candidate_policy": {
+      "path": null,
+      "sha256": null
+    },
+    "global.CG_common_stopping_policy": {
+      "path": null,
+      "sha256": null
+    },
+    "global.code_lock": {
+      "path": null,
+      "sha256": null
+    },
+    "global.compaction_persistence_policy": {
+      "path": null,
+      "sha256": null
+    },
+    "global.convex_three_method_worker_lock": {
+      "path": null,
+      "sha256": null
+    },
+    "global.development_precision_analysis": {
+      "path": null,
+      "sha256": null
+    },
+    "global.projection_128_matrix": {
+      "path": null,
+      "sha256": null
+    },
+    "global.projection_256_matrix": {
+      "path": null,
+      "sha256": null
+    },
+    "global.projection_32_matrix": {
+      "path": null,
+      "sha256": null
+    },
+    "global.projection_64_matrix": {
+      "path": null,
+      "sha256": null
+    },
+    "global.resource_policy": {
+      "path": null,
+      "sha256": null
+    },
+    "global.semdedup_dependency_lock": {
+      "path": null,
+      "sha256": null
+    },
+    "wcep100.e5.cache": {
+      "path": null,
+      "sha256": null
+    },
+    "wcep100.e5.cache_manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "wcep100.e5.model_tokenizer_assets": {
+      "path": null,
+      "sha256": null
+    },
+    "wcep100.external_provenance_review": {
+      "path": null,
+      "sha256": null
+    },
+    "wcep100.original_URL_verification": {
+      "path": null,
+      "sha256": null
+    },
+    "wcep100.original_corpus": {
+      "path": null,
+      "sha256": null
+    },
+    "wcep100.original_event_manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "wcep100.parser_audit": {
+      "path": null,
+      "sha256": null
+    },
+    "wcep100.source_partition": {
+      "path": null,
+      "sha256": null
+    },
+    "wcep100.whole-events-25000.manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "wcep100.whole-events-25000.requests": {
+      "path": null,
+      "sha256": null
+    }
+  },
+  "capabilities": {}
+}

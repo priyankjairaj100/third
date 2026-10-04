@@ -1,0 +1,17 @@
+{
+  "cpu_count": 9,
+  "free_disk_bytes_at_start": 4069695488,
+  "network_downloads": false,
+  "numpy": "2.3.5",
+  "optional_packages": {
+    "datasets": false,
+    "faiss": false,
+    "pyarrow": false,
+    "safetensors": false,
+    "torch": false,
+    "tqdm": false,
+    "transformers": false
+  },
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+}

@@ -1,0 +1,15 @@
+{
+  "scope": "engineering boundary orchestration; corpus provenance is external",
+  "checkpoint_rows": 24,
+  "failures": 0,
+  "completed_rows": 24,
+  "trajectory_count": 4,
+  "source_trajectories": 0,
+  "same_seed_repeat_rows": 5,
+  "seed_sensitivity_rows": 3,
+  "branch_original_selected": 75,
+  "official_backend_executed": false,
+  "primary_study": false,
+  "whole_output_persisted_bytes": 1248477,
+  "warm_single_process_timings_not_speedup_evidence": true
+}

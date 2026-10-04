@@ -6,6 +6,10 @@ __pycache__/
 tmp/
 # Large generated trace is preserved byte-for-byte in the adjacent .json.gz.
 empirical_execution/phase4/results/requests_natural_engineering.json
+# Exact per-job results are preserved in adjacent jobs.tar.gz and hash manifest.
+empirical_execution/phase5/results/isolated_natural_engineering_final/jobs/
+# Interrupted transient process-harness fixtures, never research observations.
+systems-software-check-*/
 missfont.log
 *.aux
 *.log

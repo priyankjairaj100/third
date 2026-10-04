@@ -6,11 +6,11 @@ Research workspace for **counterfactual repair after semantic data curation**, t
 
 ## Current status — 4 October 2026
 
-Theory, algorithm implementations, memory-repair qualifications, strict finite-precision certification, natural-text development experiments, and the Phase 3 preparation workflow are available here. Phase 4 adds original-schema parsers, offline semantic-encoding code, calibration-only task selection, frozen request generation, a fixed-input comparison runner and a fresh-process measurement harness. **The primary semantic empirical study has not started.** Authentic source-rich archives, pinned semantic model/cache assets and usable transformer runtime, and genuine independent human ratings remain missing. Parser software is implemented; acceptance against the actual archives is pending. Primary optimized methods/access isolation, full-refit integration and the complete pre-execution lock remain unfinished.
+Theory, memory qualifications, strict certification and the Phase 3–5 preparation and method software are available. Phase 5 adds compact CSR baselines, all main summary methods, actual isolated repair workers, a pinned SemDeDup adapter, multioutput convex repair, boundary/replication tools and analysis workflows. **The primary semantic study has not started.** Authentic source-rich corpora, real E5/MPNet assets/runtime and genuine independent human responses are still absent; real-backend acceptance and the final primary execution lock remain outstanding.
 
-The saved empirical results use small, reused natural-text previews and lexical features. They are engineering/development evidence, not E5/MPNet results or confirmation of an ACL paper's empirical claims.
+The new isolated natural-text development matrix completed **216 jobs**. Independent audit checked **1,080 original/repaired heads**, with maximum difference **9.44e-16**. All workers enforced the declared no-new-input boundary using kernel seccomp TSYNC. These results use the reused Civil100 lexical preview, not semantic embeddings or genuine source-withdrawal experiments. Compact eligible payload remains smaller than joint-span/dense summaries on this fixture, and no paper speedup is claimed.
 
-The final Phase 4 core replay has **80 checkpoints, zero failures and 54 zero-admission rows**. An independent reconstruction checks **480 saved heads**. The separate convex pilot completes **12 checkpoints and 25 rigorous optimizer-error certificates**, preserving its earlier failed run. News calendar/encoding bridges, per-encoder calibration and the admission-pair pack are implemented and checked; the latter contains **72 blank assignments and no human responses**. This advances preparation and integration verification; it establishes neither a systems speedup nor semantic utility. [Phase 4 README](empirical_execution/phase4/README.md) and [TODO ledger](empirical_execution/phase4/TODO.json) separate completed software, completed engineering runs, missing inputs and unfinished research implementation. Final consolidated review and repository checkpoint remain tracked separately.
+See the [Phase 5 README](empirical_execution/phase5/README.md), [completion ledger](empirical_execution/phase5/COMPLETION_LEDGER.md) and [current status](empirical_execution/CURRENT_STATUS.json). They distinguish tested software, natural-text engineering evidence, unexecuted scientific work and remaining inputs. Historical Phase 4 results and its TODO file are preserved unchanged.
 
 ## Read in this order
 
@@ -19,7 +19,7 @@ The final Phase 4 core replay has **80 checkpoints, zero failures and 54 zero-ad
 3. [Current machine-readable status](empirical_execution/CURRENT_STATUS.json).
 4. [Empirical protocol source](output/empirical_program/counterfactual_curation_empirical_protocol.tex) and [study design](output/empirical_program/study_design.json).
 5. [Phase 3 preparation README](empirical_execution/phase3/README.txt), [prospective amendment](empirical_execution/phase3/PREPARATION_AMENDMENT.txt), and [independent review](empirical_execution/phase3/independent_review.txt).
-6. [Phase 4 execution/preparation README](empirical_execution/phase4/README.md), [TODO ledger](empirical_execution/phase4/TODO.json), and module-specific instructions/audits.
+6. [Phase 5 methods and integrations](empirical_execution/phase5/README.md), [completion ledger](empirical_execution/phase5/COMPLETION_LEDGER.md), and final independent audit; Phase 4 documents remain historical context.
 
 The original protocol's narrative resolves omissions in the compact JSON. Later explicit corrections and qualifications supersede older drafts only within their stated scope. Historical results remain historical.
 
@@ -39,6 +39,7 @@ The original protocol's narrative resolves omissions in the compact JSON. Later 
 | `empirical_execution/phase2/` | Downstream consequence development experiment, predictions, analyses and historical intake |
 | `empirical_execution/phase3/` | Source panels, shared scorer, calibration, exact quality gate, intake v2, CLI and audits |
 | `empirical_execution/phase4/` | Original-schema adapters, offline encoding, task choices, request manifests, engineering comparison, systems harness and explicitly tracked unfinished integrations |
+| `empirical_execution/phase5/` | Compact and summary method services, kernel access boundary, numerical/convex/refit/replication/analysis integrations, natural development matrix and final review |
 | `empirical_execution/archive/` | Superseded pilot outputs retained for provenance |
 | `BACKUP_MANIFEST.json` | File sizes, SHA256 checksums and backup exclusions |
 | `BACKUP_AUDIT.md` | Backup scope and public-data handling review |
@@ -60,7 +61,7 @@ python3 -m empirical_execution.phase4.check_systems
 
 Read the phase-specific instructions before running long experiments. Several checks write result files; run in an isolated checkout when preserving the original snapshot. The compiled GMP helper is platform-dependent; its source and build/fallback instructions are included.
 
-For continuation, acquire and accept the actual source-rich files and pinned local semantic assets, then execute the blinded selection/independent validation workflow with genuine humans. In parallel, finish the primary optimized/access-contract/full-refit integrations listed in the TODO ledger. Completed preparation code must not be used to mark those scientific dependencies complete.
+For continuation, acquire and accept the actual source-rich files and pinned local semantic assets, then execute the blinded selection/independent validation workflow with genuine humans. Use the Phase 5 completion ledger and study registry to resolve final acceptance, recipe and instrumentation requirements. Completed code and a checksum inventory do not establish scientific input authenticity or complete these experiments.
 
 ## Backup scope
 

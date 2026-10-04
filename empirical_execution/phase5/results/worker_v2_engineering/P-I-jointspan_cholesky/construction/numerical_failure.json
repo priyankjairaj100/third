@@ -1,0 +1,29 @@
+{
+  "audit_requested": true,
+  "condition_log10_estimate": null,
+  "condition_number_2_estimate": null,
+  "count": 7,
+  "cross_sha256": "54525d1ddfac04d4848baae349c0ca876f0afc5d4cd13cabc5e313decdf065ba",
+  "dimension": 16,
+  "fallback_performed": false,
+  "gram_sha256": "72e26385ad4751037815c565eea96bef3d5998291e0bb3f6453b078c3f9cf27b",
+  "iteration_counts": [],
+  "lambda_hex": "0x1.47ae147ae147bp-7",
+  "numerically_certified": false,
+  "outputs": 1,
+  "parameter_error_bound_is_diagnostic": true,
+  "policy": {
+    "cg_initialization": "zero",
+    "cg_max_iterations_per_dimension": 10,
+    "empty_target_policy": "reject_nonzero_moments",
+    "failure_policy": "retain_failure_no_fallback_no_tolerance_relaxation",
+    "normalized_residual_limit": 1e-10,
+    "residual_accumulation": "coordinate_order_Neumaier_FP64",
+    "schema": "ccu-common-ridge-decoder-1"
+  },
+  "release_allowed": false,
+  "schema": "ccu-common-ridge-decoder-1",
+  "solver": "cholesky",
+  "status": "invalid_asymmetric_stored_gram",
+  "total_seconds": 6.509499871754088e-05
+}

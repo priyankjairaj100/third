@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "checks": 17,
+  "names": [
+    "macro_ap_matches_independent_sklearn",
+    "macro_f1_matches_independent_sklearn",
+    "micro_ap_matches_independent_sklearn",
+    "micro_f1_matches_independent_sklearn",
+    "auc_ties_weighted_0",
+    "auc_ties_weighted_1",
+    "zero_positive_ap_zero_auc_undefined",
+    "zero_target_kept",
+    "whole_source_multiplicity_equals_expansion",
+    "unclipped_regression",
+    "constant_predelete_no_floor",
+    "negative_signed_loss_preserved",
+    "negative_weights",
+    "fractional_multihot",
+    "nan_score",
+    "invalid_threshold",
+    "saved_natural_predictions_mae_exact"
+  ],
+  "historical_prediction_vectors_checked": 896,
+  "synthetic_empirical_data": false,
+  "primary_study_result": false,
+  "scope": "algebraic metric tests and existing natural Civil18 heldout development predictions",
+  "source_sha256": "3ead5f662edf154d0f14b3bf7e18ae50961ac340100d1f71ff326564421917c0"
+}

@@ -1,0 +1,19 @@
+{
+  "checkpoint_rows": 2,
+  "evaluation_scope": "algebraic software fixture only; no corpus, native source or empirical evidence",
+  "executed_trajectories": 1,
+  "failures": [],
+  "joint_certificates": 9,
+  "lock_sha256": "1dae0247e0475f0d2bb16f7622448937cd0b8234f137e9816ef159e25fc0be88",
+  "max_certificate_radius_display": 1.9611968291087482e-12,
+  "method_releases": 6,
+  "missing_trajectories": 0,
+  "planned_trajectories": 1,
+  "primary_study_started": false,
+  "process_isolation_claim": false,
+  "scalar_certificates": 18,
+  "semantic_quality_established": false,
+  "source_authenticity_verified": false,
+  "speedup_claim": false,
+  "status": "completed_engineering"
+}

@@ -1,0 +1,6 @@
+{
+  "reconstructed_from_frozen_v1_plus_initial_recorded_versioning_transform": true,
+  "hash_matches_original_run": true,
+  "expected_worker_sha256": "5717d3630f7b73da4b057b3bad368ce09bc2b56b52311e759f3535998cf2871b",
+  "actual_worker_sha256": "5717d3630f7b73da4b057b3bad368ce09bc2b56b52311e759f3535998cf2871b"
+}

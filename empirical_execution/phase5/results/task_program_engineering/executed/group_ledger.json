@@ -1,0 +1,485 @@
+[
+  {
+    "group_id": "B_relevance/civil_comments/reused-82/native",
+    "configuration": {
+      "curator_encoder": "lexical128",
+      "learner_encoder": "lexical64",
+      "learner_dimension": 64,
+      "threshold": "calibrated",
+      "priority_seed": 0,
+      "state_precision": "FP64",
+      "decoder": "Cholesky"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "completed_task_slice",
+    "geometry": {
+      "threshold": 0.6,
+      "lambda": 0.01,
+      "threshold_lock_sha256": "3de838d269a73631b2dc33d2581598004c063096c2edd3364a3c3928a5be5adb",
+      "lambda_lock_sha256": "3c1a61651ae04570e6559f6c2c5520ec08cda51927cf1aa5805a9141905701a1",
+      "projection_sha256": null,
+      "projection_output_sha256": "8cee4464badab062c5342bbc11bed73154267a55d271be2557bc1e65f41bcb63",
+      "tag_threshold_status": "not_applicable",
+      "threshold_quality": {
+        "status": "base_threshold_contract"
+      },
+      "reference_graph_code": "efc41498648f6f7f7969768fbcd050619d7ed5d6e82eafadb1b9a3a2158e9d1c"
+    },
+    "utility_failures": 0
+  },
+  {
+    "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-128-64",
+    "configuration": {
+      "curator_encoder": "lexical128",
+      "learner_encoder": "lexical64",
+      "learner_dimension": 64,
+      "threshold": "calibrated",
+      "priority_seed": 0,
+      "state_precision": "FP64",
+      "decoder": "Cholesky"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "completed_task_slice",
+    "geometry": {
+      "threshold": 0.6,
+      "lambda": 0.01,
+      "threshold_lock_sha256": "3de838d269a73631b2dc33d2581598004c063096c2edd3364a3c3928a5be5adb",
+      "lambda_lock_sha256": "3c1a61651ae04570e6559f6c2c5520ec08cda51927cf1aa5805a9141905701a1",
+      "projection_sha256": null,
+      "projection_output_sha256": "8cee4464badab062c5342bbc11bed73154267a55d271be2557bc1e65f41bcb63",
+      "tag_threshold_status": "not_applicable",
+      "threshold_quality": {
+        "status": "base_threshold_contract"
+      },
+      "reference_graph_code": "efc41498648f6f7f7969768fbcd050619d7ed5d6e82eafadb1b9a3a2158e9d1c"
+    },
+    "utility_failures": 0
+  },
+  {
+    "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-128-128",
+    "configuration": {
+      "curator_encoder": "lexical128",
+      "learner_encoder": "lexical128",
+      "learner_dimension": 128,
+      "threshold": "calibrated",
+      "priority_seed": 0,
+      "state_precision": "FP64",
+      "decoder": "Cholesky"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "completed_task_slice",
+    "geometry": {
+      "threshold": 0.6,
+      "lambda": 0.01,
+      "threshold_lock_sha256": "3de838d269a73631b2dc33d2581598004c063096c2edd3364a3c3928a5be5adb",
+      "lambda_lock_sha256": "a4845602d08429bb0c821ab6564dbe446e82e10ac15a49e71dadedc66fb8b994",
+      "projection_sha256": null,
+      "projection_output_sha256": "2bdca6496488a9ce8520d259f3745363d7a1fa21d9615d9523c6459553974cea",
+      "tag_threshold_status": "not_applicable",
+      "threshold_quality": {
+        "status": "base_threshold_contract"
+      },
+      "reference_graph_code": "efc41498648f6f7f7969768fbcd050619d7ed5d6e82eafadb1b9a3a2158e9d1c"
+    },
+    "utility_failures": 0
+  },
+  {
+    "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-256-64",
+    "configuration": {
+      "curator_encoder": "lexical256",
+      "learner_encoder": "lexical64",
+      "learner_dimension": 64,
+      "threshold": "calibrated",
+      "priority_seed": 0,
+      "state_precision": "FP64",
+      "decoder": "Cholesky"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "completed_task_slice",
+    "geometry": {
+      "threshold": 0.6,
+      "lambda": 0.01,
+      "threshold_lock_sha256": "189873734cb619460774567aa4d5f9ae8a3ede25e156a58aa8489da362eac4e8",
+      "lambda_lock_sha256": "3c1a61651ae04570e6559f6c2c5520ec08cda51927cf1aa5805a9141905701a1",
+      "projection_sha256": null,
+      "projection_output_sha256": "8cee4464badab062c5342bbc11bed73154267a55d271be2557bc1e65f41bcb63",
+      "tag_threshold_status": "not_applicable",
+      "threshold_quality": {
+        "status": "base_threshold_contract"
+      },
+      "reference_graph_code": "efc41498648f6f7f7969768fbcd050619d7ed5d6e82eafadb1b9a3a2158e9d1c"
+    },
+    "utility_failures": 0
+  },
+  {
+    "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-256-128",
+    "configuration": {
+      "curator_encoder": "lexical256",
+      "learner_encoder": "lexical128",
+      "learner_dimension": 128,
+      "threshold": "calibrated",
+      "priority_seed": 0,
+      "state_precision": "FP64",
+      "decoder": "Cholesky"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "completed_task_slice",
+    "geometry": {
+      "threshold": 0.6,
+      "lambda": 0.01,
+      "threshold_lock_sha256": "189873734cb619460774567aa4d5f9ae8a3ede25e156a58aa8489da362eac4e8",
+      "lambda_lock_sha256": "a4845602d08429bb0c821ab6564dbe446e82e10ac15a49e71dadedc66fb8b994",
+      "projection_sha256": null,
+      "projection_output_sha256": "2bdca6496488a9ce8520d259f3745363d7a1fa21d9615d9523c6459553974cea",
+      "tag_threshold_status": "not_applicable",
+      "threshold_quality": {
+        "status": "base_threshold_contract"
+      },
+      "reference_graph_code": "efc41498648f6f7f7969768fbcd050619d7ed5d6e82eafadb1b9a3a2158e9d1c"
+    },
+    "utility_failures": 0
+  },
+  {
+    "group_id": "G_boundary/civil_comments/reused-82/priority-1",
+    "configuration": {
+      "curator_encoder": "lexical128",
+      "learner_encoder": "lexical64",
+      "learner_dimension": 64,
+      "threshold": "calibrated",
+      "priority_seed": 1,
+      "state_precision": "FP64",
+      "decoder": "Cholesky"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "completed_task_slice",
+    "geometry": {
+      "threshold": 0.6,
+      "lambda": 0.01,
+      "threshold_lock_sha256": "3de838d269a73631b2dc33d2581598004c063096c2edd3364a3c3928a5be5adb",
+      "lambda_lock_sha256": "3c1a61651ae04570e6559f6c2c5520ec08cda51927cf1aa5805a9141905701a1",
+      "projection_sha256": null,
+      "projection_output_sha256": "8cee4464badab062c5342bbc11bed73154267a55d271be2557bc1e65f41bcb63",
+      "tag_threshold_status": "not_applicable",
+      "threshold_quality": {
+        "status": "base_threshold_contract"
+      },
+      "reference_graph_code": "efc41498648f6f7f7969768fbcd050619d7ed5d6e82eafadb1b9a3a2158e9d1c"
+    },
+    "utility_failures": 0
+  },
+  {
+    "group_id": "G_boundary/civil_comments/reused-82/priority-2",
+    "configuration": {
+      "curator_encoder": "lexical128",
+      "learner_encoder": "lexical64",
+      "learner_dimension": 64,
+      "threshold": "calibrated",
+      "priority_seed": 2,
+      "state_precision": "FP64",
+      "decoder": "Cholesky"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "completed_task_slice",
+    "geometry": {
+      "threshold": 0.6,
+      "lambda": 0.01,
+      "threshold_lock_sha256": "3de838d269a73631b2dc33d2581598004c063096c2edd3364a3c3928a5be5adb",
+      "lambda_lock_sha256": "3c1a61651ae04570e6559f6c2c5520ec08cda51927cf1aa5805a9141905701a1",
+      "projection_sha256": null,
+      "projection_output_sha256": "8cee4464badab062c5342bbc11bed73154267a55d271be2557bc1e65f41bcb63",
+      "tag_threshold_status": "not_applicable",
+      "threshold_quality": {
+        "status": "base_threshold_contract"
+      },
+      "reference_graph_code": "efc41498648f6f7f7969768fbcd050619d7ed5d6e82eafadb1b9a3a2158e9d1c"
+    },
+    "utility_failures": 0
+  },
+  {
+    "group_id": "G_boundary/civil_comments/reused-82/threshold-minus",
+    "configuration": {
+      "curator_encoder": "lexical128",
+      "learner_encoder": "lexical64",
+      "learner_dimension": 64,
+      "threshold": "max(0,calibrated-0.02)",
+      "priority_seed": 0,
+      "state_precision": "FP64",
+      "decoder": "Cholesky"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "completed_task_slice",
+    "geometry": {
+      "threshold": 0.58,
+      "lambda": 0.01,
+      "threshold_lock_sha256": "3de838d269a73631b2dc33d2581598004c063096c2edd3364a3c3928a5be5adb",
+      "lambda_lock_sha256": "3c1a61651ae04570e6559f6c2c5520ec08cda51927cf1aa5805a9141905701a1",
+      "projection_sha256": null,
+      "projection_output_sha256": "8cee4464badab062c5342bbc11bed73154267a55d271be2557bc1e65f41bcb63",
+      "tag_threshold_status": "not_applicable",
+      "threshold_quality": {
+        "audited": false,
+        "status": "engineering_lexical_threshold_without_semantic_quality_claim"
+      },
+      "reference_graph_code": "efc41498648f6f7f7969768fbcd050619d7ed5d6e82eafadb1b9a3a2158e9d1c"
+    },
+    "utility_failures": 0
+  },
+  {
+    "group_id": "G_boundary/civil_comments/reused-82/threshold-plus",
+    "configuration": {
+      "curator_encoder": "lexical128",
+      "learner_encoder": "lexical64",
+      "learner_dimension": 64,
+      "threshold": "min(1,calibrated+0.02)",
+      "priority_seed": 0,
+      "state_precision": "FP64",
+      "decoder": "Cholesky"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "completed_task_slice",
+    "geometry": {
+      "threshold": 0.62,
+      "lambda": 0.01,
+      "threshold_lock_sha256": "3de838d269a73631b2dc33d2581598004c063096c2edd3364a3c3928a5be5adb",
+      "lambda_lock_sha256": "3c1a61651ae04570e6559f6c2c5520ec08cda51927cf1aa5805a9141905701a1",
+      "projection_sha256": null,
+      "projection_output_sha256": "8cee4464badab062c5342bbc11bed73154267a55d271be2557bc1e65f41bcb63",
+      "tag_threshold_status": "not_applicable",
+      "threshold_quality": {
+        "audited": false,
+        "status": "engineering_lexical_threshold_without_semantic_quality_claim"
+      },
+      "reference_graph_code": "efc41498648f6f7f7969768fbcd050619d7ed5d6e82eafadb1b9a3a2158e9d1c"
+    },
+    "utility_failures": 0
+  },
+  {
+    "group_id": "G_boundary/civil_comments/reused-82/projection-32",
+    "configuration": {
+      "curator_encoder": "lexical128",
+      "learner_encoder": "lexical64",
+      "learner_dimension": 32,
+      "threshold": "calibrated",
+      "priority_seed": 0,
+      "state_precision": "FP64",
+      "decoder": "Cholesky",
+      "projection_seed": 20271005
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "completed_task_slice",
+    "geometry": {
+      "threshold": 0.6,
+      "lambda": 0.01,
+      "threshold_lock_sha256": "3de838d269a73631b2dc33d2581598004c063096c2edd3364a3c3928a5be5adb",
+      "lambda_lock_sha256": "ab7308f36618df8f87e0888b74ed06d2d5cff9646fc3428091e6e493d7552e6a",
+      "projection_sha256": "a8072fae462f6a19d4edee312e11de85ec1640f20a1aef4b74adc32389498f84",
+      "projection_output_sha256": "30e81dc12c39be0a379c250c2876b86a56f9610929d78bdabd77a5fe9ce69fbf",
+      "tag_threshold_status": "not_applicable",
+      "threshold_quality": {
+        "status": "base_threshold_contract"
+      },
+      "reference_graph_code": "efc41498648f6f7f7969768fbcd050619d7ed5d6e82eafadb1b9a3a2158e9d1c"
+    },
+    "utility_failures": 0
+  },
+  {
+    "group_id": "G_boundary/civil_comments/reused-82/lambda-lower",
+    "configuration": {
+      "curator_encoder": "lexical128",
+      "learner_encoder": "lexical64",
+      "learner_dimension": 64,
+      "threshold": "calibrated",
+      "priority_seed": 0,
+      "state_precision": "FP64",
+      "decoder": "Cholesky",
+      "lambda_factor": 0.1
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "completed_task_slice",
+    "geometry": {
+      "threshold": 0.6,
+      "lambda": 0.001,
+      "threshold_lock_sha256": "3de838d269a73631b2dc33d2581598004c063096c2edd3364a3c3928a5be5adb",
+      "lambda_lock_sha256": "3c1a61651ae04570e6559f6c2c5520ec08cda51927cf1aa5805a9141905701a1",
+      "projection_sha256": null,
+      "projection_output_sha256": "8cee4464badab062c5342bbc11bed73154267a55d271be2557bc1e65f41bcb63",
+      "tag_threshold_status": "not_applicable",
+      "threshold_quality": {
+        "status": "base_threshold_contract"
+      },
+      "reference_graph_code": "efc41498648f6f7f7969768fbcd050619d7ed5d6e82eafadb1b9a3a2158e9d1c"
+    },
+    "utility_failures": 0
+  },
+  {
+    "group_id": "G_boundary/civil_comments/reused-82/lambda-higher",
+    "configuration": {
+      "curator_encoder": "lexical128",
+      "learner_encoder": "lexical64",
+      "learner_dimension": 64,
+      "threshold": "calibrated",
+      "priority_seed": 0,
+      "state_precision": "FP64",
+      "decoder": "Cholesky",
+      "lambda_factor": 10.0
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "completed_task_slice",
+    "geometry": {
+      "threshold": 0.6,
+      "lambda": 0.1,
+      "threshold_lock_sha256": "3de838d269a73631b2dc33d2581598004c063096c2edd3364a3c3928a5be5adb",
+      "lambda_lock_sha256": "3c1a61651ae04570e6559f6c2c5520ec08cda51927cf1aa5805a9141905701a1",
+      "projection_sha256": null,
+      "projection_output_sha256": "8cee4464badab062c5342bbc11bed73154267a55d271be2557bc1e65f41bcb63",
+      "tag_threshold_status": "not_applicable",
+      "threshold_quality": {
+        "status": "base_threshold_contract"
+      },
+      "reference_graph_code": "efc41498648f6f7f7969768fbcd050619d7ed5d6e82eafadb1b9a3a2158e9d1c"
+    },
+    "utility_failures": 0
+  },
+  {
+    "group_id": "G_boundary/civil_comments/reused-82/missing-semantic-encoder",
+    "configuration": {
+      "curator_encoder": "e5",
+      "learner_encoder": "lexical64",
+      "learner_dimension": 64,
+      "threshold": "calibrated",
+      "priority_seed": 0,
+      "state_precision": "FP64",
+      "decoder": "Cholesky"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "blocked_missing_input",
+    "message": "'e5'"
+  },
+  {
+    "group_id": "G_boundary/civil_comments/reused-82/FP32-outside-task-slice",
+    "configuration": {
+      "curator_encoder": "lexical128",
+      "learner_encoder": "lexical64",
+      "learner_dimension": 64,
+      "threshold": "calibrated",
+      "priority_seed": 0,
+      "state_precision": "FP32",
+      "decoder": "Cholesky"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "outside_task_executor",
+    "message": "FP32/CG state methods belong to their separate method executor; no silent FP64 substitution"
+  }
+]

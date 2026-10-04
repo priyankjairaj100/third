@@ -1,0 +1,187 @@
+{
+  "methods": {
+    "certified_convex_repair": {
+      "error": "Total output-row-coordinate budget exceeded before verification",
+      "error_type": "CertificateBudgetError",
+      "released": false
+    },
+    "eligible_payload_retraining": {
+      "error": "Total output-row-coordinate budget exceeded before verification",
+      "error_type": "CertificateBudgetError",
+      "released": false
+    },
+    "fresh_optimum": {
+      "error": "Total output-row-coordinate budget exceeded before verification",
+      "error_type": "CertificateBudgetError",
+      "released": false
+    }
+  },
+  "selected_ids": [
+    "fixture-c"
+  ],
+  "stages": {
+    "certified_convex_repair": {
+      "accounting": {
+        "eligibility_counter": {
+          "access_capability": "horizon-eligible learner payload",
+          "allocated_array_bytes": 228,
+          "allocated_rows": 3,
+          "array_bytes_by_field": {
+            "blocker_idx": 8,
+            "blocker_ptr": 32,
+            "bucket_head": 12,
+            "bucket_next": 12,
+            "bucket_prev": 12,
+            "counts": 12,
+            "cross": 8,
+            "gram": 8,
+            "live": 3,
+            "owner": 12,
+            "owner_idx": 12,
+            "owner_ptr": 24,
+            "reverse_idx": 8,
+            "reverse_ptr": 24,
+            "selected": 3,
+            "unit_alive": 2,
+            "x": 12,
+            "y": 24
+          },
+          "compaction_fraction": 0.5,
+          "cumulative_operations": {
+            "blas_batches": 1,
+            "compaction_incidences_scanned": 0,
+            "compaction_rows_scanned": 0,
+            "compactions": 0,
+            "expired_rows": 0,
+            "fresh_units": 0,
+            "incidence_touches": 0,
+            "payload_rows_read": 1,
+            "peak_blas_workspace_array_bytes": 36,
+            "requests": 0,
+            "statistic_coordinate_additions": 2
+          },
+          "live_blocker_incidences": 2,
+          "live_payload_bytes": 36,
+          "live_payload_rows": 3,
+          "method": "B-E",
+          "peak_rss_measured_here": false,
+          "physical_erasure_claim": false,
+          "python_owned_bytes_estimate": 7477,
+          "registry_utf8_bytes": 49,
+          "remaining_horizon": 2,
+          "schema": "ccu-packed-payload-1",
+          "selected_count": 1,
+          "stale_blocker_incidences": 0,
+          "stale_csr_value_bytes": 0,
+          "stale_payload_bytes": 0,
+          "stale_payload_rows": 0,
+          "stale_row_slot_metadata_bytes": 0
+        },
+        "graph_or_curator_vectors_retained": false,
+        "logical_deletion_not_physical_erasure": true,
+        "meter": {
+          "construction_dummy_array_bytes": 36,
+          "constructor_payload_read_bytes": 72,
+          "real_payload_compaction_read_bytes": 0,
+          "real_payload_compaction_written_bytes": 0,
+          "real_payload_gathered_bytes": 24,
+          "real_payload_gathered_rows": 1
+        },
+        "peak_rss_measured": false,
+        "raw_constructor_arrays_retained": false,
+        "real_feature_dimension": 2,
+        "real_outputs": 2,
+        "real_payload_allocated_bytes": 72,
+        "real_payload_live_bytes": 72,
+        "real_payload_stale_bytes": 0,
+        "real_payload_touches_required": true
+      },
+      "initial_total_seconds": 0.0009380350020364858,
+      "state_build_seconds": 0.00019768000129261054
+    },
+    "eligible_payload_retraining": {
+      "accounting": {
+        "eligibility_counter": {
+          "access_capability": "horizon-eligible learner payload",
+          "allocated_array_bytes": 228,
+          "allocated_rows": 3,
+          "array_bytes_by_field": {
+            "blocker_idx": 8,
+            "blocker_ptr": 32,
+            "bucket_head": 12,
+            "bucket_next": 12,
+            "bucket_prev": 12,
+            "counts": 12,
+            "cross": 8,
+            "gram": 8,
+            "live": 3,
+            "owner": 12,
+            "owner_idx": 12,
+            "owner_ptr": 24,
+            "reverse_idx": 8,
+            "reverse_ptr": 24,
+            "selected": 3,
+            "unit_alive": 2,
+            "x": 12,
+            "y": 24
+          },
+          "compaction_fraction": 0.5,
+          "cumulative_operations": {
+            "blas_batches": 1,
+            "compaction_incidences_scanned": 0,
+            "compaction_rows_scanned": 0,
+            "compactions": 0,
+            "expired_rows": 0,
+            "fresh_units": 0,
+            "incidence_touches": 0,
+            "payload_rows_read": 1,
+            "peak_blas_workspace_array_bytes": 36,
+            "requests": 0,
+            "statistic_coordinate_additions": 2
+          },
+          "live_blocker_incidences": 2,
+          "live_payload_bytes": 36,
+          "live_payload_rows": 3,
+          "method": "B-E",
+          "peak_rss_measured_here": false,
+          "physical_erasure_claim": false,
+          "python_owned_bytes_estimate": 7477,
+          "registry_utf8_bytes": 49,
+          "remaining_horizon": 2,
+          "schema": "ccu-packed-payload-1",
+          "selected_count": 1,
+          "stale_blocker_incidences": 0,
+          "stale_csr_value_bytes": 0,
+          "stale_payload_bytes": 0,
+          "stale_payload_rows": 0,
+          "stale_row_slot_metadata_bytes": 0
+        },
+        "graph_or_curator_vectors_retained": false,
+        "logical_deletion_not_physical_erasure": true,
+        "meter": {
+          "construction_dummy_array_bytes": 36,
+          "constructor_payload_read_bytes": 72,
+          "real_payload_compaction_read_bytes": 0,
+          "real_payload_compaction_written_bytes": 0,
+          "real_payload_gathered_bytes": 24,
+          "real_payload_gathered_rows": 1
+        },
+        "peak_rss_measured": false,
+        "raw_constructor_arrays_retained": false,
+        "real_feature_dimension": 2,
+        "real_outputs": 2,
+        "real_payload_allocated_bytes": 72,
+        "real_payload_live_bytes": 72,
+        "real_payload_stale_bytes": 0,
+        "real_payload_touches_required": true
+      },
+      "initial_total_seconds": 0.001013485001749359,
+      "state_build_seconds": 0.00022856500072521158
+    },
+    "fresh_optimum": {
+      "initial_total_seconds": 0.0008759429983911105,
+      "retained_raw_payload_bytes": 96,
+      "state_build_seconds": 0.0
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "all_local": true,
+  "allocations": {
+    "R": 0,
+    "S": 1
+  },
+  "certificate_budget": 0,
+  "code_sha256": {
+    "convex.py": "93a59e37ad4597b7018f07b4a49dbaba51d4b762971a2f0520f76cfa42616eb8",
+    "convex_multioutput.py": "612619978ccf277b3d25acb8f0cb3c445100ae468d23369791d9a35c2b3a7eb2",
+    "convex_program.py": "b17bc63d241914e9c795cabebcb1513c0678c199fc126724989395c6e2483bca",
+    "payload.py": "7759fee20847bd7e6d7216802b27a26480c1a852489dba05a4642414765b1815"
+  },
+  "compaction_fraction": 0.5,
+  "evaluation_scope": "algebraic refusal path only",
+  "evidence_role": "engineering_nonconfirmatory",
+  "input_bindings": {
+    "curator": "acbb3c0e309bb71c2aabb82c6884bba07349f53ba24d508fc75bf4378b639561",
+    "evaluation_features": "acbb3c0e309bb71c2aabb82c6884bba07349f53ba24d508fc75bf4378b639561",
+    "evaluation_targets": "e7f8f363bb0beacae25ca24fc5a1997f543a300a06ea8df8ec41680949ca269a",
+    "learner": "acbb3c0e309bb71c2aabb82c6884bba07349f53ba24d508fc75bf4378b639561",
+    "record_ids": "57c14ff450a02e592474b13a9ab88b195d739efdc348c375f1f8d055c07c4b53",
+    "requests": "bd7b9149d7d30d536fa2075e7613d327dcc5c4a305e01742cebf8f41b28a66c5",
+    "source_ids": "bf3ed0f945b9fee59f427c521df79ac4cddf1cab6ac9b2d0cd94d5e8099bde3d",
+    "source_kinds": "4171978a4f036beaf5d23f0bbc7c9e43a4cabd2cf932cde8d77fc6db5f62cd86",
+    "targets": "e7f8f363bb0beacae25ca24fc5a1997f543a300a06ea8df8ec41680949ca269a"
+  },
+  "lambda_reg": 0.25,
+  "methods": [
+    "fresh_optimum",
+    "eligible_payload_retraining",
+    "certified_convex_repair"
+  ],
+  "objective": "sum_output_row_mean_BCE_plus_lambda_half_Frobenius_squared",
+  "paper_systems_claim": false,
+  "parameter_tolerance": {
+    "denominator": "100000000",
+    "numerator": "1"
+  },
+  "persistence": "final_state_per_trajectory_each_payload_method",
+  "primary_study_started": false,
+  "process_isolation": false,
+  "schema": "ccu-convex-program-1",
+  "shared_graph_seconds": 0.0002444279998599086,
+  "source_provenance_authenticated": false,
+  "threshold": 0.6
+}

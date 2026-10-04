@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "checks": [
+    "deterministic_full_manifest",
+    "complete_unique_admission_union_and_multiplicity",
+    "complete_former_blocker_sets_at_actual_admission",
+    "nearest_surviving_selected_excludes_self_matches_scalar_oracle",
+    "fixed100_quotas_complete_frames_exact_weights_no_refill",
+    "software_tie_id_order_and_empty_comparison",
+    "logged_truncation_does_not_reselect_or_refill_units",
+    "three_blinded_blank_independent_assignment_slots_per_unit",
+    "tampered_manifest_refused",
+    "overwrite_refused",
+    "changed_text_refused",
+    "engineering_relabel_refused"
+  ],
+  "complete_unique_admissions": 10,
+  "selected_neighborhoods": 10,
+  "selected_nearest_selected": 10,
+  "blank_assignments": 60,
+  "completed_human_responses": 0,
+  "missing_corpora": [
+    "askubuntu",
+    "cc_news"
+  ],
+  "semantic_study_result": false,
+  "corpus_sha256": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9",
+  "manifest_sha256": "8bec5ba6d05cf78633c94d457c0920097cfb965b3b6abd4b8efded99a239e829",
+  "source_service_empirical": false,
+  "human_dispatch_ready": false
+}

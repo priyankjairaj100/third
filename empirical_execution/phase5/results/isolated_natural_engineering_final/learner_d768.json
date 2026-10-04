@@ -1,0 +1,23 @@
+{
+  "E5_or_semantic_model": false,
+  "alternate_sign": false,
+  "analyzer": "word",
+  "array_sha256": "d2436f8109a9645a997082224d913eea20cca5761e97ff4b5e8052a95e08df70",
+  "corpus_fitted_state": false,
+  "dtype": "float32",
+  "limitations": [
+    "hash collisions",
+    "lexical similarity not audited semantic duplication",
+    "preview sampling and connector rendering",
+    "no held-out NLP utility claim"
+  ],
+  "lowercase": false,
+  "n_features": 768,
+  "name": "sklearn.HashingVectorizer",
+  "ngrams": [
+    1,
+    2
+  ],
+  "norm": "l2",
+  "purpose": "nonconfirmatory_software_pilot_only"
+}

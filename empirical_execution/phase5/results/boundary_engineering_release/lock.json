@@ -1,0 +1,43 @@
+{
+  "evidence_role": "reused_natural_Civil100_lexical_engineering_only",
+  "source_sha256": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9",
+  "records": 100,
+  "features": {
+    "name": "sklearn.HashingVectorizer",
+    "n_features": 128,
+    "analyzer": "word",
+    "ngrams": [
+      1,
+      2
+    ],
+    "alternate_sign": false,
+    "lowercase": false,
+    "norm": "l2",
+    "dtype": "float32",
+    "corpus_fitted_state": false,
+    "E5_or_semantic_model": false,
+    "purpose": "nonconfirmatory_software_pilot_only",
+    "limitations": [
+      "hash collisions",
+      "lexical similarity not audited semantic duplication",
+      "preview sampling and connector rendering",
+      "no held-out NLP utility claim"
+    ],
+    "array_sha256": "03f1661550b3ddab6e680502794724aec1b0bcbaaf27d2eeb02251fa62e84ab7"
+  },
+  "request_manifest_file_sha256": "084b4c2c26f8c7375ba47300aed229c0cdfb56d5c8cd9f51b2dc6e99cf98400a",
+  "projection_seed": 202710044,
+  "projection_generator": "PCG64.standard_normal divided by sqrt(32)",
+  "projection_sha256": "e1b7ae0597e7298de3e579fd055a12adb8faa769f36cf987d77d04a6d20112a3",
+  "projection_output_sha256": "e8b182923cea5d81f3f65ca239a2b28ba43096429c6951eb47a4e9beb6722cb9",
+  "projection_input": "same stored lexical d128 curator; no postprojection renormalization",
+  "lambda_factors": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "lambda_reference": 0.01,
+  "no_parameter_tuning": true,
+  "primary_semantic_study": false,
+  "timing_and_memory_benchmark": false
+}

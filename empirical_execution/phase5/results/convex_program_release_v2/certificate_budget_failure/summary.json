@@ -1,0 +1,39 @@
+{
+  "audit_json_output_outside_method_service_times": true,
+  "checkpoint_rows": 2,
+  "evaluation_scope": "algebraic refusal path only",
+  "executed_trajectories": 1,
+  "failures": [
+    {
+      "checkpoint": 0,
+      "method": "fresh_optimum",
+      "status": "initial_fit_failed",
+      "trajectory": "S000"
+    },
+    {
+      "checkpoint": 0,
+      "method": "eligible_payload_retraining",
+      "status": "initial_fit_failed",
+      "trajectory": "S000"
+    },
+    {
+      "checkpoint": 0,
+      "method": "certified_convex_repair",
+      "status": "initial_fit_failed",
+      "trajectory": "S000"
+    }
+  ],
+  "joint_certificates": 0,
+  "lock_sha256": "89f1697bdb2fd21427efd5584dd8c11881f043ea65e91e0974c892b331e23171",
+  "max_certificate_radius_display": null,
+  "method_releases": 0,
+  "missing_trajectories": 0,
+  "planned_trajectories": 1,
+  "primary_study_started": false,
+  "process_isolation_claim": false,
+  "scalar_certificates": 0,
+  "semantic_quality_established": false,
+  "source_authenticity_verified": false,
+  "speedup_claim": false,
+  "status": "completed_with_preserved_failures"
+}

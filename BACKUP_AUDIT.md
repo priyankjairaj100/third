@@ -76,3 +76,41 @@ The 16,463,560-byte request trace exceeds the connected publishing API request l
 `phase4/results/publication_content_audit.json` records the targeted credential-pattern and excluded-News-body fingerprint scan, including the decompressed archive. The new blank admission pack uses the already published natural Civil preview only; it contains no completed ratings or added News bodies. Transient subprocess software fixtures are outside the backed-up project artifact set.
 
 No authentic primary corpora, semantic encoder assets, genuine human ratings, or complete primary systems/full-refit results are newly claimed. `CURRENT_STATUS.json`, `phase4/TODO.json`, and both root handoffs explicitly preserve those remaining dependencies and implementation gaps. The manifest generator now reads the current status instead of hard-coding the old Phase 3 stage.
+
+
+## Phase 5 preservation supplement — 4 October 2026
+
+The checkpoint includes compact payload and summary implementations, both
+versioned worker/decoder paths, kernel capability attempts, pinned official
+SemDeDup sources/configuration/license, NumPy reference evidence, convex and
+boundary implementations, WCEP/News adapters, task/human/statistical analysis,
+study registry, independent reviews and updated continuation context. Initial
+failures and superseded runs remain in explicitly identified directories.
+
+The authoritative isolated v1 result directory stores 3,888 per-process files
+losslessly in `jobs.tar.gz`. `jobs_archive.json` binds each member's original
+length/SHA256 plus the archive's hash. `tools/phase5_result_archive.py` verifies
+or restores all members without overwriting a differing file. Only redundant
+unpacked members are git-ignored. Temporary large service-state snapshots were
+not retained; their hashes/byte accounting and exact generation code are saved,
+while released heads and reports are all archived. This distinction is explicit
+in result documentation and is not a claim to back up original corpora.
+
+The original 213-row journal and reconciled 216-row ledger are both retained,
+with exact per-job evidence for the three recovered rows. No outcomes were
+rerun to replace the missing journal entries. Later numerical-worker failures
+also retain their source snapshot and measured outputs.
+
+`phase5/audit_publication.py` scans candidate public files and nested gzip/tar/
+NPZ archive members for credential patterns and fingerprints from the excluded
+local News bodies. Its latest inventory-bound output is
+`phase5/results/publication_content_audit.json`; no News article body or real
+human response has been added. Civil engineering data were already public in
+this checkpoint history. Actual future rater identities require separate
+publication review and must not be automatically uploaded with raw responses.
+
+The Phase 5 completion ledger maps all 19 historical Phase 4 TODO items. It
+explicitly retains missing authentic data/model/human inputs, real-backend and
+primary activation acceptance, prospective recipe obligations and measurement
+limits. The final GitHub tree/backup-manifest check establishes preservation,
+not an ACL-ready empirical study.

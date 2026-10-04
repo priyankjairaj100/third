@@ -1,0 +1,148 @@
+Independent Phase 5 review — 4 October 2026
+
+Decision: PASS for the explicitly scoped software/engineering release. This is
+not approval of confirmatory scientific claims, publication readiness, or a
+statement that every empirical TODO has been completed. No unresolved defect
+was found in the final reviewed implementation within the tested contracts.
+The primary semantic study remains unstarted and there are zero human ratings.
+
+The reproducible auditor is phase5/audit_independent.py. Its authoritative result
+is phase5/results/independent_review.json; exact reviewed Python source hashes
+are in phase5/results/reviewed_code_hashes.json. It passed 401 named checks across
+20 audit scopes. Counts below describe saved artifacts or software configurations,
+not independent datasets, statistical replications, or newly acquired evidence.
+The first consolidated audit is preserved as independent_review_initial_singlethread.json.
+The final audit additionally demonstrates a denied read in a second thread that
+already existed before seccomp installation; it does not merely inspect TSYNC flags.
+
+Independent mathematical and data-structure checks
+
+* 1,645 record/source/horizon states were compared with separate scalar selected-
+  set, eligibility, moment, and polynomial-coefficient oracles. Moment error was
+  exactly zero for these dyadic algebraic software fixtures. Own-source blockers,
+  source deduplication, remaining horizons, retries, atomic unknown-ID refusal,
+  compacted/tombstone payload alignment, and continued snapshot restore passed.
+* Dense P-I/P-S/P-R variants are distinguished from P-I-jointspan and the separate
+  B-E-compact comparator. Coefficient coordinate count is not a total-memory
+  optimality result. P-R structural zero keys are metadata, not hidden examples.
+* Multioutput BCE uses a mean over rows and sum over outputs. Independent
+  120-digit Decimal gradients lie inside saved rational scalar intervals; summed
+  scalar squared radii correctly yield a Frobenius certificate. Changed-count
+  gradients, zero-data convention, and certification budget refusal were checked.
+* Score envelopes were tested independently on ordinary, subnormal and extreme
+  FP32 coordinates. Fourteen exact-rational selected-set model bounds passed.
+  These are conditional fixed-scorer/IEEE arithmetic guarantees, not semantic
+  similarity guarantees or a proof about arbitrary alternate BLAS implementations.
+* Whole-trajectory paired bootstrap preserves checkpoint dependence and missing
+  registered outcomes. A separate explicit whole-source resampling construction
+  agrees with 120 crossed bootstrap draws. Ratio-of-means and fixed half R/S arm
+  weighting, signed negative effects, zero denominators, and fixed Holm families
+  were checked. The bootstrap does not create provenance or pre-outcome timing.
+* Weighted tied AUROC was independently computed from positive-negative pairs;
+  AP from threshold groups. Zero-positive tags and all-zero label rows remain.
+* WCEP parser/encoder intake checks preserve article instances and whole events,
+  exclude summaries, reject altered lineage, and fail before successful encoding
+  when genuine assets are absent. These checks processed only labeled software
+  schema fixtures, not an acquired WCEP corpus. News chronology keeps whole dates.
+
+Saved natural engineering artifacts checked independently
+
+* Original isolated worker release: 216 services and 1,080 saved heads, including
+  216 initial heads. Independent scalar graph plus dual ridge reconstruction has
+  maximum absolute difference 9.43689570931383e-16. The 768-coordinate setting has
+  one repetition; this is not the primary systems allocation.
+* Version 2 workers: 18 services (nine methods, two solvers), 54 saved initial and
+  release heads. Maximum independent absolute difference is
+  5.697092103629231e-14. All heads pass the fixed eta <= 1e-10 gate. Forty-five
+  currently loaded ELF files were independently rehashed. The new numerical gate
+  is not retroactively attributed to the original worker release.
+* Refit reference: 73 saved heads including the original, maximum independent
+  dual-solve difference 6.661338147750939e-16; five fixed-seed and three alternate-
+  seed no-deletion fits remain. Ten upstream files match the pinned official
+  SemDeDup blobs. The actual torch/faiss official backend did not execute. The
+  tested NumPy spherical Lloyd reference is explicitly not Faiss-equivalent.
+* Boundary run: 240 reference/ANN heads reconstructed; maximum difference
+  6.189493362285248e-15. The candidate graph retains only 101 of 332 exact edges.
+  ANN is approximate and its changed models are not mislabeled exact unlearning.
+  Complement sampling uses the complete nonretrieved-pair universe. The initial
+  Gaussian projection engineering pilot is not the protocol's orthonormal
+  projection ablation; the later task executor implements signed-QR projections.
+* Seven-output Civil fraction fit: 13 matrix/91 scalar saved certificates checked
+  against independent 120-digit gradients. This is not a Stack20 experiment.
+* Three-arm convex release v2: 30 initial/release heads, actual NPY hashes/bytes,
+  selected targets and 120-digit gradient enclosures checked. Eligible real
+  payload compaction and source-resume controls pass. Shared-process execution
+  establishes no systems speedup or kernel no-reaccess claim for this branch.
+* Task release: 244 ridge heads reconstructed across utility controls and 104
+  checkpoint rows; maximum difference 6.661338147750939e-15. The 31 planned
+  engineering jobs retain five missing/out-of-scope cells. The old Civil 82/18
+  split is reused, not an untouched new test set. All 4,064 applicable registered
+  semantic task jobs remain visibly blocked. Logistic references remain separate
+  from ridge; missing calibration tag thresholds are not fitted on test labels.
+* Context frame: ten unique admitted records, twenty prepared context items and
+  sixty blank assignments. Complete neighborhoods, nearest selected comparators,
+  exact sampling probabilities and blinding were independently reconstructed.
+  Human ingestion retains zero actual responses and undefined outcome estimates.
+  HT/Hajek estimates, sampled missingness extremes and finite-frame identification
+  bounds are distinguished; those extremes are not sampling confidence intervals.
+  Adjudication is supplementary and cannot replace the original three ratings.
+
+Access, persistence and accounting qualification
+
+Landlock is unavailable in this kernel (ENOSYS); the independent probe preserves
+that failure. The operative boundary is stricter FD-only seccomp installed with
+TSYNC after trusted imports and own-method state loading. Input descriptors are
+closed; output descriptors are write-only. Independent existing-path, symlink,
+proc-FD, openat2, io_uring, process-access, exec and x32 probes are denied. A second
+preexisting thread is also denied access. This supports the reviewed trusted
+repair-process contract; it is neither adversarial-native-code security nor
+physical erasure. Constructor/evaluator access remains separately permitted.
+
+Version 2 mirrors jointspan's existing upper-triangle Gram representation before
+the common decoder; it does not clamp eigenvalues or relax residual thresholds.
+The two earlier interface failures and their matching source remain preserved.
+Numerical residual/eigenvalue/extended-precision diagnostics are not interval
+certificates for original-data ridge targets. Payload allocations, tombstones,
+serialization buffers and loaded state are counted within their stated scopes.
+OS read-call bytes and explicit output writes do not measure hardware traffic;
+metadata reads and some compaction-copy categories remain explicitly unknown.
+Mapped ELF inventory is not an authenticated complete dependency environment.
+Large original worker snapshots were intentionally not archived; hashes, byte
+reports and generation code remain. Continued restore was independently tested
+on software states, not by reopening every discarded large service snapshot.
+
+The original append journal contained 213 rows although all 216 completed per-job
+audit files existed. Publication was held. The explicit reconciliation preserves
+the original bytes, identifies the three recovered job IDs, reconstructs every
+canonical row from its exact audit file, and records no reruns. This was checked
+independently. The underlying journal-loss cause remains unestablished.
+
+Issues found during review and corrected before final acceptance include the
+multioutput signed-gradient undefined variable, restored coefficient-row view
+ownership, pre-execution official-backend overclaim, missing refit input binding,
+single-thread seccomp installation, inconsistent registry WCEP calibration and
+threshold-endpoint rules, and incomplete journal reporting. Final convex head
+output costs and task feature/provenance bindings were strengthened. Historical
+intermediate results were preserved rather than silently relabeled.
+
+Remaining work is real work, not a renamed completed milestone
+
+The registry has 43 groups, 16,933 planned jobs, 158 artifact requirements and 21
+explicit unresolved obligations. Its byte preflight always refuses to activate
+primary execution. A complete integrated primary acceptance/activation gate is
+still pending. Required authentic inputs include complete primary corpora and
+source ownership; E5/MPNet weights/tokenizers and supported runtimes; derived
+semantic caches; genuine independent blinded selection/validation/admission
+ratings; calibration-only task locks; guarded panels/frozen requests and untouched
+evaluation; official SemDeDup runtime execution; and replication inputs.
+
+Prospective allocation/recipe locks are still required where the narrative leaves
+them open, including mass/PPS and one-percent-horizon structure variants, blocker
+stress allocation, chronology scope, fresh-graph audit allocation, cached-graph
+cost tiers, persistence/cold-warm scope and applicable controls. Worker v2 and the
+task/convex/replication drivers close implementation branches, but authentic-scale
+acceptance, full accounting, all registered method cells and scientific analysis
+remain unexecuted. The exact remaining registry obligations are preserved in the
+machine-readable independent report. No semantic novelty prevalence, task benefit,
+real-source speedup, total-byte optimality or paper-readiness claim follows from
+this release.

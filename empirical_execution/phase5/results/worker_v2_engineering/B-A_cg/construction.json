@@ -1,0 +1,23 @@
+{
+  "batch_rows": 1024,
+  "compaction_fraction": 0.5,
+  "horizon": 3,
+  "input_bundle": "/workspace/scratch/35d4d4d8ba2c/empirical_execution/phase5/results/worker_v2_engineering/input_bundle",
+  "input_hashes": {
+    "graph.npz": "bab568fa885c7107924feed973af471dc976fd3f2b5d670b401b61df40cc281a",
+    "learner.npy": "2d91774c44851c5c31b4b5a86dbe88ace0de4a9adcc6af559bbe462761e64549",
+    "metadata.json": "6a0f4c7d000367e44c3b0e489085180432f64de70cda8b9b721f956856660d51",
+    "targets.npy": "f50ce299b68384af3210583019158b98d83f37793437210e90a6287bfa6bde7a"
+  },
+  "lambda_reg": 0.01,
+  "method": "B-A",
+  "policy": {
+    "cpu_seconds": 60,
+    "memory_bytes": 1073741824,
+    "policy_role": "prospective_development_envelope_not_primary_resource_lock",
+    "threads": 1,
+    "wall_seconds": 60
+  },
+  "solver": "cg",
+  "unit": "record"
+}

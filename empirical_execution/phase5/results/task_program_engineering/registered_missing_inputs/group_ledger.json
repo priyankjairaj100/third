@@ -1,0 +1,601 @@
+[
+  {
+    "group_id": "B_relevance/civil_comments/primary-10000/native",
+    "configuration": {
+      "curator_encoder": "e5",
+      "learner_encoder": "e5",
+      "learner_dimension": 768,
+      "priority_seed": 0,
+      "threshold": "calibrated",
+      "state_precision": "FP64",
+      "decoder": "Cholesky"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "blocked_missing_input",
+    "message": "'civil_comments/primary-10000'"
+  },
+  {
+    "group_id": "B_relevance/askubuntu/primary-10000/native",
+    "configuration": {
+      "curator_encoder": "e5",
+      "learner_encoder": "e5",
+      "learner_dimension": 768,
+      "priority_seed": 0,
+      "threshold": "calibrated",
+      "state_precision": "FP64",
+      "decoder": "Cholesky"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "blocked_missing_input",
+    "message": "'askubuntu/primary-10000'"
+  },
+  {
+    "group_id": "D_replication/civil_comments/second-disjoint-10000/native",
+    "configuration": {
+      "curator_encoder": "e5",
+      "learner_encoder": "e5",
+      "learner_dimension": 768,
+      "priority_seed": 0,
+      "threshold": "calibrated",
+      "state_precision": "FP64",
+      "decoder": "Cholesky"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "blocked_missing_input",
+    "message": "'civil_comments/second-disjoint-10000'"
+  },
+  {
+    "group_id": "D_replication/askubuntu/second-disjoint-10000/native",
+    "configuration": {
+      "curator_encoder": "e5",
+      "learner_encoder": "e5",
+      "learner_dimension": 768,
+      "priority_seed": 0,
+      "threshold": "calibrated",
+      "state_precision": "FP64",
+      "decoder": "Cholesky"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "blocked_missing_input",
+    "message": "'askubuntu/second-disjoint-10000'"
+  },
+  {
+    "group_id": "D_replication/english_stackexchange/primary-10000/native",
+    "configuration": {
+      "curator_encoder": "e5",
+      "learner_encoder": "e5",
+      "learner_dimension": 768,
+      "priority_seed": 0,
+      "threshold": "calibrated",
+      "state_precision": "FP64",
+      "decoder": "Cholesky"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "blocked_missing_input",
+    "message": "'english_stackexchange/primary-10000'"
+  },
+  {
+    "group_id": "G_boundary/civil_comments/primary-10000/projection-32",
+    "configuration": {
+      "curator_encoder": "e5",
+      "learner_encoder": "e5",
+      "learner_dimension": 32,
+      "priority_seed": 0,
+      "threshold": "calibrated",
+      "state_precision": "FP64",
+      "decoder": "Cholesky",
+      "projection_seed": 20271005
+    },
+    "requested_methods": [
+      "O-G",
+      "O-T",
+      "B-E",
+      "B-A",
+      "P-I",
+      "P-S",
+      "P-R",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [
+      "O-T",
+      "B-E",
+      "B-A",
+      "P-I",
+      "P-S",
+      "P-R"
+    ],
+    "status": "blocked_missing_input",
+    "message": "'civil_comments/primary-10000'"
+  },
+  {
+    "group_id": "G_boundary/civil_comments/primary-10000/projection-64",
+    "configuration": {
+      "curator_encoder": "e5",
+      "learner_encoder": "e5",
+      "learner_dimension": 64,
+      "priority_seed": 0,
+      "threshold": "calibrated",
+      "state_precision": "FP64",
+      "decoder": "Cholesky",
+      "projection_seed": 20271005
+    },
+    "requested_methods": [
+      "O-G",
+      "O-T",
+      "B-E",
+      "B-A",
+      "P-I",
+      "P-S",
+      "P-R",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [
+      "O-T",
+      "B-E",
+      "B-A",
+      "P-I",
+      "P-S",
+      "P-R"
+    ],
+    "status": "blocked_missing_input",
+    "message": "'civil_comments/primary-10000'"
+  },
+  {
+    "group_id": "G_boundary/civil_comments/primary-10000/projection-128",
+    "configuration": {
+      "curator_encoder": "e5",
+      "learner_encoder": "e5",
+      "learner_dimension": 128,
+      "priority_seed": 0,
+      "threshold": "calibrated",
+      "state_precision": "FP64",
+      "decoder": "Cholesky",
+      "projection_seed": 20271005
+    },
+    "requested_methods": [
+      "O-G",
+      "O-T",
+      "B-E",
+      "B-A",
+      "P-I",
+      "P-S",
+      "P-R",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [
+      "O-T",
+      "B-E",
+      "B-A",
+      "P-I",
+      "P-S",
+      "P-R"
+    ],
+    "status": "blocked_missing_input",
+    "message": "'civil_comments/primary-10000'"
+  },
+  {
+    "group_id": "G_boundary/civil_comments/primary-10000/projection-256",
+    "configuration": {
+      "curator_encoder": "e5",
+      "learner_encoder": "e5",
+      "learner_dimension": 256,
+      "priority_seed": 0,
+      "threshold": "calibrated",
+      "state_precision": "FP64",
+      "decoder": "Cholesky",
+      "projection_seed": 20271005
+    },
+    "requested_methods": [
+      "O-G",
+      "O-T",
+      "B-E",
+      "B-A",
+      "P-I",
+      "P-S",
+      "P-R",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [
+      "O-T",
+      "B-E",
+      "B-A",
+      "P-I",
+      "P-S",
+      "P-R"
+    ],
+    "status": "blocked_missing_input",
+    "message": "'civil_comments/primary-10000'"
+  },
+  {
+    "group_id": "G_boundary/civil_comments/primary-10000/encoder-e5-e5",
+    "configuration": {
+      "curator_encoder": "e5",
+      "learner_encoder": "e5",
+      "learner_dimension": 768,
+      "priority_seed": 0,
+      "threshold": "calibrated",
+      "state_precision": "FP64",
+      "decoder": "Cholesky",
+      "population": "same_post_E5_guard_no_MPNet_refilter"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "blocked_missing_input",
+    "message": "'civil_comments/primary-10000'"
+  },
+  {
+    "group_id": "G_boundary/civil_comments/primary-10000/encoder-e5-mpnet",
+    "configuration": {
+      "curator_encoder": "e5",
+      "learner_encoder": "mpnet",
+      "learner_dimension": 768,
+      "priority_seed": 0,
+      "threshold": "calibrated",
+      "state_precision": "FP64",
+      "decoder": "Cholesky",
+      "population": "same_post_E5_guard_no_MPNet_refilter"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "blocked_missing_input",
+    "message": "'civil_comments/primary-10000'"
+  },
+  {
+    "group_id": "G_boundary/civil_comments/primary-10000/encoder-mpnet-e5",
+    "configuration": {
+      "curator_encoder": "mpnet",
+      "learner_encoder": "e5",
+      "learner_dimension": 768,
+      "priority_seed": 0,
+      "threshold": "calibrated",
+      "state_precision": "FP64",
+      "decoder": "Cholesky",
+      "population": "same_post_E5_guard_no_MPNet_refilter"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "blocked_missing_input",
+    "message": "'civil_comments/primary-10000'"
+  },
+  {
+    "group_id": "G_boundary/civil_comments/primary-10000/encoder-mpnet-mpnet",
+    "configuration": {
+      "curator_encoder": "mpnet",
+      "learner_encoder": "mpnet",
+      "learner_dimension": 768,
+      "priority_seed": 0,
+      "threshold": "calibrated",
+      "state_precision": "FP64",
+      "decoder": "Cholesky",
+      "population": "same_post_E5_guard_no_MPNet_refilter"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "blocked_missing_input",
+    "message": "'civil_comments/primary-10000'"
+  },
+  {
+    "group_id": "G_boundary/civil_comments/primary-10000/priority-1",
+    "configuration": {
+      "curator_encoder": "e5",
+      "learner_encoder": "e5",
+      "learner_dimension": 768,
+      "priority_seed": 1,
+      "threshold": "calibrated",
+      "state_precision": "FP64",
+      "decoder": "Cholesky"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "blocked_missing_input",
+    "message": "'civil_comments/primary-10000'"
+  },
+  {
+    "group_id": "G_boundary/civil_comments/primary-10000/priority-2",
+    "configuration": {
+      "curator_encoder": "e5",
+      "learner_encoder": "e5",
+      "learner_dimension": 768,
+      "priority_seed": 2,
+      "threshold": "calibrated",
+      "state_precision": "FP64",
+      "decoder": "Cholesky"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "blocked_missing_input",
+    "message": "'civil_comments/primary-10000'"
+  },
+  {
+    "group_id": "G_boundary/civil_comments/primary-10000/threshold--1",
+    "configuration": {
+      "curator_encoder": "e5",
+      "learner_encoder": "e5",
+      "learner_dimension": 768,
+      "priority_seed": 0,
+      "threshold": "max(0,calibrated-0.02)",
+      "state_precision": "FP64",
+      "decoder": "Cholesky"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "blocked_missing_input",
+    "message": "'civil_comments/primary-10000'"
+  },
+  {
+    "group_id": "G_boundary/civil_comments/primary-10000/threshold-+1",
+    "configuration": {
+      "curator_encoder": "e5",
+      "learner_encoder": "e5",
+      "learner_dimension": 768,
+      "priority_seed": 0,
+      "threshold": "min(1,calibrated+0.02)",
+      "state_precision": "FP64",
+      "decoder": "Cholesky"
+    },
+    "requested_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [],
+    "status": "blocked_missing_input",
+    "message": "'civil_comments/primary-10000'"
+  },
+  {
+    "group_id": "G_boundary/civil_comments/primary-10000/lambda-x0.1",
+    "configuration": {
+      "curator_encoder": "e5",
+      "learner_encoder": "e5",
+      "learner_dimension": 768,
+      "priority_seed": 0,
+      "threshold": "calibrated",
+      "state_precision": "FP64",
+      "decoder": "Cholesky",
+      "lambda_factor": 0.1
+    },
+    "requested_methods": [
+      "O-G",
+      "O-T",
+      "B-E",
+      "B-A",
+      "P-I",
+      "P-S",
+      "P-R",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [
+      "O-T",
+      "B-E",
+      "B-A",
+      "P-I",
+      "P-S",
+      "P-R"
+    ],
+    "status": "blocked_missing_input",
+    "message": "'civil_comments/primary-10000'"
+  },
+  {
+    "group_id": "G_boundary/civil_comments/primary-10000/lambda-x10",
+    "configuration": {
+      "curator_encoder": "e5",
+      "learner_encoder": "e5",
+      "learner_dimension": 768,
+      "priority_seed": 0,
+      "threshold": "calibrated",
+      "state_precision": "FP64",
+      "decoder": "Cholesky",
+      "lambda_factor": 10
+    },
+    "requested_methods": [
+      "O-G",
+      "O-T",
+      "B-E",
+      "B-A",
+      "P-I",
+      "P-S",
+      "P-R",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [
+      "O-T",
+      "B-E",
+      "B-A",
+      "P-I",
+      "P-S",
+      "P-R"
+    ],
+    "status": "blocked_missing_input",
+    "message": "'civil_comments/primary-10000'"
+  },
+  {
+    "group_id": "G_boundary/civil_comments/primary-10000/fp32-state",
+    "configuration": {
+      "curator_encoder": "e5",
+      "learner_encoder": "e5",
+      "learner_dimension": 768,
+      "priority_seed": 0,
+      "threshold": "calibrated",
+      "state_precision": "FP32",
+      "decoder": "Cholesky",
+      "scope": "separate_accuracy_memory_frontier"
+    },
+    "requested_methods": [
+      "O-G",
+      "O-T",
+      "B-E",
+      "B-A",
+      "P-I",
+      "P-S",
+      "P-R",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [
+      "O-T",
+      "B-E",
+      "B-A",
+      "P-I",
+      "P-S",
+      "P-R"
+    ],
+    "status": "blocked_missing_input",
+    "message": "'civil_comments/primary-10000'"
+  },
+  {
+    "group_id": "G_boundary/civil_comments/primary-10000/zero-start-CG",
+    "configuration": {
+      "curator_encoder": "e5",
+      "learner_encoder": "e5",
+      "learner_dimension": 768,
+      "priority_seed": 0,
+      "threshold": "calibrated",
+      "state_precision": "FP64",
+      "decoder": "zero_start_CG",
+      "stopping_rule": "development_lock_required"
+    },
+    "requested_methods": [
+      "O-G",
+      "O-T",
+      "B-E",
+      "B-A",
+      "P-I",
+      "P-S",
+      "P-R",
+      "B-F"
+    ],
+    "executed_task_methods": [
+      "O-G",
+      "B-F"
+    ],
+    "other_requested_methods_outside_this_evaluator": [
+      "O-T",
+      "B-E",
+      "B-A",
+      "P-I",
+      "P-S",
+      "P-R"
+    ],
+    "status": "blocked_missing_input",
+    "message": "'civil_comments/primary-10000'"
+  }
+]

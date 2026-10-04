@@ -1,0 +1,617 @@
+{
+  "source_sha256": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9",
+  "legacy_partition_sha256": "7738ad55e6091634942e68fc52e57697df08b89e33255ac75b813129df3587d9",
+  "train_records": 82,
+  "evaluation_records": 18,
+  "source_arm_available": false,
+  "semantic_features": false,
+  "new_independent_empirical_evidence": false,
+  "feature_metadata": {
+    "64": {
+      "name": "sklearn.HashingVectorizer",
+      "n_features": 64,
+      "analyzer": "word",
+      "ngrams": [
+        1,
+        2
+      ],
+      "alternate_sign": false,
+      "lowercase": false,
+      "norm": "l2",
+      "dtype": "float32",
+      "corpus_fitted_state": false,
+      "E5_or_semantic_model": false,
+      "purpose": "nonconfirmatory_software_pilot_only",
+      "limitations": [
+        "hash collisions",
+        "lexical similarity not audited semantic duplication",
+        "preview sampling and connector rendering",
+        "no held-out NLP utility claim"
+      ],
+      "array_sha256": "66abe03decd33d69c9e9124d072fe64c17f5c7c819045748cbe0be74bc705649"
+    },
+    "128": {
+      "name": "sklearn.HashingVectorizer",
+      "n_features": 128,
+      "analyzer": "word",
+      "ngrams": [
+        1,
+        2
+      ],
+      "alternate_sign": false,
+      "lowercase": false,
+      "norm": "l2",
+      "dtype": "float32",
+      "corpus_fitted_state": false,
+      "E5_or_semantic_model": false,
+      "purpose": "nonconfirmatory_software_pilot_only",
+      "limitations": [
+        "hash collisions",
+        "lexical similarity not audited semantic duplication",
+        "preview sampling and connector rendering",
+        "no held-out NLP utility claim"
+      ],
+      "array_sha256": "03f1661550b3ddab6e680502794724aec1b0bcbaaf27d2eeb02251fa62e84ab7"
+    },
+    "256": {
+      "name": "sklearn.HashingVectorizer",
+      "n_features": 256,
+      "analyzer": "word",
+      "ngrams": [
+        1,
+        2
+      ],
+      "alternate_sign": false,
+      "lowercase": false,
+      "norm": "l2",
+      "dtype": "float32",
+      "corpus_fitted_state": false,
+      "E5_or_semantic_model": false,
+      "purpose": "nonconfirmatory_software_pilot_only",
+      "limitations": [
+        "hash collisions",
+        "lexical similarity not audited semantic duplication",
+        "preview sampling and connector rendering",
+        "no held-out NLP utility claim"
+      ],
+      "array_sha256": "22aa28dc48bf1becd81a85119438a6628aee0fd2cbdf03d4b635e9da4e689cb0"
+    }
+  },
+  "registry": {
+    "schema": "ccu-engineering-task-registry-1",
+    "groups": [
+      {
+        "group_id": "B_relevance/civil_comments/reused-82/native",
+        "block": "B_relevance",
+        "corpus": "civil_comments",
+        "panel": "reused-82",
+        "variant": "native",
+        "allocations": {
+          "R": 2,
+          "U": 1,
+          "A": 1
+        },
+        "methods": [
+          "O-G",
+          "B-F"
+        ],
+        "request_family": "civil_comments/reused-82",
+        "configuration": {
+          "curator_encoder": "lexical128",
+          "learner_encoder": "lexical64",
+          "learner_dimension": 64,
+          "threshold": "calibrated",
+          "priority_seed": 0,
+          "state_precision": "FP64",
+          "decoder": "Cholesky"
+        }
+      },
+      {
+        "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-128-64",
+        "block": "G_boundary",
+        "corpus": "civil_comments",
+        "panel": "reused-82",
+        "variant": "lexical-cross-128-64",
+        "allocations": {
+          "R": 2
+        },
+        "methods": [
+          "O-G",
+          "B-F"
+        ],
+        "request_family": "civil_comments/reused-82",
+        "configuration": {
+          "curator_encoder": "lexical128",
+          "learner_encoder": "lexical64",
+          "learner_dimension": 64,
+          "threshold": "calibrated",
+          "priority_seed": 0,
+          "state_precision": "FP64",
+          "decoder": "Cholesky"
+        }
+      },
+      {
+        "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-128-128",
+        "block": "G_boundary",
+        "corpus": "civil_comments",
+        "panel": "reused-82",
+        "variant": "lexical-cross-128-128",
+        "allocations": {
+          "R": 2
+        },
+        "methods": [
+          "O-G",
+          "B-F"
+        ],
+        "request_family": "civil_comments/reused-82",
+        "configuration": {
+          "curator_encoder": "lexical128",
+          "learner_encoder": "lexical128",
+          "learner_dimension": 128,
+          "threshold": "calibrated",
+          "priority_seed": 0,
+          "state_precision": "FP64",
+          "decoder": "Cholesky"
+        }
+      },
+      {
+        "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-256-64",
+        "block": "G_boundary",
+        "corpus": "civil_comments",
+        "panel": "reused-82",
+        "variant": "lexical-cross-256-64",
+        "allocations": {
+          "R": 2
+        },
+        "methods": [
+          "O-G",
+          "B-F"
+        ],
+        "request_family": "civil_comments/reused-82",
+        "configuration": {
+          "curator_encoder": "lexical256",
+          "learner_encoder": "lexical64",
+          "learner_dimension": 64,
+          "threshold": "calibrated",
+          "priority_seed": 0,
+          "state_precision": "FP64",
+          "decoder": "Cholesky"
+        }
+      },
+      {
+        "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-256-128",
+        "block": "G_boundary",
+        "corpus": "civil_comments",
+        "panel": "reused-82",
+        "variant": "lexical-cross-256-128",
+        "allocations": {
+          "R": 2
+        },
+        "methods": [
+          "O-G",
+          "B-F"
+        ],
+        "request_family": "civil_comments/reused-82",
+        "configuration": {
+          "curator_encoder": "lexical256",
+          "learner_encoder": "lexical128",
+          "learner_dimension": 128,
+          "threshold": "calibrated",
+          "priority_seed": 0,
+          "state_precision": "FP64",
+          "decoder": "Cholesky"
+        }
+      },
+      {
+        "group_id": "G_boundary/civil_comments/reused-82/priority-1",
+        "block": "G_boundary",
+        "corpus": "civil_comments",
+        "panel": "reused-82",
+        "variant": "priority-1",
+        "allocations": {
+          "R": 2
+        },
+        "methods": [
+          "O-G",
+          "B-F"
+        ],
+        "request_family": "civil_comments/reused-82",
+        "configuration": {
+          "curator_encoder": "lexical128",
+          "learner_encoder": "lexical64",
+          "learner_dimension": 64,
+          "threshold": "calibrated",
+          "priority_seed": 1,
+          "state_precision": "FP64",
+          "decoder": "Cholesky"
+        }
+      },
+      {
+        "group_id": "G_boundary/civil_comments/reused-82/priority-2",
+        "block": "G_boundary",
+        "corpus": "civil_comments",
+        "panel": "reused-82",
+        "variant": "priority-2",
+        "allocations": {
+          "R": 2
+        },
+        "methods": [
+          "O-G",
+          "B-F"
+        ],
+        "request_family": "civil_comments/reused-82",
+        "configuration": {
+          "curator_encoder": "lexical128",
+          "learner_encoder": "lexical64",
+          "learner_dimension": 64,
+          "threshold": "calibrated",
+          "priority_seed": 2,
+          "state_precision": "FP64",
+          "decoder": "Cholesky"
+        }
+      },
+      {
+        "group_id": "G_boundary/civil_comments/reused-82/threshold-minus",
+        "block": "G_boundary",
+        "corpus": "civil_comments",
+        "panel": "reused-82",
+        "variant": "threshold-minus",
+        "allocations": {
+          "R": 2
+        },
+        "methods": [
+          "O-G",
+          "B-F"
+        ],
+        "request_family": "civil_comments/reused-82",
+        "configuration": {
+          "curator_encoder": "lexical128",
+          "learner_encoder": "lexical64",
+          "learner_dimension": 64,
+          "threshold": "max(0,calibrated-0.02)",
+          "priority_seed": 0,
+          "state_precision": "FP64",
+          "decoder": "Cholesky"
+        }
+      },
+      {
+        "group_id": "G_boundary/civil_comments/reused-82/threshold-plus",
+        "block": "G_boundary",
+        "corpus": "civil_comments",
+        "panel": "reused-82",
+        "variant": "threshold-plus",
+        "allocations": {
+          "R": 2
+        },
+        "methods": [
+          "O-G",
+          "B-F"
+        ],
+        "request_family": "civil_comments/reused-82",
+        "configuration": {
+          "curator_encoder": "lexical128",
+          "learner_encoder": "lexical64",
+          "learner_dimension": 64,
+          "threshold": "min(1,calibrated+0.02)",
+          "priority_seed": 0,
+          "state_precision": "FP64",
+          "decoder": "Cholesky"
+        }
+      },
+      {
+        "group_id": "G_boundary/civil_comments/reused-82/projection-32",
+        "block": "G_boundary",
+        "corpus": "civil_comments",
+        "panel": "reused-82",
+        "variant": "projection-32",
+        "allocations": {
+          "R": 2
+        },
+        "methods": [
+          "O-G",
+          "B-F"
+        ],
+        "request_family": "civil_comments/reused-82",
+        "configuration": {
+          "curator_encoder": "lexical128",
+          "learner_encoder": "lexical64",
+          "learner_dimension": 32,
+          "threshold": "calibrated",
+          "priority_seed": 0,
+          "state_precision": "FP64",
+          "decoder": "Cholesky",
+          "projection_seed": 20271005
+        }
+      },
+      {
+        "group_id": "G_boundary/civil_comments/reused-82/lambda-lower",
+        "block": "G_boundary",
+        "corpus": "civil_comments",
+        "panel": "reused-82",
+        "variant": "lambda-lower",
+        "allocations": {
+          "R": 2
+        },
+        "methods": [
+          "O-G",
+          "B-F"
+        ],
+        "request_family": "civil_comments/reused-82",
+        "configuration": {
+          "curator_encoder": "lexical128",
+          "learner_encoder": "lexical64",
+          "learner_dimension": 64,
+          "threshold": "calibrated",
+          "priority_seed": 0,
+          "state_precision": "FP64",
+          "decoder": "Cholesky",
+          "lambda_factor": 0.1
+        }
+      },
+      {
+        "group_id": "G_boundary/civil_comments/reused-82/lambda-higher",
+        "block": "G_boundary",
+        "corpus": "civil_comments",
+        "panel": "reused-82",
+        "variant": "lambda-higher",
+        "allocations": {
+          "R": 2
+        },
+        "methods": [
+          "O-G",
+          "B-F"
+        ],
+        "request_family": "civil_comments/reused-82",
+        "configuration": {
+          "curator_encoder": "lexical128",
+          "learner_encoder": "lexical64",
+          "learner_dimension": 64,
+          "threshold": "calibrated",
+          "priority_seed": 0,
+          "state_precision": "FP64",
+          "decoder": "Cholesky",
+          "lambda_factor": 10.0
+        }
+      },
+      {
+        "group_id": "G_boundary/civil_comments/reused-82/missing-semantic-encoder",
+        "block": "G_boundary",
+        "corpus": "civil_comments",
+        "panel": "reused-82",
+        "variant": "missing-semantic-encoder",
+        "allocations": {
+          "R": 2
+        },
+        "methods": [
+          "O-G",
+          "B-F"
+        ],
+        "request_family": "civil_comments/reused-82",
+        "configuration": {
+          "curator_encoder": "e5",
+          "learner_encoder": "lexical64",
+          "learner_dimension": 64,
+          "threshold": "calibrated",
+          "priority_seed": 0,
+          "state_precision": "FP64",
+          "decoder": "Cholesky"
+        }
+      },
+      {
+        "group_id": "G_boundary/civil_comments/reused-82/FP32-outside-task-slice",
+        "block": "G_boundary",
+        "corpus": "civil_comments",
+        "panel": "reused-82",
+        "variant": "FP32-outside-task-slice",
+        "allocations": {
+          "R": 2
+        },
+        "methods": [
+          "O-G",
+          "B-F"
+        ],
+        "request_family": "civil_comments/reused-82",
+        "configuration": {
+          "curator_encoder": "lexical128",
+          "learner_encoder": "lexical64",
+          "learner_dimension": 64,
+          "threshold": "calibrated",
+          "priority_seed": 0,
+          "state_precision": "FP32",
+          "decoder": "Cholesky"
+        }
+      }
+    ],
+    "jobs_content_sha256": "e1b93670e1bb0ce73840b03718c207e4349bfa71c8c93d9ae15ffd8791d829be",
+    "scope": "prospective reduced software exercise, not substitution for semantic registry",
+    "primary_study": false
+  },
+  "jobs": [
+    {
+      "job_id": "B_relevance/civil_comments/reused-82/native/R000",
+      "group_id": "B_relevance/civil_comments/reused-82/native",
+      "arm": "R",
+      "trajectory_id": "R000"
+    },
+    {
+      "job_id": "B_relevance/civil_comments/reused-82/native/R001",
+      "group_id": "B_relevance/civil_comments/reused-82/native",
+      "arm": "R",
+      "trajectory_id": "R001"
+    },
+    {
+      "job_id": "B_relevance/civil_comments/reused-82/native/U000",
+      "group_id": "B_relevance/civil_comments/reused-82/native",
+      "arm": "U",
+      "trajectory_id": "U000"
+    },
+    {
+      "job_id": "B_relevance/civil_comments/reused-82/native/A000",
+      "group_id": "B_relevance/civil_comments/reused-82/native",
+      "arm": "A",
+      "trajectory_id": "A000"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/lexical-cross-128-64/R000",
+      "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-128-64",
+      "arm": "R",
+      "trajectory_id": "R000"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/lexical-cross-128-64/R001",
+      "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-128-64",
+      "arm": "R",
+      "trajectory_id": "R001"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/lexical-cross-128-128/R000",
+      "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-128-128",
+      "arm": "R",
+      "trajectory_id": "R000"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/lexical-cross-128-128/R001",
+      "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-128-128",
+      "arm": "R",
+      "trajectory_id": "R001"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/lexical-cross-256-64/R000",
+      "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-256-64",
+      "arm": "R",
+      "trajectory_id": "R000"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/lexical-cross-256-64/R001",
+      "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-256-64",
+      "arm": "R",
+      "trajectory_id": "R001"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/lexical-cross-256-128/R000",
+      "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-256-128",
+      "arm": "R",
+      "trajectory_id": "R000"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/lexical-cross-256-128/R001",
+      "group_id": "G_boundary/civil_comments/reused-82/lexical-cross-256-128",
+      "arm": "R",
+      "trajectory_id": "R001"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/priority-1/R000",
+      "group_id": "G_boundary/civil_comments/reused-82/priority-1",
+      "arm": "R",
+      "trajectory_id": "R000"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/priority-1/R001",
+      "group_id": "G_boundary/civil_comments/reused-82/priority-1",
+      "arm": "R",
+      "trajectory_id": "R001"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/priority-2/R000",
+      "group_id": "G_boundary/civil_comments/reused-82/priority-2",
+      "arm": "R",
+      "trajectory_id": "R000"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/priority-2/R001",
+      "group_id": "G_boundary/civil_comments/reused-82/priority-2",
+      "arm": "R",
+      "trajectory_id": "R001"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/threshold-minus/R000",
+      "group_id": "G_boundary/civil_comments/reused-82/threshold-minus",
+      "arm": "R",
+      "trajectory_id": "R000"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/threshold-minus/R001",
+      "group_id": "G_boundary/civil_comments/reused-82/threshold-minus",
+      "arm": "R",
+      "trajectory_id": "R001"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/threshold-plus/R000",
+      "group_id": "G_boundary/civil_comments/reused-82/threshold-plus",
+      "arm": "R",
+      "trajectory_id": "R000"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/threshold-plus/R001",
+      "group_id": "G_boundary/civil_comments/reused-82/threshold-plus",
+      "arm": "R",
+      "trajectory_id": "R001"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/projection-32/R000",
+      "group_id": "G_boundary/civil_comments/reused-82/projection-32",
+      "arm": "R",
+      "trajectory_id": "R000"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/projection-32/R001",
+      "group_id": "G_boundary/civil_comments/reused-82/projection-32",
+      "arm": "R",
+      "trajectory_id": "R001"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/lambda-lower/R000",
+      "group_id": "G_boundary/civil_comments/reused-82/lambda-lower",
+      "arm": "R",
+      "trajectory_id": "R000"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/lambda-lower/R001",
+      "group_id": "G_boundary/civil_comments/reused-82/lambda-lower",
+      "arm": "R",
+      "trajectory_id": "R001"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/lambda-higher/R000",
+      "group_id": "G_boundary/civil_comments/reused-82/lambda-higher",
+      "arm": "R",
+      "trajectory_id": "R000"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/lambda-higher/R001",
+      "group_id": "G_boundary/civil_comments/reused-82/lambda-higher",
+      "arm": "R",
+      "trajectory_id": "R001"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/missing-semantic-encoder/R000",
+      "group_id": "G_boundary/civil_comments/reused-82/missing-semantic-encoder",
+      "arm": "R",
+      "trajectory_id": "R000"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/missing-semantic-encoder/R001",
+      "group_id": "G_boundary/civil_comments/reused-82/missing-semantic-encoder",
+      "arm": "R",
+      "trajectory_id": "R001"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/FP32-outside-task-slice/R000",
+      "group_id": "G_boundary/civil_comments/reused-82/FP32-outside-task-slice",
+      "arm": "R",
+      "trajectory_id": "R000"
+    },
+    {
+      "job_id": "G_boundary/civil_comments/reused-82/FP32-outside-task-slice/R001",
+      "group_id": "G_boundary/civil_comments/reused-82/FP32-outside-task-slice",
+      "arm": "R",
+      "trajectory_id": "R001"
+    },
+    {
+      "job_id": "B_relevance/civil_comments/reused-82/native/R005",
+      "group_id": "B_relevance/civil_comments/reused-82/native",
+      "arm": "R",
+      "trajectory_id": "R005"
+    }
+  ]
+}

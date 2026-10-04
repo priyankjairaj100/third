@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "natural_target_outputs": 7,
+  "natural_checkpoint_rows": 6,
+  "joint_certificates": 13,
+  "scalar_certificates": 91,
+  "max_frobenius_certificate_radius_display": 1.070102464743579e-09,
+  "software_checks": [
+    "binary20_exact_joint_certificate_software_only",
+    "sum_output_objective_and_gradient_match",
+    "empty_multilabel_target_exact_40_squared_radius",
+    "whole_output_budget_refused_before_evaluation",
+    "artificial_source_partition_software_expansion_only",
+    "resume_foreign_input_rejected"
+  ],
+  "semantic_study_result": false,
+  "Stack20_empirical": false,
+  "source_service_empirical": false,
+  "speedup_claim": false,
+  "no_reaccess_claim": false,
+  "objective_normalization": "sum_over_outputs_mean_over_rows"
+}

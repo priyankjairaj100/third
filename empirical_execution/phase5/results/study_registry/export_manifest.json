@@ -1,0 +1,10 @@
+{
+  "files": {
+    "registry.json": "87d0d5dc6d5faf97252c464e1a48a9a7f2b20e86ed94de4a189e07ffbe966299",
+    "jobs.jsonl.gz": "c25771d708afb8472e1dec8e31c3f45a9962b44409d2eabeaf3b12a17c4b735c",
+    "artifact_inventory_template.json": "b34e903e81df6b0fa35b1b5b40873eaa18309fee86720e9b8fa5cf8db0b392ac",
+    "preflight.json": "f279f39ce50386064c52a0597a3f586b2932cdd428a36e76390d59c04c0cda39"
+  },
+  "expanded_job_count": 16934,
+  "registry_digest": "e93ec6924b3e22886ceb0b279bcf87d9a12f0fc41d5d732cfdef49ccf6dd2fa4"
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "ccu-task-program-1",
+  "scope": "engineering evaluator on frozen inputs; no primary promotion, no speed claim",
+  "planned_task_groups": 14,
+  "observed_task_groups": 14,
+  "planned_task_jobs": 31,
+  "observed_task_jobs": 31,
+  "completed_task_jobs": 26,
+  "blocked_or_other_jobs": 5,
+  "checkpoint_rows": 104,
+  "failed_checkpoint_rows": 0,
+  "zero_admission_rows": 86,
+  "all_planned_task_cells_preserved": true,
+  "primary_study": false,
+  "run_lock_sha256": "a4218807d1e734705c6a81f4ae99467f39d562397cdf98dd4bdd7dad1539e8e0",
+  "code_bindings": {
+    "phase5/task_program.py": "4cbe662f6e172cc180460fe9e32bfccaea8318b27e66fa8ac5a95318aa8ab9d8",
+    "phase5/task_metrics.py": "3ead5f662edf154d0f14b3bf7e18ae50961ac340100d1f71ff326564421917c0",
+    "phase5/convex_multioutput.py": "612619978ccf277b3d25acb8f0cb3c445100ae468d23369791d9a35c2b3a7eb2",
+    "phase3/reference_graph.py": "efc41498648f6f7f7969768fbcd050619d7ed5d6e82eafadb1b9a3a2158e9d1c",
+    "phase4/model_selection.py": "b9a73b9cc0d7a2a0531c38e7a606290df52845e3002a6d47c21cc6c3fb459434"
+  }
+}

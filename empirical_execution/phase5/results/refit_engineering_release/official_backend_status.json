@@ -1,0 +1,10 @@
+{
+  "official_backend_available": false,
+  "missing_modules": [
+    "torch",
+    "faiss",
+    "tqdm"
+  ],
+  "official_runtime_executed": false,
+  "upstream_commit": "6b4194511202c29b0e1ac8c730996777449ea2a4"
+}

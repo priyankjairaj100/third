@@ -328,6 +328,73 @@ workers, persistence/compaction, the true SemDeDup refit branch and other regist
 boundary studies remain unfinished. `study_lock.py` intentionally leaves
 `execution_allowed=False`; the engineering runner also refuses a primary-role run.
 
+### Phase 5: algorithms, enforced access and experiment components
+
+This section supersedes Phase 4's implementation-pending inventory; the older
+results and qualifications remain historical. Read `phase5/COMPLETION_LEDGER.md`
+for exact current closure and remaining acceptance rather than reimplementing
+completed modules.
+
+- Packed CSR eligible/all-current payload uses integer incidences, eligibility
+  buckets, signed batched BLAS, atomic cumulative budgets, source expansion,
+  physical stale-byte accounting and fixed compaction. Its8,817 checks include
+  8,704 exhaustive small algebra configurations and80 natural Civil states.
+- Summary services now include genuine dense indexed P-I, full-scan P-S and
+  structural incidence-rank P-R. Joint-span and compact eligible payload remain
+  separately named stronger comparators; they are not relabeled P-R.
+- Separate construction/repair processes implement all nine methods plus O-G/O-T
+  greater-access oracles. After reviewed own-state initialization, seccomp TSYNC
+  denies all new opens, network/process inspection and listed bypass syscalls;
+  input FDs are closed. Independent kernel tests include already existing native
+  threads. This is a trusted-code no-reaccess contract, not physical erasure or
+  arbitrary-native-adversary security.
+- The natural Civil100 v1 matrix executes 216 jobs and 864 releases, including 648 zero
+  admission method/checkpoint rows. Independent audit checks 1,080 heads with
+  maximum absolute discrepancy 9.43689570931383e-16. The initial/final snapshots
+  are regenerated; exact bytes/hash accounting and all heads/reports are saved.
+  Detailed 3,888 files are losslessly archived, with restore/check tooling.
+- The negative memory finding persists: at d=768 compact eligible payload is
+  about 0.29 MB serialized initially, joint-span about 1.15 MB, dense P-I about 232 MB.
+  Rank compression also has significant build workspace. Shared-host timing
+  cannot establish a publication speedup; no native 10k feasibility is claimed.
+- A separately versioned decoder/worker path adds normalized residual gates,
+  conditioning and common zero-start CG. Floating residual diagnostics do not
+  certify moment error; the exact-rational strict service remains distinct.
+- Multioutput convex training uses a sum of per-output row-average logistic
+  losses plus Frobenius regularization. Joint bounds combine exact scalar bound
+  squares. The natural seven-target Civil check has 13 joint/91 scalar certificates;
+  maximum joint radius 1.070102464743579e-9 below 1e-8. The separate three-arm
+  single-toxicity driver checks 8 rows/24 releases/30 certificates; actual S inputs
+  stay missing. Twenty-output/source tests are algebra, not Stack experiments.
+- The official SemDeDup adapter pins Meta commit
+  6b4194511202c29b0e1ac8c730996777449ea2a4 and its license. Separate NumPy
+  reference 24-checkpoint/72-head results verify branch orchestration but are
+  explicitly not Faiss-equivalent. Real official backend acceptance is pending.
+- Boundary code adds true approximate LSH, complete comparison and probability
+  sampling of nonretrieved pairs, FP32 state, conditioning and conservative
+  graph/model envelopes. LSH recovers 101/332 edges, with 0/33 complete nonempty
+  blocker sets and 9 initial selection mismatches. Keep this failure visible.
+  The natural interval fixture has no uncertain pairs at its threshold; that
+  does not establish an informative semantic-envelope regime in real models.
+- WCEP original-event parsing and whole-event panels, chronological News
+  deletion, local E5/MPNet encoding lineage and inherited News calibration are
+  executable components. No WCEP, original complete News or real transformer
+  output has been acquired or executed.
+- Complete former-blocker and nearest-surviving-selected context packs provide
+  60 blank slots; the original pair pack provides 72. Human-response analysis
+  preserves original three-rater outcomes, exact inclusion weights, missingness,
+  disagreement and separate adjudication. Human responses remain 0.
+- Statistics preserve every planned trajectory, zeros, failures and signed
+  losses; use 10,000 whole-path resamples and optional whole-test-source resampling;
+  recompute nonlinear F1 and normalizers. The A–G registry contains 43 groups and
+  16,933 planned jobs with 21 explicit unresolved recipe/input obligations. A
+  manifest does not replace original provenance, quality judgments or primary
+  activation acceptance.
+
+The 216-job append journal originally lost 3 rows while each per-job artifact was
+intact. The original 213-row journal, recovered 216-row ledger and exact reconciliation
+record are preserved. No experimental outcome was rerun or silently imputed.
+
 ## Locked preparation rules and why they matter
 
 The high-level protocol and phase-3 amendment are the sources; do not infer rules from a simplified JSON summary alone.
@@ -368,7 +435,7 @@ The nominal protocol proposes a 256 GiB host, 128 GiB method caps and an acceler
 6. Bind cache bytes, normalized text/IDs, full prepared rows, preparation audit, encoder revision and scope using phase-3 and the final versioned per-encoder wrapper instructions. Generate selection assignments. Have genuine independent blinded humans complete them; do not fill blank labels or flip attestations computationally.
 7. Lock threshold, generate independent validation assignments, collect fresh human judgments, run exact quality gate. A failed gate stays failed; no retrospective retuning. Human collection/provenance remains outside what JSON can prove.
 8. Apply training-only E5 semantic guard and freeze whole-source primary/replication panels. Execute the implemented calibration-only vocabulary/lambda/threshold and request selectors on real inputs. Freeze code/runtime hashes, resource caps/timeouts, compaction/persistence, full-refit policies, annotation protocol and costs. These locks are empirical outputs, not values that may be invented from tested code.
-9. Finish and independently audit primary optimized methods, source/access isolation, lifecycle/persistence workers, full-refit and boundary integrations in `phase4/TODO.json`. The generic process harness and shared-input engineering runner do not fulfill those method contracts. Run structural audit and native memory feasibility before the prescribed task/source/replication/full-refit program. The decisive unknowns remain meaningful natural additions, task consequences and measured total cost versus compact eligible payload.
+9. Use the completed Phase 5 method/analysis components and current completion ledger; do not restart the obsolete Phase 4 implementation list. Resolve the remaining recipe, instrumentation and authentic-backend acceptance obligations, then exercise the complete primary activation chain. Run structural audit and native memory feasibility before the prescribed task/source/replication/full-refit program. The decisive unknowns remain meaningful natural additions, task consequences and measured total cost versus compact eligible payload.
 
 ## Reproduction entry points
 

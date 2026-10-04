@@ -1,0 +1,23 @@
+{
+  "arm": "S",
+  "checkpoint": 2,
+  "deleted_ids": [
+    "fixture-a",
+    "fixture-b",
+    "fixture-c"
+  ],
+  "methods": {
+    "certified_convex_repair": {
+      "status": "not_executed_after_method_failure"
+    },
+    "eligible_payload_retraining": {
+      "status": "not_executed_after_method_failure"
+    },
+    "fresh_optimum": {
+      "status": "not_executed_after_method_failure"
+    }
+  },
+  "released_head_distance_checks_passed": true,
+  "selected_ids": [],
+  "trajectory": "S000"
+}

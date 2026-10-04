@@ -1,0 +1,47 @@
+{
+  "all_local": true,
+  "allocations": {
+    "R": 2,
+    "S": 2
+  },
+  "certificate_budget": 2000000,
+  "code_sha256": {
+    "convex.py": "93a59e37ad4597b7018f07b4a49dbaba51d4b762971a2f0520f76cfa42616eb8",
+    "convex_multioutput.py": "612619978ccf277b3d25acb8f0cb3c445100ae468d23369791d9a35c2b3a7eb2",
+    "convex_program.py": "88d97b620e1596023bcba4a9271584d6391af04adc3ca347c18db7ccd1c0ac2a",
+    "payload.py": "7759fee20847bd7e6d7216802b27a26480c1a852489dba05a4642414765b1815"
+  },
+  "compaction_fraction": 0.5,
+  "evaluation_scope": "same reused original Civil100 pool; software task-output check only, not held-out performance",
+  "evidence_role": "engineering_nonconfirmatory",
+  "input_bindings": {
+    "curator": "84b4a67b0bb829cf6847632be08693c1a9e2db82704d8bdbe7258e4462134ba2",
+    "evaluation_features": "b4b9fe5e7a79e5d1583e79c0d4e34387de64a0cf507b5a768c90c57bc19b2319",
+    "evaluation_targets": "68762a2ccfc20168fac573902df3ac39cd551443095fcf40b472d2ed8b31aef6",
+    "learner": "b4b9fe5e7a79e5d1583e79c0d4e34387de64a0cf507b5a768c90c57bc19b2319",
+    "record_ids": "00cef42574d341540ffe869e9171fd8fbd1404e0676139e8a22dc0604308914b",
+    "requests": "d9f0173be65364a1439e54d98947cf2e85717322dd5bcde07953abef4fcc4567",
+    "source_ids": "00cef42574d341540ffe869e9171fd8fbd1404e0676139e8a22dc0604308914b",
+    "source_kinds": "30b5056fe0ee6eba12d4fefef533dd0dbea8e30ba6189a1767263e71d4ae3c1e",
+    "targets": "68762a2ccfc20168fac573902df3ac39cd551443095fcf40b472d2ed8b31aef6"
+  },
+  "lambda_reg": 0.01,
+  "methods": [
+    "fresh_optimum",
+    "eligible_payload_retraining",
+    "certified_convex_repair"
+  ],
+  "objective": "sum_output_row_mean_BCE_plus_lambda_half_Frobenius_squared",
+  "paper_systems_claim": false,
+  "parameter_tolerance": {
+    "denominator": "100000000",
+    "numerator": "1"
+  },
+  "persistence": "final_state_per_trajectory_each_payload_method",
+  "primary_study_started": false,
+  "process_isolation": false,
+  "schema": "ccu-convex-program-1",
+  "shared_graph_seconds": 0.004457921999346581,
+  "source_provenance_authenticated": false,
+  "threshold": 0.6
+}

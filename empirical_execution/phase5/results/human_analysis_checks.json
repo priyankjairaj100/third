@@ -1,0 +1,43 @@
+{
+  "schema": "ccu-human-analysis-checks-1",
+  "status": "passed",
+  "checks": {
+    "overlap_union_pi_weight_exact": true,
+    "sample_vs_frame_bounds_distinguished": true,
+    "illustration_ids_only_fixed_rule": true,
+    "fixture_never_counted_as_human": true,
+    "missing_corpus_not_reweighted": true,
+    "duplicate_human_refused": true,
+    "fixture_to_real_promotion_refused": true,
+    "two_raters_not_full_three_rater_outcome": true,
+    "skips_preserved_not_imputed": true,
+    "three_way_tie_not_fabricated_majority": true,
+    "agreement_and_uncertainty_preserved": true,
+    "adjudication_never_overwrites_original": true,
+    "premature_adjudication_refused": true,
+    "rehashed_wrong_probability_refused": true,
+    "pair_real_pack_has_zero_humans": true,
+    "pair_real_pack_semantics_undefined": true,
+    "context_real_pack_has_zero_humans": true,
+    "context_real_pack_semantics_undefined": true,
+    "no_comparator_cannot_be_novelty": true
+  },
+  "passed": 19,
+  "total": 19,
+  "actual_blank_packs": {
+    "pair": {
+      "expected_assignments": 72,
+      "actual_human_responses": 0,
+      "sampled_units": 24
+    },
+    "context": {
+      "expected_assignments": 60,
+      "actual_human_responses": 0,
+      "sampled_units": 20
+    }
+  },
+  "filled_fixture_answers_stored_as_human_records": false,
+  "collection_or_dispatch_performed": false,
+  "code_sha256": "562d1987ae4116f37464ab9a649638bc45543c0eee4d1a5c1864dcdbb76b2f6b",
+  "check_sha256": "4c525c01045a539007af1c05375dcd660ed37decb6c5c8a0a326c7725f8786a0"
+}

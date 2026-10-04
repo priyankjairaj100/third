@@ -1,13 +1,13 @@
 # Resume this research project
 
-Last substantive checkpoint: **4 October 2026, Phase 4 core/extension software and scoped engineering checks completed; primary research dependencies and integrations remain outstanding**.
+Last substantive checkpoint: **4 October 2026, Phase 5 method/analysis integrations and isolated natural-text engineering matrix completed; primary semantic evidence and real-input acceptance remain outstanding**.
 Repository: **https://github.com/priyankjairaj100/third**.
 
 This is a project handoff reconstructed from the available conversation and the saved research files. It is not a verbatim export of all chats. It deliberately contains only this project's context.
 
 ## Paste this into a new chat
 
-> Continue the ACL 2027 counterfactual semantic-curation unlearning project at https://github.com/priyankjairaj100/third. Read README.md, RESUME_CONTEXT.md, THEORY_AND_RESULTS_HANDOFF.md, empirical_execution/CURRENT_STATUS.json and empirical_execution/phase4/TODO.json, then inspect the relevant code and result files before acting. Preserve the distinction between exact theory, natural-preview engineering evidence, and the unstarted primary semantic study. All work must be carried out in this workspace; do not start paid or external compute without my instruction. Continue the highest-value executable work, keep me informed, and save all project progress back to this repository with an updated handoff. Do not fabricate missing corpus provenance, semantic embeddings, or human ratings.
+> Continue the ACL 2027 counterfactual semantic-curation unlearning project at https://github.com/priyankjairaj100/third. Read README.md, RESUME_CONTEXT.md, THEORY_AND_RESULTS_HANDOFF.md, empirical_execution/CURRENT_STATUS.json and empirical_execution/phase5/COMPLETION_LEDGER.md and phase5/README.md, then inspect the relevant code and result files before acting. Preserve the distinction between exact theory, natural-preview engineering evidence, and the unstarted primary semantic study. All work must be carried out in this workspace; do not start paid or external compute without my instruction. Continue the highest-value executable work, keep me informed, and save all project progress back to this repository with an updated handoff. Do not fabricate missing corpus provenance, semantic embeddings, or human ratings.
 
 ## User objective and preferences
 
@@ -41,6 +41,7 @@ The main fixed-curator contract eventually became **global earlier-raw-neighbor 
 | Phase 3 | Source panels, leakage guards, shared numerical scorer, blinded calibration workflow, exact quality bound and local CLI implemented/audited |
 | Phase 4 core | Original-schema adapters, local encoding interface, task choices, request generation, six-method engineering comparison and measurement harness implemented; authentic-input acceptance still pending |
 | Phase 4 extensions | News calendar/encoding bridge, per-encoder calibration and blank admission pack implemented; fractional-label logistic pilot/certificate completed in its stated single-output scope; consult final audits and `phase4/TODO.json` |
+| Phase 5 | Compact payload/all summary methods, enforced no-reaccess, versioned numerical gate, full-refit adapter, convex/replication/boundary/human/task/statistical integrations and complete prospective registry; see latest completion ledger |
 | Primary semantic study | **Not started.** No E5/MPNet embeddings, no original source-rich corpus snapshot and no completed human ratings |
 | Paper-ready confirmatory evidence | **Absent.** Do not turn development checks into semantic or source-withdrawal claims |
 
@@ -52,7 +53,7 @@ The main fixed-curator contract eventually became **global earlier-raw-neighbor 
 4. `empirical_execution/canonical_theory_addendum.tex`, `certified_ridge_contract.txt`, `exact_chart_algorithm_notes.txt`, and `README_strict_mode.txt` describe the strongest implemented numerical guarantee.
 5. `empirical_execution/memory_theory_addendum.tex` and `README_memory_repair.txt` qualify the memory story. Low coordinate dimension is not total-byte optimality.
 6. Phase-specific `independent_review.txt` and JSON audits establish what was independently checked versus implementation self-checks.
-7. `empirical_execution/phase4/README.md` and `TODO.json` are the current implementation/dependency inventory. `results/execution_engineering_final/` is the authoritative Phase 4 core replay. Earlier `execution_engineering/` uses a superseded request seed policy; preserve it as history and never pool the two.
+7. `empirical_execution/phase5/README.md` and `COMPLETION_LEDGER.md` are the current implementation/dependency inventory. Phase 4 README/TODO are historical. `results/execution_engineering_final/` is the authoritative Phase 4 core replay. Earlier `execution_engineering/` uses a superseded request seed policy; preserve it as history and never pool the two.
 
 The newest complete user-facing report is `output/pdf/counterfactual_curation_empirical_preparation.pdf`. Previous reports and ZIPs are retained as historical deliverables, not overwritten.
 
@@ -133,3 +134,63 @@ Original local workspace was `/workspace/scratch/35d4d4d8ba2c`; use repository-r
 `empirical_execution/ccu/native/README.txt` explains the GMP helper and Python fallback. Frozen checks may bind full source-file hashes; modifications require a new version/audit instead of quietly reusing old manifests. Many checks write output JSON, so use an isolated checkout for reproduction.
 
 The backup intentionally excludes caches, temporary PDF render/extraction folders and disallowed News-body redistribution. `BACKUP_MANIFEST.json` records the actual backed-up file set. No API keys, tokens or unrelated personal memories are required to resume.
+
+
+## Phase 5 continuation checkpoint (supersedes earlier implementation-pending lists)
+
+Read `phase5/COMPLETION_LEDGER.md` before doing more implementation; many tasks
+listed as pending in Phase 4 are now implemented. Frozen historical code/results
+were not silently altered. Core additions include optimized CSR B-E/B-A, dense
+indexed/scan and genuine incidence-rank summary services, compact/joint-span
+comparators, O-G/O-T, source semantics, persisted resume and kernel no-reaccess.
+The restriction is seccomp TSYNC after trusted own-state load, with input FDs
+closed and write-only output descriptors. Landlock is unsupported in this host;
+its failed attempts are retained. No physical-erasure or malicious-native proof
+is claimed.
+
+`phase5/results/isolated_natural_engineering_final/` is the authoritative v1
+matrix: 216 jobs, 864 releases, 648 zero-admission method/checkpoint rows, no
+failed job or head disagreement. Independent scalar-graph/dual-ridge replay
+checks 1,080 saved heads including construction, maximum error 9.4369e-16.
+Four fixed paths (R2/U1/A1), d64 five repeats and d768 one feasibility repeat;
+prospective 1 GiB/60 s/one-thread development envelope. Shared-host contention
+precludes publication speed claims. The compact eligible-payload comparator
+remains smaller than joint-span and dense summaries; preserve that limitation.
+
+The aggregate append journal originally retained 213 of 216 rows. All per-job
+reports were intact. `journal_reconciliation.json` records exact recovery;
+original journal preserved, no model reruns. The 3,888 detailed job files are in
+`jobs.tar.gz`; run `python3 tools/phase5_result_archive.py restore` before replay
+or independent audit. This is a byte-exact archive, not discarded outputs.
+Runtime state snapshots are regenerated from code; their byte/hash accounting
+is retained, but the large temporary states themselves are not backed up.
+
+`workers_v2.py`/`run_isolated_v2.py` add the new normalized-residual/conditioning
+release gate and zero-start CG without changing the v1 results. Check their
+own evidence files; never retroactively call old floating heads rigorous
+certificates. `convex_multioutput.py` combines scalar exact bounds into a joint
+Frobenius certificate, and `convex_program.py` runs the separate three-arm
+extension. Seven-output natural Civil labels are the original fractions, not
+invented Stack tags.
+
+`refit.py` vendors Meta SemDeDup at 6b4194511202c29b0e1ac8c730996777449ea2a4
+with original license. The separate NumPy reference's 24 natural checkpoints and
+72 post-deletion heads pass; it is explicitly not the official Faiss backend.
+Official execution remains blocked by absent torch/Faiss/tqdm and real 5k panels.
+WCEP parser/whole-event selection/encoding bridge uses original event article
+instances and inherits the corresponding News threshold; no event label is
+promoted to a duplicate/source label. No WCEP archive is present.
+
+Statistics preserve planned failures/missingness/zeros and signed negative
+outcomes, use 10,000 whole-trajectory resamples, secondary crossed test-source
+resampling and fixed Holm families. Human interpretation now has full context
+packs and response-analysis software, but 72 pair and 60 context assignments remain
+blank and real responses = 0. Threshold quality still requires independently
+collected genuine ratings; declarations/hashes alone are not authenticity.
+
+The prospective A–G registry enumerates 43 groups, 16,933 jobs, 158 artifact keys and
+21 visible unresolved recipe/input obligations. It is neither a preregistration
+submission nor primary activation. Supply real inputs, resolve development
+configuration and acceptance, then exercise the complete scientific chain;
+never change a role string or boolean to waive those gates. See updated status
+and branch READMEs for final numerical counts and exact current source hashes.

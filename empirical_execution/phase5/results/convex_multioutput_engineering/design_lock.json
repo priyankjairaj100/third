@@ -1,0 +1,42 @@
+{
+  "input_bindings": {
+    "source_sha256": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9",
+    "request_manifest_sha256": "d9f0173be65364a1439e54d98947cf2e85717322dd5bcde07953abef4fcc4567",
+    "features_sha256": "b4b9fe5e7a79e5d1583e79c0d4e34387de64a0cf507b5a768c90c57bc19b2319",
+    "targets_sha256": "556f0048e4a2ae12d3ba8ab7206cf242138bd73453367b827e7abe7205bf92f8",
+    "lambda_hex": "0x1.47ae147ae147bp-7",
+    "code_sha256": "45ddf91ee33cca014bc577fa9497c4b033473998052d3d4868b6297996f97be6",
+    "implementation_sha256": "612619978ccf277b3d25acb8f0cb3c445100ae468d23369791d9a35c2b3a7eb2"
+  },
+  "evidence_role": "engineering_nonconfirmatory",
+  "targets": [
+    "toxicity",
+    "severe_toxicity",
+    "obscene",
+    "threat",
+    "insult",
+    "identity_attack",
+    "sexual_explicit"
+  ],
+  "records": 100,
+  "feature": "lexical64",
+  "curator": "lexical128",
+  "threshold": 0.6,
+  "checkpoints": [
+    1,
+    8
+  ],
+  "arms": [
+    "R",
+    "U",
+    "A"
+  ],
+  "source_arm_natural": "unavailable; no native source IDs",
+  "normalization": "sum over outputs of row-mean BCE + lambda/2 Frobenius squared",
+  "lambda_reg": 0.01,
+  "release_frobenius_radius": 1e-08,
+  "semantic_encoder_used": false,
+  "Stack20_actual_data_used": false,
+  "source_claim": false,
+  "speedup_claim": false
+}
