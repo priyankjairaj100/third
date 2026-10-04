@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.0",
+  "status": "design_reviewed_not_acquired_or_preregistered",
+  "date": "2026-10-03",
+  "paper": "Unlearning What Was Never Trained",
+  "venue_goal": "ACL 2027",
+  "experiment_results_present": false,
+  "synthetic_datasets_allowed": false,
+  "contracts": {
+    "primary_curator": "global_earlier_raw_neighbor_suppression",
+    "primary_curator_fitted_to_deletable_data": false,
+    "reference_graph": "exhaustive_strict_cosine_threshold",
+    "approximate_search_is_secondary_only": true,
+    "service_output": "head_only",
+    "selected_ids_provided_by": "isolated_independent_curator_oracle",
+    "corpus_recovery_claim": false,
+    "request_interface": "identifiers_only",
+    "retained_access": "only_method_accounted_state",
+    "history_claim": "designated_abstract_state_only",
+    "transcript_privacy_claim": false,
+    "budget": "cumulative_unique_units_no_reset",
+    "exhaustion_policy": "atomic_refusal",
+    "source_service_universe": "all_disjoint_partition_units_including_unknown_singletons",
+    "source_random_sampling_frame": "genuine_native_sources_only",
+    "full_refit_comparison": "separate_original_SemDeDup_branch_F_vs_R"
+  },
+  "seeds": {
+    "master": 20271003,
+    "source_split_salt": "ccu-v1-source-split",
+    "primary_panel_salt": "ccu-v1-primary-panel",
+    "replication_pool_salt": "ccu-v1-replication-pool",
+    "request_salt": "ccu-v1-request",
+    "priority_salt": "ccu-v1-priority",
+    "primary_priority_seed": 0,
+    "sensitivity_priority_seeds": [
+      1,
+      2
+    ],
+    "bootstrap_seed": 20271004,
+    "projection_seed": 20271005
+  },
+  "datasets": {
+    "civil_comments": {
+      "role": "core_labeled",
+      "route": "TFDS civil_comments/CivilComments",
+      "version": "1.2.4",
+      "source": "publication_id+article_id",
+      "input": "text_only_no_parent_text",
+      "label": "original_toxicity_fraction",
+      "outputs": 1,
+      "author_withdrawal_claim": false
+    },
+    "askubuntu": {
+      "role": "core_labeled",
+      "route": "corrected_company_April_2024_dump",
+      "date_filter": [
+        "2018-05-02",
+        "2023-12-31"
+      ],
+      "records": "PostTypeId=1",
+      "source": "site+OwnerUserId_account_proxy",
+      "label": "top20_calibration_tags_multihot_keep_zero_targets",
+      "outputs": 20,
+      "benchmark": "new_question_level_task_not_duplicate_pair_retrieval"
+    },
+    "cc_news": {
+      "role": "structure_and_human_audit",
+      "route": "vblagoje/cc_news_pinned_revision",
+      "calibration_year": 2017,
+      "confirmation_years": [
+        2018,
+        2019
+      ],
+      "source": "registrable_domain_pinned_public_suffix_list",
+      "label": null,
+      "untouched_raw_crawl_claim": false
+    },
+    "english_stackexchange": {
+      "role": "within_platform_replication",
+      "route": "same_corrected_April_2024_dump_protocol",
+      "source": "site+OwnerUserId_account_proxy",
+      "outputs": 20
+    },
+    "wcep100": {
+      "role": "event_enriched_replication",
+      "route": "original_author_extracted_release",
+      "label": null,
+      "event_ids_are_gold_duplicates": false,
+      "source_arm": "only_if_original_urls_verified"
+    }
+  },
+  "population": {
+    "split_hash_quantiles": {
+      "train": [
+        0,
+        0.7
+      ],
+      "calibration": [
+        0.7,
+        0.85
+      ],
+      "test": [
+        0.85,
+        1.0
+      ]
+    },
+    "split_unit": "genuine_source_or_missing_source_singleton",
+    "primary_pool_replication_hash_quantile": [
+      0,
+      0.8
+    ],
+    "second_panel_pool_replication_hash_quantile": [
+      0.8,
+      1.0
+    ],
+    "guard": "train_side_exact_duplicates_crosssplit_duplicate_links_parent_crosssplit_and_primary_E5_similarity_gt_tau",
+    "cross_encoder_population": "same_post_E5_guard_D_no_MPNet_refilter",
+    "soft_primary_size_targets": [
+      10000,
+      25000,
+      100000,
+      200000
+    ],
+    "group_boundary_policy": "include_whole_group_report_overshoot",
+    "source_completeness_scope": "surviving_records_after_fixed_guards",
+    "second_panel_size": 10000,
+    "full_refit_panel_size": 5000,
+    "wcep_article_soft_target": 25000,
+    "news_time_window": "first_complete_month_from_2018_01_with_at_least_10k_else_chronological_complete_month_prefix"
+  },
+  "features": {
+    "primary_encoder": "intfloat/multilingual-e5-base",
+    "secondary_encoder": "sentence-transformers/all-mpnet-base-v2",
+    "curation_dimension": 768,
+    "native_learner_dimension": 768,
+    "projection_ablation_dimensions": [
+      32,
+      64,
+      128,
+      256
+    ],
+    "projection": "fixed_data_independent_orthonormal_seeded",
+    "chunk_content_tokens": 256,
+    "chunking": "nonoverlapping_all_chunks",
+    "pooling": "content_token_weighted_mean_then_normalize",
+    "e5_prefix": "query: ",
+    "canonical_learner_z": "stored_FP32_document_vector_exactly_promoted_to_FP64_no_renormalization",
+    "graph_e": "FP32_cache_promoted_and_reference_FP64_normalized"
+  },
+  "threshold_calibration": {
+    "selection_pairs_max": 600,
+    "score_bins": 20,
+    "score_bin_range": [
+      -1,
+      1
+    ],
+    "pairs_per_bin": 30,
+    "candidate_grid": [
+      0.5,
+      0.51,
+      0.52,
+      0.53,
+      0.54,
+      0.55,
+      0.56,
+      0.57,
+      0.58,
+      0.59,
+      0.6,
+      0.61,
+      0.62,
+      0.63,
+      0.64,
+      0.65,
+      0.66,
+      0.67,
+      0.68,
+      0.69,
+      0.7,
+      0.71,
+      0.72,
+      0.73,
+      0.74,
+      0.75,
+      0.76,
+      0.77,
+      0.78,
+      0.79,
+      0.8,
+      0.81,
+      0.82,
+      0.83,
+      0.84,
+      0.85,
+      0.86,
+      0.87,
+      0.88,
+      0.89,
+      0.9,
+      0.91,
+      0.92,
+      0.93,
+      0.94,
+      0.95,
+      0.96,
+      0.97,
+      0.98,
+      0.99,
+      0.995
+    ],
+    "select": "least_strict_with_weighted_precision_at_least_0.95_and_nonzero_support",
+    "support_is_reported_not_quality_guarantee": true,
+    "validation_pairs": 200,
+    "validation_sampling": "independent_SRS_entire_above_threshold_population_possible_overlap_fresh_blinded_ratings_or_census",
+    "quality_gate": "one_sided_95pct_lower_bound_at_least_0.90",
+    "empty_pairs": "precision_undefined_quality_gate_not_passed",
+    "sensitivity_delta": 0.02,
+    "post_confirmation_retuning": false
+  },
+  "learner": {
+    "type": "uniform_average_loss_matrix_ridge",
+    "intercept": false,
+    "normal_equations": "(M+lambda*n*I)Theta=H",
+    "empty_target": "Theta=0",
+    "regularization_grid": [
+      1e-06,
+      1e-05,
+      0.0001,
+      0.001,
+      0.01,
+      0.1
+    ],
+    "selection": "five_source_group_folds_in_calibration_only_MSE_tie_larger_lambda",
+    "moments_dtype": "FP64",
+    "primary_decoder": "FP64_Cholesky_common_to_methods",
+    "secondary_decoder": "zero_start_CG_common_stopping_rule",
+    "normalized_residual_gate": 1e-10,
+    "rigorous_certificate_requires": "verified_moment_and_residual_error_allowance_not_merely_float_residual"
+  },
+  "requests": {
+    "record_horizon": 128,
+    "record_checkpoints": [
+      1,
+      8,
+      32,
+      128
+    ],
+    "source_horizon": 8,
+    "source_checkpoints": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "clipping": "clip_to_arm_feasibility_deduplicate_keep_empty_targets",
+    "R": "uniform_permutation_of_all_records_prefixes",
+    "S": "uniform_permutation_of_genuine_sources_prefixes",
+    "U": "uniform_permutation_of_initially_excluded_records_prefixes",
+    "A": "up_to_1024_real_candidates_per_fixed_seed_choose_largest_graph_only_admission_then_pad_with_seeded_ID_order",
+    "matched_R": "one_independent_record_permutation_per_S_path_prefix_at_each_cumulative_raw_count_separate_horizon",
+    "additional_structural_horizon": "ceil(0.01*N)_separate_initial_state"
+  },
+  "allocations_per_corpus_panel_primary_seed": {
+    "structure": {
+      "R": 256,
+      "S": 256,
+      "U": 128,
+      "A": 32
+    },
+    "task_relevance": {
+      "R": 256,
+      "S": 256,
+      "U": 128,
+      "A": 32
+    },
+    "full_methods": {
+      "R": 64,
+      "S": 64,
+      "U": 32,
+      "A": 16
+    },
+    "replication": {
+      "R": 64,
+      "S": 64,
+      "U": 32,
+      "A": 0
+    },
+    "full_refit": {
+      "R": 32,
+      "S": 32,
+      "U": 0,
+      "A": 16
+    },
+    "convex_extension": {
+      "R": 32,
+      "S": 32,
+      "U": 0,
+      "A": 0
+    },
+    "each_boundary_configuration": {
+      "R": 32,
+      "S": 32,
+      "U": 0,
+      "A": 0
+    }
+  },
+  "methods": {
+    "O-G": "independent_fixed_curator_rebuild_and_common_decoder",
+    "O-T": "correct_selected_set_fresh_moments_common_decoder",
+    "B-E": "eligible_FP32_payload_antijoin_vectorized_signed_moments_same_horizon",
+    "B-A": "all_current_payload_antijoin_greater_capability_disclosed",
+    "P-I": "indexed_finite_horizon_statistic_summary",
+    "P-S": "whole_summary_scan_ablation",
+    "P-R": "rank_coordinate_scan_reconstruction",
+    "B-F": "wrong_target_frozen_selection_diagnostic",
+    "O-R": "separate_full_refit_branch"
+  },
+  "fairness": {
+    "shared_solver": true,
+    "same_canonical_z": true,
+    "baseline_stores_outer_products_per_record": false,
+    "baseline_compaction": "development_locked_masked_CSR_policy_same_rules_as_proposed_count_stale_bytes",
+    "no_hidden_retained_lookup": true,
+    "persistence": "final_checkpoint_primary_every_release_secondary",
+    "native_failures_remain_in_results": true,
+    "forbidden_claims": [
+      "value_coordinate_rank_implies_total_byte_optimality",
+      "speedup_over_retrain_implies_incremental_state_of_the_art",
+      "observed_ANN_recall_implies_uniform_graph_certificate"
+    ]
+  },
+  "audit": {
+    "fresh_graph_paths_per_primary_corpus": 16,
+    "complete_state_rebuild_paths": {
+      "R": 16,
+      "S": 16
+    },
+    "full_refit_every_step_paths": {
+      "R": 2,
+      "S": 2
+    },
+    "timing_paths": {
+      "R": 8,
+      "S": 8
+    },
+    "fresh_process_timing_repetitions": 5,
+    "same_data_full_refit_repeats": 5,
+    "full_refit_seed_sensitivity_count": 3,
+    "model_workers_isolated_from_oracles": true
+  },
+  "statistics": {
+    "primary_unit": "independently_reset_trajectory_conditional_on_fixed_corpus",
+    "bootstrap_replicates": 10000,
+    "test_uncertainty_secondary": "crossed_trajectory_and_whole_test_source_group_bootstrap",
+    "primary_loss_effect": "(MSE_frozen-MSE_oracle)/MSE_predelete_report_signed",
+    "prediction_effect": "RMS_frozen_vs_oracle_and_divide_by_predelete_score_SD_report_raw",
+    "zero_normalizer": "undefined_no_floor",
+    "exceedance_reporting_threshold": 0.01,
+    "threshold_is_universal_practical_margin": false,
+    "loss_significance_family": "4_corpus_by_R_S_contrasts_Holm_0.05",
+    "systems_significance_family": "2_corpus_equal_R_S_weighted_lifecycle_comparisons_Holm_0.05",
+    "rare_failure_claim_from_64_runs": false,
+    "confirmation_optional_stopping": false
+  },
+  "human_audit": {
+    "unique_admission_pairs_max": 400,
+    "excluded_control_pairs_max": 200,
+    "annotators_per_pair": 3,
+    "former_blocker_set_audit_max": 100,
+    "surviving_selected_comparison_audit_max": 100,
+    "sampling": "fixed_corpus_and_request_strata_record_inclusion_probabilities_census_scarce_strata_no_favorable_refill",
+    "blinding": [
+      "method",
+      "request_family",
+      "model_effect",
+      "gold_label",
+      "desired_conclusion"
+    ],
+    "separate_from_threshold_calibration": true
+  },
+  "resources_proposed": {
+    "host_GiB": 256,
+    "per_method_memory_cap_GiB": 128,
+    "accelerator_count": 1,
+    "wall_time_budget": "measured_development_projection_not_invented"
+  },
+  "pre_execution_lock_required": {
+    "corpus_snapshots_and_checksums": null,
+    "source_partition_hashes_and_counts": null,
+    "post_guard_panel_manifest_hashes": null,
+    "calibration_test_manifest_hashes": null,
+    "parser_and_guard_commit": null,
+    "encoder_and_tokenizer_revisions": null,
+    "embedding_cache_hashes": null,
+    "thresholds_and_independent_quality_audit": null,
+    "tag_vocabularies_and_decision_thresholds": null,
+    "selected_lambdas": null,
+    "method_and_oracle_code_commits": null,
+    "numerical_error_budget_and_reference_scoring_implementation": null,
+    "source_service_universe_hash": null,
+    "request_manifest_hashes": null,
+    "hardware_and_thread_configuration": null,
+    "memory_cap_and_common_timeout": null,
+    "development_cost_and_precision_analysis": null,
+    "full_refit_cluster_count_policy_and_seeds": null,
+    "compaction_and_persistence_policies": null,
+    "annotation_instructions_pay_and_content_protection": null
+  }
+}

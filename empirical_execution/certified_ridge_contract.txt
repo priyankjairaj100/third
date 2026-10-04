@@ -1,0 +1,71 @@
+Exact numerical certification contract
+======================================
+
+Implemented in ccu/certified_ridge.py. Audited by audit_certified_ridge.py;
+results/certified_ridge_audit.json contains the completed audit.
+
+Target and interpretation
+-------------------------
+The certificate target is the exact ridge solution W* of
+  (G + lambda*n*I) W* = H
+for n>0, with G positive semidefinite, lambda>0, and exact specified moments.
+For n=0 the pipeline's prescribed head is zero, and supplied moments must be
+exactly zero. Every supported finite binary floating-point value (up to
+binary64) is interpreted as the dyadic rational it encodes. Extended NumPy
+floats are rejected; supply explicit Fractions for larger exact values. Supplying the string "0.01" or Fraction(1,100)
+chooses exact decimal 1/100; supplying float 0.01 chooses that binary float.
+The implementation never silently changes one target into the other.
+
+Inputs can be dense G,H or exact factors U,A,B satisfying G=U A U^T,H=U B.
+U need not be orthonormal. The factor path does not materialize ambient G.
+It proves A positive semidefinite by exact rational Schur complements. This is
+sufficient to prove G positive semidefinite for any U. It may reject valid G
+represented using an indefinite A and a rank-deficient U; this is a conservative
+input limitation, not a false certificate. Full-column-rank canonical U removes
+that conservatism. The dense path proves G positive semidefinite directly.
+
+The mathematical bound
+----------------------
+Given an arbitrary candidate W, compute R=(G+lambda*n*I)W-H exactly.
+As G is positive semidefinite, lambda_min(G+lambda*n*I)>=lambda*n>0.
+Therefore
+  ||W-W*||_F^2 <= ||R||_F^2/(lambda*n)^2.
+The right side is represented as an exact rational; candidate solver stability
+is not an assumption. An unsuccessful or inaccurate floating solver receives
+an appropriately large bound (or is rejected for nonfinite output).
+
+For a requested decimal display precision p, let Rbound=a/b denote the exact
+squared error bound and s=10^p. Calculate k=isqrt(floor(a*s*s/b)); increment k
+when k*k*b<a*s*s. Then k/s is provably an upper bound on sqrt(Rbound).
+Only integer arithmetic is used. A user tolerance is accepted using an exact
+squared comparison. A prediction bound at exact feature row z is
+  ||z^T(W-W*)||_2^2 <= ||z||_2^2 * Rbound.
+At n=0 the squared error is exactly ||W||_F^2, with zero stationarity residual.
+
+Binding and scope
+-----------------
+A certificate contains SHA-256 digests of both supplied exact target encoding
+and candidate weights. These are provenance bindings, not cryptographic proof
+that a remote party executed the program. Different equivalent factor encodings
+can have different target hashes; byte identity belongs to the canonical-state
+module. The proof rests on the mathematical algorithm and Python exact integer/
+rational execution. This is not a proof-assistant-verified implementation.
+
+Crucially, passing rounded legacy QR/SVD factors certifies their encoded G,H.
+It does not certify forgotten raw-data moments. The full pipeline certificate
+must receive the exact canonical current aggregate or exact original-row
+aggregate, so the target is independently identified. The completed natural-
+text audit uses exact dyadic original-row moments and an independent rational
+Gauss-Jordan solution to verify containment.
+
+Complexity and accounting
+-------------------------
+For U of dimension d by r and c outputs, forming the residual costs
+O(d*r*c+r*r*c) rational operations; the core PSD proof costs O(r^3) rational
+operations and O(r^2) workspace. U and candidate W are already supplied inputs.
+No fixed bit-complexity or negligible runtime claim is made: exact rational
+numerators and denominators can grow. The certificate is an optional release
+verification layer, independent of the fast approximate solver and its timing.
+It certifies numerical accuracy of a particular head, not statistical utility,
+semantic curation quality, privacy, distributional unlearning, or a selection
+algorithm's correctness.

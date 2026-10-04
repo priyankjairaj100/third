@@ -1,0 +1,100 @@
+{
+  "status": "passed",
+  "cli_calls_checked": 9,
+  "calls": [
+    {
+      "command": "prepare",
+      "expected_exit": 0,
+      "result": {
+        "status": "prepared_pending_semantic_calibration",
+        "rows": 99
+      }
+    },
+    {
+      "command": "selection",
+      "expected_exit": 0,
+      "result": {
+        "status": "blank_selection_pack_created",
+        "pairs": 117,
+        "completed_human_ratings": 0,
+        "confirmatory_study_ready": false
+      }
+    },
+    {
+      "command": "selection",
+      "expected_exit": 2,
+      "result": {
+        "status": "blocked",
+        "reason": "Output already exists; frozen artifacts are never overwritten",
+        "confirmatory_study_ready": false
+      }
+    },
+    {
+      "command": "threshold",
+      "expected_exit": 2,
+      "result": {
+        "status": "blocked",
+        "reason": "Actual independent blinded human collection declaration is missing",
+        "confirmatory_study_ready": false
+      }
+    },
+    {
+      "command": "selection",
+      "expected_exit": 2,
+      "result": {
+        "status": "blocked",
+        "reason": "Cache row_ids must equal the complete unique records order",
+        "confirmatory_study_ready": false
+      }
+    },
+    {
+      "command": "selection",
+      "expected_exit": 2,
+      "result": {
+        "status": "blocked",
+        "reason": "Cache text/ID binding mismatch",
+        "confirmatory_study_ready": false
+      }
+    },
+    {
+      "command": "selection",
+      "expected_exit": 2,
+      "result": {
+        "status": "blocked",
+        "reason": "Cache file checksum mismatch",
+        "confirmatory_study_ready": false
+      }
+    },
+    {
+      "command": "selection",
+      "expected_exit": 2,
+      "result": {
+        "status": "blocked",
+        "reason": "This primary workflow requires the pinned E5 encoder",
+        "confirmatory_study_ready": false
+      }
+    },
+    {
+      "command": "selection",
+      "expected_exit": 2,
+      "result": {
+        "status": "blocked",
+        "reason": "Records do not match the sealed population preparation audit",
+        "confirmatory_study_ready": false
+      }
+    }
+  ],
+  "natural_records": 100,
+  "after_fixed_guard": 99,
+  "calibration_records": 16,
+  "calibration_pairs_scored": 120,
+  "human_responses_created": 0,
+  "primary_threshold_selected": false,
+  "primary_study_ready": false,
+  "scope": "natural-text lexical integration; no synthetic empirical records",
+  "code_sha256": {
+    "check_workflow.py": "aa8776bb81aeb57e3d6fbb9896423aa28ca190755728693babf5c841fcc44e96",
+    "run_preparation.py": "0408e0be569d7cd7c3fa252a01e651b542de551c3073b54a108d8e84d670373a"
+  },
+  "data_sha256": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9"
+}

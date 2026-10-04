@@ -1,0 +1,6 @@
+# Preserve checkpoint bytes and SHA256 values across checkouts.
+* -text
+*.pdf binary
+*.zip binary
+*.png binary
+empirical_execution/ccu/native/exact_chart binary

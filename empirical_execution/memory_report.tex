@@ -1,0 +1,531 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,booktabs,array}
+\usepackage{xcolor,enumitem,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!55!black]{hyperref}
+\definecolor{ink}{HTML}{19374C}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small Counterfactual curation}\fancyhead[R]{\small Memory repair, version 1}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}
+\setlist{nosep,leftmargin=1.5em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\title{\color{ink}\textbf{Eliminating Quadratic Coefficient Storage}\\[5pt]\Large Algorithms, proofs and local verification\\for counterfactual curation repair}
+\author{ACL 2027 research project}
+\date{4 October 2026}
+\begin{document}\maketitle
+\textbf{Outcome.} The quadratic expansion in the original ridge-summary
+implementation has been removed. The stronger joint-span algorithm represents
+each coefficient through its current Gram/cross-moment range. Its exact-rank
+persistent numeric storage is $O(E_h(d+c))$, in place of $O(Kd^2+Kdc)$.
+An implementation-safe envelope uses initial eligibility $E_0$, because
+floating rank residue and sticky dense fallbacks can outlive exact rank loss.
+
+\textbf{Implemented, not just proposed.} Two compact summaries, a reduced
+ridge decoder, deterministic projector-based basis coordinates, streaming
+checkpoints, and a stronger payload comparator were implemented and run here.
+The matrix factorization primitives are classical; the paper contribution
+must rest on their curation-aware guarantee and empirical consequences.
+
+\textbf{Measured result.} On the fixed Civil engineering graph at $d=768$,
+the original dense coefficient arrays used 234.483 MB. Joint-span arrays use
+1.039 MB: a \textbf{225.6-fold reduction} (99.56\%). These are owned numerical
+arrays, not process peak or total physical memory. A fair compact payload
+baseline uses only 0.256 MB, so the new summary is not a universal memory winner.
+
+\textbf{Evidence scope.} The same 100 natural Civil Comments records were
+used, with their original labels. Curation is fixed 128-dimensional lexical
+hashing at threshold 0.6, independent of learner dimension. No synthetic
+documents or labels, semantic encoder claims, or external compute were used.
+These are engineering results; full NLP utility and semantic validation remain
+outside this local pilot.
+
+\textbf{State scope.} The fast implementation repairs decoded coefficients
+and heads. Canonical basis coordinates remove one historical ambiguity,
+but sticky dense/compact mode and floating arithmetic prevent a claim of
+whole-state equality to fresh construction. The stronger canonical-state
+variant requires additional, explicitly charged re-encoding.
+\newpage
+\section*{Measured comparisons}
+All cases share the same records, graph, horizon eight, regularization
+$\lambda=0.01$, request generator and independent retained-data oracle.
+The seven-output cases use all seven original Civil toxicity annotations;
+they introduce no fabricated target. MB below means $10^6$ bytes.
+\begin{center}\small
+\begin{tabular}{rrrrrr}\toprule
+$d$ & $c$ & Dense & Gram factor & Joint span & Compact payload\\\midrule
+64 & 1 & 1.699 & 0.119 & 0.071 & 0.022 \\
+128 & 1 & 6.641 & 0.271 & 0.172 & 0.043 \\
+768 & 1 & 234.483 & 1.628 & 1.039 & 0.256 \\
+128 & 7 & 7.249 & 0.879 & 0.183 & 0.047 \\
+768 & 7 & 238.133 & 5.278 & 1.047 & 0.260 \\
+\bottomrule\end{tabular}\end{center}
+Counts in the two new summaries are exact Python integers, charged in their
+separate Python live-size estimates. The table excludes those objects,
+identifier dictionaries, graph/corpus input, allocator slack and temporary
+workspace. The original dense state includes its count coordinate; that
+small difference is not responsible for the reduction.
+
+The signed-Gram ablation still stores $H_J$ densely. Its seven-output cost
+exposes why the joint range, rather than Gram-only compression, is needed.
+The compact payload comparator retains eligible FP32 features and FP64 labels,
+stores no permanent Gram/kernel/head, and chooses primal or dual ridge by the
+smaller dimension. Its persistent rows are a different storage contract.
+
+\subsection*{Verification actually run}
+\begin{itemize}
+\item 544 release checkpoints across three scalar-output dimension panels
+and two seven-output panels passed against an independently rescored oracle.
+The joint summary's largest head difference was $1.11\times10^{-15}$; moment difference
+was $4.00\times10^{-15}$.
+\item The compact decoder was actually invoked at all 544 checkpoints. Its
+largest oracle head difference was $1.17\times10^{-15}$.
+\item Another 100 sequential releases deleted the entire natural corpus.
+Joint-summary head difference was at most $2.06\times10^{-14}$; the final head was exactly
+the prescribed zero. This is a stronger stress than the short request horizon.
+\item Twelve atomic-rejection checks and three order/batching comparisons
+passed. Twenty checkpoints per compressed method additionally compared every
+coefficient to the dense implementation, streamed one key at a time.
+\item Independent coordinate-permutation/sign audits used three actual
+coefficients. Streamed checkpoint roundtrip reproduced coefficients exactly,
+owned disjoint buffers, and supported an identical subsequent repair.
+\end{itemize}
+These are tolerance checks, not a certified roundoff or privacy proof. The
+full coefficient reference is the dense implementation; head/moment checks
+use a separate fresh selection-and-training oracle.
+
+\newpage
+\section*{Whole-process memory and the decision it supports}
+Fresh processes separately constructed each method and serviced four releases.
+They loaded the same natural inputs and graph; they did not run oracle/audit
+reconstructions. Joint span used its reduced decoder. Each number is one
+observed high-water mark on this host, not a replicated performance estimate.
+\begin{center}\small
+\begin{tabular}{lrr}\toprule
+Method & Setup peak (MiB) & Final peak (MiB)\\\midrule
+Dense coefficients & 117.78 & 356.71 \\
+Signed Gram factors & 117.74 & 135.42 \\
+Joint span + reduced decoder & 117.78 & 121.28 \\
+Compact eligible payload & 117.77 & 118.39 \\
+\bottomrule\end{tabular}\end{center}
+The final peak includes the Python/numerical runtime, original inputs,
+construction, requests and decoder workspace. Setup peaks must not be
+subtracted and interpreted as exact allocation attribution. The 225.6-fold
+array reduction is therefore not a 225.6-fold whole-process RAM claim.
+
+\textbf{Recommended implementation.} Use joint-span coefficients for the
+aggregate-state method. Keep dense coefficients as an audit reference and
+signed-Gram factors as an explanatory ablation. Keep the compact payload
+method as a mandatory baseline whenever eligible-row retention is allowed.
+No speedup conclusion follows from these unreplicated runs.
+
+\textbf{What is solved.} The summary no longer allocates one full ambient
+Gram per coefficient. It is built directly from bounded per-key workspaces,
+supports source/record substitution through the existing key algebra, and
+can decode a compact current coefficient without an ambient $d\times d$
+matrix. The source extension here is algebraic; this new numerical run
+validates record deletion because the Civil preview lacks native source IDs.
+
+\textbf{What is not proved.} This is not optimal physical storage, superiority
+to payload retention, automatic full-state canonicality, numerical exactness,
+privacy, or evidence of semantic NLP quality. A large corpus can still have
+many eligible records and substantial key metadata. Construction preflight
+caps coefficient arrays only; lifecycle caps must use the uniform envelope
+and reserve repair, decode, serialization and external input workspaces.
+
+\textbf{Reproducibility.} The companion package includes all three new
+implementations, the exact design, per-checkpoint records, boundary results,
+source hashes, independent audit and process measurements. Earlier execution
+results remain intact. The code has no required network access during replay.
+\newpage
+% Standalone fragment; requires amsmath, amssymb, amsthm, hyperref and the
+% theorem/lemma/proposition environments used by the main theory document.
+% No document preamble. All guarantees below explicitly state their model.
+\section{Removing the quadratic feature-dimension factor from persistent repair state}
+\label{sec:memory-factor-addendum}
+
+\paragraph{Scope and attribution.}
+The dense implementation assigns a packed $d\times d$ Gram matrix to every
+polynomial key. This is unnecessary for ridge statistics. The previous
+linear-sketch lower bound permits arbitrary independent statistic coordinates;
+it does not establish a quadratic-in-$d$ lower bound for rank-one ridge
+contributions. The matrix primitives used below---thin QR, signed spectral
+factorization, and low-rank update/downdate recompression---are classical, not
+our proposed novelty. See Matthew Brand, \emph{Fast Low-Rank Modifications of
+the Thin Singular Value Decomposition}, Linear Algebra and its Applications
+415(1):20--30, 2006, DOI \href{https://doi.org/10.1016/j.laa.2005.07.021}{10.1016/j.laa.2005.07.021};
+the author's institutional record is
+\url{https://www.merl.com/publications/TR2006-059}.
+The contribution requiring evaluation is their integration with the
+finite-horizon coefficient state, its source-deletion semantics, and complete
+memory accounting.
+
+\subsection{Intrinsic coefficient rank and exact storage}
+Fix the current retained collection, remaining horizon $h$, a frozen feature
+map $z_v\in\mathbb R^d$, and frozen responses $y_v\in\mathbb R^c$. For record
+deletion, a record's owner is itself. For disjoint-source deletion its owner
+is its unique source $o(v)$, and $B(v)$ is the set of distinct blocker owners.
+Discard records with $o(v)\in B(v)$ and records with $|B(v)|>h$; let $E_h$
+denote the number of remaining eligible records. Each eligible record has
+the two possible coefficient endpoints $B(v)$ and $B(v)\cup\{o(v)\}$, with
+signs $+1$ and $-1$, respectively. The second endpoint is absent if its
+degree exceeds $h$.
+
+For a live key $J$, write its exact coefficient as
+\[
+ G_J=\sum_v a_{Jv}z_vz_v^\top,\qquad
+ H_J=\sum_v a_{Jv}z_vy_v^\top,\qquad
+ n_J=\sum_v a_{Jv},\qquad a_{Jv}\in\{-1,0,1\}.
+\]
+Let $m_J=|\{v:a_{Jv}\ne0\}|$ and let $K$ be the number of live keys.
+Then $K\le2E_h$ and $\sum_Jm_J\le2E_h$ before or after exact zero-key
+removal. Counts $n_J$ are signed integers; only the selected-set count
+$n_\varnothing$ must be nonnegative.
+
+\begin{lemma}[Intrinsic rank envelope]
+For every key,
+\[
+ r_J:=\operatorname{rank}(G_J)\le m_J,
+ \qquad
+ \rho_J:=\operatorname{rank}([G_J\ H_J])\le m_J.
+\]
+Consequently $\sum_Jr_J\le2E_h$ and $\sum_J\rho_J\le2E_h$.
+\end{lemma}
+\begin{proof}
+Every column of $G_J$ and $H_J$ lies in the span of the $m_J$ incident
+feature vectors. Summing the ranks and using at most two endpoints per
+eligible record proves the result. The argument allows signed coefficients
+and repeated source owners.
+\end{proof}
+
+\paragraph{The first implemented representation: signed Gram factors.}
+Represent $G_J=F_JS_JF_J^\top$, where $F_J\in\mathbb R^{d\times r_J}$ and
+$S_J$ is diagonal with entries $+1$ or $-1$. Retain $H_J$ densely and
+$n_J$ exactly. Alternatively retain $G_J$ in packed symmetric form, choosing
+whichever representation occupies fewer numeric bytes. Writing
+$q=d(d+1)/2$, a conservative word count is
+\[
+ \sum_J\bigl[\min\{(d+1)r_J,q\}+dc+1\bigr]
+ \le 2E_h\bigl[d+dc+2\bigr].
+\]
+Thus persistent numeric state is $O(E_hd(c+1))$, rather than $O(Kd^2+Kdc)$.
+This is an exact-arithmetic statement with rank recomputation after each
+collision. It does not imply better memory than every payload baseline:
+the constant factors, response dimension, precisions, and decoder workspace
+still matter. A negative or indefinite coefficient is valid and requires
+signed factors; replacing it by a positive-semidefinite approximation changes
+the query polynomial.
+
+\begin{theorem}[Joint-span representation]
+There is an exact coefficient-only representation whose persistent numeric
+state uses at most
+\[
+ \sum_J\left[d\rho_J+\frac{\rho_J(\rho_J+1)}2+
+                    c\rho_J+1\right]
+ \le 2E_h\left(\frac32d+c+\frac32\right)
+\]
+real/integer words. With key indices and alive public identifiers, logical
+storage is $O(E_h(d+c+h)+U)$ words, where $U$ is the number of alive public
+deletion units. This representation supports the same finite-horizon record
+and disjoint-source deletion polynomial without retained feature rows,
+response rows, or the original blocker graph.
+\end{theorem}
+\begin{proof}
+Choose an orthonormal basis $U_J\in\mathbb R^{d\times\rho_J}$ of
+$\operatorname{range}([G_J\ H_J])$, and store
+\[
+ A_J=U_J^\top G_JU_J,\quad B_J=U_J^\top H_J,\quad n_J.
+\]
+Because $G_J$ is symmetric, its row and column spaces lie in the same
+subspace. Hence $G_J=U_JA_JU_J^\top$ and $H_J=U_JB_J$ exactly. The displayed
+count stores $U_J$, the packed symmetric $A_J$, $B_J$, and the count.
+Use $\rho_J\le d$, $\sum_J\rho_J\le2E_h$, and $K\le2E_h$ for the upper
+bound. Each key has at most $h$ identifier incidences; its dictionaries and
+degree/inverse indices therefore cost $O(hE_h+E_h)$ logical words. No
+record-level decomposition of $G_J$ or $H_J$ is retained.
+\end{proof}
+
+\paragraph{Why the joint range is necessary.}
+The range of $G_J$ alone is insufficient. Two signed contributions with the
+same nonzero feature $z$, opposite signs, and distinct labels can give
+$G_J=0$ but $H_J=z(y_1-y_2)^\top\ne0$. A scheme that stores cross moments
+only in the Gram range silently loses information in this case. The
+joint-span representation covers it without storing the original labels.
+
+\subsection{Repairs, canonicality, and work}
+The polynomial-key update is unchanged: substitute deleted variables by one,
+merge colliding keys, and remove keys of degree above the decreased horizon.
+For a joint-span collision, let $Q$ span $[U_1\ U_2]$, set
+$P_i=Q^\top U_i$, and form
+\[
+ A=P_1A_1P_1^\top+P_2A_2P_2^\top,\qquad
+ B=P_1B_1+P_2B_2,\qquad n=n_1+n_2.
+\]
+If $V$ spans $\operatorname{range}([A\ B])$, replace the state by
+$(QV,V^\top AV,V^\top B,n)$ and discard its predecessor representations.
+The signed-Gram variant instead obtains a thin QR factorization
+$[F_1\ F_2]=QR$, diagonalizes
+$R\operatorname{diag}(S_1,S_2)R^\top$, and absorbs square roots of absolute
+eigenvalues into the new factor. Exact zero eigenvalues can be discarded;
+negative eigenvalues cannot.
+
+\begin{proposition}[Exact repair and state scope]
+In exact arithmetic these operations decode to the canonical coefficient
+map of the retained dataset at its remaining horizon. If each factorization
+uses a deterministic convention depending only on its decoded current
+coefficient, the encoded state is also a function of that current map and
+the public membership/horizon state. It does not retain an original basis.
+\end{proposition}
+\begin{proof}
+The factor operations preserve the sum of the decoded coefficients exactly.
+Substitution and decreased-horizon truncation therefore commute with
+decoding. The finite-horizon polynomial identity identifies the result with
+fresh retained-data construction. A deterministic encoding of that map
+preserves this state identity.
+\end{proof}
+
+For example, a canonical joint basis can be obtained by processing the
+columns of $[G_J\ H_J]$ in fixed order, orthogonalizing each against earlier
+accepted columns, skipping exactly zero residuals, and fixing normalization
+signs. These columns can be generated from a small current factor, so an
+entire dense ambient matrix need not persist. For spectral encoding, order
+distinct eigenvalues, then canonically orient each eigenspace by applying
+its projector to the coordinate vectors in fixed order and orthogonalizing.
+An arbitrary QR or eigensolver output is not automatically this canonical
+state, especially for repeated eigenvalues. The numerical implementation
+must therefore claim coefficient/head fidelity, not bytewise canonical
+factor equality.
+
+For colliding widths $p,q$, set $s=p+q\le2d$. A streamed factor collision
+uses $O(ds+s^2+dc)$ additional numeric workspace and, conservatively,
+$O(ds^2+s^3+s^2c)$ arithmetic. The persistent-state bounds do not promise
+the old dense algorithm's $O(d^2)$ cost per collision: repeated
+recompression can be slower. If $C$ collisions occur, charge the sum of
+these actual per-collision bounds, in addition to the unchanged key-index
+work. Process collisions one at a time rather than allocating a dense
+matrix for every key. A common dense ridge decoder separately uses
+$O(d^2+dc)$ workspace and typically $O(d^3+d^2c)$ factor/solve work.
+Construction must aggregate directly into factors or bounded per-key
+workspaces; constructing the old $K$-matrix state and compressing afterward
+does not cure its construction peak. Checkpoint export and array copies
+must also be charged.
+
+\subsection{What the floating-point implementation actually guarantees}
+\paragraph{Exact rank and finite-precision rank are different.}
+Mathematical cancellation may leave tiny nonzero FP64 eigenvalues, while
+thresholding them would introduce an additional approximation. Retaining
+every numerically nonzero eigenvalue avoids a user-selected truncation
+tolerance, but does not make factorization exact or make stored width equal
+to mathematical rank. QR, eigendecomposition, reconstruction, and summation
+still introduce roundoff. The current-$E_h$ bounds above belong to the
+exact-rank theorem, not automatically to software that keeps numerical
+residue or leaves formerly dense entries dense.
+
+\begin{proposition}[Implementation-safe initial-state envelope]
+Consider the signed-Gram implementation with these explicit rules:
+(i) a factor-factor collision returns at most the sum of the input widths;
+(ii) dense storage is chosen only if its numeric bytes do not exceed the
+candidate factor bytes; (iii) a collision involving a dense Gram remains
+dense; and (iv) updates only rename, merge, or prune coefficient keys.
+Then persistent Gram-array bytes, and also the total Gram/cross/count-array
+bytes, never increase during a valid deletion sequence. For FP64 factors,
+int8 signs, FP64 cross moments, and int64 counts, streamed rank-one
+construction with $E_0$ initially eligible records gives the envelope
+\[
+ S_{\rm numeric}(t)\le S_{\rm numeric}(0)
+       \le 2E_0(8d+1+8dc+8)\quad\text{bytes}.
+\]
+This bound excludes Python objects, key metadata, allocator slack,
+serialization duplication, and transient repair/decoder workspace.
+\end{proposition}
+\begin{proof}
+A factor of width $r$ occupies $8dr+r$ bytes. A factor-factor collision has
+width at most the sum of its input widths, so its factor bytes are at most
+their sum; choosing a smaller packed representation preserves this bound.
+If an input is dense, retaining one packed matrix costs no more than the
+existing dense input. Cross arrays and counts need one copy per resulting
+key, and key count cannot increase. Each original eligible record inserts
+at most two rank-one endpoint contributions, proving the initial bound.
+No argument here depends on exact spectral cancellation. In particular,
+the statement uses $E_0$, not the smaller current $E_h$.
+\end{proof}
+
+\paragraph{A distinct safe envelope for joint spans.}
+Joint-span numeric bytes need not be monotone: the small core has a
+quadratic term, so merging two bases can increase core bytes even when their
+total width does not increase. For a joint implementation, assign each
+initial endpoint one abstract ancestry token. Tokens are used only for the
+analysis; they need not identify or retain a payload. Merge token sets on
+collisions and discard them on pruning. Current entries have disjoint
+ancestry and use at most $2E_0$ tokens altogether. A factor entry of width
+$\rho$ uses at most its token count $a$, and $\rho\le d$. Its packed-core
+storage therefore satisfies
+\[
+ d\rho+\rho(\rho+1)/2+c\rho+1
+ \le (3d/2+c+1/2)a+1.
+\]
+If a dense entry is created only when its byte count does not exceed the
+candidate factor byte count, charge it to that same token bound. Keeping it
+dense on later collisions cannot exceed its earlier charge, and its token
+set only grows. Hence the persistent numeric envelope is
+$2E_0(3d/2+c+3/2)$ words with packed cores. If software stores the entire
+$\rho\times\rho$ core instead, use the larger valid envelope
+$2E_0(2d+c+1)$ words. This is a bound on all future numeric allocations in
+the persistent state, not on per-collision temporary allocation. An initial
+measured joint-state size is not by itself a safe future memory cap.
+
+The numeric envelope is not a full physical-memory or privacy theorem.
+Persistent factors can encode recoverable record information whenever the
+underlying coefficient does; hiding rows syntactically is not a privacy
+guarantee. No predecessor factors, old basis, or payload snapshots may be
+retained under the stated current-summary contract. Allocator remnants,
+backups, and previously released models remain outside that abstract-state
+contract. Whole-process peak RSS, counted owned arrays, serialized bytes,
+and common decoder workspace should be reported separately.
+
+\paragraph{Limits of a single shared span.}
+A global basis $U\in\mathbb R^{d\times r}$ shared by all keys gives storage
+$O(dr+K(r^2+rc))$. It is useful when $r\ll d$, as can happen when a tiny
+pilot has fewer examples than feature dimensions. When a realistic corpus
+spans all $d$ features, $r=d$ and this does not remove the $Kd^2$ term.
+Moreover a basis frozen from the original corpus can retain deleted-only
+directions. The per-key rank envelope above neither assumes global low rank
+nor preserves such an original basis.
+
+\paragraph{Claims supported by this addition.}
+The exact algorithm eliminates the unavoidable-looking quadratic feature
+factor from persistent ridge-summary storage, with $O(E_h(d+c))$ words for
+joint spans. The implemented signed-Gram variant has an auditable
+$O(E_0d(c+1))$ numeric envelope even without numerical rank truncation.
+Neither statement establishes universal superiority to an eligible-payload
+baseline, smaller whole-process peak memory, faster repairs, bitwise
+canonical floating-point state, or a privacy guarantee. Those distinctions
+are part of the algorithm specification, not qualifications to omit from
+the empirical comparison.
+
+\subsection{Canonical basis orientation and compact decoding}
+\paragraph{The implemented projector-pivot convention.}
+For an orthonormal $U\in\mathbb R^{d\times\rho}$, initialize
+$V=U^\top\in\mathbb R^{\rho\times d}$. Repeatedly select the first column
+attaining the largest residual squared norm, normalize that column to
+$o_j$, and subtract its orthogonal projection from every column of $V$.
+After $\rho$ steps let $O=[o_1\ \cdots\ o_\rho]$. The reoriented state is
+\[
+ U_{\rm can}=UO,\qquad A_{\rm can}=O^\top AO,\qquad
+ B_{\rm can}=O^\top B.
+\]
+This is pivoted Gram--Schmidt on projected coordinate vectors, performed
+in small basis coordinates. It need not form the ambient projector
+$UU^\top$. In exact arithmetic there is a positive pivot at every step
+before $\rho$, since $U^\top$ has row rank $\rho$.
+
+\begin{proposition}[Rotation invariance of the basis convention]
+Suppose two orthonormal bases represent the same subspace and coefficient:
+$\widehat U=UR$, $\widehat A=R^\top AR$, and
+$\widehat B=R^\top B$, with $R$ orthogonal. The projector-pivot convention
+produces identical $(U_{\rm can},A_{\rm can},B_{\rm can})$ in exact
+arithmetic. It depends on the current subspace and coefficient, not on
+the original construction basis.
+\end{proposition}
+\begin{proof}
+Initially $\widehat V=R^\top V$. Orthogonal transformations preserve all
+residual column norms, so both procedures select the same pivot, including
+the first-index tie rule. Its normalized vector satisfies
+$\widehat o_j=R^\top o_j$. Orthogonal projection subtraction preserves
+$\widehat V=R^\top V$ at the next step. Induction gives
+$\widehat O=R^\top O$. Consequently $\widehat U\widehat O=UO$, and
+substitution into the two small-core transformations proves equality.
+\end{proof}
+
+This proposition is conditional on the represented subspace. If numerical
+residue keeps extra basis directions, two repair histories can represent
+different approximate subspaces. Even on the same mathematical subspace,
+roundoff and near-tied pivots can produce different numerical choices.
+Thus the implemented orientation is a deterministic convention, not a
+proof of bytewise canonical floating-point state or exact numerical rank.
+It also does not justify retaining a larger original basis indefinitely.
+
+\paragraph{Basis orientation does not canonicalize representation mode.}
+The fast implementation can keep a coefficient dense after an earlier
+collision, even when a fresh construction would choose a compact factor.
+Likewise, an initial contributor upper bound can affect a construction-mode
+decision. These choices can depend on repair history even in exact
+arithmetic. Canonical basis orientation removes basis rotations within a
+chosen subspace; it does not remove this dense-versus-compact mode history.
+The fast implementation consequently claims decoded coefficient/head
+equivalence, not literal canonical-state equality. To instantiate the
+stronger encoded-state theorem, the mode, width, and basis must all be
+chosen from the actual current coefficient, for example by recompressing
+dense entries on collisions or performing a canonical export. Such a step
+can require $O(d^3)$ work per dense entry and its temporary memory must be
+charged. It is not a free consequence of the pivot-orientation routine.
+
+\begin{proposition}[Compact current-head decoder]
+For a nonempty selected set with exact count $n>0$, suppose its current
+moments are $G=UAU^\top\succeq0$ and $H=UB$, with $U^\top U=I_\rho$.
+For averaged ridge regularization $\lambda>0$, the unique fitted head is
+\[
+ W^*=(G+\lambda nI_d)^{-1}H
+     =U(A+\lambda nI_\rho)^{-1}B.
+\]
+Given the stored orthonormal joint representation, this requires
+$O(\rho^3+\rho^2c+d\rho c)$ arithmetic and
+$O(\rho^2+\rho c+dc)$ additional numeric workspace. There is no additional
+$O(d\rho^2)$ basis-construction charge at decode time. If the state uses a
+dense fallback, the corresponding solve has $O(d^2+dc)$ workspace and
+$O(d^3+d^2c)$ arithmetic.
+\end{proposition}
+\begin{proof}
+The right-hand side is in $\operatorname{range}(U)$. The orthogonal
+complement has zero right-hand side and positive regularization, so its
+solution component is zero. Write $W=UZ$ and multiply the normal equation
+by $U^\top$ to obtain $(A+\lambda nI_\rho)Z=B$. A Cholesky factorization,
+small solves, and multiplication by $U$ give the stated costs. The
+positive-semidefinite assumption applies to the current selected Gram,
+not to every signed polynomial coefficient.
+\end{proof}
+
+The cases $n=0$ and $\rho=0$ use the previously specified zero-head
+convention where applicable; expressions divided by $n$ below require
+$n>0$. In floating-point arithmetic, approximate orthogonality can make
+the compact equation differ slightly from the ambient normal equation.
+An ambient residual can still be evaluated without materializing $G$:
+$UA(U^\top\widetilde W)+\lambda n\widetilde W-UB$.
+
+\begin{proposition}[Head error from moment error and solve residual]
+Let $(G_*,H_*,n)$ be the true retained moments, where $G_*\succeq0$ and
+$n>0$ is exact. Let $(\widetilde G,\widetilde H,n)$ be represented
+approximate moments and let $\widetilde W$ be any computed head. Suppose
+\[
+ \|\widetilde G-G_*\|_{\rm op}\le\varepsilon_G,
+ \qquad \|\widetilde H-H_*\|_F\le\varepsilon_H,
+ \qquad
+ \|(\widetilde G+\lambda nI)\widetilde W-\widetilde H\|_F
+       \le\rho_{\rm res}.
+\]
+Then, with $W_*=(G_*+\lambda nI)^{-1}H_*$,
+\[
+ \|\widetilde W-W_*\|_F
+ \le\frac{\rho_{\rm res}+\varepsilon_H+
+                      \varepsilon_G\|\widetilde W\|_F}{\lambda n}.
+\]
+\end{proposition}
+\begin{proof}
+The true normal-equation residual equals the represented residual plus
+$(G_*-\widetilde G)\widetilde W+(\widetilde H-H_*)$.
+Apply the triangle inequality and
+$\|(G_*+\lambda nI)^{-1}\|_{\rm op}\le1/(\lambda n)$.
+No positive-semidefinite assumption on $\widetilde G$ is needed for this
+error bound, although an actual solver still must return a finite head.
+\end{proof}
+
+A small residual alone does not bound moment approximation error. The
+displayed inequality becomes a numerical certificate only if all three
+input bounds include rigorous floating-point error allowances. Measured
+differences against a fresh oracle and ordinary floating-point residuals
+are diagnostic validation, not such a certificate. The exact count
+assumption is essential; a count error also perturbs the regularization
+term and cannot be silently omitted.
+
+\end{document}

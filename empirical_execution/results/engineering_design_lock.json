@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-04",
+  "scope": "nonconfirmatory_software_engineering_only",
+  "data_records": {
+    "civil": 100,
+    "news": 90
+  },
+  "input_sha256": {
+    "civil_comments_engineering_preview.jsonl": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9",
+    "cc_news_engineering_preview.jsonl": "2706d91d423fc7d31d8235d4b5095b1c8789cc2aa319b31f05c5f1f549d8a8c4"
+  },
+  "features": "fixed_unfitted_word_bigram_hashing",
+  "dimensions": [
+    64,
+    128,
+    768
+  ],
+  "numeric_threshold": 0.6,
+  "structure_thresholds": [
+    0.35,
+    0.6,
+    0.85
+  ],
+  "lambda": 0.01,
+  "horizon": 8,
+  "checkpoints": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "R_trajectories": 16,
+  "U_trajectories": 16,
+  "A_candidates_max": 8,
+  "dimension_768_lexical_trajectories": 1,
+  "curation_dimension_fixed": 128,
+  "engineering_revision": "v1.1_fixed_graph_strict_requests",
+  "no_test_holdout_utility_claim": true,
+  "no_human_validation_claim": true,
+  "no_E5_claim": true,
+  "no_synthetic_documents_or_labels": true,
+  "summary_numeric_cap_bytes": 536870912
+}

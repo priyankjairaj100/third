@@ -1,0 +1,189 @@
+{
+  "scope": "100 unchanged real Civil preview records; lexical engineering only",
+  "target": "exact dyadic FP32 features/FP64 labels; frozen graph; exact coefficient aggregation",
+  "curator_dimension": 128,
+  "threshold": 0.6,
+  "horizon": 8,
+  "lambda_exact_binary_input": "0.01",
+  "certificate_tolerance_exact": "1/10000000000",
+  "checkpoints": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "cases": [
+    {
+      "dimension": 16,
+      "outputs": 1,
+      "requests": [
+        {
+          "family": "R",
+          "id": "R000",
+          "indices": [
+            7,
+            8,
+            26,
+            48,
+            76,
+            82,
+            23,
+            61
+          ]
+        },
+        {
+          "family": "U",
+          "id": "U000",
+          "indices": [
+            18,
+            16,
+            66,
+            74,
+            96,
+            21,
+            24,
+            63
+          ]
+        },
+        {
+          "family": "A",
+          "id": "A000",
+          "target_index": 65,
+          "indices": [
+            53,
+            88,
+            29,
+            59,
+            99,
+            0,
+            67,
+            80
+          ]
+        }
+      ]
+    },
+    {
+      "dimension": 64,
+      "outputs": 1,
+      "requests": [
+        {
+          "family": "R",
+          "id": "R000",
+          "indices": [
+            7,
+            8,
+            26,
+            48,
+            76,
+            82,
+            23,
+            61
+          ]
+        },
+        {
+          "family": "U",
+          "id": "U000",
+          "indices": [
+            18,
+            16,
+            66,
+            74,
+            96,
+            21,
+            24,
+            63
+          ]
+        },
+        {
+          "family": "A",
+          "id": "A000",
+          "target_index": 65,
+          "indices": [
+            53,
+            88,
+            29,
+            59,
+            99,
+            0,
+            67,
+            80
+          ]
+        }
+      ]
+    },
+    {
+      "dimension": 768,
+      "outputs": 1,
+      "requests": [
+        {
+          "family": "R",
+          "id": "R000",
+          "indices": [
+            7,
+            8,
+            26,
+            48,
+            76,
+            82,
+            23,
+            61
+          ]
+        },
+        {
+          "family": "U",
+          "id": "U000",
+          "indices": [
+            18,
+            16,
+            66,
+            74,
+            96,
+            21,
+            24,
+            63
+          ]
+        },
+        {
+          "family": "A",
+          "id": "A000",
+          "target_index": 65,
+          "indices": [
+            53,
+            88,
+            29,
+            59,
+            99,
+            0,
+            67,
+            80
+          ]
+        }
+      ]
+    },
+    {
+      "dimension": 768,
+      "outputs": 7,
+      "requests": [
+        {
+          "family": "R",
+          "id": "R000",
+          "indices": [
+            7,
+            8,
+            26,
+            48,
+            76,
+            82,
+            23,
+            61
+          ]
+        }
+      ]
+    }
+  ],
+  "data_sha256": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9",
+  "fresh_rebuild": "retained rows only; rescored retained graph; stable original unit IDs and remaining horizon",
+  "no_synthetic_dataset_or_labels": true,
+  "no_remote_compute": true,
+  "confirmatory": false
+}

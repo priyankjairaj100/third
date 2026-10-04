@@ -1,0 +1,187 @@
+{
+  "scope": "exact algebra software fixtures, no empirical dataset",
+  "cases": 20,
+  "checks": [
+    {
+      "case": 0,
+      "dimension": 3,
+      "rank": 1,
+      "native_python_equal": true,
+      "exact_moments_equal": true,
+      "idempotent": true,
+      "merge": true
+    },
+    {
+      "case": 1,
+      "dimension": 3,
+      "rank": 1,
+      "native_python_equal": true,
+      "exact_moments_equal": true,
+      "idempotent": true,
+      "merge": true
+    },
+    {
+      "case": 2,
+      "dimension": 3,
+      "rank": 2,
+      "native_python_equal": true,
+      "exact_moments_equal": true,
+      "idempotent": true,
+      "merge": true
+    },
+    {
+      "case": 3,
+      "dimension": 3,
+      "rank": 0,
+      "native_python_equal": true,
+      "exact_moments_equal": true,
+      "idempotent": true,
+      "merge": true
+    },
+    {
+      "case": 4,
+      "dimension": 2,
+      "rank": 1,
+      "native_python_equal": true,
+      "exact_moments_equal": true,
+      "idempotent": true,
+      "merge": true
+    },
+    {
+      "case": 5,
+      "dimension": 2,
+      "rank": 2,
+      "native_python_equal": true,
+      "exact_moments_equal": true,
+      "idempotent": true,
+      "merge": true
+    },
+    {
+      "case": 6,
+      "dimension": 2,
+      "rank": 2,
+      "native_python_equal": true,
+      "exact_moments_equal": true,
+      "idempotent": true,
+      "merge": true
+    },
+    {
+      "case": 7,
+      "dimension": 2,
+      "rank": 2,
+      "native_python_equal": true,
+      "exact_moments_equal": true,
+      "idempotent": true,
+      "merge": true
+    },
+    {
+      "case": 8,
+      "dimension": 3,
+      "rank": 1,
+      "native_python_equal": true,
+      "exact_moments_equal": true,
+      "idempotent": true,
+      "merge": true
+    },
+    {
+      "case": 9,
+      "dimension": 3,
+      "rank": 2,
+      "native_python_equal": true,
+      "exact_moments_equal": true,
+      "idempotent": true,
+      "merge": true
+    },
+    {
+      "case": 10,
+      "dimension": 3,
+      "rank": 3,
+      "native_python_equal": true,
+      "exact_moments_equal": true,
+      "idempotent": true,
+      "merge": true
+    },
+    {
+      "case": 11,
+      "dimension": 3,
+      "rank": 3,
+      "native_python_equal": true,
+      "exact_moments_equal": true,
+      "idempotent": true,
+      "merge": true
+    },
+    {
+      "case": 12,
+      "dimension": 5,
+      "rank": 1,
+      "native_python_equal": true,
+      "exact_moments_equal": true,
+      "idempotent": true,
+      "merge": true
+    },
+    {
+      "case": 13,
+      "dimension": 5,
+      "rank": 2,
+      "native_python_equal": true,
+      "exact_moments_equal": true,
+      "idempotent": true,
+      "merge": true
+    },
+    {
+      "case": 14,
+      "dimension": 5,
+      "rank": 3,
+      "native_python_equal": true,
+      "exact_moments_equal": true,
+      "idempotent": true,
+      "merge": true
+    },
+    {
+      "case": 15,
+      "dimension": 5,
+      "rank": 5,
+      "native_python_equal": true,
+      "exact_moments_equal": true,
+      "idempotent": true,
+      "merge": true
+    },
+    {
+      "case": 16,
+      "dimension": 8,
+      "rank": 1,
+      "native_python_equal": true,
+      "exact_moments_equal": true,
+      "idempotent": true,
+      "merge": true
+    },
+    {
+      "case": 17,
+      "dimension": 8,
+      "rank": 2,
+      "native_python_equal": true,
+      "exact_moments_equal": true,
+      "idempotent": true,
+      "merge": true
+    },
+    {
+      "case": 18,
+      "dimension": 8,
+      "rank": 3,
+      "native_python_equal": true,
+      "exact_moments_equal": true,
+      "idempotent": true,
+      "merge": true
+    },
+    {
+      "case": 19,
+      "dimension": 8,
+      "rank": 5,
+      "native_python_equal": true,
+      "exact_moments_equal": true,
+      "idempotent": true,
+      "merge": true
+    }
+  ],
+  "failures": 0
+}

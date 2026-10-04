@@ -1,0 +1,109 @@
+{
+  "schema_version": "ccu-local-intake-1",
+  "synthetic_data_allowed": false,
+  "study_design": {
+    "path": "output/empirical_program/study_design.json",
+    "sha256": "11bb7a38665769efd9b539370361ef2b1d39b91ee2a01b44a040ba8f2a5b6fb4"
+  },
+  "datasets": [
+    {
+      "dataset_id": "civil_comments",
+      "outputs": 1,
+      "origin": {
+        "repository_or_archive": "TFDS civil_comments/CivilComments",
+        "immutable_revision": "REPLACE_WITH_IMMUTABLE_RELEASE_ID",
+        "original_release": "1.2.4",
+        "sampling_rule": "REPLACE_WITH_PREDECLARED_COMPLETE_SOURCE_RULE",
+        "original_files": [
+          {
+            "path": "REPLACE_WITH_WORKSPACE_RELATIVE_PATH",
+            "sha256": "REPLACE_WITH_SHA256"
+          }
+        ],
+        "extraction_code": {
+          "path": "REPLACE_WITH_WORKSPACE_RELATIVE_PATH",
+          "sha256": "REPLACE_WITH_SHA256"
+        },
+        "extraction_log": {
+          "path": "REPLACE_WITH_WORKSPACE_RELATIVE_PATH",
+          "sha256": "REPLACE_WITH_SHA256"
+        }
+      },
+      "rows": {
+        "path": "REPLACE_WITH_WORKSPACE_RELATIVE_PATH",
+        "sha256": "REPLACE_WITH_SHA256"
+      },
+      "embeddings": {
+        "encoder_id": "intfloat/multilingual-e5-base",
+        "encoder_revision": "REPLACE_WITH_IMMUTABLE_COMMIT",
+        "tokenizer_revision": "REPLACE_WITH_IMMUTABLE_COMMIT",
+        "encoder_components": [
+          {
+            "filename": "model.safetensors",
+            "sha256": "REPLACE_WITH_SHA256"
+          }
+        ],
+        "tokenizer_components": [
+          {
+            "filename": "tokenizer.json",
+            "sha256": "REPLACE_WITH_SHA256"
+          }
+        ],
+        "array": {
+          "path": "REPLACE_WITH_WORKSPACE_RELATIVE_PATH",
+          "sha256": "REPLACE_WITH_SHA256"
+        },
+        "row_ids": {
+          "path": "REPLACE_WITH_WORKSPACE_RELATIVE_PATH",
+          "sha256": "REPLACE_WITH_SHA256"
+        },
+        "shape": [
+          0,
+          768
+        ],
+        "preprocessing": {
+          "chunk_content_tokens": 256,
+          "chunking": "nonoverlapping_all_chunks",
+          "pooling": "content_token_weighted_mean_then_normalize",
+          "prefix": "query: ",
+          "storage_dtype": "float32",
+          "learner_normalization": "no_renormalization_after_FP32_storage"
+        },
+        "embedding_code": {
+          "path": "REPLACE_WITH_WORKSPACE_RELATIVE_PATH",
+          "sha256": "REPLACE_WITH_SHA256"
+        },
+        "embedding_run_log": {
+          "path": "REPLACE_WITH_WORKSPACE_RELATIVE_PATH",
+          "sha256": "REPLACE_WITH_SHA256"
+        }
+      },
+      "calibration": {
+        "pairs": {
+          "path": "REPLACE_WITH_WORKSPACE_RELATIVE_PATH",
+          "sha256": "REPLACE_WITH_SHA256"
+        },
+        "responses": {
+          "path": "REPLACE_WITH_WORKSPACE_RELATIVE_PATH",
+          "sha256": "REPLACE_WITH_SHA256"
+        },
+        "instructions": {
+          "path": "REPLACE_WITH_WORKSPACE_RELATIVE_PATH",
+          "sha256": "REPLACE_WITH_SHA256"
+        },
+        "sampling_code": {
+          "path": "REPLACE_WITH_WORKSPACE_RELATIVE_PATH",
+          "sha256": "REPLACE_WITH_SHA256"
+        },
+        "sampling_log": {
+          "path": "REPLACE_WITH_WORKSPACE_RELATIVE_PATH",
+          "sha256": "REPLACE_WITH_SHA256"
+        },
+        "quality_report": {
+          "path": "REPLACE_WITH_WORKSPACE_RELATIVE_PATH",
+          "sha256": "REPLACE_WITH_SHA256"
+        }
+      }
+    }
+  ]
+}

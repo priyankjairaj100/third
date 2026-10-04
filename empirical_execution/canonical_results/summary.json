@@ -1,0 +1,220 @@
+{
+  "status": "passed",
+  "regular_release_checkpoints": 40,
+  "cases": [
+    {
+      "dimension": 16,
+      "outputs": 1,
+      "initial_build_seconds_unreplicated": 0.4200409120094264,
+      "initial_accounting": {
+        "method": "exact-pivot-chart-rational",
+        "coefficient_count": 99,
+        "rank_sum": 117,
+        "maximum_rank": 16,
+        "stored_rational_scalars": 1865,
+        "rational_integer_payload_bytes": 10190,
+        "canonical_serialized_bytes": 48099,
+        "maximum_numerator_bits": 74,
+        "maximum_denominator_bits": 72,
+        "python_live_bytes_estimate": 317452,
+        "retained_feature_rows": 0,
+        "retained_target_rows": 0,
+        "retained_original_graph": false,
+        "remaining_horizon": 8,
+        "guarantee": "Exact rational coefficient semantics and byte-canonical logical serialization; arbitrary precision cost explicit."
+      },
+      "checkpoints": 12,
+      "max_legacy_head_difference": 4.718447854656915e-16,
+      "max_certificate_upper_decimal": "0.0000000000000018514019005480026482607951",
+      "repair_seconds_total": 0.15476283503812738,
+      "fresh_seconds_total": 3.172902788995998,
+      "certificate_seconds_total": 0.062305760991876014
+    },
+    {
+      "dimension": 64,
+      "outputs": 1,
+      "initial_build_seconds_unreplicated": 3.7529871450096834,
+      "initial_accounting": {
+        "method": "exact-pivot-chart-rational",
+        "coefficient_count": 99,
+        "rank_sum": 165,
+        "maximum_rank": 64,
+        "stored_rational_scalars": 8705,
+        "rational_integer_payload_bytes": 46079,
+        "canonical_serialized_bytes": 189149,
+        "maximum_numerator_bits": 57,
+        "maximum_denominator_bits": 57,
+        "python_live_bytes_estimate": 1069280,
+        "retained_feature_rows": 0,
+        "retained_target_rows": 0,
+        "retained_original_graph": false,
+        "remaining_horizon": 8,
+        "guarantee": "Exact rational coefficient semantics and byte-canonical logical serialization; arbitrary precision cost explicit."
+      },
+      "checkpoints": 12,
+      "max_legacy_head_difference": 2.345346139520643e-15,
+      "max_certificate_upper_decimal": "0.0000000000000062182898440266596343695680",
+      "repair_seconds_total": 22.58935320697492,
+      "fresh_seconds_total": 32.262208225991344,
+      "certificate_seconds_total": 12.143940739973914
+    },
+    {
+      "dimension": 768,
+      "outputs": 1,
+      "initial_build_seconds_unreplicated": 1.869088778999867,
+      "initial_accounting": {
+        "method": "exact-pivot-chart-rational",
+        "coefficient_count": 99,
+        "rank_sum": 166,
+        "maximum_rank": 65,
+        "stored_rational_scalars": 125570,
+        "rational_integer_payload_bytes": 184525,
+        "canonical_serialized_bytes": 1514487,
+        "maximum_numerator_bits": 94,
+        "maximum_denominator_bits": 92,
+        "python_live_bytes_estimate": 11053348,
+        "retained_feature_rows": 0,
+        "retained_target_rows": 0,
+        "retained_original_graph": false,
+        "remaining_horizon": 8,
+        "guarantee": "Exact rational coefficient semantics and byte-canonical logical serialization; arbitrary precision cost explicit."
+      },
+      "checkpoints": 12,
+      "max_legacy_head_difference": 3.039235529911366e-15,
+      "max_certificate_upper_decimal": "0.0000000000000433557571097132186183302395",
+      "repair_seconds_total": 12.852600351005094,
+      "fresh_seconds_total": 17.13404444597836,
+      "certificate_seconds_total": 7.159499895002227
+    },
+    {
+      "dimension": 768,
+      "outputs": 7,
+      "initial_build_seconds_unreplicated": 1.7699920579907484,
+      "initial_accounting": {
+        "method": "exact-pivot-chart-rational",
+        "coefficient_count": 99,
+        "rank_sum": 166,
+        "maximum_rank": 65,
+        "stored_rational_scalars": 126566,
+        "rational_integer_payload_bytes": 187562,
+        "canonical_serialized_bytes": 1529323,
+        "maximum_numerator_bits": 94,
+        "maximum_denominator_bits": 92,
+        "python_live_bytes_estimate": 11119988,
+        "retained_feature_rows": 0,
+        "retained_target_rows": 0,
+        "retained_original_graph": false,
+        "remaining_horizon": 8,
+        "guarantee": "Exact rational coefficient semantics and byte-canonical logical serialization; arbitrary precision cost explicit."
+      },
+      "checkpoints": 4,
+      "max_legacy_head_difference": 1.8318679906315083e-15,
+      "max_certificate_upper_decimal": "0.0000000000000427385274418349170953213554",
+      "repair_seconds_total": 5.854002076986944,
+      "fresh_seconds_total": 5.530543003013008,
+      "certificate_seconds_total": 3.725015488031204
+    }
+  ],
+  "history_checks": [
+    {
+      "dimension": 16,
+      "outputs": 1,
+      "path": "R000",
+      "one_batch_singletons_reverse_fresh_reload_equal": true,
+      "sha256": "a3c1728642e7dd1d797df6e9eaa85a34fd2d3175bb736dfd5effbb04ee157bff",
+      "candidate_head_bytes_equal_same_runtime": true
+    },
+    {
+      "dimension": 16,
+      "outputs": 1,
+      "path": "U000",
+      "one_batch_singletons_reverse_fresh_reload_equal": true,
+      "sha256": "7160bb849145a9b8a772eab37e287ae91a458ec2ebcd078cc90c3bb7f29d076d",
+      "candidate_head_bytes_equal_same_runtime": true
+    },
+    {
+      "dimension": 16,
+      "outputs": 1,
+      "path": "A000",
+      "one_batch_singletons_reverse_fresh_reload_equal": true,
+      "sha256": "b28df09100a91b4646f9d8e7e766766ac65d85c641757e0ddfa72078850670ef",
+      "candidate_head_bytes_equal_same_runtime": true
+    },
+    {
+      "dimension": 64,
+      "outputs": 1,
+      "path": "R000",
+      "one_batch_singletons_reverse_fresh_reload_equal": true,
+      "sha256": "c0fb2a2bba5a7cf628e17ca123cd753165085e46276aa17d7e78cfe73936b25e",
+      "candidate_head_bytes_equal_same_runtime": true
+    },
+    {
+      "dimension": 64,
+      "outputs": 1,
+      "path": "U000",
+      "one_batch_singletons_reverse_fresh_reload_equal": true,
+      "sha256": "7f935fc50583ca7f60d143f6aadcf2ffd33952200f570f1151481b1ca711364d",
+      "candidate_head_bytes_equal_same_runtime": true
+    },
+    {
+      "dimension": 64,
+      "outputs": 1,
+      "path": "A000",
+      "one_batch_singletons_reverse_fresh_reload_equal": true,
+      "sha256": "fda33e3a9788377488037c1817e2f80356d81bd81b4275401ac92ee3ecab01e9",
+      "candidate_head_bytes_equal_same_runtime": true
+    },
+    {
+      "dimension": 768,
+      "outputs": 1,
+      "path": "R000",
+      "one_batch_singletons_reverse_fresh_reload_equal": true,
+      "sha256": "2812d082c313045bc76087bc8eadd3e02b44fc40ae3631af9588826458dfedd1",
+      "candidate_head_bytes_equal_same_runtime": true
+    },
+    {
+      "dimension": 768,
+      "outputs": 1,
+      "path": "U000",
+      "one_batch_singletons_reverse_fresh_reload_equal": true,
+      "sha256": "4302a3dd8e20504007543f5b829f2333991fe4271e139cff253eef997ca27153",
+      "candidate_head_bytes_equal_same_runtime": true
+    },
+    {
+      "dimension": 768,
+      "outputs": 1,
+      "path": "A000",
+      "one_batch_singletons_reverse_fresh_reload_equal": true,
+      "sha256": "5e51bfd5c5bb6cb610ea24dce72ae115f9f761651cb532a8c912c61888f0a9f9",
+      "candidate_head_bytes_equal_same_runtime": true
+    },
+    {
+      "dimension": 768,
+      "outputs": 7,
+      "path": "R000",
+      "one_batch_singletons_reverse_fresh_reload_equal": true,
+      "sha256": "fb390a0fc8ee730b6885b67d8b5cf0e4e183b7f5e6f919ebb7cc36a06c415e75",
+      "candidate_head_bytes_equal_same_runtime": true
+    }
+  ],
+  "boundary_checks": [
+    "duplicate",
+    "unknown",
+    "budget",
+    "retry",
+    "zero_tolerance_no_release"
+  ],
+  "full_deletion_releases": 100,
+  "all_fresh_state_comparisons_byte_exact": true,
+  "all_head_bounds_met_exact_tolerance": "1/10000000000",
+  "code_sha256": {
+    "run_canonical_validation.py": "230c7ef77e16238ea798bd6807ccec09ac4dca1273b3c00f7b935dd26f76dab2",
+    "ccu/exact_canonical.py": "ce29c38ee664e7d0173a3ea26d2221b1d40f2981163ee1a6a9af2cbed76fe05b",
+    "ccu/certified_ridge.py": "634a7a79236670476275765b47a6c549fd26fbe66fd66fac93deb301d96f2cf5",
+    "ccu/strict_service.py": "486a63b394b650b7ff9fa454ccab0c6a53442fa712dd7acbf620f54b7353cdf7",
+    "ccu/native/exact_chart.cpp": "00f5353aeb22fd84f41fb99fd45378f29538ef8285940d106854a5068f807da4"
+  },
+  "target": "new exact-aggregation mode on frozen FP32 features and FP64 labels; not byte identity to legacy floating retraining",
+  "no_synthetic_dataset_or_labels": true,
+  "confirmatory": false
+}

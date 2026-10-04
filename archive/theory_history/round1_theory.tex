@@ -1,0 +1,535 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,booktabs,longtable,array}
+\usepackage{xcolor,enumitem,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!55!black,citecolor=blue!45!black]{hyperref}
+\definecolor{ink}{HTML}{19374C}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small Counterfactual data curation}\fancyhead[R]{\small Research working note}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}
+\setlist{nosep,leftmargin=1.5em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\newcommand{\R}{\mathbb R}\newcommand{\E}{\mathbb E}\newcommand{\1}{\mathbf 1}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\minus}{\setminus}
+\title{\color{ink}\textbf{Unlearning What Was Never Trained}\\[5pt]\Large Exact Repair, Storage Limits, and Learning Guarantees\\for Counterfactual Semantic Data Curation}
+\author{Research development note for an ACL 2027 project}
+\date{3 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Deleting raw text can admit previously excluded documents into a retraining corpus. We develop a precise theory for this phenomenon under the earlier-neighbor suppression rule implemented by the released SemDeDup code, conditional on fixed embeddings, cluster assignments, and priority order. The main proposal is to study the information needed to answer counterfactual training queries, rather than only the number of examples removed. We derive exact activation conditions, a sparse polynomial representation of counterfactual sufficient statistics, a canonical sequential state update, and a rank characterization of optimal linear repair summaries. A construction shows a sharp storage transition: one additional allowed deletion can change a constant-size aggregate into a requirement to retain every hidden label, even for a scalar ridge learner. We also give normalized signed-update bounds for convex learning and explicitly delimit what survives when curation is refitted. These are working derivations with proofs and synthetic checks, not claims of established novelty or completed NLP experiments.
+\end{abstract}
+
+\textbf{Recommended paper thesis.} The difficulty of deletion after semantic curation is controlled by the family of counterfactual training sets, not by the forget-set size alone. For additive-statistic learners, this family admits an exact algebraic summary whose required dimension is determined by the overlap of suppression dependencies and by the deletion budget.
+
+\textbf{Status and scope.} This note develops the third direction in the supplied research agenda. It uses the pasted description, not the unavailable earlier PDF. Literature was checked through 3 October 2026; that is a search date, not a completeness guarantee. The proofs below establish conditional mathematical statements. Their originality remains subject to a fuller audit of provenance, dynamic data maintenance, and learning-unlearning space complexity. No corpus-scale NLP result or publication acceptance is asserted.
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{The target must include the curator}
+Let $D$ be a finite set of documents with stable unique identifiers. A record may contain text, a label, a source identifier, and other training fields. Let $C$ be a deterministic curator and $A$ a specified training algorithm. For a deletion request $F\subseteq D$, define
+\begin{equation}
+ S=C(D),\qquad S_F=C(D\minus F),\qquad \theta_F=A(S_F).
+\end{equation}
+The commonly used frozen-selection target $A(S\minus F)$ can differ from $\theta_F$. Decompose the change into
+\begin{equation}
+ R_F=S\minus S_F,\qquad P_F=S_F\minus S,\qquad
+ S_F=(S\minus R_F)\cup P_F.
+\end{equation}
+Here $P_F$ consists of surviving documents that become selected. It is not permission to reintroduce any member of $F$.
+
+There are three different correctness contracts:
+\begin{enumerate}
+\item \textbf{Corpus recovery:} output exactly $S_F$, including required record payloads.
+\item \textbf{Model recovery:} output $A(S_F)$, or its specified distribution if training is randomized.
+\item \textbf{State recovery:} leave a state identical in distribution to the state produced by the prescribed retained-data learner, with the same remaining deletion budget.
+\end{enumerate}
+These contracts need different amounts of information. A lower bound for recovering documents does not automatically lower-bound recovery of a model. A model-only certificate says nothing about deletion from an original-data-dependent cache.
+
+\paragraph{Request semantics.} The core results use deletion of records with fixed identities. Source-level deletion is developed in Section~\ref{sec:sources}. A request to suppress a fact, person, or work requires a separate procedure for defining $F$. Retained paraphrases may remain under record deletion. The recent forget-set curation problem~\cite{jha2026} is adjacent but different: it determines what records a suppression request should designate.
+
+\paragraph{Algorithm semantics.} A fixed random seed is not sufficient to make every randomized pipeline deletion-consistent. Shuffling a shorter input with the same seed can change relative order. Fix an order using stable identifier keys if restriction consistency is required. If the intended learner uses an input-dependent shuffle, its actual distribution is the target. The exact results below use deterministic curation and unique convex optima; they do not promise bitwise agreement with arbitrary SGD retraining.
+
+\section{Which semantic deduplicator? A consequential distinction}
+Let $G=(V,E)$ be a threshold similarity graph on documents and let $\prec$ be a total priority order. Its edges may be restricted to documents in the same cluster. The released SemDeDup implementation computes an upper-triangular similarity matrix, takes the maximum in each column, and rejects a document if an earlier document exceeds the threshold~\cite{semdedup,semcode}. An earlier document can suppress later documents even when it is itself rejected. This is not greedy maximal-independent-set selection.
+
+\begin{center}\small
+\begin{tabular}{p{0.23\linewidth}p{0.30\linewidth}p{0.36\linewidth}}
+\toprule
+Rule & Selection condition & Effect of deleting only excluded documents\\
+\midrule
+Earlier-neighbor suppression & No earlier raw neighbor exists & Can add selected documents; no surviving selected document is lost\\
+Greedy independent set & No earlier \emph{selected} neighbor exists & No change, for a fixed graph and order\\
+Component representative & Lowest-priority-key vertex in each connected component & Can add representatives after a component splits\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{The central assumption is restriction consistency.} Retained embeddings, within-cluster edge eligibility, thresholds, and relative priorities must remain the same when deleting records. This holds if these objects are externally fixed functions of a record and its identifier. It need not hold if clusters or priorities were fitted to $D$ and should be refitted to $D\minus F$. We analyze that boundary separately in Section~\ref{sec:refit}.
+
+\subsection{An exact three-document example}
+Let $a\prec b\prec c$, with edges $ab,bc$ but no edge $ac$. Earlier-neighbor suppression selects only $a$. Delete $b$, which never trained the model. The remaining graph selects both $a$ and $c$:
+\[
+ C(\{a,b,c\})=\{a\},\qquad C(\{a,c\})=\{a,c\}.
+\]
+This graph has an ordinary cosine realization: unit vectors at angles $0^\circ,30^\circ,60^\circ$ and threshold $0.8$ have exactly these edges. Thus the example does not require an impossible similarity graph. It uses a stipulated order; claiming that a particular fitted centroid order realizes it requires an additional check.
+
+Under greedy selection, $a$ and $c$ were both already selected. Under component-minimum selection, only $a$ was selected and deleting the bridge again introduces $c$. The same picture conceals different mechanisms, storage requirements, and repair algorithms.
+
+\section{Exact activation and deletion amplification}
+For each document $v$, define its blocker set
+\[
+ B(v)=\{u\prec v:(u,v)\in E\},\qquad b_v=|B(v)|.
+\]
+The curator selects $v$ exactly when $B(v)=\varnothing$.
+
+\begin{theorem}[Exact retained selection]\label{thm:activation}
+Under restriction consistency, for every $F\subseteq V$,
+\begin{equation}\label{eq:activation}
+ S_F=\{v\notin F:B(v)\subseteq F\}.
+\end{equation}
+Consequently
+\[
+ R_F=S\cap F,\qquad
+ P_F=\{v\notin F:0<|B(v)|,\ B(v)\subseteq F\}.
+\]
+\end{theorem}
+\begin{proof}
+The surviving blockers of $v\notin F$ are precisely $B(v)\minus F$. Its selection test succeeds iff this set is empty. An originally selected surviving vertex has no blockers before or after deletion, so it remains selected.
+\end{proof}
+
+For a singleton $F=\{u\}$, the additions are exactly $\{v:B(v)=\{u\}\}$. There is no recursive propagation of selection flags under this rule. A repaired document was already capable of blocking later documents before it became selected. Any claim of a multi-step selected-status cascade would be analyzing a different rule.
+
+\begin{corollary}[Deletion-budget activation set]\label{cor:eligible}
+For a cumulative budget $k$, a document can be selected after some request of size at most $k$ iff $b_v\le k$. Thus
+\[
+ E_k=\bigcup_{|F|\le k} S_F=\{v:b_v\le k\}.
+\]
+\end{corollary}
+\begin{proof}
+Necessity follows because every blocker must be deleted. For sufficiency choose $F=B(v)$; a vertex never blocks itself.
+\end{proof}
+
+This gives a simple exact buffer policy: store training payloads for $E_k$, full blocker lists for its members, and inverse blocker-to-candidate lists. With a cumulative deletion set, maintain the count of surviving blockers for eligible candidates. Each candidate enters at most once, then can only leave through its own deletion. Processing a request costs the number of touched inverse-list entries plus the output change, rather than a full graph scan. Over the entire budget the touched entries are at most $\sum_{v\in E_k}b_v\le k|E_k|$. Initial graph construction, embeddings, payload storage, and bookkeeping still cost time and space. A budget exhaustion fallback requires access to retained raw data or a larger precomputed summary.
+
+\begin{proposition}[One deletion can admit linearly many documents]
+There are $N$-vertex graphs for which $|P_F|=N-2$ with $|F|=1$ and $F\cap S=\varnothing$.
+\end{proposition}
+\begin{proof}
+Use an early anchor $a$, a later blocker $b$ adjacent to $a$, and $N-2$ later leaves adjacent only to $b$. Originally only $a$ is selected. Removing the excluded $b$ admits every leaf. A cosine realization exists: center $b=e_0$, with $a$ and leaves $(e_0+e_i)/\sqrt2$ for distinct $i$, and threshold strictly between $1/2$ and $1/\sqrt2$; order $a,b,\text{leaves}$.
+\end{proof}
+
+\subsection{Expected and adversarial amplification}
+If every raw record is independently deleted with probability $p$, then
+\begin{equation}
+ \E|P_F|=\sum_{v:b_v>0}(1-p)p^{b_v}.
+\end{equation}
+For a uniformly random size-$k$ request,
+\begin{equation}
+ \E|P_F|=\sum_{v:b_v>0}
+ \frac{\binom{N-b_v-1}{k-b_v}}{\binom Nk},
+\end{equation}
+where invalid binomial coefficients are zero. Both follow by requiring deletion of all blockers and retention of $v$. The blocker histogram therefore predicts the random-deletion mean exactly. It does not determine variance or worst-case amplification, which depend on blocker overlap.
+
+\begin{proposition}[Worst-case activation audit is hard]
+Maximizing $|P_F|$ under $|F|\le k$ is NP-hard even when every initially excluded candidate has two blockers, with deletion eligible only among earlier vertices.
+\end{proposition}
+\begin{proof}
+For a graph $H=(U,E_H)$, create early deletion-eligible vertices $U$ with no edges among themselves, and one later vertex $v_e$ for every $e=\{u,w\}\in E_H$, with $B(v_e)=\{u,w\}$. Deleting $F\subseteq U$ activates exactly the candidates for edges induced by $F$. Reaching $\binom k2$ additions decides whether $H$ has a $k$-clique. The general-graph reduction is not a fixed-low-dimensional embedding hardness theorem.
+\end{proof}
+
+\section{What must be remembered? Separate documents from learning}
+If only $S$ and the original model are stored, exact repair is generally impossible. In the three-document path, keep the same curation features and label of $a$, but change a training label attached to $c$. The original selected corpus and model are unchanged. Deleting $b$ creates different retained-data training problems. Any procedure with identical saved state and identical request has the same output law in the two worlds, so it cannot reproduce both distinct deterministic retraining targets.
+
+This argument is conditional on the discarded label not being encoded elsewhere. It does not say all payloads must always be stored. If downstream training needs only the sum of a group of labels, that sum may suffice.
+
+\begin{proposition}[Payload recovery lower bound]
+Suppose a fixed graph and order contain $m$ potentially activated records whose payloads range independently over $2^q$ possibilities without changing that graph or the originally selected payloads. If a no-reaccess summary must recover their exact payloads under all permitted deletion requests, its total payload-dependent state needs at least $mq$ bits.
+\end{proposition}
+\begin{proof}
+Every potentially activated record appears in at least one allowed output. If two payload assignments shared a state, choose a coordinate on which they differ and a request activating it. The outputs would have to differ. Hence the state map is injective on $2^{mq}$ assignments.
+\end{proof}
+This is an elementary indexing argument and not a general lower bound for all semantic-text distributions. Correlated payloads, permitted rereads, and learner-specific sufficient statistics can reduce storage. State means all retained information, including model parameters, auxiliary caches, and any external service used by the repair.
+
+\section{The main construction: a polynomial of counterfactual statistics}\label{sec:polynomial}
+Let $t(v)\in\R^s$ be a fixed, record-local statistic. It must not depend on an optimizer or feature extractor fitted to the deletable corpus if exact state recovery is intended. Define
+\[
+ T(F)=\sum_{v\in S_F}t(v),\qquad x_u=\1\{u\in F\},\qquad x_J=\prod_{u\in J}x_u.
+\]
+By Theorem~\ref{thm:activation},
+\begin{equation}\label{eq:poly}
+ T(x)=\sum_v t(v)(1-x_v)x_{B(v)}
+      =\sum_{J\subseteq V}\alpha_J x_J,
+\end{equation}
+where
+\begin{equation}\label{eq:coeff}
+ \alpha_J=\sum_{v:B(v)=J}t(v)
+          -\sum_{v:B(v)\cup\{v\}=J}t(v).
+\end{equation}
+Each document contributes to at most two keys. There are at most $2N$ contributions before grouping, even though the possible request family is exponential. This is a signed Boolean provenance representation, not a new invention of polynomial provenance; the database literature is an essential antecedent~\cite{green2007,amsterdamer2011}.
+
+\begin{theorem}[Exact finite-horizon statistics]\label{thm:poly}
+Let $\alpha^{(k)}$ retain only coefficients with $|J|\le k$. For every $|F|\le k$,
+\begin{equation}\label{eq:query}
+ T(F)=\sum_{J\subseteq F}\alpha^{(k)}_J.
+\end{equation}
+The summary can be built using at most $2|E_k|$ statistic-vector contributions. A direct subset query takes $O(2^{|F|}s)$ arithmetic plus key-processing cost, or one may scan the sparse keys. For singleton requests,
+\[
+ T(\{u\})=T(\varnothing)+
+ \underbrace{\sum_{v:B(v)=\{u\}}t(v)-\1\{B(u)=\varnothing\}t(u)}_{\alpha_{\{u\}}}.
+\]
+\end{theorem}
+\begin{proof}
+Evaluating a Boolean monomial on $F$ gives one iff its key is contained in $F$. Monomials of degree greater than $k$ vanish whenever $|F|\le k$. Equation~\eqref{eq:coeff} is the expansion of $(1-x_v)x_{B(v)}$.
+\end{proof}
+
+\paragraph{Exact ridge recovery.} For fixed text features $z_v\in\R^d$ and scalar responses $y_v$, take
+\[
+ t(v)=(z_vz_v^\top,z_vy_v,1),\qquad T(F)=(M_F,h_F,n_F).
+\]
+For the prescribed average-loss objective
+\[
+ L_{S_F}(\theta)=\frac1{2n_F}\sum_{v\in S_F}(z_v^\top\theta-y_v)^2+
+                 \frac\lambda2\norm{\theta}^2,
+\]
+the exact unique optimum is
+\begin{equation}\label{eq:ridge}
+ \theta_F=(M_F+\lambda n_F I)^{-1}h_F.
+\end{equation}
+Use $\theta_F=0$ as an explicit empty-corpus convention. Multiclass ridge uses a response matrix without changing the argument. A dense solve costs $O(d^3)$; the summary stores $O(d^2)$ numbers per key, so it is not automatically smaller than retaining embeddings. Setup cost and feature extraction must be counted.
+
+\section{Exact sequential repair of the summary itself}\label{sec:canonical}
+A useful distinction from an output-only query is that the coefficient map can itself be made the learner's canonical state. Suppose the current remaining horizon is $k$, and a request $F$ has $r=|F|\le k$. Substitute $x_u=1$ for $u\in F$, combine like terms, and retain only degree at most $k-r$:
+\begin{equation}\label{eq:state}
+ \beta_K=\sum_{J:J\minus F=K}\alpha_J^{(k)},
+ \qquad K\subseteq V\minus F,\quad |K|\le k-r.
+\end{equation}
+
+\begin{theorem}[Canonical state equality]\label{thm:state}
+Under restriction consistency and record-local statistics, $\beta$ is exactly the coefficient map obtained by rebuilding on $D\minus F$ with remaining horizon $k-r$. Consequently, a learner whose state consists of this canonical map and the remaining identifiers/horizon admits exact sequential state repair, and its ridge model equals retained-data ridge retraining after every request within the cumulative budget.
+\end{theorem}
+\begin{proof}
+For a retained vertex $v$, substitution changes its factor to
+$(1-x_v)x_{B(v)\minus F}$, the correct retained blocker expression. For a deleted vertex, the factor $(1-x_v)$ becomes zero. Thus substitution in the full polynomial equals rebuilding on the retained graph.
+
+Any omitted original monomial has degree at least $k+1$. Substitution removes at most $r$ variables, so its remaining degree is at least $k+1-r>k-r$; it cannot affect a kept coefficient. The same conclusion handles a deleted record whose negative term had been truncated: its uncancelled positive term has degree above the new cutoff and is discarded. Uniqueness of multilinear Boolean coefficients yields exact equality of canonical maps. Repeating the argument proves sequential equality.
+\end{proof}
+
+\textbf{The horizon is essential.} The comparison is to $A_{k-r}(D\minus F)$, not a fresh learner $A_k(D\minus F)$ with a replenished budget. Model weights do not depend on this auxiliary horizon, but the recoverable future query family does.
+
+\textbf{The state contract is explicit.} Do not retain original coefficients, original payload-dependent model checkpoints, request logs containing deleted contents, or training-dependent feature maps and then claim they are covered by the theorem. The result concerns the specified canonical algebraic state. It is not a claim about every file, historical output, or system backup. Public record-ID universes can be treated as fixed; a private-ID contract needs explicit removal as well.
+
+\textbf{Time and numerical limits.} A simple state update scans $M$ stored keys and costs $O(M(k+s))$, including combining vectors and removing high-degree keys. Inverse indices can reduce touched work but need their own maintenance analysis. The $2^r$ output query bound is not the cost of canonicalizing state. Exact arithmetic gives algebraic equality; ordinary floating-point cancellation may differ from the reduction order of fresh recomputation. Use exact/rational arithmetic for formal tests and controlled residual tolerances for numerical learners. A deterministic serialization also removes zero-valued keys and orders keys canonically.
+
+\section{How much summary space is necessary?}\label{sec:rank}
+Fix a graph, order, and budget $k$. Requests in this section supply identifiers only: unknown deleted statistics are not furnished as free side information. First consider arbitrary scalar statistics $t\in\R^N$. Index rows by all $F\subseteq V$ with $|F|\le k$. Define the selection-query matrix and coefficient matrix
+\begin{align}
+ Q_k[F,v]&=\1\{v\notin F,\ B(v)\subseteq F\},\\
+ A_k[J,v]&=\1\{B(v)=J\}-\1\{B(v)\cup\{v\}=J\},\quad |J|\le k.
+\end{align}
+Let $Z[F,J]=\1\{J\subseteq F\}$. Ordered by set size, $Z$ is square unitriangular. The polynomial identity gives
+\begin{equation}
+ Q_k=ZA_k,\qquad r_k:=\operatorname{rank}Q_k=\operatorname{rank}A_k.
+\end{equation}
+
+\begin{theorem}[Optimal linear summary dimension]\label{thm:rank}
+Any linear sketch of arbitrary scalar record statistics that answers all size-at-most-$k$ queries exactly requires at least $r_k$ scalar coordinates; $r_k$ coordinates suffice. For $s$ independent statistic coordinates the minimum is $sr_k$. Over a finite field $\mathbb F_q$, any exact deterministic encoding, including nonlinear encodings, requires at least $r_k\log_2q$ bits, with rank evaluated over that field.
+\end{theorem}
+\begin{proof}
+If a linear sketch $Lt$ supports every query, then $\ker L\subseteq\ker Q_k$: otherwise two inputs with identical sketches have different answers. Hence $\operatorname{rank}L\ge r_k$. Storing a row-space basis of $Q_k$ is sufficient, using a decoder that depends on the fixed graph. Independent coordinates give a block diagonal query operator. Over $\mathbb F_q$, the image of $Q_k$ contains $q^{r_k}$ distinct answer vectors, which the stored state must distinguish.
+\end{proof}
+
+This lower bound treats graph-dependent decoder metadata as fixed side information. It lower-bounds stored statistic values, not the total bits needed to represent an unknown graph, subset keys, or a rank factorization. Nor does arbitrary-statistic optimality automatically prove optimality for constrained ridge moments, which have positive-semidefinite structure. Section~\ref{sec:phase} gives a model-level lower bound that avoids this gap.
+
+\subsection{A combinatorial interpretation of the rank}
+Construct an undirected multigraph $\Gamma_k$ on subset keys and a ground vertex $\bot$. For every $v$ with $b_v\le k$, add an oriented edge from $B(v)$ to $B(v)\cup\{v\}$ if the latter has size at most $k$, otherwise to $\bot$. Ignore unused subset nodes. Then $A_k$ is its signed incidence matrix with the ground row removed.
+
+If $p$ is the number of incident non-ground nodes and $c_0$ the number of connected components not containing ground, standard incidence-matrix rank gives
+\begin{equation}
+ r_k=p-c_0.
+\end{equation}
+The formula holds over every field. Without truncation, an edge adds the largest-priority element of its target set. A target therefore has at most one incoming edge, and the untruncated graph is a forest; at full horizon its $N$ columns have rank $N$. Truncation merges omitted targets into ground and can create dependencies.
+
+There is a sharper expression specific to these blockers. Form the forest of interior edges, those for which $b_v<k$, retaining isolated tail nodes for boundary edges with $b_v=k$. Let $c_{\partial}$ be the number of its components touched by at least one boundary edge. Then
+\begin{equation}\label{eq:forest}
+ r_k=|\{v:b_v<k\}|+c_{\partial}.
+\end{equation}
+Every interior edge is independent because the interior graph is a forest. Its edge columns span precisely the vectors with coordinate sum zero on each component. A boundary column is a unit vector at its tail; one such column adds one dimension per touched component, and further ones in that component add none. This proves~\eqref{eq:forest}.
+
+Thus compression of arbitrary unknown statistic coordinates is confined to the activation frontier $b_v=k$. Once the budget exceeds a record's blocker count, its column joins the independent interior forest. If deletion requests supply forgotten statistics, these are additional query-dependent information and the rank lower bound as stated need not apply.
+
+\begin{center}\small
+\begin{tabular}{p{0.28\linewidth}p{0.21\linewidth}p{0.38\linewidth}}
+\toprule
+Blocker structure & Query rank & Meaning\\
+\midrule
+Ordered $N$-clique & $\min(N,k+1)$ & Only the first $k+1$ potential representatives matter\\
+One early hub, $m\ge2$ leaves; $k=1$ & $2$ & Hub statistic and sum of all leaves suffice\\
+Same star; $k=2$ & $m+1$ & Hub-plus-one-leaf requests reveal each leaf statistic\\
+No edges & $N$ for $k\ge1$ & Singleton deletions identify every selected statistic\\
+\bottomrule
+\end{tabular}
+\end{center}
+The star gives the central separation: a linear number of newly selected records can have a constant-dimensional effect-query summary, but increasing the allowed request size by one eliminates that compression.
+
+\section{A sharp storage transition for a scalar trained model}\label{sec:phase}
+Let $S_0=\{s_1,\ldots,s_b\}$ be early mutually nonadjacent blockers, and let $v_1,\ldots,v_m$ be later mutually nonadjacent records with $B(v_i)=S_0$. Give blockers response zero and all records scalar feature $z=1$. Hidden leaf responses $y_i$ independently take values in $\{0,\ldots,2^q-1\}$. Use average-loss ridge with fixed $\lambda>0$.
+
+\begin{theorem}[One extra deletion can destroy compression]\label{thm:phase}
+For this family with identifier-only requests, under budget $b$, the total hidden-label-dependent information needed to reproduce the scalar trained model for all permitted requests is at most $q+\lceil\log_2m\rceil+O(1)$ bits. Under budget $b+1$, every exact summary supporting all requests needs at least $mq$ hidden-label-dependent bits.
+\end{theorem}
+\begin{proof}
+At budget $b$, any request other than deleting all blockers leaves every surviving leaf suppressed. If all blockers are deleted, the budget is exhausted, every leaf survives, and the model depends on hidden responses only through $Y=\sum_i y_i$. This integer has at most $m(2^q-1)+1$ possible values.
+
+At budget $b+1$, query $S_0$ and each $S_0\cup\{v_i\}$. For a scalar constant feature and $n$ selected records, the optimum is $\theta=(\sum y)/(n(1+\lambda))$. Therefore the model answers recover $Y$ and every $Y-y_i$, and hence the full vector $(y_1,\ldots,y_m)$. There are $2^{mq}$ possibilities, so an exact summary must distinguish them. For $m=1$, the all-deleted output is handled by the empty-set convention and the first query already reveals the response; the pronounced separation concerns large $m$.
+\end{proof}
+
+An early zero-response anchor adjacent to every blocker but to no leaf makes all blockers initially excluded. The same proof holds with adjusted known denominators that include the anchor when it is retained. If the anchor itself is deleted within budget $b$, not all $b$ blockers can also be deleted, so no leaf activates; only known-zero records can be selected. Requests of size at most $b$ either keep a blocker or delete exactly the blockers; the aggregate still suffices. Thus the transition can be driven by deleting records that were never trained. If a forget request supplies $y_i$, however, the leave-one-out lower bound fails: that supplied label can simply be subtracted from the aggregate.
+
+\subsection{A stronger construction that allows forgotten payloads}
+For every hidden label $y_i$, create two later records $v_i,w_i$ carrying that label. Introduce a public-zero-label blocker $p_i$, and set
+\[
+ B(v_i)=S_0,\qquad B(w_i)=S_0\cup\{p_i\}.
+\]
+An earliest zero-label anchor $a$ blocks all members of $S_0$ and all $p_i$, and no hidden candidate. These specified pairs are all graph edges; order the anchor, then the blockers, then the candidates. In particular, every requested blocker was originally excluded.
+
+Under budget $b=|S_0|\ge1$, $w_i$ cannot enter. The $v_i$ enter together only when exactly $S_0$ is deleted, so $Y=\sum_i y_i$ still suffices. Under budget $b+1$, compare requests $S_0$ and $S_0\cup\{p_i\}$. All their forgotten payloads are fixed zeros, but their target models are
+\[
+ \theta_0=\frac{Y}{(m+1)(1+\lambda)},\qquad
+ \theta_i=\frac{Y+y_i}{(m+2)(1+\lambda)}.
+\]
+The answers recover each $y_i$. Therefore the same $mq$-bit lower bound holds even with full access to the requested forgotten payloads. The representation used for semantic curation is held fixed independently of these training labels; this is a worst-case multi-view construction, not a statement that text embeddings can vary independently of arbitrary text content.
+
+\begin{corollary}[A limited approximate-repair lower bound]
+For the strengthened construction, a deterministic summary giving uniformly accurate scalar model answers with absolute error
+\[
+ \eta<\frac{1}{2(2m+3)(1+\lambda)}
+\]
+for all allowed requests still needs at least $mq$ hidden-label-dependent bits.
+\end{corollary}
+\begin{proof}
+Compute $(m+2)(1+\lambda)\widehat\theta_i-(m+1)(1+\lambda)\widehat\theta_0$. Its error relative to the integer $y_i$ is less than $1/2$, so rounding recovers every label. The exact counting argument applies.
+\end{proof}
+The required accuracy shrinks as $1/m$. A constant-error lower bound or a randomized per-query guarantee needs further work; a random-access lower bound cannot be obtained merely by treating many individually high-probability answers as simultaneously correct.
+
+\textbf{What this establishes.} These are information statements for a specified record-deletion query family, even when the output model is one-dimensional. They do not assume a linear sketch and do not demand raw-record reconstruction. They count all hidden-label-dependent state and assume no rereading of discarded retained labels. The strengthened construction and its small-error extension do not establish that this worst case is typical of natural text.
+
+\section{Learning beyond additive sufficient statistics}\label{sec:convex}
+Let $S=C(D)$ have size $n>0$, $S'=C(D\minus F)$ size $n'>0$, and $R=S\minus S'$, $P=S'\minus S$. Consider
+\[
+ L_S(\theta)=\frac1n\sum_{v\in S}\ell_v(\theta)+\frac\lambda2\norm\theta^2,
+\]
+with convex twice-differentiable losses and $\lambda>0$. Let $\theta_0$ be the exact original optimum, $g_v=\nabla\ell_v(\theta_0)$, $H_v=\nabla^2\ell_v(\theta_0)$, and $H_0=\nabla^2L_S(\theta_0)$.
+
+\begin{proposition}[Correctly normalized signed derivatives]\label{prop:derivatives}
+The exact retained objective gradient and Hessian at the original optimizer are
+\begin{align}
+ g&=\nabla L_{S'}(\theta_0)
+ =\frac{\sum_{v\in P}g_v-\sum_{v\in R}g_v}{n'}
+   +\lambda\left(1-\frac n{n'}\right)\theta_0,\label{eq:gradient}\\
+ H&=\nabla^2L_{S'}(\theta_0)
+ =\frac n{n'}(H_0-\lambda I)
+ +\frac{\sum_{v\in P}H_v-\sum_{v\in R}H_v}{n'}+\lambda I.
+ \label{eq:hessian}
+\end{align}
+\end{proposition}
+\begin{proof}
+Use $\sum_{v\in S}g_v=-n\lambda\theta_0$ and
+$\sum_{v\in S}H_v=n(H_0-\lambda I)$, then subtract $R$ and add $P$ before dividing by the new size $n'$.
+\end{proof}
+Omitting the normalization correction in~\eqref{eq:gradient} changes the target. If $\theta_0$ has residual $r_0=\nabla L_S(\theta_0)$, add $(n/n')r_0$ to that equation.
+
+\begin{theorem}[One-step parameter certificate]\label{thm:newton}
+Suppose the target Hessian is $\rho$-Lipschitz on the segment from $\theta_0$ to $\theta_1=\theta_0+s$, with $s=-H^{-1}g$. Then
+\begin{equation}
+ \norm{\nabla L_{S'}(\theta_1)}\le\frac\rho2\norm{s}^2,
+ \qquad
+ \norm{\theta_1-\theta^*_{S'}}\le\frac\rho{2\lambda}\norm{s}^2.
+\end{equation}
+For an inexact solve with $\norm{Hs+g}\le\xi$, replace the numerators by $\xi+(\rho/2)\norm{s}^2$.
+\end{theorem}
+\begin{proof}
+The integral Taylor remainder for the gradient has norm at most
+$\int_0^1\rho t\norm{s}^2dt=\rho\norm{s}^2/2$. The linear term vanishes for the exact solve. Strong convexity implies
+$\lambda\norm{\theta_1-\theta^*}\le\norm{\nabla L_{S'}(\theta_1)}$.
+\end{proof}
+For logistic regression with $\norm{z_v}\le B$, the safe global bound $\rho\le B^3/4$ suffices. The regularizer adds no Hessian variation. These Newton tools belong to established certified-removal methodology~\cite{guo2020}; their role here is to handle the \emph{correct counterfactual signed training change}.
+
+Original-anchor gradients and Hessians can use the polynomial summary from Section~\ref{sec:polynomial}, giving exact $g,H$ for each budgeted counterfactual without reading newly selected records. They are record-local only \emph{conditional on the original anchor}. Because $\theta_0$ depends on deleted data, the resulting cache is not a canonical retained-data state. A public data-independent anchor avoids that issue but may yield a poor one-step approximation.
+
+\subsection{A distributional certificate needs a randomized target}
+Parameter proximity alone does not imply indistinguishability from deterministic retraining: two unequal deterministic vectors have disjoint point-mass laws. Define the learner from inception as
+$A_\sigma(S)=\theta^*_S+Z$, $Z\sim N(0,\sigma^2I)$ with fixed public $\sigma$. Let repair release $\theta_1+Z'$ with fresh noise of the same covariance, and let a proved bound on the center difference be $\eta$. For $a=\eta/\sigma$ and $\delta\in(0,1)$, the two output laws satisfy both directions of
+\begin{equation}
+ \Pr[U\in E]\le e^\epsilon\Pr[A_\sigma(S')\in E]+\delta,
+ \qquad \epsilon=\frac{a^2}{2}+a\sqrt{2\log(1/\delta)}.
+\end{equation}
+Indeed the Gaussian log-likelihood ratio has mean at most $a^2/2$ and standard deviation at most $a$ in either direction, so its tail above $\epsilon$ is at most $\delta$. This is a marginal model-output comparison for the specified noisy learner and a fixed request. It does not certify the original-anchor cache or automatically give a joint adaptive-transcript guarantee. Choosing a data-dependent noise scale or reusing old output noise requires a separate proof.
+
+\subsection{Large corpus churn need not mean large model change}
+Let $\mu_S=n^{-1}\sum_{v\in S}\delta_v$ and $\mu_{S'}$ be the normalized empirical training measures. If, at $\theta_0$,
+\[
+ \norm{\nabla\ell_z(\theta_0)-\nabla\ell_{z'}(\theta_0)}
+ \le L_g\,d(z,z'),
+\]
+then integrating any coupling gives
+\begin{equation}
+ \norm g\le L_g W_1(\mu_S,\mu_{S'}),\qquad
+ \norm{\theta^*_{S'}-\theta_0}\le\frac{L_g}{\lambda}W_1(\mu_S,\mu_{S'}).
+\end{equation}
+This handles unequal sample counts through normalized measures. It explains when replacements approximately cancel in gradient space. The metric must control training gradients, including labels. High cosine similarity between text embeddings alone does not do so: opposite-label identical-feature logistic examples have different gradients. Measure both semantic proximity and label/task disagreement instead of assuming one implies the other.
+
+\section{The full-refitting boundary}\label{sec:refit}
+SemDeDup fits clusters and orders examples using centroid information. If these quantities are learned from $D$, the full target is
+\[
+ A\!\left(C_{\psi(D\minus F)}(D\minus F)\right),
+\]
+not $A(C_{\psi(D)}(D\minus F))$. The exact blocker and polynomial theorems apply to the latter only when $\psi$ is externally fixed, or when a certificate establishes that the retained edge eligibility and ordering are unchanged.
+
+\paragraph{A conditional centroid certificate.} For a fixed cluster $K$ with mean $\mu$, removing $r$ of its $n$ records gives, \emph{if membership is unchanged},
+\[
+ \mu^- -\mu=-\frac1{n-r}\sum_{v\in F\cap K}(z_v-\mu),\qquad
+ \norm{\mu^- -\mu}\le\frac{rR_K}{n-r}
+\]
+when $\norm{z_v-\mu}\le R_K$. If all original nearest-centroid distance gaps on retained records exceed $2\max_j\norm{\mu_j^--\mu_j}$, those assignments remain unchanged. If priority scores change by at most $\zeta$, an original adjacent priority gap greater than $2\zeta$ preserves the order after restriction.
+
+For a deterministic, fixed-number-of-iterations Lloyd algorithm with \emph{data-independent initialization}, one can certify its entire retained assignment trajectory inductively: at each iteration, compute candidate retained means using original cluster sums and removed memberships, then apply the recorded distance-gap condition. Empty clusters must be excluded or handled by the exact prescribed rule. For cosine-to-centroid ordering of unit records, the score perturbation is at most $2\norm{\mu^- -\mu}/\norm\mu$ when the normalized centroid is well-defined. These are sufficient conditions, not general guarantees for k-means++ or refitted encoders.
+
+\textbf{Two traps.} Checking only that final original assignments form a retained fixed point does not prove that fresh Lloyd iterations reach that fixed point. Also, same seed with input-dependent initialization can select different initial centers. A certificate must cover the actual trajectory and initialization used by the reference algorithm. Caching margins/history and checking them has a cost; it cannot be hidden from efficiency results. Q-kmeans already uses deletion-sensitive centroid checks and fallback retraining~\cite{ginart2019}, so a generic stability-plus-fallback idea is not a new contribution.
+
+\paragraph{Recommended contract for the first paper.} Use a public frozen encoder, externally fitted/fixed partitioning, fixed threshold, and stable per-record order for the exact theorem and certified learner. Run a separate full-refit SemDeDup oracle to measure how often that conditional contract agrees with the original pipeline. If refitting often changes it, report the gap and pursue an explicit refit algorithm. Do not label the frozen-state oracle as complete SemDeDup retraining.
+
+\section{Other curators: useful boundaries, not the main paper}
+For greedy independent-set selection, deleting only vertices outside the original selected set leaves the set unchanged. Proof: induct over priority; removed vertices were never selected and so never suppressed later decisions. Deleting an early selected vertex on an ordered path can flip every later alternating decision. Dynamic greedy-MIS maintenance is an established algorithmic subject, including recent batch work~\cite{assadi2019,dhulipala2026}.
+
+For one minimum-priority representative per connected component, define $\kappa(v)$ as the minimum number of vertices other than $v$ whose deletion disconnects $v$ from every earlier-priority vertex; earlier endpoints may themselves be deleted. Then $v$ is selectable after at most $k$ deletions iff $\kappa(v)\le k$. Necessity and sufficiency are exactly the absence of any earlier vertex in $v$'s surviving component. In a clique only the first $k+1$ vertices can become representatives; an articulation structure can make linearly many eligible under a single deletion. This vertex-separator characterization is useful, but standard dynamic connectivity and separator theory are substantial prior art. Keep it as a comparison unless natural-text evidence makes this curator central.
+
+\section{Source withdrawal and correlated deletions}\label{sec:sources}
+Let $s(v)$ be the source of a document and let $H$ be the set of withdrawn sources. Define the distinct blocker-source set $U(v)=\{s(u):u\in B(v)\}$. Then
+\begin{equation}
+ v\in S_H\ \Longleftrightarrow\ s(v)\notin H\ \text{and}\ U(v)\subseteq H.
+\end{equation}
+If $s(v)\in U(v)$, that document can never become selected under pure whole-source deletion while it survives. Otherwise its minimum source-deletion budget is $|U(v)|$, which may be much smaller than $|B(v)|$. The statistic polynomial becomes
+\[
+ \sum_v t(v)(1-x_{s(v)})\prod_{a\in U(v)}x_a.
+\]
+Apply Boolean idempotence $x_a^2=x_a$; same-source blocker factors cancel identically. The truncation and substitution results then hold with source-budget degree. The earlier incidence-forest interpretation need not survive source identification, though the general query-rank characterization still does.
+
+If sources are independently withdrawn with probability $p$, a document with no same-source blocker and $u$ distinct blocker sources activates with probability $(1-p)p^u$ (for initially excluded documents). Independent document-deletion estimates can therefore substantially misrepresent publisher-level withdrawal. This extension supplies an NLP-specific motivation, especially for syndicated news and multi-source web corpora; the magnitude is an empirical question.
+
+\section{Literature positioning and what can be claimed}
+\begin{longtable}{p{0.27\linewidth}p{0.32\linewidth}p{0.32\linewidth}}
+\toprule
+Closest work & Already established & Required distinction\\\midrule\endhead
+Cao and Yang (2015)~\cite{cao2015} & Pipeline stages, dependencies, summation-form unlearning & Do not claim first pipeline-aware or sufficient-statistic unlearning\\[4pt]
+ARCANE (2022)~\cite{arcane} & Representative selection before unlearning; its stated protocol skips retraining for unselected deletions & Evaluate the full curator-rerun target; do not call its different contract universally incorrect\\[4pt]
+Deletion-robust summaries~\cite{mirzasoleiman2017,kazemi2018} & Backup summaries that remain useful after deletions & Exact reconstruction of a prescribed counterfactual learner, not only summary quality\\[4pt]
+Provenance~\cite{green2007,amsterdamer2011} & Algebraic dependency and aggregation representations & Budgeted canonical unlearning state, learner-level lower bounds, and empirical curation consequences\\[4pt]
+Ginart et al. (2019)~\cite{ginart2019} & Efficient deletion and Q-kmeans stability/fallback & Any new refit certificate must improve or specialize this meaningfully\\[4pt]
+Learning-unlearning space complexity~\cite{cherapanamjeri2025} & Strong general storage lower bounds & Instance-specific blocker/query rank and sharp budget transition for a fixed curation learner\\[4pt]
+Certified removal~\cite{guo2020} & Convex residual-based removal guarantees & Correctly incorporate deletion-induced additions and curation error\\[4pt]
+SemDeDup / D4 / text deduplication~\cite{semdedup,d4,lee2022} & Semantic curation and its NLP benefits & Counterfactual deletion effect and exact/approximate repair, with algorithm-faithful oracles\\
+\bottomrule
+\end{longtable}
+
+\textbf{Proposed contribution statement, pending novelty review.} We characterize exact counterfactual learning after a practical suppression-style semantic curator, derive budget-dependent repair summaries with canonical sequential updates, prove a sharp information-storage transition even for a scalar learner, and show empirically when ignored curation changes alter NLP predictions.
+
+Do not advertise the blocker test, the Boolean expansion, Newton's theorem, incidence rank, or deletion-induced additions alone as a major original theorem. The prospective contribution is their precise combination into a learning contract, the tight budget-dependent model-storage separation, and validated NLP consequences. Standard database incremental maintenance is the strongest conceptual objection to an algorithm that merely updates blocker counts.
+
+\section{Experiments that actually test this theory}
+\textbf{First audit: no large-model training.} Start with a manageable text corpus containing natural near-duplicates and source identifiers. A public news corpus with syndication or a documented web-text subset is preferable to synthetic paraphrases alone. Use classification corpora for controlled label-dependent tests, and keep natural-text and constructed stress tests separate. The examples below are designs, not completed measurements.
+
+For each frozen-curation configuration, measure the distribution of $b_v$, sizes of blocker-signature groups, $|E_k|$, sparse coefficient-key counts, query rank where tractable, and source-collapsed blocker counts. Report random-record, random-source, exclusively unselected, and targeted high-amplification requests. A targeting heuristic is not an optimal adversarial audit; the hardness result explains why.
+
+\textbf{Oracles and baselines.}
+\begin{enumerate}
+\item Full raw-data rerun with refitted curator and retrained model.
+\item Fixed-curator rerun with retrained model: the exact theorem's oracle.
+\item Frozen-selection retraining $A(C(D)\minus F)$: isolates the target mismatch.
+\item Exact blocker repair with raw eligible payloads and retraining.
+\item Polynomial-statistic ridge repair and canonical state update.
+\item Signed convex Newton repair, with a residual certificate and fallback.
+\end{enumerate}
+Match data, thresholds, seeds/order contracts, regularization normalization, and training tolerances. Compare each method against the oracle it claims to reproduce.
+
+\textbf{Outcomes.} Measure corpus precision/recall against the oracle, additions, actual selected removals, gradient change, parameter discrepancy, prediction disagreement, held-out loss, and task metrics such as macro-F1. Stratify additions by label disagreement, source, language/domain, and similarity to their former blockers. The transport analysis predicts that semantic churn without task-gradient change may have little learning impact. Class/group shifts are possible, not asserted in advance.
+
+\textbf{Costs.} Report initial curation and summary construction, metadata bytes, payload or embedding bytes, statistic-vector bytes, request query time, canonical state-update time, matrix-solve time, and amortized total time over a declared request sequence. State the memory budget and whether retained raw data can be reread. A fast model query with an expensive state rewrite is not a fast complete deletion procedure.
+
+\textbf{Three decisive plots.} (i) Allowed cumulative budget versus summary bytes and query rank; (ii) newly admitted documents versus actual gradient/model change; (iii) savings versus full-refit disagreement and fallback rate. The star construction predicts a budget transition; the real-data question is whether blocker-signature structure produces a useful regime before storage approaches per-record retention.
+
+\paragraph{Publication gates.}
+\begin{itemize}
+\item Continue if naturally occurring excluded-record/source withdrawals introduce retained information that measurably changes the retraining target and if the theory predicts this effect.
+\item Strengthen the paper if a budgeted summary achieves a real space--repair advantage after accounting for its construction and state maintenance.
+\item Narrow the claim if full refitting frequently invalidates the fixed-graph contract. An honest frozen-curator paper may still work, but it needs a clear deployment motivation.
+\item Stop or redirect if effects are confined to artificial graphs, if almost all additions are task-equivalent copies, or if the algorithm reduces to standard anti-join maintenance plus an uncompetitive cache.
+\end{itemize}
+
+\section{What is proved, what remains open, and the next work}
+The working proofs establish exact activation, finite-horizon polynomial statistics, canonical state substitution with a decremented horizon, optimal linear query dimension, and a scalar-model information lower bound under the stated assumptions. The convex certificate uses standard smooth strongly convex analysis. The companion script checks finite instances; it does not prove universal statements or test natural-language utility.
+
+The most valuable next theoretical tasks are:
+\begin{enumerate}
+\item \textbf{Approximate storage lower bounds.} Turn the sharp exact transition into a rate-distortion result under prediction loss. The labels must induce separated outputs; finite precision and noise can destroy exact decoding.
+\item \textbf{Useful compression for nonquadratic learners.} Bound summary size using blocker-signature structure and task-gradient approximation. Any original-data-dependent anchor must be included in the state threat model.
+\item \textbf{Refit guarantees that are genuinely cheaper.} Quantify when recorded margin certificates survive source deletions, and whether the saved work exceeds metadata cost. Compare directly with deletion-efficient clustering.
+\item \textbf{Source-level theory.} Characterize query rank after grouping records by source and establish lower bounds with realistic constraints on cross-source redundancy.
+\end{enumerate}
+
+For a first ACL submission, the coherent core is Sections 3, 5--8, and 14: an algorithm-faithful phenomenon, a budgeted exact-repair mechanism, a sharp storage limitation, and text experiments. A second full paper on dynamic graph curation, a third on general convex certification, and a large-LLM demonstration are not prerequisites. The strongest title remains \emph{Unlearning What Was Never Trained}, with a subtitle emphasizing counterfactual semantic curation and deletion-budget-dependent memory.
+
+\appendix
+\section{Algorithm specification}
+\textbf{Build$(D,k)$:}
+\begin{enumerate}
+\item Construct or receive the fixed embedding/partition/priority contract and compute each blocker set $B(v)$.
+\item Initialize a sparse map of statistic vectors $\alpha$.
+\item For each $v$ with $|B(v)|\le k$, add $t(v)$ to key $B(v)$.
+\item If $|B(v)|+1\le k$, subtract $t(v)$ from key $B(v)\cup\{v\}$.
+\item Canonicalize the map (combine identical keys and remove zeros). Retain only the declared state. For ridge, compute the model from $\alpha_\varnothing$.
+\end{enumerate}
+\textbf{Query$(\alpha,F)$:} Sum coefficients indexed by subsets of $F$ and decode the sufficient statistics into the prescribed model. This operation alone does not erase the old state.
+
+\textbf{Delete$(\alpha,k,F)$:}
+\begin{enumerate}
+\item Check that the request contains only current records and $r=|F|\le k$.
+\item For every current key $J$, compute $K=J\minus F$. If $|K|\le k-r$, add $\alpha_J$ to a new map at $K$.
+\item Canonicalize the new map, replace the old map, remove deleted identifiers from private membership metadata, and set remaining horizon to $k-r$.
+\item Decode the new constant coefficient into the model. Apply the empty-set convention if needed.
+\end{enumerate}
+Repeated identifiers do not consume the budget twice: the input precondition is a set of currently present records. Source-level requests use source variables after the idempotent simplification in Section~\ref{sec:sources}.
+
+\section{Reproducibility and verification limits}
+The accompanying Python script uses integer statistics for exact polynomial and sequential-state checks, and numerical ridge solves for model comparison. It enumerates small ordered graphs and deletion subsets and checks the query-rank examples. Exact enumerations are finite bug-finding checks, not proof substitutes. No neural model was trained and no NLP dataset was downloaded for this note.
+
+With seed 20261003, verification passed for all 1,100 ordered graphs on zero through five vertices and 6,505 graph/horizon pairs. It checked 117,940 query-indicator vectors, 117,940 canonical sequential updates, 39,030 modular rank equalities over three finite fields, 1,100 full-horizon rank identities, and 368 star/clique rank examples through 24 vertices. On 300 random graphs, 7,200 ridge queries and 965 sequential ridge-state updates passed. The largest absolute ridge-parameter discrepancy was $6.56\times10^{-15}$. These counts concern the core algebra; the storage lower-bound proof and full-refit certificate are not corpus experiments.
+
+\begin{thebibliography}{99}\small
+\bibitem{semdedup} Abbas, A., Tirumala, K., Simig, D., Ganguli, S., and Morcos, A. S. (2023). \emph{SemDeDup: Data-efficient learning at web-scale through semantic deduplication}. \href{https://arxiv.org/abs/2303.09540}{arXiv:2303.09540}.
+\bibitem{semcode} Meta/Facebook Research. \emph{SemDeDup official implementation, semdedup.py}. Inspected 3 October 2026. \url{https://github.com/facebookresearch/SemDeDup/blob/main/semdedup.py}. The analyzed rule is the upper-triangle column maximum followed by a threshold test.
+\bibitem{d4} Tirumala, K., Simig, D., Aghajanyan, A., and Morcos, A. S. (2023). \emph{D4: Improving LLM Pretraining via Document De-Duplication and Diversification}. \href{https://arxiv.org/abs/2308.12284}{arXiv:2308.12284}.
+\bibitem{lee2022} Lee, K., Ippolito, D., Nystrom, A., Zhang, C., Eck, D., Callison-Burch, C., and Carlini, N. (2022). \emph{Deduplicating Training Data Makes Language Models Better}. ACL. \url{https://aclanthology.org/2022.acl-long.577/}.
+\bibitem{cao2015} Cao, Y., and Yang, J. (2015). \emph{Towards Making Systems Forget with Machine Unlearning}. IEEE Symposium on Security and Privacy. \url{https://www.ieee-security.org/TC/SP2015/papers-archived/6949a463.pdf}.
+\bibitem{arcane} Yan, H., Li, X., Guo, Z., Li, H., Li, F., and Lin, X. (2022). \emph{ARCANE: An Efficient Architecture for Exact Machine Unlearning}. IJCAI. \url{https://www.ijcai.org/proceedings/2022/0556.pdf}. See Section 3.2 for the unselected-record protocol.
+\bibitem{mirzasoleiman2017} Mirzasoleiman, B., Karbasi, A., and Krause, A. (2017). \emph{Deletion-Robust Submodular Maximization: Data Summarization with ``the Right to be Forgotten''}. ICML. \url{https://proceedings.mlr.press/v70/mirzasoleiman17a.html}.
+\bibitem{kazemi2018} Kazemi, E., Zadimoghaddam, M., and Karbasi, A. (2018). \emph{Scalable Deletion-Robust Submodular Maximization: Data Summarization with Privacy and Fairness Constraints}. ICML. \url{https://proceedings.mlr.press/v80/kazemi18a.html}.
+\bibitem{green2007} Green, T. J., Karvounarakis, G., and Tannen, V. (2007). \emph{Provenance Semirings}. PODS. \url{https://www.cs.ucdavis.edu/~green/papers/pods07.pdf}.
+\bibitem{amsterdamer2011} Amsterdamer, Y., Deutch, D., and Tannen, V. (2011). \emph{Provenance for Aggregate Queries}. PODS. \href{https://arxiv.org/abs/1101.1110}{arXiv:1101.1110}.
+\bibitem{ginart2019} Ginart, A., Guan, M., Valiant, G., and Zou, J. (2019). \emph{Making AI Forget You: Data Deletion in Machine Learning}. NeurIPS. \url{https://papers.neurips.cc/paper/2019/file/cb79f8fa58b91d3af6c9c991f63962d3-Paper.pdf}.
+\bibitem{guo2020} Guo, C., Goldstein, T., Hannun, A., and van der Maaten, L. (2020). \emph{Certified Data Removal from Machine Learning Models}. ICML. \url{https://proceedings.mlr.press/v119/guo20c.html}.
+\bibitem{cherapanamjeri2025} Cherapanamjeri, Y., et al. (2025). \emph{The Space Complexity of Learning-Unlearning Algorithms}. COLT. \url{https://proceedings.mlr.press/v291/cherapanamjeri25b.html}.
+\bibitem{assadi2019} Behnezhad, S., Derakhshan, M., Hajiaghayi, M., Stein, C., and Sudan, M. (2019). \emph{Fully Dynamic Maximal Independent Set with Polylogarithmic Update Time}. FOCS. \href{https://arxiv.org/abs/1909.03478}{arXiv:1909.03478}.
+\bibitem{dhulipala2026} Blelloch, G., Brady, A., Dhulipala, L., Fineman, J., and Lo, J. (2026). \emph{Parallel Batch-Dynamic Maximal Independent Set}. \href{https://arxiv.org/abs/2604.07515}{arXiv:2604.07515}.
+\bibitem{jha2026} Jha, A., Khatua, A., Allouah, Y., and Koyejo, S. (2026). \emph{What to Forget in Unlearning? Forget Set Curation for Language Models}. \href{https://arxiv.org/abs/2608.14855}{arXiv:2608.14855}.
+\end{thebibliography}
+\end{document}

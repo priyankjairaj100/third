@@ -1,0 +1,162 @@
+{
+  "status": "passed",
+  "arithmetic": "exact Python integers",
+  "key_representation": "sorted sparse identifier tuples",
+  "exhaustive": {
+    "graphs": 76,
+    "ordered_sequences": 4301,
+    "canonical_rebuild_checks": 12821,
+    "retry_idempotence_checks": 12821,
+    "batch_vs_sequence_checks": 4301
+  },
+  "adversarial": [
+    {
+      "name": "edgeless_sparse_touches_then_terminal_pruning",
+      "vertices": 2048,
+      "initial_horizon": 128,
+      "final_horizon": 0,
+      "remaining_keys": 1,
+      "canonical_rebuild_checks": 128,
+      "work": {
+        "initial_keys": 2049,
+        "initial_incidences": 2048,
+        "initial_quadratic_potential": 2048,
+        "input_identifiers": 256,
+        "fresh_deletions": 128,
+        "key_shrink_events": 128,
+        "tuple_cells_copied": 128,
+        "coefficient_collisions": 128,
+        "scalar_additions": 384,
+        "cancellations": 0,
+        "horizon_pruned_keys": 1920,
+        "inverse_incidence_removals": 2048,
+        "full_scan_keys_for_same_atomic_sequence": 254144
+      }
+    },
+    {
+      "name": "clique_nested_keys_worst_shrink_work",
+      "vertices": 256,
+      "initial_horizon": 128,
+      "final_horizon": 0,
+      "remaining_keys": 1,
+      "canonical_rebuild_checks": 128,
+      "work": {
+        "initial_keys": 129,
+        "initial_incidences": 8256,
+        "initial_quadratic_potential": 357760,
+        "input_identifiers": 128,
+        "fresh_deletions": 128,
+        "key_shrink_events": 8256,
+        "tuple_cells_copied": 357760,
+        "coefficient_collisions": 128,
+        "scalar_additions": 384,
+        "cancellations": 0,
+        "horizon_pruned_keys": 0,
+        "inverse_incidence_removals": 8256,
+        "full_scan_keys_for_same_atomic_sequence": 8384
+      }
+    },
+    {
+      "name": "star_horizon_one",
+      "vertices": 1024,
+      "initial_horizon": 1,
+      "final_horizon": 0,
+      "remaining_keys": 1,
+      "canonical_rebuild_checks": 2,
+      "work": {
+        "initial_keys": 2,
+        "initial_incidences": 1,
+        "initial_quadratic_potential": 1,
+        "input_identifiers": 3,
+        "fresh_deletions": 1,
+        "key_shrink_events": 1,
+        "tuple_cells_copied": 1,
+        "coefficient_collisions": 1,
+        "scalar_additions": 3,
+        "cancellations": 0,
+        "horizon_pruned_keys": 0,
+        "inverse_incidence_removals": 1,
+        "full_scan_keys_for_same_atomic_sequence": 2
+      }
+    },
+    {
+      "name": "star_horizon_two",
+      "vertices": 1024,
+      "initial_horizon": 2,
+      "final_horizon": 0,
+      "remaining_keys": 1,
+      "canonical_rebuild_checks": 3,
+      "work": {
+        "initial_keys": 1025,
+        "initial_incidences": 2047,
+        "initial_quadratic_potential": 3070,
+        "input_identifiers": 6,
+        "fresh_deletions": 2,
+        "key_shrink_events": 1025,
+        "tuple_cells_copied": 2048,
+        "coefficient_collisions": 2,
+        "scalar_additions": 6,
+        "cancellations": 0,
+        "horizon_pruned_keys": 1022,
+        "inverse_incidence_removals": 2047,
+        "full_scan_keys_for_same_atomic_sequence": 2049
+      }
+    },
+    {
+      "name": "alternating_exact_cancellations",
+      "vertices": 128,
+      "initial_horizon": 64,
+      "final_horizon": 0,
+      "remaining_keys": 0,
+      "canonical_rebuild_checks": 64,
+      "work": {
+        "initial_keys": 128,
+        "initial_incidences": 128,
+        "initial_quadratic_potential": 128,
+        "input_identifiers": 64,
+        "fresh_deletions": 64,
+        "key_shrink_events": 64,
+        "tuple_cells_copied": 64,
+        "coefficient_collisions": 32,
+        "scalar_additions": 96,
+        "cancellations": 32,
+        "horizon_pruned_keys": 64,
+        "inverse_incidence_removals": 128,
+        "full_scan_keys_for_same_atomic_sequence": 6208
+      }
+    },
+    {
+      "name": "identically_zero_polynomial",
+      "vertices": 128,
+      "initial_horizon": 64,
+      "final_horizon": 0,
+      "remaining_keys": 0,
+      "canonical_rebuild_checks": 8,
+      "work": {
+        "initial_keys": 0,
+        "initial_incidences": 0,
+        "initial_quadratic_potential": 0,
+        "input_identifiers": 64,
+        "fresh_deletions": 64,
+        "key_shrink_events": 0,
+        "tuple_cells_copied": 0,
+        "coefficient_collisions": 0,
+        "scalar_additions": 0,
+        "cancellations": 0,
+        "horizon_pruned_keys": 0,
+        "inverse_incidence_removals": 0,
+        "full_scan_keys_for_same_atomic_sequence": 0
+      }
+    }
+  ],
+  "random": {
+    "seed": 20261003,
+    "counts": {
+      "graphs": 200,
+      "canonical_rebuild_checks": 880,
+      "invalid_request_atomicity_checks": 1078,
+      "batch_order_checks": 200
+    }
+  },
+  "elapsed_seconds_including_oracle_rebuilds": 3.083327169995755
+}

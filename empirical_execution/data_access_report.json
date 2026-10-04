@@ -1,0 +1,117 @@
+{
+  "audit_date_utc": "2026-10-04",
+  "scope": "Sanctioned connector-based natural-data acquisition, local execution only",
+  "local_original_corpora_found": false,
+  "working_connector": {
+    "tool": "mcp__codex_apps__hugging_face_hub_repo_details",
+    "advertised_operations": [
+      "overview",
+      "dataset_structure",
+      "dataset_preview"
+    ],
+    "working_preview_arguments": [
+      "repo_ids",
+      "repo_type",
+      "operations",
+      "config",
+      "split",
+      "offset",
+      "limit"
+    ],
+    "structure_is_rendered_markdown": true,
+    "preview_is_rendered_markdown": true,
+    "preview_limit_100_observed": true,
+    "output_truncation_threshold_reported_chars": 66000,
+    "pagination_offset_observed": true,
+    "original_file_binary_export_observed": false,
+    "immutable_revision_available": false,
+    "unrecognized_revision_argument": "Ignored by overview; do not treat as pinned",
+    "service_errors": "CC-News preview offsets 30 and 85 returned 502; one retry returned 429. No more row requests."
+  },
+  "unavailable_connector": {
+    "tool": "mcp__codex_apps__hugging_face_hf_doc_fetch",
+    "result": "UNAVAILABLE: MCP tool hf_doc_fetch was not returned by tools/list",
+    "attempted_routes": [
+      "https://datasets-server.huggingface.co/splits?dataset=google%2Fcivil_comments",
+      "https://huggingface.co/datasets/google/civil_comments/raw/main/README.md"
+    ]
+  },
+  "datasets": [
+    {
+      "id": "google/civil_comments",
+      "config": "default",
+      "columns": [
+        "text",
+        "toxicity",
+        "severe_toxicity",
+        "obscene",
+        "threat",
+        "insult",
+        "identity_attack",
+        "sexual_explicit"
+      ],
+      "observed_parquet_files": 4,
+      "parquet_size_reported": "train380.3MB/test20.8MB/validation21.0MB",
+      "original_ids_and_provenance": false,
+      "engineering_acquired_rows": 100,
+      "appropriate_use": "record-only software correctness pilot",
+      "inappropriate_use": "article/publication withdrawal, immutable full-corpus confirmatory study"
+    },
+    {
+      "id": "google/jigsaw_unintended_bias",
+      "viewer_status": "501 Not Implemented: arbitrary Python dataset loading unsupported",
+      "engineering_acquired_rows": 0
+    },
+    {
+      "id": "vblagoje/cc_news",
+      "config": "plain_text",
+      "split": "train",
+      "reported_total_rows": 708241,
+      "columns": [
+        "title",
+        "text",
+        "domain",
+        "date",
+        "description",
+        "url",
+        "image_url"
+      ],
+      "observed_parquet_files": 5,
+      "parquet_size_reported": "1.1GB",
+      "engineering_acquired_rows": 90,
+      "original_source_fields_present": true,
+      "supervised_labels": false,
+      "appropriate_use": "host-group source and curation engineering tests on the observed slice",
+      "inappropriate_use": "representative prevalence, complete source withdrawal, NLP supervised claims"
+    }
+  ],
+  "main_corpus_requirement": {
+    "civil": "TFDS civil_comments/CivilComments 1.2.4 or equivalent original archive with id,article_id,publication_id,parent_id,created_date,text and toxicity fields; current HF google/civil_comments is not equivalent.",
+    "ccnews": "Direct original parquet/file bytes plus pinned snapshot/download checksums and complete predeclared sampling units.",
+    "network": "No direct shell downloads to non-allowlisted domains attempted. No proxy, remote job or browser fallback used.",
+    "next_action": "Use a permitted binary transfer/import route for the original corpus files and local encoder weights. Connector previews alone do not satisfy confirmatory acquisition."
+  },
+  "evidence": [
+    {
+      "kind": "connector",
+      "route": "hub_repo_details dataset_structure",
+      "ids": [
+        "google/civil_comments",
+        "google/jigsaw_unintended_bias",
+        "vblagoje/cc_news"
+      ]
+    },
+    {
+      "kind": "official_documentation",
+      "url": "https://www.tensorflow.org/datasets/catalog/civil_comments",
+      "web_ref": "turn109view2",
+      "finding": "Version1.2.4 includes source metadata missing from current HF parquet."
+    }
+  ],
+  "files": {
+    "manifest": "empirical_execution/preview_acquisition_manifest.json",
+    "parser": "empirical_execution/parse_connector_previews.py",
+    "civil_rows": "empirical_execution/data/civil_comments_engineering_preview.jsonl",
+    "news_rows": "empirical_execution/data/cc_news_engineering_preview.jsonl"
+  }
+}

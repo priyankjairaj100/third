@@ -1,0 +1,115 @@
+{
+  "passed": true,
+  "scope": "independent scalar finite-precision reference; natural lexical engineering data only",
+  "natural_records": 100,
+  "score_checks": {
+    "128": {
+      "pairs_independently_scored": 4950,
+      "tile_sizes": [
+        7,
+        17,
+        32,
+        256
+      ],
+      "retained_rebuild_pairs": 2775,
+      "reversed_order_pairs": 4950,
+      "exact_hex_agreement": true
+    },
+    "768": {
+      "pairs_independently_scored": 4950,
+      "tile_sizes": [
+        7,
+        17,
+        32,
+        256
+      ],
+      "retained_rebuild_pairs": 2775,
+      "reversed_order_pairs": 4950,
+      "exact_hex_agreement": true
+    }
+  },
+  "graph_checks": [
+    {
+      "dimension": 128,
+      "priority_seed": 0,
+      "directed_edges": 332,
+      "tile_sizes": [
+        7,
+        19,
+        256
+      ],
+      "fresh_retained_edges": 145,
+      "scalar_oracle_agreement": true
+    },
+    {
+      "dimension": 128,
+      "priority_seed": 1,
+      "directed_edges": 332,
+      "tile_sizes": [
+        7,
+        19,
+        256
+      ],
+      "fresh_retained_edges": 145,
+      "scalar_oracle_agreement": true
+    },
+    {
+      "dimension": 128,
+      "priority_seed": 2,
+      "directed_edges": 332,
+      "tile_sizes": [
+        7,
+        19,
+        256
+      ],
+      "fresh_retained_edges": 145,
+      "scalar_oracle_agreement": true
+    },
+    {
+      "dimension": 768,
+      "priority_seed": 0,
+      "directed_edges": 1,
+      "tile_sizes": [
+        7,
+        19,
+        256
+      ],
+      "fresh_retained_edges": 0,
+      "scalar_oracle_agreement": true
+    },
+    {
+      "dimension": 768,
+      "priority_seed": 1,
+      "directed_edges": 1,
+      "tile_sizes": [
+        7,
+        19,
+        256
+      ],
+      "fresh_retained_edges": 0,
+      "scalar_oracle_agreement": true
+    },
+    {
+      "dimension": 768,
+      "priority_seed": 2,
+      "directed_edges": 1,
+      "tile_sizes": [
+        7,
+        19,
+        256
+      ],
+      "fresh_retained_edges": 0,
+      "scalar_oracle_agreement": true
+    }
+  ],
+  "selection_population_pairs": 4950,
+  "sampled_pairs": 241,
+  "blank_assignments": 723,
+  "human_judgments_created_or_present": 0,
+  "semantic_quality_pass": false,
+  "production_hashes": {
+    "calibration.py": "2a6ce3b19de3063f32b010ebfa19ffc4003ffc09acfc41a1ead4f74bc6c81b13",
+    "panels.py": "bd2409958ac9a9e27faf463b44b2f839260a3195c7cde32fb3bfb76aeb14a04b",
+    "reference_graph.py": "efc41498648f6f7f7969768fbcd050619d7ed5d6e82eafadb1b9a3a2158e9d1c"
+  }
+}

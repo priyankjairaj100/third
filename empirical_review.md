@@ -1,0 +1,166 @@
+# Adversarial empirical review and decision specification
+
+This is a design review, not a report of completed experiments. I read version 3 of `output/pdf/counterfactual_curation_theory.tex`. No synthetic dataset or NLP experiment was run for this review. No design can guarantee acceptance or eliminate every possible reviewer request; a frozen protocol can make the important judgments explicit before results exist.
+
+## Recommendation
+
+Build one paper around **whether natural semantic curation creates a consequential mismatch between record deletion and full-pipeline deletion, and when the finite-horizon information structure makes exact repair economical**. Do not sell a new ridge update, a universal language-model erasure method, or generic dynamic query maintenance.
+
+The mandatory learned component should be a strong frozen sentence encoder plus multiclass ridge, evaluated on genuine NLP tasks with natural duplicates. This is a legitimate NLP learner and exactly matches the main theorem. Make a convex logistic head and the residual certificate a bounded supporting experiment. LoRA is not mandatory: it changes the target and certificate, increases retraining stochasticity, and can make the empirical program less decisive. If resources permit, run one bounded transformer fine-tuning *phenomenon check* on natural requests selected without downstream outcome information; compare full curator rerun with frozen selection under the same training schedule and paired seeds. Do not imply that the summary algorithm unlearns that network.
+
+The mandatory study has three layers: (A) natural corpus structure and counterfactual admissions, (B) task-relevant target mismatch, and (C) complete system cost and state fidelity. Failure in one layer changes the paper's claim; it should not trigger an undisclosed search for more favorable datasets or deletion requests.
+
+## What would cause an immediate reject, and the minimum counter-evidence
+
+| Reviewer objection | Necessary evidence | Evidence that does not answer it |
+|---|---|---|
+| “This is dynamic SQL plus ridge.” | Compare with a well-engineered blocker-count antijoin + eligible-payload cache; show a real memory/latency frontier explained by rank and blocker signatures, or explicitly concede no engineering advantage. | Speedup over complete retraining alone. |
+| “Ridge is a toy classifier.” | Strong frozen encoder, multiple real language tasks, proper held-out generalization, a second independent encoder, and logistic-head confirmation; explain that exact counterfactual recovery, not task leaderboard performance, is the claim. | A bag-of-words toy benchmark, or an unrelated LoRA result with no oracle. |
+| “Frozen clusters are an unnatural oracle.” | A defensible externally fixed partition/priority contract, a separate faithful complete-refit oracle on a bounded subset, and a frozen-versus-refit disagreement decomposition. | Refit once on the deletable corpus and call its resulting centroids public. |
+| “You engineered the sample until admissions appeared.” | Predeclared natural corpus inclusion criteria; report all included corpora and thresholds; random raw-record/source requests as primary; unselected-only and targeted requests clearly separated. | Only selecting excluded articulation-like records or using synthetic paraphrases. |
+| “Admissions are semantically identical copies.” | Task-gradient changes, fixed-test prediction changes, subgroup/task error changes, and blinded human annotation of admitted records against former blockers. | Counts of newly admitted records alone. |
+| “Source deletion adds no NLP value.” | Real available provenance units, their size distribution, source-level effects versus count-matched record requests, and examples of changed retained information. | Arbitrary random IDs relabeled as sources. |
+| “Memory comparison is unfair.” | Count all bytes and all retained objects under each method's stated access regime; compare against eligible embedding caches and a compressed representation baseline at matched fidelity. | Only number of coefficient vectors, only label bits, or ignoring the blocker graph. |
+| “The exactness experiment just repeats the proof.” | State-oracle checks support correctness, but the primary empirical evidence must be natural admissions, task mismatch, rank curves, and actual resource tradeoffs. | Thousands of algebraic unit tests presented as NLP experiments. |
+| “Unlearning means removing facts, not records.” | Explicit record/source counterfactual target, with a note that surviving paraphrases may remain. | Membership-inference success used to redefine the target after the fact. |
+
+## Protocol freeze before the confirmatory run
+
+Reserve a development portion by provenance unit and time before inspecting deletion outcomes. Use it for pipeline debugging, threshold calibration, hardware feasibility, model selection, and variance estimation. Hold out complete provenance families or known duplicate groups where available; do not split near-copies between training and the evaluation pool. Publish the splitter, dedup-overlap audit, IDs/hashes, and any removals.
+
+Freeze a manifest containing dataset versions and licenses, corpus inclusion rules, fixed extraction and token-length filters, embedding model revisions, task labels, provenance definitions, train/dev/test partitions, candidate-neighbor implementation, threshold grid, partitioning contract, priorities, deletion generators, budgets, release cadence, random seeds, solver tolerances, outcome definitions, analysis script version, and stopping rules. Hash the manifest before confirmatory outcomes are computed. Practical adjustments remain possible but must be logged and distinguished from the frozen analysis.
+
+Thresholds must not be selected by maximizing additions or repair speed. A defensible primary choice is a development-only deduplication retention target chosen for usable corpus reduction, with a fixed low/default/high threshold sensitivity grid. Record achieved retention on all evaluation corpora, including unfavorable or degenerate cases. Stable hash priorities can test the exact contract; one externally fixed quality/chronological priority provides a deployment-oriented alternative. Corpus-fitted quality estimates or random shuffles that change relative order on shorter inputs are not restriction-consistent.
+
+Use at least two genuinely different natural domains and one natural provenance-rich corpus. Do not require every domain to exhibit the same effect. A corpus with few duplicates is a useful negative control, provided it was chosen before the results. No synthetic paraphrases, duplicated injection, star graphs, or generated label conflicts belong in the confirmatory natural-data results. Existing proof verification is software QA and remains separate.
+
+### Fixed models and matching targets
+
+Tune the ridge regularization and any public feature projection on the development data once, then freeze them across deletions. The retraining target is explicitly the frozen-hyperparameter learner; if hyperparameter refitting is intended, it requires another oracle and is outside the present theorem. Normalize loss and regularization consistently with the changing selected count. State whether the bias coordinate is regularized and implement the exact same convention everywhere.
+
+For multiclass ridge, retain the complete response matrix and label encoding. Report task performance of the undeleted model as context. Use one primary embedding model, an independent encoder sensitivity, and a small predeclared dimension grid. If projections create the only favorable systems result, compare the projected learner's task quality to the full representation and state the resulting scope. Do not quietly present low-dimensional moments as an equally accurate replacement for a stronger full-dimensional encoder.
+
+The secondary logistic experiment should compare direct retained-corpus optimization, a naive deletion-only update, a signed-admission-aware update, and the certified update with its actual fallback. Verify the numerical residual using a retained-data audit pass at measurement time, but count that pass if it is part of the deployed algorithm. A diagnostic oracle pass cannot be described as free production verification.
+
+## Request distributions and estimands
+
+1. **Random raw-record requests**: sample from the full raw corpus, not only training-selected or excluded records. This estimates the specified sampling distribution, not the frequency of legal deletion requests in deployment.
+2. **Natural source requests**: sample actual domains/publishers/authors only when provenance is provided and its use is appropriate. Report both equal-source and record-weighted estimands separately. Source sizes create a major confound; compare source removal with randomly sampled record removal matched in raw cardinality and, where appropriate, selected cardinality. Do not describe those matches as identical causal interventions.
+3. **Unselected-only requests**: the diagnostic setting where the frozen-selection learner is unchanged but the curator rerun can change. Clearly label this as conditional sampling. It cannot establish population prevalence.
+4. **Label-blind targeted stress**: a deterministic greedy coverage/activation heuristic computed from pre-deletion graph structure, never from held-out losses or labels. Report its candidate eligibility and search cost. It is not an optimal adversary and cannot establish normal-request frequency.
+
+Use a predeclared cumulative budget grid with both absolute counts and fractions; identify whole-source budgets separately from raw-record counts. A sequence keeps the original total horizon and reduces the remaining horizon. Do not reset the horizon after every deletion. Evaluate disjoint fresh requests, valid retries, repeated/unknown IDs, and over-budget requests as contract tests; the latter are QA, not NLP evidence.
+
+Report independent one-shot requests separately from continual sequences. Fix the release cadence, since solving a model after every identifier differs dramatically from solving after a batch. Every method processes the identical request sequence and releases at identical times. Use paired evaluation with request/sequence as the experimental unit. Methods do not select their own favorable requests.
+
+## Primary outcomes, controls, and analysis
+
+Predeclare four claim families rather than choosing among dozens of metrics after results:
+
+1. **Target mismatch**: probability of any admission, admitted count per request and per removed selected record, and task-relevant gradient difference at the frozen-selection solution. Include the unconditional rate, not only rates conditional on a nonempty effect.
+2. **Task fidelity**: paired disagreement with the fixed-curator retraining oracle on one frozen test set; oracle-minus-frozen-selection held-out task loss and macro-F1; numerical parameter/residual discrepancy for exact methods. Exact repair is expected to preserve oracle behavior, not improve the oracle's accuracy. Report signs of all accuracy changes.
+3. **Information/cost**: observed rank and eligible-payload fraction over budgets, physical summary bytes, total cumulative latency including state repair and decoder, and preprocessing amortization. The primary systems claim should be a Pareto statement, not an isolated speedup number.
+4. **Scope robustness**: fixed-curator versus full-refit selected-set and prediction disagreement, certificate tightness, coverage/violation rate, and fallback cost on the predeclared refit subset.
+
+Useful mechanistic diagnostics include task-label disagreement between admitted records and their blockers, gradient norm/direction, nearest-blocker similarity, information novelty in human annotation, source/topic/class composition shifts, and boundary-margin distributions. These explain an effect; they do not substitute for held-out task outcomes.
+
+Include cardinality controls: repeat the comparison with normalization handled identically; report selected removals and admissions separately; and on a predeclared diagnostic subset compare oracle admissions with same-count retained excluded records sampled under a fixed source/label-blind matching rule. This asks whether which information enters matters beyond simply enlarging the training set. The counterfactual oracle itself must never be altered to satisfy a control.
+
+For a human audit, draw a fixed random sample of admissions stratified by corpus, request type, similarity band, and whether the task labels agree. Weight estimates back to the underlying request distribution. Blind annotators to method, predicted harm, and expected narrative. Ask about preserved versus changed propositions, named entities/dates, negation/modality, target-label relevance, and redundancy; permit uncertain judgments. Use at least two independent annotators for the reliability subset and adjudicate with a recorded rubric. Describe compensation, data handling, and applicable review procedures. Cherry-picked striking examples are illustrations, never estimates.
+
+### Statistical specification
+
+- Define one natural primary request distribution and one primary task-fidelity endpoint per corpus before running. Other distributions test scope or mechanism.
+- Paired confidence intervals resample requests/sequences at the relevant independent level. Overlapping requests and repeated measurements from one sequence are not independent observations; resample a complete sequence, or use cluster-robust/hierarchical analysis. Sources drawn from a finite corpus can be summarized as finite-population enumeration when feasible. Do not use thousands of test examples to pretend there were thousands of independent deletion experiments.
+- State whether inference conditions on the realized corpus and curation graph, or generalizes over priority seeds/corpora. Three datasets do not justify population inference over all languages. A multiway/bootstrap or hierarchical analysis must explicitly respect each randomization layer.
+- Use at least five fixed priority/seeding replicates where curation randomness exists. Deterministic ridge does not acquire uncertainty from running the same solve five times. For any SGD extension, use paired training seeds across targets and report the retraining-to-retraining noise floor.
+- Plan sample size from development-only variance and a predeclared smallest effect of interest. Use a fixed confirmatory sample size or an explicitly valid sequential rule. Do not stop when a p-value is favorable. Separate practical equivalence from failure to reject a zero effect.
+- Report medians and upper-tail latency (p95 and p99 only with sufficient samples), confidence intervals, request-size distributions, and censored failures/OOMs. Methods that exceed budget remain visible.
+- Control the small preregistered family of superiority claims, for example with Holm adjustment. Large exploratory stratifications are labeled exploratory. Avoid collapsing heterogeneous datasets into a single undocumented mean.
+
+## Fair cost accounting: non-negotiable
+
+### Stage-0 storage feasibility before expensive confirmatory training
+
+The rank formula implies the structural arbitrary-statistic dimension satisfies `r_k >= |S|` for any record budget `k >= 1`. For a generic dense stored ridge summary, this makes approximately `s |S|` numbers an immediate preflight cost, where `s = d(d+1)/2 + dc + 1` for triangular multiclass moments with `c` responses. An eligible feature/response cache has approximately `(d+c)|E_k|` numbers, before graph/ID overhead. Thus the statistic-to-feature storage ratio is on the scale of
+
+`[d(d+1)/2 + dc + 1] |S| / [(d+c)|E_k|]`.
+
+At high embedding dimension and moderate retained fraction, this can already be prohibitive. Compute this estimate, then measured bytes, on the natural structural audit before launching expensive training. Do not promise broad memory wins or use complete raw text as the only storage comparator. Space-latency tradeoffs can be a valid result even when a method occupies more bytes; a claimed storage win cannot.
+
+This is a preflight estimate for dense generic row/basis storage, **not a universal lower bound for the actual constrained ridge moments**. Identical moments can cancel, low-rank factorizations can compress, and actual vector statistics need not attain arbitrary-coordinate rank. Record actual cancellations separately from structural rank, count their numerical-zero criteria, and compare fair factorized/cache alternatives. Preflight results may justify a predeclared low-dimensional operating regime, but its task-quality cost must be measured.
+
+Compare the following at a common oracle and accuracy tolerance: full fixed-curator rerun; frozen-selection retraining (wrong-target diagnostic); blocker-count antijoin with eligible embedding/payload cache; indexed coefficient repair; canonical rank-optimal scanning method; and a retained-all embedding cache. A relational antijoin implementation is useful if it is well engineered; a straw-man full SQL rerun is not the relevant competitor. Refit-curator rerunning is a separate scope baseline rather than the only speed denominator.
+
+Use an explicit access-regime table: which method retains raw text, embeddings, labels, graph edges/blockers, coefficient values, old models, decoder metadata, IDs, and a future-request horizon. In the no-reaccess regime, disallow hidden loads and count all information stored. In a reaccess regime, count storage plus actual reads, I/O and recomputation, and label it a different contract. An object stored on disk is still storage. Public pretrained weights and truly external public partitions can be shared costs; corpus-fitted state cannot be declared public merely to omit its bytes.
+
+Distinguish identifier-only requests from requests carrying full forgotten-record payloads. The rank-optimal comparison applies to the stated identifier-only interface; auxiliary information in full payloads or tickets changes that information problem. Run a common primary interface for all algorithm competitors and label a full-payload sensitivity explicitly. The stronger learner lower bound permits forgotten payloads only under its specific hard construction; it does not establish that the empirical ridge summary is minimal on a natural dataset.
+
+Measure construction time, tokenization/embedding, graph search, edge verification, canonical summary construction, peak CPU/GPU memory, persisted bytes, working memory during a request, state update, model solve, serialization/cleanup when claimed, and cumulative wall-clock. Warm/cold cache results have separate labels. Pin hardware/threads/dtype, record BLAS/backend versions, use warmed repetitions after a specified warm-up, and synchronize accelerator timing. Plot crossover including one-time construction; do not hide that a small request workload never amortizes it.
+
+Dense d-by-d moments can be much larger than d-dimensional embeddings. Report bytes at native precision with disclosed solver accuracy; include a common precision/fidelity sensitivity rather than storing baseline embeddings inefficiently. Symmetric matrices should use fair triangular storage where feasible. Compressed checkpoint size and in-memory resident size are different metrics. The theorem's factor-two statistic-coordinate result is not a two-times bound on physical bytes or an optimality claim for constrained ridge moments.
+
+Summary accumulation can cancel or drift in floating point. Use audited FP64 moments, compensated accumulation or explicit numerical checks, and an independently computed retraining solution. Report normalized moment residual and downstream prediction tolerance. Byte equality after reordering floating point arithmetic is not the state theorem. State whether serialization is structural-canonical with tolerance or bitwise reproducible under a deterministic arithmetic schedule.
+
+## Six figure assets and three table assets
+
+These are the complete figure/table plan, not a demand to overcrowd an eight-page paper. If space is tight, move the certificate detail and secondary-learner panel intact to the appendix rather than deleting null results.
+
+| Asset | Content and primary question | Required negative result visibility |
+|---|---|---|
+| Figure 1 | Natural admissions: probability/count versus budget for random records, natural sources, unselected-only; separate corpus facets | Zero-admission requests and low-duplicate corpus retained |
+| Figure 2 | Task relevance: paired fixed-oracle versus frozen-selection prediction/loss gap versus gradient change; small human-audit composition inset | Both improvements and deterioration; no axis implying all admissions harm |
+| Figure 3 | Structural explanation: rank, eligible-record count, coefficient count and total bytes versus horizon; theory ratio and measured bytes shown separately | High-dimensional regimes in which moments lose |
+| Figure 4 | End-to-end memory/latency Pareto plot and cumulative-time crossover against antijoin + cache and full rerun | OOM/timeouts and no-crossover configurations |
+| Figure 5 | Continual operation: drift/fidelity and cumulative total work across fixed sequences; state/checkpoint audit | Numerical failures, retries, horizon exhaustion; no reset |
+| Figure 6 | Frozen-versus-refit scope: target mismatch, envelope certificate versus measured error, and fallback cost | Vacuous bounds and full-refit instability; no cherry-picked envelope successes |
+| Table 1 | Corpus/task/provenance/model matrix, split sizes, languages, duplicate-retention rate, initial task quality | All preregistered included corpora |
+| Table 2 | Method contract and access/memory ledger plus oracle fidelity and total cost at predeclared operating points | Wrong-target baseline explicitly labeled; all retained state counted |
+| Table 3 | Confirmatory claim decision matrix: effects/CIs, practical thresholds, pass/narrow/fail conclusion; include logistic corroboration | Negative and equivalence results; scope limits |
+
+## Claim decision matrix to freeze
+
+| Claim | Confirmatory requirement | If unmet |
+|---|---|---|
+| Natural excluded-record deletion can matter for NLP | Nonzero admissions under natural distributions plus task-relevant held-out/gradient change beyond numerical noise; magnitude and prevalence quantified | Publish bounded characterization; do not imply common task harm |
+| Frozen-selection unlearning is materially inadequate here | Paired oracle fidelity gap exceeds the predeclared practical threshold on named tasks/distributions | State equivalence or inconclusive evidence at that threshold; do not equate churn with failure |
+| Finite-horizon summaries are useful storage | Total bytes improve against the strongest eligible-cache baseline at matched learner quality and target fidelity for a nontrivial preregistered regime | Keep coordinate theorem; drop practical compression claim |
+| Indexed repair is useful computationally | End-to-end cumulative improvement after construction/solves/state cost, with a useful crossover and no hidden payload rereads | Present a cost boundary, not a fast-unlearning system |
+| Information structure predicts cost/effect | Prespecified structural quantities explain held-out corpus/configuration variation beyond simple selected-set size and deletion count | Treat observed correlations as exploratory; revise explanatory claim |
+| Fixed-curator result informs refitted pipelines | Small measured refit mismatch or informative valid envelope bounds on a predeclared subset | Restrict to external/fixed-curation deployments explicitly |
+| Source withdrawal adds substantive coverage | Real source groups show differences from size-matched record deletion with interpretable retained information effects | Retain source theorem as theory; do not claim broad source-level empirical benefit |
+
+There is no universal natural choice of a 0.5-point F1 threshold or a 2x speedup requirement. Choose the practical thresholds from development-only variance, the intended scientific claim, and the measured baseline costs; publish the numbers before confirmatory runs. Numerical exactness thresholds can be fixed from condition-aware solver tolerances independently of scientific usefulness. Rejecting a null is not the same as clearing a practical threshold.
+
+## Preregistered harm, futility, and honest alternative framings
+
+- If near-duplicate removal erases minority labels or admits label-inconsistent records, report the direction and conditional group effects; do not frame oracle recovery as inherently socially beneficial. Any fairness claim needs defined groups and sufficient sample size. Do not infer sensitive demographic attributes for this study.
+- If summary methods lose in actual bytes, freeze that outcome. A rank theorem can still be useful, but “memory-efficient unlearning” is not the title. Focus on exact information requirements and when compression is impossible or uneconomic.
+- If admissions are common but task effects are practically equivalent to zero, the conclusion is a measured robustness boundary: pipeline state changes need not imply consequential learner changes. It is weaker evidence for the original ACL pitch and must be stated.
+- If only label-blind adversarial requests show large effects, frame a worst-case vulnerability/robustness study. Do not present it as typical withdrawal behavior.
+- If natural source withdrawal is convincing but arbitrary record deletion is not, narrow the paper to provenance-aware source revocation. This is a scoped conclusion, not a retroactive deletion of the other results.
+- If refitting is unstable, claim exact repair only for externally fixed curation. Keep full-refit results as a visible limitation. Do not “solve” the discrepancy by quietly changing the oracle.
+- If most natural corpora provide neither useful admissions nor a system frontier, the theory may fit a learning-theory/data-management venue better than ACL. Expensive LoRA experiments will not repair that missing NLP phenomenon.
+
+## Release package and reporting commitments
+
+Ship a single command for each main table/figure; immutable manifest; dataset acquisition and licensed-access scripts; stable identifiers and checksums rather than prohibited raw redistribution; preprocessing and neighbor-search recall audits; source definitions; request manifests; all hyperparameter searches and total compute including unsuccessful runs; environment lock; state schema and access-regime tests; oracle rerun code; diagnostic logs without deleted sensitive text; row-level results with failed runs; and the exact analysis script. Human annotation instructions, sampling weights, and adjudication rules belong in the appendix/package. State AI-assistant use accurately.
+
+The official ARR Responsible NLP Research guidance calls for early consideration of limitations and reproducibility, asset versions/licenses and split statistics, complete computational budget, hyperparameter selection, descriptive uncertainty, and explicit checklist references or justifications. It is a reporting floor, not evidence that a study is scientifically complete. Primary source checked on 3 October 2026: https://aclrollingreview.org/responsibleNLPresearch/ (web reference `turn89view0`). Keep direct source-derived prose below 200 words in the final report; the design above is original methodological advice rather than a paraphrase of that checklist.
+
+## Addendum: adversarial audit of the concrete proposed configuration
+
+The proposed global fixed-encoder suppression target, stable hash-ID ordering, exact tiled neighbor audit, bounded dense-method workload, and independent native SemDeDup refit branch are coherent with these corrections:
+
+1. **Name the curator accurately.** Global all-pairs suppression is not the native clustered SemDeDup pipeline. Keep the latter's initial model, frozen-fitted target, and fresh-refitted target within its separate branch. Do not pool absolute errors or speedups across different initial targets.
+2. **Expose thinning effects.** Inducing a 10k corpus from 200k removes blockers and can substantially increase admissions, eligible fraction, and apparent compression. Group-preserving sampling does not fix this. Fix thresholds once and show structural curves on nested natural 10k/25k/100k/200k datasets, with actual sizes if groups cross the nominal boundary. Do not infer 200k task prevalence from a 10k learner. Prefer a preregistered independent 10k replication where feasible; never select a “representative” subset after observing admissions.
+3. **Freeze group closure.** Combining contributor and duplicate links can create a giant connected component. “Where feasible” is not a rule. Specify graph edge types, precedence, cap/giant-component treatment, and whether full-group inclusion makes nominal record counts soft. Do not truncate a source while calling it complete. Missing/sentinel article, parent, or author IDs must never join unrelated records into one source. Use separate hash salts for split assignment, subset selection, and curation priority.
+4. **CivilComments provenance is not authorship.** The official TFDS card states no user IDs exist; it exposes article/publication IDs and warns that parent context can cross original splits. Use plain comment text for the primary task unless context and its deletion dependency are explicitly modeled. Publication withdrawal and article withdrawal are different request semantics. If only about 50 publication IDs are available, repeatedly sampling them does not create hundreds of distinct source replications. Primary reference: https://www.tensorflow.org/datasets/catalog/civil_comments.
+5. **AskUbuntu task units require care.** The standard 2014 benchmark has 167k questions, not 200k, and its supervised examples are pairs/queries rather than question-local labels. Pair-training rows depend on two question identities, so per-question additive statistics cannot be assumed. Use it for structural analysis, or obtain a versioned raw snapshot with question-local tags for a separately documented multilabel task, or formally specify a pair-record/source contract. Do not relabel duplicate graph clusters as gold task labels. Primary reference: https://github.com/taolei87/askubuntu. CC-News likewise needs a labeled companion or remains a structural/provenance audit.
+6. **Counts are conditional on power.** The proposed 256 structural R/S trajectories and 64 model R/S trajectories are sensible resource envelopes, not universal power guarantees. With 64 independent requests and zero observed events, a one-sided 95% upper bound is about 4.6%; for 256 it is about 1.16%. Rare effects cannot be ruled out more tightly without extra sampling. Freeze final N from development-only variance before confirmation; keep no-outcome selection for the model subsample. Explain whether N applies per corpus, priority seed, horizon, or their aggregate.
+7. **Separate uncertainty layers.** A request trajectory has correlated checkpoints. Do not multiply apparent sample size by endpoints. Four fully oracled native-refit paths are correctness/case-study evidence, not a precision estimate for continual refit behavior. The 32R/32S/16-stress endpoint sample estimates only its own selected finite-corpus request distribution; the stress endpoints carry no prevalence interpretation.
+8. **Define exact adjacency numerically.** “All-pairs exact” should mean complete enumeration under a specified stored embedding, normalization, strict threshold, and deterministic numerical rule. Recompute near-boundary similarities with a reference method or provide a rounding envelope. Never silently substitute ANN, cap edges, drop large components, or change threshold after memory failure. Emit infeasible configurations visibly. Preflight edge storage as well as dense moments, since natural boilerplate can produce huge cliques even without synthetic data.
+9. **Native refit parameters must be frozen.** At 5k, K-means cluster count, seed schedule, initialization, distance metric, and ordering rule strongly affect the outcome. Choose them before confirmatory deletions and report resulting cluster sizes. A default intended for millions of records can degenerate at 5k. Retrain both frozen-fitted and fresh-refitted targets from the same initial native pipeline; seed coupling improves comparison but does not make a refit restriction-consistent.
+10. **Deletion budgets and cadence need explicit units.** State whether source budgets count whole sources or records; do not discard large source requests merely because they are inconvenient. Predeclare feasibility/horizon handling. Report raw records removed and originally selected records removed for all S comparisons. Fix model-release checkpoints; thousands of aggregate ridge solves can dominate the planned workload even when structural trajectories are cheap.
+
+These corrections preserve the proposed design. They mainly prevent a small subset, missing provenance fields, or correlated trajectories from making the result look more general than the measured evidence supports.

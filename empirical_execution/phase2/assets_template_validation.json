@@ -1,0 +1,192 @@
+{
+  "artifact_hashes": {
+    "output/empirical_program/study_design.json": "11bb7a38665769efd9b539370361ef2b1d39b91ee2a01b44a040ba8f2a5b6fb4"
+  },
+  "checks": [
+    {
+      "check": "schema_version",
+      "details": null,
+      "passed": true
+    },
+    {
+      "check": "synthetic_not_permitted",
+      "details": null,
+      "passed": true
+    },
+    {
+      "check": "study_design_identity",
+      "details": {
+        "sha256_actual": "11bb7a38665769efd9b539370361ef2b1d39b91ee2a01b44a040ba8f2a5b6fb4"
+      },
+      "passed": true
+    },
+    {
+      "check": "datasets_nonempty",
+      "details": null,
+      "passed": true
+    },
+    {
+      "check": "dataset_ids_unique",
+      "details": null,
+      "passed": true
+    },
+    {
+      "check": "dataset.0.civil_comments.origin_metadata",
+      "details": "Metadata presence only; historical provenance and source completeness require review.",
+      "passed": true
+    },
+    {
+      "check": "dataset.0.civil_comments.original_files_nonempty",
+      "details": null,
+      "passed": true
+    },
+    {
+      "check": "dataset.0.civil_comments.original_file.0",
+      "details": "Path and lowercase SHA256 are required.",
+      "passed": false
+    },
+    {
+      "check": "dataset.0.civil_comments.extraction_code",
+      "details": "Path and lowercase SHA256 are required.",
+      "passed": false
+    },
+    {
+      "check": "dataset.0.civil_comments.extraction_log",
+      "details": "Path and lowercase SHA256 are required.",
+      "passed": false
+    },
+    {
+      "check": "dataset.0.civil_comments.rows",
+      "details": "Path and lowercase SHA256 are required.",
+      "passed": false
+    },
+    {
+      "check": "dataset.0.civil_comments.encoder",
+      "details": null,
+      "passed": true
+    },
+    {
+      "check": "dataset.0.civil_comments.preprocessing",
+      "details": null,
+      "passed": true
+    },
+    {
+      "check": "dataset.0.civil_comments.revisions",
+      "details": "Immutable revision syntax only; provenance requires review.",
+      "passed": false
+    },
+    {
+      "check": "dataset.0.civil_comments.encoder_components.declared_hashes",
+      "details": "Content hashes are declared identities, not locally verified component bytes unless path is supplied.",
+      "passed": false
+    },
+    {
+      "check": "dataset.0.civil_comments.tokenizer_components.declared_hashes",
+      "details": "Content hashes are declared identities, not locally verified component bytes unless path is supplied.",
+      "passed": false
+    },
+    {
+      "check": "dataset.0.civil_comments.embedding_code",
+      "details": "Path and lowercase SHA256 are required.",
+      "passed": false
+    },
+    {
+      "check": "dataset.0.civil_comments.embedding_run_log",
+      "details": "Path and lowercase SHA256 are required.",
+      "passed": false
+    },
+    {
+      "check": "dataset.0.civil_comments.embedding_row_ids",
+      "details": "Path and lowercase SHA256 are required.",
+      "passed": false
+    },
+    {
+      "check": "dataset.0.civil_comments.embedding_array",
+      "details": "Path and lowercase SHA256 are required.",
+      "passed": false
+    },
+    {
+      "check": "dataset.0.civil_comments.calibration_pairs",
+      "details": "Path and lowercase SHA256 are required.",
+      "passed": false
+    },
+    {
+      "check": "dataset.0.civil_comments.calibration_responses",
+      "details": "Path and lowercase SHA256 are required.",
+      "passed": false
+    },
+    {
+      "check": "dataset.0.civil_comments.annotation_instructions",
+      "details": "Path and lowercase SHA256 are required.",
+      "passed": false
+    },
+    {
+      "check": "dataset.0.civil_comments.pair_sampling_code",
+      "details": "Path and lowercase SHA256 are required.",
+      "passed": false
+    },
+    {
+      "check": "dataset.0.civil_comments.pair_sampling_log",
+      "details": "Path and lowercase SHA256 are required.",
+      "passed": false
+    },
+    {
+      "check": "dataset.0.civil_comments.quality_report",
+      "details": "Path and lowercase SHA256 are required.",
+      "passed": false
+    }
+  ],
+  "confirmatory_ready": false,
+  "datasets": [],
+  "failed_checks": [
+    "dataset.0.civil_comments.original_file.0",
+    "dataset.0.civil_comments.extraction_code",
+    "dataset.0.civil_comments.extraction_log",
+    "dataset.0.civil_comments.rows",
+    "dataset.0.civil_comments.revisions",
+    "dataset.0.civil_comments.encoder_components.declared_hashes",
+    "dataset.0.civil_comments.tokenizer_components.declared_hashes",
+    "dataset.0.civil_comments.embedding_code",
+    "dataset.0.civil_comments.embedding_run_log",
+    "dataset.0.civil_comments.embedding_row_ids",
+    "dataset.0.civil_comments.embedding_array",
+    "dataset.0.civil_comments.calibration_pairs",
+    "dataset.0.civil_comments.calibration_responses",
+    "dataset.0.civil_comments.annotation_instructions",
+    "dataset.0.civil_comments.pair_sampling_code",
+    "dataset.0.civil_comments.pair_sampling_log",
+    "dataset.0.civil_comments.quality_report"
+  ],
+  "human_and_design_gates": [
+    {
+      "gate": "original_source_snapshot_and_sampling_unit_completeness",
+      "status": "NOT_VERIFIED_BY_THIS_PROGRAM"
+    },
+    {
+      "gate": "original_label_authenticity_and_no_label_fabrication",
+      "status": "NOT_VERIFIED_BY_THIS_PROGRAM"
+    },
+    {
+      "gate": "encoder_tokenizer_and_embedding_derivation_provenance",
+      "status": "NOT_VERIFIED_BY_THIS_PROGRAM"
+    },
+    {
+      "gate": "human_annotation_authenticity_blinding_pay_and_independence",
+      "status": "NOT_VERIFIED_BY_THIS_PROGRAM"
+    },
+    {
+      "gate": "threshold_selection_and_independent_quality_gate_review",
+      "status": "NOT_VERIFIED_BY_THIS_PROGRAM"
+    },
+    {
+      "gate": "full_protocol_pre_execution_lock_and_source_guard_review",
+      "status": "NOT_VERIFIED_BY_THIS_PROGRAM"
+    }
+  ],
+  "human_approval_strings_accepted_as_evidence": false,
+  "local_only": true,
+  "mechanical_intake_passed": false,
+  "schema_version": "ccu-local-intake-1",
+  "scope": "Mechanical intake consistency only; no permission to start confirmation is inferred.",
+  "status": "BLOCKED_ASSETS_OR_CONSISTENCY"
+}

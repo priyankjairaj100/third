@@ -1,0 +1,67 @@
+{
+  "scope": "Software checks on already available natural fixtures and deliberately malformed metadata; not empirical results.",
+  "checks_passed": 11,
+  "checks": [
+    {
+      "check": "natural_civil_fixture_is_100_rows",
+      "passed": true
+    },
+    {
+      "check": "natural_news_fixture_is_90_rows",
+      "passed": true
+    },
+    {
+      "check": "inventory_blocks_confirmation",
+      "passed": true
+    },
+    {
+      "check": "existing_preview_not_accepted_as_confirmatory_input",
+      "passed": true
+    },
+    {
+      "check": "preview_missing_original_fields_detected",
+      "passed": true
+    },
+    {
+      "check": "preview_missing_source_partitions_detected",
+      "passed": true
+    },
+    {
+      "check": "preview_missing_semantic_cache_detected",
+      "passed": true
+    },
+    {
+      "check": "preview_missing_calibration_detected",
+      "passed": true
+    },
+    {
+      "check": "arbitrary_human_approval_fields_do_not_open_gate",
+      "passed": true
+    },
+    {
+      "check": "wrong_digest_rejected",
+      "passed": true
+    },
+    {
+      "check": "outside_workspace_path_rejected",
+      "passed": true
+    }
+  ],
+  "skipped": [],
+  "fixture_hashes": {
+    "empirical_execution/data/civil_comments_engineering_preview.jsonl": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9"
+  },
+  "real_fixture_validation_failed_checks": [
+    "dataset.0.civil_comments.origin_metadata",
+    "dataset.0.civil_comments.original_files_nonempty",
+    "dataset.0.civil_comments.extraction_code",
+    "dataset.0.civil_comments.extraction_log",
+    "dataset.0.civil_comments.partitions_present",
+    "dataset.0.civil_comments.original_fields_internal_consistency",
+    "dataset.0.civil_comments.source_id_derivation",
+    "dataset.0.civil_comments.native_source_rows_nonzero",
+    "dataset.0.civil_comments.labels_original_field_consistency",
+    "dataset.0.civil_comments.embeddings",
+    "dataset.0.civil_comments.calibration"
+  ]
+}

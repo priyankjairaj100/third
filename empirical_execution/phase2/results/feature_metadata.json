@@ -1,0 +1,100 @@
+[
+  {
+    "dimension": 64,
+    "train": {
+      "name": "sklearn.HashingVectorizer",
+      "n_features": 64,
+      "analyzer": "word",
+      "ngrams": [
+        1,
+        2
+      ],
+      "alternate_sign": false,
+      "lowercase": false,
+      "norm": "l2",
+      "dtype": "float32",
+      "corpus_fitted_state": false,
+      "E5_or_semantic_model": false,
+      "purpose": "nonconfirmatory_software_pilot_only",
+      "limitations": [
+        "hash collisions",
+        "lexical similarity not audited semantic duplication",
+        "preview sampling and connector rendering",
+        "no held-out NLP utility claim"
+      ],
+      "array_sha256": "69525040f30527ccfd633f3205ad30d8296d5e17b606d0e41fd74207a8894f89"
+    },
+    "evaluation": {
+      "name": "sklearn.HashingVectorizer",
+      "n_features": 64,
+      "analyzer": "word",
+      "ngrams": [
+        1,
+        2
+      ],
+      "alternate_sign": false,
+      "lowercase": false,
+      "norm": "l2",
+      "dtype": "float32",
+      "corpus_fitted_state": false,
+      "E5_or_semantic_model": false,
+      "purpose": "nonconfirmatory_software_pilot_only",
+      "limitations": [
+        "hash collisions",
+        "lexical similarity not audited semantic duplication",
+        "preview sampling and connector rendering",
+        "no held-out NLP utility claim"
+      ],
+      "array_sha256": "3f9f2c74d881943c30cce27c23da36438527d67c27e3a9cdd1aac21e73e988c4"
+    }
+  },
+  {
+    "dimension": 768,
+    "train": {
+      "name": "sklearn.HashingVectorizer",
+      "n_features": 768,
+      "analyzer": "word",
+      "ngrams": [
+        1,
+        2
+      ],
+      "alternate_sign": false,
+      "lowercase": false,
+      "norm": "l2",
+      "dtype": "float32",
+      "corpus_fitted_state": false,
+      "E5_or_semantic_model": false,
+      "purpose": "nonconfirmatory_software_pilot_only",
+      "limitations": [
+        "hash collisions",
+        "lexical similarity not audited semantic duplication",
+        "preview sampling and connector rendering",
+        "no held-out NLP utility claim"
+      ],
+      "array_sha256": "f600b813449fb238f40c1452b4058ad2f3cb606a769d91008257891394b162d0"
+    },
+    "evaluation": {
+      "name": "sklearn.HashingVectorizer",
+      "n_features": 768,
+      "analyzer": "word",
+      "ngrams": [
+        1,
+        2
+      ],
+      "alternate_sign": false,
+      "lowercase": false,
+      "norm": "l2",
+      "dtype": "float32",
+      "corpus_fitted_state": false,
+      "E5_or_semantic_model": false,
+      "purpose": "nonconfirmatory_software_pilot_only",
+      "limitations": [
+        "hash collisions",
+        "lexical similarity not audited semantic duplication",
+        "preview sampling and connector rendering",
+        "no held-out NLP utility claim"
+      ],
+      "array_sha256": "62f9187c10e299d56f279e1fbb5e81b0cf651c1dd36716b2b82f0d78c475ca0e"
+    }
+  }
+]

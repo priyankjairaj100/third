@@ -1,0 +1,49 @@
+{
+  "learner": {
+    "name": "sklearn.HashingVectorizer",
+    "n_features": 768,
+    "analyzer": "word",
+    "ngrams": [
+      1,
+      2
+    ],
+    "alternate_sign": false,
+    "lowercase": false,
+    "norm": "l2",
+    "dtype": "float32",
+    "corpus_fitted_state": false,
+    "E5_or_semantic_model": false,
+    "purpose": "nonconfirmatory_software_pilot_only",
+    "limitations": [
+      "hash collisions",
+      "lexical similarity not audited semantic duplication",
+      "preview sampling and connector rendering",
+      "no held-out NLP utility claim"
+    ],
+    "array_sha256": "d2436f8109a9645a997082224d913eea20cca5761e97ff4b5e8052a95e08df70"
+  },
+  "curator": {
+    "name": "sklearn.HashingVectorizer",
+    "n_features": 128,
+    "analyzer": "word",
+    "ngrams": [
+      1,
+      2
+    ],
+    "alternate_sign": false,
+    "lowercase": false,
+    "norm": "l2",
+    "dtype": "float32",
+    "corpus_fitted_state": false,
+    "E5_or_semantic_model": false,
+    "purpose": "nonconfirmatory_software_pilot_only",
+    "limitations": [
+      "hash collisions",
+      "lexical similarity not audited semantic duplication",
+      "preview sampling and connector rendering",
+      "no held-out NLP utility claim"
+    ],
+    "array_sha256": "03f1661550b3ddab6e680502794724aec1b0bcbaaf27d2eeb02251fa62e84ab7"
+  },
+  "graph_fixed_across_learner_dimensions": true
+}

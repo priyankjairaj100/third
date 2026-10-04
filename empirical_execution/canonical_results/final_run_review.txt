@@ -1,0 +1,64 @@
+FINAL READ-ONLY VALIDATION AUDIT
+
+Inspected run_canonical_validation.py, strict_service.py, final summary.json,
+design.json, checkpoints.jsonl and full_deletion.json without rerunning the
+experiment or modifying tested implementation files.
+
+Freshness and counts
+The final summary was written at 2026-10-04 04:16:01 environment time, after the
+full-run design at 04:10:57. It reports and the logs contain 40 regular releases,
+100 sequential full-deletion releases, and 10 history comparisons. These are the
+full results, not the earlier quick-run summary. All four core implementation
+source modification times preceded the full run's design creation.
+
+All 140 logged releases have fresh_bytes_equal=true. Full-deletion counts are
+exactly 1 through 100 in order. All 10 history comparisons report equality for
+batched, singleton, reversed-singleton, fresh and saved/reloaded states. Their
+candidate heads also match within the same runtime. The service release gate
+is an additional check, not part of the 140 release count.
+
+Certificate audit
+For each of the 140 records, parsed numerator/denominator values with Python
+Fraction. For every positive count n, confirmed exactly:
+    error_squared_bound = residual_squared / (lambda*n)^2.
+Confirmed nonnegative bounds, rational upper_bound^2 >= error_squared_bound,
+error_squared_bound <= 1/10^20, and empty_target iff n=0. No formula or bound
+inconsistency occurred. The maximum recorded upward decimal norm bound is:
+    0.0000000000000433557571097132186183302395
+The final empty-target certificate has n=0 and exact squared error bound 0.
+
+Target guarantee
+The certificate checks exact PSD of the retained aggregate Gram core. Hence
+G=U A U^T is PSD, and for n>0, G+lambda*n I >= lambda*n I > 0. This establishes
+positive definiteness of the ridge Hessian, not necessarily of Gram itself.
+Each fresh comparison rebuilds from retained rows and a rescored retained
+curator graph; byte equality binds the repaired target to that exact rebuild.
+The independent rational algebra tests support the canonicalizer and certificate
+arithmetic. This is a guarantee for exact aggregation of the frozen binary
+inputs, not identical floating summation to the legacy training implementation.
+
+Hash audit
+All five source hashes recorded in summary.json match the files inspected:
+run_canonical_validation.py
+  230c7ef77e16238ea798bd6807ccec09ac4dca1273b3c00f7b935dd26f76dab2
+ccu/exact_canonical.py
+  ce29c38ee664e7d0173a3ea26d2221b1d40f2981163ee1a6a9af2cbed76fe05b
+ccu/certified_ridge.py
+  634a7a79236670476275765b47a6c549fd26fbe66fd66fac93deb301d96f2cf5
+ccu/strict_service.py
+  486a63b394b650b7ff9fa454ccab0c6a53442fa712dd7acbf620f54b7353cdf7
+ccu/native/exact_chart.cpp
+  00f5353aeb22fd84f41fb99fd45378f29538ef8285940d106854a5068f807da4
+The Civil Comments preview file matches the data SHA recorded in design.json.
+The compiled native helper's SHA256 at audit time is:
+  11ff688c95a304335b3ce427246cd2ec7fc7e72325e041cb7cab769865d640c4
+The package manifest should additionally capture the native executable and
+curator/data helper sources; they are not among the five summary source hashes.
+
+Scope
+This run uses record deletions on 100 unchanged real Civil Comments preview
+records, lexical engineering features, and original toxicity fields. It does
+not establish source-withdrawal performance, semantic NLP quality, or a full
+confirmatory study. Numerical agreement across one runtime is not universal
+hardware-independent head-byte canonicality. No expensive tests were rerun for
+this final audit.

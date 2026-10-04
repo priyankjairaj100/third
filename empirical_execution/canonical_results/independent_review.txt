@@ -1,0 +1,72 @@
+INDEPENDENT REVIEW: EXACT CANONICAL SUMMARY AND RIGOROUS RESIDUAL CERTIFICATE
+
+Scope
+The reviewed contract is canonical serialized logical aggregate state for a
+fixed public identifier universe, canonical FP32 feature values, canonical
+FP64 target values, a frozen curator graph, current alive identifiers, and
+remaining deletion horizon. It is not a guarantee about allocator remnants,
+backups, historical files, private raw-data nonrecoverability, or all floating
+solver output bytes across machines. Independent checks are algebraic software
+fixtures; they are not empirical synthetic-dataset results.
+
+Certificate review
+The exact Schur-complement PSD check is correct, including zero pivots. The
+factor residual evaluates the represented target with arbitrary rational,
+nonorthogonal U. PSD(A) is sufficient for PSD(U A U^T); the test can reject some
+valid rank-deficient representations, but cannot falsely certify PSD. Coercivity
+lambda*n yields the stated Frobenius error bound. Empty targets are separately
+checked, and integer arithmetic produces an upward square-root bound.
+Finite binary inputs are treated as their exact rational values. The certificate
+binds its supplied target; it does not recover information lost in an old FP64
+summary or prove that a separately supplied target matches original data.
+
+Independent certificate evidence
+243 exact rational ridge oracle comparisons, with nonorthogonal/rank-deficient
+factor cases, passed. 1,984 integer square-root ceiling checks, four invalid
+PSD/asymmetry rejections and two empty-target cases passed. A minor unsupported
+NumPy extended-float recursion risk was reported and fixed by explicit rejection.
+The main FP32/FP64/Fraction conversion path was sound.
+
+Canonical chart review
+RREF of W^T produces the unique pivot-identity chart for its span. Restricting
+the core to range([A,B]) and recanonicalizing in ambient coordinates yields the
+unique chart of range([G,H]). Its stored cores are G[P,P] and H[P,:]. Exact
+addition/substitution, horizon truncation and exact zero removal therefore
+produce the same coefficient semantics and serialization as a fresh build.
+The current serialized fields do not include backend, old charts, records,
+labels, graph, request sequence or previous coefficient states. Alive IDs and
+remaining horizon are explicit current-state inputs. Construction uses bounded
+chunks instead of an N-by-N signed diagonal temporary.
+
+Independent canonical-core evidence
+66 comparisons against a separately implemented dense ambient RREF oracle
+passed, including indefinite signed coefficients, rank-deficient generators,
+G=0 with H!=0, and zero rank. Reconstruction and canonical idempotence passed
+for each. Three additional comparisons with input numerators of 128, 522 and
+1,025 bits matched Python rational arithmetic. The installed GMP helper's
+declared LP64 layout and integer/rational operations match the used public ABI;
+its self-test plus these cross-implementation checks support this environment,
+not universal binary portability. Portable fallback uses Python Fraction.
+
+Discovered and fixed loader bug
+Initially, replacing public identifier 1 by JSON true was accepted because
+Python bool is an int and True == 1. This admitted distinct serialization bytes
+for the same logical identifier set. The implementation now requires strict
+nonboolean integers and explicit exceptions instead of assertion validation.
+Six Boolean/type/shape variants were independently rejected under python -O,
+and the valid serialization roundtrip passed.
+
+Remaining cost/claim boundaries
+The exact reference delete method scans coefficient keys despite retaining
+derived inverse/degree indexes. Do not claim affected-key-only runtime for this
+implementation. Rational scalar-count bounds are not fixed-byte bounds: exact
+integer growth, serialized bytes, temporary storage and time need separate
+measurement. Exact canonical aggregate state plus a certified approximate head
+does not imply canonical floating head bytes; that additional contract needs an
+exact solve and specified rounding. Physical memory erasure is outside scope.
+
+Disposition
+No remaining critical correctness defect found in the intended exact serialized
+aggregate-state and exact residual-certificate contracts after the fixes above.
+This review is mathematical/code review and independent executable checking,
+not formal verification in a proof assistant or a claim of production hardening.

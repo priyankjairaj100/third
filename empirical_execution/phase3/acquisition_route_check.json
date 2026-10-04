@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-04",
+  "scope": "supported acquisition capabilities and current conversation workspace",
+  "inspections": [
+    {
+      "route": "Hugging Face model metadata",
+      "result": "E5 metadata available; no model files imported"
+    },
+    {
+      "route": "Hugging Face Civil Comments dataset_structure",
+      "result": "schema/parquet URLs exposed; eight fields (text and seven toxicity labels), no native article/publication source IDs"
+    },
+    {
+      "route": "Hugging Face documentation reader",
+      "result": "advertised reader unavailable in active tools"
+    },
+    {
+      "route": "plugin capability discovery",
+      "result": "no supported corpus/model byte import route identified"
+    },
+    {
+      "route": "workspace asset inspection",
+      "result": "no original source-rich corpus or semantic model/cache assets present"
+    },
+    {
+      "route": "runtime inspection",
+      "result": "torch, transformers, sentence_transformers, datasets, pyarrow and onnxruntime unavailable"
+    }
+  ],
+  "conclusion": {
+    "local_binary_assets_present": false,
+    "semantic_runtime_present": false,
+    "connector_exposes": "metadata, schema, public parquet URLs and preview rows; no supported local model/corpus byte transfer found",
+    "download_hosts_in_execution_allowlist": false,
+    "remote_jobs_used": false,
+    "missing_files_imported": false
+  }
+}

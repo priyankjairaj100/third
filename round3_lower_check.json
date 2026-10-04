@@ -1,0 +1,20 @@
+{
+  "checks_passed": true,
+  "fixed_test_candidate_count": 7,
+  "signature_dimension": 7,
+  "candidate_min_template_energy": 0.0271267361111111,
+  "candidate_energy_lower_bound": 0.027126736111111112,
+  "full_rank_test_max_energy_formula_error": 3.469446951953614e-18,
+  "quadratic_objective_cases_checked": 1400,
+  "min_excess_minus_projection_bound": 0.2596472587982728,
+  "scalar_excess_identity_max_error": 3.885780586188048e-16,
+  "cover_code_word_length": 4,
+  "cover_code_radius": 1,
+  "cover_code_cardinality": 4,
+  "symmetrization_coordinate_cases_checked": 24576,
+  "worst_fixed_y_query_expected_squared_error": 0.15625,
+  "guaranteed_expected_squared_error": 0.1875,
+  "worst_fixed_y_query_bit_failure_probability": 0.1875,
+  "guaranteed_bit_failure_probability": 0.25,
+  "limitations": "Finite algebra/coding checks; no NLP experiment or efficient optimal codec claim."
+}

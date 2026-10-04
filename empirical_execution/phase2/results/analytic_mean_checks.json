@@ -1,0 +1,138 @@
+[
+  {
+    "arm": "R",
+    "checkpoint": 1,
+    "theoretical_mean_from_same_graph": {
+      "unit": "record",
+      "request_size": 1,
+      "service_universe_size": 82,
+      "sampling_frame_size": 82,
+      "initially_excluded_records": 27,
+      "own_source_blocker_records": 0,
+      "blockers_outside_sampling_frame_records": 0,
+      "expected_admissions": 0.04878048780487805,
+      "interpretation": "mean number, not probability of any admission"
+    },
+    "sample_mean_admissions": 0.03125,
+    "scope": "sampler check; shared graph is not independent theorem evidence"
+  },
+  {
+    "arm": "R",
+    "checkpoint": 2,
+    "theoretical_mean_from_same_graph": {
+      "unit": "record",
+      "request_size": 2,
+      "service_universe_size": 82,
+      "sampling_frame_size": 82,
+      "initially_excluded_records": 27,
+      "own_source_blocker_records": 0,
+      "blockers_outside_sampling_frame_records": 0,
+      "expected_admissions": 0.09786208973200843,
+      "interpretation": "mean number, not probability of any admission"
+    },
+    "sample_mean_admissions": 0.078125,
+    "scope": "sampler check; shared graph is not independent theorem evidence"
+  },
+  {
+    "arm": "R",
+    "checkpoint": 4,
+    "theoretical_mean_from_same_graph": {
+      "unit": "record",
+      "request_size": 4,
+      "service_universe_size": 82,
+      "sampling_frame_size": 82,
+      "initially_excluded_records": 27,
+      "own_source_blocker_records": 0,
+      "blockers_outside_sampling_frame_records": 0,
+      "expected_admissions": 0.19674853921534996,
+      "interpretation": "mean number, not probability of any admission"
+    },
+    "sample_mean_admissions": 0.15625,
+    "scope": "sampler check; shared graph is not independent theorem evidence"
+  },
+  {
+    "arm": "R",
+    "checkpoint": 8,
+    "theoretical_mean_from_same_graph": {
+      "unit": "record",
+      "request_size": 8,
+      "service_universe_size": 82,
+      "sampling_frame_size": 82,
+      "initially_excluded_records": 27,
+      "own_source_blocker_records": 0,
+      "blockers_outside_sampling_frame_records": 0,
+      "expected_admissions": 0.3961837125004228,
+      "interpretation": "mean number, not probability of any admission"
+    },
+    "sample_mean_admissions": 0.34375,
+    "scope": "sampler check; shared graph is not independent theorem evidence"
+  },
+  {
+    "arm": "U",
+    "checkpoint": 1,
+    "theoretical_mean_from_same_graph": {
+      "unit": "record",
+      "request_size": 1,
+      "service_universe_size": 82,
+      "sampling_frame_size": 27,
+      "initially_excluded_records": 27,
+      "own_source_blocker_records": 0,
+      "blockers_outside_sampling_frame_records": 18,
+      "expected_admissions": 0.1111111111111111,
+      "interpretation": "mean number, not probability of any admission"
+    },
+    "sample_mean_admissions": 0.21875,
+    "scope": "sampler check; shared graph is not independent theorem evidence"
+  },
+  {
+    "arm": "U",
+    "checkpoint": 2,
+    "theoretical_mean_from_same_graph": {
+      "unit": "record",
+      "request_size": 2,
+      "service_universe_size": 82,
+      "sampling_frame_size": 27,
+      "initially_excluded_records": 27,
+      "own_source_blocker_records": 0,
+      "blockers_outside_sampling_frame_records": 18,
+      "expected_admissions": 0.22222222222222224,
+      "interpretation": "mean number, not probability of any admission"
+    },
+    "sample_mean_admissions": 0.40625,
+    "scope": "sampler check; shared graph is not independent theorem evidence"
+  },
+  {
+    "arm": "U",
+    "checkpoint": 4,
+    "theoretical_mean_from_same_graph": {
+      "unit": "record",
+      "request_size": 4,
+      "service_universe_size": 82,
+      "sampling_frame_size": 27,
+      "initially_excluded_records": 27,
+      "own_source_blocker_records": 0,
+      "blockers_outside_sampling_frame_records": 18,
+      "expected_admissions": 0.4417094017094017,
+      "interpretation": "mean number, not probability of any admission"
+    },
+    "sample_mean_admissions": 0.625,
+    "scope": "sampler check; shared graph is not independent theorem evidence"
+  },
+  {
+    "arm": "U",
+    "checkpoint": 8,
+    "theoretical_mean_from_same_graph": {
+      "unit": "record",
+      "request_size": 8,
+      "service_universe_size": 82,
+      "sampling_frame_size": 27,
+      "initially_excluded_records": 27,
+      "own_source_blocker_records": 0,
+      "blockers_outside_sampling_frame_records": 18,
+      "expected_admissions": 0.8499902030336813,
+      "interpretation": "mean number, not probability of any admission"
+    },
+    "sample_mean_admissions": 0.90625,
+    "scope": "sampler check; shared graph is not independent theorem evidence"
+  }
+]

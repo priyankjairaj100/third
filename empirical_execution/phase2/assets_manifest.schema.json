@@ -1,0 +1,274 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ccu:local-intake:1",
+  "title": "Counterfactual curation local asset intake",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "synthetic_data_allowed",
+    "study_design",
+    "datasets"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "ccu-local-intake-1"
+    },
+    "synthetic_data_allowed": {
+      "const": false
+    },
+    "study_design": {
+      "$ref": "#/$defs/artifact"
+    },
+    "datasets": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/dataset"
+      }
+    }
+  },
+  "$defs": {
+    "artifact": {
+      "type": "object",
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "dataset": {
+      "type": "object",
+      "required": [
+        "dataset_id",
+        "outputs",
+        "origin",
+        "rows",
+        "embeddings",
+        "calibration"
+      ],
+      "properties": {
+        "dataset_id": {
+          "enum": [
+            "civil_comments",
+            "askubuntu",
+            "english_stackexchange",
+            "cc_news"
+          ]
+        },
+        "outputs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "rows": {
+          "$ref": "#/$defs/artifact"
+        },
+        "origin": {
+          "type": "object",
+          "required": [
+            "repository_or_archive",
+            "immutable_revision",
+            "original_release",
+            "sampling_rule",
+            "original_files",
+            "extraction_code",
+            "extraction_log"
+          ],
+          "properties": {
+            "original_files": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/$defs/artifact"
+              }
+            },
+            "extraction_code": {
+              "$ref": "#/$defs/artifact"
+            },
+            "extraction_log": {
+              "$ref": "#/$defs/artifact"
+            }
+          }
+        },
+        "embeddings": {
+          "type": "object",
+          "required": [
+            "encoder_id",
+            "encoder_revision",
+            "tokenizer_revision",
+            "encoder_components",
+            "tokenizer_components",
+            "array",
+            "row_ids",
+            "shape",
+            "preprocessing",
+            "embedding_code",
+            "embedding_run_log"
+          ],
+          "properties": {
+            "encoder_id": {
+              "const": "intfloat/multilingual-e5-base"
+            },
+            "array": {
+              "$ref": "#/$defs/artifact"
+            },
+            "row_ids": {
+              "$ref": "#/$defs/artifact"
+            },
+            "shape": {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                {
+                  "const": 768
+                }
+              ],
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "preprocessing": {
+              "const": {
+                "chunk_content_tokens": 256,
+                "chunking": "nonoverlapping_all_chunks",
+                "pooling": "content_token_weighted_mean_then_normalize",
+                "prefix": "query: ",
+                "storage_dtype": "float32",
+                "learner_normalization": "no_renormalization_after_FP32_storage"
+              }
+            }
+          }
+        },
+        "calibration": {
+          "type": "object",
+          "required": [
+            "pairs",
+            "responses",
+            "instructions",
+            "sampling_code",
+            "sampling_log",
+            "quality_report"
+          ],
+          "properties": {
+            "pairs": {
+              "$ref": "#/$defs/artifact"
+            },
+            "responses": {
+              "$ref": "#/$defs/artifact"
+            },
+            "instructions": {
+              "$ref": "#/$defs/artifact"
+            },
+            "sampling_code": {
+              "$ref": "#/$defs/artifact"
+            },
+            "sampling_log": {
+              "$ref": "#/$defs/artifact"
+            },
+            "quality_report": {
+              "$ref": "#/$defs/artifact"
+            }
+          }
+        }
+      }
+    },
+    "row": {
+      "type": "object",
+      "required": [
+        "record_id",
+        "source_unit_id",
+        "partition",
+        "text",
+        "labels",
+        "original_fields"
+      ],
+      "properties": {
+        "record_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_unit_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "partition": {
+          "enum": [
+            "train",
+            "calibration",
+            "test"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "labels": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "original_fields": {
+          "type": "object"
+        }
+      }
+    },
+    "calibration_pair": {
+      "type": "object",
+      "required": [
+        "pair_id",
+        "left_id",
+        "right_id",
+        "role",
+        "score",
+        "inclusion_probability"
+      ],
+      "properties": {
+        "role": {
+          "enum": [
+            "threshold_selection",
+            "quality_validation"
+          ]
+        },
+        "score": {
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        },
+        "inclusion_probability": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "response": {
+      "type": "object",
+      "required": [
+        "response_id",
+        "pair_id",
+        "annotator_id",
+        "label"
+      ],
+      "properties": {
+        "label": {
+          "enum": [
+            "duplicate",
+            "not_duplicate",
+            "unsure"
+          ]
+        }
+      }
+    }
+  }
+}

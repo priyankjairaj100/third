@@ -1,0 +1,32 @@
+{
+  "B-E": {
+    "mode": "record",
+    "remaining_horizon": 8,
+    "alive_service_units": 100,
+    "eligible_payload_records": 100,
+    "selected_records": 99,
+    "blocker_incidences": 1,
+    "feature_array_bytes": 307200,
+    "target_array_bytes": 800,
+    "moment_array_bytes": 4724736,
+    "all_array_bytes": 5032736,
+    "python_owned_bytes_estimate": 5151225
+  },
+  "P-I": {
+    "method": "P-index-python-numpy",
+    "state_contract": "current coefficients and head; no selected-ID recovery",
+    "coefficient_count": 101,
+    "packed_dimension": 296065,
+    "numeric_coefficient_bytes": 239220520,
+    "python_live_bytes_estimate": 239292964,
+    "python_metadata_bytes_estimate": 72444,
+    "alive_public_identifiers": 100,
+    "remaining_horizon": 8,
+    "key_incidences": 101,
+    "quadratic_key_potential": 102,
+    "retained_feature_rows": 0,
+    "retained_target_rows": 0,
+    "retained_original_graph": false,
+    "numeric_guarantee": "FP64 diagnostic fidelity; not certified roundoff"
+  }
+}

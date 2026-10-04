@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "natural_records": 100,
+  "dimension": 128,
+  "edge_count": 332,
+  "checks": 10,
+  "bit_exact_score_entries_checked": 10000,
+  "tile_row_order_and_retained_context_invariant": true,
+  "scope": "lexical engineering natural fixture; not semantic quality or real-arithmetic score certificate",
+  "data_sha256": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9",
+  "code_sha256": {
+    "check_reference_graph.py": "98b2fe0ea157b7032fbce58a96e3147db35e6002522ab04433139c4077c9aabe",
+    "reference_graph.py": "efc41498648f6f7f7969768fbcd050619d7ed5d6e82eafadb1b9a3a2158e9d1c",
+    "panels.py": "bd2409958ac9a9e27faf463b44b2f839260a3195c7cde32fb3bfb76aeb14a04b"
+  }
+}

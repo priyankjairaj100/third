@@ -1,0 +1,74 @@
+[
+  {
+    "arm": "R",
+    "checkpoint": 1,
+    "paths": 64,
+    "distinct_deleted_sets": 43
+  },
+  {
+    "arm": "R",
+    "checkpoint": 2,
+    "paths": 64,
+    "distinct_deleted_sets": 64
+  },
+  {
+    "arm": "R",
+    "checkpoint": 4,
+    "paths": 64,
+    "distinct_deleted_sets": 64
+  },
+  {
+    "arm": "R",
+    "checkpoint": 8,
+    "paths": 64,
+    "distinct_deleted_sets": 64
+  },
+  {
+    "arm": "U",
+    "checkpoint": 1,
+    "paths": 32,
+    "distinct_deleted_sets": 20
+  },
+  {
+    "arm": "U",
+    "checkpoint": 2,
+    "paths": 32,
+    "distinct_deleted_sets": 32
+  },
+  {
+    "arm": "U",
+    "checkpoint": 4,
+    "paths": 32,
+    "distinct_deleted_sets": 32
+  },
+  {
+    "arm": "U",
+    "checkpoint": 8,
+    "paths": 32,
+    "distinct_deleted_sets": 32
+  },
+  {
+    "arm": "A",
+    "checkpoint": 1,
+    "paths": 16,
+    "distinct_deleted_sets": 1
+  },
+  {
+    "arm": "A",
+    "checkpoint": 2,
+    "paths": 16,
+    "distinct_deleted_sets": 1
+  },
+  {
+    "arm": "A",
+    "checkpoint": 4,
+    "paths": 16,
+    "distinct_deleted_sets": 1
+  },
+  {
+    "arm": "A",
+    "checkpoint": 8,
+    "paths": 16,
+    "distinct_deleted_sets": 15
+  }
+]

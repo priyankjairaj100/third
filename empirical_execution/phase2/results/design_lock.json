@@ -1,0 +1,75 @@
+{
+  "status": "development_lock_before_this_run_outcomes_not_preregistration",
+  "scope": "reused Civil100 preview; lexical engineering; no source or semantic inference",
+  "all_computation_local": true,
+  "synthetic_empirical_data": false,
+  "confirmatory": false,
+  "split_salt": "ccu-phase2-development-exacttext-split-v1",
+  "grouping": "NFC plus collapsed whitespace; preserve case",
+  "train_hash_fraction": "4/5",
+  "no_split_retry": true,
+  "source_group_split": false,
+  "previously_seen_in_engineering": true,
+  "dimensions": [
+    64,
+    768
+  ],
+  "lambda": 0.01,
+  "threshold": 0.6,
+  "curator_features": {
+    "name": "sklearn.HashingVectorizer",
+    "n_features": 128,
+    "analyzer": "word",
+    "ngrams": [
+      1,
+      2
+    ],
+    "alternate_sign": false,
+    "lowercase": false,
+    "norm": "l2",
+    "dtype": "float32",
+    "corpus_fitted_state": false,
+    "E5_or_semantic_model": false,
+    "purpose": "nonconfirmatory_software_pilot_only",
+    "limitations": [
+      "hash collisions",
+      "lexical similarity not audited semantic duplication",
+      "preview sampling and connector rendering",
+      "no held-out NLP utility claim"
+    ],
+    "array_sha256": "323ed10d8bc743d57879441bbd8f939f6b825d96aa2190638be463c5f0774659"
+  },
+  "requested_horizon": 8,
+  "requested_checkpoints": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "allocations": {
+    "R": 64,
+    "U": 32,
+    "A": 16
+  },
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20271004,
+  "baseline": "fresh refit on retained initial-selected rows with same lambda*n normalization",
+  "oracle": "independently rescore retained training-only graph and rebuild moments",
+  "strict_audit_paths": "first R,U,A path in stable ID order, d=768 only; all their checkpoints",
+  "failure_policy": "record and stop; do not reroll or silently omit",
+  "corpus_sha256": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9",
+  "source_hashes": {
+    "phase2/run_development.py": "e486ff95bb8cb64cddb3b5c4007066cbeae3ec9b4e9f77e7af0c3bb8dc3da9b1",
+    "phase2/analysis.py": "08e26e0a8c9836e4a2446dd6f5c003293b125f8e090e7c3b5a759a0d61b1dc75",
+    "ccu/core.py": "d89f6affd566103c65aa92f10e02ac86e394f7a1f88ff2e6b098720b8cef7df3",
+    "ccu/data.py": "fd4f8e5d17ca998995b30492dd94699aa330504fe6285f82cfe1d92d30de8e27",
+    "ccu/structure.py": "91b32e4e368231acfdd39ce7462c1a16a679a6332c3479644aaa7a2d7d1cb5da",
+    "ccu/summary.py": "4ba0f4ad3cf386f2493461d4924c6fda6467a6399f266a13f61f4966cef3e498",
+    "ccu/exact_canonical.py": "ce29c38ee664e7d0173a3ea26d2221b1d40f2981163ee1a6a9af2cbed76fe05b",
+    "ccu/certified_ridge.py": "634a7a79236670476275765b47a6c549fd26fbe66fd66fac93deb301d96f2cf5",
+    "ccu/native/exact_chart.cpp": "00f5353aeb22fd84f41fb99fd45378f29538ef8285940d106854a5068f807da4",
+    "ccu/native/exact_chart": "11ff688c95a304335b3ce427246cd2ec7fc7e72325e041cb7cab769865d640c4"
+  },
+  "python_version": "3.12.14",
+  "numpy_version": "2.3.5"
+}

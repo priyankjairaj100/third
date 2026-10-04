@@ -1,0 +1,239 @@
+{
+  "passed": true,
+  "scope": "27 exhaustive metadata/guard branch fixtures; no empirical corpus or invented human labels",
+  "guard_branch_checks": 27,
+  "checks": [
+    {
+      "kind": "parent",
+      "left_partition": "train",
+      "right_partition": "train",
+      "retained_ids": [
+        "software-left",
+        "software-right"
+      ]
+    },
+    {
+      "kind": "parent",
+      "left_partition": "train",
+      "right_partition": "calibration",
+      "retained_ids": [
+        "software-right"
+      ]
+    },
+    {
+      "kind": "parent",
+      "left_partition": "train",
+      "right_partition": "test",
+      "retained_ids": [
+        "software-right"
+      ]
+    },
+    {
+      "kind": "parent",
+      "left_partition": "calibration",
+      "right_partition": "train",
+      "retained_ids": [
+        "software-left",
+        "software-right"
+      ]
+    },
+    {
+      "kind": "parent",
+      "left_partition": "calibration",
+      "right_partition": "calibration",
+      "retained_ids": [
+        "software-left",
+        "software-right"
+      ]
+    },
+    {
+      "kind": "parent",
+      "left_partition": "calibration",
+      "right_partition": "test",
+      "retained_ids": [
+        "software-left",
+        "software-right"
+      ]
+    },
+    {
+      "kind": "parent",
+      "left_partition": "test",
+      "right_partition": "train",
+      "retained_ids": [
+        "software-left",
+        "software-right"
+      ]
+    },
+    {
+      "kind": "parent",
+      "left_partition": "test",
+      "right_partition": "calibration",
+      "retained_ids": [
+        "software-left",
+        "software-right"
+      ]
+    },
+    {
+      "kind": "parent",
+      "left_partition": "test",
+      "right_partition": "test",
+      "retained_ids": [
+        "software-left",
+        "software-right"
+      ]
+    },
+    {
+      "kind": "exact",
+      "left_partition": "train",
+      "right_partition": "train",
+      "retained_ids": [
+        "software-left",
+        "software-right"
+      ]
+    },
+    {
+      "kind": "exact",
+      "left_partition": "train",
+      "right_partition": "calibration",
+      "retained_ids": [
+        "software-right"
+      ]
+    },
+    {
+      "kind": "exact",
+      "left_partition": "train",
+      "right_partition": "test",
+      "retained_ids": [
+        "software-right"
+      ]
+    },
+    {
+      "kind": "exact",
+      "left_partition": "calibration",
+      "right_partition": "train",
+      "retained_ids": [
+        "software-left"
+      ]
+    },
+    {
+      "kind": "exact",
+      "left_partition": "calibration",
+      "right_partition": "calibration",
+      "retained_ids": [
+        "software-left",
+        "software-right"
+      ]
+    },
+    {
+      "kind": "exact",
+      "left_partition": "calibration",
+      "right_partition": "test",
+      "retained_ids": [
+        "software-right"
+      ]
+    },
+    {
+      "kind": "exact",
+      "left_partition": "test",
+      "right_partition": "train",
+      "retained_ids": [
+        "software-left"
+      ]
+    },
+    {
+      "kind": "exact",
+      "left_partition": "test",
+      "right_partition": "calibration",
+      "retained_ids": [
+        "software-left"
+      ]
+    },
+    {
+      "kind": "exact",
+      "left_partition": "test",
+      "right_partition": "test",
+      "retained_ids": [
+        "software-left",
+        "software-right"
+      ]
+    },
+    {
+      "kind": "duplicate_link",
+      "left_partition": "train",
+      "right_partition": "train",
+      "retained_ids": [
+        "software-left",
+        "software-right"
+      ]
+    },
+    {
+      "kind": "duplicate_link",
+      "left_partition": "train",
+      "right_partition": "calibration",
+      "retained_ids": [
+        "software-right"
+      ]
+    },
+    {
+      "kind": "duplicate_link",
+      "left_partition": "train",
+      "right_partition": "test",
+      "retained_ids": [
+        "software-right"
+      ]
+    },
+    {
+      "kind": "duplicate_link",
+      "left_partition": "calibration",
+      "right_partition": "train",
+      "retained_ids": [
+        "software-left"
+      ]
+    },
+    {
+      "kind": "duplicate_link",
+      "left_partition": "calibration",
+      "right_partition": "calibration",
+      "retained_ids": [
+        "software-left",
+        "software-right"
+      ]
+    },
+    {
+      "kind": "duplicate_link",
+      "left_partition": "calibration",
+      "right_partition": "test",
+      "retained_ids": [
+        "software-right"
+      ]
+    },
+    {
+      "kind": "duplicate_link",
+      "left_partition": "test",
+      "right_partition": "train",
+      "retained_ids": [
+        "software-left"
+      ]
+    },
+    {
+      "kind": "duplicate_link",
+      "left_partition": "test",
+      "right_partition": "calibration",
+      "retained_ids": [
+        "software-left"
+      ]
+    },
+    {
+      "kind": "duplicate_link",
+      "left_partition": "test",
+      "right_partition": "test",
+      "retained_ids": [
+        "software-left",
+        "software-right"
+      ]
+    }
+  ],
+  "nonpositive_or_missing_account_cases": 8,
+  "invalid_native_identifier_cases": 7,
+  "code_sha256": "bd2409958ac9a9e27faf463b44b2f839260a3195c7cde32fb3bfb76aeb14a04b"
+}

@@ -1,0 +1,65 @@
+Independent development-run review
+Date: 2026-10-04
+
+Scope: static review before execution; saved-result validation after execution.
+The review does not certify semantic duplication quality, source independence,
+population prevalence, or publication readiness.
+
+Two concrete integration defects were found and corrected before the recorded
+design lock and run:
+1. The runner's raw signed effect field was named mse_difference while the
+   analysis expected mse_effect. The runner now uses prediction_metrics(),
+   including its explicit undefined-ratio and constant-score handling.
+2. The result cache retained dense OracleResult Gram matrices. It now retains
+   only selected sets, admission sets and prediction arrays, discarding each
+   oracle immediately. This avoids up to roughly 2 GB of unnecessary 768-D
+   Gram retention across the maximum 448 checkpoints per dimension.
+
+The final audited runner/analysis hashes match the design-lock hashes.
+Independent audit code imports no production curation, repair, or analysis
+module. It reconstructs the exact-text grouping and deterministic split;
+reconstructs label-blind R/U/A request streams; directly rescores all retained
+earlier raw neighbors; and solves ridge independently using the dual system.
+The recorded run uses the primal Cholesky solver.
+
+Passed checks:
+- 10 locked source hashes, 100 partition assignments, 112 request streams.
+- All 896 checkpoint rows, including selected/admitted/deleted sets.
+- 8,064 saved metric scalar checks.
+- All 336 bootstrap metric intervals, recomputed from full trajectory draws.
+- 14 utility-context scalars and the predelete prediction vectors.
+- 8 geometry fields and independent feature-cache hash reconstruction.
+- Presence of the 12 successful strict-mode checkpoint audit records.
+
+Maximum dual-vs-saved prediction absolute discrepancy: 1.1379786002407855e-15.
+Maximum independently recomputed metric discrepancy: 3.774758283725532e-15.
+This is an independent floating calculation check, not an extra roundoff
+certificate. The separately recorded strict certificates provide their own
+stated mathematical guarantee.
+
+Interpretation constraints that remain active:
+- The 100-row connector preview had already been used in engineering work.
+  Its 82/18 hash split is a reused development diagnostic, not untouched
+  confirmatory evaluation. Source IDs and original-byte fidelity are absent.
+- 119 training/evaluation lexical pairs exceed the fixed threshold 0.6.
+  Exact normalized-text grouping does not establish source or semantic
+  separation. No semantic/source leakage gate is claimed passed.
+- Hashing features are lexical and threshold 0.6 has no human semantic-quality
+  validation. Hash dimension 768 is not a run of the intended semantic encoder.
+- Every A path shares the same deleted set at checkpoints 1, 2 and 4. The 16
+  paths have 15 distinct final sets at checkpoint 8. Degenerate early A
+  bootstrap intervals reflect identical interventions, not high precision
+  from 16 different stress attacks.
+- Positive, negative and zero effects remain in the analysis. The mean effect
+  is conditional on this fixed preview, split, lexical representation and
+  request distribution. No natural-source withdrawal arm was fabricated.
+- No timing/system superiority, semantic generalization, multi-corpus task
+  utility or population effect is established by this diagnostic.
+
+Primary-study gates still require source-rich originals, frozen semantic
+encoder/tokenizer/cache provenance, an independent duplicate-quality audit,
+untouched source-disjoint splits, a second labeled corpus, native-scale
+baseline comparisons and timing replication, and human admission assessment.
+
+Machine-readable audit: independent_result_audit.json.
+Reproducer: ../audit_development_results.py.

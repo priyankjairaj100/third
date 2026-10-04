@@ -1,0 +1,215 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,booktabs,array,xcolor,enumitem,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!55!black]{hyperref}
+\definecolor{ink}{HTML}{19374C}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small Counterfactual curation}
+\fancyhead[R]{\small Empirical development, phase 2}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}
+\setlist{nosep,leftmargin=1.5em}
+\title{\color{ink}\textbf{From Repair Correctness to Task Consequences}\\[5pt]
+\Large Completed local development experiment\\and the remaining primary-study inputs}
+\author{ACL 2027 research project}\date{4 October 2026}
+\begin{document}\maketitle
+
+\textbf{Completed.} The empirical pipeline now connects deletion-induced
+admissions to predictions and loss on separate diagnostic evaluation records.
+A fixed 112 deletion trajectories were evaluated at four checkpoints in two
+learner dimensions: \textbf{896 checkpoint evaluations}. Twelve selected
+checkpoints additionally passed strict exact-state and numerical-certificate
+audits. All execution occurred in this workspace; no synthetic empirical data
+or external compute was used.
+
+\textbf{Finding.} In this small lexical preview, random deletion can admit
+previously excluded records, but the mean task effect is modest. Larger effects
+occur under topology stress. The initial curated model performs worse than
+simple reference models, so the preview does not establish useful semantic
+curation or a publication-ready NLP benefit.
+
+\textbf{Eight-deletion endpoint, 768-dimensional lexical learner.}
+R samples all training records, U samples initially excluded records, and A
+is label-blind graph stress. Positive relative MSE effect means frozen selection
+has higher loss than the freshly recurated oracle.
+\begin{center}\small
+\begin{tabular}{lrrrr}\toprule
+Arm & Paths with additions & Mean additions & Effect (\%) & Descriptive 95\% interval\\\midrule
+R & 19/64 & 0.344 & +0.100 & [-0.043, +0.264] \\
+U & 17/32 & 0.906 & +0.127 & [-0.129, +0.450] \\
+A & 16/16 & 6.062 & +4.453 & [+4.274, +4.624] \\
+\bottomrule\end{tabular}\end{center}
+The intervals condition on this one corpus, split and feature map. They do not
+include independent test-source uncertainty. Stress outcomes cannot be used
+as random-request prevalence, and no significance claim is made.
+
+\textbf{Study status.} The main semantic study remains blocked on original
+source-rich corpus assets, pinned semantic embeddings or usable local encoder
+assets, and genuine human semantic-quality evidence. An executable intake
+gate and an exact file-format template now make the next import concrete.
+\newpage
+
+\section*{What was fixed before outcomes}
+The same 100 Civil Comments preview records were grouped by NFC-normalized,
+whitespace-collapsed text, preserving case. A fixed salted hash assigned
+\textbf{82 development-training and 18 diagnostic-evaluation records}.
+There was no split retry. The records had already been available in earlier
+engineering work; the evaluation subset is not an untouched confirmatory test.
+
+The curator uses only training text: 128-dimensional lexical word/bigram
+hashing, strict cosine threshold 0.6 and stable priority. It initially selects
+55 of 82 training records and excludes 27, with 195 blocker edges. The learner
+uses either 64- or 768-dimensional lexical hashing, original fractional
+toxicity responses, $\lambda=0.01$, no intercept and unbounded ridge scores.
+These are not E5 representations. Neither threshold nor regularization was
+tuned on these evaluation outcomes.
+
+The runner saved the design, code/data hashes, partition IDs and graph-only
+requests before computing losses. Each dimension reuses the same 64 R,
+32 U and 16 A trajectories at cumulative deletion counts 1, 2, 4 and 8.
+There is no source arm: this fixture lacks native article/source metadata.
+
+\begin{center}\small
+\begin{tabular}{llrrrr}\toprule
+Arm & Deleted & Paths with additions & Mean additions & Effect64 (\%) & Effect768 (\%)\\\midrule
+R & 1 & 2/64 & 0.031 & +0.047 & +0.010 \\
+R & 2 & 5/64 & 0.078 & -0.007 & -0.007 \\
+R & 4 & 10/64 & 0.156 & +0.085 & +0.012 \\
+R & 8 & 19/64 & 0.344 & +0.353 & +0.100 \\
+U & 1 & 7/32 & 0.219 & -0.111 & -0.069 \\
+U & 2 & 12/32 & 0.406 & +0.048 & -0.100 \\
+U & 4 & 15/32 & 0.625 & +0.403 & +0.079 \\
+U & 8 & 17/32 & 0.906 & +0.629 & +0.127 \\
+A & 1 & 0/16 & 0.000 & +0.000 & +0.000 \\
+A & 2 & 0/16 & 0.000 & +0.000 & +0.000 \\
+A & 4 & 16/16 & 2.000 & +5.341 & +2.262 \\
+A & 8 & 16/16 & 6.062 & +13.946 & +4.453 \\
+\bottomrule\end{tabular}\end{center}
+All 658 zero-admission evaluation rows and all negative signed effects remain
+in the raw results. Tiny floating residues in zero-effect rows are retained
+in the ledger and round to zero here. The complete interval and distribution
+summaries for both dimensions accompany the report.
+
+At checkpoints 1, 2 and 4, all 16 A trajectories have the same deletion set;
+their degenerate intervals do not demonstrate precision across distinct stress
+cases. At checkpoint 8, A has 15 distinct deletion sets; R and U have 64 and
+32, respectively. Across all checkpoints there are 358 distinct deletion sets
+per dimension, not 448 distinct datasets.
+
+No normalized-exact-text group crosses the partition. However, 119
+training/evaluation lexical pairs exceed the threshold, and source/semantic
+leakage guards are incomplete. This is an evaluation-code diagnostic, not
+source-independent generalization evidence.
+\newpage
+
+\section*{Reference models, numerical fidelity and interpretation}
+The oracle O-G independently rescores retained training records, selects them
+under the stated curator, rebuilds moments and solves ridge. The frozen-selection
+baseline B-F \emph{refits} on surviving members of the initial selected set;
+it is not the unchanged predeletion model. Both use the same
+$(G+\lambda nI)W=H$ target. Evaluation records never enter either training state,
+the curation graph or request generation.
+
+\begin{center}\small
+\begin{tabular}{rrrrr}\toprule
+$d$ & Curated MSE & Uncurated MSE & Same-size hash MSE & Mean baseline MSE\\\midrule
+64 & 0.02694 & 0.01964 & 0.01708 & 0.02029 \\
+768 & 0.02364 & 0.02093 & 0.01919 & 0.02029 \\
+\bottomrule\end{tabular}\end{center}
+These are predeletion losses on the same 18 diagnostic records. The constant
+reference is the mean of the original training responses. The same-size control
+uses an outcome-blind ID hash. \textbf{Curated performance is worse in both
+dimensions.} This unfavorable result is preserved and blocks any utility
+success claim for the lexical operating point.
+
+The reported relative effect is
+\[
+\frac{\mathrm{MSE}_{\mathrm{frozen}}-\mathrm{MSE}_{\mathrm{oracle}}}
+{\mathrm{MSE}_{\mathrm{predelete}}}.
+\]
+Raw prediction RMS, fixed-score-SD-normalized RMS, raw signed loss differences,
+admission frequency and unconditional/active-only admission counts are also
+saved. Zero denominators remain undefined rather than receiving epsilon floors.
+Within each arm/checkpoint, 10,000 bootstrap draws resample entire reset
+trajectories and retain paired method differences. Independently sampled arms
+are never paired by their ordinal names; checkpoints are not pooled.
+
+\textbf{Strict integration.} At dimension 768, the first R, U and A paths
+were replayed through exact canonical state at all four checkpoints. All
+12 repaired byte strings equalled fresh retained-data exact construction.
+All 12 head certificates met $10^{-10}$ tolerance; the largest certified
+radius was $4.5091\times10^{-14}$. This is a scoped certificate audit,
+not a claim that all 896 floating evaluation rows were certified.
+
+\textbf{Independent result audit.} A separate verifier imports no production
+curation, repair or analysis module. It reconstructs partitions, requests,
+selected sets and metrics, and uses an independent dual ridge solve to check
+the runner's primal solver. It checks source hashes, saved prediction arrays,
+bootstrap intervals, the utility controls and geometry. Its full count and
+error ledger is included. The largest independently observed prediction
+difference was below $1.14\times10^{-15}$.
+
+\textbf{Decision supported by this stage.} The task-consequence measurement
+pipeline works on real labeled text and retains null/unfavorable outcomes.
+The next decisive experiment must use the planned semantic calibration and
+source-disjoint corpus panels. Increasing preview trajectory counts cannot
+replace those inputs.
+\newpage
+
+\section*{Concrete next inputs and execution sequence}
+The first useful import is a \textbf{source-rich original Civil Comments
+bundle}. The planned route is TFDS CivilComments 1.2.4 with original article,
+publication, record and response fields. Provide either usable local pinned
+E5 encoder/tokenizer/runtime assets, or an aligned frozen FP32 semantic
+embedding cache with derivation evidence. No external job is required by the
+intake or repair pipeline.
+
+\begin{enumerate}
+\item \textbf{Inspect original assets.} Validate hashes, row identity, original
+labels and native source construction. A partial import can start preparation;
+it does not silently lower the main panel-size target.
+\item \textbf{Prepare panels and semantic calibration.} Build source-disjoint
+training/calibration/test manifests and the prescribed cross-split guards.
+Create blinded pair assignments on calibration records only. Genuine human
+responses remain distinct from model-generated judgments.
+\item \textbf{Lock the study.} Freeze encoder/tokenizer revisions, embedding
+cache, threshold and independent quality validation, regularization, source
+units, requests, code and resource envelope before confirmation.
+\item \textbf{Run the planned evidence blocks.} Start the natural admission
+census and oracle/frozen-selection task effects, then compare exact/fast repair
+against the strongest eligible-payload baseline under matched access and cost
+accounting. Preserve infeasible and unfavorable cells. The second labeled
+corpus and full-refit boundary remain requirements of the complete program.
+\end{enumerate}
+
+\textbf{Executable intake.} The included validator checks local file hashes,
+unique original IDs, source-unit derivation, source-disjoint partitions,
+exact-text/parent-link guards, label copying, finite aligned FP32 arrays and
+calibration response structure. Eleven intake software checks passed; the
+placeholder manifest correctly fails 17 mechanical checks. A mechanically
+consistent file does not authenticate human work or historical provenance.
+The validator therefore never automatically declares the entire study ready.
+
+The cache interface is a rank-two FP32 \texttt{.npy} array aligned to a JSON
+row-ID list, with corpus and encoder/derivation manifests. Detailed requirements
+and a fillable JSON template are in the companion archive. Do not invent
+missing source IDs, labels, embeddings, approval evidence or human responses.
+
+\textbf{Replay and artifacts.} The package includes the unchanged Civil
+fixture, the executed runner, independent audit, strict arithmetic backend,
+all predictions/results, intake files, protocol reference and integrity hashes.
+No CC-News article text is redistributed. Preserve the result directory before
+rerunning. From the archive root:
+\begin{quote}\small\ttfamily
+export OPENBLAS\_NUM\_THREADS=1 OMP\_NUM\_THREADS=1\\
+export MKL\_NUM\_THREADS=1\\
+python3 empirical\_execution/phase2/run\_development.py
+\end{quote}
+The original main-study design remains unchanged; the new development addendum
+documents the stronger exact mode and its distinct numerical target. Earlier
+engineering records remain available separately. No background jobs continue
+after this report.
+
+\small Official acquisition references:
+\href{https://www.tensorflow.org/datasets/catalog/civil_comments}{TensorFlow Datasets Civil Comments};
+\href{https://huggingface.co/intfloat/multilingual-e5-base}{multilingual E5 model card}.
+\end{document}

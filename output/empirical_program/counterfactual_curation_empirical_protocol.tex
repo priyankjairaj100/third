@@ -1,0 +1,422 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,mathtools,booktabs,longtable,array}
+\usepackage{xcolor,enumitem,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!55!black,citecolor=blue!45!black]{hyperref}
+\definecolor{ink}{HTML}{19374C}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small Counterfactual semantic curation}\fancyhead[R]{\small Empirical protocol v1.0}\fancyfoot[C]{\thepage}
+\setlength{\tabcolsep}{4pt}\setlength{\emergencystretch}{2em}
+\setlength{\headheight}{14pt}\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}
+\setlist{nosep,leftmargin=1.5em}
+\newcommand{\R}{\mathbb R}\newcommand{\E}{\mathbb E}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\minus}{\setminus}
+\newcommand{\smalltable}{\small\renewcommand{\arraystretch}{1.14}}
+\title{\color{ink}\textbf{Unlearning What Was Never Trained}\\[7pt]\Large A Natural-Data Empirical Program\\for Counterfactual Semantic Curation}
+\author{ACL 2027 research project --- preregistration and execution specification}
+\date{3 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+This program tests whether deleting real training-source records changes which surviving texts should be trained on, whether the resulting counterfactual matters for NLP predictions, and whether finite-horizon repair offers a useful computational tradeoff. It separates these questions from algebraic correctness and from the behavior of a fully refitted deduplication pipeline. The core uses original human-labeled comments and questions, natural news redundancy, independent retraining oracles, and an optimized eligible-payload maintenance baseline. Synthetic corpora, injected copies, generated paraphrases, artificial labels, and planted graph motifs are deferred. No empirical measurements are reported in this document.
+\end{abstract}
+
+\textbf{Recommended paper claim.} Natural semantic curation creates deletion dependencies through documents excluded from training; these dependencies determine the retained information and work required for counterfactual repair. Exact repair is demonstrated for a precisely specified curator and convex learner. Practical value is adjudicated against strong incremental maintenance at equal access, horizon, precision, and output requirements.
+
+\textbf{The decisive risk.} Dense moment summaries can cost far more physical memory than eligible embeddings. Measure this first at native embedding dimension. Coordinate optimality is not a promise of practical byte savings. A latency--memory tradeoff, an unfavorable frontier, or a negative natural-data result must remain publishable outcomes of the protocol.
+
+\textbf{Status and scope.} This is a complete proposed study design, not a completed preregistration or an experiment runner. Acquisition hashes, installed software revisions, calibrated thresholds, and hardware identifiers must be filled at the specified lock gates. These values cannot be honestly supplied before acquisition and the development-only calibration. The companion package provides a machine-readable design, run schema, claim ledger, lock validator, and analytic memory calculator. Acceptance cannot be guaranteed; the objective is to make the main claims independently assessable and their failure conditions explicit.
+
+\newpage
+\begingroup\small\setlength{\parskip}{0pt}\tableofcontents\endgroup
+\newpage
+
+\section{The evidence the paper must earn}
+The strongest empirical story has three layers: a natural NLP phenomenon, exact counterfactual recovery, and an honest cost frontier. None substitutes for another. The study is successful scientifically when it resolves these questions, even if it falsifies a favorable performance claim.
+
+{\smalltable
+\begin{longtable}{p{.12\linewidth}p{.24\linewidth}p{.32\linewidth}p{.23\linewidth}}
+\toprule Claim & Primary evidence & Required comparison & Failure interpretation\\\midrule\endhead
+C1: Natural admissions & Probability and magnitude of additions under uniform records and native sources & Complete natural-corpus structure plus prespecified random requests, including zeros & Rare effects limit prevalence claims; targeted examples cannot rescue them\\
+C2: NLP relevance & Prediction discrepancy, signed held-out loss change, and semantic content of additions & Frozen-selection retraining versus correctly recurated retained-data retraining & Membership churn alone is insufficient; identical copies may be redundant for the learner\\
+C3: Exact recovery & Independent curator IDs; method counts, designated state, moments, and numerical solution checks & Independent selection and fresh remaining-horizon state builders & Any unexplained mismatch blocks the exactness claim for that configuration\\
+C4: Algorithm value & Full lifecycle cost and physical memory at equal contract & Optimized eligible-payload antijoin plus signed ridge updates & A win only over full retraining is insufficient for an incremental-efficiency claim\\
+C5: Scope & Gap between frozen fitted and freshly refitted curation & A separate standard SemDeDup branch with its own original model & A large gap limits applicability to refitted pipelines; it does not refute the fixed-curator theorem\\
+\bottomrule
+\end{longtable}}
+
+\textbf{Primary estimands.} Report C1 separately for each corpus, curator, horizon, and request distribution. For C2, use the final checkpoint's paired mean signed loss difference, raw prediction RMS discrepancy, and the probability of a specified discrepancy exceedance; checkpoint curves are secondary. For C4, use total lifecycle time through the final checkpoint, persistent bytes, peak memory, and failure rate. Exactness is an all-case verification obligation, not a significance test.
+
+\textbf{Meaning of deletion.} Requests name records or disjoint native source groups in the declared training universe $D$. They do not request removal of every expression of a fact, all references to a person, or the public encoder's pretraining influence. Actual source withdrawal histories are unavailable; sampled and topology-targeted requests are simulated workloads over unchanged natural data, not observed legal requests.
+
+\textbf{No synthetic empirical evidence.} Existing proof checks remain supporting mathematics. The experimental dataset must not contain generated paraphrases, injected copies, invented annotator labels, synthetic embeddings, relabeled hard instances, or planted graph motifs. A graph-based request that deletes real blockers from an unchanged corpus is allowed and must be labeled a stress test.
+
+\section{Lock the counterfactual before running a method}
+For raw training records $D$, let $S=C(D)$ and $S_F=C(D\minus F)$. The primary target is $A(S_F)$, not $A(S\minus F)$. Maintain separate names and run registries for three contracts.
+
+\textbf{G: global, fixed semantic suppression (primary).} Every record has an immutable, record-local embedding and a stable total priority. Edges connect all pairs whose specified cosine score is strictly greater than a frozen threshold. A record is selected when it has no earlier \emph{raw} neighbor. An earlier excluded record can still suppress a later record. No clustering is fitted to $D$, so deleting records restricts the original graph and order. This directly implements the theory's restriction-consistent setting without assuming that original fitted centroids are external data.
+
+\textbf{F: conditionally frozen fitted curator (diagnostic).} Fit standard SemDeDup clusters and priorities on the original $D$, then hold those fitted objects fixed after deletion. This is a useful conditional target but those objects depend on withdrawn data. Exact matching to F does not establish full-pipeline removal of that dependence.
+
+\textbf{R: standard full-refit SemDeDup (boundary audit).} Refit clusters, priorities, suppression and the downstream head on $D\minus F$, using pinned code and configuration. Fixed base encoder and externally fixed hyperparameters remain part of the algorithm definition. Train this branch's original model on its own original selected set. Compare F and R within this branch; do not compare the G initial model with R and call the result an unlearning error.
+
+The released SemDeDup suppression code provides an implementation reference for the earlier-raw-neighbor mechanism \cite{semcode}. G deliberately changes its partition and priority policy and therefore must be named \emph{global ordered suppression}, not a faithful reproduction of complete SemDeDup. The R branch provides the practical connection to fitted curation.
+
+\textbf{Release contract.} The core methods release the current ridge head and maintain a state supporting future requests within a cumulative horizon. The common service output is the head only. An isolated oracle computes selected IDs and admissions for target audits; aggregate model summaries are not assumed to decode those IDs. B-E's internal selected membership is checked separately. Exporting selected IDs or reconstructing admitted raw text would require additional state and a separately costed output contract. The designated state is a mathematical/logical state, not heap layout, backups, historical predictions, or transcript privacy.
+
+\textbf{Access contract.} The primary service receives identifiers only. It may access only its explicitly accounted retained state after construction. The proposed method cannot reach the benchmark's raw corpus or feature arrays through shared memory, callbacks, or an oracle process. Eligible-payload maintenance may retain its declared eligible features and labels; those are charged. A forgotten-payload interface is a separate optional experiment, with identical request bytes and transmission/read costs for all methods. Its side information changes which storage arguments apply.
+
+\section{Natural corpora and their roles}
+Two labeled tasks are mandatory. News provides a different text distribution and natural redundancy without inventing a supervised label. A second Stack Exchange site is a replication within the same platform, not a third independent dataset family.
+
+{\smalltable
+\begin{longtable}{p{.18\linewidth}p{.28\linewidth}p{.22\linewidth}p{.23\linewidth}}
+\toprule Corpus & Immutable record and task & Native source unit & Role\\\midrule\endhead
+Civil Comments & Original comment text; human toxicity fraction, scalar regression & Publication-qualified article ID & Core NLP and record/article withdrawal\\
+Ask Ubuntu raw dump & One original question title/body; original top-20 tag indicators & Site-qualified account ID & Core multilabel NLP and contributor-account withdrawal\\
+CC-News extracted release & One article with title/body, original URL/domain/date; no invented label & Registrable domain, with hostname sensitivity & Broad mechanism, source correlation, semantic-information audit\\
+English Language \& Usage & Same question/tag protocol as Ask Ubuntu, independently fixed & Site-qualified contributor account & Prespecified replication; same platform family\\
+WCEP-100 & Original article instances inside event clusters & Record; domain only if URLs verified & Event-enriched mechanism replication, not general prevalence\\
+\bottomrule
+\end{longtable}}
+
+\textbf{Civil Comments.} Use TFDS \texttt{civil\_comments/CivilComments}, version 1.2.4, not Covert. Official metadata include article, publication and parent identifiers, timestamps, and crowd-label fractions; the catalog explicitly identifies CC0 for the data and underlying text \cite{civil}. Use the comment's own text, never its parent text, as input. There is no author ID in this schema, so article withdrawal must not be described as author withdrawal. Keep original label proportions; do not generate binary training labels for the ridge core. Binary toxicity at 0.5 is a secondary evaluation endpoint.
+
+\textbf{Stack Exchange.} Acquire the corrected company-issued April 2024 archive referenced by the public release catalog, pin the actual archive checksum, and use \texttt{Posts.xml} plus \texttt{PostLinks.xml} \cite{sedumps,schema}. Include \texttt{PostTypeId=1} questions created from 2018-05-02 through 2023-12-31. Preserve question-local tags as original human annotations. Select the 20 most frequent tags on the calibration partition only, tie-breaking lexicographically; include questions with none of these tags. This is a newly derived question-level multilabel benchmark, not the 2014 AskUbuntu duplicate-pair retrieval task. Pair labels would introduce an additional dependency model.
+
+Account IDs are contributor proxies, not proof of exclusive authorship: questions can be collaboratively edited. Missing or community owners do not form one giant source. They remain singleton records and are excluded from the genuine-account sampling frame; their fraction is reported. Preserve attribution, revision metadata and the applicable CC BY-SA terms \cite{selicense}. Do not equate a software license with a text license. Archive acquisition and schema checks are mandatory before locking this arm; no silent substitution with a processed Hugging Face release.
+
+\textbf{CC-News and WCEP.} The CC-News maintainer describes 708,241 English articles from 2017--2019, including article text and provenance fields \cite{ccnews}. This does not establish an untouched, duplicate-complete crawl. Say ``before our semantic curation.'' Preserve distinct article instances even if text or URLs repeat. WCEP is intentionally event-enriched, and event membership is not a gold duplicate equivalence relation \cite{wcep,wceprepo}. Its repository's software license is not a blanket license for publisher text. News is used for structure and human information judgments, not automatically converted into a classification dataset.
+
+\textbf{Availability gates.} If verified original archives are unavailable, report the unavailable arm. A documented original CC-NEWS WARC window is the only predeclared replacement for CC-News \cite{ccrawl}; it is a different extraction-defined population and receives its own manifest. WCEP lacking URLs remains record-only. Do not replace a corpus because it has weak redundancy or inconvenient results. No Amazon, Yelp, 20 Newsgroups, AG News or pre-deduplicated web corpus is a required fallback dependency.
+
+\section{Record construction, splits, and size controls}
+The pipeline must preserve natural instances. A content hash is an audit field, not a replacement for unique record identity. A duplicated string from two records or sources stays two records unless an explicitly separate exact-dedup control is being run.
+
+\textbf{Record-local parsing.} Apply Unicode NFC, normalize runs of whitespace, and preserve case, punctuation, negation, numbers, quoted text and code. Civil uses only comment text. Stack uses title followed by parsed body; remove HTML markup and platform-inserted closure/duplicate-notice boilerplate using a frozen parser, while preserving author-written links, quotations and code. Do not concatenate answers. News uses title followed by article text with exact repeated title removal only under a documented local rule. Empty/unparseable texts are reported exclusions; no length or label filter may be introduced after inspecting admissions.
+
+\textbf{Source-disjoint task split.} On each labeled corpus, assign genuine primary source IDs by SHA-256 of a fixed split seed and source ID to 70\% training, 15\% calibration, and 15\% test. Missing-source singleton records receive the same rule but are not described as genuine sources. This keeps Civil articles and Stack accounts out of both task calibration and future training-source requests. Restrict cross-article parent relations on Civil by a fixed guard: remove training records with a parent in calibration/test; never interpret missing or sentinel parent IDs as shared parents.
+
+\textbf{Leakage guard.} Before creating any deletion-sensitive $D$, remove training-side exact normalized-text copies of calibration/test texts and Stack training-side endpoints of duplicate links crossing those splits. Apply the same rule from calibration to test, always preserving test. At the later threshold lock, apply one E5 semantic cross-split guard at exactly the locked primary E5 threshold (strict cosine greater than that threshold), remove training-side matches, and rebuild all initial states. The same post-guard D is used for every encoder-cross arm; MPNet never changes its population. This guard addresses the specified E5 relation, not all possible semantic contamination. Report an independent MPNet cross-split audit as a limitation check without changing D. Test labels remain sealed. Publish counts and distributions removed by every guard; similarity filtering itself changes the study population. All controls use the same resulting population. No post-deletion holdout or guard changes are permitted.
+
+Source precedence avoids merging contributor and duplicate relations into an uncontrolled giant component. Duplicate links are independent metadata for leakage/audit, never used to select high-redundancy core training records. Preserve original official Civil splits as a separately reported comparability sensitivity if resources allow; the source-disjoint split is primary. No temporal-generalization claim follows from creation dates when archived bodies may contain later edits. Public encoder pretraining contamination is not ruled out by these guards.
+
+\textbf{Calibration scope.} Calibration records are outside $D$ and never requested for deletion. Their chosen scalar threshold, tag vocabulary and regularization are declared fixed configuration. Genuine primary sources are disjoint across splits. Whole-publication Civil and whole-domain news withdrawals that cross calibration are training-universe stress tests only; they do not establish removal of all influence from that publisher in the configuration or encoder.
+
+\textbf{Soft size targets.} Reserve groups with a separate replication hash quantile at least 0.8 for the second-panel pool; the remaining 80\% form the primary pool. Within each pool, order whole primary source groups by an independent fixed hash and include the boundary group in full when a target is crossed. Use nested targets 10k, 25k, 100k and 200k records; use all available eligible data if fewer exist. Never cut a group or omit a large group to improve feasibility. Report actual counts, overshoot and source-size quantiles. Complete source inclusion refers to all surviving records of that source after the fixed guards, not all original snapshot holdings. Splitting, panel selection, request generation and curation priority use different fixed hash salts. The 10k panel supports the full native-dimension comparison. The larger panels measure structural sensitivity and baseline scaling, and include byte forecasts for infeasible summary configurations.
+
+Build a second 10k panel from a disjoint fixed source-group hash range. If fewer than two panels exist, report that limitation. It is a prespecified within-corpus replication, not another independent corpus. Do not pool small-panel and large-panel prevalence. Thinning changes blocker sets and can raise or lower admissions; group preservation alone does not remove this effect. Show the entire fixed-threshold size curve.
+
+\textbf{Natural time-window check.} CC-News additionally uses all records in the first complete calendar month, beginning January 2018, whose available count meets 10k; if no month does, concatenate chronological whole months until that count is met. The choice uses dates and counts only. Compare with source-group sampling to expose sampling-induced changes in natural redundancy. WCEP uses complete events in fixed ID-hash order up to 25k articles, with whole-boundary-event inclusion. No summary or event label enters curation.
+
+\section{Representation and exact graph contract}
+Use multilingual E5 base as the primary fixed encoder and all-mpnet-base-v2 as a prespecified robustness representation. The companion manifest gives their complete model identifiers. Both return 768-dimensional embeddings; their official model cards document inference conventions \cite{e5,mpnet}. Pin model and tokenizer commit SHAs and inference library versions. The E5 card lists CC News and Stack Exchange among pretraining sources, so the experiments must not claim encoder-pretraining independence.
+
+For E5, use the \texttt{query: } prefix for this non-retrieval application. Tokenize title/body concatenation deterministically. Split into non-overlapping chunks of at most 256 content tokens, reserve space for prefixes/special tokens, encode every chunk, take the content-token-count-weighted mean of chunk embeddings, then normalize the document vector. Apply the same full-document pooling rule to MPNet without the E5 prefix. This is a declared representation design, not the default behavior for long articles. Report lengths, chunk counts and the fraction that a first-window baseline would truncate. Do not silently drop later text.
+
+\textbf{Canonical metric.} Store encoder outputs in FP32, convert to FP64 and normalize with a pinned implementation for graph scoring. Freeze a computed embedding cache hash. Adjacency is strict $\langle e_u,e_v\rangle>\tau$ under the specified reference scoring routine. A separately implemented FP64 dot product recomputes scores within a recorded numerical uncertainty band around the threshold; disagreements are resolved by the declared reference routine and logged. This pins the finite-precision graph. A real-arithmetic score certificate requires additional directed-rounding bounds and cannot be inferred from agreement between two BLAS routines.
+
+\textbf{Priority.} Sort by SHA-256 of \texttt{priority-v1|seed|record-id}, with raw stable ID as final tie-breaker. The primary seed is 0; seeds 1 and 2 are sensitivity settings, all reported. No new shuffle is generated after a deletion. Source IDs, labels and test behavior do not set priority.
+
+\textbf{Exhaustive primary graph.} Evaluate all relevant pairs in tiled matrix multiplication or exhaustive range search. Do not store an $N\times N$ dense score matrix. No top-$K$ cap or approximate nearest-neighbor index may silently replace the global threshold graph. FAISS distinguishes exhaustive and nonexhaustive indices \cite{faiss}. A large exact-graph failure is reported as a scale boundary, not repaired by changing the target. Bounded-horizon counts may stop once ineligibility is proven, but incomplete graphs cannot support claims about full rank curves or global edge recall.
+
+\textbf{Model dimension versus curation dimension.} Keep $d_c=768$ for the main curation graph. Native downstream dimension is $d=768$, without an intercept. A public, data-independent, seed-locked orthonormal random projection to $d\in\{32,64,128,256\}$ is a separate learner ablation. It keeps the curation graph unchanged, reports task-utility loss, and is applied identically to every method. No learned PCA or task-adapted representation is hidden in the fixed configuration.
+
+\section{Threshold calibration without outcome selection}
+Choose semantic quality before examining confirmatory activation or repair costs. Separate threshold selection from its independent validation, and keep every tested threshold in the development ledger.
+
+\begin{enumerate}
+\item On the source-disjoint calibration panel, enumerate scores and draw up to 600 natural pairs, stratified into 20 fixed equal-width cosine bins over $[-1,1]$. Allocate 30 per nonempty bin, census bins with fewer pairs, and record inclusion probabilities. Annotators see text only, not deletion behavior or task labels.
+\item Rate pairs as exact copy, substantially same task-relevant meaning, overlapping information, merely related, unrelated, or uncertain. A precision-positive pair is an exact copy or substantially same meaning. Conflicting negation, entities or consequential numbers prevent a positive judgment. This definition is fixed in the annotation guide.
+\item Among a fixed cosine grid $\{0.50,0.51,\ldots,0.99,0.995\}$, select the least strict candidate whose weighted estimated duplicate precision is at least 95\% with nonzero audited support; record both raw and effective support. This is a development choice; it does not itself certify quality. If no candidate qualifies, keep the most conservative grid point as a failed-calibration diagnostic and do not claim valid semantic deduplication for that arm.
+\item Draw a fresh simple random sample of 200 pairs from the entire above-threshold population, or census it if smaller. This sample is independent of the selection draw: do not exclude previously sampled pairs. Any overlap is logged and receives fresh blinded ratings. The primary quality gate is a one-sided 95\% lower confidence bound of at least 90\% duplicate precision; use an exact finite-population calculation for a census/small finite population. Small development support does not establish precision; only the independent validation gate adjudicates it. No activation measurements enter this decision.
+\item Lock the selected threshold. Sensitivities are $\max(0,\tau-0.02)$ and $\min(1,\tau+0.02)$, labeled with their own audited quality. Failure of the main quality gate remains a failure; sensitivity success cannot be relabeled a preplanned primary result.
+\end{enumerate}
+
+This procedure is run per labeled corpus/encoder, and on an independent 2017 source-disjoint CC-News calibration panel for the primary 2018--2019 news analysis. The within-corpus threshold is shared by every size panel. WCEP reuses the frozen news threshold. Calibrating separately by corpus makes a cross-corpus claim conditional on those declared curators, not a single universal cosine threshold.
+
+If there are no qualifying pairs, record an empty edge population; precision is undefined and cannot pass a semantic-quality gate. If the semantic guard changes the calibration source pool, derive the threshold on the predeclared calibration pool and record that dependency; never recalibrate in response to training-side removals. If the calibration precision gate is underpowered, report the interval rather than asserting quality. The budget may be enlarged once before confirmation using development-only uncertainty, with the change registered. There is no post-confirmation search for a threshold that creates more admissions.
+
+\textbf{Quality and retention are both reported.} Record initial retained fraction, source coverage, class/tag distribution, semantic precision, and uncertainty. A barely pruning curator can be high precision but operationally unimportant. A low-precision curator can manufacture apparent novelty by deleting merely related documents. Neither is a basis for an unqualified practical claim.
+
+\section{Learners and task outcomes}
+Define canonical learner features $z_v$ as the stored FP32 normalized document vector, promoted exactly to FP64 for every moment product. All methods use these identical values, without method-specific renormalization. The graph vector $e_v$ may use the separately specified FP64 normalization. For fixed features $z_v\in\R^d$ and original labels $y_v\in\R^C$, use uniform-example-weight ridge with all coordinates penalized:
+\[
+ L_T(\Theta)=\frac{1}{2|T|}\sum_{v\in T}\norm{\Theta^\top z_v-y_v}_2^2+
+ \frac{\lambda}{2}\norm{\Theta}_F^2,
+ \qquad (M_T+\lambda |T|I)\Theta=H_T,
+\]
+where $M_T=\sum z_vz_v^\top$ and $H_T=\sum z_vy_v^\top$. For $T=\varnothing$, define $\Theta=0$ and record the empty-target event. The primary learner has no intercept; a penalized intercept is a separate sensitivity. Class weights, vocabulary, feature normalization and regularization never refit after deletion.
+
+Choose $\lambda$ from $\{10^{-6},10^{-5},10^{-4},10^{-3},10^{-2},10^{-1}\}$ by five fixed source-group folds within calibration data, minimizing the task's unweighted squared loss; ties choose the larger value. Freeze one value per corpus/feature representation. Training-set selection, deletion effects, and test outcomes cannot tune it. All methods share the exact value and normalization. The $\lambda |T| I$ count shift must be applied after additions as well as removals; it is not generally a rank-one update.
+
+\textbf{Civil.} Primary task metric is unweighted MSE against the original crowd toxicity fraction. Report MAE, AUROC and AUPRC for the prespecified binary endpoint, plus test score distribution and class prevalence. Ridge outputs are scores, not calibrated probabilities; do not clip them for the primary MSE.
+
+\textbf{Stack.} Use 20 original tag indicators as a multi-output response. Primary task metric is mean squared loss over records and output coordinates. Report micro/macro F1 and mean average precision. Fix tag decision thresholds on calibration only, including an explicit zero-positive rule. Report all-zero-target fraction and per-tag counts. Do not filter away questions with no chosen tag to inflate utility.
+
+\textbf{Utility reference panel.} Before deletion, compare curated ridge with uncurated ridge, same-size hash-selected ridge, and a fully converged regularized logistic head on the same frozen features. These establish that the exact learner and curation operating point are credible for the NLP task. They do not become alternative unlearning targets. Poor baseline quality narrows the paper's downstream relevance; it is not corrected by test-tuning the ridge head.
+
+\textbf{Mandatory convex extension.} On the primary 10k Civil panel, use fractional-label logistic loss; on the primary 10k Stack panel, use independent binary logistic outputs. On 32 R and 32 S trajectories, compare fresh optimum, eligible-payload retraining and the proposed certified convex repair procedure. Report residual bounds, parameter-distance bounds and task outcomes. Retained gradient/Hessian queries and payloads must be allowed and charged explicitly. This supports transfer beyond quadratic loss without pretending that ridge moments alone decode logistic training. Nonconvex LoRA or full-LM unlearning is optional future work, not a core acceptance dependency.
+
+\section{A bounded experiment matrix}
+This allocation concentrates expensive work on decisive comparisons rather than crossing every factor. Counts are proposed fixed design values; a development-only resource amendment must be logged before confirmation.
+
+{\smalltable
+\begin{longtable}{p{.20\linewidth}p{.29\linewidth}p{.27\linewidth}p{.16\linewidth}}
+\toprule Block & Data/configuration & Replication & Output\\\midrule\endhead
+A: Structure & Civil, Ask Ubuntu, CC-News; nested 10k/25k/100k/200k; G, E5, primary threshold & 256 R, 256 S, 128 U, 32 A trajectories per size where defined & Prevalence, rank, eligibility, byte forecasts\\
+B: NLP relevance & First 10k Civil and Ask Ubuntu; native features; G & Oracle and frozen-selection: all 256 R + 256 S; 128 U + 32 A & Prediction/loss effects, including zeros\\
+C: Full-method comparison & Same first 10k panels; native features; record horizon 128, source horizon 8 & First outcome-blind 64 R + 64 S + 32 U + 16 A paths & Correctness, lifecycle cost, state and memory\\
+D: Replication & Second disjoint 10k panels; English site 10k; WCEP 25k structure & 64 R + 64 S where sources valid; 32 U; no promotion to primary & Direction and distribution sensitivity\\
+E: Full refit & Separate 5k natural panels, Civil and Ask Ubuntu; own SemDeDup initial state & 32 R + 32 S + 16 A; checkpoints plus 4 complete paths & Frozen/fresh curation gap\\
+F: Convex extension & First 10k Civil and Ask Ubuntu; fixed primary G & 32 R + 32 S paths & Certified residual versus actual error\\
+G: Boundaries & Fixed first Civil 10k and one news window & 32 shared R + 32 S per alternative; no full factorial & Dimension, encoder, order, threshold, numeric and search limits\\
+\bottomrule
+\end{longtable}}
+
+All table counts are per corpus, per listed panel, at priority seed 0 and the one stated horizon for that arm; sensitivity seeds do not multiply the primary sample. Before clipping, block B has 2,688 checkpoint releases per corpus per method, and block C has 704. Reuse identical O-G/B-F runs across blocks rather than treating duplicates as replication.
+
+R means uniform records; S uniform native sources; U initially unselected records; A label-blind topology stress. Civil primary S always means article, never publication. U and A use the record horizon unless a separately named source stress experiment is specified. A source arm with too few genuine sources reports its actual finite population and clipped horizon. All random subset choices are generated from a public master seed before outcomes; ``first'' means stable run-ID order, not completion order.
+
+\textbf{Default compute envelope.} Plan for a 256-GiB host with a 128-GiB per-method memory limit, FP64 numerical backend and one fixed accelerator for shared encoding/graph construction. This is a planning envelope, not a purchase recommendation or observed resource usage. All methods face the same cap. Native 10k summary feasibility is checked before allocation. Persistent serialized state, live process bytes, peak resident memory, GPU memory, and shared assets are reported separately. If only a smaller host is available, lock its cap before confirmation and retain infeasible cells. Do not shrink only our method's data or dimension.
+
+No wall-clock budget is invented from theory. Measure per-stage costs on the disjoint development panel, project total planned work using actual counts, and register one common timeout policy before confirmation. Remove optional boundary factors before reducing primary oracle evidence. Keep at least the native panel, strongest baseline, both labeled tasks and the full-refit boundary audit.
+
+\section{Requests, horizons and exact prevalence predictions}
+For each corpus and arm, build a fixed initial state with a declared cumulative horizon. Record horizon $K_R=\min(128,N)$ uses checkpoints $\{1,8,32,128\}$ clipped to $K_R$ and deduplicated. Source horizon $K_S=\min(8,S_g)$ uses $\{1,2,4,8\}$ similarly, where $S_g$ is the genuine-source count. Empty retained targets stay in the sample. Source-unknown singleton records can remain after all genuine sources are deleted and are disclosed. The source service supports all units in the disjoint ownership partition, including explicit singleton fallback units. The S workload samples genuine sources only. Every method computes eligibility for the same complete service universe and horizon; none may prune using a narrower presumed future workload.
+
+\textbf{R: random records.} Draw independent uniform random permutations of all $N$ stable IDs. Prefixes yield uniform fixed-size requests without replacement. Reset to the same initial state for each independent trajectory, not between prefixes. Record requests remove the designated instances even when identical retained text exists.
+
+\textbf{S: random sources.} Draw independent uniform permutations of genuine source IDs. Each source request removes every one of that source's records in $D$, including excluded records. Report requested source count, raw count, originally selected count, current selected count and source-size quantiles. Add a record-volume-matched R control: use one independent random record permutation per S trajectory and take its prefixes at that S trajectory's cumulative raw deletion counts. This preserves a valid cumulative record trajectory; never draw independent subsets at successive checkpoints. This is a separate diagnostic with its own sufficient horizon and costs, not the same 128-record state.
+
+\textbf{U: excluded records.} Draw permutations of the initially excluded set $D\minus S$. Keep the initial eligibility definition fixed. This isolates the headline mechanism; it is not prevalence under all records. If there are fewer than $K_R$ such records, clip and disclose. Report zero eligible/excluded pools as structural zeros or not-applicable, not successful unlearning runs.
+
+\textbf{A: graph stress.} For each of 32 fixed seeds, uniformly sample up to 1,024 initially excluded candidates whose blockers fit within $K_R$. Form their actual blocker sets and choose the candidate whose set yields the most admissions, tie-breaking by stable ID. Append remaining IDs by a fixed random order to complete the trajectory. This uses graph structure only, not labels, test loss or model gradients. Charge search time separately, report all initializations including failure to find a candidate, and do not call it an optimal adversary. Use a separately labeled version restricted to initially excluded blockers to stress the ``never trained'' mechanism. No text or edge is fabricated.
+
+\textbf{Source correlation and large budgets.} Add a structure-only mass-proportional source sampler and a separately built $\lceil0.01N\rceil$ record-horizon state. Uniform source and mass-weighted source results cannot be pooled. On news, report descriptive chronological date-range withdrawals as an observed ordering of simulated requests; a single stream is not hundreds of independent replications.
+
+\textbf{Parameter-free prevalence check.} For $b_v=|B(v)|>0$, under a uniform $k$-record request,
+\[
+ \Pr(v\in S_F\minus S)=\frac{\binom{N-b_v-1}{k-b_v}}{\binom Nk},\qquad
+ \E|S_F\minus S|=\sum_{v:b_v>0}\Pr(v\in S_F\minus S).
+\]
+Use log-binomial evaluation, treating invalid combinations as zero. The formula predicts the \emph{mean number} of admissions, not directly the probability of any admission. Candidate events are dependent. For uniform source requests, replace $N,b_v$ by genuine-source count and distinct blocker-source count only when all relevant sources are in the sampling frame and the candidate's own source is distinct from blockers. Same-source blockers make activation impossible. For a general source sampling frame $G$ with $g=|G|$, let $U(v)$ be distinct blocker sources and $a_v=\mathbf 1\{\text{own source}(v)\in G\}$. If $U(v)\not\subseteq G$ or the own source belongs to $U(v)$, activation probability is zero. Otherwise it is $\binom{g-|U(v)|-a_v}{k-|U(v)|}/\binom gk$. An unknown-source candidate can survive every genuine-source request, giving $a_v=0$. For a restricted record pool $E$, replace $g,U(v),a_v$ by $|E|,B(v),\mathbf 1\{v\in E\}$ and set the probability to zero if $B(v)\not\subseteq E$.
+
+Compare Monte Carlo means to these finite-population predictions as a sampler/implementation check. This is not independent empirical confirmation of the mathematical theorem, since both use the same graph. The empirical contribution is the observed natural graph and its task consequences.
+
+\textbf{Sequential semantics.} Remaining budget is initial budget minus the number of new unique deleted units. Retried IDs do not consume budget. State at a checkpoint must match fresh retained-data construction with \emph{remaining} horizon. Test singleton updates, matching batched prefixes, reversed order, serialization/resume, duplicate requests, unknown-ID validation and a real extra request after exhaustion. At exhaustion the core service refuses requests atomically; a separate deployment policy may rebuild, with full data access and rebuild cost disclosed. Never reset the budget without rebuilding.
+
+\section{Stage zero: physical storage before dense allocation}
+Let $C$ be the number of output coordinates and $d$ the learner dimension. One packed FP64 ridge-statistic vector has
+\[
+ s(d,C)=d(d+1)/2+dC+1,\qquad w(d,C)=8s(d,C)\text{ bytes}.
+\]
+Compute the actual coefficient-key count $M_K$, exact structural rank $r_K$, eligible-record count $|E_K|$, blocker incidences, source incidences and source-collapse effects. The generic fast-map bound $M_K\le2r_K$ is a structural check, not a substitute for measuring actual keys or bytes. Remove only algebraically justified zeros; arbitrary near-zero pruning changes the target.
+
+{\smalltable\begin{center}
+\begin{tabular}{rrrr}
+\toprule $d$ & Outputs $C$ & Bytes per dense coefficient & 10,000 coefficients (decimal GB)\\\midrule
+128 & 1 & 67,080 & 0.671\\
+128 & 20 & 86,536 & 0.865\\
+768 & 1 & 2,368,520 & 23.685\\
+768 & 20 & 2,485,256 & 24.853\\\bottomrule
+\end{tabular}\end{center}}
+These are arithmetic forecasts, not experiment results. They exclude keys, indexes, copies, solver workspaces, allocator overhead and graph state. For $K\ge1$, $r_K\ge |S|$ in the existing structural theorem. Thus ordinary retention fractions can already imply a very large dense summary. This is not a universal lower bound for every nonlinear encoding of constrained rank-one/PSD ridge statistics.
+
+\textbf{Gate.} Forecast packed payload plus measured metadata/workspace overhead from development, then check against the locked memory cap before allocating. Distinguish ``forecast infeasible'' from an observed OOM. Record both rather than dropping the configuration. Build every feasible native configuration even if the byte comparison is unfavorable. A memory loss may coexist with a repair-latency benefit, but the paper must show the full Pareto frontier.
+
+Compare against eligible feature/label storage at its actual precision, not against storing a full $d\times d$ outer product per baseline record. Baseline features are FP32 with exact promotion for the moment contract, labels retain source precision, and moments are FP64. The competing baseline's efficient batched rank-one accumulation is mandatory. Count public configuration and shared graph bytes in the physical comparison even where an information-theoretic theorem treats them as free.
+
+\textbf{Claims the gate forbids.} No ``memory-efficient'' headline based only on value-coordinate counts; no switch to $d=128$ after a native failure without showing the native result; no total-bit optimality claim from linear statistic rank; no lower-bound validation from natural rank curves. Synthetic lower-bound instances remain deferred. The companion calculator reproduces the arithmetic and accepts measured counts; it does not predict empirical speedups.
+
+\section{Baselines strong enough to decide the paper}
+Every same-target maintenance method uses the same $D$, curator, horizon, access interface, moments, decoder, precision, request sequence, head-only output, and persistence schedule. Implement optimized core methods in the same language/backend. A proof-oriented Python dictionary against vectorized baseline code, or its converse, cannot establish systems superiority.
+
+{\smalltable
+\begin{longtable}{p{.12\linewidth}p{.51\linewidth}p{.27\linewidth}}
+\toprule Method & Required implementation & Interpretation\\\midrule\endhead
+O-G & Fresh retained-data G selection, fresh BLAS moments, common head solve; cache tier disclosed & Correct primary oracle; graph rerun and cached-graph rebuild costs both shown\\
+O-T & Receive correct repaired selected IDs; rebuild moments and retrain head from their features & Isolates downstream model-maintenance savings from curation savings\\
+B-E & Optimized eligible-payload antijoin: blocker counters, inverse incidence, live membership, eligibility buckets, $z,y$ for $E_K$, current moments; signed vectorized updates on additions/removals & Essential comparator; same horizon and canonical eligibility pruning\\
+B-A & Same antijoin, retaining all current features and labels & General service baseline with greater future-deletion capability; label the capability difference\\
+P-I & Indexed finite-horizon coefficient summary; key merges, index repair, canonicalization and expiry charged & Proposed main implementation\\
+P-S & Same summary with full-map substitution/scan & Isolates indexing benefit\\
+P-R & Rank-coordinate summary with canonical reconstruction and scan cost & Tests coordinate/latency tradeoff; not assumed byte-optimal\\
+B-F & Retrain on originally selected survivors only & Wrong-target diagnostic; cannot win a valid unlearning comparison\\
+O-R & Separate standard SemDeDup refit branch & Scope oracle; not a same-target speed baseline for G\\
+\bottomrule
+\end{longtable}}
+
+\textbf{B-E implementation obligations.} Give it compact CSR/integer incidence structures, count updates, bucketed eligibility pruning and batched BLAS accumulation. Store only records it needs under the same remaining horizon. Charge selected removals and admissions symmetrically. Allow live masks/tombstones and a development-locked compaction schedule under the same abstract-state rules as P-I; charge stale physical bytes and compaction work. Do not force B-E to rebuild immutable CSR on every request while allowing P-I allocator slack. It does not need raw text or a stored outer product per record once embeddings exist. Attribution to incremental relational maintenance and exact add/delete ridge statistics is required; these mechanisms already have established literature \cite{dbsp,quan}. A deliberately slow generic SQL engine is not an adequate substitute for B-E.
+
+\textbf{Decoder parity.} Native $d=768$ uses common FP64 Cholesky with residual verification as the primary decoder. Add common zero-start CG as an ablation with shared stopping rule. Count system formation and the $\lambda n$ shift. If ``best engineered'' comparisons allow different solvers, choose each solver policy only on development timings, disclose every policy and retain the common-solver panel. A historical warm start changes designated-state claims unless explicitly excluded from state and reproducibly reset.
+
+\textbf{Negative controls on natural data.} Exact normalized-text deduplication with a fixed representative and fixed-order greedy independent-set curation should show no selection change when only their own initially excluded records are removed. They have their own selected sets and oracles. Use actual records to test this invariant. With no curation, ordinary ridge deletion supplies an engineering floor. A same-size hash subset tests curation utility. These are mechanism controls, not interchangeable algorithms for G.
+
+\section{Correctness and numerical verification}
+An oracle must bypass the proposed polynomial and its blocker-update code. Independently derive retained selection from original retained embeddings and priorities. On the small core, verify every checkpoint's IDs with an independent direct suppression implementation. To avoid repeating all pair calculations for every request, a separately built exhaustive graph may support the all-checkpoint selection check; recompute retained similarities from embeddings on the precommitted 16-path audit and adjudicate every mismatch by a fresh graph. Report these two verification levels explicitly.
+
+At all core releases, independently check the target curator's exact selected/admitted/removed IDs and B-E's corresponding internal memberships. For P-I/P-S/P-R, compare the recovered integer count, moments, horizon and head to that independently established target; do not attribute an ID-decoding capability to a statistic-only method. On the first 16 R and 16 S full-method trajectories, rebuild the entire canonical coefficient/state object at each checkpoint from retained data with remaining horizon. Compare every designated key and every moment coordinate. At scale, checksums are useful corruption diagnostics but not substitutes for complete state equality. Canonical abstract state is distinct from floating-point bitwise history independence.
+
+\textbf{Numerical gates.} For $n>0$, let $\widehat A=\widehat M+\lambda nI$, $\widehat H$ be computed moments, and $\widehat\Theta$ the solution. Set normalized solve residual
+\[
+ \eta=\frac{\norm{\widehat A\widehat\Theta-\widehat H}_F}
+ {\norm{\widehat A}_2\norm{\widehat\Theta}_F+\norm{\widehat H}_F}.
+\]
+Use a development-locked primary gate $\eta\le10^{-10}$ in FP64 (define $\eta=0$ only when numerator and denominator are both zero). Report conditioning and absolute residual as well. The gate is a numerical diagnostic, not by itself an interval certificate or a bound on accumulation error.
+
+Let certified moment errors satisfy $\norm{\widehat A-A}_2\le e_A$ and $\norm{\widehat H-H}_F\le e_H$. Since exact $A=M+\lambda nI$ has smallest eigenvalue at least $\lambda n$,
+\[
+ \norm{\widehat\Theta-\Theta^*}_F
+ \le \frac{\norm{\widehat A\widehat\Theta-\widehat H}_F
+                 + e_A\norm{\widehat\Theta}_F+e_H}{\lambda n}.
+\]
+Residual norm computation itself also needs a verified error allowance if called certified. Two estimates relative to the same exact target can be compared using the sum of their bounds. No arbitrary universal $10^{-6}$ parameter tolerance is appropriate across conditioning regimes.
+
+\textbf{Audit implementation.} Use deterministic pairwise or compensated accumulation in the normal path; independently rebuild in extended precision on the preselected audit panel and all numerical failures. An extended-precision recomputation provides stronger diagnostics but is not automatically a rigorous interval. For a numerical-certificate claim, implement directed rounding or a conservative analytic floating-error budget for products, accumulations and residual evaluation. Label runs lacking such a bound ``residual-verified'', not numerically certified. Release the error-budget code and observed bound/actual-error ratios.
+
+The polynomial summary may suffer cancellation. Never silently zero small coefficients, clamp a negative Gram eigenvalue, reset a state from retained rows unavailable to the service, or loosen tolerances after seeing outcomes. Such operations must be explicit approximate variants or logged fallbacks with access and cost. A core failure to meet the locked gate remains a failure. OOM, nonconvergence, invalid state and timeout are not omitted from denominators.
+
+\textbf{Finite-horizon state tests.} On the preselected audit paths, compare singleton and batch updates with identical cumulative deletions; compare reversed order, save/resume, repeated requests and source-versus-expanded-record deletions only after aligning their different horizon contracts. There is no requirement that record-budget and source-budget states coincide merely because one request deletes the same records. Source collapse must count distinct blocker sources and correctly handle blockers owned by the candidate's own source.
+
+\section{Systems measurements and fair lifecycle accounting}
+Report four cost stages: shared acquisition/embedding/graph preparation; method-specific state construction and original head; request processing/repair/solve/head release; persistence and compaction. Give both the common-cache comparison and a deployment-total ledger. A precomputed graph is not free just because every method uses it.
+
+The primary service persists one final checkpoint per trajectory; crash-durable persistence after every release is a separate disclosed sensitivity. The common release is the model head; its output cost is included. Oracle-selected-ID exports are verification work, reported outside service timing and unavailable to the repair worker. Cold-process loading and warmed-service updates are separate panels; disclose OS cache state rather than claiming uncached disk measurements without a method. Report raw bytes read and written, retained-payload reads, metadata reads, and forgotten-request bytes.
+
+For method $m$, define the measured lifecycle cost through release $q$ as
+\[
+ T_m(q)=T_m^{\mathrm{setup}}+\sum_{t\le q}
+ (T_{m,t}^{\mathrm{validate}}+T_{m,t}^{\mathrm{repair}}+
+ T_{m,t}^{\mathrm{solve}}+T_{m,t}^{\mathrm{release}})+T_m^{\mathrm{persist}}(q).
+\]
+Show this curve against both B-E and O-G. A break-even point must occur and persist within the \emph{observed supported horizon}. Do not extrapolate beyond exhaustion or amortize construction over arbitrarily many resets. If the method is slower than B-E, a speedup over O-G alone cannot headline an incremental advantage.
+
+\textbf{Timing replication.} Benchmark all completed full-method trajectories once for operational costs. Select the first eight R and eight S trajectory IDs, before outcomes, for five fresh-process repetitions each. Reconstruct initial state for each repetition. Randomize paired method order within hardware blocks, pin CPU threads/BLAS, record software and device versions, prevent competing jobs, warm libraries for warm runs and synchronize accelerator work at timing boundaries. Repeated updates on already-mutated state are invalid timing replications. Report median/p95 request latency and arithmetic mean total work; p99 claims require a separately adequate sample.
+
+\textbf{Memory ledger.} Include statistics, keys, indexes, source registry, degree buckets, live IDs, eligible payload, decoder state, public configurations, original copies, allocator slack and temporary workspace. Distinguish logical bytes, uncompressed and compressed serialized bytes, process private/resident memory, peak host RSS, and peak allocated/reserved GPU memory. Store the global corpus and oracle in another process unavailable to the repair worker. A no-reaccess claim requires capability denial or logged access checks, not merely a code comment.
+
+\textbf{Operation counts.} Log incidence touches, key merges, expired entries, statistic-coordinate additions, active key count, rank, eligibility, solver iterations and output size. Compare aggregate counts with the theorem's actual indexed-work terms; test whether counts predict wall time on held-out trajectories. Do not charge only the final head evaluation while ignoring state canonicalization or index maintenance.
+
+\textbf{Failures.} Set a common timeout at the development lock; publish incomplete/censored times as lower bounds. Show success fraction, successful-run timing and total cost under an explicitly declared fallback. A fallback that fetches retained payload violates the primary no-reaccess interface and must be labeled a service-contract change. A projected learner is a different model, not an invisible rescue of a failed native run.
+
+\section{Statistical analysis and honest decision rules}
+The independent unit for deletion uncertainty is an independently reset trajectory conditional on a fixed corpus and curator. Checkpoints from one path remain together. Reusing documents across independent sampled requests does not by itself destroy this conditional Monte Carlo independence; it does not create independent corpora either.
+
+For test predictions $f_0$ before deletion, $f_{F}^{\rm frozen}$ under B-F, and $f_F^*$ under the correct oracle, define
+\[
+ D_F=\sqrt{\frac1{mC}\sum_{i,c}(f_{F,ic}^{\rm frozen}-f_{F,ic}^*)^2},\quad
+ s_0=\sqrt{\frac1C\sum_c\operatorname{Var}_{i}(f_{0,ic})},\quad
+ Z_F=\frac{\operatorname{MSE}(f_F^{\rm frozen})-\operatorname{MSE}(f_F^*)}
+ {\operatorname{MSE}(f_0)}.
+\]
+Report raw $D_F$, $D_F/s_0$, signed $Z_F$, absolute $Z_F$, and both normalizing denominators. If a denominator is zero, the normalized quantity is undefined, not assigned a favorable floor. Negative $Z_F$ is possible: a wrong counterfactual can happen to score better on a fixed test set. Counterfactual fidelity and accuracy benefit are different claims.
+
+\textbf{Effect reporting.} Primary C1 outputs are probability of any admission, mean absolute admissions, and admissions per deleted record; source results also report per deleted source. Include zero outcomes. C2 uses signed mean $Z_F$ and raw/normalized prediction RMS, together with exceedance probabilities $\Pr(|Z_F|>0.01)$ and $\Pr(D_F/s_0>0.01)$. These 1\% thresholds are declared reporting scales, not universal clinical or linguistic meaningfulness standards. Report the full distribution so they cannot conceal other effects.
+
+Use paired trajectory bootstrap intervals with 10,000 seed-locked resamples for means/differences/ratios conditional on the fixed test set. Use exact binomial intervals for activation probabilities when appropriate. For inference over held-out sampling, use a separately labeled crossed bootstrap of trajectories and whole test provenance groups, preserve method pairing and recompute normalization denominators. Never bootstrap request-by-example cells as independent. Recompute nonlinear metrics such as macro-F1 within each replicate.
+
+\textbf{Precision of proposed counts.} With 256 trajectories, worst-case Monte Carlo standard error for an event probability is 3.125 percentage points; zero events give a one-sided 95\% upper limit of approximately 1.16\%. With 64 trajectories that upper limit is approximately 4.57\%. These are sampling calculations, not predictions of effect sizes. A 64-run exactness audit cannot establish extremely rare failure rates, and even 256 task runs cannot guarantee power for small changes.
+
+Before confirmation, use a disjoint development-panel variance estimate and paired-effect simulations to check the intended precision. The default model-relevance allocation is 256 R and 256 S trajectories per primary corpus; expensive all-method timing/state comparisons use 64 each. If resources force fewer relevance trajectories, declare the arm estimation-only for small effects, retain wide intervals, and forbid a ``negligible impact'' conclusion from a non-significant result. No optional continuation until significance.
+
+\textbf{Multiplicity.} The four corpus-by-request signed-loss contrasts (two labeled corpora times R/S) form one prespecified family if directional significance is claimed; control it with Holm at 0.05. The two corpus-level R/S-weighted lifecycle-time comparisons against B-E form a separate systems family. Equal R/S weighting is fixed in advance and does not describe a real deployment mix. Report each underlying arm as well. Other sensitivity tests emphasize effect sizes and intervals; do not promote an exploratory maximum to a headline confirmatory result.
+
+\textbf{Equivalence and practical claims.} Failure to reject a difference is not equivalence. A mean-loss interval within $[-0.01,0.01]$ can still conceal large opposite-signed effects, so a negligible-per-request claim also needs an absolute-error/exceedance bound under the specified population. A useful systems claim requires visible improvement over B-E on at least one Pareto dimension with all other dimensions, build costs and failure rates disclosed. No universal speedup threshold is assumed to imply usefulness.
+
+\section{Blinded natural-language audit}
+The audit determines whether admissions restore substantively distinct retained information or mostly exchange equivalent copies. It is separate from threshold calibration and from task-label disagreement.
+
+Sample up to 400 unique admitted-document/former-blocker pairs across Civil, Ask Ubuntu and CC-News, plus 200 naturally excluded control pairs. Allocate equal corpus quotas, then split admissions between R/S and U/A with their strata visible. Within each stratum use probability sampling over unique pairs, stratified by similarity band and existing-label disagreement when available. Record inclusion probabilities, multiplicities and the complete eligible sampling frame. If a stratum has too few pairs, census it and leave the shortfall visible; do not refill it with favorable cases from another stratum.
+
+For every admitted record, choose one former blocker by a fixed uniform-ID rule for pair annotation. A prespecified subset of 100 admissions also receives its complete former-blocker set, subject to a logged context limit, to judge whether the record adds information beyond the removed neighborhood. One pair alone cannot establish novelty relative to all prior selected texts. On a separately fixed 100-record subset, compare the admitted text with its nearest \emph{surviving selected} text and distinguish novelty from corpus recovery; this is an exploratory interpretation audit, not a guarantee of global novelty.
+
+Three fluent annotators independently judge every pair, blinded to method, request arm, held-out loss changes, label values and the intended conclusion. Ask separately: (1) same meaning versus overlap/topical relation; (2) consequential distinction in entity, number, negation, time or assertion; (3) whether that distinction could matter to the original NLP task. For news, ask about distinct factual assertions, not invented topic labels. For tags/toxicity, raters see the task definition but not the gold label. Preserve disagreements and adjudicate only after independent judgments.
+
+Report category prevalence, agreement, uncertain fraction and adjudication policy. Use recorded design weights for estimates about a specified admission population; label the equal-corpus balanced summary as such. Do not treat repeated admissions of the same record as independent human observations or report weighted estimates without a well-defined inclusion probability. Illustrative examples in the paper are the first eligible cases by fixed hash within preregistered categories, not the largest model effects.
+
+Provide instructions, payment rate and estimated time, language qualifications, consent/withdrawal procedure, and a content warning/skip option for toxic or disturbing text. Record skipped items and adjudicate whether missingness changes the estimate. Publish permitted annotations, record IDs and short permitted excerpts; do not redistribute publisher text or unnecessary identifying metadata. These practical reporting details align with the current ARR responsible-research guidance \cite{arr}; they do not replace the venue's eventual submission instructions.
+
+\section{Boundary studies that prevent overclaiming}
+\textbf{Full-refit branch.} On separate group-complete 5k natural panels, pin standard SemDeDup implementation, cluster count, selection policy and seeds using development only. Train the original branch-specific head. At all main checkpoints for 32 R, 32 S and 16 A paths, compare full-refit R, frozen-fitted F, and frozen-selection models. For the first two R and two S paths, oracle every individual deletion, not just checkpoints. Repeat the no-deletion fit five times with the same declared seed/hardware and three different declared seeds; distinguish nondeterminism from algorithmic seed sensitivity. Compare selected IDs and model predictions, not arbitrary cluster labels. Charge reclustering, reordering and all subsequent model work. Quantify how much conditional frozen curation changes the actual full-refit target.
+
+\textbf{Representation cross.} On the first Civil 10k panel, run the 2-by-2 cross of E5/MPNet for curator and learner. Keep output dimension 768. This separates an effect caused by sharing one representation from one that persists across representations. Each curator receives a development-calibrated threshold and its own exact graph. Report all cells, not the strongest. Dimension ablations instead hold curation fixed and change only the declared learner.
+
+\textbf{Search and numerics.} Compare a pinned ANN candidate scheme with the exhaustive graph on the fixed news window. Audit pairs missed by retrieval using a probability sample that includes nonretrieved candidates. Report edge recall, complete-blocker rate, selected-set mismatch and model effects; high average edge recall is not exactness. Add FP32 state as a separate accuracy/memory frontier, not a relabeling of the FP64 exact-arithmetic algorithm. Vary $\lambda$ by factors 0.1 and 10 around the calibration choice on the fixed Civil panel to expose conditioning, with no retuning for favorable errors.
+
+\textbf{Graph-envelope theorem.} A theorem-backed envelope experiment is admissible only if one can construct uniformly valid lower/upper edge bounds for the actual fixed-order scorer, for example from verified numerical score intervals. If such bounds are implemented, report their selection containment, resulting model-error bounds and tightness on the same natural records. An observed maximum embedding drift, ANN recall or arbitrary reclustering does not supply a uniform certificate. Without a valid implementation, retain this as a theoretical supporting result and state that it was not empirically instantiated.
+
+\textbf{Target normalization.} Average-loss and sum-loss ridge are different learners. One diagnostic on the fixed Civil panel can show the effect of forgetting the $\lambda n$ count shift, but the incorrect implementation is never a baseline competitor. Source overlap beyond a partition, joint encoder training, adaptive hyperparameter reselection and fact/person-level forgetting require new targets and are outside this core experiment.
+
+\section{Execution order and claim decisions}
+\textbf{Gate 0 --- acquire and freeze the population.} Verify fields, instance identity, licensing/access route, source meaning, parsing, missing values and split/guard logic. Resolve snapshots and hashes. Build development and locked confirmation manifests. Failure is an access/data-quality failure; weak redundancy is not grounds to replace a dataset.
+
+\textbf{Gate 1 --- establish valid curation and feasibility.} Complete blind threshold calibration; freeze encoders, priorities and thresholds. Build exact structural panels, compute native byte forecasts and development hardware measurements. Register precision/power analysis and a common timeout. A quality failure blocks semantic-deduplication utility claims; a byte failure blocks native storage-efficiency claims. Both remain results.
+
+\textbf{Gate 2 --- independent correctness and strong baseline.} Implement O-G and B-E before benchmarking P-I. On natural development shards, verify all-case selection, moments, horizon, source ownership, batching, retry and resume. Profile B-E and fix avoidable engineering bottlenecks. Pin code commits before confirmation. Run no-reaccess checks and isolate oracle workers.
+
+\textbf{Gate 3 --- locked confirmation.} Generate all request IDs from manifest seeds. Run structural, relevance and full-method panels, retaining all status records. Thresholds, splits, labels, hyperparameters and sampling rules are immutable. Engineering fixes after a failure require an amended code version and complete reruns of affected comparisons, with failures/version history retained. The protocol cannot eliminate legitimate debugging; it prevents selecting evidence to hide it.
+
+\textbf{Gate 4 --- interpretation and robustness.} Run the independently chosen human sample, full-refit branch, convex extension and bounded one-factor studies. Compute preregistered intervals and all cost ledgers. Determine wording from the claim ledger below before drafting an abstract.
+
+{\smalltable
+\begin{longtable}{p{.40\linewidth}p{.51\linewidth}}
+\toprule Finding & Permitted paper framing\\\midrule\endhead
+Random/source admissions with NLP distinctions and nontrivial prediction effects & Natural counterfactual curation matters for these corpora and request distributions\\
+Effects only under excluded-only/topology-targeted requests & Natural-data stress vulnerability; no common-case prevalence claim\\
+Membership churn but nearly equivalent texts and tiny task effects & Structural phenomenon with limited demonstrated NLP consequences\\
+P-I faster than B-E but much larger state & Explicit latency--memory tradeoff within supported horizon\\
+P-I beats only full rebuilding & Exact repair with theoretical guarantees; no state-of-the-art incremental efficiency claim\\
+Native summaries exceed cap, projected variants fit & Native limitation plus alternate-learner result with utility tradeoff\\
+Full-refit mismatch is substantial & Fixed-curator contribution with a measured applicability boundary\\
+Logical/numerical failures persist & Do not claim demonstrated exact implementation for failed configurations\\
+No material natural effect at valid thresholds & Report negative scope result; defer the intended strong ACL empirical claim\\
+\bottomrule
+\end{longtable}}
+
+\section{Paper assets and release package}
+The main paper should answer the questions in evidence order, rather than display a leaderboard of weak forget/retain metrics. Plan six figures and three tables; consolidate panels if venue space requires, keeping failure cells visible.
+
+{\smalltable
+\begin{longtable}{p{.10\linewidth}p{.40\linewidth}p{.41\linewidth}}
+\toprule Asset & Content & Reviewer question answered\\\midrule\endhead
+Fig. 1 & Natural selected/excluded/admitted flow; random/source distributions with zero mass & Does the proposed phenomenon occur without manufactured data?\\
+Fig. 2 & Fixed-threshold size and budget curves: eligibility, rank, keys, admissions; record versus source & Is the result an artifact of thinning or tiny horizons?\\
+Fig. 3 & Raw/normalized prediction change, signed loss change, weighted semantic audit & Does it matter for NLP beyond changing record IDs?\\
+Fig. 4 & Persistent/peak bytes versus lifecycle time; P-I/B-E/P-R and infeasible native cells & Does the method beat the strongest fair incremental baseline?\\
+Fig. 5 & Correctness residuals/state failures and cumulative cost through the actual horizon & Are the exactness and amortization claims actually measured?\\
+Fig. 6 & Frozen-fitted versus full-refit mismatch; encoder cross and convex extension & Where do the guarantees apply and where do they stop?\\
+Table 1 & Data provenance, task, source unit, split sizes, guard exclusions, curation quality & What exactly was deleted, labeled, and retained?\\
+Table 2 & Baseline access/state/output contracts plus total cost and failures & Are competing methods solving the same problem fairly?\\
+Table 3 & Claim ledger with corpus-level effects, intervals, practical limits and failed gates & Which assertions does the evidence actually support?\\
+\bottomrule
+\end{longtable}}
+
+\textbf{Required reproducibility files.} Release code/environment lock, source acquisition routes and checksums, record-ID manifests, parser/split/guard versions, encoder/tokenizer SHAs, thresholds and calibration judgments, request IDs and seeds, source partition, horizon and remaining-budget logs, state schemas, numerical tolerances/error budgets, method access policies, raw run registry including failures, hardware configuration, human instructions and permitted annotations, and scripts producing every paper figure/table. Keep evaluation and repair processes separate. Include a small natural-data replay with independent oracle, not a synthetic demo as the only executable artifact.
+
+\textbf{Run identity.} A run key must include corpus revision, panel ID, split/guard version, curator contract, threshold, priority seed, curation encoder, learner encoder/dimension, label map, $\lambda$, method revision, request family and trajectory, original/remaining horizon, decoder, precision, access stratum, persistence policy and hardware block. Record exact output hashes and all failure/fallback statuses. Every reported aggregate must resolve to a list of run IDs.
+
+\textbf{What is fixed now.} Questions, core corpora and their roles, target contracts, sampling semantics, default allocations, strong baselines, principal outcomes, error interpretation, access/memory accounting and claim decisions are fixed in this design. Before execution, fill acquisition hashes, source counts, calibrated thresholds, tag vocabulary, selected regularization, resolved revisions and measured resource caps/timeouts. These are designated development/acquisition outputs, not discretionary post-result degrees of freedom.
+
+\textbf{What remains to be earned.} We have not established the natural frequency of admissions, their linguistic importance, empirical speedups, useful compression, or acceptance prospects. The study is designed so that any of these can fail without being obscured by favorable examples, a weakened oracle or a changed dataset.
+
+\newpage
+\begin{thebibliography}{99}\small
+\bibitem{civil} TensorFlow Datasets. \emph{Civil Comments catalog and configuration documentation}. Accessed 3 October 2026. \url{https://www.tensorflow.org/datasets/catalog/civil_comments}
+\bibitem{schema} Stack Exchange. \emph{Database schema documentation for the public data dump and SEDE}. \url{https://meta.stackexchange.com/questions/2677/database-schema-documentation-for-the-public-data-dump-and-sede}
+\bibitem{sedumps} Stack Exchange. \emph{All Stack Exchange data dump releases}. Archive choice and actual file hashes require acquisition validation. \url{https://meta.stackexchange.com/questions/224873/all-stack-exchange-data-dump-releases}
+\bibitem{selicense} Stack Overflow. \emph{Licensing}. \url{https://stackoverflow.com/help/licensing}
+\bibitem{ccnews} V. Blagoje. \emph{CC-News extracted dataset card}. \url{https://huggingface.co/datasets/vblagoje/cc_news}
+\bibitem{ccrawl} Common Crawl. \emph{News Dataset Available}. \url{https://commoncrawl.org/blog/news-dataset-available}
+\bibitem{wcep} D. Gholipour Ghalandari et al. 2020. \emph{A Large-Scale Multi-Document Summarization Dataset from the Wikipedia Current Events Portal}. ACL. \url{https://aclanthology.org/2020.acl-main.120/}
+\bibitem{wceprepo} WCEP authors. \emph{Dataset repository and acquisition instructions}. \url{https://github.com/complementizer/wcep-mds-dataset}
+\bibitem{semcode} Meta Research. \emph{SemDeDup released implementation, semdedup.py}. Pin actual commit before execution. \url{https://github.com/facebookresearch/SemDeDup/blob/main/semdedup.py}
+\bibitem{e5} Intfloat. \emph{Multilingual E5 base model card}. \url{https://huggingface.co/intfloat/multilingual-e5-base}
+\bibitem{mpnet} Sentence Transformers. \emph{all-mpnet-base-v2 model card}. \url{https://huggingface.co/sentence-transformers/all-mpnet-base-v2}
+\bibitem{faiss} Meta Research. \emph{FAISS index documentation}. \url{https://github.com/facebookresearch/faiss/wiki/Faiss-indexes}
+\bibitem{dbsp} M. Budiu et al. 2023. \emph{DBSP: Automatic Incremental View Maintenance for Rich Query Languages}. PVLDB 16. \url{https://www.vldb.org/pvldb/vol16/p1601-budiu.pdf}
+\bibitem{quan} Y. Quan, W. Wu, G. Montana. 2026. \emph{Exact Federated Continual Unlearning for Ridge Heads on Frozen Foundation Models}. Version 3. \url{https://arxiv.org/abs/2603.12977v3}
+\bibitem{arr} ACL Rolling Review. \emph{Responsible NLP Research}. Current guidance accessed 3 October 2026; recheck eventual submission requirements. \url{https://aclrollingreview.org/responsibleNLPresearch/}
+\end{thebibliography}
+\end{document}

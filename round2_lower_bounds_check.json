@@ -1,0 +1,18 @@
+{
+  "m": 5,
+  "b": 2,
+  "N": 13,
+  "embedding_dimension": 8,
+  "signature_pair_inner_product": 0.16666666666666666,
+  "cosine_threshold": 0.4,
+  "low_budget_requests_checked": 92,
+  "binary_label_vectors_checked": 32,
+  "indexed_high_budget_targets_checked": 160,
+  "same_full_embedding_ridge_max_l2_error": 6.798699777552591e-17,
+  "scalar_ridge_max_abs_error": 0.0,
+  "common_coordinate_scalar_max_abs_error": 0.0,
+  "full_embedding_decoding_accuracy_threshold": 0.20833333333333334,
+  "constant_feature_decoding_accuracy_threshold": 0.14705882352941177,
+  "checks_passed": true,
+  "limitations": "Deterministic finite checks validate geometry/optimizer algebra; entropy and logarithmic dimension are proofs, not empirical claims."
+}

@@ -1,0 +1,66 @@
+{
+  "array_or_model_file_candidates": [],
+  "confirmatory_ready": false,
+  "human_and_design_gates": [
+    {
+      "gate": "original_source_snapshot_and_sampling_unit_completeness",
+      "status": "NOT_VERIFIED_BY_THIS_PROGRAM"
+    },
+    {
+      "gate": "original_label_authenticity_and_no_label_fabrication",
+      "status": "NOT_VERIFIED_BY_THIS_PROGRAM"
+    },
+    {
+      "gate": "encoder_tokenizer_and_embedding_derivation_provenance",
+      "status": "NOT_VERIFIED_BY_THIS_PROGRAM"
+    },
+    {
+      "gate": "human_annotation_authenticity_blinding_pay_and_independence",
+      "status": "NOT_VERIFIED_BY_THIS_PROGRAM"
+    },
+    {
+      "gate": "threshold_selection_and_independent_quality_gate_review",
+      "status": "NOT_VERIFIED_BY_THIS_PROGRAM"
+    },
+    {
+      "gate": "full_protocol_pre_execution_lock_and_source_guard_review",
+      "status": "NOT_VERIFIED_BY_THIS_PROGRAM"
+    }
+  ],
+  "inventory_scope": "Current conversation workspace only; no library or other-conversation access.",
+  "lexical_hash_features_are_not_semantic_encoder_embeddings": true,
+  "missing_or_unverified": [
+    "Original immutable source-rich Civil Comments / AskUbuntu corpus bytes and acquisition/extraction evidence",
+    "Predeclared source-disjoint train/calibration/test row manifests with original labels",
+    "FP32 E5 semantic embeddings aligned to those IDs, immutable encoder/tokenizer hashes and derivation evidence",
+    "Threshold calibration and fresh blinded independent human quality validation artifacts",
+    "Source guards, source completeness, original-label authenticity and full pre-execution design lock"
+  ],
+  "natural_fixture_inventory": [
+    {
+      "all_rows_report_immutable_revision_verified": false,
+      "dataset_id": "civil_comments",
+      "nonmissing_labels": 100,
+      "nonmissing_source_ids": 0,
+      "path": "empirical_execution/data/civil_comments_engineering_preview.jsonl",
+      "permitted_role": "nonconfirmatory_natural_data_engineering_fixture",
+      "rows": 100,
+      "sha256": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9",
+      "source_grouped_partition_column_present": false
+    },
+    {
+      "all_rows_report_immutable_revision_verified": false,
+      "dataset_id": "cc_news",
+      "nonmissing_labels": 0,
+      "nonmissing_source_ids": 90,
+      "path": "empirical_execution/data/cc_news_engineering_preview.jsonl",
+      "permitted_role": "nonconfirmatory_natural_data_engineering_fixture",
+      "rows": 90,
+      "sha256": "2706d91d423fc7d31d8235d4b5095b1c8789cc2aa319b31f05c5f1f549d8a8c4",
+      "source_grouped_partition_column_present": false
+    }
+  ],
+  "preview_text_is_not_original_archive_bytes": true,
+  "schema_version": "ccu-local-intake-1",
+  "status": "BLOCKED_CONFIRMATORY_ASSETS_MISSING"
+}

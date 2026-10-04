@@ -1,0 +1,81 @@
+{
+  "status": "passed",
+  "data_sha256": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9",
+  "scope": "Boundary checks on unchanged acquired Civil records; no artificial corpus.",
+  "feature_scope": "fixed128d_lexical_curator_64d_lexical_learner_original_labels",
+  "events": [
+    {
+      "check": "duplicate_in_batch_atomic",
+      "method": "EligiblePayloadState",
+      "status": "passed"
+    },
+    {
+      "check": "duplicate_in_batch_atomic",
+      "method": "IndexedRidgeSummary",
+      "status": "passed"
+    },
+    {
+      "check": "unknown_ID_atomic",
+      "method": "EligiblePayloadState",
+      "status": "passed"
+    },
+    {
+      "check": "unknown_ID_atomic",
+      "method": "IndexedRidgeSummary",
+      "status": "passed"
+    },
+    {
+      "check": "over_budget_atomic",
+      "method": "EligiblePayloadState",
+      "status": "passed"
+    },
+    {
+      "check": "over_budget_atomic",
+      "method": "IndexedRidgeSummary",
+      "status": "passed"
+    },
+    {
+      "check": "retry_atomic_no_budget_consumed",
+      "method": "EligiblePayloadState",
+      "status": "passed"
+    },
+    {
+      "check": "retry_atomic_no_budget_consumed",
+      "method": "IndexedRidgeSummary",
+      "status": "passed"
+    },
+    {
+      "check": "exhaustion_atomic",
+      "method": "EligiblePayloadState",
+      "status": "passed"
+    },
+    {
+      "check": "exhaustion_atomic",
+      "method": "IndexedRidgeSummary",
+      "status": "passed"
+    },
+    {
+      "check": "batch_singleton_reversed_same_final_set",
+      "status": "passed",
+      "max_abs_head_difference": 4.163336342344337e-16
+    },
+    {
+      "check": "all_100_natural_records_deleted",
+      "status": "passed",
+      "releases": 100,
+      "max_abs_head_error": 5.2562121322097255e-16,
+      "max_abs_gram_error": 8.881784197001252e-16,
+      "empty_raw_moment_drift": 2.7755575615628914e-16,
+      "empty_released_head_is_zero": true,
+      "floating_key_canonicality_claim": false
+    },
+    {
+      "check": "allocation_cap_preflight",
+      "status": "passed",
+      "forecast_bytes": 1698840,
+      "cap_bytes": 1
+    }
+  ],
+  "event_count": 13,
+  "confirmatory": false
+}

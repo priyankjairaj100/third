@@ -1,0 +1,13 @@
+{
+  "ordered_graph_envelopes": 760,
+  "polynomial_count_queries": 23788,
+  "graph_selection_envelope_checks": 61901,
+  "interval_realizability_checks": 11134,
+  "sharp_tv_certificates": 15812,
+  "sharp_coefficient_norm_certificates": 648,
+  "gradient_second_moment_checks": 4665,
+  "score_drift_checks": 2000,
+  "max_tv_bound_violation": 0.0,
+  "max_gradient_bound_violation": 4.440892098500626e-16,
+  "status": "all checks passed"
+}

@@ -1,0 +1,100 @@
+{
+  "schema": "certificate-audit-v1",
+  "checks_passed": 50,
+  "failures": 0,
+  "checks": [
+    "known_exact_solution_zero_residual",
+    "perturbed_solution_bound_encloses_independent_exact_error",
+    "candidate_digest_binds_weights",
+    "same_target_digest_independent_candidate",
+    "nonorthogonal_basis_factor_dense_exact_residual_agreement",
+    "nonorthogonal_basis_bound_contains_exact_gauss_jordan_solution",
+    "exact_psd_rank",
+    "singular_psd_accepted",
+    "zero_rank_factor_nonempty_error",
+    "empty_target_nonzero_candidate_exact_error",
+    "empty_target_zero_candidate_exact_bound",
+    "indefinite_zero_pivot_rejected",
+    "negative_gram_rejected",
+    "nonsymmetric_gram_rejected",
+    "indefinite_factor_core_rejected",
+    "empty_nonzero_moments_rejected",
+    "empty_factor_nonzero_gram_rejected",
+    "empty_factor_nonzero_cross_rejected",
+    "nan_candidate_rejected",
+    "zero_regularization_rejected",
+    "noninteger_count_rejected",
+    "negative_count_rejected",
+    "shape_mismatch_rejected",
+    "extended_numpy_float_rejected",
+    "numpy_float32_preserved_exactly",
+    "numpy_float64_preserved_exactly",
+    "integer_sqrt_bound_0_0",
+    "integer_sqrt_bound_0_8",
+    "integer_sqrt_bound_0_30",
+    "integer_sqrt_bound_0_80",
+    "integer_sqrt_bound_1_0",
+    "integer_sqrt_bound_1_8",
+    "integer_sqrt_bound_1_30",
+    "integer_sqrt_bound_1_80",
+    "integer_sqrt_bound_2_0",
+    "integer_sqrt_bound_2_8",
+    "integer_sqrt_bound_2_30",
+    "integer_sqrt_bound_2_80",
+    "integer_sqrt_bound_3_0",
+    "integer_sqrt_bound_3_8",
+    "integer_sqrt_bound_3_30",
+    "integer_sqrt_bound_3_80",
+    "integer_sqrt_bound_4_0",
+    "integer_sqrt_bound_4_8",
+    "integer_sqrt_bound_4_30",
+    "integer_sqrt_bound_4_80",
+    "exact_tolerance_comparison",
+    "prediction_bound",
+    "natural_text_factor_dense_certificate_agreement",
+    "natural_text_certificate_contains_independent_exact_solution"
+  ],
+  "arithmetic_fixtures_are_not_empirical_datasets": true,
+  "real_text_check": {
+    "records": 12,
+    "dataset": "Civil Comments engineering preview",
+    "feature_dimension": 16,
+    "representation": "Unmodified real text with fixed lexical engineering features; no semantic/E5 claim",
+    "factor_certificate_seconds": 0.0011448800069047138,
+    "dense_certificate_seconds": 0.004497147994698025,
+    "certificate": {
+      "schema": "exact-ridge-residual-certificate-v1",
+      "target_digest": "9015b8dfb393e1353a7fed80c71e1d342e47fa0e7df0c8319b074b27531427b7",
+      "candidate_digest": "3499fb0234f53f401fdcf0d1ead534e29a0d9683943ce6b8e5a784478f16e2a5",
+      "count": 12,
+      "feature_dimension": 16,
+      "response_dimension": 1,
+      "lambda_reg_exact": {
+        "numerator": "5764607523034235",
+        "denominator": "576460752303423488"
+      },
+      "residual_squared_frobenius_exact": {
+        "numerator": "2426392570591628153062806221852851608857",
+        "denominator": "27606985387162255149739023449108101809804435888681546220650096895197184"
+      },
+      "error_squared_upper_bound_exact": {
+        "numerator": "2426392570591628153062806221852851608857",
+        "denominator": "397540589575136490707193779018756508599280023745450576993138927206400"
+      },
+      "error_upper_bound_rational": {
+        "numerator": "24705280833663867692090963",
+        "denominator": "10000000000000000000000000000000000000000"
+      },
+      "error_upper_bound_decimal": "0.0000000000000024705280833663867692090963",
+      "psd_core_rank": 12,
+      "target_representation": "exact-joint-span",
+      "exact_arithmetic": "Python Fraction; finite floats interpreted as exact dyadic rationals",
+      "empty_target": false,
+      "bound_semantics": "Frobenius distance from candidate W to the exact specified ridge minimizer; no distributional unlearning claim"
+    },
+    "independent_exact_solution_error_squared": {
+      "numerator": "90945985791314971534590495338433539262519314653896232321346229726774076199307582528326149700853054190025941485511912834358184691326422322866374245433712033106542242170280076142796684394038047987682418794128968998925580522434823436459494296582599804293067196521673440530196534978771280867842516234986859894049184982357954141786087852448239217411516334798709419599348173740668005701774804136745004430044773273",
+      "denominator": "71372811976835759545030869085657627939868712185203237078952166081654375761588879640701694266886553785412347589490379395970005146646128375630587518595130749706895044362273463017665500406757255145622691112716017743904720977068638072627366640254241578767641467151854509151681781263901676102601900879777481936439023509824122943685903971835835088599680958861361857336901653193081616458148713239937169761530944581635487843828568766466580545536"
+    }
+  }
+}

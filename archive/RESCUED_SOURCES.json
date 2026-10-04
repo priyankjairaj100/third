@@ -1,0 +1,32 @@
+[
+  {
+    "original_path": "tmp/pdfs/round1_theory.tex",
+    "preserved_path": "archive/theory_history/round1_theory.tex",
+    "bytes": 54996,
+    "sha256": "fae49fa927b28d2364590d32cf9e6e13594b4a002fa58b7ee3fc57de6f460b83"
+  },
+  {
+    "original_path": "tmp/pdfs/round2_theory.tex",
+    "preserved_path": "archive/theory_history/round2_theory.tex",
+    "bytes": 82258,
+    "sha256": "eccb6178226bc5cf518462677450ee38735ac970ec879e1ba16c22df11368edb"
+  },
+  {
+    "original_path": "tmp/pdfs/build_empirical_pdf.py",
+    "preserved_path": "tools/legacy_build/build_empirical_pdf.py",
+    "bytes": 1470,
+    "sha256": "7626d2230dd2c7b5cdfb9768c5ffcd8b2c4f1768a04e2e9f3c936fb7e4fa24be"
+  },
+  {
+    "original_path": "tmp/pdfs/package_empirical.py",
+    "preserved_path": "tools/legacy_build/package_empirical.py",
+    "bytes": 19899,
+    "sha256": "0605271d9e1444be4d07b52eeb878c4bf6311bfcb6d1909b103466ae9a169cbf"
+  },
+  {
+    "original_path": "tmp/pdfs/rebuild_pdf.py",
+    "preserved_path": "tools/legacy_build/rebuild_pdf.py",
+    "bytes": 1414,
+    "sha256": "5c54c86f91662cd9986cb13c3b7080ff808533e2d1eb6074e8407e9fb997be38"
+  }
+]

@@ -1,0 +1,35 @@
+INTAKE V2 — PROSPECTIVE, VERSIONED CORRECTION
+
+All phase2 files remain unchanged. Use phase3/intake_v2.py with manifest schema
+ccu-local-intake-2; assets_manifest_v2.template.json and the corresponding schema
+retain actual-input placeholders. These are not completed intake manifests.
+
+Corrections against the authoritative narrative protocol:
+1. Civil row text must equal NFC/whitespace-normalized original_fields.text.
+   The original field retains its raw text. Raw byte equality was too strict.
+2. Source derivation now shares panels.source_unit: nonboolean integer/string
+   original IDs only; blank/missing metadata are singleton units. Stack community
+   or missing owners <=0 are unknown singletons and excluded from native counts.
+3. Civil parent guard rejects only a TRAINING CHILD whose non-sentinel parent is
+   in calibration/test. Reverse links and calibration-test parent links are not
+   independently forbidden. None/empty/0/-1 sentinel variants are ignored.
+4. If a response contains a six-class category, its three-way label must follow
+   the frozen mapping (copy/same-meaning => duplicate; overlap/related/unrelated
+   => not_duplicate; uncertain => unsure). Absent categories remain accepted by
+   this intake compatibility layer; phase3 threshold calibration requires them.
+
+Run from workspace root:
+python3 empirical_execution/phase3/check_intake_v2.py
+python3 empirical_execution/phase3/intake_v2.py --manifest FILLED_MANIFEST.json --out VALIDATION.json
+
+69 regression assertions passed. Software-only algebraic metadata fixtures are
+transient and never saved as study corpora; their text/label inputs derive from
+already cached natural records. No human responses were produced. The unmodified
+100-record preview still fails source-rich study intake and confirmatory_ready
+remains false. Intake checks internal consistency; source history, human authorship,
+blinding, independence and the complete design lock remain independent gates.
+
+The stricter source rules are additional consistency checks. They do not recover
+absent original source fields or authenticate an asserted historical source.
+Hash-quantile assignments, whole-group panels and numeric semantic scoring are
+handled by panels.py/calibration.py; v2 intake alone does not establish them.

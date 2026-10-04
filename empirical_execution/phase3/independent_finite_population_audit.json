@@ -1,0 +1,180 @@
+{
+  "audit": "independent exhaustive exact finite-population inversion and coverage",
+  "evidence_role": "algebraic software tests; no empirical labels or synthetic corpus",
+  "passed": true,
+  "alpha": "1/20",
+  "exhaustive_population_max": 24,
+  "bound_cells": 2900,
+  "coverage_cells": 5200,
+  "maximum_exact_noncoverage": "1/20",
+  "coverage_exact_alpha_cells": 7,
+  "large_and_empty_cases": [
+    {
+      "N": 1000,
+      "n": 200,
+      "x": 0,
+      "result": {
+        "defined": true,
+        "lower_success_count": 0,
+        "lower_proportion": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "N": 1000,
+        "n": 200,
+        "x": 0,
+        "alpha": {
+          "numerator": 1,
+          "denominator": 20
+        },
+        "confidence": {
+          "numerator": 19,
+          "denominator": 20
+        },
+        "method": "exact finite population hypergeometric tail inversion; census exact",
+        "tail_rejection": "less_than_or_equal_alpha"
+      }
+    },
+    {
+      "N": 1000,
+      "n": 200,
+      "x": 200,
+      "result": {
+        "defined": true,
+        "lower_success_count": 987,
+        "lower_proportion": {
+          "numerator": 987,
+          "denominator": 1000
+        },
+        "N": 1000,
+        "n": 200,
+        "x": 200,
+        "alpha": {
+          "numerator": 1,
+          "denominator": 20
+        },
+        "confidence": {
+          "numerator": 19,
+          "denominator": 20
+        },
+        "method": "exact finite population hypergeometric tail inversion; census exact",
+        "tail_rejection": "less_than_or_equal_alpha"
+      }
+    },
+    {
+      "N": 1000000,
+      "n": 200,
+      "x": 190,
+      "result": {
+        "defined": true,
+        "lower_success_count": 916669,
+        "lower_proportion": {
+          "numerator": 916669,
+          "denominator": 1000000
+        },
+        "N": 1000000,
+        "n": 200,
+        "x": 190,
+        "alpha": {
+          "numerator": 1,
+          "denominator": 20
+        },
+        "confidence": {
+          "numerator": 19,
+          "denominator": 20
+        },
+        "method": "exact finite population hypergeometric tail inversion; census exact",
+        "tail_rejection": "less_than_or_equal_alpha"
+      }
+    },
+    {
+      "N": 200,
+      "n": 200,
+      "x": 181,
+      "result": {
+        "defined": true,
+        "lower_success_count": 181,
+        "lower_proportion": {
+          "numerator": 181,
+          "denominator": 200
+        },
+        "N": 200,
+        "n": 200,
+        "x": 181,
+        "alpha": {
+          "numerator": 1,
+          "denominator": 20
+        },
+        "confidence": {
+          "numerator": 19,
+          "denominator": 20
+        },
+        "method": "exact finite population hypergeometric tail inversion; census exact",
+        "tail_rejection": "less_than_or_equal_alpha"
+      }
+    },
+    {
+      "N": 200,
+      "n": 200,
+      "x": 180,
+      "result": {
+        "defined": true,
+        "lower_success_count": 180,
+        "lower_proportion": {
+          "numerator": 9,
+          "denominator": 10
+        },
+        "N": 200,
+        "n": 200,
+        "x": 180,
+        "alpha": {
+          "numerator": 1,
+          "denominator": 20
+        },
+        "confidence": {
+          "numerator": 19,
+          "denominator": 20
+        },
+        "method": "exact finite population hypergeometric tail inversion; census exact",
+        "tail_rejection": "less_than_or_equal_alpha"
+      }
+    },
+    {
+      "N": 17,
+      "n": 0,
+      "x": 0,
+      "result": {
+        "defined": false,
+        "lower_success_count": null,
+        "lower_proportion": null,
+        "N": 17,
+        "n": 0,
+        "x": 0,
+        "alpha": {
+          "numerator": 1,
+          "denominator": 20
+        }
+      }
+    },
+    {
+      "N": 0,
+      "n": 0,
+      "x": 0,
+      "result": {
+        "defined": false,
+        "lower_success_count": null,
+        "lower_proportion": null,
+        "N": 0,
+        "n": 0,
+        "x": 0,
+        "alpha": {
+          "numerator": 1,
+          "denominator": 20
+        }
+      }
+    }
+  ],
+  "invalid_count_cases_rejected": 7,
+  "invalid_alpha_cases_rejected": 4,
+  "production_sha256": "2a6ce3b19de3063f32b010ebfa19ffc4003ffc09acfc41a1ead4f74bc6c81b13"
+}

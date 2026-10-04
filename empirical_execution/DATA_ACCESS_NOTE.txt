@@ -1,0 +1,37 @@
+Natural-data acquisition audit, 4 October 2026
+
+Acquired here through the supported Hugging Face connector: 100 Civil Comments
+records with real toxicity labels and 90 CC-News articles with original host,
+date and URL fields. These first-row convenience previews support software
+engineering checks only. They are not confirmatory dataset samples.
+
+The connector returns Markdown, not original file bytes. We retain the untouched
+connector response JSON for every page, hash it, and save each derived row's
+page offset/index and response hash. Parsing removes only observed presentation
+escapes; original whitespace and byte fidelity remain unverified. The name
+*_raw.json means untouched connector response, not raw source-corpus bytes.
+No immutable Hub commit SHA was exposed, and no missing row was reconstructed.
+
+Civil Comments in the current google/civil_comments HF parquet contains text and
+seven toxicity labels. It omits original IDs, article IDs, publication IDs,
+parent IDs and dates. Therefore source withdrawal is disabled for this slice.
+The intended primary corpus is TFDS CivilComments1.2.4, whose official schema
+includes those metadata fields. google/jigsaw_unintended_bias Viewer returns501.
+
+CC-News yielded90 complete parsed preview rows over5 observed hosts. Pages30-34
+and85-89 returned502, then429 on one retry, so extraction stopped. This is not a
+complete source-group population. Its label field is null: no classifier target
+was invented. The original domain is a host provenance group, not a claim about
+corporate publisher ownership.
+
+Connector pagination accepts offset and limit. A100-row CC-News request caused
+rendered-output truncation near66,000 characters; it was excluded from derived
+data. Five-row pages were verified for exact table counts and untruncated output.
+The hf_doc_fetch tool is unavailable even though listed in stale tool metadata.
+No binary-export operation is advertised by the working repository connector.
+
+No external compute, browser fallback, network-allowlist bypass, library search
+or direct non-allowlisted download was used. Full confirmatory execution still
+requires original binary corpus assets and pinned encoder weights through a
+permitted import route. The engineering pipeline can run now on these observed
+natural rows while keeping the primary acquisition gate closed.

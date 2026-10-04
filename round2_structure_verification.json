@@ -1,0 +1,33 @@
+{
+  "status": "all_passed",
+  "seed": 3032026,
+  "scope": "fixed graph/order, partition sources, exact logical scalar states",
+  "counts": {
+    "explicit_source_diamond_checks": 1,
+    "random_ordered_graphs": 240,
+    "reduced_signature_binary_rank_checks": 2160,
+    "reduced_signature_rational_rank_checks": 2160,
+    "same_source_blocker_zero_checks": 2455,
+    "semdedup_negative_threshold_counterexamples": 1,
+    "semdedup_nonnegative_strict_threshold_checks": 531,
+    "source_canonical_rebuild_checks": 2742,
+    "source_dsu_binary_rank_checks": 659,
+    "source_dsu_rational_rank_checks": 659,
+    "source_logical_key_count_checks": 1150,
+    "source_path_independence_checks": 8117,
+    "source_polynomial_query_checks": 2742
+  },
+  "source_diamond_rank_curve": [
+    1,
+    3,
+    3
+  ],
+  "semdedup_equivalence_condition": "strict similarity > tau with conventional tau in [0,1]",
+  "limitations": [
+    "Finite randomized-graph checks supplement proofs; not exhaustive universal proof.",
+    "No NLP corpus or model training experiment is performed.",
+    "Logical-map equality does not assert history-free machine handles or whole-system erasure.",
+    "Source membership is a partition; overlapping ownership is outside this theorem."
+  ],
+  "runtime_seconds": 0.742927
+}

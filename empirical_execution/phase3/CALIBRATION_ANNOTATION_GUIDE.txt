@@ -1,0 +1,50 @@
+BLINDED PAIR JUDGMENT GUIDE — PREPARED, NOT YET COLLECTED
+======================================================
+
+Judge the text pair independently before seeing any other rater's answer. You must
+not see similarity scores, source/method names, deletion requests, original task
+labels, downstream model behavior, previous judgments, or the desired outcome.
+The study coordinator assigns each pair to three distinct independent people.
+Each person completes only their own assigned copy. A repeated pair in the later
+validation stage has a fresh blinded assignment; earlier answers must not be copied.
+
+Choose exactly one category:
+
+exact_copy
+    The same text or a purely superficial formatting/spelling variation, without
+    a change in assertion, entity, quantity, negation, time, or information.
+
+substantially_same_meaning
+    The texts express substantially the same task-relevant meaning. Different
+    wording is allowed, but neither text adds or changes a consequential assertion.
+
+overlapping_information
+    They share some information, but at least one contains a meaningful addition,
+    omission, conflict, or distinction. Shared topic alone does not establish sameness.
+
+merely_related
+    They concern related topics or situations but make different assertions.
+
+unrelated
+    They do not share meaningful content for this judgment.
+
+uncertain
+    You cannot decide reliably. Do not guess. Use this for insufficient context,
+    ambiguous quotation/irony, language you cannot assess, or unclear distinctions.
+
+Pay particular attention to changed entities, numbers, negation, dates/times and
+claims. A consequential change prevents the positive categories even when most
+words are shared. Annotators receive the fixed corpus/task definition without gold
+labels; no additional classification labels are invented for news.
+
+The recorded binary compatibility field is mechanically determined:
+    exact_copy or substantially_same_meaning -> duplicate
+    overlapping_information, merely_related or unrelated -> not_duplicate
+    uncertain -> unsure
+Retain the original six-category response. The analysis treats unsure conservatively
+as nonpositive and counts a pair positive only if at least2 of3 raters are positive.
+
+The coordinator must preserve independent responses before any adjudication.
+Adjudicated answers do not replace primary independent ratings. The prepared blank
+template does not establish that collection, informed participation, content handling
+or compensation has occurred; these arrangements remain required before real use.

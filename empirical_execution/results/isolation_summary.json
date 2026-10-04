@@ -1,0 +1,8 @@
+{
+  "worker_returncode": 0,
+  "checkpoint_count": 4,
+  "max_abs_head_error": 0.0,
+  "io_attempts_during_guarded_repair": [],
+  "saved_current_state_bytes": 6645642,
+  "scope": "fresh_process_state_only_replay_with_Python_IO_guard_not_OS_security_or_privacy_proof"
+}

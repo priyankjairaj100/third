@@ -1,0 +1,13 @@
+2026-10-04 engineering v1.1 (before any confirmatory experiment)
+- v1 numeric harness varied the lexical curation dimension with learner dimension.
+  Archived all initial outputs in archive/pilot_v1_variable_curation. They are
+  superseded for dimension comparisons, not silently removed.
+- v1.1 fixes curation at lexical128 across learner64/128/768, passes the identical
+  graph feature values to the independent oracle, and reruns all checkpoints.
+- Aligned B-E/P-I raw request kernels: duplicate/retried IDs reject atomically
+  without consuming horizon. No unaccounted historical deduplication log is used.
+- Summary empty-target decoder returns zero head by explicit target convention;
+  its raw floating moment residue remains visible for numerical audit.
+- Python heap estimates do not include a matched common string/integer registry;
+  comparison headlines use actual initial array bytes only. Complete physical
+  memory and publication-grade speed comparisons remain pending.

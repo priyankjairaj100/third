@@ -1,0 +1,34 @@
+{
+  "state_sha256": "abbc9357d03447f858105237908d119a2c8498b9ff980d7fa2b5016f909f1ec8",
+  "certificate": {
+    "schema": "exact-ridge-residual-certificate-v1",
+    "target_digest": "0865c66f1cb89e63480144c08a0bc22e65fbb7bbba175e795cc27cbd1e71004f",
+    "candidate_digest": "e6fe953cf3bb5653e66c7a186b97d115f92a90441e2459cea6f9ea327c09f524",
+    "count": 63,
+    "feature_dimension": 16,
+    "response_dimension": 1,
+    "lambda_reg_exact": {
+      "numerator": "5764607523034235",
+      "denominator": "576460752303423488"
+    },
+    "residual_squared_frobenius_exact": {
+      "numerator": "2984324072076465449933196887539189717786825",
+      "denominator": "28269553036454149273332760011886696253239742350009903329945699220681916416"
+    },
+    "error_squared_upper_bound_exact": {
+      "numerator": "119372962883058617997327875501567588711473",
+      "denominator": "448807424006746092548793488761015347948243175607663883402174123258937344"
+    },
+    "error_upper_bound_rational": {
+      "numerator": "5157306834320257201838633",
+      "denominator": "10000000000000000000000000000000000000000"
+    },
+    "error_upper_bound_decimal": "0.0000000000000005157306834320257201838633",
+    "psd_core_rank": 16,
+    "target_representation": "exact-joint-span",
+    "exact_arithmetic": "Python Fraction; finite floats interpreted as exact dyadic rationals",
+    "empty_target": false,
+    "bound_semantics": "Frobenius distance from candidate W to the exact specified ridge minimizer; no distributional unlearning claim"
+  },
+  "input_state_unchanged_sha256": "8b8335d5365bb6c32febab17fbbdc5c0a4b12bc028d207055d7703de519bf827"
+}

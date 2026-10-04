@@ -1,0 +1,162 @@
+{
+  "status": "completed_engineering_pilot",
+  "scope": "Run local nonconfirmatory checks on acquired, natural Civil/CC-News previews.\n\nThis is not the full ACL study: preview provenance, unavailable source fields,\nlexical features, uncalibrated thresholds, and small counts are recorded. No\nsynthetic documents, invented labels or held-out utility claims are produced.\n",
+  "numeric": [
+    {
+      "dimension": 64,
+      "record_count": 100,
+      "trajectories_planned": 40,
+      "checkpoint_rows_passed": 160,
+      "failed_trajectories": [],
+      "max_abs_head_error": 4.996003610813204e-16,
+      "max_abs_moment_error": 2.220446049250313e-16,
+      "checkpoint_rows_with_admissions": 41,
+      "maximum_admitted_count": 5,
+      "initial_accounting": {
+        "B-E": {
+          "mode": "record",
+          "remaining_horizon": 8,
+          "alive_service_units": 100,
+          "eligible_payload_records": 53,
+          "selected_records": 26,
+          "blocker_incidences": 123,
+          "feature_array_bytes": 13568,
+          "target_array_bytes": 424,
+          "moment_array_bytes": 33280,
+          "all_array_bytes": 47272,
+          "python_owned_bytes_estimate": 135657
+        },
+        "P-I": {
+          "method": "P-index-python-numpy",
+          "state_contract": "current coefficients and head; no selected-ID recovery",
+          "coefficient_count": 75,
+          "packed_dimension": 2145,
+          "numeric_coefficient_bytes": 1287000,
+          "python_live_bytes_estimate": 1352192,
+          "python_metadata_bytes_estimate": 65192,
+          "alive_public_identifiers": 100,
+          "remaining_horizon": 8,
+          "key_incidences": 261,
+          "quadratic_key_potential": 850,
+          "retained_feature_rows": 0,
+          "retained_target_rows": 0,
+          "retained_original_graph": false,
+          "numeric_guarantee": "FP64 diagnostic fidelity; not certified roundoff"
+        }
+      },
+      "elapsed_seconds": 0.4828906610055128,
+      "confirmatory": false
+    },
+    {
+      "dimension": 128,
+      "record_count": 100,
+      "trajectories_planned": 40,
+      "checkpoint_rows_passed": 160,
+      "failed_trajectories": [],
+      "max_abs_head_error": 6.661338147750939e-16,
+      "max_abs_moment_error": 4.440892098500626e-16,
+      "checkpoint_rows_with_admissions": 37,
+      "maximum_admitted_count": 4,
+      "initial_accounting": {
+        "B-E": {
+          "mode": "record",
+          "remaining_horizon": 8,
+          "alive_service_units": 100,
+          "eligible_payload_records": 83,
+          "selected_records": 65,
+          "blocker_incidences": 60,
+          "feature_array_bytes": 42496,
+          "target_array_bytes": 664,
+          "moment_array_bytes": 132096,
+          "all_array_bytes": 175256,
+          "python_owned_bytes_estimate": 272033
+        },
+        "P-I": {
+          "method": "P-index-python-numpy",
+          "state_contract": "current coefficients and head; no selected-ID recovery",
+          "coefficient_count": 99,
+          "packed_dimension": 8385,
+          "numeric_coefficient_bytes": 6640920,
+          "python_live_bytes_estimate": 6712268,
+          "python_metadata_bytes_estimate": 71348,
+          "alive_public_identifiers": 100,
+          "remaining_horizon": 8,
+          "key_incidences": 197,
+          "quadratic_key_potential": 465,
+          "retained_feature_rows": 0,
+          "retained_target_rows": 0,
+          "retained_original_graph": false,
+          "numeric_guarantee": "FP64 diagnostic fidelity; not certified roundoff"
+        }
+      },
+      "elapsed_seconds": 0.9122624830051791,
+      "confirmatory": false
+    },
+    {
+      "dimension": 768,
+      "record_count": 100,
+      "trajectories_planned": 1,
+      "checkpoint_rows_passed": 4,
+      "failed_trajectories": [],
+      "max_abs_head_error": 1.6653345369377348e-16,
+      "max_abs_moment_error": 1.7763568394002505e-15,
+      "checkpoint_rows_with_admissions": 1,
+      "maximum_admitted_count": 1,
+      "initial_accounting": {
+        "B-E": {
+          "mode": "record",
+          "remaining_horizon": 8,
+          "alive_service_units": 100,
+          "eligible_payload_records": 100,
+          "selected_records": 99,
+          "blocker_incidences": 1,
+          "feature_array_bytes": 307200,
+          "target_array_bytes": 800,
+          "moment_array_bytes": 4724736,
+          "all_array_bytes": 5032736,
+          "python_owned_bytes_estimate": 5151225
+        },
+        "P-I": {
+          "method": "P-index-python-numpy",
+          "state_contract": "current coefficients and head; no selected-ID recovery",
+          "coefficient_count": 101,
+          "packed_dimension": 296065,
+          "numeric_coefficient_bytes": 239220520,
+          "python_live_bytes_estimate": 239292964,
+          "python_metadata_bytes_estimate": 72444,
+          "alive_public_identifiers": 100,
+          "remaining_horizon": 8,
+          "key_incidences": 101,
+          "quadratic_key_potential": 102,
+          "retained_feature_rows": 0,
+          "retained_target_rows": 0,
+          "retained_original_graph": false,
+          "numeric_guarantee": "FP64 diagnostic fidelity; not certified roundoff"
+        }
+      },
+      "elapsed_seconds": 0.49061721000180114,
+      "confirmatory": false
+    }
+  ],
+  "isolation": {
+    "worker_returncode": 0,
+    "checkpoint_count": 4,
+    "max_abs_head_error": 0.0,
+    "io_attempts_during_guarded_repair": [],
+    "saved_current_state_bytes": 6645642,
+    "scope": "fresh_process_state_only_replay_with_Python_IO_guard_not_OS_security_or_privacy_proof"
+  },
+  "structure": {
+    "configurations": 9,
+    "confirmatory": false
+  },
+  "process_peak_RSS_kib": 393348,
+  "peak_scope": "whole_pilot_parent_process_not_attributable_to_one_method",
+  "primary_study_blockers": [
+    "full_original_source_rich_datasets_not_locally_available",
+    "E5_and_MPNet_weights_and_inference_runtime_not_available",
+    "human_semantic_quality_validation_not_completed",
+    "native_dense_full_panel_memory_exceeds_current_host_if_forecast_requires_it"
+  ],
+  "no_remote_compute_used": true
+}

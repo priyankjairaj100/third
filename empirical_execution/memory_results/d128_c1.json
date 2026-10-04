@@ -1,0 +1,176 @@
+{
+  "dimension": 128,
+  "outputs": 1,
+  "paths": 40,
+  "checkpoints": 160,
+  "max_head_error": {
+    "dense": 6.661338147750939e-16,
+    "gram_factor": 6.661338147750939e-16,
+    "joint_span": 7.771561172376096e-16,
+    "compact_payload": 8.326672684688674e-16
+  },
+  "max_moment_error": {
+    "dense": 4.440892098500626e-16,
+    "gram_factor": 4.440892098500626e-16,
+    "joint_span": 4.440892098500626e-16,
+    "compact_payload": 4.440892098500626e-16
+  },
+  "max_live_array_bytes": {
+    "dense": 6573840,
+    "gram_factor": 269925,
+    "joint_span": 172168,
+    "compact_payload": 43160
+  },
+  "coefficient_audits": [
+    {
+      "method": "gram_factor",
+      "checkpoint": 1,
+      "keys_checked": 96,
+      "max_abs_coefficient_error": 8.811994775633712e-17
+    },
+    {
+      "method": "joint_span",
+      "checkpoint": 1,
+      "keys_checked": 96,
+      "max_abs_coefficient_error": 1.1102230246251565e-16
+    },
+    {
+      "method": "gram_factor",
+      "checkpoint": 2,
+      "keys_checked": 91,
+      "max_abs_coefficient_error": 8.811994775633712e-17
+    },
+    {
+      "method": "joint_span",
+      "checkpoint": 2,
+      "keys_checked": 91,
+      "max_abs_coefficient_error": 1.1102230246251565e-16
+    },
+    {
+      "method": "gram_factor",
+      "checkpoint": 4,
+      "keys_checked": 83,
+      "max_abs_coefficient_error": 8.811994775633712e-17
+    },
+    {
+      "method": "joint_span",
+      "checkpoint": 4,
+      "keys_checked": 83,
+      "max_abs_coefficient_error": 1.1102230246251565e-16
+    },
+    {
+      "method": "gram_factor",
+      "checkpoint": 8,
+      "keys_checked": 1,
+      "max_abs_coefficient_error": 0.0
+    },
+    {
+      "method": "joint_span",
+      "checkpoint": 8,
+      "keys_checked": 1,
+      "max_abs_coefficient_error": 1.1102230246251565e-16
+    }
+  ],
+  "max_compact_decode_error": 7.771561172376096e-16,
+  "compact_decode_invocations": 160,
+  "initial_array_bytes": {
+    "dense": 6640920,
+    "gram_factor": 270949,
+    "joint_span": 172144,
+    "compact_payload": 43160,
+    "original_payload_with_gram": 175256
+  },
+  "initial_accounting": {
+    "dense": {
+      "method": "P-index-python-numpy",
+      "state_contract": "current coefficients and head; no selected-ID recovery",
+      "coefficient_count": 99,
+      "packed_dimension": 8385,
+      "numeric_coefficient_bytes": 6640920,
+      "python_live_bytes_estimate": 6712268,
+      "python_metadata_bytes_estimate": 71348,
+      "alive_public_identifiers": 100,
+      "remaining_horizon": 8,
+      "key_incidences": 197,
+      "quadratic_key_potential": 465,
+      "retained_feature_rows": 0,
+      "retained_target_rows": 0,
+      "retained_original_graph": false,
+      "numeric_guarantee": "FP64 diagnostic fidelity; not certified roundoff"
+    },
+    "gram_factor": {
+      "method": "P-index-adaptive-signed-Gram-python-numpy",
+      "state_contract": "current aggregated coefficients and public membership; no selected-ID recovery",
+      "coefficient_count": 99,
+      "packed_dimension": 8385,
+      "numeric_coefficient_bytes": 270949,
+      "numeric_total_bytes": 270949,
+      "numeric_gram_bytes": 169573,
+      "numeric_cross_bytes": 101376,
+      "numeric_sign_bytes": 101,
+      "exact_count_python_bytes": 2772,
+      "python_live_bytes_estimate": 374685,
+      "python_metadata_bytes_estimate": 103736,
+      "factored_coefficients": 98,
+      "dense_coefficients": 1,
+      "stored_factor_columns": 101,
+      "alive_public_identifiers": 100,
+      "remaining_horizon": 8,
+      "key_incidences": 197,
+      "quadratic_key_potential": 465,
+      "retained_separate_feature_rows": 0,
+      "retained_separate_target_rows": 0,
+      "retained_row_table": false,
+      "repair_time_payload_reads": false,
+      "retained_original_graph": false,
+      "retained_contributor_ids": false,
+      "numeric_guarantee": "FP64 diagnostic fidelity; exact-arithmetic factor identity; no rank truncation"
+    },
+    "joint_span": {
+      "method": "P-joint-span-python-numpy",
+      "coefficient_count": 99,
+      "compact_coefficients": 98,
+      "dense_coefficients": 1,
+      "compact_rank_sum": 101,
+      "maximum_compact_rank": 3,
+      "numeric_coefficient_bytes": 172144,
+      "all_array_bytes": 172144,
+      "numeric_total_bytes": 172144,
+      "integer_count_scalars": 99,
+      "integer_counts_included_in_array_bytes": false,
+      "python_live_bytes_estimate": 277336,
+      "python_metadata_bytes_estimate": 105192,
+      "alive_public_identifiers": 100,
+      "remaining_horizon": 8,
+      "key_incidences": 197,
+      "quadratic_key_potential": 465,
+      "retained_feature_rows": 0,
+      "retained_target_rows": 0,
+      "retained_original_graph": false,
+      "state_contract": "Current aggregate coefficient factors; no selected-ID recovery",
+      "numeric_guarantee": "FP64 diagnostic fidelity; no numerical rank truncation or certified roundoff",
+      "rank_envelope": "Initial eligible contribution envelope; dense keys are not recompressed"
+    },
+    "compact_payload": {
+      "method": "B-E-compact-primal-dual",
+      "state_contract": "eligible FP32 payload retained; no persistent moments",
+      "remaining_horizon": 8,
+      "alive_service_units": 100,
+      "eligible_payload_records": 83,
+      "selected_records": 65,
+      "blocker_incidences": 60,
+      "feature_array_bytes": 42496,
+      "target_array_bytes": 664,
+      "moment_array_bytes": 0,
+      "kernel_array_bytes": 0,
+      "all_array_bytes": 43160,
+      "python_live_bytes_estimate": 136144,
+      "python_metadata_bytes_estimate": 92984,
+      "release_solver": "dual",
+      "release_system_dimension": 65,
+      "release_selected_copy_bytes": 67080,
+      "release_system_and_factor_bytes_estimate": 67600,
+      "workspace_estimate_note": "Partial named arrays only; excludes response/output/residual and BLAS workspaces; measure process peak separately"
+    }
+  }
+}

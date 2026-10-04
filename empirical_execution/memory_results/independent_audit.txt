@@ -1,0 +1,45 @@
+INDEPENDENT MEMORY REPAIR AUDIT
+
+{
+  "scope": "Independent code audit and representation-only changes to actual natural-text coefficients; no synthetic corpus or labels",
+  "code_sha256": "25203235fc620ece42f12575325cad119f848a307dcbaff7a5767bc3256e94dd",
+  "coordinate_permutation_sign_checks": [
+    {
+      "key": [],
+      "rank": 65,
+      "coefficient_error": 2.220446049250313e-16,
+      "canonical_basis_error": 1.0612771092696228e-16
+    },
+    {
+      "key": [
+        19,
+        63,
+        68,
+        69
+      ],
+      "rank": 2,
+      "coefficient_error": 0.0,
+      "canonical_basis_error": 1.4120024940710778e-18
+    },
+    {
+      "key": [
+        69
+      ],
+      "rank": 3,
+      "coefficient_error": 6.938893903907228e-18,
+      "canonical_basis_error": 1.734723475976807e-18
+    }
+  ],
+  "serialized_bytes": 1135027,
+  "roundtrip_coefficient_error": 0.0,
+  "loaded_arrays_owned_no_bases": true,
+  "loaded_arrays_disjoint_from_original": true,
+  "post_delete_compact_head_roundtrip_error": 0.0,
+  "exact_arithmetic_canonicalization_proof": "If U changes to U R, R orthogonal, residual coefficient vectors and chosen unit directions change by R transpose. Norm scores and smallest-index pivot selection are invariant, and U R times R transpose direction equals U direction. Induction proves identical ambient basis in exact arithmetic.",
+  "remaining_contract_limits": [
+    "No floating byte-canonicality: rank and pivot ties are numerically unstable; no tolerance-based pruning is done.",
+    "Dense versus compact representation mode can depend on history because dense keys stay dense; canonical basis alone does not prove full-state equality to a fresh build.",
+    "Checkpoint load duplicates one current array during copy, and keeps current metadata; total memory and process peak were not measured here.",
+    "Shape validation uses assertions for several invariants and is a research checkpoint reader, not a hostile-file security boundary."
+  ]
+}

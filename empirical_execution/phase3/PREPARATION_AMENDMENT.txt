@@ -1,0 +1,72 @@
+PROSPECTIVE PREPARATION AMENDMENT - 4 OCTOBER 2026
+
+Authority: the original empirical protocol narrative remains authoritative where
+the compact study_design.json was ambiguous. No confirmatory data or human ratings
+have been collected. These definitions are locked before the primary study;
+they were not previously specified at this implementation detail.
+
+1. Hash serialization is UTF8(salt + NUL + source_unit_id), unsigned SHA256 with
+   exact integer quantile tests. Source groups remain whole. Priority uses the
+   narrative SHA256(priority-v1|seed|record-id), seed0 primary; ties use record ID.
+
+2. Exact text and native duplicate-link precedence is test > calibration > train.
+   Remove lower-precedence endpoints against the original assigned population.
+   Civil parent filtering only removes a training CHILD whose observed parent
+   is calibration/test. Other cross-partition parent directions are logged, not
+   silently removed. Missing parents do not establish independence; unresolved
+   links and snapshot completeness require review. Sentinels null, empty,0,-1
+   (including string forms) mean no parent. Community Stack owners<=0 become
+   explicit unknown singletons, never authentic author-withdrawal sources.
+
+3. Normalized record text is NFC plus whitespace collapse. Preserve original_fields
+   unchanged. Versioned intake compares normalized original and prepared text;
+   it no longer demands raw-byte equality after a prescribed normalization.
+
+4. One shared finite-precision scorer is authoritative for calibration, semantic
+   leakage filtering and fixed-graph reconstruction. For each frozen FP32 vector,
+   promote to FP64, sum coordinate squares in order, divide by the computed square
+   root, and sum pair products in coordinate order. Use strict score>tau. Do not
+   clip scores; only score-bin indices saturate at the endpoints. This definition
+   removes batching/context dependence of the computational target within the
+   locked runtime. Historical phase2 BLAS-based engineering outputs are untouched.
+
+   Locality lemma. For fixed ID-derived priorities, frozen vectors and threshold,
+   the directed graph after deleting F equals the induced graph G(D)[D\F].
+   Proof: each surviving edge is decided by the same two frozen vectors, the same
+   sequence of floating operations, the same threshold and ID priorities. No
+   other row enters the predicate. Therefore every surviving pair has the same
+   edge indicator. This proves computational graph consistency, not semantic
+   quality, graph sparsity, or a real-arithmetic cosine certificate.
+
+5. Threshold selection preserves all six protocol categories. Only exact_copy
+   and substantially_same_meaning are positive. A pair is positive with>=2 of3
+   independent human positives; uncertain is conservative nonpositive. Selection
+   uses a ratio of Horvitz-Thompson weighted counts within the sampled score bins.
+   The first grid threshold with ratio>=.95 and nonzero support qualifies for
+   development. Raw/effective support is reported, never mistaken for proof.
+
+6. Independent validation uses SRS up to200 from ALL above-threshold calibration
+   pairs; fresh assignments are made even on overlapping selection pairs. Invert
+   the exact hypergeometric upper tail with rejection at tail<=.05. The lower
+   count L is the least K for which P_K(X>=x)>.05; pass only when10L>=9N and the
+   development selection qualified. Census is exact; an empty population has no
+   defined precision. No retuning after validation. Conditional coverage concerns
+   fixed/potential outcomes under the stated majority protocol, not latent truth
+   or additional annotator variation. Rater assignment must be independent of
+   pair sampling, and authentic blinded collection must be independently verified.
+
+7. Prepared-file, full-row, source-partition, cache-byte and calibration-frame
+   bindings prevent accidental reuse with changed inputs. Seals establish
+   consistency, not signatures or proof of human/corpus/model authenticity.
+   Quality output always leaves confirmatory_study_ready=false. Passing the
+   mechanical statistical gate cannot authorize a publication claim by itself.
+
+8. Versioned intake_v2 corrects the earlier phase2 validator without overwriting
+   historical code/results. Optional six-category annotations must match their
+   binary collapse. A completed annotation template remains a claim by its
+   collector; software cannot authenticate its human origin.
+
+Remaining actual execution gates: original source-rich corpora, pinned E5 cache
+or usable local encoder/tokenizer/runtime, genuine human selection and validation
+ratings, provenance review, required panels, and the remaining pre-execution lock
+(labels/vocabularies, lambdas, requests, resource policies and code/runtime hashes).

@@ -1,0 +1,100 @@
+LOCAL ASSET INTAKE FOR THE CONFIRMATORY EMPIRICAL PROGRAM
+
+Current status
+--------------
+BLOCKED. This is an executable intake gate, not a substitute for acquiring data,
+semantic embeddings or genuine blinded human judgments. It does not turn the
+existing 100 Civil Comments and 90 news preview records into a publication study.
+The exact arithmetic/canonical-state validation can remain successful while the
+semantic empirical program is blocked.
+
+Minimum next useful attachment
+------------------------------
+For the first core corpus, provide either:
+(A) the original source-rich Civil Comments 1.2.4 release files, with existing
+    immutable snapshot/checksum evidence, plus a locally usable E5 encoder and
+    tokenizer/runtime; or
+(B) an already produced source-rich corpus bundle with original release files,
+    extracted rows, frozen FP32 semantic embedding cache and derivation evidence.
+Route B avoids requiring GPU/model installation in this environment. Both routes
+require actual original records and original labels. Do not create source IDs,
+labels, encoder vectors or human judgments to fill missing fields.
+
+A partial corpus attachment is useful: the program can prepare splits, semantic
+pair candidates and annotation materials after authentic inputs become available.
+It cannot start confirmatory claims until independent human quality verification
+and the pre-execution lock are complete. Existing protocol first-panel soft target
+is 10,000 training records (whole groups retained, with separate source-disjoint
+calibration/test records). The validator does not silently replace that design
+with a smaller confirmatory sample. AskUbuntu and the remaining protocol arms
+remain required for the complete planned paper.
+
+File interface
+--------------
+1. Copy assets_manifest.template.json and replace each placeholder with actual
+   workspace-relative paths/checksums. Do not fill placeholders with asserted
+   approval or guessed identifiers. All artifacts must already exist locally.
+2. JSONL row objects have record_id, source_unit_id, partition, text, labels and
+   original_fields. See assets_manifest.schema.json. Partitions must be exactly
+   train, calibration and test; original source groups cannot cross them.
+3. Civil Comments original_fields include id, publication_id, article_id,
+   parent_id, created_date, text, toxicity. record_id is str(original id).
+   source_unit_id is 'civil:' followed by compact JSON of the actual
+   [publication_id, article_id] values, preserving their types. If either is
+   absent, use 'unknown:' + record_id, a singleton; this is not a native source.
+   labels must equal [original_fields.toxicity]. Metadata presence is checked;
+   whether these are historical originals is a separate provenance review.
+4. AskUbuntu/English StackExchange original_fields include Id, OwnerUserId, site,
+   PostTypeId, CreationDate, Title, Body, Tags. Use original question records.
+   Source is 'account:' + compact JSON [site, OwnerUserId]; missing metadata is
+   'unknown:' + record_id. Twenty targets must be derived from original Tags and
+   the attached calibration-selected vocabulary, never model-generated labels.
+5. A semantic cache is an uncompressed .npy rank-two little/native-endian FP32
+   array of shape [number_of_rows, 768]. No NaN, infinity, zero vectors or object
+   arrays. Embedding row_ids is a JSON list exactly matching corpus row order.
+   Supply encoder/tokenizer immutable revisions and component file SHA256s,
+   embedding-code and run-log artifacts, chunk/pooling/prefix specification.
+   Component hashes with no local file are DECLARED provenance, not verified
+   component bytes. Existing lexical hash arrays do not meet this requirement.
+6. Calibration pairs JSONL: pair_id, left_id, right_id, role ('threshold_selection'
+   or 'quality_validation'), score, inclusion_probability. Both records must be
+   in calibration; roles have independent assignments. Physical pairs may overlap
+   across roles only with fresh blinded judgments as the existing design permits.
+7. Genuine responses JSONL: response_id, pair_id, annotator_id, label ('duplicate',
+   'not_duplicate', 'unsure'). Exactly three distinct annotators per assignment;
+   no reused response ID. These are human task outputs, never invented examples.
+   Attach instructions, sampling code/log and quality report. The quality report
+   includes validation_pairs and majority_duplicate_pairs, mechanically checked
+   against responses. A claimed confidence bound is not trusted by this intake
+   validator; selection rule, sampling scheme, finite-population uncertainty,
+   lower confidence bound >= 0.90 and human independence need explicit review.
+8. Original archives, extraction code/log, manifests, cache and annotation files
+   are content-addressed. Review source completeness, split/hash guards, human
+   authenticity and the full pre-execution lock separately. A nonempty 'approved'
+   string does not satisfy any gate.
+
+Commands from workspace root
+----------------------------
+python3 empirical_execution/phase2/intake_validate.py --inventory --out empirical_execution/phase2/assets_readiness.json
+python3 empirical_execution/phase2/intake_validate.py --manifest PATH_TO_FILLED_MANIFEST --out empirical_execution/phase2/assets_validation.json
+python3 empirical_execution/phase2/intake_checks.py
+
+The inventory command exits 0 because it completed an inventory, even when the
+program is blocked. Manifest validation exits 2 for missing/invalid inputs, 0
+for mechanically consistent intake. A successful intake still sets
+confirmatory_ready=false: this program cannot authenticate human work, historical
+source provenance, semantic derivation, full source completeness or the complete
+study lock. No remote access, downloads or model services are performed.
+
+Scope limits
+------------
+This is the first local intake gate, not the entire study validator. It verifies
+file hashes; unique IDs; native source-ID derivation; source-disjoint partitions;
+normalized-exact-text and parent-link split guards; original-field label copying;
+FP32 cache shape/finiteness/alignment; metadata/checksum syntax; calibration record
+membership, assignment structure and majority-count arithmetic. It does not yet
+recompute semantic cross-split guards, hash-quantile split assignments, score
+values, threshold selection/quality confidence intervals, tag-vocabulary selection,
+CC-News registrable domains or planned source/date sampling completeness. Those
+items cannot be called verified by this gate and remain blocked for review and
+subsequent executable stages. No final publication claim follows from gate passage.

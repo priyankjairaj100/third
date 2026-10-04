@@ -1,0 +1,28 @@
+{
+  "dimension": 64,
+  "outputs": 1,
+  "initial_build_seconds_unreplicated": 3.7529871450096834,
+  "initial_accounting": {
+    "method": "exact-pivot-chart-rational",
+    "coefficient_count": 99,
+    "rank_sum": 165,
+    "maximum_rank": 64,
+    "stored_rational_scalars": 8705,
+    "rational_integer_payload_bytes": 46079,
+    "canonical_serialized_bytes": 189149,
+    "maximum_numerator_bits": 57,
+    "maximum_denominator_bits": 57,
+    "python_live_bytes_estimate": 1069280,
+    "retained_feature_rows": 0,
+    "retained_target_rows": 0,
+    "retained_original_graph": false,
+    "remaining_horizon": 8,
+    "guarantee": "Exact rational coefficient semantics and byte-canonical logical serialization; arbitrary precision cost explicit."
+  },
+  "checkpoints": 12,
+  "max_legacy_head_difference": 2.345346139520643e-15,
+  "max_certificate_upper_decimal": "0.0000000000000062182898440266596343695680",
+  "repair_seconds_total": 22.58935320697492,
+  "fresh_seconds_total": 32.262208225991344,
+  "certificate_seconds_total": 12.143940739973914
+}

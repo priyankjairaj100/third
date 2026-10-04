@@ -1,0 +1,602 @@
+[
+  {
+    "record_id": "civil_comments_connector_preview:train:row:0",
+    "text_group_sha256": "e228c568f91487a0dd6d47f5c174fc4d596da05d3097796c79bf58fcb21625d2",
+    "partition": "development_train",
+    "partition_hash": "7c92dfa8c419dc10ce33fb1f0f1df48241cf31ca97e7f8e1207d474ad5850a7b"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:1",
+    "text_group_sha256": "27e9dbd432152feaeebf20e10e229cdf8287fdcd101329bdfa88cf610a86c7d9",
+    "partition": "development_train",
+    "partition_hash": "9fcb691ce6d597b6a948cfce01c738461ad9468e2717e00f17fac6f16b6a3453"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:2",
+    "text_group_sha256": "52078ef4c97c29a719336574212de4ca4a791f410288d29436558a46e1086cb6",
+    "partition": "development_train",
+    "partition_hash": "57baf73c5605757742c4c890886a062dbecce97791b494c929737d41276541c1"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:3",
+    "text_group_sha256": "7ae75705dfd1762d524d6bfe6c8e484b3b7c90b1581beae7947ac698f95cfc04",
+    "partition": "development_train",
+    "partition_hash": "60fa1f6d9435a7bfa03f1aa753f6a0c0dcf479aa04d56f331639a0bbe57e4521"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:4",
+    "text_group_sha256": "c0ce9a3927d9d5ede4a73ada84a799640f466749d9bcc1051087e94bda67ead0",
+    "partition": "development_train",
+    "partition_hash": "a10a0e63499666e485df79b246bea0d899a402b33362cb5a8dbe31f305533308"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:5",
+    "text_group_sha256": "4c3310daefdb8c0c25aee69045534d8b7f0ebbf5894f6f631cd73ab793d259e3",
+    "partition": "development_train",
+    "partition_hash": "08d8bcc4ced9c14ebbf457bc749b2673230b08fb954c916a9fdf3db96b9684e3"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:6",
+    "text_group_sha256": "9bb6c6b87cf0039a5920d6228f134c944a1cab0d87e916d1613c49187a0c217e",
+    "partition": "development_train",
+    "partition_hash": "74d2f0926572df4457cabc0c30e058d0570f333598ff4f51ee6fca29fea43785"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:7",
+    "text_group_sha256": "29201ed2e3ec459bbffbcfa24f982407cb597672f1b1cc9676311c42771200fd",
+    "partition": "development_evaluation",
+    "partition_hash": "ff7f2b42c6c1aced7869e9aab15c746874aed46d51a92a044c98d8d0ae98c942"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:8",
+    "text_group_sha256": "2b12069ce99fbaebf64c9796cc344bef4f0b5e5f48efb846ea2eefaeaa44a898",
+    "partition": "development_evaluation",
+    "partition_hash": "d0beacd604c144bd9cd3f3aab8c3a03626f0de6cf01591b70c9097c0adfe31dc"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:9",
+    "text_group_sha256": "5fc8f2006240527a9670412cd88a40afe573259340fb690616d6a00fa60d6d64",
+    "partition": "development_train",
+    "partition_hash": "186629365008acd628c62d962c5ea5abffaf9358ea45dd1b52953e6c30d5872e"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:10",
+    "text_group_sha256": "0a2c9fc210b364ad5e7500779536d6945b1a76d1027205cb780b9a061bdb058c",
+    "partition": "development_train",
+    "partition_hash": "abff340c0cdd0b8afb792f03a87f109a49b376a4cdd02ad4970aee0790b36b36"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:11",
+    "text_group_sha256": "910206a74be4229414b3bea1fda0b817540cc0609ef2aa6d036ded8d9dfd08a9",
+    "partition": "development_train",
+    "partition_hash": "c67b6a47d970c49bc57667dd45b8c12d2dad9bee3aa44c8e5df11cf891428d86"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:12",
+    "text_group_sha256": "1421469c8129e78490317430db07d6c3cf70eb4b4580d5231e3f21f01d58a572",
+    "partition": "development_train",
+    "partition_hash": "5ffa351f8d2585d0d391ac9ce0520495120d360f7f65083c92b48569cab02247"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:13",
+    "text_group_sha256": "21dc6ce7cca83ff494af856431f12484571e311141c509c844507ad3b2736a66",
+    "partition": "development_train",
+    "partition_hash": "8fb4cc1896374c6e01efba841c48491fc367aec4352173cdf40b9366663e4a5b"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:14",
+    "text_group_sha256": "20c943203bd1b2d7703a767ae8a9d226636f30f11611b129901604ece3a7045c",
+    "partition": "development_train",
+    "partition_hash": "ab25d76b00ba1195eb2cd8a0e18669a9319b94abb5f9d68a0b105a5d8305b27e"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:15",
+    "text_group_sha256": "b36cf029f2101bfb93dae673e87c82b36f610afe16142714d4a73719df638291",
+    "partition": "development_evaluation",
+    "partition_hash": "db388cc1ed11985d048a502515d68bdd01a4ff9a5eb7945676b76e1073886c3f"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:16",
+    "text_group_sha256": "68a2e5d2f85623aad60a97d540f256b4293be0378e411274d655cc0b8a2d0e09",
+    "partition": "development_train",
+    "partition_hash": "5595695855d82ef526a3612c7e9cf24bf993b240229e6bc3f80338bb2f379723"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:17",
+    "text_group_sha256": "56f26e0258f20a084e9324b6ee527a1e050b90111da85bd95e988eac91b58bf2",
+    "partition": "development_train",
+    "partition_hash": "6359e8073d7c16f11e689da1cc00fbcf045cdfccec8d53dac6201a605fdb9784"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:18",
+    "text_group_sha256": "70dc7f920677afabf5716dd66fceb08ff0d812c261114ef52297b07792b9edd2",
+    "partition": "development_train",
+    "partition_hash": "21477b60532bddabff5965fa4c7344e9e20945177823af2273d3951cfc34f1a9"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:19",
+    "text_group_sha256": "aef51bf52e531af82e9900eb00adb867e2ba9a2c4c9b5bdc135a889ce55157b7",
+    "partition": "development_evaluation",
+    "partition_hash": "fc867b852c5bb3ba45e02dbf6aa328b599a88bee44ebe22de2562cc0406672ab"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:20",
+    "text_group_sha256": "d67a32b2cc783f48e1ced17c546a4f471cd0f1fffe08442c673d2e6d8bdbd745",
+    "partition": "development_train",
+    "partition_hash": "cc6ed3abbd1e7b8239109b56f4b5bfa2ce0bb0b2380f2e496adae33bd1178382"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:21",
+    "text_group_sha256": "55334e1f7eacc66ddf957d3f1dfc9e7ab6f586f37fdbe34371c60913beb7d76a",
+    "partition": "development_train",
+    "partition_hash": "0d289d6acf44b79b27f40a805080a24da0036521a939476cf8008ce5d5754ea9"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:22",
+    "text_group_sha256": "70554cb8b00295cea9a05c0b66527a4843fd8c0982d69a72957a3126eb488ec3",
+    "partition": "development_train",
+    "partition_hash": "662748659ab768e49f088a07f16c7f188f1acc9cc99e4a5f8fe39d708798e929"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:23",
+    "text_group_sha256": "2711d4a7949b838db66e444b7172dac4750706dc8a0d3fe338c38dfb8a3c1d1c",
+    "partition": "development_train",
+    "partition_hash": "81655bd9c7702406dfeeb6f381ec2d6ffdb4dd277af88f9efa0cf5da3c3e6e40"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:24",
+    "text_group_sha256": "019fd90af8e582c023ffe000e0fcbe205fb2611b766c65c68fd289ccbcf101fa",
+    "partition": "development_evaluation",
+    "partition_hash": "ed015c7dd23f284c064699628a35238eea0a8b97f89087f5c9decb8e76532821"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:25",
+    "text_group_sha256": "4a91ffd9861507a10f6e75c02fb9f0836918359a686ff28a94bbc70ee8197303",
+    "partition": "development_evaluation",
+    "partition_hash": "ff7049d1bf9d3a1d074737e1d84650b4c1a44552c9117e0201e834008620589f"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:26",
+    "text_group_sha256": "7d1b4cce4ca62ec55393ac598d9fbe2a9736fd663f7af5a1f783d923ee1b74a4",
+    "partition": "development_train",
+    "partition_hash": "b3ecdd9628386bdc173266a6a698721166b62ee874bf23fc0ed8bb146c76d231"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:27",
+    "text_group_sha256": "b4ade782e9c647d14b2a38cac897c564a7dc72a9d1fa0f0f942ab70e2ce9b4ce",
+    "partition": "development_train",
+    "partition_hash": "4ae5b358eeabb11b16441d505c61e4d5d8148b19657df8b6e5cc6558c35f56aa"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:28",
+    "text_group_sha256": "c80f423b909de605d344abd5aeb800dfcd93fa624672145ef19dd19fb564d213",
+    "partition": "development_train",
+    "partition_hash": "41950755aa180cbf1d735e4ddb478fb839430e0e2155c1a131cc75d668802e89"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:29",
+    "text_group_sha256": "b9609a09aa095136aca1d51bb842de475be223746c4f88985958bb560d0baf00",
+    "partition": "development_train",
+    "partition_hash": "9ad3c8a39247cd08b68c1055326cb6357ac9b0ef85ec0d6d77325659b8bb69d3"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:30",
+    "text_group_sha256": "952f76a69b1bfa5de2c05d479b36e7ded788aa53a6ae5df8055da95536b0b451",
+    "partition": "development_train",
+    "partition_hash": "3a5108e4e2246a050870eaf1a2ff1d8b260951eccd4551b00e5c1a56d3538196"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:31",
+    "text_group_sha256": "c0e16d4269faef8eaa8f9e84461204dc5e284a8fa0d4d01b137cfe07bbb870d6",
+    "partition": "development_train",
+    "partition_hash": "93e0e89f7f7c8869c379a6c26b9cf202ccd7979cfc5d1558685222851e3efbc4"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:32",
+    "text_group_sha256": "5a178aafe8fc83988fa098da4bdb733b6a371e203cda481f3a90e16ea18ffe85",
+    "partition": "development_train",
+    "partition_hash": "813ee9fad41e7fbaa07315cfa62b9ef0add632ff929f94b38d2be5e950f1b69f"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:33",
+    "text_group_sha256": "3dafc7a3b62e141cbf84337385bc14ed8ff484486a8c615f8fbfa85b1ed40a55",
+    "partition": "development_train",
+    "partition_hash": "8c59c0bb58562e09e4111dea4a0cbf2465f393bd5742c88517c48828977cdd78"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:34",
+    "text_group_sha256": "c7bc62f9d7abf67123020de830406ef26e3654e307709405810ea55509154c6b",
+    "partition": "development_train",
+    "partition_hash": "843b797afaff398ac7afc54bb7a0a7d554896a96769d98d5933c2effe2837df8"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:35",
+    "text_group_sha256": "67f68a72462bca9b1642747164bcc1fac7a3d5340059f4ce99dc77ee9829bb6c",
+    "partition": "development_evaluation",
+    "partition_hash": "ea0362ac02590ca77191930a37c6664207ca391d9ef32b9303e6be9af1c7cef0"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:36",
+    "text_group_sha256": "bcd4d671442b37300bce45837906d495a13ca649be323d414a8a4923dca63ca6",
+    "partition": "development_train",
+    "partition_hash": "0d0b18b39ec6da9ef8a96405c9f3644b96b79e605a34b090a9ec78f2c608043a"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:37",
+    "text_group_sha256": "90974d9f780cf81e028d32af1a1aeda074039a7749b7625c0b93c91262ae7bc7",
+    "partition": "development_train",
+    "partition_hash": "088f24ac3bedef98bcc4b46920d32a2c91005ddaf83f169ba6db35bc59d1553a"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:38",
+    "text_group_sha256": "405448c01703555be34ba6cf3101498a4cf6f182ebb3abe5a54353773f75499a",
+    "partition": "development_train",
+    "partition_hash": "5eccf155555d13ef33955ab0f28501277582a46595ef39b2e9c5b310a4e715bd"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:39",
+    "text_group_sha256": "1110b06648a7fde624aa94814870c9029143deb4dd2a408388109d45a694745f",
+    "partition": "development_train",
+    "partition_hash": "2c2d9f0349a0fd8b984fa34a50e6af7f0154adb8b7f34d016aa2a9a0722de7c5"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:40",
+    "text_group_sha256": "64a11ebbb98e0d7c0c65aee90a3fadab3d77726816c84cae0e39236dbf9a683d",
+    "partition": "development_train",
+    "partition_hash": "877e645e341ca1d78eb74bc12fcee191e1cae4805260ffe7ac782b6024bf1b71"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:41",
+    "text_group_sha256": "85959ea31484a70c6c1ec0d5fb9f34f6b7fe4a4bfede7eee23f150d6de66dd10",
+    "partition": "development_evaluation",
+    "partition_hash": "ec345f8417a30fc6d124bf12aa4d6031ca134c868a707c035bdb7243d53e5238"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:42",
+    "text_group_sha256": "a5ca564023f0c97d0249dff807854ac9e3c9871bb711e5302b6b39dd5e96a122",
+    "partition": "development_train",
+    "partition_hash": "6e4ecca2069ed72713da50889769cbeff8d52e1b594b399585ae0d31b7124080"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:43",
+    "text_group_sha256": "0ec17fc69bebb7d025f96e3b59cffb371aed5553da4a96f1aed8ee6a514b4e6d",
+    "partition": "development_train",
+    "partition_hash": "5cf6c5e2deee0b4001d4de18077cc8003e2828d992de72c006cef61152f91fb4"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:44",
+    "text_group_sha256": "8a02953c10781404f1231ada50f08c823304584476509c022e616e7b8c360158",
+    "partition": "development_train",
+    "partition_hash": "bfb467833323137568ec4ef33e53e49def28385d4f348c5bebac18c3f641ca76"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:45",
+    "text_group_sha256": "935c44755bbdccd34f0e02b82e028716f9c73f482b8f9be3707fcb04fe31f43e",
+    "partition": "development_train",
+    "partition_hash": "3ee40c23c3b324e8d36e72d9b0106e505d775c5da742709f54dd3ae9eb893d8e"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:46",
+    "text_group_sha256": "a733ee7155e7c0f34fc7a2a88115d8c3699720bf2f03c95ed5f8d421fcdd373a",
+    "partition": "development_evaluation",
+    "partition_hash": "cf8cbf6aa8595e0ede14c4e553f7f8d407d828d54b5bf4b8c69686310e0efc43"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:47",
+    "text_group_sha256": "df059ba4e714918653dd967004095909a9cac272892bd71524f14429f1279e58",
+    "partition": "development_evaluation",
+    "partition_hash": "f99403ac3658adc30bf7265880ed7a8e09bcd9c9af3b651362507dce890e9bd7"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:48",
+    "text_group_sha256": "9b689cc3420990ebbc65a1cbe956d436692a33b79f671e057a2ce30a9a42b412",
+    "partition": "development_train",
+    "partition_hash": "45b5b9e32d427584e59cb3a94605fa78df8a788f2c64332a0f4e8a81967fe8a6"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:49",
+    "text_group_sha256": "d2af12c27851320e76aee1c72155983685026b2bc71a7d6ac3d63b572caf10c9",
+    "partition": "development_train",
+    "partition_hash": "4dc31e62c680b2bcb1e0fffe897c1a341a1c21d607de060a52a723ef712e6c1f"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:50",
+    "text_group_sha256": "61766866eade7585945b73c1c4e1c5b4e9e33cd94d12e167527b2ac4de43aef2",
+    "partition": "development_evaluation",
+    "partition_hash": "e1dd7c91db8990d1f5f8ab80ede3f78975dfa9421aafbdb73bac8ccdbfc8bb94"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:51",
+    "text_group_sha256": "66ad14e08cebac2d1fe72b79d6ac6912d12fe9f09ee090c995251b2c482743fe",
+    "partition": "development_train",
+    "partition_hash": "9357d4cd8a6fbef216a52c6bfe162edef4cd04ec1b98e1c2179c63041c10d07f"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:52",
+    "text_group_sha256": "a699bb5ae2f4547b9178b1774802f3d12163fcb825eef96fbd0e45c3845aee7a",
+    "partition": "development_train",
+    "partition_hash": "24dbbc425becf96a5cc0d4ab8228be9dd4f815b36e666eb47ff7e95af0380ed8"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:53",
+    "text_group_sha256": "61f45a7a655fb03e9a6fb4c1a03db6623f5e4197fa4a27bea89169af371c94c7",
+    "partition": "development_train",
+    "partition_hash": "15b1add10cca9705ce9ad2673ff1a3eb494f15c6391ea361867acae73fa54785"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:54",
+    "text_group_sha256": "5c270a7e028629c8137cd3217d05105b02f29f24355a0681bea31d2f3c51c233",
+    "partition": "development_evaluation",
+    "partition_hash": "e5b454c51d77a980110b09a6aaaf01da6c8cddc8c5dd23ca2c168e004e536e7a"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:55",
+    "text_group_sha256": "5e424c2697fe787cc72444fa2abafac245b254c0a7de9d4772d5ef35a2636acf",
+    "partition": "development_train",
+    "partition_hash": "6725b68dfa11300c24f4bac98e934a6290910a480a719b4a2c60893909647520"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:56",
+    "text_group_sha256": "c0e5cbd25b4b1809724d77a10319e34ebeb70a25ede43116fe7996d5da48dd11",
+    "partition": "development_train",
+    "partition_hash": "81172f831d63ac0841a63db32c4366cf7fad3b08deff1388acfc2c43151e2c5b"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:57",
+    "text_group_sha256": "d887607561fef5ed93bbc5c2c63ef27f7c8560da3543e9eb4028aa92d8123ab4",
+    "partition": "development_evaluation",
+    "partition_hash": "ee9e6c6c9d6490c77e92c56c303eca3cb23193012e43db2b967d5245c17ad92a"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:58",
+    "text_group_sha256": "cec2f4ff4f886451a8c31025240464c4bf2c8b718e97661d12dad69884ddc13b",
+    "partition": "development_train",
+    "partition_hash": "07a7d9d44ae9d8978c1e611e6dd5220680c8ffb46f8bfad42aa56d2e0a7ea88f"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:59",
+    "text_group_sha256": "194516f09a7ac05164ea43cf021be4b16f061c493375ca56d995bb2bde1fb332",
+    "partition": "development_train",
+    "partition_hash": "6ffd07c7335d8f65de21fe78926d6f855eaab8d62cb827e3afd1214990b40563"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:60",
+    "text_group_sha256": "d2194e678260d8afbf177d21a74d8f9dfe25fb0b837536fc50ccd3f48d3f52c3",
+    "partition": "development_train",
+    "partition_hash": "4f71a758969c868dc39b99d8b1dd6f6f701f455e55116e47f1d4de488d599b77"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:61",
+    "text_group_sha256": "ae9d9cd8d171534131cb9cac949a311de60067610f9789ef124169a877b69a9b",
+    "partition": "development_train",
+    "partition_hash": "285de0d21a2aad3cf21fd3227be0a1b07e4f4caa8f63732f17d44f57aa5ab6b6"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:62",
+    "text_group_sha256": "d237b1817c263f969425e2a779a5da97fa81864e01f0c767fe1dacb4f0c332de",
+    "partition": "development_evaluation",
+    "partition_hash": "ee99ff9e9f67b359d458a0e87d6b0780ca8964b95b8740f9fc48e07e450ec040"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:63",
+    "text_group_sha256": "ab0ca24d9e7dc268d2ecec4487184f3baf3f419a72ad890521b401410b29293c",
+    "partition": "development_train",
+    "partition_hash": "00c553205b8a8fc848a4cfca8fafcf127bdebc45eb333da1bb5ca601652d106c"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:64",
+    "text_group_sha256": "4a3b33afcc8cc736a31b435f2008c9ad2304e3bb065bc2821a7a88155bc3272e",
+    "partition": "development_train",
+    "partition_hash": "6086ad56ec99030068614994a2b0fef2a6b641d31d12f4f4d63cd851ec33fc87"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:65",
+    "text_group_sha256": "7d06a70fda63c00396da87f3334b3028257e3fd77e5b618097147e39625ac16a",
+    "partition": "development_train",
+    "partition_hash": "b5f8408c72802cc1ca5d0af8390e8176cef53c25e0796b76e9539dd0d4de7cc9"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:66",
+    "text_group_sha256": "21d1b63bc45fe58e82ea0c685fafe9bf8d214648180ff06adf74107809c89731",
+    "partition": "development_train",
+    "partition_hash": "87e97e62f957f978a18ade2ad0ba094b710f5b2354fc212f0c5b4b8ad7aa1f3d"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:67",
+    "text_group_sha256": "6bb6c5cd5d59261aba7ea0108ed9854180e7d7a51175e3a60099223f2d5a4e8d",
+    "partition": "development_evaluation",
+    "partition_hash": "ee06f3629d0b15cf369f2cf84217d7ac651f388eb4f5a50974ea09a5c6726ecb"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:68",
+    "text_group_sha256": "b5f6a1949423b4c1efc8c25a6649f68e717de1ea2a708457fca35e1e4ce73a7d",
+    "partition": "development_train",
+    "partition_hash": "2820fc9597807f074cd86d237a2f6b92bd234a79301160a64d05d0da4de42ce6"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:69",
+    "text_group_sha256": "862da9ac34036de01f096c68427fe6a2a5f62e9ee6aacf16927c3b846a8e78ff",
+    "partition": "development_evaluation",
+    "partition_hash": "cd827fc5266c28fdd5a0a81268df0d29f3eb3eb30241acb485f0d6f12c68edbb"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:70",
+    "text_group_sha256": "852a368d5947941d01eaee16145b6fd6f40eadf68d5d7bf593bc86a449d0434e",
+    "partition": "development_train",
+    "partition_hash": "c9dee4815f385e96aebce24360db420663dc2ca0376d2f60c98f35c999efe558"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:71",
+    "text_group_sha256": "90508eeff3211b0502b9f5ee8079e34bf19706ef52e5e9174f3de1bfac7575da",
+    "partition": "development_train",
+    "partition_hash": "7e8d7ffbe40fe15b7b2d5afe17708241b882aa0d123766165bb7768edc8dda38"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:72",
+    "text_group_sha256": "d95dfa16a9302a2cf29e26624cd996fd2022e99a6df41a22e9bdae0094acd6fa",
+    "partition": "development_train",
+    "partition_hash": "b87c5d24dfa15934d8167c0442fed92316895caac3ee3019e0b7ddea4fa41c47"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:73",
+    "text_group_sha256": "a1d58080d0cd6820f38a2d837f1f26fac3865da67746678c1df82ba7e687a1a1",
+    "partition": "development_train",
+    "partition_hash": "b03ca7c6dfce5ca6fc44c89eba4baeeba547b4d236bea712c13acf6642668333"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:74",
+    "text_group_sha256": "b300350581c21a9133e6fdc46b14be6370c3e40a17d520bd5daf1d16e366b655",
+    "partition": "development_train",
+    "partition_hash": "2b14b28f96d3fa215c855b3021335a8875106c1b1f3b8eb12f298345fa90cdc2"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:75",
+    "text_group_sha256": "214788bdb96eb4a29de6cbb237c6af7c01ba8ea38b55881744635165d4b9f9f4",
+    "partition": "development_train",
+    "partition_hash": "c038e61a17468577643880e62f6cb1275dabb8554f5c0fb8fe3130f6c677a77b"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:76",
+    "text_group_sha256": "765c93d8e00f509b2a3eb8b38af5bbad640cf521a73d0509051dfdf7aa571462",
+    "partition": "development_train",
+    "partition_hash": "8e92be5b2b92477a51c18a1ff17d56c54ad09bbbc09a819b74d95fad959fe220"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:77",
+    "text_group_sha256": "1f2176b70fe42b8e93a739bb295bcc6efe9b193075762536b38e6b71405262c8",
+    "partition": "development_train",
+    "partition_hash": "00e2fd95bf334302ad41e2104e78b1984fa6557e5cf567e119eb7903bb83c09c"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:78",
+    "text_group_sha256": "977aab2b82642cbaf14b1e8c938d2fc29881834d6511fab2d0277d53d9e7312f",
+    "partition": "development_train",
+    "partition_hash": "218323201468ba580a255dc3c8d1ee0a7598f446e10fa96018c493b282d2eadb"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:79",
+    "text_group_sha256": "e9ee22990cd60c88b39ee93e31a1bc55a70a39d44217c4b582e2353cfb96d13c",
+    "partition": "development_train",
+    "partition_hash": "631e626b13cbb3fbf32cd51f91036d6d9604006cd8f3b0cf16f5afc8ab6c62a9"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:80",
+    "text_group_sha256": "cc788eecd17429a3365bb85019add7d98dfc275af770c994ec3605eddcdec35d",
+    "partition": "development_train",
+    "partition_hash": "1b31239528f329e1275ac62e11d2c6b7249f8dbc84ed69ee5a3b08eb6f3c0a8c"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:81",
+    "text_group_sha256": "7e94804da4d6b14b1d9a8bb5d009fe674a6b387f376f9b2cd2b1674c2a5eb75d",
+    "partition": "development_evaluation",
+    "partition_hash": "fc4bc8671f5bee8dac24653d8aba6b4e270a03d90293280ce1fda23d3d4c9eb5"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:82",
+    "text_group_sha256": "b46602d8ff1107d8f5f6a19ba081d16e75536c97b13de8bd364d99cbf862eaaa",
+    "partition": "development_train",
+    "partition_hash": "a706e2324d067f148f804f99c7884adc3e362a7c3ed68a58e90baee95c224ec9"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:83",
+    "text_group_sha256": "1223d94f6f645bb2a97b942c8c255ca5551b9fac5015175f0b750bb8bd65f2c3",
+    "partition": "development_train",
+    "partition_hash": "6ecc60ca411487c540961a502e5d9a4194f5b8545e65bd393951f2624982704c"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:84",
+    "text_group_sha256": "b46602d8ff1107d8f5f6a19ba081d16e75536c97b13de8bd364d99cbf862eaaa",
+    "partition": "development_train",
+    "partition_hash": "a706e2324d067f148f804f99c7884adc3e362a7c3ed68a58e90baee95c224ec9"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:85",
+    "text_group_sha256": "e937cbaaa94a5502f8510976c533977a13e4e3d90b50cd7f779b1450b3ce48e8",
+    "partition": "development_train",
+    "partition_hash": "6496bcf5525411f241a997710620a67e716d6a1732c2e4c987fbd5f0b910609d"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:86",
+    "text_group_sha256": "ccbad01560cceaf678a60d2c57ca2d6d63aa9099bad14252294920904247c090",
+    "partition": "development_train",
+    "partition_hash": "57f63d769a151a3ad117e7bb349cc668aefadab9f3821e9fd7457a9eb8660cc1"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:87",
+    "text_group_sha256": "28168546f489a5d81c436b34c95bc30f1b0f84d439ca2bde157ed9448bb7b176",
+    "partition": "development_train",
+    "partition_hash": "52ab4f32b93164099fdb62c5956292197eb2af38408af3defeeb8b96a3c53f29"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:88",
+    "text_group_sha256": "49e11b88dd3163dc8d0bdda325b6d360a0b6e13153a550e189eb07d080364398",
+    "partition": "development_train",
+    "partition_hash": "ba8d5e637cb55ea775b4ff41b45275e76b383b19957d7c684300d3cad1a6b1e9"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:89",
+    "text_group_sha256": "b7810eb2b6b805d066dfd61027006edf17f63f6bf9487c35ecf0c62ac23a23a2",
+    "partition": "development_train",
+    "partition_hash": "8f81c4cb4603aef387a00257b81fc194bef6b6b48b72690672760752ecf7fec2"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:90",
+    "text_group_sha256": "c4c422b262fdf24ea783bcc46ba0188ce3e9a254fe2c346a69ba47de6167d3f4",
+    "partition": "development_train",
+    "partition_hash": "4862179e83dd7b7a0ce52312ee14e6f8502ab1a186b9235cdde3c4881e4ec22c"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:91",
+    "text_group_sha256": "1695b599dd291c4499c1e620c305c6de7e6820dcfbefc731ae2c71176374585b",
+    "partition": "development_evaluation",
+    "partition_hash": "e8c54e0e7b513abb4e4e626e325ba41b250f0ac28563ecea2a86edf47b6652c2"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:92",
+    "text_group_sha256": "16ff2964c47992c1b66ebcd7e30c226c7f64f0a3087a9e673b8b047861b81cbb",
+    "partition": "development_train",
+    "partition_hash": "5fb66bca96b92b181db9023ada2d01630e55329bf2d516988c90436fe9da6653"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:93",
+    "text_group_sha256": "aa7787250ec7c33c94b537a6e5a7634145247b1536a763e281ea6a386b4d75d0",
+    "partition": "development_train",
+    "partition_hash": "3023dc50e346ea0994812fef7bc76aba12f537a37d5d1a9009be191113dda050"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:94",
+    "text_group_sha256": "0c2d0fbfaaa71b161423e58cbf5b4ed4317daf113e7320f24e59f8100d47c65f",
+    "partition": "development_train",
+    "partition_hash": "5664fe64143e2bf5111a9f44141c691261b2fd45b49b6da861f0c8646164806f"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:95",
+    "text_group_sha256": "6ab546baaec6d3eabb2996c9fcdaaaf1fdd56bdc636daaf09dcc6c5cfa561403",
+    "partition": "development_train",
+    "partition_hash": "6d1e8e7598d43e9dd110933db83a0e6283c309828a5896bba7fb39dce378827f"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:96",
+    "text_group_sha256": "e09c26ad52cb94cc0460635d2738abf1ddd3b038cba50313bb1d4ee29166f652",
+    "partition": "development_train",
+    "partition_hash": "4ac3ebaba00c567588ef2ce4be25cd2b15cb074196feec812f158dcad60a4364"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:97",
+    "text_group_sha256": "c9436e6f5512c0d71c55089f7e1f04c50f6b6b9adb5f150955a56d0012bb664d",
+    "partition": "development_train",
+    "partition_hash": "2de0cf50be8977380072d5c2f2fb82307a7f7439f3286c53b93dec83b962ae8b"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:98",
+    "text_group_sha256": "868f3bf8bae28add5b441912191c14acee0d32b0fa40c6398b98a6c0cd55f2f5",
+    "partition": "development_train",
+    "partition_hash": "169360680534430eb40958374a64933615ed569f9104ce873ddaa29cb2618189"
+  },
+  {
+    "record_id": "civil_comments_connector_preview:train:row:99",
+    "text_group_sha256": "bca50f5a18dbd866f71ce47a59229684c467bc8b6e68924940997716b4089352",
+    "partition": "development_train",
+    "partition_hash": "8e370a910fb8fd783c4db61054ff80a6749471003125132d965e7f82d7914dcb"
+  }
+]

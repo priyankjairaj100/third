@@ -1,0 +1,149 @@
+Independent review of empirical preparation, phase 3
+Date: 2026-10-04
+
+Conclusion
+----------
+The audited modules support reproducible offline preparation, a common
+finite-precision curator, blinded assignment generation, and exact statistical
+quality-gate arithmetic. They do not supply missing corpora, semantic embeddings,
+human judgments, or a confirmatory empirical result. The reused lexical previews
+must remain software/development evidence. In particular, 768-dimensional lexical
+hash vectors are not the declared E5 model.
+
+Protocol interpretation checked
+-------------------------------
+The original protocol explicitly removes exact-text and native duplicate-link
+contamination from training against calibration/test and from calibration against
+test. Thus test > calibration > training precedence is appropriate. Civil parent
+links have the narrower directed rule: remove a TRAINING CHILD whose parent is in
+calibration/test. Neither a heldout child with a training parent nor an ordinary
+calibration-to-test parent link is covered by that rule. Parent sentinel IDs are
+not real shared parents.
+
+E5 semantic guarding removes training matches at the locked threshold. It does
+not refit a threshold after training removal and does not permit MPNet to change
+the already defined training population. Whole surviving source groups must stay
+intact at panel boundaries. Missing ownership and community account metadata must
+not create a genuine shared source.
+
+Several necessary operational choices were not fully specified by the original
+high-level design. The preparation documents now make them prospective choices:
+hash serialization, ordered floating scoring, exact bin endpoints, weighted-ratio
+selection precision, and three-rater majority aggregation with uncertain ratings
+not counted positive. These are not presented as data-derived findings.
+
+Defects identified and corrected during preparation
+--------------------------------------------------
+- The earlier intake check rejected all cross-split parent relations, which was
+  stricter than the actual directed parent rule. Phase 3 corrects that contract;
+  previously saved phase-2 artifacts are historical records, not silently edited
+  empirical evidence.
+- The first panel guard draft omitted calibration-to-test exact/link precedence
+  and treated parent links as undirected. Both were corrected before its final
+  audit.
+- Raw original text and normalized model text require a normalization-consistency
+  check rather than literal equality. Original fields remain preserved.
+- Initially calibration used BLAS scoring whereas guarding used coordinate-order
+  summation. Different finite-precision scores near a threshold could invalidate
+  a fixed graph under batch shape or deletion changes. Calibration, guards, and
+  the primary reference graph now share one ordered reference implementation.
+- Native IDs reject boolean/nonintegral/container values; blank identifiers and
+  nonpositive community account IDs become explicit missing-source singletons.
+- Calibration reports distinguish statistical-and-declared-scope eligibility
+  from actual provenance verification and complete-study readiness.
+
+Independent arithmetic audit
+----------------------------
+The audit imports the production bound but computes its reference using a separate
+exact Fraction hypergeometric PMF and a brute-force search over population success
+counts. For all populations N <= 24, every sample size and observed success count
+were checked: 2,900 inversion cells. Exact noncoverage was then summed separately
+for 5,200 (N,n,true-success-count) cells. Maximum noncoverage was exactly 1/20; seven
+boundary cells attained it. Large populations, zero successes, full successes,
+censuses, no sample, empty population and invalid inputs were also checked.
+
+The inference is conditional design-based coverage under SRS from fixed binary
+outcomes of the prescribed majority-judgment protocol. It does not account for
+latent semantic truth or unspecified rater noise. Human authenticity, blinding,
+independence, pay and collection conditions cannot be proved by JSON fields.
+
+Independent numerical and sampling audit
+---------------------------------------
+The same 100 existing natural Civil Comments records were encoded lexically at
+128 and 768 dimensions only for software checks. An independent scalar Python
+normalization and dot-product implementation recomputed all 4,950 pair scores at
+each dimension. Every hexadecimal float matched the common production reference
+at tile sizes 7, 17, 32 and 256. A retained-only rebuild on 75 records matched all
+2,775 surviving pair scores per dimension; reversal of all input rows matched too.
+
+The independent scalar scores and separately reconstructed protocol priority
+orders also reproduced the directed blocker edges for seeds 0, 1 and 2, at three
+tile sizes, and after the retained-only rebuild. This verifies the finite-precision
+reference in the checked runtime; it is not a real-arithmetic cosine certificate.
+
+The final engineering annotation pack was checked independently against those
+scores: 4,950 natural pairs in the frame, 241 sampled pairs, exact bin inclusion
+probabilities and 723 blank assignments. Assignment payloads contain only opaque
+assignment/pair IDs and the two texts. Responses remain blank, human_completed is
+false, and the actual threshold-selection routine rejects them. Zero human labels
+were created or accepted; no semantic threshold or quality pass was inferred.
+
+Independent guard branch audit
+------------------------------
+Twenty-seven software branch cases exhaust all train/calibration/test endpoint
+combinations for directed parents, exact text and duplicate links. Eight missing
+or community-account cases and seven malformed native-ID cases were also checked.
+These small API fixtures are algebraic software tests, not synthetic empirical
+corpora. The separate panel self-audit executes the available natural Civil100 and
+news90 fixtures, preserves source-group boundaries, and explicitly reports missing
+native sources, undersized panels and missing partitions.
+
+Remaining study requirements
+----------------------------
+The available Civil preview lacks authentic native source IDs and original-byte
+snapshot evidence. News previews do not become verified registrable-domain source
+populations. Source-rich archives, parser/date/link completeness, pinned semantic
+representations, genuine independent threshold ratings and untouched evaluation
+populations remain unfulfilled. The original multi-corpus, task-utility, timing,
+strong-baseline and human-admission requirements are not replaced by this phase.
+
+Reproduction
+------------
+python3 empirical_execution/phase3/audit_finite_population_independent.py
+python3 empirical_execution/phase3/audit_scoring_and_pack_independent.py
+python3 empirical_execution/phase3/audit_guards_independent.py
+
+The corresponding independent_*_audit.json files record final code hashes and
+counts. They must be regenerated if their audited production dependencies change.
+
+Final command-line integration and intake review
+-----------------------------------------------
+The first CLI cache-binding draft covered text/IDs/vectors but did not bind source
+metadata or partitions. This was corrected before release. A sealed preparation
+audit now binds the exact prepared JSONL file and full parsed rows, source/scoring
+code, and preparation code. The cache manifest binds those full rows as well as
+text, order and vector bytes. Source groups spanning partitions are rejected.
+The command line binds validation and semantic guarding to the frozen selection
+frame and quality-report hash, refuses existing output paths, and leaves study
+readiness false. These mechanisms establish internal consistency, not authenticity
+against an actor who deliberately fabricates a new manifest and matching hashes.
+
+I statically inspected the corrected run_preparation.py and the recorded nine CLI
+integration checks produced by the root implementation: valid preparation/blank
+selection plus refusals for overwrite, blank human responses, wrong row order,
+wrong text binding, wrong vector checksum, wrong declared primary encoder, and a
+modified partition. These nine are implementation integration checks, distinct
+from my independent scalar/statistical audit scripts above. Their audited code
+hashes appear in results/workflow_checks.json.
+
+I also inspected the Civil/source/parent corrections in intake_v2.py. Its 69
+recorded regression assertions were run by the panel implementation agent, not
+counted as my independent checks. The old phase-2 intake file was preserved. V2 is
+an internal-consistency checker, not a replacement for parsing original archives
+or proving provenance. Corpus-specific parsing remains unfinished: notably the
+legacy CC-News branch still expects text copied from its original text field,
+whereas the intended final corpus construction needs the declared title/body rule
+and normalization. The present executable Civil-first preparation does not settle
+that later corpus adapter. Original Stack date/tag/link extraction and news
+registrable-domain/date construction likewise still need authentic input assets
+and their declared parser evidence.

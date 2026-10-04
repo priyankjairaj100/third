@@ -1,0 +1,6 @@
+id,claim,primary_evidence,comparator,scope,decision_if_unfavorable
+C1,Natural admissions,per-corpus R/S activation probability and magnitude including zeros,complete exact graph plus random requests,random/source natural population only,"effect only U/A => stress result, no prevalence claim"
+C2,NLP consequence,raw/normalized prediction RMS; signed relative MSE; weighted text audit,B-F versus O-G on identical fixed test data,same immutable learner and curated population,churn only or tiny effects => limited demonstrated NLP consequence
+C3,Exact scoped repair,oracle curator target; exact count/state keys; moment and numeric error bounds,independent fresh target and remaining-horizon builder,"head and designated logical state, not corpus/IDs/transcript",unexplained mismatch => block exact implementation claim
+C4,Practical algorithm value,"lifecycle time, physical persistent/peak memory, failure rate",optimized B-E same access/horizon/decoder,observed supported horizon and common cap,win only over rebuild => no incremental superiority; extra memory => tradeoff
+C5,Scope beyond fixed curator,F versus R selected-set/prediction gap and same-data refit floor,separate SemDeDup original branch,full-refit audit is a different target,large gap => clearly restrict applicability

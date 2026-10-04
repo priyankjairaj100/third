@@ -1,0 +1,22 @@
+# Reproducible runtime/build clutter
+.codex/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+tmp/
+missfont.log
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# Prior policy: no public redistribution of News article bodies
+empirical_execution/data/cc_news_engineering_preview.jsonl
+empirical_execution/data/cc_news_preview_*_raw.json
+
+# Local-only credentials/environment files
+.env
+.env.*
+*.pem
+*.key

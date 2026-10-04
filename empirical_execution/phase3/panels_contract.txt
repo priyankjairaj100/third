@@ -1,0 +1,83 @@
+SOURCE PANELS AND POPULATION GUARDS — PHASE 3 CONTRACT
+
+This module completes a local preparation capability. It does not approve a
+confirmatory study, authenticate historical sources, certify semantic meaning,
+or turn preview-host groups/unknown singleton IDs into genuine source evidence.
+
+API
+---
+prepare_partitions(rows, dataset_id, design, allow_preview_sources=False)
+  -> (assigned_rows, audit)
+fixed_guard(rows, duplicate_links=()) -> (guarded_rows, audit)
+semantic_guard(rows, fp32_cache, tau, block_size=256, encoder_id=E5,
+               diagnostic_only=False) -> (rows, retained_indices, audit)
+select_panels(rows, design, target=10000) -> (panel_ID_lists, audit)
+prepare_population(...) -> (guarded_rows, panel_ID_lists, combined_audit)
+
+Inputs use the phase2 row schema, except partition/source_unit_id may be omitted
+before preparation. Supplied IDs/partitions must match exact derivation. The
+output row text is NFC plus collapsed whitespace; original_fields stay intact.
+The same normalized texts must be used when producing encoder caches.
+
+Hash encoding is concretized prospectively as SHA256 of UTF8(salt + NUL + ID).
+Source split uses ccu-v1-source-split and unsigned digest / 2^256, with exact
+boundaries 7/10 and 17/20. No hash-to-floating conversion occurs. Group pools
+use ccu-v1-replication-pool with exact 4/5 boundary. Within either pool, whole
+source groups are ordered by ccu-v1-primary-panel digest, then source ID.
+Source groups cross the target intact; actual size, shortfall and overshoot
+are reported. Repeated target calls produce nested panels with that same order.
+
+Native source units use actual original article/account metadata. Missing or
+blank metadata become 'unknown:' + record_id singletons. Nonboolean integer
+and string IDs preserve their original JSON types. Nonfinite floats, booleans
+and containers are rejected. Stack owner IDs <=0 are non-genuine singleton
+units. CC-News registrable_domain must come from separately pinned PSL extraction;
+the module does not attest to that derivation. The explicit engineering preview
+flag uses 'preview-host:' IDs, labeled non-native. No corporate-ownership claim.
+
+Guard rules follow the authoritative narrative protocol, not an overbroad
+interpretation of the original machine manifest:
+* Normalized exact text and supplied native duplicate links: test > calibration
+  > train; remove every lower-precedence endpoint crossing a higher split.
+* Civil parent metadata: remove a TRAINING CHILD only when its parent belongs
+  to calibration/test. A training parent of a heldout child is not removed.
+  None, empty, 0 and -1 parent sentinels are not shared-parent identifiers.
+* Fixed guard decisions use the complete, original assigned partition at once.
+  A removed calibration row can still serve as an original guard witness; no
+  adaptive split reassignment or iterative guard relaxation is performed.
+* E5 semantic guard: remove training rows with ANY calibration/test score
+  strictly greater than the locked threshold. Calibration/test are unchanged.
+  The same resulting record IDs are required for MPNet; no MPNet refilter.
+  Unresolved native links are reported, and metadata completeness remains a gate.
+
+The shared numerical graph reference promotes stored FP32 to FP64, accumulates
+norm squares in increasing coordinate order, applies FP64 sqrt and division,
+then accumulates each dot product in increasing coordinate order. There is no
+score clipping. Finite-precision scores can exceed [-1,1] slightly; their value
+is the declared reference value. This is a pinned finite-precision graph, not
+a real-arithmetic cosine certificate. Changing BLAS, tile shapes or thread counts
+cannot change the explicit coordinate order. Independent near-threshold audits
+remain required and are implemented in calibration.py by its owning component.
+
+semantic_guard enumerates every training/heldout pair; working score memory is
+O(B*d + B^2), excluding input cache, row metadata and witness audit. It accepts
+an existing FP32 memory map without an N*d FP64 conversion. The convenience
+prepare_population wrapper may create an O(N*d) FP32 subset copy after fixed
+guards; this is explicitly accounted and avoidable by preparing a memmapped
+subset then calling semantic_guard directly. No N*N score matrix is retained.
+
+Completed local engineering check
+---------------------------------
+Command: OPENBLAS_NUM_THREADS=1 python3 empirical_execution/phase3/check_panels.py
+Results: panel_engineering_audit.json, with source and test code hashes.
+Natural records are the existing 100 Civil Comments and 90 CC-News previews.
+Source metadata remains missing for Civil; news groups are observed host strings,
+not validated registrable domains. Semantic-path checks use explicitly labeled
+lexical hashing, not E5. Small algebraic boundary fixtures are software tests and
+are not empirical datasets, generated texts/labels, or human judgments.
+
+The prepared population remains confirmatory_ready=false until authentic
+source-rich corpus snapshots, native metadata/link completeness, semantic cache
+derivation, independently rated threshold quality, size feasibility and the full
+pre-execution lock are established. The CC-News preview split happens to have
+no test partition; that is reported without retrying hash salts or moving sources.

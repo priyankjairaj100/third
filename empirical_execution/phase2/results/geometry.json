@@ -1,0 +1,15 @@
+{
+  "training_records": 82,
+  "evaluation_records": 18,
+  "initially_selected": 55,
+  "initially_excluded": 27,
+  "train_graph_edges": 195,
+  "train_eval_exacttext_overlap": 0,
+  "crosssplit_lexical_pairs_above_threshold": 119,
+  "crosssplit_max_lexical_score": 0.7717517630782796,
+  "semantic_or_source_leakage_guard_complete": false,
+  "evaluation_never_in_graph_requests_or_learner": true,
+  "not_applicable_arms": {
+    "S": "native source fields unavailable; no singleton substitution"
+  }
+}

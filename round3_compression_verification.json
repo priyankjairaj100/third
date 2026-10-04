@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "seed": 20261003,
+  "arithmetic": "exact integers",
+  "counts": {
+    "graphs": 1100,
+    "graph_horizons": 6505,
+    "field_rank_checks": 19515,
+    "exhaustive_sequences": 8165,
+    "exact_rebuild_comparisons": 22290,
+    "random_document_sequences": 180,
+    "random_source_sequences": 180,
+    "source_rank_checks": 540,
+    "batch_order_checks": 8165
+  },
+  "sharp_fixed_cosine_family": [
+    {
+      "anchors": 3,
+      "records": 6,
+      "nonzero_coefficients": 10,
+      "rank": 6,
+      "ratio": 1.6666666666666667,
+      "cosine_pairs_checked": 15
+    },
+    {
+      "anchors": 4,
+      "records": 10,
+      "nonzero_coefficients": 17,
+      "rank": 10,
+      "ratio": 1.7,
+      "cosine_pairs_checked": 45
+    },
+    {
+      "anchors": 8,
+      "records": 36,
+      "nonzero_coefficients": 65,
+      "rank": 36,
+      "ratio": 1.8055555555555556,
+      "cosine_pairs_checked": 630
+    },
+    {
+      "anchors": 16,
+      "records": 136,
+      "nonzero_coefficients": 257,
+      "rank": 136,
+      "ratio": 1.8897058823529411,
+      "cosine_pairs_checked": 9180
+    },
+    {
+      "anchors": 32,
+      "records": 528,
+      "nonzero_coefficients": 1025,
+      "rank": 528,
+      "ratio": 1.941287878787879,
+      "cosine_pairs_checked": 0
+    },
+    {
+      "anchors": 64,
+      "records": 2080,
+      "nonzero_coefficients": 4097,
+      "rank": 2080,
+      "ratio": 1.9697115384615385,
+      "cosine_pairs_checked": 0
+    }
+  ],
+  "seconds": 2.607,
+  "limitations": [
+    "Finite implementation checks, not proofs",
+    "No natural-language corpus or neural training",
+    "Rank optimality counts arbitrary independent statistic coordinates",
+    "Graph metadata and floating point precision charged separately"
+  ]
+}

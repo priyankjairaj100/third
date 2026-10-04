@@ -1,0 +1,59 @@
+Exact canonical aggregate representation
+
+For a coefficient tuple (G,H,n), G symmetric, define R=range([G,H]). The unique
+pivot-identity basis U is the transpose of the nonzero rows of RREF([G,H]^T).
+Let P be its pivot-coordinate rows, so U[P,:]=I. Symmetry and range inclusion give
+G=U G[P,P] U^T and H=U H[P,:]. Thus U, A=G[P,P], B=H[P,:], n are a unique chart.
+G=0 never licenses discarding H: the joint block is essential.
+
+Only the (d-r) nonpivot rows of U are persisted, together with the upper triangle
+of A, B, exact n, and P. Numeric rational count is
+  (d-r)r + r(r+1)/2 + rc = (d+c+1/2)r-r^2/2.
+This is monotone for integer 0<=r<=d and at r=d equals packed dense storage.
+There is one representation rule and no history-dependent dense/compact mode.
+
+Given arbitrary full or redundant factor W and cores C,D, G=W C W^T,H=W D:
+1. RREF(W^T) yields ambient basis U0 and pivot rows P0.
+2. T=W[P0,:], A0=T C T^T, B0=T D.
+3. RREF([A0,B0]^T) yields a basis L for its column range.
+4. If L has full rank, U0 already spans the exact joint range. Otherwise take
+   RREF((U0 L)^T) to obtain final U and P.
+5. Read G[P,P]=U0[P,:] A0 U0[P,:]^T and H[P,:]=U0[P,:]B0.
+All operations are over exact rationals. No ambient d-by-d Gram is necessary.
+
+Build converts already-canonical FP32 features and FP64 targets to exact dyadic
+rationals. It groups the same finite-horizon polynomial endpoints as the original
+summary. At most min(d,128) contributor columns are processed per construction
+block; an entire corpus never creates an N-by-N sign matrix. Merge stacks two
+current bases with block-diagonal Gram cores and stacked cross cores. The largest
+merge core rank is at most 2d, then exact canonicalization removes redundancy.
+
+Deletion substitutes requested variables by one, merges equal monomials, drops
+exact zero tuples, and prunes degrees above the remaining horizon. Exact addition
+and unique charting imply that any valid history with the same final public alive
+set and horizon produces identical coefficient charts and canonical JSON bytes.
+The tuple is also equal to a fresh retained-corpus build under the fixed curator.
+Public IDs and horizon are part of this statement. Deleted embeddings/labels,
+original graphs, historical charts, previous weights and transcripts are absent.
+
+The exact reference implementation stages batch results transactionally and
+rebuilds derived indexes. It has O(K) metadata work per request; the earlier
+floating implementation's purely affected-key update bound is not claimed here.
+Canonical serialization sorts all fields. The guarantee concerns serialized
+logical state, not Python allocator addresses, backups or hash-table capacity.
+
+Bit complexity must be stated separately. Exact-rank scalar storage obeys the
+joint-span bound, but normalized rational coordinates may have determinant-sized
+numerators/denominators. If an integer-cleared joint block has B-bit entries,
+r-by-r minors have O(r(B+log r)) bits by Hadamard's inequality. The implementation
+therefore reports actual integer payload, serialization and Python memory costs,
+not fictitious fixed-eight-byte rational entries. Arbitrary-precision workspace
+and time can be substantial. A possible bounded-moment-bit alternative is the
+canonical lexicographically first independent actual columns of [G,H], with
+inverse pivot-submatrix coordinates used temporarily; it is not this implementation.
+
+Numeric candidate decoding first QR-factorizes the floating conversion of the
+nonorthogonal exact U, transforms A and B by R, and solves the regularized reduced
+system. The orthonormal-basis formula must not be used directly on pivot U.
+Any floating candidate's proof must use exact residuals against the exact stored
+operator; candidate arithmetic itself is not assumed exact.

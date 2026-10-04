@@ -1,0 +1,18 @@
+{
+  "record_count": 100,
+  "feature_dimension": 768,
+  "response_dimension": 1,
+  "universe_size": 100,
+  "horizon": 8,
+  "eligible_records": 100,
+  "same_source_blocked_records": 0,
+  "structural_keys": 101,
+  "structural_incidences": 101,
+  "linear_query_rank": 100,
+  "packed_dimension": 296065,
+  "coefficient_bytes_upper_bound": 239220520,
+  "statistic_workspace_bytes": 7093264,
+  "dense_decoder_workspace_bytes_lower_estimate": 14174208,
+  "canonical_feature_bytes_external": 307200,
+  "target_bytes_external": 800
+}

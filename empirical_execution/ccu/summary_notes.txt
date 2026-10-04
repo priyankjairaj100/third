@@ -1,0 +1,83 @@
+Indexed ridge summary implementation notes (2026-10-04)
+
+Public interface
+  from ccu.summary import IndexedRidgeSummary, preflight, SummaryMemoryError
+  forecast = preflight(blockers, d, C, horizon, owners=None, universe_size=None)
+  state = IndexedRidgeSummary.build(
+      features, targets, blockers, horizon, owners=None, universe_size=None,
+      max_coefficient_bytes=512 * 1024**2)
+  counters = state.delete(integer_identifiers)
+  gram, cross, count = state.statistics()
+  solution = state.decode(lambda_reg)    # identical ccu.core decoder
+  weights = state.solve_ridge(lambda_reg)
+  live_accounting = state.accounting()
+  state.check_invariants()              # full scan, outside measured repair
+  state.save(path)                      # full-state export, separately charged
+  resumed = IndexedRidgeSummary.load(path)
+
+Features are canonicalized to FP32 then promoted to FP64 for multiplication.
+Targets are FP64. Record identifiers are 0,...,N-1. In source mode, owners
+contains one integer source assignment per record; universe_size declares the
+public source universe. Blocker lists always contain record indices, even in
+source mode. They need not use row order as priority order. The external fixed
+curator determines which valid raw records block each record.
+
+No retained rows or original graph are stored in the resulting state. It holds
+current coefficient arrays, live inverse/degree indices, public integer-ID
+membership, dimensions, and the remaining horizon. It returns a head/moments;
+selected record identities cannot be recovered from this state. This claim is
+about fields/code, not process isolation, allocator erasure, backups, or logs.
+
+The cap is a numeric-coefficient allocation cap, NOT a process RSS cap. The
+preflight computes distinct structural keys, incidence rank, eligible records,
+and native-dimension coefficient bytes before allocating coefficient arrays.
+Python structural metadata, caller-held rows, temporary products, encoder state,
+and solve workspace are additional. Actual coefficient count can be smaller
+through exact cancellation. The metadata forecast is not a nonlinear/PSD-ridge
+information lower bound.
+
+Updates use inverse and degree buckets. Only touched entries move; vector
+addition and exact-zero checks occur on collisions. Full scans in accounting,
+invariant checks, coefficient exports, saving, and model decoding are explicit
+and must not be included/excluded inconsistently in benchmarks. Construction
+and checkpointing must be timed separately. The code is a Python/NumPy research
+implementation, not evidence of optimized systems superiority. Saving creates
+a second dense coefficient matrix, and its transient peak must be counted.
+
+Requests are validated before mutation. Duplicate/repeated public identifiers
+are rejected atomically, matching B-E; rejected requests consume no horizon. The horizon
+never resets. Unknown identifiers and excessive requests raise ValueError. In
+source mode, same-source blockers cancel their record's polynomial identically.
+
+Only exact-zero coefficient vectors are pruned. Different floating accumulation
+histories need not be byte-identical to each other or a fresh rebuild. All
+current moment drift remains visible in statistics(). For count exactly zero,
+decode applies the declared zero-head convention while preserving raw drift for
+audit; the common decoder receives zero moments in this one empty-target case.
+No nonempty matrix is projected to PSD, jittered, rounded, or silently rebuilt.
+No historical checkpoint/head or data reread is used as fallback.
+
+Verification completed locally
+  17,924 exhaustive small algebraic states on the pre-strict-retry prototype: coefficient map equals independent
+  direct expansion; count and moments equal direct selection; source grouping,
+  all finite horizons, retries, invalid IDs, empty targets, common-decoder
+  parity, memory-cap rejection, and checkpoint resume checked. These are
+  software correctness fixtures, not synthetic empirical experiments.
+
+  Additional natural-data engineering check: the 100 connector-preview Civil
+  Comments rows were represented with fixed HashingVectorizer128 word (1,2)
+  features, alternate_sign=False, L2 normalization, threshold 0.8, horizon 100.
+  Original toxicity fractions were retained. Sequential removal in input-row
+  order checked 101 releases against independent retained-selection moments:
+  maximum absolute moment error 2.886579864025407e-15; maximum absolute decoded
+  head error 5.82637702797935e-16. The final exact count was zero, decoded head
+  was zero, and Gram cancellation drift remained 2.886579864025407e-15. This
+  check exposed and fixed the empty-target decoding boundary. There was one
+  graph edge and one admission along that fixed row-order sequence. These
+  lexical, connector-rendered preview rows are nonconfirmatory software data;
+  these values establish no population prevalence, semantic dedup quality,
+  held-out NLP benefit, or timing/storage advantage.
+
+Current strict retry/batch/exhaustion semantics are independently checked on
+unchanged natural Civil records in check_real_boundaries.py; see the recorded
+results/boundary_audit.json and ENGINEERING_CHANGELOG.txt.

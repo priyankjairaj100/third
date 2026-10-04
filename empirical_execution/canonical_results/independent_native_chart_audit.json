@@ -1,0 +1,13 @@
+{
+  "independent_ambient_rref_comparisons": 66,
+  "reconstruction_checks": 66,
+  "canonical_idempotence_checks": 66,
+  "large_rational_bitlength_checks": 3,
+  "large_input_numerator_bitlengths": [
+    128,
+    522,
+    1025
+  ],
+  "failed_checks": 0,
+  "scope": "Exact algebra fixtures; not empirical data experiments."
+}

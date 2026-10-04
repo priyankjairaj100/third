@@ -1,0 +1,775 @@
+{
+  "status": "passed",
+  "confirmatory": false,
+  "dataset_sha256": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9",
+  "feature_scope": "fixed128d lexical curator; unchanged natural text and original labels",
+  "checked_model_states": 127,
+  "boundary_checks": [
+    "duplicate_atomic",
+    "unknown_atomic",
+    "budget_atomic",
+    "bool_id_atomic",
+    "float_id_atomic",
+    "retry_atomic",
+    "exhausted_atomic",
+    "batch_singleton_reversed_identical_logical_state"
+  ],
+  "max_abs_head_error": 1.0547118733938987e-15,
+  "initial_accounting": {
+    "64": {
+      "method": "B-E-compact-primal-dual",
+      "state_contract": "eligible FP32 payload retained; no persistent moments",
+      "remaining_horizon": 8,
+      "alive_service_units": 100,
+      "eligible_payload_records": 83,
+      "selected_records": 65,
+      "blocker_incidences": 60,
+      "feature_array_bytes": 21248,
+      "target_array_bytes": 664,
+      "moment_array_bytes": 0,
+      "kernel_array_bytes": 0,
+      "all_array_bytes": 21912,
+      "python_live_bytes_estimate": 114868,
+      "python_metadata_bytes_estimate": 92956,
+      "release_solver": "primal",
+      "release_system_dimension": 64,
+      "release_selected_copy_bytes": 33800,
+      "release_system_and_factor_bytes_estimate": 65536,
+      "workspace_estimate_note": "Partial named arrays only; excludes response/output/residual and BLAS workspaces; measure process peak separately"
+    },
+    "128": {
+      "method": "B-E-compact-primal-dual",
+      "state_contract": "eligible FP32 payload retained; no persistent moments",
+      "remaining_horizon": 8,
+      "alive_service_units": 100,
+      "eligible_payload_records": 83,
+      "selected_records": 65,
+      "blocker_incidences": 60,
+      "feature_array_bytes": 42496,
+      "target_array_bytes": 664,
+      "moment_array_bytes": 0,
+      "kernel_array_bytes": 0,
+      "all_array_bytes": 43160,
+      "python_live_bytes_estimate": 136144,
+      "python_metadata_bytes_estimate": 92984,
+      "release_solver": "dual",
+      "release_system_dimension": 65,
+      "release_selected_copy_bytes": 67080,
+      "release_system_and_factor_bytes_estimate": 67600,
+      "workspace_estimate_note": "Partial named arrays only; excludes response/output/residual and BLAS workspaces; measure process peak separately"
+    },
+    "768": {
+      "method": "B-E-compact-primal-dual",
+      "state_contract": "eligible FP32 payload retained; no persistent moments",
+      "remaining_horizon": 8,
+      "alive_service_units": 100,
+      "eligible_payload_records": 83,
+      "selected_records": 65,
+      "blocker_incidences": 60,
+      "feature_array_bytes": 254976,
+      "target_array_bytes": 664,
+      "moment_array_bytes": 0,
+      "kernel_array_bytes": 0,
+      "all_array_bytes": 255640,
+      "python_live_bytes_estimate": 348624,
+      "python_metadata_bytes_estimate": 92984,
+      "release_solver": "dual",
+      "release_system_dimension": 65,
+      "release_selected_copy_bytes": 399880,
+      "release_system_and_factor_bytes_estimate": 67600,
+      "workspace_estimate_note": "Partial named arrays only; excludes response/output/residual and BLAS workspaces; measure process peak separately"
+    }
+  },
+  "checked_states": [
+    {
+      "dimension": 64,
+      "deleted": 0,
+      "head_error": 3.3306690738754696e-16,
+      "moment_error": 8.881784197001252e-16,
+      "solver": "FP64 primal ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 64,
+      "deleted": 1,
+      "head_error": 3.3306690738754696e-16,
+      "moment_error": 2.220446049250313e-16,
+      "solver": "FP64 primal ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 64,
+      "deleted": 2,
+      "head_error": 4.996003610813204e-16,
+      "moment_error": 4.440892098500626e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 64,
+      "deleted": 3,
+      "head_error": 3.885780586188048e-16,
+      "moment_error": 4.440892098500626e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 64,
+      "deleted": 4,
+      "head_error": 4.0592529337857286e-16,
+      "moment_error": 4.440892098500626e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 64,
+      "deleted": 5,
+      "head_error": 4.579669976578771e-16,
+      "moment_error": 4.440892098500626e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 64,
+      "deleted": 6,
+      "head_error": 4.3021142204224816e-16,
+      "moment_error": 4.440892098500626e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 64,
+      "deleted": 7,
+      "head_error": 4.440892098500626e-16,
+      "moment_error": 4.440892098500626e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 64,
+      "deleted": 8,
+      "head_error": 4.0245584642661925e-16,
+      "moment_error": 4.440892098500626e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 128,
+      "deleted": 0,
+      "head_error": 6.106226635438361e-16,
+      "moment_error": 2.220446049250313e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 128,
+      "deleted": 1,
+      "head_error": 3.191891195797325e-16,
+      "moment_error": 2.220446049250313e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 128,
+      "deleted": 2,
+      "head_error": 5.551115123125783e-16,
+      "moment_error": 2.220446049250313e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 128,
+      "deleted": 3,
+      "head_error": 1.0547118733938987e-15,
+      "moment_error": 2.220446049250313e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 128,
+      "deleted": 4,
+      "head_error": 4.163336342344337e-16,
+      "moment_error": 2.220446049250313e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 128,
+      "deleted": 5,
+      "head_error": 7.771561172376096e-16,
+      "moment_error": 2.220446049250313e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 128,
+      "deleted": 6,
+      "head_error": 3.5388358909926865e-16,
+      "moment_error": 2.220446049250313e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 128,
+      "deleted": 7,
+      "head_error": 4.996003610813204e-16,
+      "moment_error": 2.220446049250313e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 128,
+      "deleted": 8,
+      "head_error": 3.3306690738754696e-16,
+      "moment_error": 2.220446049250313e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 768,
+      "deleted": 0,
+      "head_error": 4.440892098500626e-16,
+      "moment_error": 2.220446049250313e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 768,
+      "deleted": 1,
+      "head_error": 8.326672684688674e-16,
+      "moment_error": 2.220446049250313e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 768,
+      "deleted": 2,
+      "head_error": 4.579669976578771e-16,
+      "moment_error": 2.220446049250313e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 768,
+      "deleted": 3,
+      "head_error": 2.951740414591786e-16,
+      "moment_error": 2.220446049250313e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 768,
+      "deleted": 4,
+      "head_error": 6.245004513516506e-16,
+      "moment_error": 2.220446049250313e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 768,
+      "deleted": 5,
+      "head_error": 4.145989107584569e-16,
+      "moment_error": 2.220446049250313e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 768,
+      "deleted": 6,
+      "head_error": 3.885780586188048e-16,
+      "moment_error": 2.220446049250313e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 768,
+      "deleted": 7,
+      "head_error": 7.836613302725226e-16,
+      "moment_error": 2.220446049250313e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 768,
+      "deleted": 8,
+      "head_error": 3.7470027081099033e-16,
+      "moment_error": 2.220446049250313e-16,
+      "solver": "FP64 dual ridge Cholesky; rebuilt selected payload; no persistent Gram"
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 1,
+      "head_error": 3.3306690738754696e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 2,
+      "head_error": 4.996003610813204e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 3,
+      "head_error": 3.885780586188048e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 4,
+      "head_error": 4.0592529337857286e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 5,
+      "head_error": 4.579669976578771e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 6,
+      "head_error": 4.3021142204224816e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 7,
+      "head_error": 4.440892098500626e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 8,
+      "head_error": 4.0245584642661925e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 9,
+      "head_error": 2.7755575615628914e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 10,
+      "head_error": 6.106226635438361e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 11,
+      "head_error": 4.440892098500626e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 12,
+      "head_error": 4.440892098500626e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 13,
+      "head_error": 3.3306690738754696e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 14,
+      "head_error": 2.7755575615628914e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 15,
+      "head_error": 4.163336342344337e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 16,
+      "head_error": 4.163336342344337e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 17,
+      "head_error": 4.163336342344337e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 18,
+      "head_error": 3.0531133177191805e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 19,
+      "head_error": 3.0531133177191805e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 20,
+      "head_error": 3.0531133177191805e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 21,
+      "head_error": 4.718447854656915e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 22,
+      "head_error": 4.718447854656915e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 23,
+      "head_error": 3.0531133177191805e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 24,
+      "head_error": 3.8424124992886277e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 25,
+      "head_error": 3.8424124992886277e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 26,
+      "head_error": 3.8424124992886277e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 27,
+      "head_error": 2.7755575615628914e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 28,
+      "head_error": 2.7755575615628914e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 29,
+      "head_error": 5.551115123125783e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 30,
+      "head_error": 4.996003610813204e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 31,
+      "head_error": 4.996003610813204e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 32,
+      "head_error": 2.498001805406602e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 33,
+      "head_error": 2.498001805406602e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 34,
+      "head_error": 2.7755575615628914e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 35,
+      "head_error": 2.0816681711721685e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 36,
+      "head_error": 1.8041124150158794e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 37,
+      "head_error": 1.6653345369377348e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 38,
+      "head_error": 1.942890293094024e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 39,
+      "head_error": 2.220446049250313e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 40,
+      "head_error": 1.5265566588595902e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 41,
+      "head_error": 1.5265566588595902e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 42,
+      "head_error": 1.942890293094024e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 43,
+      "head_error": 3.191891195797325e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 44,
+      "head_error": 2.498001805406602e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 45,
+      "head_error": 1.6653345369377348e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 46,
+      "head_error": 2.0816681711721685e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 47,
+      "head_error": 1.942890293094024e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 48,
+      "head_error": 1.942890293094024e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 49,
+      "head_error": 2.220446049250313e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 50,
+      "head_error": 1.8041124150158794e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 51,
+      "head_error": 2.914335439641036e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 52,
+      "head_error": 1.942890293094024e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 53,
+      "head_error": 1.734723475976807e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 54,
+      "head_error": 1.734723475976807e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 55,
+      "head_error": 2.220446049250313e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 56,
+      "head_error": 2.220446049250313e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 57,
+      "head_error": 2.220446049250313e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 58,
+      "head_error": 2.914335439641036e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 59,
+      "head_error": 3.0531133177191805e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 60,
+      "head_error": 1.734723475976807e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 61,
+      "head_error": 1.6653345369377348e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 62,
+      "head_error": 1.6653345369377348e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 63,
+      "head_error": 1.6653345369377348e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 64,
+      "head_error": 1.6653345369377348e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 65,
+      "head_error": 1.6653345369377348e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 66,
+      "head_error": 1.6653345369377348e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 67,
+      "head_error": 1.6653345369377348e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 68,
+      "head_error": 1.1102230246251565e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 69,
+      "head_error": 1.1102230246251565e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 70,
+      "head_error": 3.0531133177191805e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 71,
+      "head_error": 2.0122792321330962e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 72,
+      "head_error": 1.8041124150158794e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 73,
+      "head_error": 1.8041124150158794e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 74,
+      "head_error": 1.8041124150158794e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 75,
+      "head_error": 1.8041124150158794e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 76,
+      "head_error": 1.8041124150158794e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 77,
+      "head_error": 2.220446049250313e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 78,
+      "head_error": 2.0816681711721685e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 79,
+      "head_error": 4.0245584642661925e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 80,
+      "head_error": 1.942890293094024e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 81,
+      "head_error": 1.942890293094024e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 82,
+      "head_error": 2.185751579730777e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 83,
+      "head_error": 2.185751579730777e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 84,
+      "head_error": 1.3183898417423734e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 85,
+      "head_error": 1.3183898417423734e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 86,
+      "head_error": 1.3877787807814457e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 87,
+      "head_error": 1.734723475976807e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 88,
+      "head_error": 1.734723475976807e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 89,
+      "head_error": 1.734723475976807e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 90,
+      "head_error": 1.734723475976807e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 91,
+      "head_error": 3.191891195797325e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 92,
+      "head_error": 5.134781488891349e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 93,
+      "head_error": 2.1510571102112408e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 94,
+      "head_error": 2.1510571102112408e-16
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 95,
+      "head_error": 0.0
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 96,
+      "head_error": 0.0
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 97,
+      "head_error": 0.0
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 98,
+      "head_error": 0.0
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 99,
+      "head_error": 0.0
+    },
+    {
+      "dimension": 64,
+      "full_deletion_prefix": 100,
+      "head_error": 0.0
+    }
+  ],
+  "scope_limit": "FP64 software checks; no formal floating certificate, semantic utility or performance claim"
+}

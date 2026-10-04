@@ -1,0 +1,45 @@
+{
+  "dimension": 64,
+  "record_count": 100,
+  "trajectories_planned": 40,
+  "checkpoint_rows_passed": 160,
+  "failed_trajectories": [],
+  "max_abs_head_error": 6.661338147750939e-16,
+  "max_abs_moment_error": 8.881784197001252e-16,
+  "checkpoint_rows_with_admissions": 37,
+  "maximum_admitted_count": 4,
+  "initial_accounting": {
+    "B-E": {
+      "mode": "record",
+      "remaining_horizon": 8,
+      "alive_service_units": 100,
+      "eligible_payload_records": 83,
+      "selected_records": 65,
+      "blocker_incidences": 60,
+      "feature_array_bytes": 21248,
+      "target_array_bytes": 664,
+      "moment_array_bytes": 33280,
+      "all_array_bytes": 55192,
+      "python_owned_bytes_estimate": 151969
+    },
+    "P-I": {
+      "method": "P-index-python-numpy",
+      "state_contract": "current coefficients and head; no selected-ID recovery",
+      "coefficient_count": 99,
+      "packed_dimension": 2145,
+      "numeric_coefficient_bytes": 1698840,
+      "python_live_bytes_estimate": 1770160,
+      "python_metadata_bytes_estimate": 71320,
+      "alive_public_identifiers": 100,
+      "remaining_horizon": 8,
+      "key_incidences": 197,
+      "quadratic_key_potential": 465,
+      "retained_feature_rows": 0,
+      "retained_target_rows": 0,
+      "retained_original_graph": false,
+      "numeric_guarantee": "FP64 diagnostic fidelity; not certified roundoff"
+    }
+  },
+  "elapsed_seconds": 0.6311399580008583,
+  "confirmatory": false
+}

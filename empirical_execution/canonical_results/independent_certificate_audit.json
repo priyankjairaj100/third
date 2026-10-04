@@ -1,0 +1,8 @@
+{
+  "independent_exact_solves": 243,
+  "integer_sqrt_checks": 1984,
+  "invalid_psd_rejections": 4,
+  "empty_target_checks": 2,
+  "failed_checks": 0,
+  "scope": "Algebraic verification fixtures, not empirical datasets or a formal proof assistant."
+}

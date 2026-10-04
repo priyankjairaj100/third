@@ -1,0 +1,45 @@
+{
+  "status": "partial_preview_acquisition_only",
+  "confirmatory_dataset_acquired": false,
+  "civil_comments_rows": 100,
+  "cc_news_rows": 90,
+  "cc_news_distinct_hosts": [
+    "banglalive.com",
+    "baycommunitynews.com",
+    "www.designwizard.com",
+    "www.pointemagazine.com",
+    "www.techrepublic.com"
+  ],
+  "cc_news_unavailable_indices": [
+    30,
+    31,
+    32,
+    33,
+    34,
+    85,
+    86,
+    87,
+    88,
+    89
+  ],
+  "failed_preview_responses": [
+    "cc_news_preview_0030_raw.json",
+    "cc_news_preview_0030_retry_raw.json",
+    "cc_news_preview_0085_raw.json",
+    "cc_news_preview_0085_retry_raw.json"
+  ],
+  "outputs": {
+    "civil_comments_engineering_preview.jsonl": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9",
+    "cc_news_engineering_preview.jsonl": "2706d91d423fc7d31d8235d4b5095b1c8789cc2aa319b31f05c5f1f549d8a8c4"
+  },
+  "limitations": [
+    "Civil preview lacks original record IDs, publication IDs, article IDs, timestamps and parent metadata; record-only tests are possible.",
+    "CC-News has no supervised response label; label remains null.",
+    "Row-index record IDs are engineering identifiers tied to the saved response hashes, not immutable source IDs.",
+    "This is a first-rows convenience slice, not a random or complete natural population.",
+    "No immutable Hub commit revision was exposed by the functioning connector.",
+    "The connector emits Markdown; escaped presentation is normalized but source bytes and whitespace are not verified.",
+    "CC-News offsets 30 and 85 returned 502 then 429; no missing rows were manufactured.",
+    "Source-level CC-News tests refer only to host groups present in this incomplete engineering slice."
+  ]
+}

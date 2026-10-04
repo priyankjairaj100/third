@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "checks": {
+    "source_hashes": 10,
+    "partition_assignments": 100,
+    "request_streams": 112,
+    "checkpoint_rows": 896,
+    "metric_scalar_checks": 8064,
+    "bootstrap_metric_intervals": 336,
+    "utility_context_checks": 14,
+    "geometry_fields": 8
+  },
+  "max_dual_vs_saved_prediction_absolute_error": 1.1379786002407855e-15,
+  "max_recomputed_metric_absolute_error": 3.774758283725532e-15,
+  "independent_solver": "dual ridge on selected FP32-promoted features; production uses primal Cholesky",
+  "imports_production_curation_repair_or_analysis_code": false,
+  "semantic_quality_or_confirmatory_gate_passed": false,
+  "audit_sha256": "ef5f1edcb516cf6cc053e719715201a9a8a340ffeb1498eb6efe5ad7b4dc216a",
+  "result_summary_sha256": "fd3309e4d422355cca186544819842bf64862c69e7ac36c798d62826aadedf87"
+}

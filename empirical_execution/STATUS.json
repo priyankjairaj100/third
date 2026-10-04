@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-04",
+  "stage": "local_engineering_complete_primary_study_not_started",
+  "confirmatory": false,
+  "computation_location": "this_conversation_workspace_only",
+  "completed": [
+    "independent_selection_oracle",
+    "eligible_payload_baseline",
+    "indexed_finite_horizon_summary",
+    "record_and_source_structure_harness",
+    "natural_preview_engineering_pilot",
+    "boundary_and_empty_target_checks",
+    "fresh_process_state_only_replay",
+    "initial_array_memory_measurement"
+  ],
+  "results": {
+    "natural_civil_records": 100,
+    "natural_news_articles": 90,
+    "joint_release_checkpoints": 324,
+    "full_deletion_release_checkpoints": 100,
+    "model_checkpoints_failing_tolerance": 0,
+    "news_source_subset_checks": 96,
+    "expected_admission_checks": 18,
+    "civil_structure_trajectories": 576,
+    "civil_structure_checkpoints": 2112,
+    "negative_control_executions": 640,
+    "distinct_control_cases": 453
+  },
+  "primary_study_blockers": [
+    "original_source_rich_corpus_files_not_available",
+    "pinned_semantic_encoder_weights_and_runtime_not_available",
+    "human_semantic_quality_gate_not_completed"
+  ],
+  "remaining_design_gate": "Lock a feasible local memory envelope and preserve all infeasible cells before confirmation.",
+  "not_claimed": [
+    "semantic_duplicate_quality",
+    "population_admission_prevalence",
+    "NLP_utility_improvement",
+    "E5_or_MPNet_results",
+    "performance_superiority",
+    "privacy_or_unlearning_distribution_certificate",
+    "bitwise_numerical_canonicality"
+  ],
+  "archive_data_policy": {
+    "included": "CC0 Civil Comments engineering fixture and its acquisition response",
+    "omitted": "CC-News article text and raw rendered article responses; retained in current workspace cache",
+    "available_for_news": "provenance, hashes and measured audit outputs"
+  },
+  "future_actions": "No background or external jobs are running. Continue inside this workspace once primary assets are available."
+}

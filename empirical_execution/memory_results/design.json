@@ -1,0 +1,56 @@
+{
+  "scope": "natural_preview_lexical_engineering_only",
+  "confirmatory": false,
+  "cases": [
+    [
+      64,
+      1,
+      40
+    ],
+    [
+      128,
+      1,
+      40
+    ],
+    [
+      768,
+      1,
+      40
+    ],
+    [
+      128,
+      7,
+      8
+    ],
+    [
+      768,
+      7,
+      8
+    ]
+  ],
+  "curator_dimension": 128,
+  "threshold": 0.6,
+  "horizon": 8,
+  "lambda": 0.01,
+  "checkpoints": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "label_names": [
+    "toxicity",
+    "severe_toxicity",
+    "obscene",
+    "threat",
+    "insult",
+    "identity_attack",
+    "sexual_explicit"
+  ],
+  "input_sha256": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9",
+  "no_synthetic_data": true,
+  "no_tolerance_rank_truncation": true,
+  "absolute_error_failure_threshold": 1e-09,
+  "memory_measure": "owned NumPy array bytes; not RSS or total live state",
+  "no_remote_compute": true
+}

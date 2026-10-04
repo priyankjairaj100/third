@@ -1,0 +1,34 @@
+{
+  "status": "completed_development_not_confirmation",
+  "geometry": {
+    "training_records": 82,
+    "evaluation_records": 18,
+    "initially_selected": 55,
+    "initially_excluded": 27,
+    "train_graph_edges": 195,
+    "train_eval_exacttext_overlap": 0,
+    "crosssplit_lexical_pairs_above_threshold": 119,
+    "crosssplit_max_lexical_score": 0.7717517630782796,
+    "semantic_or_source_leakage_guard_complete": false,
+    "evaluation_never_in_graph_requests_or_learner": true,
+    "not_applicable_arms": {
+      "S": "native source fields unavailable; no singleton substitution"
+    }
+  },
+  "requested_trajectories_per_dimension": 112,
+  "dimensions": [
+    64,
+    768
+  ],
+  "checkpoint_rows": 896,
+  "strict_audited_checkpoints": 12,
+  "zero_admission_checkpoint_rows": 658,
+  "failed_checkpoints": 0,
+  "scope": "reused preview conditional diagnostics only",
+  "design_lock_sha256": "c55171e35b868527f3891dd7a12c65746437c314290cd20c93bcb819f0940513",
+  "request_manifest_sha256": "ed1bd5dd39a867907c69482efe323b2ee237dd322491fb5af5a30c984ccd73ba",
+  "partition_sha256": "7738ad55e6091634942e68fc52e57697df08b89e33255ac75b813129df3587d9",
+  "primary_study_started": false,
+  "source_arm_executed": false,
+  "semantic_encoder_used": false
+}
