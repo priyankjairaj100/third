@@ -1,0 +1,28 @@
+{
+  "batch_rows": 1024,
+  "compaction_fraction": 0.5,
+  "horizon": 4,
+  "input_bundle": "/workspace/scratch/35d4d4d8ba2c/empirical_execution/tmp/dispatch_group_bp2j3klf/inputs",
+  "input_hashes": {
+    "graph.npz": "461465f160738695c6589315f19f4f70ee01e42391990c8a5f8b355b5efcc8db",
+    "learner.npy": "cfaeacedba483130083756c6e813313019c910411959ddf52e48ad938f6ff897",
+    "metadata.json": "bc4c43fd39e50147c52e33163c10f9253a6f0002559fe0eedd6116d79e959c88",
+    "targets.npy": "f50ce299b68384af3210583019158b98d83f37793437210e90a6287bfa6bde7a"
+  },
+  "lambda_reg": 0.01,
+  "method": "O-T",
+  "panel": "cold_process",
+  "policy": {
+    "convex_certificate_coordinates": 3000000,
+    "convex_verifier": "exact_dyadic_integer_v1",
+    "cpu_seconds": 75,
+    "memory_bytes": 1610612736,
+    "policy_role": "phase7_explicit_Civil_engineering_smoke",
+    "state_audit_max_coefficient_coordinates": 5000000,
+    "state_audit_max_pair_coordinates": 150000000,
+    "threads": 1,
+    "wall_seconds": 80
+  },
+  "solver": "cholesky",
+  "unit": "record"
+}

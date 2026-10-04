@@ -1,0 +1,11 @@
+{
+  "memory_bytes": 1610612736,
+  "cpu_seconds": 75,
+  "wall_seconds": 80,
+  "threads": 1,
+  "policy_role": "phase7_explicit_Civil_engineering_smoke",
+  "convex_verifier": "exact_dyadic_integer_v1",
+  "convex_certificate_coordinates": 3000000,
+  "state_audit_max_pair_coordinates": 150000000,
+  "state_audit_max_coefficient_coordinates": 5000000
+}

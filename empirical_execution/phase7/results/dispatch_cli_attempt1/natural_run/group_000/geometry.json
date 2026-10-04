@@ -1,0 +1,13 @@
+{
+  "lambda": 0.01,
+  "lambda_lock_sha256": "bd75ad0e1602648493c58f05984548b1fede5e23c979d1c47cf859291b6294df",
+  "projection_output_sha256": "8eedb754da1b89b16410e43dac4af6012df44ec31903ad5f42f2c476944681c4",
+  "projection_sha256": null,
+  "reference_graph_code": "efc41498648f6f7f7969768fbcd050619d7ed5d6e82eafadb1b9a3a2158e9d1c",
+  "tag_threshold_status": "not_applicable",
+  "threshold": 0.6,
+  "threshold_lock_sha256": "76f78858d6bf9b63538ae8f76e71a56557f0321d6c627d7c4afbf5870da9b2d7",
+  "threshold_quality": {
+    "status": "base_threshold_contract"
+  }
+}

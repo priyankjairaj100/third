@@ -1,0 +1,183 @@
+{
+  "schema": "ccu-calibration-cli-independent-checks-1",
+  "status": "passed",
+  "check_count": 40,
+  "checks": [
+    {
+      "check": "bound_records_equal_existing_natural_rows",
+      "passed": true
+    },
+    {
+      "check": "bound_FP32_features_exact",
+      "passed": true
+    },
+    {
+      "check": "all_four_descriptor_hashes_recorded",
+      "passed": true
+    },
+    {
+      "check": "loaded_fingerprint_recomputes",
+      "passed": true
+    },
+    {
+      "check": "positive_interface_path_only_with_explicit_mock",
+      "passed": true
+    },
+    {
+      "check": "replay_receives_exact_loaded_values",
+      "passed": true
+    },
+    {
+      "check": "dossier_parent_and_frozen_design_forwarded",
+      "passed": true
+    },
+    {
+      "check": "fixed_seed_and_block_size",
+      "passed": true
+    },
+    {
+      "check": "pair_population_is_exact_existing_six_rows",
+      "passed": true
+    },
+    {
+      "check": "three_blank_assignments_per_pair",
+      "passed": true
+    },
+    {
+      "check": "every_response_is_blank",
+      "passed": true
+    },
+    {
+      "check": "collection_declaration_remains_blank_and_false",
+      "passed": true
+    },
+    {
+      "check": "assignment_texts_are_only_existing_texts",
+      "passed": true
+    },
+    {
+      "check": "no_threshold_or_primary_authorization",
+      "passed": true
+    },
+    {
+      "check": "output_collision_refused",
+      "passed": true
+    },
+    {
+      "check": "collision_preserves_original_pack",
+      "passed": true
+    },
+    {
+      "check": "wrong_hash_refused",
+      "passed": true
+    },
+    {
+      "check": "unsupported_kind_refused",
+      "passed": true
+    },
+    {
+      "check": "path_escape_refused",
+      "passed": true
+    },
+    {
+      "check": "nonstring_path_refused",
+      "passed": true
+    },
+    {
+      "check": "symlink_escape_refused",
+      "passed": true
+    },
+    {
+      "check": "duplicate_top_refused",
+      "passed": true
+    },
+    {
+      "check": "duplicate_nested_json_refused",
+      "passed": true
+    },
+    {
+      "check": "duplicate_jsonl_refused",
+      "passed": true
+    },
+    {
+      "check": "nonfinite_JSON_refused",
+      "passed": true
+    },
+    {
+      "check": "nested_JSON_descriptor_loaded_and_bound",
+      "passed": true
+    },
+    {
+      "check": "cycle_guard_refuses_self_reference_under_explicit_hash_mock",
+      "passed": true
+    },
+    {
+      "check": "actual_unmocked_missing_source_refused",
+      "passed": true
+    },
+    {
+      "check": "no_pack_after_actual_replay_failure",
+      "passed": true
+    },
+    {
+      "check": "failure_receipt_and_replay_preserved",
+      "passed": true
+    },
+    {
+      "check": "actual_missing_dossier_refused_without_pack",
+      "passed": true
+    },
+    {
+      "check": "actual_preview_bytes_replayed",
+      "passed": true
+    },
+    {
+      "check": "engineering_preview_cannot_create_semantic_pack",
+      "passed": true
+    },
+    {
+      "check": "WCEP_refused_before_replay",
+      "passed": true
+    },
+    {
+      "check": "explicit_machine_refusal_never_creates_pack",
+      "passed": true
+    },
+    {
+      "check": "truthy_nonboolean_acceptance_refused",
+      "passed": true
+    },
+    {
+      "check": "input_mutation_during_replay_refused",
+      "passed": true
+    },
+    {
+      "check": "no_pack_after_detected_input_mutation",
+      "passed": true
+    },
+    {
+      "check": "sampling_and_loader_sources_explicitly_bound",
+      "passed": true
+    },
+    {
+      "check": "checker_and_frozen_dependencies_unchanged",
+      "passed": true
+    }
+  ],
+  "source_sha256": {
+    "phase7/check_calibration_cli.py": "fb7dbc3bae2d8bf0ea99cb066ef81e62d3042580f63ae7c42e97011c7f70b5de",
+    "phase7/prepare_calibration.py": "ac3fa1434bbbea5192bed9d227944f8c03befbccfec80471ca2fa8ef14607065",
+    "phase6/acceptance.py": "c324b08f3aa64cf06fa394743edea0a52209928dc4457d15f72cac5f135a2d8f",
+    "phase3/calibration.py": "2a6ce3b19de3063f32b010ebfa19ffc4003ffc09acfc41a1ead4f74bc6c81b13",
+    "phase5/task_program.py": "7f406e0d92b1e32418f60eb6dda76ad24084ad05674c8933f80b08186695eac2"
+  },
+  "natural_input_sha256": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9",
+  "positive_pack_scope": "Transient interface mock using six actual Civil rows and lexical features; not source or encoder acceptance.",
+  "mock_pack_pairs": 15,
+  "mock_blank_assignments": 45,
+  "actual_source_rich_archive_accepted": false,
+  "actual_semantic_encoder_replayed": false,
+  "actual_human_responses_created": 0,
+  "primary_study_started": false,
+  "pack_artifacts_retained": false
+}

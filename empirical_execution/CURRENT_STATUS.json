@@ -1,7 +1,7 @@
 {
   "date": "2026-10-04",
   "scope": "current status supplement; older STATUS.json describes an earlier run",
-  "stage": "phase6_checked_checkpoint_paused_by_user_primary_inputs_unavailable",
+  "stage": "phase7_input_interfaces_checked_primary_assets_and_native_qualification_pending",
   "all_computation_local": true,
   "synthetic_empirical_data": false,
   "strict_mode_completed_previously": {
@@ -9,8 +9,8 @@
     "history_comparisons": 10,
     "result": "canonical_results/summary.json"
   },
-  "next_required_inputs": "phase6/REQUIRED_INPUTS.md",
-  "primary_asset_readiness": "phase6/results/access_recheck.json",
+  "next_required_inputs": "phase7/ACQUISITION_REVIEW.md",
+  "primary_asset_readiness": "phase7/results/input_readiness.json",
   "no_background_jobs": true,
   "previous_phase2_development": {
     "status": "completed_development_not_confirmation",
@@ -60,7 +60,7 @@
     "primary_threshold_selected": false,
     "primary_quality_gate_passed": false
   },
-  "todo_ledger": "phase6/COMPLETION_LEDGER.md",
+  "todo_ledger": "phase7/CHECKPOINT.md",
   "all_research_todos_complete": false,
   "primary_semantic_study_started": false,
   "actual_human_ratings": 0,
@@ -309,14 +309,14 @@
     }
   },
   "remaining_requirements": [
-    "Authentic original source-rich corpora and reviewed archive coverage",
-    "Pinned local E5 and MPNet files with compatible runtime and full replay",
-    "Official torch and Faiss backend acceptance on real panels",
+    "Authorized transfer of exact original source archives and pinned model files",
+    "Audited raw archive exports and full dossier construction",
+    "Actual local runtime, encoder replay, and official backend acceptance",
     "Genuine independent threshold, validation, and admission responses",
-    "Disjoint development measurements and resulting configuration locks",
+    "Disjoint development measurements and a feasible prospective native audit policy",
     "Accepted primary execution and the complete natural semantic study"
   ],
-  "pause_requested_by_user": true,
+  "pause_requested_by_user": false,
   "phase6_summary": {
     "scope": "Completed software and natural-preview lexical engineering; primary semantic study unstarted",
     "recipes": {
@@ -392,5 +392,56 @@
     },
     "next_action": "Read the handoff and required input list; obtain authentic inputs before further primary execution",
     "no_primary_or_paper_completion_claim": true
+  },
+  "phase7_summary": {
+    "scope": "Input and execution interfaces only; no new primary scientific evidence",
+    "dispatch_cli": {
+      "checks": 30,
+      "report": "phase7/results/dispatch_cli_final/checks.json",
+      "explicit_policy_forwarded_unchanged": true,
+      "current_wrapper_new_worker_runs": 0,
+      "historical_wrapper_natural_jobs": 1,
+      "historical_wrapper_natural_releases": 3,
+      "registry_rows_mock_forwarded": 21332,
+      "primary_jobs_executed": 0
+    },
+    "calibration_cli": {
+      "checks": 40,
+      "report": "phase7/results/calibration_cli_checks.json",
+      "positive_upstream_acceptance_mocked": true,
+      "actual_missing_and_preview_inputs_refused": true,
+      "actual_human_responses": 0,
+      "actual_primary_packs_created": 0
+    },
+    "source_acquisition": {
+      "report": "phase7/ACQUISITION_REVIEW.md",
+      "original_bytes_acquired": 0,
+      "raw_export_gaps_preserved": true
+    },
+    "model_metadata": {
+      "report": "phase7/results/publisher_model_candidates.json",
+      "local_assets_accepted": false
+    },
+    "resource_preflight": {
+      "documentation": "phase7/RESOURCE_PREFLIGHT.md",
+      "raises_no_limits": true,
+      "native_feasibility_measured": false,
+      "checks": 249,
+      "report": "phase7/results/resource_checks_final.json",
+      "native_count_report": "phase7/results/resource_native_10000_d768.json",
+      "default_native_pair_cap_refusal": true,
+      "unknown_selected_and_symbol_counts_preserved": true,
+      "independent_checks": 15,
+      "independent_integer_boundary_cases": 4004,
+      "independent_report": "phase7/results/resource_independent_review.json"
+    },
+    "preserved_frozen_phases": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "all_research_todos_complete": false,
+    "frozen_files_verified_unchanged": 1885
   }
 }

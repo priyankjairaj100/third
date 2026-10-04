@@ -139,3 +139,22 @@ The final BACKUP_MANIFEST and remote tree are verified separately during publish
 
 Real corpora, model files, human ratings, and primary execution remain absent.
 See RESUME_CONTEXT.md and phase6/COMPLETION_LEDGER.md for continuation.
+
+
+## Phase 7 preservation supplement — 4 October 2026
+
+The checkpoint adds current command-line interfaces and the original input map.
+It preserves both dispatcher wrapper versions and their separate checks.
+The final wrapper reuses historical natural evidence with explicit source bindings.
+One existing Civil20 lexical job and its three releases remain saved.
+No original source archive, model file, or genuine rating was added.
+
+The calibration tests preserve reports only.
+Their temporary forms contained existing Civil text and blank responses.
+The positive replay route was explicitly mocked.
+The resource preflight evaluates formulas and configured caps only.
+It supplies no native runtime or memory measurement.
+
+The Phase 7 publication report covers new project files and compressed members.
+The main backup manifest covers the complete saved checkpoint.
+Frozen Phase 3 through Phase 6 code and reports remain unchanged.

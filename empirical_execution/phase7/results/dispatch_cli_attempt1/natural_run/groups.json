@@ -1,0 +1,9 @@
+[
+  {
+    "group_id": "B_relevance/civil_comments/natural20/native",
+    "planned_jobs": 1,
+    "primary_inputs_accepted": false,
+    "shared_preparation_charge": "one package construction per group; exact time and bytes in shared_bundle.json",
+    "status": "accepted_inputs"
+  }
+]

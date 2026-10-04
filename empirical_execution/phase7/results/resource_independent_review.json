@@ -1,0 +1,111 @@
+{
+  "schema": "ccu-resource-independent-review-1",
+  "status": "passed",
+  "scope": "Bounded independent formula and applicability review; symbolic integer checks only.",
+  "reviewed_source_sha256": {
+    "empirical_execution/phase7/resource_preflight.py": "ee52488c08276094fab1892b29d78b7658b8cc0ce8d3f047c67d789c0c17c171",
+    "empirical_execution/phase7/check_resource_preflight.py": "a3acb1d7bfd5a87c93993ff61baf2d862dd3ccfb9e3d795ecaaa8224ccf31079",
+    "empirical_execution/phase7/RESOURCE_PREFLIGHT.md": "30ea4ccf6314ce5a7ed03fe0a54c706294ff1055877bd198bf384fd380ce0681",
+    "empirical_execution/phase7/results/resource_checks_final.json": "9daafd286f40b3a5500aefe76d4fa54c816a1f5bb5b1528147107a1314c2a38e",
+    "empirical_execution/phase7/results/resource_native_10000_d768.json": "85aea1192c90cb9cdd3fad8dc4297b4142064d7984fbc0d3b3af776af1720fcc"
+  },
+  "frozen_implementation_sha256": {
+    "phase6/state_audit.py": "e27f535cdbcb12204c3b00ad7afbce9b61b5c69e6fdba36bad62effd3d76f21a",
+    "phase4/convex.py": "93a59e37ad4597b7018f07b4a49dbaba51d4b762971a2f0520f76cfa42616eb8",
+    "phase5/convex_multioutput.py": "612619978ccf277b3d25acb8f0cb3c445100ae468d23369791d9a35c2b3a7eb2",
+    "phase6/dyadic_convex.py": "f160229da54c19f38fcb9a965913a64574b7b02bbb585b304606ece017342293",
+    "phase6/dispatch.py": "41033483d29e241940e9128c426fbb9aa1b865f6d1c37895738c5809bd446bc2",
+    "phase6/recipes.py": "e6a3159da2330031c044006d057beac334b544c058ff5a9cbe2d192d7b8ed367",
+    "phase7/run_dispatch.py": "e07af6a3b38c0a0138ea5c0b00ae9ed1285e8608f94d753a08c8860bf2b24613"
+  },
+  "check_count": 15,
+  "symbolic_inverse_boundary_cases": 4004,
+  "checks": [
+    {
+      "check": "frozen_defaults",
+      "passed": true
+    },
+    {
+      "check": "native_shape_q1",
+      "passed": true,
+      "packed": 296065,
+      "pair_demand": 38396160000
+    },
+    {
+      "check": "unknown_graph_counts_q1",
+      "passed": true
+    },
+    {
+      "check": "combined_status_is_not_job_admission_q1",
+      "passed": true
+    },
+    {
+      "check": "native_shape_q20",
+      "passed": true,
+      "packed": 310657,
+      "pair_demand": 38396160000
+    },
+    {
+      "check": "unknown_graph_counts_q20",
+      "passed": true
+    },
+    {
+      "check": "combined_status_is_not_job_admission_q20",
+      "passed": true
+    },
+    {
+      "check": "inverse_pair_cap_integer_boundaries",
+      "passed": true,
+      "cases": 4004
+    },
+    {
+      "check": "equality_and_one_below_state_audit_max_pair_coordinates",
+      "passed": true
+    },
+    {
+      "check": "equality_and_one_below_state_audit_max_coefficient_coordinates",
+      "passed": true
+    },
+    {
+      "check": "equality_and_one_below_convex_certificate_coordinates",
+      "passed": true
+    },
+    {
+      "check": "light_audit_skips_full_coefficients",
+      "passed": true
+    },
+    {
+      "check": "empty_panel_zero_demands",
+      "passed": true
+    },
+    {
+      "check": "initial_graph_gate_survives_retained_empty",
+      "passed": true
+    },
+    {
+      "check": "no_native_feasibility_inference",
+      "passed": true
+    }
+  ],
+  "review_conclusions": [
+    "The graph predicate uses N(N-1)c/2; tiled scorer overhead is explicitly excluded.",
+    "Coefficient demand is M[d(d+1)/2+dq+1], using fresh symbolic keys.",
+    "M remains graph- and horizon-dependent; 2R is an upper bound, not an observation.",
+    "The convex predicate uses selected_records*d*q, not all raw rows unless they are selected.",
+    "Full coefficient construction applies only to full-state P-I/P-S/P-R audits.",
+    "The original graph gate applies to every actual state audit, including light audits.",
+    "Combined gate status does not determine admission for individual methods or jobs.",
+    "Count-cap passes provide no native runtime or peak-memory qualification."
+  ],
+  "closed_findings": [
+    {
+      "finding": "Combined gate status needed explicit method/job applicability.",
+      "resolution": "Source and documentation now label the combined inventory and each execution branch."
+    }
+  ],
+  "open_findings": [],
+  "observed_native_execution": false,
+  "synthetic_empirical_data": false,
+  "worker_or_optimizer_or_verifier_executed": false,
+  "production_source_modified_by_reviewer": false
+}

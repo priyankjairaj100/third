@@ -1,0 +1,257 @@
+{
+  "schema": "ccu-native-resource-preflight-1",
+  "evidence_role": "source_bound_integer_arithmetic_not_an_experiment",
+  "source_contract": {
+    "source_sha256": {
+      "phase6/state_audit.py": "e27f535cdbcb12204c3b00ad7afbce9b61b5c69e6fdba36bad62effd3d76f21a",
+      "phase4/convex.py": "93a59e37ad4597b7018f07b4a49dbaba51d4b762971a2f0520f76cfa42616eb8",
+      "phase5/convex_multioutput.py": "612619978ccf277b3d25acb8f0cb3c445100ae468d23369791d9a35c2b3a7eb2",
+      "phase6/dyadic_convex.py": "f160229da54c19f38fcb9a965913a64574b7b02bbb585b304606ece017342293",
+      "phase6/dispatch.py": "41033483d29e241940e9128c426fbb9aa1b865f6d1c37895738c5809bd446bc2",
+      "phase6/recipes.py": "e6a3159da2330031c044006d057beac334b544c058ff5a9cbe2d192d7b8ed367",
+      "phase7/run_dispatch.py": "e07af6a3b38c0a0138ea5c0b00ae9ed1285e8608f94d753a08c8860bf2b24613"
+    },
+    "default_caps": {
+      "state_audit_max_pair_coordinates": 100000000,
+      "state_audit_max_coefficient_coordinates": 4000000,
+      "convex_certificate_coordinates": 2000000
+    },
+    "source_expressions": [
+      {
+        "path": "phase6/state_audit.py",
+        "function": "direct_graph",
+        "line": 42,
+        "kind": "guard",
+        "expression": "n * (n - 1) // 2 * x.shape[1] > maximum_pair_coordinates"
+      },
+      {
+        "path": "phase6/state_audit.py",
+        "function": "independent_coefficients",
+        "line": 141,
+        "kind": "assignment",
+        "expression": "d * (d + 1) // 2 + d * c + 1"
+      },
+      {
+        "path": "phase6/state_audit.py",
+        "function": "independent_coefficients",
+        "line": 142,
+        "kind": "guard",
+        "expression": "len(symbols) * packed > maximum_coordinates"
+      },
+      {
+        "path": "phase6/state_audit.py",
+        "function": "audit_service_state",
+        "line": 340,
+        "kind": "guard",
+        "expression": "method in ('P-I', 'P-S', 'P-R') and full_state"
+      },
+      {
+        "path": "phase4/convex.py",
+        "function": "certify_logistic",
+        "line": 229,
+        "kind": "guard",
+        "expression": "n * d > cap"
+      },
+      {
+        "path": "phase6/dyadic_convex.py",
+        "function": "certify_logistic",
+        "line": 48,
+        "kind": "guard",
+        "expression": "n * d > cap"
+      },
+      {
+        "path": "phase5/convex_multioutput.py",
+        "function": "certify_multioutput",
+        "line": 62,
+        "kind": "guard",
+        "expression": "x.size * y.shape[1] > cap"
+      },
+      {
+        "path": "phase6/dyadic_convex.py",
+        "function": "certify_multioutput",
+        "line": 147,
+        "kind": "guard",
+        "expression": "x.size * y.shape[1] > cap"
+      },
+      {
+        "path": "phase6/state_audit.py",
+        "function": "audit_service_state",
+        "line": 246,
+        "kind": "policy_default",
+        "key": "state_audit_max_pair_coordinates",
+        "value": 100000000
+      },
+      {
+        "path": "phase6/state_audit.py",
+        "function": "audit_service_state",
+        "line": 247,
+        "kind": "policy_default",
+        "key": "state_audit_max_coefficient_coordinates",
+        "value": 4000000
+      },
+      {
+        "path": "phase6/dispatch.py",
+        "function": "convex_job",
+        "line": 572,
+        "kind": "policy_default",
+        "key": "convex_certificate_coordinates",
+        "value": 2000000
+      }
+    ],
+    "scope": "Inspected cap expressions and defaults; complete source hashes; no source execution."
+  },
+  "inputs": {
+    "original_records": 10000,
+    "learner_dimension": 768,
+    "curator_dimension": 768,
+    "curator_dimension_equals_learner_by_default": false,
+    "retained_records": 10000,
+    "retained_records_default_to_original": true,
+    "selected_records": null,
+    "designated_symbolic_keys": null,
+    "audit_scope": "full",
+    "outputs": [
+      1,
+      20
+    ]
+  },
+  "supplied_policy": null,
+  "scenarios": [
+    {
+      "outputs": 1,
+      "packed_coordinates_per_designated_symbol": 296065,
+      "comparisons": {
+        "frozen_defaults": {
+          "status": "known_count_refusal",
+          "status_scope": "combined_gate_inventory_not_method_or_job_admission",
+          "applicability": "These gates serve different job branches. A convex-only job need not execute the state audit.",
+          "graph_audit": {
+            "status": "refused_by_count_cap",
+            "exact_demand": 38396160000,
+            "lower_bound": 38396160000,
+            "upper_bound": 38396160000,
+            "cap": 100000000,
+            "unit": "pair-coordinate cap units",
+            "exact_cap_equality_passes": true,
+            "runtime_or_memory_qualification": false,
+            "maximum_original_records_at_this_curator_dimension": 510,
+            "retained_checkpoint_demand": 38396160000,
+            "executed_for": "Actual FP64 state-audit calls: B-E/P-I/P-S/P-R light audits; all eight methods when full-state flagged.",
+            "scope": "Original graph is checked before the audit service; each retained graph is checked separately."
+          },
+          "full_coefficients": {
+            "status": "unknown_count_required",
+            "exact_demand": null,
+            "lower_bound": 0,
+            "upper_bound": 5921300000,
+            "cap": 4000000,
+            "unit": "designated-symbol-coordinate cap units",
+            "exact_cap_equality_passes": true,
+            "runtime_or_memory_qualification": false,
+            "maximum_designated_keys": 13,
+            "executed_for": "Full-state P-I, P-S, P-R checkpoints only",
+            "applied_in_this_scope": true
+          },
+          "convex_verification": {
+            "status": "unknown_count_required",
+            "exact_demand": null,
+            "lower_bound": 0,
+            "upper_bound": 7680000,
+            "cap": 2000000,
+            "unit": "output-row-coordinate cap units",
+            "exact_cap_equality_passes": true,
+            "runtime_or_memory_qualification": false,
+            "maximum_selected_records": 2604,
+            "all_retained_selected_bound": 7680000,
+            "executed_for": "Convex verifier calls on their actual selected training rows.",
+            "backend_scope": "Both fraction_reference and exact_dyadic_integer_v1 use this same count gate."
+          }
+        }
+      }
+    },
+    {
+      "outputs": 20,
+      "packed_coordinates_per_designated_symbol": 310657,
+      "comparisons": {
+        "frozen_defaults": {
+          "status": "known_count_refusal",
+          "status_scope": "combined_gate_inventory_not_method_or_job_admission",
+          "applicability": "These gates serve different job branches. A convex-only job need not execute the state audit.",
+          "graph_audit": {
+            "status": "refused_by_count_cap",
+            "exact_demand": 38396160000,
+            "lower_bound": 38396160000,
+            "upper_bound": 38396160000,
+            "cap": 100000000,
+            "unit": "pair-coordinate cap units",
+            "exact_cap_equality_passes": true,
+            "runtime_or_memory_qualification": false,
+            "maximum_original_records_at_this_curator_dimension": 510,
+            "retained_checkpoint_demand": 38396160000,
+            "executed_for": "Actual FP64 state-audit calls: B-E/P-I/P-S/P-R light audits; all eight methods when full-state flagged.",
+            "scope": "Original graph is checked before the audit service; each retained graph is checked separately."
+          },
+          "full_coefficients": {
+            "status": "unknown_count_required",
+            "exact_demand": null,
+            "lower_bound": 0,
+            "upper_bound": 6213140000,
+            "cap": 4000000,
+            "unit": "designated-symbol-coordinate cap units",
+            "exact_cap_equality_passes": true,
+            "runtime_or_memory_qualification": false,
+            "maximum_designated_keys": 12,
+            "executed_for": "Full-state P-I, P-S, P-R checkpoints only",
+            "applied_in_this_scope": true
+          },
+          "convex_verification": {
+            "status": "unknown_count_required",
+            "exact_demand": null,
+            "lower_bound": 0,
+            "upper_bound": 153600000,
+            "cap": 2000000,
+            "unit": "output-row-coordinate cap units",
+            "exact_cap_equality_passes": true,
+            "runtime_or_memory_qualification": false,
+            "maximum_selected_records": 130,
+            "all_retained_selected_bound": 153600000,
+            "executed_for": "Convex verifier calls on their actual selected training rows.",
+            "backend_scope": "Both fraction_reference and exact_dyadic_integer_v1 use this same count gate."
+          }
+        }
+      }
+    }
+  ],
+  "unknowns": [
+    "Actual retained selected count, unless supplied or the panel is empty.",
+    "Designated symbolic key count at the remaining horizon, unless supplied or empty.",
+    "Stored and actual/fresh union key counts, graph edges, and incidence multiplicities.",
+    "All other checkpoints and repeated audit services; no trajectory total is inferred.",
+    "Runtime, peak RSS, graph/index storage, serialization, integer growth, and solver work."
+  ],
+  "qualification": {
+    "runtime_seconds": null,
+    "peak_rss_bytes": null,
+    "observed_native_run": false,
+    "measured_timeout_or_oom": false,
+    "policy_approved": false,
+    "development_lock_issued": false,
+    "primary_input_acceptance": false,
+    "required_before_execution": [
+      "Genuine accepted corpus, encoder, calibration, and source inputs under the original study gates.",
+      "Prospective reviewed audit caps and common resource policy, bound before confirmation.",
+      "Actual suitable development measurements and the existing convex budget selector for larger verifier caps.",
+      "Dense verifier observations matching learner dimension and output count; source hashes and input bytes remain bound.",
+      "Runtime and peak-memory qualification remain separate from count-cap admission."
+    ],
+    "limits": [
+      "Pair cap counts unique undirected pair coordinates; tiled scoring also evaluates masked or diagonal entries.",
+      "The coefficient cap limits fresh symbolic coordinates, not all temporary arrays or union comparison work.",
+      "Each coefficient can sum many record statistics; coordinate count does not measure this accumulation work.",
+      "Light audits still rebuild the original and each retained graph; they do not bypass the pair cap.",
+      "Larger counts do not relax release tolerance, sigmoid limits, state equality, or authenticity requirements."
+    ]
+  },
+  "preflight_source_sha256": "ee52488c08276094fab1892b29d78b7658b8cc0ce8d3f047c67d789c0c17c171",
+  "policy_file_sha256": null
+}

@@ -1,0 +1,597 @@
+{
+  "civil_comments/natural20": {
+    "dataset_id": "civil_comments",
+    "task": "civil",
+    "train_ids": [
+      "civil_comments_connector_preview:train:row:0",
+      "civil_comments_connector_preview:train:row:1",
+      "civil_comments_connector_preview:train:row:2",
+      "civil_comments_connector_preview:train:row:3",
+      "civil_comments_connector_preview:train:row:4",
+      "civil_comments_connector_preview:train:row:5",
+      "civil_comments_connector_preview:train:row:6",
+      "civil_comments_connector_preview:train:row:7",
+      "civil_comments_connector_preview:train:row:8",
+      "civil_comments_connector_preview:train:row:9",
+      "civil_comments_connector_preview:train:row:10",
+      "civil_comments_connector_preview:train:row:11",
+      "civil_comments_connector_preview:train:row:12",
+      "civil_comments_connector_preview:train:row:13",
+      "civil_comments_connector_preview:train:row:14",
+      "civil_comments_connector_preview:train:row:15",
+      "civil_comments_connector_preview:train:row:16",
+      "civil_comments_connector_preview:train:row:17",
+      "civil_comments_connector_preview:train:row:18",
+      "civil_comments_connector_preview:train:row:19"
+    ],
+    "evaluation_ids": [
+      "civil_comments_connector_preview:train:row:20",
+      "civil_comments_connector_preview:train:row:21",
+      "civil_comments_connector_preview:train:row:22",
+      "civil_comments_connector_preview:train:row:23",
+      "civil_comments_connector_preview:train:row:24",
+      "civil_comments_connector_preview:train:row:25",
+      "civil_comments_connector_preview:train:row:26",
+      "civil_comments_connector_preview:train:row:27"
+    ],
+    "source_ids": [
+      "unknown:civil_comments_connector_preview:train:row:0",
+      "unknown:civil_comments_connector_preview:train:row:1",
+      "unknown:civil_comments_connector_preview:train:row:2",
+      "unknown:civil_comments_connector_preview:train:row:3",
+      "unknown:civil_comments_connector_preview:train:row:4",
+      "unknown:civil_comments_connector_preview:train:row:5",
+      "unknown:civil_comments_connector_preview:train:row:6",
+      "unknown:civil_comments_connector_preview:train:row:7",
+      "unknown:civil_comments_connector_preview:train:row:8",
+      "unknown:civil_comments_connector_preview:train:row:9",
+      "unknown:civil_comments_connector_preview:train:row:10",
+      "unknown:civil_comments_connector_preview:train:row:11",
+      "unknown:civil_comments_connector_preview:train:row:12",
+      "unknown:civil_comments_connector_preview:train:row:13",
+      "unknown:civil_comments_connector_preview:train:row:14",
+      "unknown:civil_comments_connector_preview:train:row:15",
+      "unknown:civil_comments_connector_preview:train:row:16",
+      "unknown:civil_comments_connector_preview:train:row:17",
+      "unknown:civil_comments_connector_preview:train:row:18",
+      "unknown:civil_comments_connector_preview:train:row:19"
+    ],
+    "source_kinds": {
+      "unknown:civil_comments_connector_preview:train:row:0": "unknown_singleton",
+      "unknown:civil_comments_connector_preview:train:row:1": "unknown_singleton",
+      "unknown:civil_comments_connector_preview:train:row:2": "unknown_singleton",
+      "unknown:civil_comments_connector_preview:train:row:3": "unknown_singleton",
+      "unknown:civil_comments_connector_preview:train:row:4": "unknown_singleton",
+      "unknown:civil_comments_connector_preview:train:row:5": "unknown_singleton",
+      "unknown:civil_comments_connector_preview:train:row:6": "unknown_singleton",
+      "unknown:civil_comments_connector_preview:train:row:7": "unknown_singleton",
+      "unknown:civil_comments_connector_preview:train:row:8": "unknown_singleton",
+      "unknown:civil_comments_connector_preview:train:row:9": "unknown_singleton",
+      "unknown:civil_comments_connector_preview:train:row:10": "unknown_singleton",
+      "unknown:civil_comments_connector_preview:train:row:11": "unknown_singleton",
+      "unknown:civil_comments_connector_preview:train:row:12": "unknown_singleton",
+      "unknown:civil_comments_connector_preview:train:row:13": "unknown_singleton",
+      "unknown:civil_comments_connector_preview:train:row:14": "unknown_singleton",
+      "unknown:civil_comments_connector_preview:train:row:15": "unknown_singleton",
+      "unknown:civil_comments_connector_preview:train:row:16": "unknown_singleton",
+      "unknown:civil_comments_connector_preview:train:row:17": "unknown_singleton",
+      "unknown:civil_comments_connector_preview:train:row:18": "unknown_singleton",
+      "unknown:civil_comments_connector_preview:train:row:19": "unknown_singleton"
+    },
+    "train_y": {
+      "path": "bundle0_train_y.npy",
+      "kind": "npy",
+      "sha256": "f50ce299b68384af3210583019158b98d83f37793437210e90a6287bfa6bde7a"
+    },
+    "evaluation_y": {
+      "path": "bundle0_evaluation_y.npy",
+      "kind": "npy",
+      "sha256": "4cd31af01573eeee90bde8b4518cd54dd2c2cf8168be9d27148aa725d54b2405"
+    },
+    "base_curator": "lexical64",
+    "request_design": {
+      "requests": {
+        "record_horizon": 4,
+        "source_horizon": 2,
+        "record_checkpoints": [
+          1,
+          2,
+          4
+        ],
+        "source_checkpoints": [
+          1,
+          2
+        ]
+      }
+    },
+    "requests": {
+      "schema": "ccu-frozen-requests-1",
+      "evidence_role": "engineering_nonconfirmatory",
+      "dataset_id": "civil_comments",
+      "panel_id": "phase6_natural20",
+      "graph_binding": {
+        "curator": "global_earlier_raw_neighbor_suppression",
+        "records": 20,
+        "edges": 13,
+        "threshold_hex": "0x1.3333333333333p-1",
+        "record_ids_sha256": "525bec57e76d53a604c95f79197823065b0c493feba87486f54b9bdcaef710d1",
+        "priority_sha256": "52c0d21819839337c9d8284e5459ef729ae3538d3a44d4a163ea8c15c8205ace",
+        "blocker_edges_sha256": "fd2a79281585cc842886eda8fd13a2b5faef4abd3642ba4cd46f7619284d392f",
+        "source_partition_sha256": "5a07718f083d76c8116b8e0bdcea47cc014df005f26b4f7108ff2f17529073fc",
+        "graph_sha256": "59839b1952477a7e714343d8a062e94e20b17422e3685dd54456afafe66def4b"
+      },
+      "configuration": {
+        "requests": {
+          "record_horizon": 4,
+          "record_checkpoints": [
+            1,
+            2,
+            4
+          ],
+          "source_horizon": 2,
+          "source_checkpoints": [
+            1,
+            2
+          ]
+        },
+        "allocations": {
+          "R": 1,
+          "S": 1,
+          "U": 0,
+          "A": 0
+        },
+        "master_seed": 20271003,
+        "request_salt": "ccu-v1-request",
+        "include_excluded_blocker_stress": false,
+        "seed_derivation": "SHA256 length-prefixed UTF8 master,salt,dataset,panel,arm,index; first128bits",
+        "sampling_algorithm": "Python random.Random.sample sorted frame, partial uniform permutation",
+        "python_version": "3.12.14",
+        "prospective_amendments": [
+          "graph identity bound separately; shared R/S seeds retained across curator sensitivities",
+          "A blocker prefix sorted by ID; random all-record padding including A-excluded-blockers",
+          "U initial horizon clips to excluded frame; full record service universe retained",
+          "zero feasible horizons have explicit status and zero releases",
+          "wall-clock A search charged separately, outside deterministic manifest seal"
+        ]
+      },
+      "configuration_sha256": "9f42983500995e1b7cffeceb66a37c8369ab71fe4101bdd4e9475df2fc7a6422",
+      "input_design_sha256": "81d9ea868fdfd3bef3d0a3e04513e89ee42698992e8b0679b34356079e09a694",
+      "code_sha256": {
+        "phase4/requests.py": "71b1d40032c64d4a058ee70b647d58a425827aeaeb2fa271037e26059bb6198d",
+        "phase3/reference_graph.py": "efc41498648f6f7f7969768fbcd050619d7ed5d6e82eafadb1b9a3a2158e9d1c",
+        "phase3/panels.py": "bd2409958ac9a9e27faf463b44b2f839260a3195c7cde32fb3bfb76aeb14a04b"
+      },
+      "source_kinds": {
+        "unknown:civil_comments_connector_preview:train:row:0": "unknown_singleton",
+        "unknown:civil_comments_connector_preview:train:row:1": "unknown_singleton",
+        "unknown:civil_comments_connector_preview:train:row:10": "unknown_singleton",
+        "unknown:civil_comments_connector_preview:train:row:11": "unknown_singleton",
+        "unknown:civil_comments_connector_preview:train:row:12": "unknown_singleton",
+        "unknown:civil_comments_connector_preview:train:row:13": "unknown_singleton",
+        "unknown:civil_comments_connector_preview:train:row:14": "unknown_singleton",
+        "unknown:civil_comments_connector_preview:train:row:15": "unknown_singleton",
+        "unknown:civil_comments_connector_preview:train:row:16": "unknown_singleton",
+        "unknown:civil_comments_connector_preview:train:row:17": "unknown_singleton",
+        "unknown:civil_comments_connector_preview:train:row:18": "unknown_singleton",
+        "unknown:civil_comments_connector_preview:train:row:19": "unknown_singleton",
+        "unknown:civil_comments_connector_preview:train:row:2": "unknown_singleton",
+        "unknown:civil_comments_connector_preview:train:row:3": "unknown_singleton",
+        "unknown:civil_comments_connector_preview:train:row:4": "unknown_singleton",
+        "unknown:civil_comments_connector_preview:train:row:5": "unknown_singleton",
+        "unknown:civil_comments_connector_preview:train:row:6": "unknown_singleton",
+        "unknown:civil_comments_connector_preview:train:row:7": "unknown_singleton",
+        "unknown:civil_comments_connector_preview:train:row:8": "unknown_singleton",
+        "unknown:civil_comments_connector_preview:train:row:9": "unknown_singleton"
+      },
+      "source_kind_declaration_sha256": "594516cc9526b6bebae2789b70cfdfa8246ffcc881fa68052b2b95caff823851",
+      "source_provenance_verified_by_this_module": false,
+      "source_service_universe": [
+        "unknown:civil_comments_connector_preview:train:row:0",
+        "unknown:civil_comments_connector_preview:train:row:1",
+        "unknown:civil_comments_connector_preview:train:row:10",
+        "unknown:civil_comments_connector_preview:train:row:11",
+        "unknown:civil_comments_connector_preview:train:row:12",
+        "unknown:civil_comments_connector_preview:train:row:13",
+        "unknown:civil_comments_connector_preview:train:row:14",
+        "unknown:civil_comments_connector_preview:train:row:15",
+        "unknown:civil_comments_connector_preview:train:row:16",
+        "unknown:civil_comments_connector_preview:train:row:17",
+        "unknown:civil_comments_connector_preview:train:row:18",
+        "unknown:civil_comments_connector_preview:train:row:19",
+        "unknown:civil_comments_connector_preview:train:row:2",
+        "unknown:civil_comments_connector_preview:train:row:3",
+        "unknown:civil_comments_connector_preview:train:row:4",
+        "unknown:civil_comments_connector_preview:train:row:5",
+        "unknown:civil_comments_connector_preview:train:row:6",
+        "unknown:civil_comments_connector_preview:train:row:7",
+        "unknown:civil_comments_connector_preview:train:row:8",
+        "unknown:civil_comments_connector_preview:train:row:9"
+      ],
+      "genuine_source_sampling_frame": [],
+      "source_size_quantiles": {
+        "0": 1,
+        "0.25": 1,
+        "0.5": 1,
+        "0.75": 1,
+        "1": 1
+      },
+      "genuine_source_size_quantiles": {
+        "0": null,
+        "0.25": null,
+        "0.5": null,
+        "0.75": null,
+        "1": null
+      },
+      "source_unknown_records": 20,
+      "engineering_proxy_records": 0,
+      "initial_selected_records": 13,
+      "initially_excluded_records": 7,
+      "trajectories": [
+        {
+          "trajectory_id": "R000",
+          "arm": "R",
+          "unit": "record",
+          "seed": 45549197566930102062076753568929689376,
+          "requested_horizon": 4,
+          "initial_horizon": 4,
+          "sampling_frame_size": 20,
+          "sampling_frame_sha256": "525bec57e76d53a604c95f79197823065b0c493feba87486f54b9bdcaef710d1",
+          "service_universe_size": 20,
+          "deletion_order": [
+            "civil_comments_connector_preview:train:row:10",
+            "civil_comments_connector_preview:train:row:3",
+            "civil_comments_connector_preview:train:row:9",
+            "civil_comments_connector_preview:train:row:6"
+          ],
+          "checkpoints": [
+            1,
+            2,
+            4
+          ],
+          "horizon_clipped": false,
+          "clipping_reason": null,
+          "status": "ready",
+          "reset_between_checkpoints": false,
+          "budget": "cumulative_unique_units_no_reset",
+          "exhaustion_policy": "atomic_refusal_requires_separate_rebuild_to_reset",
+          "observations": [
+            {
+              "checkpoint": 1,
+              "cumulative_deleted_units": 1,
+              "cumulative_deleted_records": 1,
+              "remaining_horizon": 3,
+              "newly_requested_units": [
+                "civil_comments_connector_preview:train:row:10"
+              ],
+              "deleted_record_ids": [
+                "civil_comments_connector_preview:train:row:10"
+              ],
+              "selected_record_ids": [
+                "civil_comments_connector_preview:train:row:1",
+                "civil_comments_connector_preview:train:row:11",
+                "civil_comments_connector_preview:train:row:12",
+                "civil_comments_connector_preview:train:row:13",
+                "civil_comments_connector_preview:train:row:15",
+                "civil_comments_connector_preview:train:row:17",
+                "civil_comments_connector_preview:train:row:2",
+                "civil_comments_connector_preview:train:row:4",
+                "civil_comments_connector_preview:train:row:5",
+                "civil_comments_connector_preview:train:row:6",
+                "civil_comments_connector_preview:train:row:7",
+                "civil_comments_connector_preview:train:row:9"
+              ],
+              "admitted_record_ids": [],
+              "admissions": 0,
+              "has_admission": false,
+              "originally_selected_deleted": 1,
+              "current_selected_records": 12,
+              "previous_release_selected_deleted": 1,
+              "retained_records": 19,
+              "empty_retained_target": false,
+              "zero_admission": true,
+              "cumulative_request_set_sha256": "89542326c1fc47efea510c8fcca06c5b8a05de893fb12c3254bf96587a530e62"
+            },
+            {
+              "checkpoint": 2,
+              "cumulative_deleted_units": 2,
+              "cumulative_deleted_records": 2,
+              "remaining_horizon": 2,
+              "newly_requested_units": [
+                "civil_comments_connector_preview:train:row:3"
+              ],
+              "deleted_record_ids": [
+                "civil_comments_connector_preview:train:row:10",
+                "civil_comments_connector_preview:train:row:3"
+              ],
+              "selected_record_ids": [
+                "civil_comments_connector_preview:train:row:1",
+                "civil_comments_connector_preview:train:row:11",
+                "civil_comments_connector_preview:train:row:12",
+                "civil_comments_connector_preview:train:row:13",
+                "civil_comments_connector_preview:train:row:15",
+                "civil_comments_connector_preview:train:row:17",
+                "civil_comments_connector_preview:train:row:2",
+                "civil_comments_connector_preview:train:row:4",
+                "civil_comments_connector_preview:train:row:5",
+                "civil_comments_connector_preview:train:row:6",
+                "civil_comments_connector_preview:train:row:7",
+                "civil_comments_connector_preview:train:row:9"
+              ],
+              "admitted_record_ids": [],
+              "admissions": 0,
+              "has_admission": false,
+              "originally_selected_deleted": 1,
+              "current_selected_records": 12,
+              "previous_release_selected_deleted": 0,
+              "retained_records": 18,
+              "empty_retained_target": false,
+              "zero_admission": true,
+              "cumulative_request_set_sha256": "96630f5d6376fbea35984b9406eee1790fb4c7e8b8b0a0e42c538473638a4f68"
+            },
+            {
+              "checkpoint": 4,
+              "cumulative_deleted_units": 4,
+              "cumulative_deleted_records": 4,
+              "remaining_horizon": 0,
+              "newly_requested_units": [
+                "civil_comments_connector_preview:train:row:9",
+                "civil_comments_connector_preview:train:row:6"
+              ],
+              "deleted_record_ids": [
+                "civil_comments_connector_preview:train:row:10",
+                "civil_comments_connector_preview:train:row:3",
+                "civil_comments_connector_preview:train:row:6",
+                "civil_comments_connector_preview:train:row:9"
+              ],
+              "selected_record_ids": [
+                "civil_comments_connector_preview:train:row:1",
+                "civil_comments_connector_preview:train:row:11",
+                "civil_comments_connector_preview:train:row:12",
+                "civil_comments_connector_preview:train:row:13",
+                "civil_comments_connector_preview:train:row:15",
+                "civil_comments_connector_preview:train:row:17",
+                "civil_comments_connector_preview:train:row:2",
+                "civil_comments_connector_preview:train:row:4",
+                "civil_comments_connector_preview:train:row:5",
+                "civil_comments_connector_preview:train:row:7"
+              ],
+              "admitted_record_ids": [],
+              "admissions": 0,
+              "has_admission": false,
+              "originally_selected_deleted": 3,
+              "current_selected_records": 10,
+              "previous_release_selected_deleted": 2,
+              "retained_records": 16,
+              "empty_retained_target": false,
+              "zero_admission": true,
+              "cumulative_request_set_sha256": "01f3d6f8b6910aa71e1fcaae4295782c4df08a77acd09bd5fca9d07c44ac4337"
+            }
+          ]
+        },
+        {
+          "trajectory_id": "S000",
+          "arm": "S",
+          "unit": "source",
+          "seed": 3176736624715537648524241932800459063,
+          "requested_horizon": 2,
+          "initial_horizon": 0,
+          "sampling_frame_size": 0,
+          "sampling_frame_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "service_universe_size": 20,
+          "deletion_order": [],
+          "checkpoints": [],
+          "horizon_clipped": true,
+          "clipping_reason": "sampling_frame_smaller_than_requested_horizon",
+          "status": "structural_zero_empty_sampling_frame",
+          "reset_between_checkpoints": false,
+          "budget": "cumulative_unique_units_no_reset",
+          "exhaustion_policy": "atomic_refusal_requires_separate_rebuild_to_reset",
+          "observations": []
+        },
+        {
+          "trajectory_id": "R-volume-matched-to-S000",
+          "arm": "R-volume-matched-to-S",
+          "unit": "record",
+          "seed": 132079541014210024328703184713922656038,
+          "requested_horizon": 0,
+          "initial_horizon": 0,
+          "sampling_frame_size": 20,
+          "sampling_frame_sha256": "525bec57e76d53a604c95f79197823065b0c493feba87486f54b9bdcaef710d1",
+          "service_universe_size": 20,
+          "deletion_order": [],
+          "checkpoints": [],
+          "horizon_clipped": false,
+          "clipping_reason": null,
+          "status": "no_source_checkpoints",
+          "reset_between_checkpoints": false,
+          "budget": "cumulative_unique_units_no_reset",
+          "exhaustion_policy": "atomic_refusal_requires_separate_rebuild_to_reset",
+          "matched_source_trajectory_id": "S000",
+          "matched_source_checkpoints": [],
+          "source_raw_count_prefixes": [],
+          "separate_record_horizon": true,
+          "observations": []
+        }
+      ],
+      "arm_summaries": {
+        "R": {
+          "trajectories": 1,
+          "status_counts": {
+            "ready": 1
+          },
+          "horizon_clipped_trajectories": 0,
+          "distinct_ordered_trajectories": 1,
+          "per_checkpoint": [
+            {
+              "checkpoint": 1,
+              "contributing_trajectories": 1,
+              "distinct_request_sets": 1,
+              "zero_admission_trajectories": 1,
+              "empty_retained_targets": 0
+            },
+            {
+              "checkpoint": 2,
+              "contributing_trajectories": 1,
+              "distinct_request_sets": 1,
+              "zero_admission_trajectories": 1,
+              "empty_retained_targets": 0
+            },
+            {
+              "checkpoint": 4,
+              "contributing_trajectories": 1,
+              "distinct_request_sets": 1,
+              "zero_admission_trajectories": 1,
+              "empty_retained_targets": 0
+            }
+          ]
+        },
+        "R-volume-matched-to-S": {
+          "trajectories": 1,
+          "status_counts": {
+            "no_source_checkpoints": 1
+          },
+          "horizon_clipped_trajectories": 0,
+          "distinct_ordered_trajectories": 1,
+          "per_checkpoint": []
+        },
+        "S": {
+          "trajectories": 1,
+          "status_counts": {
+            "structural_zero_empty_sampling_frame": 1
+          },
+          "horizon_clipped_trajectories": 1,
+          "distinct_ordered_trajectories": 1,
+          "per_checkpoint": []
+        }
+      },
+      "confirmatory_study_ready": false,
+      "genuine_source_withdrawal_evidence": false,
+      "model_results_used_for_generation": false,
+      "labels_used_for_generation": false,
+      "graph_diagnostics_for_isolated_auditor_only": true,
+      "inference_scope": "simulated requests conditional on one fixed graph; A is graph stress, never prevalence",
+      "empty_or_failed_initializations_preserved": true,
+      "manifest_sha256": "ee1b99f23dfd9ee38cc9cafaa121da7fa86f00543ebb369f7fc0ce1e39a4c629"
+    },
+    "curators": {
+      "lexical64": {
+        "train_ids": [
+          "civil_comments_connector_preview:train:row:0",
+          "civil_comments_connector_preview:train:row:1",
+          "civil_comments_connector_preview:train:row:2",
+          "civil_comments_connector_preview:train:row:3",
+          "civil_comments_connector_preview:train:row:4",
+          "civil_comments_connector_preview:train:row:5",
+          "civil_comments_connector_preview:train:row:6",
+          "civil_comments_connector_preview:train:row:7",
+          "civil_comments_connector_preview:train:row:8",
+          "civil_comments_connector_preview:train:row:9",
+          "civil_comments_connector_preview:train:row:10",
+          "civil_comments_connector_preview:train:row:11",
+          "civil_comments_connector_preview:train:row:12",
+          "civil_comments_connector_preview:train:row:13",
+          "civil_comments_connector_preview:train:row:14",
+          "civil_comments_connector_preview:train:row:15",
+          "civil_comments_connector_preview:train:row:16",
+          "civil_comments_connector_preview:train:row:17",
+          "civil_comments_connector_preview:train:row:18",
+          "civil_comments_connector_preview:train:row:19"
+        ],
+        "train": {
+          "path": "bundle0_curators_lexical64_train.npy",
+          "kind": "npy",
+          "sha256": "68da417b6dfe066f8c54335c94e824df1282d899d0898269aa6abea856856e48"
+        },
+        "threshold_lock": {
+          "schema": "ccu-task-engineering-parameter-1",
+          "kind": "threshold",
+          "value": 0.6,
+          "representation": "lexical64",
+          "role": "engineering_nonconfirmatory",
+          "source": "prospective engineering constant, not calibrated",
+          "selected_from_test": false,
+          "is_calibration_result": false,
+          "sha256": "76f78858d6bf9b63538ae8f76e71a56557f0321d6c627d7c4afbf5870da9b2d7"
+        }
+      }
+    },
+    "learners": {
+      "lexical32": {
+        "train_ids": [
+          "civil_comments_connector_preview:train:row:0",
+          "civil_comments_connector_preview:train:row:1",
+          "civil_comments_connector_preview:train:row:2",
+          "civil_comments_connector_preview:train:row:3",
+          "civil_comments_connector_preview:train:row:4",
+          "civil_comments_connector_preview:train:row:5",
+          "civil_comments_connector_preview:train:row:6",
+          "civil_comments_connector_preview:train:row:7",
+          "civil_comments_connector_preview:train:row:8",
+          "civil_comments_connector_preview:train:row:9",
+          "civil_comments_connector_preview:train:row:10",
+          "civil_comments_connector_preview:train:row:11",
+          "civil_comments_connector_preview:train:row:12",
+          "civil_comments_connector_preview:train:row:13",
+          "civil_comments_connector_preview:train:row:14",
+          "civil_comments_connector_preview:train:row:15",
+          "civil_comments_connector_preview:train:row:16",
+          "civil_comments_connector_preview:train:row:17",
+          "civil_comments_connector_preview:train:row:18",
+          "civil_comments_connector_preview:train:row:19"
+        ],
+        "evaluation_ids": [
+          "civil_comments_connector_preview:train:row:20",
+          "civil_comments_connector_preview:train:row:21",
+          "civil_comments_connector_preview:train:row:22",
+          "civil_comments_connector_preview:train:row:23",
+          "civil_comments_connector_preview:train:row:24",
+          "civil_comments_connector_preview:train:row:25",
+          "civil_comments_connector_preview:train:row:26",
+          "civil_comments_connector_preview:train:row:27"
+        ],
+        "train": {
+          "path": "bundle0_learners_lexical32_train.npy",
+          "kind": "npy",
+          "sha256": "cfaeacedba483130083756c6e813313019c910411959ddf52e48ad938f6ff897"
+        },
+        "evaluation": {
+          "path": "bundle0_learners_lexical32_evaluation.npy",
+          "kind": "npy",
+          "sha256": "e418d592991b3fa81c681a6c4658d0465e10e75c8cc8068fa05d2be14e9a857d"
+        },
+        "lambda_lock": {
+          "schema": "ccu-task-engineering-parameter-1",
+          "kind": "lambda",
+          "value": 0.01,
+          "representation": "lexical32",
+          "role": "engineering_nonconfirmatory",
+          "source": "prospective engineering constant, not calibrated",
+          "selected_from_test": false,
+          "is_calibration_result": false,
+          "sha256": "bd75ad0e1602648493c58f05984548b1fede5e23c979d1c47cf859291b6294df"
+        }
+      }
+    },
+    "evidence_role": "natural_text_engineering",
+    "natural_input_path": "/workspace/scratch/35d4d4d8ba2c/empirical_execution/data/civil_comments_engineering_preview.jsonl",
+    "natural_input_sha256": "83de928bcece5e074ae669285630571db405fecdd2c48136e37c64ce321c7cc9",
+    "refit_configuration": {
+      "clusters": 3,
+      "iterations": 4,
+      "epsilon": 0.4,
+      "seed": 7,
+      "backend": "separate_numpy_spherical_lloyd_reference",
+      "development_config_id": "fixed-engineering-only"
+    },
+    "refit_seed_variants": [
+      11,
+      13,
+      17
+    ],
+    "ANN_policy": {
+      "tables": 4,
+      "bits": 4,
+      "sample_size": 30
+    }
+  }
+}

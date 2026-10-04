@@ -546,3 +546,20 @@ The remaining scientific questions require genuine primary inputs.
 They concern meaningful additions, task effects, source behavior, memory, runtime, and full-refit scope.
 Repeated engineering checks cannot answer those questions.
 The next productive action is original input intake, followed by accepted local execution.
+
+
+## Phase 7 input and execution follow-up
+
+The user resumed after the saved Phase 6 checkpoint.
+No theory statement or frozen Phase 6 implementation changed.
+The new dispatcher CLI passes an explicit resource policy unchanged.
+The calibration CLI replays accepted inputs before creating blank forms.
+A resource preflight evaluates existing audit and convex work limits.
+It does not turn cap counts into measured runtime or memory.
+
+The native pair audit exceeds the default limit for 10,000 records at dimension 768.
+A larger limit needs genuine development qualification.
+Original archive schemas also require explicit export lineage.
+The acquisition map records official locations and published hashes where available.
+No original archive, encoder execution, or human response was acquired.
+See phase7/CHECKPOINT.md for the current continuation order.

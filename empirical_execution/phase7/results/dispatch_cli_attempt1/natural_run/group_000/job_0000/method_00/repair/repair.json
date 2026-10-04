@@ -1,0 +1,37 @@
+{
+  "denied_probe_paths": [
+    "/workspace/scratch/35d4d4d8ba2c/empirical_execution/tmp/dispatch_0b3uqlid/method_00/forbidden_probe.txt"
+  ],
+  "lambda_reg": 0.01,
+  "method": "O-T",
+  "panel": "cold_process",
+  "persistence": "final",
+  "policy": {
+    "convex_certificate_coordinates": 3000000,
+    "convex_verifier": "exact_dyadic_integer_v1",
+    "cpu_seconds": 75,
+    "memory_bytes": 1610612736,
+    "policy_role": "phase7_explicit_Civil_engineering_smoke",
+    "state_audit_max_coefficient_coordinates": 5000000,
+    "state_audit_max_pair_coordinates": 150000000,
+    "threads": 1,
+    "wall_seconds": 80
+  },
+  "requests": [
+    [
+      "civil_comments_connector_preview:train:row:10"
+    ],
+    [
+      "civil_comments_connector_preview:train:row:3"
+    ],
+    [
+      "civil_comments_connector_preview:train:row:9",
+      "civil_comments_connector_preview:train:row:6"
+    ]
+  ],
+  "solver": "cholesky",
+  "state_hashes": {
+    "state.npz": "5ca43ec91fe95bfe01af00c11661d2caaf872ff60ce1dede0e66ff5a58f1978c"
+  },
+  "unit": "record"
+}

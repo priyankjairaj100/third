@@ -53,3 +53,7 @@ empirical_execution/data/cc_news_preview_*_raw.json
 /empirical_execution/phase6/results/dyadic_convex_release/
 /empirical_execution/phase6/results/dyadic_dense_release/
 /empirical_execution/phase6/results/dyadic_dense_scalar_release/
+
+# Future private original inputs and human forms require separate publication review.
+/local_inputs/
+/local_outputs/

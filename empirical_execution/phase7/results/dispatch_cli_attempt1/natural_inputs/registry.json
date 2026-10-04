@@ -1,0 +1,32 @@
+{
+  "schema": "ccu-phase7-natural-cli-smoke-1",
+  "groups": [
+    {
+      "group_id": "B_relevance/civil_comments/natural20/native",
+      "block": "B_relevance",
+      "corpus": "civil_comments",
+      "panel": "natural20",
+      "variant": "native",
+      "request_family": "civil_comments/natural20",
+      "methods": [
+        "O-T"
+      ],
+      "allocations": {
+        "R": 1,
+        "S": 1,
+        "U": 0,
+        "A": 0
+      },
+      "configuration": {
+        "curator_encoder": "lexical64",
+        "learner_encoder": "lexical32",
+        "learner_dimension": 32,
+        "priority_seed": 0,
+        "threshold": "calibrated",
+        "decoder": "Cholesky",
+        "state_precision": "FP64"
+      }
+    }
+  ],
+  "jobs_content_sha256": "a856f1f0191d5a5106b49ef49078a176438f0bc762e636d0408b2c77fcc7976f"
+}

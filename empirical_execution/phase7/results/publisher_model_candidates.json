@@ -1,0 +1,29 @@
+{
+  "schema": "ccu-publisher-model-candidates-1",
+  "date": "2026-10-04",
+  "purpose": "Prospective input candidates; metadata only; not an accepted local asset manifest or completed study lock",
+  "local_bytes_acquired": false,
+  "runtime_selected": false,
+  "encoder_or_tokenizer_execution": false,
+  "models": [
+    {
+      "encoder_id": "intfloat/multilingual-e5-base",
+      "candidate_revision": "d128750597153bb5987e10b1c3493a34e5a4502a",
+      "weights_file": "model.safetensors",
+      "published_weight_sha256": "a18a44fad1d0b46ded15928144138cff1135d5cc8233bdd90be5f18822de09a7",
+      "published_size_display": "1.11 GB",
+      "exact_weight_bytes": null,
+      "source_url": "https://huggingface.co/intfloat/multilingual-e5-base/blob/d128750597153bb5987e10b1c3493a34e5a4502a/model.safetensors",
+      "complete_config_tokenizer_inventory_verified": false
+    },
+    {
+      "encoder_id": "sentence-transformers/all-mpnet-base-v2",
+      "candidate_revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130",
+      "weights_file": "model.safetensors",
+      "published_weight_sha256": "78c0197b6159d92658e319bc1d72e4c73a9a03dd03815e70e555c5ef05615658",
+      "exact_weight_bytes": 437971872,
+      "source_url": "https://huggingface.co/sentence-transformers/all-mpnet-base-v2/raw/e8c3b32edf5434bc2275fc9bab85f82640a19130/model.safetensors",
+      "complete_config_tokenizer_inventory_verified": false
+    }
+  ]
+}

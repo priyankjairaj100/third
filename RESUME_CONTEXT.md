@@ -1,15 +1,15 @@
 # Resume this research project
 
-Last substantive checkpoint: **4 October 2026, Phase 6 checked and paused at the user’s request**.
+Last substantive checkpoint: **4 October 2026, Phase 7 input and execution interfaces**.
 The primary semantic study remains unstarted.
-Read the Phase 6 ledger for exact evidence and remaining input requirements.
+Read the Phase 7 checkpoint and Phase 6 ledger for evidence and remaining requirements.
 Repository: **https://github.com/priyankjairaj100/third**.
 
 This is a project handoff reconstructed from the available conversation and the saved research files. It is not a verbatim export of all chats. It deliberately contains only this project's context.
 
 ## Paste this into a new chat
 
-> Continue the ACL 2027 counterfactual semantic-curation unlearning project at https://github.com/priyankjairaj100/third. Read README.md, RESUME_CONTEXT.md, THEORY_AND_RESULTS_HANDOFF.md, empirical_execution/CURRENT_STATUS.json and empirical_execution/phase6/COMPLETION_LEDGER.md and phase6/README.md, then inspect the relevant code and result files before acting. Preserve the distinction between exact theory, natural-preview engineering evidence, and the unstarted primary semantic study. All work must be carried out in this workspace; do not start paid or external compute without my instruction. Continue the highest-value executable work, keep me informed, and save all project progress back to this repository with an updated handoff. Do not fabricate missing corpus provenance, semantic embeddings, or human ratings.
+> Continue the ACL 2027 counterfactual semantic-curation unlearning project at https://github.com/priyankjairaj100/third. Read README.md, RESUME_CONTEXT.md, THEORY_AND_RESULTS_HANDOFF.md, empirical_execution/CURRENT_STATUS.json and empirical_execution/phase7/CHECKPOINT.md, empirical_execution/phase7/README.md, and empirical_execution/phase6/COMPLETION_LEDGER.md, then inspect the relevant code and result files before acting. Preserve the distinction between exact theory, natural-preview engineering evidence, and the unstarted primary semantic study. All work must be carried out in this workspace; do not start paid or external compute without my instruction. Continue the highest-value executable work, keep me informed, and save all project progress back to this repository with an updated handoff. Do not fabricate missing corpus provenance, semantic embeddings, or human ratings.
 
 ## User objective and preferences
 
@@ -39,13 +39,16 @@ Read its ledger, acceptance documentation, and source-bound review first.
 Use the Phase 6 README restoration command before auditing archived result paths.
 The independent review passed 244 checks; dispatcher and extension integration passed 31 and 48 checks.
 No background research jobs remain.
+Use Phase 7 interfaces for new intake and explicit policy dispatch.
 Start the next chat with input intake, not another repetition of completed lexical checks.
 Missing original assets and human judgments remain genuine blockers.
 Do not repeat lexical checks as a substitute for collecting that evidence.
 
-The latest user instruction is to save all current work and resume the remaining work in another chat.
-Research execution is paused. No background work should continue.
-The preceding instruction authorized completion with maximum care.
+The user resumed work after the saved Phase 6 checkpoint.
+Phase 7 adds explicit policy dispatch, accepted calibration preparation, and a native resource preflight.
+It records official input locations and the remaining raw export boundary.
+No primary experiment has started.
+No background research jobs remain after this checkpoint.
 It does not authorize invented provenance, human ratings, paid compute, or contacting people.
 
 ## Where we actually are
@@ -62,6 +65,7 @@ It does not authorize invented provenance, human ratings, paid compute, or conta
 | Phase 4 extensions | News calendar/encoding bridge, per-encoder calibration and blank admission pack implemented; fractional-label logistic pilot/certificate completed in its stated single-output scope; consult final audits and `phase4/TODO.json` |
 | Phase 5 | Compact payload/all summary methods, enforced no-reaccess, versioned numerical gate, full-refit adapter, convex/replication/boundary/human/task/statistical integrations and complete prospective registry; see latest completion ledger |
 | Phase 6 | All 21 recipe obligations resolved prospectively; 21,332 jobs registered; dispatcher, extensions, acceptance, numerical and state audits passed. Independent review passed 244 checks. See the Phase 6 ledger. |
+| Phase 7 | Explicit resource policy CLI, accepted blank calibration preparation, native resource preflight, and official input map. Original files and primary evidence remain absent. |
 | Primary semantic study | **Not started.** No E5/MPNet embeddings, no original source-rich corpus snapshot and no completed human ratings |
 | Paper-ready confirmatory evidence | **Absent.** Do not turn development checks into semantic or source-withdrawal claims |
 

@@ -1,0 +1,22 @@
+{
+  "source_acceptance": {
+    "path": "source_acceptance.json",
+    "sha256": "REPLACE_WITH_ACTUAL_FILE_SHA256",
+    "kind": "json"
+  },
+  "records": {
+    "path": "calibration/records.jsonl",
+    "sha256": "REPLACE_WITH_ACTUAL_FILE_SHA256",
+    "kind": "jsonl"
+  },
+  "features": {
+    "path": "calibration/features.npy",
+    "sha256": "REPLACE_WITH_ACTUAL_FILE_SHA256",
+    "kind": "npy"
+  },
+  "provenance": {
+    "path": "calibration/provenance.json",
+    "sha256": "REPLACE_WITH_ACTUAL_FILE_SHA256",
+    "kind": "json"
+  }
+}

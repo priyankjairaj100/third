@@ -1,0 +1,36 @@
+{
+  "schema": "ccu-resumed-input-readiness-1",
+  "date": "2026-10-04",
+  "checkpoint_before_resume": "df4fc5897a1756af0aefeddb8db7d45e9ad6b89b",
+  "original_corpus_files_acquired": 0,
+  "model_files_acquired": 0,
+  "human_responses_acquired": 0,
+  "primary_experiments_started": false,
+  "runtime_packages": {
+    "torch": false,
+    "transformers": false,
+    "faiss": false,
+    "tqdm": false,
+    "huggingface_hub": false,
+    "datasets": false,
+    "pyarrow": false,
+    "safetensors": false,
+    "numpy": true,
+    "scipy": true
+  },
+  "free_bytes_observed": 5852672000,
+  "plugin_search": "Hugging Face already installed; no additional relevant local binary import capability found",
+  "metadata_read": true,
+  "metadata_is_asset_acceptance": false,
+  "authorized_binary_import_route_established": false,
+  "restricted_host_download_attempted": false,
+  "remote_compute_launched": false,
+  "corpus_locations": "../ACQUISITION_REVIEW.md",
+  "candidate_model_metadata": "publisher_model_candidates.json",
+  "remaining_operational_requirements": [
+    "authorized_original_file_transfer",
+    "complete_source_and_encoder_replay",
+    "genuine_human_collection",
+    "independent_development_resource_qualification"
+  ]
+}

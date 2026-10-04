@@ -6,7 +6,9 @@ Research workspace for **counterfactual repair after semantic data curation**, t
 
 ## Current status — 4 October 2026
 
-Phase 6 completes the remaining experiment routes and adds source replay, measurement, and inference checks.
+Phase 7 adds input interfaces, explicit resource policies, and checks for native work limits.
+Read its [checkpoint](empirical_execution/phase7/CHECKPOINT.md) for the latest results and remaining dependencies.
+Phase 6 implements the experiment routes and adds source replay, measurement, and inference checks.
 It resolves the 21 prior recipe obligations prospectively.
 The final results and limits are in the [completion ledger](empirical_execution/phase6/COMPLETION_LEDGER.md).
 
@@ -21,6 +23,7 @@ They do not establish semantic task value, source withdrawal effects, or a publi
 The earlier memory finding remains unfavorable to large summaries.
 Compact eligible payload remains the essential comparator.
 
+The [Phase 7 README](empirical_execution/phase7/README.md) gives the current command-line entry points.
 The [Phase 6 README](empirical_execution/phase6/README.md) identifies current code and result files.
 The [machine-readable status](empirical_execution/CURRENT_STATUS.json) separates completed software from missing scientific evidence.
 Earlier phases remain unchanged.
@@ -55,6 +58,7 @@ The original protocol's narrative resolves omissions in the compact JSON. Later 
 | `empirical_execution/phase4/` | Original-schema adapters, offline encoding, task choices, request manifests, engineering comparison, systems harness and explicitly tracked unfinished integrations |
 | `empirical_execution/phase5/` | Compact and summary method services, kernel access boundary, numerical/convex/refit/replication/analysis integrations, natural development matrix and final review |
 | `empirical_execution/phase6/` | Complete routes, source acceptance, precision variants, measured workers, exact verification, human inference, and independent review |
+| `empirical_execution/phase7/` | Current input interfaces, explicit policy dispatch, native resource preflight, and acquisition map |
 | `empirical_execution/archive/` | Superseded pilot outputs retained for provenance |
 | `BACKUP_MANIFEST.json` | File sizes, SHA256 checksums and backup exclusions |
 | `BACKUP_AUDIT.md` | Backup scope and public-data handling review |
