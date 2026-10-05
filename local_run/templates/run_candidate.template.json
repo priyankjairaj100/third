@@ -1,0 +1,11 @@
+{
+  "schema": "ccu-local-launch-1",
+  "run_id": "candidate_v1",
+  "evidence_role": "preparation",
+  "route": "candidate",
+  "arguments": {
+    "config": "local_workspace/inputs/civil_candidate_v1.json",
+    "out": "local_workspace/candidates/civil_primary10000_v1"
+  },
+  "dependencies": []
+}

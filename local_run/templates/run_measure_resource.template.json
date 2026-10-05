@@ -1,0 +1,11 @@
+{
+  "schema": "ccu-local-launch-1",
+  "run_id": "measure-resource_v1",
+  "evidence_role": "development",
+  "route": "measure-resource",
+  "arguments": {
+    "request": "local_workspace/candidates/civil_primary10000_v1/measurement_request_v1.json",
+    "out": "local_workspace/candidates/civil_primary10000_v1/measurements/observation_v1"
+  },
+  "dependencies": []
+}

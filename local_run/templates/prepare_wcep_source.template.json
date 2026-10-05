@@ -1,0 +1,26 @@
+{
+  "dataset_id": "wcep100",
+  "adapter": {
+    "directory": "../prepared/wcep100/a01/adapter",
+    "inputs": {
+      "train": "wcep100/train.jsonl.gz",
+      "val": "wcep100/val.jsonl.gz",
+      "test": "wcep100/test.jsonl.gz"
+    },
+    "kwargs": {
+      "snapshot_revision": "REQUIRED_REVIEWED_RELEASE_ID_BOUND_TO_ALL_THREE_FILE_HASHES",
+      "collection_scope": "all_official_splits"
+    }
+  },
+  "panel": {
+    "directory": "../prepared/wcep100/a01/panel"
+  },
+  "caches": {
+    "e5": {
+      "directory": "../prepared/wcep100/a01/e5_cache",
+      "assets": "../models/e5/assets.json",
+      "model_dir": "../models/e5/model",
+      "tokenizer_dir": "../models/e5/tokenizer"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "ccu-local-results-report-1",
+  "report_id": "REQUIRED_UNIQUE_REPORT_ID",
+  "stage": "setup",
+  "evidence_role": "preparation",
+  "status": "not_started",
+  "reviewed_for_sharing": false,
+  "machine": {"os": null, "cpu": null, "ram_gib": null, "gpu": null, "free_disk_gib": null},
+  "runtime": {"python": null, "package_lock_sha256": null, "semantic_runtime_qualified": false},
+  "inputs": [],
+  "completed_work": [],
+  "blocked_work": [],
+  "deviations": [],
+  "results": [],
+  "negative_findings": [],
+  "human_collection": {"actual_ratings": 0, "independent_collection_complete": false, "review_receipt_sha256": null},
+  "next_action": "REQUIRED_ACTUAL_NEXT_ACTION",
+  "questions_for_research_assistant": []
+}

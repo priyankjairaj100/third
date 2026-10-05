@@ -1,6 +1,9 @@
 # Resume this research project
 
-Last substantive checkpoint: **4 October 2026, Phase 10 finite-format memory bounds and canonical sequential repair**.
+Last substantive checkpoint: **5 October 2026, local empirical execution handoff**.
+The latest theory remains Phase 10 finite-format memory bounds and canonical sequential repair.
+The user now runs empirical work on their local machine and reports results back.
+Start with `local_run/START_HERE.md` and `local_run/LOCAL_LLM_BRIEF.md`; the exact program is `local_run/EMPIRICAL_PROGRAM.md`.
 The primary semantic study remains unstarted.
 Read the Phase 10 checkpoint and remaining-task ledger, then the frozen Phase 9, Phase 8, and Phase 6 interfaces.
 Repository: **https://github.com/priyankjairaj100/third**.
@@ -9,7 +12,7 @@ This is a project handoff reconstructed from the available conversation and the 
 
 ## Paste this into a new chat
 
-> Continue the ACL 2027 counterfactual semantic-curation unlearning project at https://github.com/priyankjairaj100/third. Read README.md, RESUME_CONTEXT.md, THEORY_AND_RESULTS_HANDOFF.md, empirical_execution/CURRENT_STATUS.json and empirical_execution/phase10/CHECKPOINT.md, empirical_execution/phase10/README.md, empirical_execution/phase10/REMAINING_TASKS.md, and empirical_execution/phase6/COMPLETION_LEDGER.md, then inspect the relevant code and result files before acting. Preserve the distinction between exact theory, natural-preview engineering evidence, and the unstarted primary semantic study. All work must be carried out in this workspace; do not start paid or external compute without my instruction. Continue the highest-value executable work, keep me informed, and save all project progress back to this repository with an updated handoff. Do not fabricate missing corpus provenance, semantic embeddings, or human ratings.
+> Continue the ACL 2027 counterfactual semantic-curation unlearning project at https://github.com/priyankjairaj100/third. Read README.md, RESUME_CONTEXT.md, THEORY_AND_RESULTS_HANDOFF.md, empirical_execution/CURRENT_STATUS.json and empirical_execution/phase10/CHECKPOINT.md, empirical_execution/phase10/README.md, empirical_execution/phase10/REMAINING_TASKS.md, and empirical_execution/phase6/COMPLETION_LEDGER.md, then inspect the relevant code and result files before acting. Preserve the distinction between exact theory, natural-preview engineering evidence, and the unstarted primary semantic study. I now run the empirical program on my own local machine and send results back. Read local_run/START_HERE.md, LOCAL_LLM_BRIEF.md, EMPIRICAL_PROGRAM.md and RETURN_RESULTS.md. Do not start paid/cloud compute or contact annotators without my instruction. Continue the highest-value executable work, keep me informed, and save all project progress back to this repository with an updated handoff. Do not fabricate missing corpus provenance, semantic embeddings, or human ratings.
 
 ## User objective and preferences
 
@@ -17,7 +20,7 @@ This is a project handoff reconstructed from the available conversation and the 
 - Working title: **Unlearning What Was Never Trained: Counterfactual Repair of Semantic Data Curation**. Publication goal is ACL 2027; an early user message contained the typo “ACL 207.”
 - The user requested several deep theory/algorithm passes, a strong natural-data empirical program, then implementation and memory-algorithm improvements. They prefer completing substantive work over repeatedly proposing the next step.
 - No synthetic empirical datasets. Small algebraic/unit-test fixtures are allowed only as clearly labeled software tests, never empirical evidence.
-- Everything is to be done here. No remote jobs were launched. No one was contacted for annotation. Historical local hardware availability in unrelated projects is not authorization to use it here.
+- Execution ownership changed on 5 October 2026: the user will run empirical work locally and report results back. This supersedes the earlier everything-here requirement. No remote jobs were launched and no one was contacted for annotation. Do not infer hardware or compute authorization from unrelated projects.
 - The latest instruction authorizes pushing **all project files and full resumable context** to this exact repository, so loss of a chat should not lose the work.
 - Do not promise that a paper is “reviewer proof.” State actual strengths, failures, proof assumptions, missing inputs and limits candidly.
 
@@ -31,7 +34,18 @@ It need not equal deleting F from the previously selected set and updating that 
 
 The main fixed-curator contract eventually became **global earlier-raw-neighbor suppression** with frozen representations and priorities. It is not greedy suppression against selected neighbors and not connected-component representative selection. Full corpus-fitted SemDeDup refitting is a separate experimental branch. The source theory and handoff specify the finite deletion horizon, output/access model, eligibility and memory bounds.
 
-## Latest continuation rule
+## Local handoff continuation rule — 5 October 2026
+
+All code, scientific context, exact registered allocations and reporting instructions are preserved in Git.
+`local_run/EXPERIMENT_MATRIX.json` binds 43 core groups and 21 recipes to the released registry: 16,912 core jobs plus 4,420 extensions.
+`local_run/INPUTS_AND_PREPARATION.md` specifies actual source/model requirements and human stages.
+`local_run/EXECUTION.md` gives the frozen CLI routes and discloses manual observation/review/statistical dossier preparation.
+`local_run/run_local.py` only orchestrates those routes; it never grants scientific approval.
+`local_run/collect_results.py` exports an explicitly reviewed report and optional complete redacted dispatch accounting.
+The study is not a fully unattended one-command run. Missing historical archives, unqualified semantic packages, human collection, source/cache replay, actual resource observations, accountable reviews and pre-outcome analysis choices must be handled honestly.
+No new primary observations or human ratings were generated during this handoff.
+
+## Earlier continuation rules (scientific scope remains valid)
 
 Phase 6 supersedes the software gaps listed in earlier sections.
 Do not restart those completed implementations.

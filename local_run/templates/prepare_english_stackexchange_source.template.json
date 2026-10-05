@@ -1,0 +1,28 @@
+{
+  "dataset_id": "english_stackexchange",
+  "prepared": {
+    "records": "../prepared/english_stackexchange/a01/population/records.jsonl",
+    "audit": "../prepared/english_stackexchange/a01/population/audit.json",
+    "target": 10000
+  },
+  "caches": {
+    "e5": {
+      "directory": "../prepared/english_stackexchange/a01/e5_cache",
+      "assets": "../models/e5/assets.json",
+      "model_dir": "../models/e5/model",
+      "tokenizer_dir": "../models/e5/tokenizer"
+    }
+  },
+  "adapter": {
+    "directory": "../prepared/english_stackexchange/a01/adapter",
+    "inputs": {
+      "posts": "english_stackexchange/Posts.xml",
+      "links": "english_stackexchange/PostLinks.xml"
+    },
+    "kwargs": {
+      "dataset_id": "english_stackexchange",
+      "archive_sha256": "REQUIRED_ACTUAL_CORRECTED_APRIL_2024_ARCHIVE_SHA256",
+      "archive_release": "REQUIRED_REVIEWED_CORRECTED_APRIL_2024_RELEASE_ID"
+    }
+  }
+}

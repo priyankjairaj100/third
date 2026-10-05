@@ -1,0 +1,11 @@
+{
+  "schema": "ccu-local-launch-1",
+  "run_id": "qualify-resource_v1",
+  "evidence_role": "development",
+  "route": "qualify-resource",
+  "arguments": {
+    "request": "local_workspace/candidates/civil_primary10000_v1/resource_request.json",
+    "out": "local_workspace/candidates/civil_primary10000_v1/resource_qualification_v1"
+  },
+  "dependencies": []
+}

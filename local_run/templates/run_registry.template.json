@@ -1,0 +1,10 @@
+{
+  "schema": "ccu-local-launch-1",
+  "run_id": "registry_v1",
+  "evidence_role": "preparation",
+  "route": "registry",
+  "arguments": {
+    "out": "local_workspace/prepared/registry_v1"
+  },
+  "dependencies": []
+}

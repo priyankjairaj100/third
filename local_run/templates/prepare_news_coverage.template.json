@@ -1,0 +1,157 @@
+{
+  "schema": "ccu-news-calendar-coverage-1",
+  "input_file_sha256": "REQUIRED_ACTUAL_EXPORT_RECORDS_JSONL_SHA256",
+  "completeness_unit": "all_records_in_pinned_extraction_for_recorded_month",
+  "evidence": [
+    {
+      "path": "REQUIRED_LOCAL_ACQUISITION_AND_COVERAGE_EVIDENCE",
+      "sha256": "REQUIRED_ACTUAL_EVIDENCE_FILE_SHA256"
+    }
+  ],
+  "months": {
+    "2017-01": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2017-02": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2017-03": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2017-04": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2017-05": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2017-06": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2017-07": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2017-08": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2017-09": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2017-10": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2017-11": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2017-12": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2018-01": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2018-02": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2018-03": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2018-04": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2018-05": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2018-06": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2018-07": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2018-08": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2018-09": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2018-10": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2018-11": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2018-12": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2019-01": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2019-02": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2019-03": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2019-04": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2019-05": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2019-06": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2019-07": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2019-08": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2019-09": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2019-10": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2019-11": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    },
+    "2019-12": {
+      "status": "unavailable",
+      "basis": "REQUIRED: inspect the original extraction and evidence; no coverage review has occurred."
+    }
+  }
+}

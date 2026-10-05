@@ -1,0 +1,65 @@
+{
+  "schema": "ccu-local-handoff-todo-1",
+  "date": "2026-10-05",
+  "execution_owner": "user_local_machine",
+  "primary_semantic_jobs_executed_at_handoff": 0,
+  "actual_human_ratings_at_handoff": 0,
+  "tasks": [
+    {
+      "id": "handoff",
+      "status": "completed",
+      "deliverable": "START_HERE.md; LOCAL_LLM_BRIEF.md; exact matrix/program; preparation/execution/reporting tools"
+    },
+    {
+      "id": "inventory",
+      "status": "pending_local",
+      "action": "Verify backup, inventory actual machine and runtime, preserve resolved packages and constraints."
+    },
+    {
+      "id": "inputs",
+      "status": "pending_local",
+      "action": "Acquire exact source-rich corpora and pinned model assets; preserve corrected Stack archive access gap if unresolved."
+    },
+    {
+      "id": "runtime_and_replay",
+      "status": "pending_local",
+      "action": "Qualify actual CPU FP32 semantic runtime and authentic full-population/cache replay; measure feasibility."
+    },
+    {
+      "id": "human_calibration",
+      "status": "pending_genuine_collection",
+      "action": "Five registered corpus/encoder selection-validation pairs, genuine independent responses, exact quality gates."
+    },
+    {
+      "id": "development",
+      "status": "pending_local",
+      "action": "Predeclare disjoint development scope, actual family resource observations, correctness and precision diagnostics."
+    },
+    {
+      "id": "analysis_lock",
+      "status": "pending_preoutcome",
+      "action": "Lock estimand identities, independent sampling units, and any justified directional test; do not invent p-values after effects."
+    },
+    {
+      "id": "owners_and_review",
+      "status": "pending_local",
+      "action": "Author exact observation/owner/statistical manifests from genuine evidence and obtain accountable reviews."
+    },
+    {
+      "id": "confirmatory",
+      "status": "pending_local",
+      "action": "Execute full canonical 21332-job accounting with accepted available owners, retaining failures/unavailable jobs."
+    },
+    {
+      "id": "analysis_and_return",
+      "status": "pending_local",
+      "action": "Bind final dispatch, run registered statistics/human/extensions, package complete honest report."
+    },
+    {
+      "id": "paper_synthesis",
+      "status": "pending_actual_results",
+      "action": "Research assistant audits returned evidence, updates defensible claims, and prepares paper/reproducibility release."
+    }
+  ],
+  "automatic_unattended_completion_claim": false
+}

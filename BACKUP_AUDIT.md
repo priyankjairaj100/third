@@ -212,3 +212,11 @@ The complete backup manifest records staged project artifacts and checksums.
 No original corpus, semantic encoder cache, genuine judgment, or primary experiment was added.
 No new News bodies, credentials, or unrelated account material belong in this release.
 The theorem concerns conditional private information, not total physical memory or natural task value.
+
+## Local empirical handoff supplement — 5 October 2026
+
+The user moved empirical execution to their own machine. The new `local_run/` package preserves exact scientific allocations, preparation/execution instructions, a local-agent brief, source-bound launch templates, a report exporter and independent software review. Root context/status files now record this ownership change. Phases 3–10 remain frozen. No new primary input bytes, model weights, human responses or semantic results are included.
+
+The private `/local_workspace/` and local virtual environments are excluded. Return reports are private until reviewed; the collector never automatically includes raw corpora, models or individual human forms. It exports only fixed fields from a hash-bound complete final ledger, plus the user's explicitly reviewed report.
+
+This checkout was restored from the public repository, so excluded News bodies are unavailable. The new changed-file audit records that its historical article-body fingerprint check is unavailable; it does not claim that scan ran. All new authored files are guides, code, blank configuration/report templates or expressly marked software-check results. Prior published artifacts and their historical scans remain preserved. The manifest refresher now preserves earlier excluded-file provenance when those intentionally omitted bytes are absent from a restored checkout.

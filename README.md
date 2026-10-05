@@ -4,7 +4,17 @@ Research workspace for **counterfactual repair after semantic data curation**, t
 
 **Start a new chat with [RESUME_CONTEXT.md](RESUME_CONTEXT.md).** It records the current state, user constraints, evidence boundaries, and next steps. [THEORY_AND_RESULTS_HANDOFF.md](THEORY_AND_RESULTS_HANDOFF.md) provides the deeper theory and results history.
 
-## Current status — 4 October 2026
+## Local empirical execution — 5 October 2026
+
+The user now runs empirical work on their own machine and sends results back here.
+Start with **[local_run/START_HERE.md](local_run/START_HERE.md)** and give the local LLM **[LOCAL_LLM_BRIEF.md](local_run/LOCAL_LLM_BRIEF.md)**.
+The **[exact empirical program](local_run/EMPIRICAL_PROGRAM.md)** covers all 21,332 registered jobs, preparation/human gates, statistics and reporting.
+Use the [execution guide](local_run/EXECUTION.md) and [results-return workflow](local_run/RETURN_RESULTS.md).
+This changes execution ownership, not the scientific protocol or frozen implementations.
+Original corpora, model assets and genuine human responses are still required locally.
+No primary experiments were run while preparing this handoff.
+
+## Scientific status
 
 Phase 10 proves finite-format memory bounds and implements exact sequential repair on the constructed family.
 Read its [checkpoint](empirical_execution/phase10/CHECKPOINT.md) for verified scope.
@@ -50,6 +60,7 @@ The original protocol's narrative resolves omissions in the compact JSON. Later 
 
 | Path | Contents |
 | --- | --- |
+| `local_run/` | Local-machine handoff, exact experiment matrix, preparation/execution guides, launcher, report exporter and independent review |
 | Root `*theory*`, `round2_*`, `round3_*` | Original theory development, verification scripts, and successive qualifications |
 | Root `empirical_*.md` | Detailed empirical design, statistical and reviewer-oriented planning |
 | `output/pdf/` | Theory, empirical protocol, execution, memory, strict mode, Phase 2 and Phase 3 reports; available LaTeX sources |

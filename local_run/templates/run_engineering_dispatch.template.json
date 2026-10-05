@@ -1,0 +1,14 @@
+{
+  "schema": "ccu-local-launch-1",
+  "run_id": "engineering-dispatch_v1",
+  "evidence_role": "engineering",
+  "route": "engineering-dispatch",
+  "arguments": {
+    "registry": "local_workspace/prepared/registry_v1/registry.json",
+    "jobs": "local_workspace/prepared/registry_v1/jobs.jsonl.gz",
+    "bundles": "local_workspace/development/engineering_v1/bundles.json",
+    "policy": "local_workspace/development/engineering_v1/policy.json",
+    "out": "local_workspace/runs/engineering_v1"
+  },
+  "dependencies": []
+}

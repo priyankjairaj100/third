@@ -1,0 +1,18 @@
+{
+  "schema": "ccu-local-launch-1",
+  "run_id": "execute_v1",
+  "evidence_role": "confirmatory",
+  "route": "execute",
+  "arguments": {
+    "plan": "local_workspace/plans/confirmation_v1/plan.json",
+    "out": "local_workspace/runs/confirmation_v1"
+  },
+  "dependencies": [
+    {
+      "path": "local_workspace/plans/confirmation_v1/receipt.json",
+      "sha256": "REPLACE_WITH_ACTUAL_RECEIPT_SHA256",
+      "pointer": "/status",
+      "equals": "routing_plan_ready"
+    }
+  ]
+}

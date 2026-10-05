@@ -1,0 +1,13 @@
+{
+  "schema": "ccu-local-launch-1",
+  "run_id": "calibration-pack_v1",
+  "evidence_role": "preparation",
+  "route": "calibration-pack",
+  "arguments": {
+    "dataset": "civil_comments",
+    "encoder": "e5",
+    "dossier": "local_workspace/calibration/civil_comments/e5/a01/dossier/dossier.json",
+    "out": "local_workspace/calibration/civil_comments/e5/a01/selection"
+  },
+  "dependencies": []
+}

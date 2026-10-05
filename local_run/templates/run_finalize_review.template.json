@@ -1,0 +1,11 @@
+{
+  "schema": "ccu-local-launch-1",
+  "run_id": "finalize-review_v1",
+  "evidence_role": "preparation",
+  "route": "finalize-review",
+  "arguments": {
+    "candidate": "local_workspace/candidates/civil_primary10000_v1/review_candidate.phase9.json",
+    "review": "local_workspace/candidates/civil_primary10000_v1/external_review.phase9.json"
+  },
+  "dependencies": []
+}

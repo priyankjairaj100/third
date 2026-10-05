@@ -1,0 +1,28 @@
+{
+  "dataset_id": "askubuntu",
+  "prepared": {
+    "records": "../prepared/askubuntu/a01/population/records.jsonl",
+    "audit": "../prepared/askubuntu/a01/population/audit.json",
+    "target": 10000
+  },
+  "caches": {
+    "e5": {
+      "directory": "../prepared/askubuntu/a01/e5_cache",
+      "assets": "../models/e5/assets.json",
+      "model_dir": "../models/e5/model",
+      "tokenizer_dir": "../models/e5/tokenizer"
+    }
+  },
+  "adapter": {
+    "directory": "../prepared/askubuntu/a01/adapter",
+    "inputs": {
+      "posts": "askubuntu/Posts.xml",
+      "links": "askubuntu/PostLinks.xml"
+    },
+    "kwargs": {
+      "dataset_id": "askubuntu",
+      "archive_sha256": "REQUIRED_ACTUAL_CORRECTED_APRIL_2024_ARCHIVE_SHA256",
+      "archive_release": "REQUIRED_REVIEWED_CORRECTED_APRIL_2024_RELEASE_ID"
+    }
+  }
+}

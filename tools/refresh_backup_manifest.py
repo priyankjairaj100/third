@@ -21,11 +21,16 @@ def main():
     paths = sorted(p for p in raw.decode().split("\0") if p and p != TARGET.name)
     files = [{"path": p, "bytes": (ROOT / p).stat().st_size,
               "sha256": checksum(ROOT / p)} for p in paths]
-    excluded = []
+    # Preserve prior exclusion provenance when restoring from a public clone.
+    # Those bytes are deliberately absent; absence must not erase their hashes.
+    prior = json.loads(TARGET.read_text()) if TARGET.exists() else {}
+    excluded_by_path = {entry['path']: entry for entry in prior.get('excluded_input_files', [])}
     for path in sorted((ROOT / "empirical_execution/data").glob("cc_news*")):
         if path.is_file():
-            excluded.append({"path": str(path.relative_to(ROOT)), "bytes": path.stat().st_size,
-                "sha256": checksum(path), "reason": "News body redistribution excluded by project packaging policy"})
+            relative = str(path.relative_to(ROOT))
+            excluded_by_path[relative] = {"path": relative, "bytes": path.stat().st_size,
+                "sha256": checksum(path), "reason": "News body redistribution excluded by project packaging policy"}
+    excluded = [excluded_by_path[key] for key in sorted(excluded_by_path)]
     current_status = json.loads((ROOT / "empirical_execution/CURRENT_STATUS.json").read_text())
     result = {"schema": "ccu-project-backup-1", "checkpoint_date": current_status["date"],
         "repository": "https://github.com/priyankjairaj100/third", "branch": "main",

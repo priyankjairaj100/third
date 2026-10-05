@@ -1,0 +1,36 @@
+{
+  "checks": [
+    "actual_empty_phase9_dispatch_complete_and_no_jobs_attempted",
+    "actual_phase9_complete_ledger_export",
+    "extension_missing_group_id_supported",
+    "private_paths_and_errors_not_exported",
+    "duplicate_or_missing_canonical_job_rejected",
+    "changed_ledger_hash_rejected",
+    "inconsistent_status_counts_rejected",
+    "wrong_dispatch_schema_rejected",
+    "missing_planned_method_rejected",
+    "duplicate_planned_method_rejected",
+    "partial_report_without_dispatch_supported",
+    "deterministic_zip_for_unchanged_inputs",
+    "only_four_allowlisted_members_in_dispatch_bundle",
+    "collector_disclaims_measurement_verification",
+    "archive_members_match_manifest_hashes",
+    "existing_zip_never_overwritten",
+    "unreviewed_report_rejected"
+  ],
+  "checks_passed": 17,
+  "corpus_records_created": 0,
+  "evidence_role": "metadata_only_software_controls",
+  "human_responses_created": 0,
+  "primary_jobs_executed": 0,
+  "primary_study_started": false,
+  "schema": "ccu-local-collector-review-1",
+  "source_sha256": {
+    "empirical_execution/phase9/study_assembly.py": "8f67404e78cfd171ef39ba81db4c10d2d9046898dd9f809e350d37c181b59ffa",
+    "local_run/collect_results.py": "e9a656943be34e958c0b5e6678bc93bc2cec62a4b8ff76d38f86d3943339e265",
+    "local_run/review/check_return_bundle.py": "43a4c20e3f2af006f5dfde910c681de475bc47412367595207b83dd26ff245c1",
+    "local_run/templates/results_report.template.json": "00e91235eaf65cf4fafb23eb121fde11e2d564585ae75cc91733651725dd595c"
+  },
+  "status": "passed",
+  "workers_executed": 0
+}

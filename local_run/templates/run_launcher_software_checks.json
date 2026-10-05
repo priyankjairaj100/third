@@ -1,0 +1,33 @@
+{
+  "schema": "ccu-local-launcher-software-check-1",
+  "status": "passed",
+  "check_count": 24,
+  "checks": [
+    "allowlisted_registry",
+    "allowlisted_calibration-dossier",
+    "allowlisted_calibration-pack",
+    "allowlisted_candidate",
+    "allowlisted_prepare-resource",
+    "allowlisted_measure-resource",
+    "allowlisted_qualify-resource",
+    "allowlisted_prepare-review",
+    "allowlisted_finalize-review",
+    "allowlisted_assemble",
+    "allowlisted_execute",
+    "allowlisted_engineering-dispatch",
+    "existing_output_refused",
+    "escape_refused",
+    "unknown_argument_refused",
+    "engineering_role_upgrade_refused",
+    "real_dependency_bound",
+    "dependency_status_mismatch_refused",
+    "dependency_hash_mismatch_refused",
+    "run_id_reuse_refused",
+    "duplicate_json_refused",
+    "nan_json_refused",
+    "zero_exit_does_not_claim_scientific_pass",
+    "immutable_invocation_and_result_retained"
+  ],
+  "evidence_role": "software_only",
+  "scope": "Temporary metadata and stub subprocess routing; no empirical data or experiment execution."
+}

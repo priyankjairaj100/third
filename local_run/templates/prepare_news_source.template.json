@@ -1,0 +1,33 @@
+{
+  "dataset_id": "cc_news",
+  "prepared": {
+    "records": "../prepared/cc_news/a01/population/records.jsonl",
+    "audit": "../prepared/cc_news/a01/population/audit.json",
+    "target": 10000
+  },
+  "caches": {
+    "e5": {
+      "directory": "../prepared/cc_news/a01/e5_cache",
+      "assets": "../models/e5/assets.json",
+      "model_dir": "../models/e5/model",
+      "tokenizer_dir": "../models/e5/tokenizer"
+    }
+  },
+  "archive_export": {
+    "directory": "../prepared/cc_news/a01/export",
+    "archive_path": "cc_news/cc_news.tar.gz"
+  },
+  "adapter": {
+    "directory": "../prepared/cc_news/a01/adapter",
+    "inputs": {
+      "records": "../prepared/cc_news/a01/export/records.jsonl"
+    },
+    "kwargs": {
+      "input_format": "jsonl",
+      "input_schema": "raw",
+      "psl_path": "public_suffix_list.dat",
+      "psl_sha256": "REQUIRED_ACTUAL_PINNED_PSL_SHA256"
+    }
+  },
+  "coverage": "news_coverage.json"
+}

@@ -1,7 +1,7 @@
 {
-  "date": "2026-10-04",
+  "date": "2026-10-05",
   "scope": "current status supplement; older STATUS.json describes an earlier run",
-  "stage": "phase10_finite_format_memory_and_canonical_sequential_codec_primary_study_unstarted",
+  "stage": "local_empirical_handoff_prepared_primary_semantic_study_unstarted",
   "all_computation_local": true,
   "synthetic_empirical_data": false,
   "strict_mode_completed_previously": {
@@ -60,7 +60,7 @@
     "primary_threshold_selected": false,
     "primary_quality_gate_passed": false
   },
-  "todo_ledger": "phase10/TODO.json",
+  "todo_ledger": "../local_run/TODO.json",
   "all_research_todos_complete": false,
   "primary_semantic_study_started": false,
   "actual_human_ratings": 0,
@@ -665,5 +665,30 @@
       "sha256": "a2af092e31d767ebe992c4e63389a1bba37a4e73566d34a40fd67b45fa1fc1d1",
       "no_open_findings_within_scope": true
     }
+  },
+  "execution_ownership": "user_local_machine_from_2026_10_05; results returned to research assistant",
+  "local_handoff": {
+    "entrypoint": "../local_run/START_HERE.md",
+    "local_llm_context": "../local_run/LOCAL_LLM_BRIEF.md",
+    "program": "../local_run/EMPIRICAL_PROGRAM.md",
+    "matrix": "../local_run/EXPERIMENT_MATRIX.json",
+    "return_results": "../local_run/RETURN_RESULTS.md",
+    "registered_jobs": 21332,
+    "core_jobs": 16912,
+    "extension_jobs": 4420,
+    "new_primary_jobs_executed": 0,
+    "new_human_responses": 0,
+    "frozen_phases_preserved": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "complete_unattended_execution_claim": false,
+    "raw_corpora_models_or_human_data_in_git": false
   }
 }

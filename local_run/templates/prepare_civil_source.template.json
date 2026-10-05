@@ -1,0 +1,36 @@
+{
+  "dataset_id": "civil_comments",
+  "prepared": {
+    "records": "../prepared/civil_comments/a01/population/records.jsonl",
+    "audit": "../prepared/civil_comments/a01/population/audit.json",
+    "target": 10000
+  },
+  "caches": {
+    "e5": {
+      "directory": "../prepared/civil_comments/a01/e5_cache",
+      "assets": "../models/e5/assets.json",
+      "model_dir": "../models/e5/model",
+      "tokenizer_dir": "../models/e5/tokenizer"
+    },
+    "mpnet": {
+      "directory": "../prepared/civil_comments/a01/mpnet_cache",
+      "assets": "../models/mpnet/assets.json",
+      "model_dir": "../models/mpnet/model",
+      "tokenizer_dir": "../models/mpnet/tokenizer"
+    }
+  },
+  "archive_export": {
+    "directory": "../prepared/civil_comments/a01/export",
+    "archive_path": "civil_comments/civil_comments_v1.2.zip"
+  },
+  "adapter": {
+    "directory": "../prepared/civil_comments/a01/adapter",
+    "inputs": {
+      "records": "../prepared/civil_comments/a01/export/records.jsonl"
+    },
+    "kwargs": {
+      "input_format": "jsonl",
+      "input_schema": "tfds_1_2_4"
+    }
+  }
+}

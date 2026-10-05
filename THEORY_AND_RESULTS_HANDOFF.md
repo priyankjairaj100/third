@@ -1,6 +1,6 @@
 # Counterfactual curation: theory and results handoff
 
-Snapshot: 4 October 2026. Intended venue: ACL 2027. Working paper name: **Unlearning What Was Never Trained**. This is the third research direction in the originating research agenda; it is not the supervision-source project or the calibration-quantization project.
+Snapshot: 5 October 2026. Intended venue: ACL 2027. Working paper name: **Unlearning What Was Never Trained**. This is the third research direction in the originating research agenda; it is not the supervision-source project or the calibration-quantization project.
 
 ## Read this first
 
@@ -8,7 +8,7 @@ The project has a developed fixed-curator theory, locally implemented repair alg
 
 `empirical_execution/CURRENT_STATUS.json` is the machine-readable current status. Older `empirical_execution/STATUS.json` and phase-specific reports are historical, not competing current status. Read `empirical_execution/phase10/CHECKPOINT.md` and its `REMAINING_TASKS.md` for the current inventory. Phase 9 retains current experiment assembly. Earlier phase-specific TODO files are historical. The frozen phase-3 workflow remains a dependency. This handoff is a checkpoint, not a background-run promise.
 
-The user has repeatedly requested that all computation be done here, that synthetic empirical datasets be deferred, that weaknesses be solved algorithmically rather than defended, and that actual work continue instead of receiving another plan. The new repository instruction is to preserve all project files and enough context to resume in another chat. Do not substitute generated labels, fake provenance, lexical hashing described as semantic embeddings, or additional repetitions of the small preview for the missing primary study.
+The user has requested natural empirical data, algorithmic solutions to weaknesses, substantive progress and complete repository context. On 5 October 2026 they explicitly moved empirical execution to their local machine and will report results back; that supersedes the earlier instruction to run all computation in the chat workspace. The complete local execution handoff is `local_run/START_HERE.md`, with `EMPIRICAL_PROGRAM.md`, `INPUTS_AND_PREPARATION.md`, `EXECUTION.md` and `RETURN_RESULTS.md`. The handoff introduces no new empirical claim and changes no frozen scientific contract. Do not substitute generated labels, fake provenance, lexical hashing described as semantic embeddings, or additional repetitions of the small preview for the missing primary study.
 
 ## Authority and project evolution
 

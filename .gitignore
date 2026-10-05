@@ -57,3 +57,8 @@ empirical_execution/data/cc_news_preview_*_raw.json
 # Future private original inputs and human forms require separate publication review.
 /local_inputs/
 /local_outputs/
+
+# User-local empirical campaign: private corpora, models, annotations and outputs.
+/local_workspace/
+/.venv/
+/venv/

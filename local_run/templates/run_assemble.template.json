@@ -1,0 +1,11 @@
+{
+  "schema": "ccu-local-launch-1",
+  "run_id": "assemble_v1",
+  "evidence_role": "confirmatory",
+  "route": "assemble",
+  "arguments": {
+    "config": "local_workspace/inputs/study_owners_v1.json",
+    "out": "local_workspace/plans/confirmation_v1"
+  },
+  "dependencies": []
+}

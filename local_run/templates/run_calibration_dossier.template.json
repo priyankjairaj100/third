@@ -1,0 +1,12 @@
+{
+  "schema": "ccu-local-launch-1",
+  "run_id": "calibration-dossier_v1",
+  "evidence_role": "preparation",
+  "route": "calibration-dossier",
+  "arguments": {
+    "source-spec": "local_workspace/inputs/civil_source.json",
+    "encoder": "e5",
+    "out": "local_workspace/calibration/civil_comments/e5/a01/dossier"
+  },
+  "dependencies": []
+}
