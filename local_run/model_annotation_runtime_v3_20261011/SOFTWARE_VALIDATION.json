@@ -1,0 +1,11 @@
+{
+  "schema": "third-judge-runtime-software-validation-v3",
+  "passed": true,
+  "test_count": 28,
+  "command": "python -m unittest discover -s local_run/model_annotation_runtime_v3_20261011 -p test_runner.py",
+  "scope": "Actual LMFE 0.11.3 grammar and token-enforcer tests; mocked runner schedule, generation boundary, no-retry/no-fallback, and fatal outcome preservation. No CUDA evidence.",
+  "driver_sha256": "147d4becc66e10c7cedc6dd69e3e74cbc0862342d530668622b5253f22ae3467",
+  "test_source_sha256": "5aed27d0d9811374e51cab23099954ba5deb2489e757f4dd638e66e9701aaa40",
+  "confirmed_gpu_execution": false,
+  "human_responses_created": 0
+}
