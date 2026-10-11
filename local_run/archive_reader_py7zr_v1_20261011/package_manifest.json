@@ -1,0 +1,29 @@
+{
+  "executable_files": [
+    "archive_reader.py"
+  ],
+  "files": {
+    "README.txt": {
+      "bytes": 3506,
+      "sha256": "d2722dc64a913f6fccc54d5dc0a8505083e9288682b5b8ba38524e65232c6577"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 7559,
+      "sha256": "3b7f5a408ed4ac7e074c8c2b8bfbd5ec9b3767ffba188c2d0634c6f45657201d"
+    },
+    "archive_reader.py": {
+      "bytes": 6477,
+      "sha256": "7c0cc68d41dc744c366e1332fe36d587b4696332748c0d6694232d7e22bcd0cd"
+    },
+    "requirements.txt": {
+      "bytes": 13,
+      "sha256": "fb2b54afebe640f9e24a17c006df69a6554732da3396f3ecc8140eb4214d8e2b"
+    },
+    "test_reader.py": {
+      "bytes": 8559,
+      "sha256": "f1cb6c5cd4258e4c2be192ff563749c4268aa7d19ec2e8ba952fc9c718eea1bc"
+    }
+  },
+  "schema": "third-archive-reader-package-manifest-v1",
+  "self_excluded": "package_manifest.json"
+}

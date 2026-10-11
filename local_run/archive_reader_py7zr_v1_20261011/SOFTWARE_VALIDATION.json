@@ -1,0 +1,150 @@
+{
+  "cluster_execution_performed": false,
+  "command": [
+    "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/archive-reader-testenv/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_run/archive_reader_py7zr_v1_20261011",
+    "-p",
+    "test_reader.py",
+    "-q"
+  ],
+  "dependency_versions": {
+    "brotli": "1.2.0",
+    "inflate64": "1.0.4",
+    "multivolumefile": "0.2.3",
+    "psutil": "7.2.2",
+    "py7zr": "1.1.3",
+    "pybcj": "1.0.8",
+    "pycryptodomex": "3.24.0",
+    "pyppmd": "1.3.1",
+    "texttable": "1.7.0"
+  },
+  "evidence_role": "local_tiny_software_archives_only",
+  "frozen_source_audit_modified": false,
+  "historical_extraction_identity_proven": false,
+  "independent_read_only_review": "No remaining implementation blocker; independent prior10-test run passed after empty-member fix",
+  "natural_source_audit_executed": false,
+  "publisher_authenticity_proven": false,
+  "recorded_at": "2026-10-11T15:04:43.224844+00:00",
+  "runtime": {
+    "adapter": {
+      "bytes": 6477,
+      "path": "/Users/priyankjairaj/Downloads/ACL/Three/local_run/archive_reader_py7zr_v1_20261011/archive_reader.py",
+      "sha256": "7c0cc68d41dc744c366e1332fe36d587b4696332748c0d6694232d7e22bcd0cd"
+    },
+    "executable": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/archive-reader-testenv/bin/python",
+    "module_and_distribution_files": [
+      {
+        "bytes": 17472,
+        "path": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/archive-reader-testenv/lib/python3.14/site-packages/py7zr-1.1.3.dist-info/METADATA",
+        "sha256": "65afc9424f32fabaa69478e7c1afdec14f0ccf23569a10383306b346a62af908"
+      },
+      {
+        "bytes": 2487,
+        "path": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/archive-reader-testenv/lib/python3.14/site-packages/py7zr-1.1.3.dist-info/RECORD",
+        "sha256": "209b83192f096c805e0899b68f11ae3016a2fea5c131c5c5855916bbc8e03d67"
+      },
+      {
+        "bytes": 91,
+        "path": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/archive-reader-testenv/lib/python3.14/site-packages/py7zr-1.1.3.dist-info/WHEEL",
+        "sha256": "69e6228a0d35958183cc1812f07c565ce837b95eb51bd8a33acba9fa4f68d6c9"
+      },
+      {
+        "bytes": 2470,
+        "path": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/archive-reader-testenv/lib/python3.14/site-packages/py7zr/__init__.py",
+        "sha256": "7f5e13cc4210e98dab131f708486a1e928ba2b6a69366acbd8c191662d22f2a0"
+      },
+      {
+        "bytes": 988,
+        "path": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/archive-reader-testenv/lib/python3.14/site-packages/py7zr/__main__.py",
+        "sha256": "1662903acbad5392ec0a12f594451cb1a33321f2643ecaefef2456f537eaaac7"
+      },
+      {
+        "bytes": 42921,
+        "path": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/archive-reader-testenv/lib/python3.14/site-packages/py7zr/archiveinfo.py",
+        "sha256": "180ef55237c6b89b5cdc89dc0b0342cf0e8eaee052e6eb660c278c5748d40b9e"
+      },
+      {
+        "bytes": 2409,
+        "path": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/archive-reader-testenv/lib/python3.14/site-packages/py7zr/callbacks.py",
+        "sha256": "f3d2ad29a8d0e174f89433e6f33e39d1be7133c747f5a6e5b57ae9ee9b64c298"
+      },
+      {
+        "bytes": 18024,
+        "path": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/archive-reader-testenv/lib/python3.14/site-packages/py7zr/cli.py",
+        "sha256": "6d4227c75ff9562e8ac6f6833bdad01b2635f41304b5f46c343dd88bd9cc767a"
+      },
+      {
+        "bytes": 45649,
+        "path": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/archive-reader-testenv/lib/python3.14/site-packages/py7zr/compressor.py",
+        "sha256": "bc76fa60d678811590798f0c1a60c0f49347bfbab6a8814e8261b800dfdaea13"
+      },
+      {
+        "bytes": 2484,
+        "path": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/archive-reader-testenv/lib/python3.14/site-packages/py7zr/exceptions.py",
+        "sha256": "464cee10faa042bf78d765269102e805011c135eaf7a151d4e9ef976073cb4b5"
+      },
+      {
+        "bytes": 13528,
+        "path": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/archive-reader-testenv/lib/python3.14/site-packages/py7zr/helpers.py",
+        "sha256": "93dce006668763015a9980d33ee13c75772b5aa1d15e282fb1bb454c63e66ff6"
+      },
+      {
+        "bytes": 7962,
+        "path": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/archive-reader-testenv/lib/python3.14/site-packages/py7zr/io.py",
+        "sha256": "60cdf618e000e3ddfcb740ca2c4e9ae52ce8586e1dcf825e61363ed2459d1151"
+      },
+      {
+        "bytes": 3512,
+        "path": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/archive-reader-testenv/lib/python3.14/site-packages/py7zr/member.py",
+        "sha256": "575417a6cdf06b2cc19a53e72545e52570eb5a566c1d11ec132d1c27efeb3757"
+      },
+      {
+        "bytes": 8208,
+        "path": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/archive-reader-testenv/lib/python3.14/site-packages/py7zr/properties.py",
+        "sha256": "fe783f144aff05f8a3b937093760024e39b914ddd95b1ddb9f1644156960eb28"
+      },
+      {
+        "bytes": 63826,
+        "path": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/archive-reader-testenv/lib/python3.14/site-packages/py7zr/py7zr.py",
+        "sha256": "7e03d3b254bc406768b71183c8fbb5f095b3f4b6017382f6131df28297660c1c"
+      },
+      {
+        "bytes": 22,
+        "path": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/archive-reader-testenv/lib/python3.14/site-packages/py7zr/version.py",
+        "sha256": "bbd13126aa0cbf77d073c5a62d3c38236167428eaee3146b05ce832f2e86d481"
+      },
+      {
+        "bytes": 8311,
+        "path": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/archive-reader-testenv/lib/python3.14/site-packages/py7zr/win32compat.py",
+        "sha256": "b60ae59c02b79084052858a02f5e6a59f8e8c1d1dae24247357be78f360ad0d7"
+      }
+    ],
+    "py7zr_version": "1.1.3",
+    "python": "3.14.2 (main, Jan  9 2026, 10:16:41) [Clang 14.0.0 (clang-1400.0.29.202)]",
+    "schema": "third-archive-reader-py7zr-runtime-v1",
+    "scope": "Current local reader identity; no publisher authentication or historical execution claim"
+  },
+  "schema": "third-archive-reader-software-validation-v1",
+  "test_exit_code": 0,
+  "test_seconds": 1.305339082959108,
+  "test_summary": "----------------------------------------------------------------------\nRan 11 tests in 1.182s\n\nOK",
+  "tested_cases": [
+    "COPY and default compressed solid archives",
+    "both exact allowlisted members and binary payload",
+    "empty member with one-or-two terminal notifications",
+    "duplicate target and unsupported CLI refusal",
+    "CRC corruption and truncation failures",
+    "no extraction files and unchanged archive bytes",
+    "terminal-seek sealing and backward-seek refusal",
+    "partial stdout writes completed",
+    "Python diagnostics separated from byte stream",
+    "actual pinned module and distribution bindings"
+  ],
+  "tests_discovered": 11,
+  "tests_passed": 11,
+  "tests_skipped": 0
+}
