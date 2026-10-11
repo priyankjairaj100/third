@@ -1,0 +1,25 @@
+{
+  "schema": "third-annotation-plan-software-validation-v1",
+  "passed": true,
+  "scope": "JSON schemas and planning arithmetic only; no inference, sampling or annotation runner tested",
+  "checks": [
+    "model_judgment.schema.json: schema_valid",
+    "model_response.schema.json: schema_valid",
+    "single_author_response.schema.json: schema_valid",
+    "valid_software_judgment_shape",
+    "reject_model_generated_human_provenance",
+    "reject_unknown_category",
+    "valid_model_envelope_shape",
+    "reject_model_as_completed_human",
+    "reject_error_with_substantive_judgment",
+    "preserve_unavailable_model_state",
+    "valid_software_human_shape_only",
+    "reject_single_author_as_v1_three_rater_completion",
+    "reject_completed_without_category",
+    "preserve_human_skip_shape",
+    "plan_budget_and_zero_execution_accounting"
+  ],
+  "genuine_human_responses": 0,
+  "model_inference_calls": 0,
+  "fixtures_saved_as_empirical_responses": false
+}

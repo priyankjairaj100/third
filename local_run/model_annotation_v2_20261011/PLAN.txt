@@ -1,0 +1,196 @@
+THIRD — LOCAL LLM ANNOTATION WITH A SMALL HUMAN AUDIT
+Prospective plan v2, 11 October 2026. Planning only; no new labels or jobs executed.
+
+RECOMMENDATION
+Use local model annotation, a blinded 50–100-pair audit by the project author,
+and original dataset task outcomes. Start with one cell: AskUbuntu/E5.
+Keep the original three-human protocol as v1; this v2 produces model-assisted,
+single-reviewer-audited evidence. It does not complete v1 human gates.
+The author has offered 50–100 genuine reviews; none have been collected yet.
+
+WHY THIS SCOPE
+Concentrating the small human budget on one corpus gives interpretable evidence.
+Do not spread 100 reviews across all five required cells and claim each validated.
+AskUbuntu has native duplicate links and original tags useful for independent
+checks. News follows only after the first cell is assessed and its own sources,
+cache and annotation frame are ready. Civil/source and WCEP/schema issues persist.
+The exact numerical repair and downstream task claims can advance in an explicitly
+versioned model-assessed study; its semantic interpretation retains these limits.
+
+WHAT IS ALREADY AVAILABLE
+A100 80GB Slurm execution works. E5/MPNet passed bounded CPU FP32 replay, but
+complete-population frozen CPU embedding/cache qualification remains unfinished.
+Qwen/Qwen2.5-7B-Instruct revision a09a35458c702b33eeacc393d103063234e8bc28 is cached;
+its four weight shards are present. Full shard hashing and an actual judge smoke
+run are still required. This is a low-cost starting model, not an established
+reliable semantic annotator for these data.
+Old annotation packs use GPU engineering caches. Centered AskUbuntu has 420 pairs,
+English has 295, and News has 408; they do not become primary CPU calibration packs.
+Earlier single-model labels are exposed pilot history: raw Ask 0/90, English 0/91,
+News 0/120 positives; centered Ask 1/60 and English 7/55 positives. These are model
+opinions, not ground truth. The English threshold claim used only four support
+pairs and has no independent validation. Keep all of this history visible.
+
+MODEL CHOICE AND EXECUTION
+1. Use the cached Qwen2.5-7B for a 40-pair technical pilot, drawing real calibration
+   pairs from an explicitly engineering-only pack. No human audit budget is used.
+   Test schema output, full-text coverage, time, peak GPU/RSS memory, and pair order.
+2. Add a separately queried model from another family for the substantive panel.
+   Resource-feasible candidate: mistralai/Mistral-Nemo-Instruct-2407,
+   revision 04d8a90549d23fc6bd7f642064003592df51e9b3, Apache 2, ungated,
+   12,247,782,400 BF16 parameters (about 24.5GB of tensor bytes, before overhead).
+   This is a diversity candidate, not a demonstrated best judge. It is not cached
+   or downloaded by this plan. Recheck quota and reserve staging/output headroom.
+3. A stronger 24–32B judge is another candidate if local storage permits. Qwen3-32B
+   requires about 64GB of BF16 weights before KV/workspace. A100 fit at a chosen
+   context is an estimate requiring a measured pilot; disk quota is a separate
+   constraint. Another Qwen model supplies a scale check, not cross-family diversity.
+4. Freeze actual model/tokenizer revisions, full file hashes, chat templates,
+   judge prompt, dtype/quantization, generation config and runtime before selection.
+   Use separately pinned judge runtime; leave encoder environments unchanged.
+   Baseline Qwen2.5/Mistral plan: BF16 GPU, do_sample=false, one pair/request,
+   max_new_tokens=384, full tokenized input budget<=16,384 including output reserve.
+   If the pilot shows this cap loses documents, revise the context plan before
+   locking; never silently truncate, summarize, or omit overflow rows.
+5. Use one A100 through Slurm, explicit interpreter, private outputs, offline
+   loading after asset acquisition, and --propagate=NONE with a memory preflight.
+   No API bill, external text upload, model download, or annotation launch is
+   performed by this planning task. Wall time is measured by the pilot, not guessed.
+
+PROMPT, LABELS AND FAILURE HANDLING
+Use six categories: exact_copy, substantially_same_meaning,
+overlapping_information, merely_related, unrelated, uncertain.
+Only the first two are positive. Require a short decisive reason and distinction
+types (entity, quantity, negation, time, assertion, constraints, none, uncertain).
+Show only the two texts and fixed task definition. Hide similarity, source/method,
+prior labels, true tags, desired outcome, deletion request and model performance.
+Treat document contents as untrusted quoted data; the judge has no tools/retrieval.
+Harness-generated provenance stays outside model-generated JSON.
+Keep every model response separately. Two positive model answers define the
+conservative model-panel positive label. Binary positive/nonpositive disagreement
+and uncertainty are nonpositive for threshold selection and remain flagged.
+Different positive categories remain panel-positive and are logged as six-way
+disagreement. Define y=1 iff BOTH model calls are valid and positive; otherwise y=0. Unavailable,
+refused, overflow and invalid items contribute zero to the positive numerator
+and retain their full sampling weight in the denominator. This is not majority
+human judgment, and models are not assumed statistically independent.
+No output, invalid JSON, overflow or refusal remains a distinct unavailable state.
+Allow one logged format-only retry. Never retry until a desired semantic answer.
+Unavailable states cannot silently disappear from denominators; report missingness
+and conservative lower/upper sensitivity bounds. There is no self-confidence cutoff.
+A prespecified 10% SRS of pairs is also judged with document order reversed. Those
+calls measure position instability; they are not extra raters or extra votes.
+Do not let models see or debate one another's answers before primary labels lock.
+
+MODEL-ASSISTED CALIBRATION — NEW V2 ROLE ONLY
+First establish accepted source inputs and a fully replayed frozen CPU/E5 cache.
+The engineering pilot does not satisfy this dependency. Rebuild the pair frame
+for that exact representation; do not transfer centered/GPU thresholds to raw CPU.
+Enumerate the source-disjoint calibration population. Use 20 equal-width cosine
+bins and up to 30 SRS pairs/bin, retaining complete bin counts/inclusion weights.
+Lock v2 panel labels, then select the least strict existing grid threshold
+(0.50 through 0.99 by 0.01, plus 0.995) with weighted model-panel precision>=0.95
+and nonzero support. This is agreement with the model-defined label function.
+Independently sample up to 200 from ALL pairs above that locked threshold. Query
+fresh isolated model calls; overlap with selection remains allowed and disclosed.
+Use a separate v2 evaluator. Model validation passes only when its one-sided 95%
+exact finite-population lower bound is>=0.90 under the conservative y definition.
+Freeze pair orientation by a stable hash, per-pair seed from the plan and opaque
+pair ID, batch size 1, hardware/runtime and deterministic inference settings.
+Selection/validation use the same canonical orientation and fixed label function.
+Preserve first-pass labels; query overlapping validation pairs in fresh isolated
+calls and check category agreement against their sealed selection labels. If
+replay changes a category, report model validation unavailable due to instability;
+never replace labels, vote over repeats or keep retrying. Swapped-order calls
+remain separate diagnostics. Bounds condition on this specified fixed/potential
+model-label function and appropriate sampling, not model correctness or independent
+votes. Never use human-only ingestion APIs for these outputs.
+No passing threshold: retain a failed diagnostic result; do not turn 0.995 into
+success or choose a different representation/prompt after the validation outcome.
+A validation failure stops this v2 configuration; revisions require a new version
+and fresh evaluation data. Existing exposed pilots remain development history.
+For one full cell: <=600 selection + 200 validation pairs, two models => 1,600 base
+calls; 10% swaps add <=160. The technical pilot and transport retries are separate
+budget lines. Human 100 is not multiplied by the number of models.
+
+YOUR HUMAN AUDIT — TARGET 100, FALLBACK 50
+Target 100 total: 80 simple-random probability-audit pairs plus 20 challenge pairs.
+If only 50 are available: 40 probability-audit pairs plus 10 challenge pairs.
+Reserve all these reviews until the models, prompt, threshold, audit frame,
+sampling seed and reporting rule are sealed. Choose 100 versus 50 before the first
+human response, solely from availability. No outcome-dependent extension or early
+switch. Retain all planned units; incomplete reviews remain missing/nonpositive
+for the conservative primary bound rather than shrinking n. These are not prompt-
+training labels.
+The probability frame is ALL calibration pairs with score>the locked threshold,
+including model disagreement, nonpositive and unavailable cases. It is not merely
+the model-consensus-positive subset, existing 600/200 sampled packs, or convenient
+short documents. Log any overlap with exposed model pilots/selection; obtain
+the author's first blinded response without showing earlier model judgments.
+Sample SRS without replacement from the complete frame. Census
+if the frame is smaller; report the actual population, sample and shortfall.
+Challenge pairs are chosen separately before human answers: model disagreements,
+natural entity/number/negation/time differences, near-threshold and long inputs,
+and native linked duplicates where available. Use remaining distinct units;
+keep their counts separate from probability estimates. Do not invent documents.
+Randomize display order, opaque pair IDs and left/right orientation; hide stratum,
+model answers/explanations, similarity, true tags, algorithms and desired outcome.
+Show complete original task text; record uncertainty/skips, not forced answers.
+Save the author's original response before showing model labels or discussing it.
+No replacement of skipped/uncomfortable/difficult pairs with easier ones.
+This is one genuine reviewer. Record the author's evaluator role and the limits
+of author involvement; do not invent three people, independence or consensus.
+If no threshold passes, the primary above-threshold audit does not exist. A
+separately labelled diagnostic audit may examine the fixed engineering pair frame;
+it cannot produce a threshold-quality pass. Do not consume the review budget on
+that fallback without clearly presenting its different purpose to the author.
+
+ANALYSIS AND CLAIMS
+Report each judge and the fixed panel: six-way confusion, binary positive agreement,
+disagreement/abstention, unavailable/overflow rate, order-instability, and cost.
+On the probability audit, report the single reviewer's positive fraction among
+ALL above-threshold pairs with an exact one-sided 95% finite-population lower bound.
+Uncertain/skipped/missing is nonpositive for this conservative bound; also give
+counts and a sensitivity range. Challenge results remain descriptive and separate.
+A bound>=0.90 supports only the named single-reviewer/finite-frame claim for this
+v2 curator, conditional on this author's fixed/potential protocol outcomes and
+the sampling design. It does not quantify inter-rater or test-retest reliability,
+establish three-rater agreement, or establish latent semantic truth.
+For scale only, the large-population binomial approximation with zero nonpositive
+reviews gives lower bounds 0.9632 for 80 and 0.9278 for 40. These are planning examples,
+not observed results. Actual finite population size and observed ratings decide.
+Do not estimate global duplicate recall from an above-threshold precision sample.
+Do not fit bias corrections or choose the best judge on the same final audit and
+then report the result as untouched validation. Any such change needs fresh audit.
+Preserve the October 9 analysis lock for the original study. New v2 estimands and
+any additional comparisons/multiplicity handling need their own pre-outcome lock.
+
+BETTER OR COMPLEMENTARY ALTERNATIVES
+A. Best anchor for the paper: exact comparisons to full recomputation plus original
+   task labels, especially AskUbuntu top 20-tag prediction. These test repair and
+   task utility without new semantic annotation. They do not prove human novelty.
+B. Native AskUbuntu duplicate links: useful external positive anchors/challenge
+   cases. Missing links are unlabelled, not verified negatives. Do not leak links
+   used by preparation guards into a claimed untouched test, train a judge on
+   its own evaluation anchors, or use WCEP shared event as duplicate ground truth.
+C. Larger cross-family judges may improve annotation but require actual auditing;
+   repeated calls to one model and multi-model consensus share possible biases.
+D. Active learning is useful if the objective is improving a judge: prioritize
+   disagreement examples for training. It is inferior to SRS for estimating
+   prevalence/precision unless valid inclusion probabilities/weights are retained.
+E. Prediction-powered inference can combine abundant model predictions with real,
+   representative human labels. It is a possible later estimator, not a substitute
+   for labels, sample design, or an underpowered 50–100 budget split across domains.
+F. External crowdworkers/experts would be required to satisfy the original
+   independent-three-rater design. They are unavailable now; no one is contacted.
+
+DELIVERABLES AND STOP CONDITIONS
+Planned package: a source-bound v2 manifest, model prompt and response schema,
+separate single-human-audit schema, private model outputs/cost ledger, blinded
+human review form, and separate model/human/challenge summaries.
+This turn writes the plan/schema/prompt only. No human fields are completed.
+Before execution: verify judge assets+quota, freeze the technical pilot, validate
+annotation ingestion on software fixtures, qualify full source/cache as required,
+and seal the v2 plan before model calibration and before any human unblinding.
+If source/frame/cache is unavailable, the activity remains an engineering pilot.
+If annotation/audit fails, preserve it and report the limit instead of promoting it.

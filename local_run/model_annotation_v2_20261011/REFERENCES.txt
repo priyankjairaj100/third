@@ -1,0 +1,51 @@
+PRIMARY REFERENCES AND HOW THEY INFORM THIS PLAN
+Read 11 October 2026. Literature findings are not validation on this project.
+
+Gilardi, Alizadeh, Kubli (PNAS 2023), ChatGPT outperforms crowd workers for text-annotation tasks.
+https://pubmed.ncbi.nlm.nih.gov/37463210/
+Supports feasibility of LLM annotation on studied text-classification tasks;
+does not establish semantic-equivalence accuracy on AskUbuntu or News.
+
+Verga et al. (2024), Replacing Judges with Juries.
+https://arxiv.org/abs/2404.18796
+Their diverse model panel improved agreement on studied generation-evaluation
+benchmarks. Motivates comparing a panel with individual judges; not a guarantee.
+
+Kim et al. (ICML 2025), Correlated Errors in Large Language Models.
+https://proceedings.mlr.press/v267/kim25e.html
+Documents shared errors even across architecture/provider families. Model votes
+cannot be counted as independent humans or used to invent an effective sample size.
+
+Angelopoulos et al. (2023), Prediction-Powered Inference.
+https://arxiv.org/abs/2301.09633
+Uses real labeled data to correct model prediction bias. Could support a future
+single-author-reference estimate under an appropriate design; does not remove
+the need for labels or make a small nonrepresentative audit automatically sufficient.
+
+Abbas et al. (2023), SemDeDup.
+https://arxiv.org/abs/2303.09540
+Shows downstream performance/efficiency as substantive deduplication outcomes.
+Supports our recommendation to emphasize original-label utility and complete cost.
+
+TensorFlow Datasets, Civil Comments.
+https://www.tensorflow.org/datasets/catalog/civil_comments
+Documents existing crowd-label fractions. These support toxicity-related task
+evaluation if authentic source inputs become available; they are not pairwise gold.
+
+Qwen2.5-7B-Instruct official model card.
+https://huggingface.co/Qwen/Qwen2.5-7B-Instruct
+Documents model identity and default 32768-token configuration; longer contexts
+require separate choices. Cached local revision observed in this planning turn.
+
+Mistral-NeMo-Instruct official model card and model API.
+https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407
+https://huggingface.co/api/models/mistralai/Mistral-Nemo-Instruct-2407
+Observed revision 04d8a90549d23fc6bd7f642064003592df51e9b3, ungated, 12,247,782,400
+BF16 parameters. Apache 2 documentation and architecture motivate a feasible
+cross-family candidate, not a claim of superior annotation quality.
+
+Qwen3-32B official model card.
+https://huggingface.co/Qwen/Qwen3-32B
+A larger alternative with explicit thinking/non-thinking modes. Approximate
+BF16 tensor memory is a parameter-count estimate, not a measured serving footprint.
+Its model-specific decoding settings would require a new frozen configuration.

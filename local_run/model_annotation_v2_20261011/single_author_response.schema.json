@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "title": "Actual single-author audit response; a distinct schema from frozen v1",
+  "required": [
+    "schema",
+    "annotator_type",
+    "reviewer_role",
+    "reviewer_id",
+    "audit_assignment_id",
+    "response_status",
+    "category",
+    "skip_reason",
+    "submitted_at",
+    "v1_three_rater_gate_satisfied"
+  ],
+  "properties": {
+    "schema": {
+      "const": "third-single-author-audit-response-v2"
+    },
+    "annotator_type": {
+      "const": "human"
+    },
+    "reviewer_role": {
+      "const": "project_author"
+    },
+    "reviewer_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "audit_assignment_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "response_status": {
+      "enum": [
+        "completed",
+        "skipped"
+      ]
+    },
+    "category": {
+      "enum": [
+        "exact_copy",
+        "substantially_same_meaning",
+        "overlapping_information",
+        "merely_related",
+        "unrelated",
+        "uncertain",
+        null
+      ]
+    },
+    "skip_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "submitted_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "v1_three_rater_gate_satisfied": {
+      "const": false
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "response_status": {
+            "const": "completed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "category": {
+            "enum": [
+              "exact_copy",
+              "substantially_same_meaning",
+              "overlapping_information",
+              "merely_related",
+              "unrelated",
+              "uncertain"
+            ]
+          },
+          "skip_reason": {
+            "type": "null"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "category": {
+            "type": "null"
+          },
+          "skip_reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  ]
+}
