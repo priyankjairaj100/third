@@ -1,0 +1,31 @@
+{
+  "files": {
+    "README.md": {
+      "bytes": 5299,
+      "sha256": "3431db9a161c0dc073f2036d7c5814dc4a7fccca6a602564b08a0e9522b6046e"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 508,
+      "sha256": "e888d221d1f7d414cdc48ade3bf3a93b9f1b3be4d90e3b5f3de98547a3babd70"
+    },
+    "frozen_code.json": {
+      "bytes": 1056,
+      "sha256": "4e1046f0a9fbfef62b4c01a9ca39eac900c2663ebf4db1bffff997a29c53d18e"
+    },
+    "replay.sbatch": {
+      "bytes": 2379,
+      "sha256": "d542cffea29747486c7f54265eea4b073b86091563b449c92f88f145680050fe"
+    },
+    "replay_source.py": {
+      "bytes": 19170,
+      "sha256": "2a692a14e4650d8f36b0bba2b6a6a7c7ab21cbb8023ae1b9bdd6502f926066f9"
+    },
+    "test_replay.py": {
+      "bytes": 10640,
+      "sha256": "374220763254198f1b1568508fd4c309531d52bde659e00737d5262f33baaf7b"
+    }
+  },
+  "manifest_self_excluded": true,
+  "purpose": "prospective code binding; launch requires this manifest SHA supplied separately",
+  "schema": "third-source-replay-package-manifest-v1"
+}
