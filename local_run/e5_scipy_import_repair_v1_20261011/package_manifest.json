@@ -1,0 +1,33 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 4007,
+      "sha256": "71ac67d5bd875239809e292aee3eabb007831d2bff4476b87d21fa7198b350a0"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 1213,
+      "sha256": "201957c15eb8118abebfd3a3875de0dc8866992630b972c14a4900c46e3e84b4"
+    },
+    "expectations.json": {
+      "bytes": 2303,
+      "sha256": "fb5e7d7e9b771bb0864af75140ae0f31bf05d03e151ccaecb0dcbbfcfa5826ac"
+    },
+    "pypi_scipy_1.17.1.raw.json": {
+      "bytes": 115668,
+      "sha256": "64100ae97ba1779a5e40b650496d1714bb494c8d9733b1223d3d3e804025103d"
+    },
+    "repair.py": {
+      "bytes": 11010,
+      "sha256": "105542b69f5a43e4070a822f8552312d140dbb2073c7a3231fbe001af8f3b341"
+    },
+    "repair.sbatch": {
+      "bytes": 1669,
+      "sha256": "3f6ca78e8f501805cd89f35317701cb45f9588ed3f49552cf24dba36bfb650a0"
+    },
+    "requirements.txt": {
+      "bytes": 93,
+      "sha256": "d13c3aff453c9c1df6f54e7d4fe34266868a3db19b1810e0d77a9af856c6154a"
+    }
+  },
+  "schema": "third-e5-scipy-import-repair-package-v1"
+}

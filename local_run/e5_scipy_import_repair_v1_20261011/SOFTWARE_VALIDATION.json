@@ -1,0 +1,34 @@
+{
+  "code_bindings": {
+    "expectations.json": {
+      "bytes": 2303,
+      "sha256": "fb5e7d7e9b771bb0864af75140ae0f31bf05d03e151ccaecb0dcbbfcfa5826ac"
+    },
+    "repair.py": {
+      "bytes": 11010,
+      "sha256": "105542b69f5a43e4070a822f8552312d140dbb2073c7a3231fbe001af8f3b341"
+    },
+    "repair.sbatch": {
+      "bytes": 1669,
+      "sha256": "3f6ca78e8f501805cd89f35317701cb45f9588ed3f49552cf24dba36bfb650a0"
+    },
+    "requirements.txt": {
+      "bytes": 93,
+      "sha256": "d13c3aff453c9c1df6f54e7d4fe34266868a3db19b1810e0d77a9af856c6154a"
+    }
+  },
+  "environment_modified": false,
+  "independent_review": {
+    "concrete_blockers": [],
+    "reviewer": "handoff_audit"
+  },
+  "installer_executed": false,
+  "metadata_consistency": "Official wheel URL, filename, SHA256, bytes, non-yanked status and requirements match sealed expectations",
+  "passed": true,
+  "python_syntax": "AST parse passed",
+  "python_used_for_syntax": "3.14.2",
+  "schema": "third-e5-scipy-import-repair-software-validation-v1",
+  "scope": "Syntax, exact static metadata and independent code review only; actual installation and imports remain unexecuted here.",
+  "shell_syntax": "bash -n passed",
+  "tests_added": false
+}

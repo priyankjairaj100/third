@@ -1,0 +1,17 @@
+{
+  "schema": "third-e5-shard-qualification-preflight-failure-v1",
+  "job_id": 13366,
+  "state": "FAILED",
+  "exit_code": "2:0",
+  "elapsed_seconds": 3,
+  "stage": "preflight",
+  "error_type": "ModuleNotFoundError",
+  "error": "No module named 'scipy'",
+  "forward_passes_executed": 0,
+  "completed_children": [],
+  "decision": "Add only the missing import dependency in a separately recorded runtime amendment, then rerun into a new attempt directory. Preserve all existing numerical package versions and failed evidence.",
+  "result_sha256": "4dab02fcbff983644a0cf5d954f81e0a283c73839569c938398d10a5f8d7bf2a",
+  "core_package_sha256": "c7619b96b080500aeee439b3128e034d8138dd89657f8799a2a9a0da9f1c6312",
+  "human_reviews_used": 0,
+  "confirmatory_study_ready": false
+}

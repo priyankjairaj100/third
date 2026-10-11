@@ -1,0 +1,58 @@
+{
+  "cluster_integration_executed": false,
+  "code_bindings": {
+    "assembly.sbatch": {
+      "bytes": 1813,
+      "sha256": "324e405ff8c4de5755f3713a9a05f24f3b9b2fb0fc90b84fce76f7c0915212d4"
+    },
+    "dispatch.py": {
+      "bytes": 11076,
+      "sha256": "a3677e9182b6be389fba7a3fedfa625f94a98a9522df34b81a5b7bed721c9ada"
+    },
+    "plan.sbatch": {
+      "bytes": 1805,
+      "sha256": "a08c2f89aa24c5b9a60cac910afdf42dfb7d75cd0dd05ba0cbb31f69409484de"
+    },
+    "shard.sbatch": {
+      "bytes": 1830,
+      "sha256": "0a0050ce339cb2c80c79aa5d74abb465b56400ff68b302fd1bb926ce6c6ec3eb"
+    },
+    "test_dispatch.py": {
+      "bytes": 9505,
+      "sha256": "57caa8b7dc5d4936b078d04f74879b6eb5fd99eb6e55af724fb1bf0b356578ee"
+    }
+  },
+  "confirmatory_study_ready": false,
+  "core_package_sha256": "c7619b96b080500aeee439b3128e034d8138dd89657f8799a2a9a0da9f1c6312",
+  "full_population_cache_acceptance": false,
+  "independent_review": {
+    "concrete_blockers": [],
+    "reviewer": "source_gate_audit",
+    "tests_passed": 9,
+    "tests_skipped": 0
+  },
+  "passed": true,
+  "platform": "macOS-13.0-arm64-arm-64bit-Mach-O",
+  "python": "3.14.2",
+  "schema": "third-e5-sharded-dispatch-software-validation-v1",
+  "scope": "Synthetic launcher, hash, command, timing and failure fixtures only; no model, scheduler, network or source-data execution.",
+  "shell_syntax_passed": [
+    "plan.sbatch",
+    "shard.sbatch",
+    "assembly.sbatch"
+  ],
+  "test_and_shell_validation_seconds": 0.30251145805232227,
+  "test_command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "local_run/e5_sharded_dispatch_v1_20261011",
+    "-p",
+    "test_dispatch.py"
+  ],
+  "tests_discovered": 9,
+  "tests_passed": 9,
+  "tests_skipped": 0
+}

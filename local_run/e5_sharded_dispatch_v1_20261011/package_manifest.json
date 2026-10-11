@@ -1,0 +1,33 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 6408,
+      "sha256": "718eb688af01dd80b14a2e679a0c854430f6b208311be92f5c67d102f2688062"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 1783,
+      "sha256": "cb8940b7f63908bcb151d5065cc5cb1ec1f694332fe614e52c0d4ac227c15228"
+    },
+    "assembly.sbatch": {
+      "bytes": 1813,
+      "sha256": "324e405ff8c4de5755f3713a9a05f24f3b9b2fb0fc90b84fce76f7c0915212d4"
+    },
+    "dispatch.py": {
+      "bytes": 11076,
+      "sha256": "a3677e9182b6be389fba7a3fedfa625f94a98a9522df34b81a5b7bed721c9ada"
+    },
+    "plan.sbatch": {
+      "bytes": 1805,
+      "sha256": "a08c2f89aa24c5b9a60cac910afdf42dfb7d75cd0dd05ba0cbb31f69409484de"
+    },
+    "shard.sbatch": {
+      "bytes": 1830,
+      "sha256": "0a0050ce339cb2c80c79aa5d74abb465b56400ff68b302fd1bb926ce6c6ec3eb"
+    },
+    "test_dispatch.py": {
+      "bytes": 9505,
+      "sha256": "57caa8b7dc5d4936b078d04f74879b6eb5fd99eb6e55af724fb1bf0b356578ee"
+    }
+  },
+  "schema": "third-e5-sharded-dispatch-package-v1"
+}
