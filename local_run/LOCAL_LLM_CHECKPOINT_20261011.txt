@@ -1,7 +1,7 @@
 THIRD — EXECUTED LOCAL/CLUSTER CHECKPOINT, 11 OCTOBER 2026
 
-The local workflow and first GPU annotation runner are operational. All three
-new jobs completed successfully. The primary semantic study remains unstarted.
+The local workflow and first GPU annotation runner are operational. The GPU pilot, lineage audit,
+source replay and full token census completed successfully. The primary semantic study remains unstarted.
 
 VERIFIED TERMINAL RESULTS
 GPU pilot v5, job13353, COMPLETED0:0,26min43s on csis.cn3/A10080GB.
@@ -38,6 +38,19 @@ independently checked. This proves derivation from the supplied local bytes;
 publisher authenticity, archive completeness and attribution remain unresolved.
 No embeddings or model forwards ran in the source replay.
 
+FULL TOKEN/CHUNK CENSUS
+E5 census job13358 COMPLETED0:0,175s; child173.528s, peak RSS706,948KiB.
+All140,250 records cover61,576,539 content tokens,312,159 chunks and147,825
+within-document model batches at batch size8. Fixed padding261 tokens; total
+padded slots81,473,499. Longest record15,268 tokens/60chunks/8batches.
+First256-token-only processing would omit content from55,346 records; a single
+model window would omit content from26,906. This census used every chunk.
+The future FP32 vector payload is430,848,000bytes before headers/metadata; the
+calibration gather alone is64,499,712bytes. Both add to other working memory.
+Zero model forwards or vectors were produced. All10 copied files match remote
+hashes. Tokenization speed does not estimate encoder runtime. Complete immutable
+source/code/assets/runtime checks passed and all cache/study flags remain false.
+
 FILES AND REPRODUCIBILITY
 Repository:https://github.com/priyankjairaj100/third
 Mac:/Users/priyankjairaj/Downloads/ACL/Three
@@ -45,16 +58,17 @@ Cluster repo:/nfs_home/users/poonam/ccu-acl2027/repo
 Private cluster root:/nfs_home/users/poonam/ccu-acl2027/local_workspace
 Compact public results:local_run/local_llm_execution_20261011/*.json
 Local private evidence:local_workspace/reports/{annotation-pilot-v5-20261011,
- source-lineage-v1-20261011,source-replay-v1-20261011}/a01
+ source-lineage-v1-20261011,source-replay-v1-20261011,
+ e5-token-census-v1-20261011}/a01
 Execution commits:GPUv5 ebd73ba3a6ed28489479f99626a6eee2f9dc8d65;
 source replay694c0f59e254b41e4dd21e1b34b1af517a63f451.
 V5/source packages and frozen Phases3-10 remain unchanged. Existing TODO and
 both ANALYSIS_LOCK files retain their recorded original hashes.
 
 NEXT EXECUTABLE WORK
-1. Measure full E5 token/chunk counts without model forwards to budget exact
-   CPU embedding. Use the qualified CPU runtime, original frozen chunker and
-   accepted lossless ASCII view. No input/representation or threshold changes.
+1. Use the completed census to budget exact CPU embedding. Measure frozen CPU
+   model-forward throughput for its actual within-document batch sizes before
+   selecting walltime; tokenization throughput is not a model-time estimate.
 2. Complete frozen CPU FP32/E5 encoding on all140,250 prepared AskUbuntu rows
    plus independent full-cache replay in a fresh process. Existing sample/GPU
    evidence cannot replace this; the encoder is not resumable and walltime must
