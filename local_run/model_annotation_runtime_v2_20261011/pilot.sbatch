@@ -22,7 +22,7 @@ import resource, os, socket
 limit = resource.getrlimit(resource.RLIMIT_AS)
 assert limit[0] == resource.RLIM_INFINITY or limit[0] >= 32 * 1024**3, limit
 assert os.environ.get('SLURM_JOB_ID'), 'Slurm allocation required'
-assert socket.gethostname().split('.')[0] != 'csis', 'Compute node required'
+assert socket.gethostname() not in ('csis.mn1', 'csis.mn1.local'), 'Login node prohibited'
 print('memory_preflight', limit, 'node', socket.gethostname(), flush=True)
 PY
 "$judge_python" "$repo/local_run/model_annotation_runtime_v2_20261011/prepare_pilot.py" \
