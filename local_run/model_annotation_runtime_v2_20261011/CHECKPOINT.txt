@@ -1,0 +1,62 @@
+THIRD — FIRST LOCAL LLM ANNOTATION PILOT, 11 OCTOBER 2026
+
+The GPU execution and provenance checks work. This annotation configuration is
+not qualified for bulk annotation. No semantic-accuracy conclusion is available.
+
+ACTUAL EXECUTION
+Slurm job 13296 completed, exit 0:0, in 5 min 47 sec on csis.cn2 / A100 80 GB.
+Qwen2.5-7B-Instruct used its pinned official revision, BF16 and eager attention.
+All cached model files matched official SHA256/Git-blob identities. The ordered
+calibration texts matched the original engineering sampling-frame fingerprint.
+
+Forty unique real AskUbuntu pairs were sampled from an existing 420-pair
+engineering pack; four pairs also received reversed-order diagnostics.
+Canonical 40: 1 valid JSON response,38 invalid JSON,1 context overflow.
+All 44 checks: 1 valid, 41 invalid, 2 overflow. The overflow was the same pair in both
+orientations. All 85 attempts were saved:83 GPU generations and 2 overflow checks.
+No text was truncated. No failed pair was dropped or replaced.
+
+A separate diagnostic found 32 of 41 invalid final answers contained schema-valid
+JSON inside exactly one complete Markdown fence. Nine remained structurally
+invalid, including eight with duplicate opening braces. One invalid answer hit
+the 384-token generation cap. This diagnosis did not change labels or statuses.
+
+MEMORY AND COST
+GPU generation time 277.87 sec; runner time 313.74 sec; full Slurm allocation 347 sec.
+Peak GPU allocated 50.62 GiB, reserved 71.02 GiB. Process high-water RSS 6.18 GiB;
+Slurm sampled batch MaxRSS 2295308 KiB. These are different observation methods.
+Full prompts peaked at 20737 tokens; the longest actually generated was 11589.
+The configured total budget was 16384 including 384 reserved output tokens.
+A native 32768 context needs separate memory qualification; raising the cap alone
+is unsafe given observed eager-attention memory use. No longer input was tested.
+
+VERIFICATION AND PRESERVATION
+Nineteen software tests passed. Independent artifact audit verified all 44 response
+records, complete input coverage, raw-output hashes, runtime/provenance and saved
+failure accounting. Order stability is unavailable: no swapped pair had two valid
+strict-parser responses. No model-panel threshold or scientific gate was tested.
+
+Initial job 13295 failed immediately because a hostname check rejected all csis.*
+nodes. The check was corrected to reject the explicit login hostname; the failed
+attempt remains preserved. Its model call count was zero.
+Human reviews used: 0. The offered 50-100 blinded reviews remain reserved.
+Original analysis locks and frozen Phases 3-10 remain unchanged.
+
+NEXT EXECUTABLE WORK
+Create a new prospective engineering version with schema-constrained JSON output.
+Exact outer-fence handling alone would leave nine structural failures. Preserve
+raw and normalized payloads with separate hashes and never repair arbitrary JSON.
+Count full prompt lengths across the eligible frame, qualify attention/runtime
+memory on the longest inputs, and only then set a supported native-context cap.
+Run a fresh technical qualification before any larger annotation batch.
+The full frozen CPU/E5 cache still needs qualification before substantive threshold
+selection. The existing engineering pack is not that accepted calibration frame.
+
+RESUME POINTERS
+Code and compact results: local_run/model_annotation_runtime_v2_20261011/.
+Original proposal: local_run/model_annotation_v2_20261011/.
+Private evidence: local_workspace/reports/annotation-pilot-20261011/a01 and a02
+on the local machine; cluster annotation_v2/qwen-pilot-20261011-a01 and a02.
+Execution commit: d2957334992dfc926facdb7b420ef34fefa74d43.
+Read PILOT_RESULT.json for exact hashes, counts, runtime and failure accounting.
+No annotation jobs from this pilot remain active.

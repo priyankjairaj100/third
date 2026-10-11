@@ -37,3 +37,11 @@ model provenance; no genuine human responses are produced by this program.
 
 This folder is a new version outside frozen Phases 3–10. Original human gates
 and all scientific study readiness checks remain unchanged and unmet.
+
+EXECUTED CHECKPOINT
+Read PILOT_RESULT.json and CHECKPOINT.txt for actual job13296 outcomes.
+The GPU job completed, but the current output/context configuration did not
+qualify for bulk annotation. A completed process is not a passed model-label gate.
+Raw attempts and both failed/successful scheduler attempts remain private.
+Use audit_pilot_artifacts.py RUN_ROOT --repo REPO_ROOT for the independent
+post-run audit (requires jsonschema); it never changes model labels.

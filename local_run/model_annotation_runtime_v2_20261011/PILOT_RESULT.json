@@ -1,0 +1,102 @@
+{
+  "schema": "third-qwen-pilot-result-v1",
+  "status": "engineering_pilot_completed_configuration_not_qualified_for_bulk_annotation",
+  "execution_commit": "d2957334992dfc926facdb7b420ef34fefa74d43",
+  "source_role": "engineering_only",
+  "study_ready": false,
+  "human_reviews_consumed": 0,
+  "human_review_budget_reserved": "50-100 future single-author blinded reviews",
+  "scheduler": [
+    {
+      "job_id": "13295",
+      "state": "FAILED",
+      "exit_code": "1:0",
+      "elapsed": "00:00:00",
+      "node": "csis.cn2",
+      "stage": "hostname preflight",
+      "model_calls": 0
+    },
+    {
+      "job_id": "13296",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:05:47",
+      "node": "csis.cn2",
+      "batch_max_rss_kib": 2295308,
+      "allocated_cpus": 4,
+      "allocated_memory": "48G",
+      "allocated_gpus": 1
+    }
+  ],
+  "unique_canonical_pairs": 40,
+  "additional_swapped_checks": 4,
+  "canonical_status_counts": {
+    "context_overflow": 1,
+    "invalid_json": 38,
+    "valid": 1
+  },
+  "all_44_status_counts": {
+    "context_overflow": 2,
+    "invalid_json": 41,
+    "valid": 1
+  },
+  "actual_gpu_generation_attempts": 83,
+  "attempt_accounting": {
+    "attempts": 85,
+    "format_retry_attempts": 41,
+    "full_input_tokens_across_attempts": 278994,
+    "generation_seconds": 277.8701696638018,
+    "output_tokens_across_attempts": 4211,
+    "peak_gpu_allocated_bytes": 54356454912,
+    "peak_gpu_reserved_bytes": 76254543872
+  },
+  "max_full_prompt_tokens": 20737,
+  "configured_total_token_budget": 16384,
+  "max_new_tokens": 384,
+  "native_model_config_context": 32768,
+  "artifact_audit_passed": true,
+  "audit_scope": "Actual pilot response provenance, schema, raw output hashes, complete input coverage, swapped order integrity, runtime and zero-human gate checks; not semantic correctness",
+  "software_tests_passed": 19,
+  "order_stability_assessment": "unavailable: no swapped/canonical pair had two valid outputs",
+  "process_peak_rss_kib": 6483840,
+  "rss_note": "Process high-water mark and scheduler sampled MaxRSS differ; preserve both, do not infer one from the other.",
+  "source_bindings": {
+    "preparation/manifest.json": "cb9f8cda6332bd0b9c4a5f1949f37356fbc3b52371627c26ae366ea4284b0a33",
+    "preparation/preparation.json": "c94b39d65e0a98d7630496ff0371d14141f5aca63d07c02255cfa264f223b1df",
+    "preparation/inputs.jsonl": "9fbf8ec87c2571d4dee65d5c0b851f36b50c430a3cf1973796e54cbe0def1a5a",
+    "preparation/weights_manifest.json": "5e89ce9479d130f3ee1d199720e42c56304494edee307bb3f618e19ca089ffc3",
+    "inference/runtime_manifest.json": "600980c87e792c5ed987ba0c9cf6305b6b43144942a1572f76f84d3c383b0fa5",
+    "inference/responses.jsonl": "a5a99ae3dcd5f72566ad2b82ee27c502aef8169ca7bb10e9ff9e3280b51b34ad",
+    "inference/attempts.jsonl": "fdf102c8b9ce3ee57f12a676cafa719811e3e5068f4a902fe0bc59a8290a255e",
+    "inference/summary.json": "6e15ba9ecc0fec01795f09e9210b820858968e1df6fce23013e7359561e42b6c"
+  },
+  "additional_binding_hashes": {
+    "independent_artifact_audit.json": "62bbf21fc133568f3f6353ee24fb9317a245ffb46b364b66f659c96b0b8e0c58",
+    "scheduler_status.json": "64ad9937f3e1241aebc2af3b472723690496096df83f248b23ed9c02cdc8348b",
+    "audit_pilot_artifacts.py": "fc5ed9cfe2c1c3b6e9d41ecc5de86889d9e41a731fa558af72a1f03daa4f402b"
+  },
+  "next_steps": [
+    "Preserve all strict-parser outcomes and retries; do not promote reprocessed pilot labels to calibrated evidence.",
+    "Prepare a new version with schema-constrained generation; exact single-fence handling alone would leave nine structural failures. Pin decoding/parser and test before selection.",
+    "Census full prompt lengths, choose supported native context and qualify attention/memory on longest inputs before any wider run; no silent truncation.",
+    "Qualify the full frozen CPU/E5 cache and source frame before substantive threshold selection."
+  ],
+  "no_claims": [
+    "semantic annotation accuracy",
+    "passed model-panel calibration",
+    "human consensus",
+    "population duplicate precision or recall"
+  ],
+  "transport_diagnosis": {
+    "scope": "Diagnostic reparse only; original response statuses and labels remain unchanged",
+    "invalid_final_outputs": 41,
+    "single_complete_fence_only": 32,
+    "structural_json_failures_after_optional_single_fence_removal": 9,
+    "canonical_fence_only": 29,
+    "canonical_structural_failures": 9,
+    "duplicate_opening_brace_failures": 8,
+    "final_invalid_at_generation_token_cap": 1,
+    "longest_prompt_actually_generated": 11589,
+    "report_sha256": "c6b8f33625512a01a0d04353277508b8af4b984887dbd036b83e7d3235b5477a"
+  }
+}
