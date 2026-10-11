@@ -1,0 +1,572 @@
+#!/usr/bin/env python3
+"""Offline, immutable, engineering-only model-annotation pilot. No human labels."""
+from __future__ import annotations
+
+import argparse
+from collections import Counter
+from datetime import datetime, timezone
+import hashlib
+import importlib.metadata
+import json
+import os
+from pathlib import Path
+import platform
+import re
+import resource
+import sys
+import time
+import traceback
+
+MAX_NEW_TOKENS = 384
+TOTAL_TOKEN_BUDGET = 16384
+FORMAT_RETRY = (
+    "Reformat your immediately preceding answer as one JSON object with exactly "
+    "category, distinction_types, and reason. Preserve that answer's semantic "
+    "judgment; do not reconsider the pair or change its category. Use only the "
+    "allowed category and distinction names from the system rubric. Give no "
+    "prose outside JSON, no confidence score, and no extra keys. Keep the reason "
+    "at most 80 words and 600 characters."
+)
+
+
+def require(condition, message):
+    if not condition:
+        raise ValueError(message)
+
+
+def utcnow():
+    return datetime.now(timezone.utc).isoformat()
+
+
+def digest_bytes(value):
+    return hashlib.sha256(value).hexdigest()
+
+
+def canonical(value):
+    return json.dumps(value, sort_keys=True, ensure_ascii=True, separators=(",", ":"), allow_nan=False).encode()
+
+
+def file_hash(path):
+    h = hashlib.sha256()
+    with Path(path).open("rb") as stream:
+        for block in iter(lambda: stream.read(1 << 20), b""):
+            h.update(block)
+    return h.hexdigest()
+
+
+def write_json(path, value):
+    with Path(path).open("x", encoding="utf-8") as stream:
+        json.dump(value, stream, ensure_ascii=True, sort_keys=True, indent=2, allow_nan=False)
+        stream.write("\n")
+        stream.flush()
+        os.fsync(stream.fileno())
+
+
+def append_json(stream, value):
+    stream.write(canonical(value).decode() + "\n")
+    stream.flush()
+    os.fsync(stream.fileno())
+
+
+def _unique_object(pairs):
+    result = {}
+    for key, value in pairs:
+        require(key not in result, "Duplicate JSON object key")
+        result[key] = value
+    return result
+
+
+def strict_json(raw):
+    def bad_constant(value):
+        raise ValueError("Nonfinite JSON constant")
+    return json.loads(raw, object_pairs_hook=_unique_object, parse_constant=bad_constant)
+
+
+def validate_schema(value, schema, path="$"):
+    """Strict subset of JSON Schema used by the pinned response schemas."""
+    if "const" in schema:
+        require(type(value) is type(schema["const"]) and value == schema["const"], path + ": const")
+    if "enum" in schema:
+        require(any(type(value) is type(x) and value == x for x in schema["enum"]), path + ": enum")
+    kind = schema.get("type")
+    if kind:
+        predicates = {"object": lambda x: isinstance(x, dict), "array": lambda x: isinstance(x, list),
+                      "string": lambda x: isinstance(x, str), "null": lambda x: x is None,
+                      "boolean": lambda x: isinstance(x, bool),
+                      "integer": lambda x: isinstance(x, int) and not isinstance(x, bool),
+                      "number": lambda x: isinstance(x, (int, float)) and not isinstance(x, bool)}
+        require(kind in predicates and predicates[kind](value), path + ": type")
+    if isinstance(value, dict):
+        require(set(schema.get("required", ())).issubset(value), path + ": required keys")
+        properties = schema.get("properties", {})
+        if schema.get("additionalProperties") is False:
+            require(set(value).issubset(properties), path + ": extra keys")
+        for key, child in properties.items():
+            if key in value:
+                validate_schema(value[key], child, path + "." + key)
+    if isinstance(value, str):
+        require(len(value) >= schema.get("minLength", 0), path + ": minLength")
+        require(len(value) <= schema.get("maxLength", float("inf")), path + ": maxLength")
+        if "pattern" in schema:
+            require(re.search(schema["pattern"], value) is not None, path + ": pattern")
+        if schema.get("format") == "date-time":
+            parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+            require(parsed.tzinfo is not None and "T" in value, path + ": date-time timezone")
+    if isinstance(value, list):
+        require(schema.get("minItems", 0) <= len(value) <= schema.get("maxItems", float("inf")), path + ": array length")
+        if schema.get("uniqueItems"):
+            require(len({canonical(x) for x in value}) == len(value), path + ": uniqueItems")
+        for index, item in enumerate(value):
+            if "items" in schema:
+                validate_schema(item, schema["items"], f"{path}[{index}]")
+    if "oneOf" in schema:
+        successes = 0
+        for branch in schema["oneOf"]:
+            try:
+                validate_schema(value, branch, path)
+                successes += 1
+            except ValueError:
+                pass
+        require(successes == 1, path + ": oneOf")
+    for branch in schema.get("allOf", ()):
+        validate_schema(value, branch, path)
+    if "if" in schema:
+        try:
+            validate_schema(value, schema["if"], path)
+            condition = True
+        except ValueError:
+            condition = False
+        branch = schema.get("then" if condition else "else")
+        if branch is not None:
+            validate_schema(value, branch, path)
+    return value
+
+
+def validate_judgment(value, schema):
+    validate_schema(value, schema)
+    require(len(value["reason"].split()) <= 80, "Reason exceeds the pinned 80-word prompt limit")
+    return value
+
+
+def validate_response(value, schema):
+    return validate_schema(value, schema)
+
+
+def parse_judgment(raw, schema):
+    return validate_judgment(strict_json(raw), schema)
+
+
+def pair_seed(plan_sha256, pair_id, model_id):
+    return int(hashlib.sha256(f"{plan_sha256}|{pair_id}|{model_id}".encode()).hexdigest(), 16) % (2**63)
+
+
+def load_verified_inputs(path, expected_sha256, max_pairs):
+    require(file_hash(path) == expected_sha256, "Input file SHA256 mismatch")
+    rows, canonical_rows, swapped_rows = [], {}, {}
+    with Path(path).open("rb") as stream:
+        for index, physical in enumerate(stream, 1):
+            require(bool(physical.strip()), f"Blank input physical line {index}")
+            row = strict_json(physical.decode("utf-8"))
+            require(isinstance(row, dict) and set(row) == {"pair_id", "text_a", "text_b", "orientation"},
+                    "Input fields must be exactly pair_id,text_a,text_b,orientation")
+            require(all(isinstance(row[k], str) and row[k] for k in row), "Input fields must be nonempty strings")
+            require(row["orientation"] in ("canonical", "swapped_diagnostic"), "Unknown input orientation")
+            target = canonical_rows if row["orientation"] == "canonical" else swapped_rows
+            require(row["pair_id"] not in target, "Repeated pair/orientation")
+            target[row["pair_id"]] = row
+            rows.append(row)
+    require(1 <= len(canonical_rows) <= max_pairs, "Canonical pair count outside pilot bound")
+    require(len(swapped_rows) <= len(canonical_rows) // 10, "Swapped diagnostics exceed 10% of canonical pairs")
+    for pair_id, row in swapped_rows.items():
+        require(pair_id in canonical_rows, "Orphan swapped diagnostic")
+        original = canonical_rows[pair_id]
+        require(row["text_a"] == original["text_b"] and row["text_b"] == original["text_a"],
+                "Swapped diagnostic must contain the identical full texts in reverse order")
+    require(file_hash(path) == expected_sha256, "Input file changed during validation")
+    return rows
+
+
+def safe_relative(name):
+    require(isinstance(name, str) and bool(name), "Relative path must be nonempty text")
+    p = Path(name)
+    require(not p.is_absolute() and ".." not in p.parts, "Unsafe relative asset/package path")
+    return p
+
+
+def verify_weights(manifest, model_path):
+    items = manifest.get("files")
+    require(isinstance(items, list) and items, "Weight manifest needs complete file inventory")
+    seen = set()
+    for item in items:
+        name = item["relative_path"]
+        relative = safe_relative(name)
+        require(name not in seen, "Duplicate model inventory entry")
+        seen.add(name)
+        path = model_path / relative
+        require(path.is_file() and path.stat().st_size == item["size_bytes"], "Model asset missing/size mismatch: " + name)
+        require(file_hash(path) == item["sha256"], "Model asset hash mismatch: " + name)
+        require(path.suffix not in (".py", ".pyc"), "Custom model code not allowed")
+    actual = {str(p.relative_to(model_path)) for p in model_path.rglob("*") if p.is_file()}
+    # These publisher metadata files are never loaded by the inference backend.
+    # All executable/config/tokenizer/generation/weight files remain bound.
+    require(actual - seen <= {"README.md", "LICENSE", ".gitattributes"}, "Unbound inference-capable snapshot file")
+    require({"config.json", "tokenizer_config.json", "tokenizer.json"}.issubset(seen), "Incomplete model/tokenizer assets")
+    require(any(name.endswith(".safetensors") for name in seen), "Safetensors weights required")
+    for name in seen:
+        if name.endswith(".safetensors.index.json"):
+            index = strict_json((model_path / name).read_text())
+            require(set(index["weight_map"].values()).issubset(seen), "Unbound model shard")
+    for name in ("config.json", "tokenizer_config.json"):
+        require(not strict_json((model_path / name).read_text()).get("auto_map"), "Custom auto_map forbidden")
+
+
+def prepare_context(manifest_path, out, state):
+    manifest = strict_json(manifest_path.read_text())
+    required = {"plan_file", "plan_sha256", "inputs_file", "inputs_sha256", "weights_manifest_file",
+                "weights_manifest_sha256", "model_path", "model_id", "model_revision", "source_role", "pilot_id", "seed",
+                "driver_sha256", "expected_pairs", "expected_calls", "preparation_sha256"}
+    require(required.issubset(manifest), "Incomplete launch manifest")
+    require(manifest["source_role"] == "engineering_only", "Runner is engineering-only")
+    require(file_hash(__file__) == manifest["driver_sha256"], "Runner source differs from launch manifest")
+    require(isinstance(manifest["seed"], int) and not isinstance(manifest["seed"], bool), "Manifest seed must be integer")
+    for name in ("plan_file", "inputs_file", "weights_manifest_file", "model_path"):
+        require(Path(manifest[name]).is_absolute(), name + " must be absolute")
+    require(Path(manifest["model_path"]).name == manifest["model_revision"], "Snapshot directory revision mismatch")
+    plan_path = Path(manifest["plan_file"])
+    require(file_hash(plan_path) == manifest["plan_sha256"], "Plan SHA256 mismatch")
+    plan = strict_json(plan_path.read_text())
+    require(plan["technical_pilot"]["source_role"] == "engineering_only" and plan["technical_pilot"]["human_reviews"] == 0,
+            "Unexpected pilot scope")
+    require(manifest["model_id"] == plan["technical_pilot"]["judge"], "Wrong pilot judge")
+    require(any(m["model_id"] == manifest["model_id"] and m["revision"] == manifest["model_revision"]
+                for m in plan["models"]), "Unpinned model/revision")
+    require(plan["judge_runtime"]["max_new_tokens"] == MAX_NEW_TOKENS and
+            plan["judge_runtime"]["proposed_total_token_budget"] == TOTAL_TOKEN_BUDGET and
+            plan["judge_runtime"]["format_only_retry_limit"] == 1, "Runtime constants differ from plan")
+    repo = Path(manifest.get("repository_root", str(plan_path.parent.parent.parent)))
+    bound = {str(manifest_path): file_hash(manifest_path), str(plan_path): manifest["plan_sha256"]}
+    for name, expected in plan["package_files"].items():
+        path = plan_path.parent / safe_relative(name)
+        require(file_hash(path) == expected, "Plan package hash mismatch: " + name)
+        bound[str(path)] = expected
+    for name, expected in plan["protocol_bindings"].items():
+        path = repo / safe_relative(name)
+        require(file_hash(path) == expected, "Frozen protocol hash mismatch: " + name)
+        bound[str(path)] = expected
+    rows = load_verified_inputs(manifest["inputs_file"], manifest["inputs_sha256"], plan["technical_pilot"]["max_pairs"])
+    require(sum(r["orientation"] == "canonical" for r in rows) == manifest["expected_pairs"] == 40,
+            "Expected exactly 40 sealed canonical pilot pairs")
+    require(len(rows) == manifest["expected_calls"] == 44, "Expected exactly 44 sealed input calls")
+    preparation_path = manifest_path.parent / "preparation.json"
+    require(file_hash(preparation_path) == manifest["preparation_sha256"], "Preparation receipt hash mismatch")
+    preparation = strict_json(preparation_path.read_text())
+    require(preparation["evidence_role"] == "engineering_only" and preparation["new_human_responses"] == 0 and
+            preparation["selected_unique_pairs"] == 40 and preparation["scheduled_calls"] == 44,
+            "Unexpected preparation receipt scope/counts")
+    mapping_path = manifest_path.parent / "private_source_mapping.json"
+    require(file_hash(mapping_path) == preparation["source_mapping_sha256"], "Private source mapping hash mismatch")
+    source_records = preparation["full_text_source"]
+    require(file_hash(source_records) == preparation["source_records_sha256"], "Prepared full-text source hash mismatch")
+    bound.update({str(preparation_path): manifest["preparation_sha256"],
+                  str(mapping_path): preparation["source_mapping_sha256"], source_records: preparation["source_records_sha256"]})
+    state.update(manifest=manifest, plan=plan, rows=rows, bound_files=bound)
+    state["judgment_schema"] = strict_json((plan_path.parent / "model_judgment.schema.json").read_text())
+    state["response_schema"] = strict_json((plan_path.parent / "model_response.schema.json").read_text())
+    state["system_prompt"] = (plan_path.parent / "judge_system_prompt.txt").read_text()
+    state["task_definition"] = (plan_path.parent / "judge_task_definition.txt").read_text()
+    prompt = {"system_prompt": state["system_prompt"], "task_definition": state["task_definition"],
+              "user_message_renderer": "json object with task_definition and documents A/text then B/text; ensure_ascii=False",
+              "format_only_retry_instruction": FORMAT_RETRY, "pair_ids_and_provenance_shown_to_model": False}
+    write_json(out / "prompt_manifest.json", prompt)
+    state["prompt_sha256"] = file_hash(out / "prompt_manifest.json")
+    decoding = {"do_sample": False, "num_beams": 1, "batch_size": 1, "max_new_tokens": MAX_NEW_TOKENS,
+                "total_token_budget_including_output_reserve": TOTAL_TOKEN_BUDGET, "truncation": False,
+                "dtype": "bfloat16", "attention_implementation": "eager", "use_cache": True,
+                "repetition_penalty": 1.0, "format_only_retry_limit": 1,
+                "per_pair_seed_formula": "int(SHA256(plan_sha256|pair_id|model_id),16) mod 2^63",
+                "retry_seed": "same as first attempt", "swap_seed": "same as canonical pair",
+                "manifest_seed_role": "input-selection provenance; no extra sampling during inference"}
+    write_json(out / "decoding_config.json", decoding)
+    state["decoding_config_sha256"] = file_hash(out / "decoding_config.json")
+    weight_path = Path(manifest["weights_manifest_file"])
+    require(file_hash(weight_path) == manifest["weights_manifest_sha256"], "Weight manifest SHA256 mismatch")
+    weights = strict_json(weight_path.read_text())
+    if "model_id" in weights:
+        require(weights["model_id"] == manifest["model_id"], "Weights model identity mismatch")
+    if "model_revision" in weights:
+        require(weights["model_revision"] == manifest["model_revision"], "Weights revision mismatch")
+    if "revision" in weights:
+        require(weights["revision"] == manifest["model_revision"], "Weights revision mismatch")
+    verify_weights(weights, Path(manifest["model_path"]))
+    state["weights"] = weights
+    bound[str(weight_path)] = manifest["weights_manifest_sha256"]
+    bound[manifest["inputs_file"]] = manifest["inputs_sha256"]
+    bound[str(Path(__file__).resolve())] = file_hash(__file__)
+    write_json(out / "launch_manifest.private.json", manifest)
+    write_json(out / "validated_input_binding.json", {"inputs_sha256": manifest["inputs_sha256"],
+        "rows": len(rows), "canonical_pairs": sum(r["orientation"] == "canonical" for r in rows),
+        "full_texts_preserved": True, "source_role": "engineering_only", "human_responses_created": 0})
+
+
+def base_runtime(state):
+    versions = {}
+    for name in ("torch", "transformers", "tokenizers", "safetensors", "numpy", "accelerate"):
+        try:
+            versions[name] = importlib.metadata.version(name)
+        except importlib.metadata.PackageNotFoundError:
+            versions[name] = None
+    return {"schema": "third-judge-runtime-v2", "python": sys.version, "executable": sys.executable,
+            "platform": platform.platform(), "hostname": platform.node(), "packages": versions,
+            "slurm_job_id": os.environ.get("SLURM_JOB_ID"), "sys_path": sys.path,
+            "runtime_dependency_source": state.get("manifest", {}).get("runtime_dependency_source"),
+            "source_role": "engineering_only", "human_completed": False,
+            "process_address_space_limits": list(resource.getrlimit(resource.RLIMIT_AS))}
+
+
+def load_model(state, out):
+    require(platform.system() == "Linux" and os.environ.get("SLURM_JOB_ID"), "Use a Linux Slurm GPU allocation")
+    for key, value in {"HF_HUB_OFFLINE": "1", "TRANSFORMERS_OFFLINE": "1", "HF_DATASETS_OFFLINE": "1",
+                       "TOKENIZERS_PARALLELISM": "false", "CUBLAS_WORKSPACE_CONFIG": ":4096:8"}.items():
+        os.environ[key] = value
+    import torch
+    import transformers
+    from transformers import AutoModelForCausalLM, AutoTokenizer, GenerationConfig
+    state["torch"] = torch
+    require(torch.cuda.is_available() and torch.cuda.device_count() == 1, "Exactly one visible CUDA GPU required")
+    require(torch.cuda.is_bf16_supported(), "CUDA BF16 support required")
+    device = torch.cuda.get_device_properties(0)
+    require("A100" in device.name and device.total_memory >= 75 * 1024**3, "Frozen pilot requires A100 80GB")
+    torch.set_num_threads(1)
+    torch.set_num_interop_threads(1)
+    torch.use_deterministic_algorithms(True)
+    torch.backends.cuda.matmul.allow_tf32 = False
+    torch.backends.cudnn.allow_tf32 = False
+    torch.backends.cudnn.benchmark = False
+    torch.backends.cudnn.deterministic = True
+    model_path = state["manifest"]["model_path"]
+    started = time.perf_counter()
+    tokenizer = AutoTokenizer.from_pretrained(model_path, local_files_only=True, trust_remote_code=False, use_fast=True)
+    require(bool(tokenizer.chat_template), "Pinned tokenizer needs a chat template")
+    model = AutoModelForCausalLM.from_pretrained(model_path, local_files_only=True, trust_remote_code=False,
+        use_safetensors=True, torch_dtype=torch.bfloat16, attn_implementation="eager", low_cpu_mem_usage=False,
+        device_map=None)
+    model.to(device="cuda:0", dtype=torch.bfloat16)
+    model.eval()
+    require(all(p.device.type == "cuda" and p.dtype == torch.bfloat16 for p in model.parameters()), "Model dtype/device mismatch")
+    require(getattr(model.config, "_attn_implementation", None) == "eager", "Expected eager attention")
+    require(model.config.max_position_embeddings >= TOTAL_TOKEN_BUDGET, "Model position capacity is too small")
+    generation = GenerationConfig(do_sample=False, num_beams=1, max_new_tokens=MAX_NEW_TOKENS,
+        use_cache=True, repetition_penalty=1.0, eos_token_id=model.generation_config.eos_token_id,
+        pad_token_id=tokenizer.pad_token_id if tokenizer.pad_token_id is not None else tokenizer.eos_token_id,
+        bos_token_id=tokenizer.bos_token_id)
+    write_json(out / "generation_config.json", generation.to_dict())
+    runtime = base_runtime(state)
+    runtime.update({"status": "model_loaded_before_first_inference", "torch_module": torch.__file__,
+                    "transformers_module": transformers.__file__, "torch_cuda_version": torch.version.cuda,
+                    "gpu": device.name, "gpu_total_bytes": device.total_memory, "visible_gpus": 1,
+                    "cuda_capability": list(torch.cuda.get_device_capability(0)), "dtype": "bfloat16",
+                    "attention_implementation": "eager", "deterministic_algorithms": True,
+                    "CUBLAS_WORKSPACE_CONFIG": os.environ["CUBLAS_WORKSPACE_CONFIG"], "allow_tf32": False,
+                    "threads": torch.get_num_threads(), "interop_threads": torch.get_num_interop_threads(),
+                    "chat_template_sha256": digest_bytes(canonical(tokenizer.chat_template)),
+                    "generation_config_sha256": file_hash(out / "generation_config.json"),
+                    "model_load_seconds": time.perf_counter() - started,
+                    "model_parameter_bytes": sum(p.numel() * p.element_size() for p in model.parameters()),
+                    "no_network_or_tools_available_to_judge": True})
+    write_json(out / "runtime_manifest.json", runtime)
+    state.update(model=model, tokenizer=tokenizer, generation=generation, runtime=runtime,
+                 runtime_manifest_sha256=file_hash(out / "runtime_manifest.json"))
+
+
+def envelope(state, row, call_id, status, judgment=None, raw_hash=None):
+    m = state["manifest"]
+    result = {"schema": "third-model-response-v2", "annotator_type": "model", "human_completed": False,
+              "pair_id": row["pair_id"], "call_id": call_id, "model_id": m["model_id"],
+              "model_revision": m["model_revision"], "weights_manifest_sha256": m["weights_manifest_sha256"],
+              "prompt_sha256": state["prompt_sha256"], "input_sha256": digest_bytes(canonical(row)),
+              "runtime_manifest_sha256": state["runtime_manifest_sha256"],
+              "decoding_config_sha256": state["decoding_config_sha256"], "orientation": row["orientation"],
+              "status": status, "judgment": judgment, "raw_output_sha256": raw_hash, "created_at": utcnow()}
+    return validate_response(result, state["response_schema"])
+
+
+def run_call(state, row, index, out, attempts_stream):
+    torch, tokenizer, model = state["torch"], state["tokenizer"], state["model"]
+    call_id = digest_bytes(canonical([state["manifest"]["pilot_id"], index, row["pair_id"], row["orientation"]]))
+    call_dir = out / "calls" / f"call-{index:04d}"
+    call_dir.mkdir(parents=True, exist_ok=False)
+    seed = pair_seed(state["manifest"]["plan_sha256"], row["pair_id"], state["manifest"]["model_id"])
+    messages = [{"role": "system", "content": state["system_prompt"]}, {"role": "user", "content": json.dumps(
+        {"task_definition": state["task_definition"], "documents": [{"label": "A", "text": row["text_a"]},
+           {"label": "B", "text": row["text_b"]}]}, ensure_ascii=False)}]
+    final_status, final_judgment, raw_hash = "runtime_error", None, None
+    locked_retry_category = None
+    for attempt in range(2):
+        attempt_started = time.perf_counter()
+        metrics = {"call_id": call_id, "input_index": index, "pair_id": row["pair_id"],
+                   "orientation": row["orientation"], "attempt": attempt, "seed": seed,
+                   "format_only_retry": attempt == 1, "created_at": utcnow(), "human_completed": False}
+        if attempt == 1:
+            metrics["format_retry_category_constraint"] = locked_retry_category
+            metrics["category_preservation_verifiable"] = locked_retry_category is not None
+        prefix = call_dir / f"attempt-{attempt}"
+        raw = None
+        try:
+            write_json(str(prefix) + ".messages.private.json", messages)
+            rendered = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+            encoded = tokenizer(rendered, add_special_tokens=False, truncation=False, return_tensors="pt")
+            input_tokens = int(encoded["input_ids"].shape[1])
+            metrics.update(input_tokens=input_tokens, full_input_tokenization=True, truncation_applied=False,
+                           rendered_prompt_sha256=digest_bytes(rendered.encode("utf-8")))
+            write_json(str(prefix) + ".input_tokens.private.json", encoded["input_ids"][0].tolist())
+            if input_tokens + MAX_NEW_TOKENS > TOTAL_TOKEN_BUDGET:
+                final_status = "context_overflow"
+                metrics["status"] = final_status
+                break
+            torch.manual_seed(seed)
+            torch.cuda.manual_seed_all(seed)
+            torch.cuda.reset_peak_memory_stats(0)
+            encoded = {k: v.to("cuda:0") for k, v in encoded.items()}
+            torch.cuda.synchronize()
+            inference_started = time.perf_counter()
+            with torch.inference_mode():
+                generated = model.generate(**encoded, generation_config=state["generation"])
+            torch.cuda.synchronize()
+            metrics["generation_seconds"] = time.perf_counter() - inference_started
+            output_ids = generated[0, input_tokens:].detach().cpu().tolist()
+            raw = tokenizer.decode(output_ids, skip_special_tokens=True, clean_up_tokenization_spaces=False)
+            raw_bytes = raw.encode("utf-8")
+            raw_hash = digest_bytes(raw_bytes)
+            with Path(str(prefix) + ".raw.private.txt").open("xb") as stream:
+                stream.write(raw_bytes); stream.flush(); os.fsync(stream.fileno())
+            write_json(str(prefix) + ".output_tokens.private.json", output_ids)
+            metrics.update(output_tokens=len(output_ids), raw_output_sha256=raw_hash,
+                           reached_output_token_cap=len(output_ids) >= MAX_NEW_TOKENS,
+                           peak_gpu_allocated_bytes=torch.cuda.max_memory_allocated(0),
+                           peak_gpu_reserved_bytes=torch.cuda.max_memory_reserved(0))
+            try:
+                final_judgment = parse_judgment(raw, state["judgment_schema"])
+                if attempt == 1 and locked_retry_category is not None:
+                    require(final_judgment["category"] == locked_retry_category,
+                            "Format-only retry changed the existing allowed semantic category")
+                final_status = "valid"
+            except (ValueError, TypeError) as error:
+                final_status, final_judgment = "invalid_json", None
+                metrics["format_error"] = str(error)
+                if attempt == 0:
+                    try:
+                        partial = strict_json(raw)
+                        if isinstance(partial, dict) and partial.get("category") in state["judgment_schema"]["properties"]["category"]["enum"]:
+                            locked_retry_category = partial["category"]
+                            metrics["locked_retry_category"] = locked_retry_category
+                    except (ValueError, TypeError):
+                        pass
+            metrics["status"] = final_status
+            del generated, encoded
+        except Exception as error:
+            final_status, final_judgment = "runtime_error", None
+            metrics.update(status=final_status, exception_type=type(error).__name__, exception_message=str(error))
+        finally:
+            metrics["seconds"] = time.perf_counter() - attempt_started
+            metrics["process_peak_rss_kib"] = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+            append_json(attempts_stream, metrics)
+            write_json(str(prefix) + ".metrics.json", metrics)
+        if final_status != "invalid_json" or attempt == 1:
+            break
+        messages.extend([{"role": "assistant", "content": raw}, {"role": "user", "content": FORMAT_RETRY}])
+    result = envelope(state, row, call_id, final_status, final_judgment, raw_hash)
+    write_json(call_dir / "response.json", result)
+    return result
+
+
+def summarize(state, responses, started, fatal=None):
+    canonical_responses = [r for r in responses if r["orientation"] == "canonical"]
+    canonical_map = {r["pair_id"]: r for r in canonical_responses}
+    diagnostics = Counter()
+    for row in responses:
+        if row["orientation"] != "swapped_diagnostic":
+            continue
+        original = canonical_map.get(row["pair_id"])
+        if not original or original["status"] != "valid" or row["status"] != "valid":
+            diagnostics["unavailable_comparison"] += 1
+        else:
+            a, b = original["judgment"]["category"], row["judgment"]["category"]
+            diagnostics["valid_comparison"] += 1
+            diagnostics["category_changed"] += a != b
+            positive = {"exact_copy", "substantially_same_meaning"}
+            diagnostics["binary_positive_changed"] += (a in positive) != (b in positive)
+    return {"schema": "third-model-annotation-technical-pilot-summary-v2", "completed": fatal is None,
+            "source_role": "engineering_only", "pilot_id": state.get("manifest", {}).get("pilot_id"),
+            "planned_input_rows": len(state.get("rows", [])), "recorded_input_rows": len(responses),
+            "canonical_pairs": len(canonical_responses),
+            "status_counts_all_calls": dict(Counter(r["status"] for r in responses)),
+            "status_counts_canonical": dict(Counter(r["status"] for r in canonical_responses)),
+            "canonical_category_counts": dict(Counter(r["judgment"]["category"] for r in canonical_responses if r["status"] == "valid")),
+            "swapped_order_diagnostics": dict(diagnostics), "diagnostic_calls_are_extra_votes": False,
+            "human_responses_created": 0, "human_completed": False, "v1_human_gate_satisfied": False,
+            "threshold_selected": False, "model_panel_calibration_passed": False,
+            "confirmatory_study_ready": False, "seconds": time.perf_counter() - started,
+            "process_peak_rss_kib": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
+            "rss_scope": "Linux process high-water mark including model loading and prior pairs",
+            "slurm_job_id": os.environ.get("SLURM_JOB_ID"), "fatal_error": fatal}
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--manifest", required=True)
+    parser.add_argument("--output-dir", required=True)
+    args = parser.parse_args()
+    out = Path(args.output_dir).resolve()
+    out.mkdir(parents=True, exist_ok=False)
+    out.chmod(0o700)
+    (out / ".gitignore").write_text("*\n")
+    state, responses, fatal = {}, [], None
+    started = time.perf_counter()
+    with (out / "responses.jsonl").open("x", encoding="utf-8") as records, (out / "attempts.jsonl").open("x", encoding="utf-8") as attempts:
+        try:
+            prepare_context(Path(args.manifest).resolve(), out, state)
+            load_model(state, out)
+            for index, row in enumerate(state["rows"]):
+                response = run_call(state, row, index, out, attempts)
+                append_json(records, response)
+                responses.append(response)
+                print(json.dumps({"completed_calls": len(responses), "planned_calls": len(state["rows"]),
+                                  "status": response["status"], "orientation": row["orientation"]}), flush=True)
+            for path, expected in state["bound_files"].items():
+                require(file_hash(path) == expected, "Bound source changed during execution: " + path)
+            verify_weights(state["weights"], Path(state["manifest"]["model_path"]))
+        except Exception as error:
+            fatal = {"exception_type": type(error).__name__, "message": str(error)}
+            with (out / "traceback.private.txt").open("x") as stream:
+                traceback.print_exc(file=stream)
+            # Validated planned rows never disappear after startup or top-level
+            # failure. Missing provenance means inputs could not be trusted yet.
+            if state.get("rows") and "decoding_config_sha256" in state:
+                if "runtime_manifest_sha256" not in state:
+                    runtime = base_runtime(state)
+                    runtime.update(status="startup_failed_before_inference", failure=fatal)
+                    write_json(out / "runtime_manifest.json", runtime)
+                    state["runtime_manifest_sha256"] = file_hash(out / "runtime_manifest.json")
+                for index, row in enumerate(state["rows"][len(responses):], len(responses)):
+                    call_id = digest_bytes(canonical([state["manifest"]["pilot_id"], index, row["pair_id"], row["orientation"]]))
+                    response = envelope(state, row, call_id, "runtime_error")
+                    append_json(records, response)
+                    responses.append(response)
+            write_json(out / "FAILED.json", fatal)
+    summary = summarize(state, responses, started, fatal)
+    attempt_rows = [strict_json(line) for line in (out / "attempts.jsonl").read_text().splitlines() if line.strip()]
+    summary["attempt_accounting"] = {
+        "attempts": len(attempt_rows), "format_retry_attempts": sum(r["format_only_retry"] for r in attempt_rows),
+        "generation_seconds": sum(r.get("generation_seconds", 0.0) for r in attempt_rows),
+        "full_input_tokens_across_attempts": sum(r.get("input_tokens", 0) for r in attempt_rows),
+        "output_tokens_across_attempts": sum(r.get("output_tokens", 0) for r in attempt_rows),
+        "peak_gpu_allocated_bytes": max((r.get("peak_gpu_allocated_bytes", 0) for r in attempt_rows), default=0),
+        "peak_gpu_reserved_bytes": max((r.get("peak_gpu_reserved_bytes", 0) for r in attempt_rows), default=0),
+    }
+    write_json(out / "summary.json", summary)
+    print(json.dumps(summary, sort_keys=True), flush=True)
+    return 1 if fatal is not None else 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

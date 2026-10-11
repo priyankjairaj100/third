@@ -1,0 +1,15 @@
+{
+  "schema": "third-judge-runner-software-validation-v1",
+  "tests_passed": 19,
+  "scope": "Synthetic software fixtures only; GPU inference not yet executed",
+  "source_bindings": {
+    "prepare_pilot.py": "27ee69259c311473661c28a9b9f4b37358604ec39939e17ec2b3b7d7c5df4d2b",
+    "run_pilot.py": "d2420ba02360f06b82560f4656c07529d90b31ec57ffcecafb0f9f5308c706b3",
+    "test_runner.py": "b49670a7d4d005100ad915c504ea0c08be11743d4b92490988e37d5f97964527",
+    "pilot.sbatch": "46c02698c848295b7187768991da4db9abc16bc972907f98d3fadb2c15f4e46c",
+    "qwen_asset_expectations.json": "6b52dee1f0dce5f3541026ac7cb9999ce8679210def62c07186eb8dd59b4b48b"
+  },
+  "model_calls": 0,
+  "genuine_human_responses": 0,
+  "refusal_reporting": "Non-JSON refusals are preserved and counted as invalid_json; no separately measured refusal-rate claim."
+}
