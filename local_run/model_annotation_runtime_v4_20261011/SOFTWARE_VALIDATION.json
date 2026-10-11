@@ -1,0 +1,18 @@
+{
+  "schema": "third-judge-runtime-software-validation-v4",
+  "passed_executed_tests": true,
+  "discovered": 38,
+  "passed": 36,
+  "skipped": 2,
+  "skip_reason": "Local isolated test environment has no torch/transformers; both real integration tests must execute in Slurm preflight before inference.",
+  "scope": "Actual LMFE grammar and token-enforcer tests; decoded reason guard boundaries, 1000 randomized lexical fixtures, 432 prefix-stable token membership comparisons, stable rank/nonfinite refusal, mocked full44 execution, and independent audit receipt tampering. No GPU inference evidence.",
+  "command": "python -m unittest discover -s local_run/model_annotation_runtime_v4_20261011 -p test_runner.py",
+  "source_hashes": {
+    "run_pilot.py": "293431d9cef3bcc7b0ad62ac4a1b486e78d792a43b17574e881046daaeef45bf",
+    "bounded_reason.py": "8562ea692ca167b7c87cd9e2389f5ae2d86663e82a4258f91a0ea855093e078e",
+    "audit_pilot_artifacts.py": "5f266700bf90b74974650e4de70c0bf23f35270f5151fe856214a6d2ec67015e",
+    "test_runner.py": "9bbdfbbcf0666d88ca042c81bba0de324b8f53d22a69f4b12502b12d6e7027f1"
+  },
+  "human_responses_created": 0,
+  "slurm_preflight_requires_all_38_without_skips": true
+}
