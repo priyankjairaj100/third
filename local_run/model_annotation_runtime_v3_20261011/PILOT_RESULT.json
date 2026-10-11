@@ -1,0 +1,78 @@
+{
+  "schema": "third-local-annotation-v3-pilot-result",
+  "execution_commit": "4e0746b6687253ac142fd9dd97b0c7cd35c4c8bc",
+  "source_role": "engineering_only",
+  "slurm_job_id": "13323",
+  "scheduler_state": "COMPLETED",
+  "scheduler_exit_code": "0:0",
+  "scheduler_elapsed_seconds": 593,
+  "scheduler_batch_maxrss_kib": 2349008,
+  "process_peak_rss_kib": 5161804,
+  "rss_measures_have_different_sampling_scope": true,
+  "canonical_pairs": 40,
+  "scheduled_calls": 44,
+  "status_counts_all_calls": {
+    "invalid_json": 38,
+    "valid": 6
+  },
+  "status_counts_canonical": {
+    "invalid_json": 35,
+    "valid": 5
+  },
+  "raw_json_syntax_pass_count": 44,
+  "reason_over_80_words_count": 38,
+  "first_failure_reasons": {
+    "Reason exceeds the pinned 80-word prompt limit": 35,
+    "Generated character violates pinned grammar": 3
+  },
+  "swapped_order_diagnostics": {
+    "binary_positive_changed": 0,
+    "category_changed": 0,
+    "unavailable_comparison": 3,
+    "valid_comparison": 1
+  },
+  "attempt_accounting": {
+    "attempts": 44,
+    "format_retry_attempts": 0,
+    "full_input_tokens_across_attempts": 157813,
+    "generation_seconds": 421.534172359854,
+    "output_tokens_across_attempts": 5656,
+    "peak_gpu_allocated_bytes": 19468430336,
+    "peak_gpu_reserved_bytes": 20061356032,
+    "total_attempt_seconds": 462.2692729830742
+  },
+  "runner_seconds": 501.5946426112205,
+  "engineering_frame_census": {
+    "scope": "all420 existing engineering pairs in both orientations, not the full scientific pair population",
+    "rows": 840,
+    "max_input_tokens": 22598,
+    "over_native_budget": 0,
+    "native_total_budget": 32768,
+    "output_reserve": 512,
+    "census_sha256": "8bcb53b1691ffb9b0096cfb6ce1240d529533e5dcbd6a58d2a5efd7d1f1ec1a9"
+  },
+  "independent_artifact_audit_passed": true,
+  "independent_full_source_text_reconstruction": true,
+  "independent_tokenizer_and_token_filter_replay": true,
+  "copied_artifact_hashes_verified": 281,
+  "bounded_execution_qualification_passed": false,
+  "human_responses_created": 0,
+  "confirmatory_study_ready": false,
+  "prior_labels_changed": false,
+  "source_bindings": {
+    "launch_receipt.json": "024a29a56c44c169299db243096693c6cd8733cb32aaa5ef4afc5dc7ce8ed1b6",
+    "preparation/manifest.json": "5ebf82bcfc065c5d2ebd75f5d8d225293f2cf0db88d028e31126d7f65da1ed09",
+    "preparation/inputs.jsonl": "9fbf8ec87c2571d4dee65d5c0b851f36b50c430a3cf1973796e54cbe0def1a5a",
+    "preparation/weights_manifest.json": "5e89ce9479d130f3ee1d199720e42c56304494edee307bb3f618e19ca089ffc3",
+    "inference/runtime_manifest.json": "a3c6fcbc9051c774bd1cbb2efae4cb4c71350f05abf290c45f78c2a8ef9b9b5f",
+    "inference/summary.json": "b5dd9049e14635472019ee814bd108c0f9029956fffedaea98a2ffe959d9901b",
+    "independent_artifact_audit.json": "918b7457f35acf0495e5378763a3c9044513feb37e025772f250152dbf23b800",
+    "local_transport_and_failure_audit.json": "b6cef44c9a8cded167ae8e6d471e2ec3beca4e94655d72fa47acae7d1adf36a0"
+  },
+  "diagnosis": [
+    "All 44 outputs parse as JSON; 38 exceed the unchanged 80-word reason limit. Three of those also fail direct character grammar replay.",
+    "Pinned LMFE TokenEnforcer replaces supplied parser configuration with tokenizer-alphabet defaults. The recorded requested configuration is not proof of effective token-filter configuration.",
+    "All 840 existing engineering-pack prompts fit the native 32768 context including 512 reserved output tokens. This is not the complete scientific calibration frame."
+  ],
+  "next_action": "Separately version and test effective-parser configuration plus an exact decoded-reason word guard; preserve all v3 outcomes. No threshold selection or human review yet."
+}

@@ -1,0 +1,32 @@
+THIRD — V3 ANNOTATION PILOT CHECKPOINT, 11 OCTOBER 2026
+
+Job 13323 completed in 9m53s on one A100 80GB. All 44 planned requests
+(40 canonical + 4 swapped) were retained with zero retries or truncated inputs.
+6/44 passed final validation; 38/44 failed the unchanged 80-word reason limit.
+All 44 parse as JSON. Three also failed direct character grammar replay because
+LMFE token filtering replaced the supplied parser configuration/alphabet.
+The original statuses and raw outputs remain unchanged.
+
+Peak GPU allocation: 19,468,430,336 bytes (18.13 GiB).
+Peak GPU reservation: 20,061,356,032 bytes (18.68 GiB).
+The 840-prompt census of the existing 420-pair engineering pack has no overflow;
+maximum prompt 22,598 tokens plus 512 reserved output tokens. Longest generated
+pilot prompt: 20,737 tokens. No context or runtime failure occurred.
+
+Independent source/text reconstruction, all 840 tokenizer counts, token-filter
+replay, raw hashes and reordered response coverage passed artifact audit.
+281 copied artifact hashes were verified on the local machine. This establishes
+artifact provenance, not successful execution qualification or semantic accuracy.
+28 software tests passed both locally and in the cluster environment.
+
+Execution commit: 4e0746b6687253ac142fd9dd97b0c7cd35c4c8bc.
+Compact result: local_run/model_annotation_runtime_v3_20261011/PILOT_RESULT.json.
+Private run: local_workspace/annotation_v3/qwen-pilot-v3-20261011-a01 on cluster.
+Private copy: local_workspace/reports/annotation-pilot-v3-20261011/a01 locally.
+Previous v2 package, labels and results remain unchanged. Human reviews used: 0.
+
+Next engineering action is a separately versioned constraint correction with
+same inputs, model, rubric and 80-word limit. Do not relabel v3 or relax limits.
+Before substantive annotation, verify AskUbuntu archive and tag/JSON transport
+lineage and qualify the complete frozen CPU/E5 cache. Existing GPU engineering
+packs cannot replace this dependency. Keep original human/study gates false.
