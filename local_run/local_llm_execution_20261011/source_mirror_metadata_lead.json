@@ -1,0 +1,35 @@
+{
+  "archive_file_metadata": [
+    {
+      "crc32": "7c083c97",
+      "filecount": "6",
+      "format": "7z",
+      "md5": "eb73b916968b8580e10f208941991eb3",
+      "mtime": "1712877148",
+      "name": "askubuntu.com.7z",
+      "sha1": "15102a3bfa4578cd67ed34df8952ed5064184c7a",
+      "size": "1071610861",
+      "source": "original"
+    }
+  ],
+  "confirmatory_study_ready": false,
+  "declared_item_id": "stackexchange_20240402_bis",
+  "external_mirror_hash_match_verified": false,
+  "host_and_local_byte_sizes_match": true,
+  "host_hash_algorithms": [
+    "sha1",
+    "md5",
+    "crc32"
+  ],
+  "item_description_scope": "Community mirror of the April 2024 Stack Exchange dump; host-provided metadata is not proof of direct publisher authenticity or full snapshot completeness.",
+  "local_archive_bytes": 1071610861,
+  "local_archive_sha256": "59632526b760472f0345347d30f478975a5a3c88206598d1420bb69b9ae5df4e",
+  "local_hash_algorithms_compared_to_host": [],
+  "next_check": "Stream the existing local archive on a compute node to compare SHA1/MD5/CRC32 to this saved HTTPS metadata. Even a match only establishes identity with the declared mirror; retain source completeness and attribution review separately.",
+  "primary_input_acceptance": false,
+  "raw_response_sha256": "93c3ecb9cc437b4e9005d2662248803aeb6f166ea9b3417afa06be7cfe89c9ad",
+  "retrieved_utc": "2026-10-11T15:23:52.208264+00:00",
+  "schema": "third-external-source-metadata-lead-v1",
+  "source_authenticity_verified": false,
+  "url": "https://archive.org/metadata/stackexchange_20240402_bis"
+}

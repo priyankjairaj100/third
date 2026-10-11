@@ -1,0 +1,20 @@
+{
+  "schema": "third-e5-token-census-pins-v1",
+  "replay_result_sha256": "c997b2ca344a5d99d4de0d450419a355c1bb655b8e11851fd3257c4936790e99",
+  "rows": 140250,
+  "partition_counts": {"train": 98187, "calibration": 20996, "test": 21067},
+  "ordered_ids_sha256": "30ea6e29cdf62a98ffaa50076f456ed63c2fda251adb48ac9e546fda02ed0004",
+  "python": "3.13.7",
+  "library_versions": {"numpy": "2.5.3", "safetensors": "0.8.0", "tokenizers": "0.22.2", "torch": "2.14.1+cpu", "transformers": "4.57.6"},
+  "revision": "d128750597153bb5987e10b1c3493a34e5a4502a",
+  "assets_file": {"bytes": 1624, "sha256": "59fb3fb5b29dd4b752d9bf344530d932a907ce675143b47e9ba9ad4ff3151e55"},
+  "asset_seal_sha256": "0877e4b010b6e39678a61ca7ce3264c84cf31e796e43e2ae94fe8f12c62b46fb",
+  "model_weight": {"path": "model.safetensors", "bytes": 1112201288, "sha256": "a18a44fad1d0b46ded15928144138cff1135d5cc8233bdd90be5f18822de09a7"},
+  "max_length": 512,
+  "padding_tokens": 261,
+  "view": {
+    "records.jsonl": {"bytes": 570048810, "sha256": "c003933aa4e04cddc5fda8bfa9e0d6752c80bef92eddaf85400b29c1512d086e"},
+    "audit.json": {"bytes": 7025828, "sha256": "733802fb0e0393cc7feef659d539d1663a8a4b4401b07893d94a8796753c7487"},
+    "receipt.json": {"bytes": 3107, "sha256": "234f4e2e4abe7fe34909f16115f7f4d771729460b1b2d9800c29aec47de40498"}
+  }
+}

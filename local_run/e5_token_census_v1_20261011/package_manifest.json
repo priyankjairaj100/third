@@ -1,0 +1,35 @@
+{
+  "files": {
+    "README.md": {
+      "bytes": 3748,
+      "sha256": "4c719c7327abfd8f744232345bd63ccf0f568873c57e7bb6ac0710ed66d8f3f8"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 788,
+      "sha256": "0bd574513a2d9f7c9a12c6e45b290fe5e3270a191d28394ef2297fe53df2b00d"
+    },
+    "census.py": {
+      "bytes": 18653,
+      "sha256": "24158f2b32a8324b47f1c4c304e72fd79dcda31401438864476fc85e4198956c"
+    },
+    "census.sbatch": {
+      "bytes": 3227,
+      "sha256": "52068f67813d669b75baeca7a5addd60ef672053da74a16c74d82314cd98e6a5"
+    },
+    "expectations.json": {
+      "bytes": 1313,
+      "sha256": "b29eb0f2c31603f3dff0fe2652f7d727a706741b5fd01edb0e668de1aedb1b20"
+    },
+    "frozen_code.json": {
+      "bytes": 716,
+      "sha256": "bcb49b15f1fb2f1c18765ecea206bf03c4202f05f46981b223d1e349563627f4"
+    },
+    "test_census.py": {
+      "bytes": 8797,
+      "sha256": "2c9b8613f6122d8923cb470908abb2d5542e70cd96a3487434eaedece8566d95"
+    }
+  },
+  "manifest_self_excluded": true,
+  "purpose": "prospective planning-wrapper code binding; launch requires this manifest SHA supplied separately",
+  "schema": "third-e5-token-census-package-manifest-v1"
+}

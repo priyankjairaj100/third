@@ -1,0 +1,19 @@
+{
+  "checked_at_utc": "2026-10-11T15:30:26.654708+00:00",
+  "downloads_performed": false,
+  "evidence_role": "tiny_software_fixtures_and_fake_tokenizer_only",
+  "frozen_artifacts_modified": false,
+  "independent_root_tests_passed": true,
+  "independent_source_gate_pin_and_launch_review": "No blocker found; exact source/runtime/asset pins and timing envelope verified",
+  "model_forwards": 0,
+  "models_instantiated": 0,
+  "remote_census_executed": false,
+  "schema": "third-e5-token-census-software-validation-v1",
+  "slurm_bash_syntax_passed": true,
+  "source_or_cache_acceptance": false,
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest discover -s local_run/e5_token_census_v1_20261011 -p test_census.py",
+    "count": 10,
+    "passed": true
+  }
+}

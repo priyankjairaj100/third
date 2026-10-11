@@ -73,6 +73,19 @@
     "token_policy_scope": "Restricted standalone-decoding vocabulary; split-codepoint tokens and any token containing U+FFFD (including literal replacement characters) are excluded",
     "weights_evidence": "Runner-verified weight manifest and hashes are bound; this audit rehashes tokenizer/config assets when supplied, not full weight shards"
   },
+  "independent_local_review": {
+    "copied_bytes_verified": 5828059,
+    "copied_files_verified": 336,
+    "max_reason_characters_observed": 600,
+    "non_eos_raw_token_and_full_prefix_transitions_checked": 5567,
+    "passed": true,
+    "reason_word_limit": 80,
+    "reason_word_limit_reached": 38,
+    "scope": "Local byte-preserving artifact, schema, token ledger and tokenizer/full-prefix replay; no model inference or full logit replay.",
+    "strict_response_and_judgment_schemas_passed": 44,
+    "swap_changed_from": "substantially_same_meaning",
+    "swap_changed_to": "merely_related"
+  },
   "job_id": "13353",
   "limitations": [
     "One of four swapped pairs changed category and binary positive decision; tiny diagnostic sample is not an estimate of population order sensitivity.",
