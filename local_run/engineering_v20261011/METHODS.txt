@@ -1,0 +1,106 @@
+THIRD: VERSIONED ENGINEERING CONTINUATION METHOD
+Dated 11 October 2026. Verified outcomes are recorded in STATUS.json and README.txt.
+
+SOURCE AND PRESERVATION
+Frozen repository reference: 9fe701c81b5f38df1280a4258d55236bdc7cb6b0.
+The new transport and qualification drivers are separate engineering tools.
+They do not edit frozen Phases 3–10, original prepared populations, original
+audits, assets, human forms, thresholds, or the existing analysis lock.
+Keep failed Slurm array 13277, both task logs, failure JSON, and source versions.
+Both tasks failed in source validation after the published weight hashes matched;
+that attempt did not establish successful CPU model qualification.
+
+DIAGNOSED SERIALIZATION BOUNDARY
+The frozen phase3/run_preparation.py reader calls str.splitlines(). The frozen
+population writer uses ensure_ascii=False. Valid JSON strings can therefore
+contain literal Unicode separators that splitlines treats as row boundaries.
+A serialization-only repair must preserve decoded records and their order.
+Never delete characters, normalize original_fields, drop rows, or weaken an audit.
+
+LOSSLESS TRANSPORT METHOD: source_transport_v1.py
+The driver reads complete AskUbuntu and CC-News a02 prepared populations by
+literal LF boundaries. It verifies each original sealed audit, raw file hash,
+complete canonical row digest, available text binding, and frozen code bindings
+before writing that population's derived view. It records delimiter counts and
+an original frozen-reader error reproduction without recording text in receipts.
+The derived JSONL uses ensure_ascii=True. Its audit has a distinct seal, updated
+serialized-file binding, and explicit engineering transport lineage to the
+original files, audit, converter, and preserved original output inventory.
+Scientific population, source, partition, guard, date, and code bindings remain.
+The unchanged phase4.embeddings.load_prepared_records validates the derived view.
+The driver then compares every decoded original object with every loaded view
+object in order, and verifies complete row, text, and ordered-ID digests.
+It releases each population before loading the next and preserves failed attempts.
+Only a successful final receipt establishes completion of this transport check.
+
+BOUNDED CPU RUNTIME METHOD: cpu_qualification.py
+Each encoder runs in a fresh Slurm process using its existing CPU environment and
+existing sealed asset inventory. Runtime mismatches fail; assets are not resealed.
+The pinned publisher weight SHA256 and byte count are checked separately.
+The driver validates both complete transport populations with the frozen loader,
+then selects two short (1–1600 characters) and two long (12000–24000 characters)
+calibration records per corpus, eight total. It sorts a fixed hash of salt,
+dataset, bucket, and record ID; labels and model outputs never drive selection.
+Salt: third-cpu-runtime-qualification-v1-20261011.
+The sample manifest is written before any model forward and binds full source,
+audit, code, asset, runtime, row-position, and text hashes. Sample text stays private.
+The unchanged LocalTransformer and encode_document run CPU FP32, eager attention,
+deterministic algorithms, disabled MKLDNN, one thread, and chunk batch size eight.
+Every consecutive content chunk is retained under the frozen pooling contract.
+Three passes use baseline order, repeated baseline order, and reversed order.
+Actual forward hooks check CPU inputs, fixed padding, masks, and batch shapes.
+Exact FP32 vectors, complete private token/chunk ledgers, costs, and failure
+receipts are saved. Passing requires identical output bytes across all passes.
+Final checks rebind source, audit, code, and assets against their initial hashes.
+
+REPRODUCIBLE LAUNCH SHAPE
+Set these variables to the existing cluster locations and NEW attempt paths:
+  export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+  export TOKENIZERS_PARALLELISM=false PYTHONHASHSEED=0
+  export THIRD_REPO=/absolute/path/to/repo
+  export THIRD_WORKSPACE=/absolute/path/to/local_workspace
+  export THIRD_SCRIPTS=/absolute/path/to/versioned_engineering_scripts
+  export THIRD_PYTHON="$THIRD_WORKSPACE/envs/encoder-cpu/bin/python"
+  export THIRD_TRANSPORT_OUT=/absolute/path/to/new_transport_attempt
+  export THIRD_QUALIFY_OUT=/absolute/path/to/new_qualification_parent
+  export THIRD_LOGS=/absolute/path/to/new_log_parent
+  mkdir -p "$THIRD_LOGS" "$THIRD_QUALIFY_OUT"
+Launch transport; run no numerical or complete-source workload on the login node:
+  sbatch --partition=cpu-short --cpus-per-task=2 --mem=32G --time=00:30:00 \
+    --exclude=csis.mn1 --propagate=NONE --export=ALL --job-name=third_transport_v1 \
+    --output="$THIRD_LOGS/transport-%j.log" \
+    --wrap='"$THIRD_PYTHON" -c "import resource; limits=resource.getrlimit(resource.RLIMIT_AS); print(limits, flush=True); assert limits[0] == resource.RLIM_INFINITY or limits[0] >= 24 * 1024**3" && "$THIRD_PYTHON" "$THIRD_SCRIPTS/source_transport_v1.py" --repo "$THIRD_REPO" --workspace "$THIRD_WORKSPACE" --out "$THIRD_TRANSPORT_OUT"'
+Wait for final Slurm completion and verify result.json plus both transport receipts.
+Only after that success, launch each encoder in a separate fresh process:
+  for THIRD_ENCODER in e5 mpnet; do
+    export THIRD_ENCODER
+    sbatch --partition=cpu-short --cpus-per-task=2 --mem=32G --time=00:30:00 \
+      --exclude=csis.mn1 --propagate=NONE --export=ALL --job-name="third_cpu_$THIRD_ENCODER" \
+      --output="$THIRD_LOGS/$THIRD_ENCODER-%j.log" \
+      --wrap='"$THIRD_PYTHON" -c "import resource; limits=resource.getrlimit(resource.RLIMIT_AS); print(limits, flush=True); assert limits[0] == resource.RLIM_INFINITY or limits[0] >= 24 * 1024**3" && "$THIRD_PYTHON" "$THIRD_SCRIPTS/cpu_qualification.py" --repo "$THIRD_REPO" --workspace "$THIRD_WORKSPACE" --encoder "$THIRD_ENCODER" --out "$THIRD_QUALIFY_OUT/$THIRD_ENCODER" --source askubuntu "$THIRD_TRANSPORT_OUT/askubuntu/records.jsonl" "$THIRD_TRANSPORT_OUT/askubuntu/audit.json" --source cc_news "$THIRD_TRANSPORT_OUT/cc_news/records.jsonl" "$THIRD_TRANSPORT_OUT/cc_news/audit.json"'
+  done
+Preserve scheduler job IDs, node, exit status, code hashes, result JSON and logs.
+Stop bounded access checks after SSH refusal or authentication failure.
+
+SCOPE AND ACCEPTANCE LIMITS
+The view fixes serialization interoperability; it does not authenticate archives.
+Matching publisher weights does not establish all source/model provenance.
+Runtime evidence covers these eight genuine calibration texts, within-process
+repeatability, interleaving, and the observed environment. It does not qualify
+cross-process/cross-machine bit identity, full-population cache replay, resource
+feasibility for all registered operations, or a GPU/mixed-precision substitute.
+MPNet here is a runtime probe, not a new non-Civil curator/calibration study arm.
+Retain transport receipts alongside qualification results: the qualifier binds
+derived audit hashes but does not independently re-execute the transport receipts.
+No human judgments, primary jobs, threshold success, or semantic effect follow
+from these checks. Complete-study and confirmatory readiness remain false.
+SLURM RESOURCE FINDING
+The submission shell had an 8 GiB soft and hard address-space limit despite a
+32 GiB Slurm request. Transport 13281 failed with Python MemoryError during the
+frozen News full canonical digest. It preserved a passed AskUbuntu receipt.
+The next attempt uses Slurm --propagate=NONE so the allocated process uses the
+compute daemon limits; it checks for at least 24 GiB address space before work.
+No login-shell limit or cluster administrator setting was changed. The same
+transport driver and 32 GiB request are retained. Record the actual effective
+limit and result; an allocation request alone does not establish usable memory.
+Reference: https://slurm.schedmd.com/sbatch.html#OPT_propagate

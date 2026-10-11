@@ -1,0 +1,166 @@
+{
+  "schema": "third-engineering-continuation-20261011",
+  "observed_at": "2026-10-11T09:45:37.810524+00:00",
+  "base_source_commit": "9fe701c81b5f38df1280a4258d55236bdc7cb6b0",
+  "evidence_role": "bounded engineering preparation and runtime checks",
+  "source_transport": {
+    "slurm_job_id": "13283",
+    "sacct": "13283|third_transport_a02|COMPLETED|0:0|00:03:40|csis.cn1|\n13283.batch|batch|COMPLETED|0:0|00:03:40|csis.cn1|8010128K",
+    "passed": true,
+    "process_address_space_limit": "Slurm compute process observed soft/hard unlimited; scheduler allocation 32G",
+    "datasets": {
+      "askubuntu": {
+        "rows": 140250,
+        "partition_counts": {
+          "calibration": 20996,
+          "test": 21067,
+          "train": 98187
+        },
+        "literal_separator_counts": {
+          "U+2028": 10,
+          "U+2029": 17
+        },
+        "original_records_sha256": "4b87c7050590539192feb50b88f3cdafe79e72244687d093e7bd252df6ec11f3",
+        "derived_records_sha256": "c003933aa4e04cddc5fda8bfa9e0d6752c80bef92eddaf85400b29c1512d086e",
+        "original_audit_sha256": "fb708a60c06f3d3bdc7279fa64f1aa1787b1af9205770cdc137b07c69cb36a4a",
+        "derived_audit_sha256": "733802fb0e0393cc7feef659d539d1663a8a4b4401b07893d94a8796753c7487",
+        "complete_decoded_row_equality_and_order_verified": true,
+        "unchanged_frozen_loader_passed": true,
+        "original_preparation_files_modified": false
+      },
+      "cc_news": {
+        "rows": 243250,
+        "partition_counts": {
+          "calibration": 56824,
+          "train": 186426
+        },
+        "literal_separator_counts": {
+          "U+0085": 62,
+          "U+2028": 27
+        },
+        "original_records_sha256": "15faa97086bae0d1592139bba90458c193c7d241eeeb6ad09e833e6b75aa5071",
+        "derived_records_sha256": "2f9456c594d2722aeed6769af6fbc73179f13dd70ff4ecb04692c6d9272e728a",
+        "original_audit_sha256": "d708c57c1023d7132a43be6bcf21b4b6abec5599ba771528d5fec22c36f8ca55",
+        "derived_audit_sha256": "dce318e74b697e80bb5a6b7ebe215c6464876b4a65e76b86c2f69be0a6c8c1ad",
+        "complete_decoded_row_equality_and_order_verified": true,
+        "unchanged_frozen_loader_passed": true,
+        "original_preparation_files_modified": false
+      }
+    }
+  },
+  "cpu_runtime": {
+    "array_job_id": "13284",
+    "sacct": "13284_0|third_cpu_ascii|COMPLETED|0:0|00:05:10|csis.cn1|\n13284_0.batch|batch|COMPLETED|0:0|00:05:10|csis.cn1|5434020K\n13284_1|third_cpu_ascii|COMPLETED|0:0|00:05:06|csis.cn1|\n13284_1.batch|batch|COMPLETED|0:0|00:05:06|csis.cn1|5434604K",
+    "encoders": {
+      "e5": {
+        "rows": 8,
+        "model_forwards": 54,
+        "published_weight_hash_matched": true,
+        "existing_asset_runtime_match": true,
+        "actual_frozen_cpu_fp32_runtime_check_passed": true,
+        "comparisons": {
+          "repeat": {
+            "all_fp32_bytes_equal": true,
+            "maximum_absolute_difference": 0.0
+          },
+          "reverse_interleaving": {
+            "all_fp32_bytes_equal": true,
+            "maximum_absolute_difference": 0.0
+          }
+        },
+        "fixed_padding_tokens": 261,
+        "model_max_length": 512,
+        "model_load_seconds": 9.060840612277389,
+        "total_seconds": 308.2267751842737,
+        "peak_process_rss_kib": 13732864,
+        "slurm_job_id": "13285",
+        "hostname": "csis.cn1",
+        "semantic_runtime_qualified_for_complete_study": false,
+        "private_sample_manifest_sha256": "c686e4b849b6bd534fbbeef091a7437206d670c476e90ea0aab514ed54b0cc58",
+        "identical_numpy_output_file_sha256": "5fcc730c7e20411aa2d3335d2e3cf74c7e646befa8d06217dd6be3689e2ca4e7",
+        "downloaded_numpy_files_independently_checked_identical": true
+      },
+      "mpnet": {
+        "rows": 8,
+        "model_forwards": 54,
+        "published_weight_hash_matched": true,
+        "existing_asset_runtime_match": true,
+        "actual_frozen_cpu_fp32_runtime_check_passed": true,
+        "comparisons": {
+          "repeat": {
+            "all_fp32_bytes_equal": true,
+            "maximum_absolute_difference": 0.0
+          },
+          "reverse_interleaving": {
+            "all_fp32_bytes_equal": true,
+            "maximum_absolute_difference": 0.0
+          }
+        },
+        "fixed_padding_tokens": 258,
+        "model_max_length": 512,
+        "model_load_seconds": 9.521610032767057,
+        "total_seconds": 304.5276172477752,
+        "peak_process_rss_kib": 13732932,
+        "slurm_job_id": "13284",
+        "hostname": "csis.cn1",
+        "semantic_runtime_qualified_for_complete_study": false,
+        "private_sample_manifest_sha256": "7b5540253252220c572f1e1410ef162c35a1efe8d315cc8e2e219b4b18e6a2c1",
+        "identical_numpy_output_file_sha256": "901c842056103dacde89a7ea0bd0a927b71e8a454c7c0fe83031bb1425290e73",
+        "downloaded_numpy_files_independently_checked_identical": true
+      }
+    },
+    "memory_accounting_note": "Per-process getrusage high-water marks include full source validation and model execution; Slurm sampled MaxRSS is preserved separately and may miss peaks. Neither is isolated encoder-only memory.",
+    "same_eight_calibration_records_verified_across_encoders": true
+  },
+  "wcep": {
+    "compressed_sha256": "aa931187172ea63ae1e3f98c94a44a02e1dbcc36b76e9e140bbfde7f4391c412",
+    "compressed_bytes": 51528345,
+    "counts": {
+      "article_instances": 77717,
+      "article_objects": 77717,
+      "articles_with_nonempty_url": 76355,
+      "event_objects": 1022,
+      "events_with_article_array": 1022,
+      "nonblank_lines": 1022,
+      "physical_lines": 1022,
+      "uncompressed_bytes_read": 233216423,
+      "valid_json_lines": 1022
+    },
+    "gzip_crc_complete": true,
+    "utf8_and_json_integrity_passed": true,
+    "frozen_parser_compatible": false,
+    "schema_issue_counts": {
+      "event_missing_collection": 1022
+    },
+    "input_binding_verified_before_and_after": true,
+    "input_authenticity_verified": false,
+    "complete_author_release_verified": false,
+    "inspection_slurm_job": "13282",
+    "author_notebook_commit": "8aa8418d55a4e6710277bed18bfc5349b50a5d96"
+  },
+  "civil_comments": {
+    "official_archive": "https://storage.googleapis.com/jigsaw-unintended-bias-in-toxicity-classification/civil_comments_v1.2.zip",
+    "expected_bytes": 448174578,
+    "expected_sha256": "89a60573acbbfaf189b2c77278115eefcbc1654dbd8235dd8fbecc1b83f1585c",
+    "observed_http_status": 403,
+    "exact_authoritative_alternative_established": false,
+    "HF_source_fields_sufficient": false,
+    "accepted": false
+  },
+  "preserved_failed_attempts": {
+    "13277": "Both encoders stopped before model execution: frozen splitlines reader split valid JSON strings at Unicode separators.",
+    "13280": "Author-linked WCEP test download preserved; acquisition validator stopped on missing native collection. Train/validation not downloaded.",
+    "13281": "AskUbuntu passed; News failed with MemoryError at frozen canonical digest. Submission inherited 8GiB address-space limit despite 32GiB allocation."
+  },
+  "acceptance": {
+    "genuine_human_responses_created": 0,
+    "primary_study_jobs_executed": 0,
+    "complete_population_embedding_cache_created": false,
+    "source_origin_independently_authenticated": false,
+    "full_population_cache_accepted": false,
+    "cross_machine_bit_identity_claimed": false,
+    "confirmatory_study_ready": false,
+    "frozen_phase3_through_10_modified": false
+  },
+  "software_checks": "Driver syntax/help checks; 13 acquisition checks, 8 archive-inspector checks, lossless Unicode serialization fixture; these are software checks only."
+}

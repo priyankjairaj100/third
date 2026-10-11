@@ -1,0 +1,24 @@
+{
+  "schema": "third-versioned-engineering-tools-20261011",
+  "base_source_commit": "9fe701c81b5f38df1280a4258d55236bdc7cb6b0",
+  "frozen_phase3_through_10_modified": false,
+  "primary_study_ready": false,
+  "scripts": {
+    "cpu_qualification.py": {
+      "bytes": 20861,
+      "sha256": "f4bd3b680498fcf2c9a7e09e5097dd5ec0b04aab2588baf6f7d75408fe1b69b9"
+    },
+    "source_transport_v1.py": {
+      "bytes": 15774,
+      "sha256": "1a57addad91ab7624755c1b39b3ef3fd9107517a5bf192cd04bdb2ddfe1e45c5"
+    },
+    "wcep_acquire.py": {
+      "bytes": 20399,
+      "sha256": "1fb5d2a5738080d25fe388adc486b4d4d04b58e2fdf6a73e4244e7e540e5e1d8"
+    },
+    "wcep_inspect_v2.py": {
+      "bytes": 12208,
+      "sha256": "55f869eebe7e68ecea505d1f9d8fb5218f59927c67faea2129416dd5d24da7bd"
+    }
+  }
+}
