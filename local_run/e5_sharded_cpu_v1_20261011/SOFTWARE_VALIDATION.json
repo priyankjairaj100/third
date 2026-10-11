@@ -1,0 +1,47 @@
+{
+  "actual_model_forwards": 0,
+  "actual_models_loaded": 0,
+  "actual_read_only_planning": {
+    "full_chunks_per_pass": 312159,
+    "full_forward_batches_per_pass": 147825,
+    "full_rows": 140250,
+    "full_shards": 32,
+    "maximum_scenario_forward_hours_per_shard_max": 1.9597843127733925,
+    "maximum_scenario_forward_hours_per_shard_min": 1.9549337375324427,
+    "qualification_chunks_per_pass": 149,
+    "qualification_forward_batches_per_pass": 28,
+    "qualification_logical_passes": 3,
+    "qualification_rows": 19,
+    "shard_rows_max": 4952,
+    "shard_rows_min": 3938
+  },
+  "all_copied_budget_census_and_110_frozen_file_pins_verified": true,
+  "checked_at_utc": "2026-10-11T16:26:34.599619+00:00",
+  "confirmatory_study_ready": false,
+  "downloads_performed": false,
+  "evidence_role": "tiny_software_only_vectors_and_fake_backend_plus_read_only_actual_census_planning",
+  "frozen_files_modified": false,
+  "full_population_cache_acceptance": false,
+  "full_population_encoding_executed": false,
+  "independent_runtime_review": "No remaining blocker; independent tests and source/plan/qualification/shard/assembly review passed.",
+  "independent_worker_review": "Fresh frozen encoder path, exact token log/vector replay, whole-shard-only completion and exact qualification binding reviewed.",
+  "original_route_acceptance": false,
+  "qualification_executed": false,
+  "remote_jobs_launched": 0,
+  "root_review_findings_resolved": [
+    "encoded files and receipts remain watched through final assembly checks",
+    "replay inventory, positive checks and negative claim flags required",
+    "preflight error type and message retained",
+    "first accepted qualification bytes/SHA pinned in full plan and worker",
+    "actual golden/shard/replay/assembled evidence revalidated; independent result SHA required",
+    "atomic completion cannot clobber existing receipt"
+  ],
+  "schema": "third-e5-sharded-cpu-software-validation-v1",
+  "slurm_bash_syntax_passed": true,
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest discover -s local_run/e5_sharded_cpu_v1_20261011 -p test_shards.py",
+    "count": 28,
+    "passed": true,
+    "skipped": 0
+  }
+}

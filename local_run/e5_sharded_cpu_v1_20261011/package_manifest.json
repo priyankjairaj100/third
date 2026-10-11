@@ -1,0 +1,47 @@
+{
+  "files": {
+    "CONTRACT.md": {
+      "bytes": 5525,
+      "sha256": "213366424b4c4375558615adf7bcbf9736f020eb4c79f127fac4afe96717e631"
+    },
+    "README.md": {
+      "bytes": 5143,
+      "sha256": "6f5ed0b439f01ed23be18fb658fa293d510481972db42abfe947a5a40fa883eb"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 2195,
+      "sha256": "b2aae391178be9246a069f84984bb8353e2c4112f18f8426901e44ecb1e28ccf"
+    },
+    "common.py": {
+      "bytes": 19291,
+      "sha256": "976532386379c6282f1f5c66189ac0d1ec46769d454e5ffc326b22e667481403"
+    },
+    "driver.py": {
+      "bytes": 19345,
+      "sha256": "f2099a68b2abe50eada5865402fb6cbf513c184d1c29a0f0904db765d96c9981"
+    },
+    "expectations.json": {
+      "bytes": 3008,
+      "sha256": "68442e55534e49f02573c4b05d602bd6ebea67d35bbcb673dac083608131bcbe"
+    },
+    "frozen_code.json": {
+      "bytes": 18567,
+      "sha256": "967d0250721e260d580e29c5267119a1aa32c123ec9a3f7c7ad3210acc8095f8"
+    },
+    "qualify.sbatch": {
+      "bytes": 3271,
+      "sha256": "965e89917358a2735e64e3f89b34db5c4fd965cb9528060b5d39caef97e4cbe3"
+    },
+    "test_shards.py": {
+      "bytes": 31228,
+      "sha256": "61a876a5561e975af55a4c589e4b01b1554f5c50f9aab821504b669111898507"
+    },
+    "worker.py": {
+      "bytes": 16945,
+      "sha256": "e3e6d7d500334c461efaf6acc643f462740f3f4942244ab5ba78452284cc05f4"
+    }
+  },
+  "manifest_self_excluded": true,
+  "purpose": "Prospective CPU sharded execution and bounded golden-reference qualification; pin this manifest separately before launch",
+  "schema": "third-e5-sharded-cpu-package-manifest-v1"
+}

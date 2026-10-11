@@ -1,0 +1,20 @@
+{
+  "schema": "third-source-notice-followup-v1",
+  "created_utc": "2026-10-11T16:13:53.440435+00:00",
+  "adapter_audit": {
+    "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/prepared/askubuntu/a02/adapter/audit.json",
+    "bytes": 3576,
+    "sha256": "38aab9a370e62c1ad845b8efc27f8e061efe94fff18940619d5e5013784852c0"
+  },
+  "source_replay_result_sha256": "c997b2ca344a5d99d4de0d450419a355c1bb655b8e11851fd3257c4936790e99",
+  "unchanged_adapter_full_replay_previously_passed": true,
+  "retained_rows": 141307,
+  "ambiguous_legacy_notice_text_count": 0,
+  "legacy_notice_review_required_by_frozen_flag": false,
+  "removed_tagged_platform_notices_count": 0,
+  "followup_resolves": "Actual frozen-adapter audit-count inspection requested by source v2 dossier; no flagged examples exist for that explicit rule.",
+  "limitation": "Zero flags does not establish exhaustive recognition of all possible platform boilerplate. No source text or parser changed, and no blanket attribution/public-redistribution approval is implied.",
+  "archive_attribution_review_completed": false,
+  "confirmatory_study_ready": false,
+  "human_reviews_used": 0
+}
