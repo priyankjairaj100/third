@@ -1,0 +1,76 @@
+{
+  "schema": "third-executed-source-lineage-result-v1",
+  "job_id": "13356",
+  "scheduler_state": "COMPLETED",
+  "scheduler_exit_code": "0:0",
+  "scheduler_elapsed_seconds": 70,
+  "scheduler_batch_maxrss_kib": 66168,
+  "process_peak_rss_kib_linux": 68044,
+  "audit_seconds": 65.83817121945322,
+  "passed": true,
+  "source_lineage_scope": "Current local archive-member and transformation bindings; not publisher authentication or historical execution proof",
+  "stages": {
+    "adapter_bindings": {
+      "all_declared_output_hashes_verified": true,
+      "frozen_code_binding_verified": true,
+      "full_adapter_replay_executed": false,
+      "input_bindings_verified": true
+    },
+    "archive_members": {
+      "external_source_authenticity": false,
+      "local_archive_member_byte_equality": true,
+      "members": {
+        "PostLinks.xml": {
+          "bytes": 26086907,
+          "sha256": "e239b73279b6ed409029789513bb6336334e958ba29185169e6fdd93a8d53c10"
+        },
+        "Posts.xml": {
+          "bytes": 1400891844,
+          "sha256": "59e3c17aa0db587a5a7d3f0ce11e185bbafa44b56f5271e230402c83641fdbb9"
+        }
+      }
+    },
+    "immutability": {
+      "all_watched_input_final_bytes_equal_initial": true,
+      "source_mutations_performed": false,
+      "watched_files": 20
+    },
+    "physical_jsonl_transport": {
+      "complete_object_and_order_equality": true,
+      "exact_ascii_serialization": true,
+      "physical_lf_only": true,
+      "rows": 141307
+    },
+    "population_bindings": {
+      "independent_native_source_split_verified": true,
+      "ordered_record_ids_sha256": "30ea6e29cdf62a98ffaa50076f456ed63c2fda251adb48ac9e546fda02ed0004",
+      "partition_counts": {
+        "calibration": 20996,
+        "test": 21067,
+        "train": 98187
+      },
+      "prepared_rows_sha256": "decd53334651c3a5bbede1e57146722e7d852f784577dff4dc93311065934419",
+      "rows": 140250,
+      "source_units": 88344,
+      "text_binding": "dcfa74c795fdd7fba48f3e7e8efad25260053d753a39092ff2dc706349cf6044",
+      "unknown_source_units": 1522
+    },
+    "tag_transform": {
+      "complete_expected_transformed_bytes_equal": true,
+      "tags_converted": 414451,
+      "tags_unchanged": 0
+    }
+  },
+  "copied_artifact_hashes_verified": 16,
+  "new_human_responses": 0,
+  "primary_input_acceptance": false,
+  "full_population_cache_acceptance": false,
+  "confirmatory_study_ready": false,
+  "source_bindings": {
+    "launch_receipt.json": "95c9ea781dfac70615fd5c3fcdfd2903bef41154eaebab1743d75e01ec54b24f",
+    "archive_reader_runtime.json": "a36b2aa4f16e47cd095cb6f8a7c9002c4e19143bc4a4c144f1f1478f46d2367c",
+    "audit/result.json": "ab2aa1f89319fb34b147a565f94eb68e4bbb5f1326ea28d8ece49e03f48cb28e",
+    "audit/input_inventory.json": "a4b8da52635018d867d25d249c86ea9badc3530ed6a2c6a4e0de65e83d0b5291"
+  },
+  "next_stage": "Separately versioned full adapter/preparation replay job13357 using the exact passing result SHA."
+}

@@ -1,0 +1,150 @@
+{
+  "cluster_preflight_tests": {
+    "discovered": 44,
+    "passed": 44,
+    "skipped": 0
+  },
+  "confirmatory_study_ready": false,
+  "copied_artifact_bytes": 5828059,
+  "copied_artifact_hashes_verified": 336,
+  "execution_commit": "ebd73ba3a6ed28489479f99626a6eee2f9dc8d65",
+  "full_population_cache_acceptance": false,
+  "human_responses_created": 0,
+  "independent_audit": {
+    "all_44_outputs_valid": true,
+    "attempt_accounting": {
+      "attempts": 44,
+      "format_retry_attempts": 0,
+      "full_input_tokens_across_attempts": 157813,
+      "generation_seconds": 1193.5678578168154,
+      "output_tokens_across_attempts": 5611,
+      "peak_gpu_allocated_bytes": 19468430336,
+      "peak_gpu_reserved_bytes": 20059258880,
+      "total_attempt_seconds": 1332.468943759799
+    },
+    "attempts": 44,
+    "audit_script_sha256": "68847f21438a03c7ac3ffb172da7185033c2bb2aa800ac2f26ad1f97a5e5c8e8",
+    "canonical_status_counts": {
+      "valid": 40
+    },
+    "character_replay_alphabet_evidence": "independently reconstructed from bound tokenizer",
+    "confirmatory_study_ready": false,
+    "created_at": "2026-10-11T15:14:53.791614+00:00",
+    "eligible_regular_token_count": 150194,
+    "engineering_census_max_input_tokens": 22598,
+    "engineering_census_over_native_budget": 0,
+    "engineering_census_rows": 840,
+    "excluded_regular_token_count": 1457,
+    "grammar_replay_implementation": "frozen bounded_reason module replayed independently of runner; raw strict JSON/schema/decoded word count checked separately",
+    "guard_selection_evidence": "Selected token ledger checked; native-proposal/guard eligibility independently replayed only when tokenizer supplied; score argmax is runtime-attested because full logits are not retained",
+    "human_responses_created": 0,
+    "independent_character_grammar_replay": true,
+    "independent_full_source_text_reconstruction": true,
+    "independent_nonempty_full_decode_transition_checks": true,
+    "independent_raw_standalone_vocabulary_reconstruction": true,
+    "independent_tokenizer_and_token_filter_replay": true,
+    "independently_checked_tokenizer_config_assets": 10,
+    "labels_changed": false,
+    "max_generated_input_tokens": 20737,
+    "max_input_tokens": 20737,
+    "new_inference_calls": 0,
+    "pairs": 40,
+    "passed": true,
+    "raw_validation_diagnostics": {
+      "bound_token_inventory_pass": 44,
+      "independent_character_grammar_pass": 44,
+      "independent_final_schema_pass": 44,
+      "independent_token_filter_pass": 44
+    },
+    "runtime_implementation_files_independently_checked": 25,
+    "runtime_implementation_files_recorded": 25,
+    "scheduled_calls": 44,
+    "schema": "third-pilot-independent-artifact-audit-v5",
+    "scope": "Completed-run provenance and full source reconstruction; failed model outputs remain failures; not semantic correctness or human validity",
+    "status_counts": {
+      "valid": 44
+    },
+    "swapped_order_diagnostics": {
+      "binary_positive_changed": 1,
+      "category_changed": 1,
+      "valid_comparison": 4
+    },
+    "token_filter_evidence_without_optional_tokenizer": "runner-attested replay fields only; no independent token-filter claim",
+    "token_policy_scope": "Restricted standalone-decoding vocabulary; split-codepoint tokens and any token containing U+FFFD (including literal replacement characters) are excluded",
+    "weights_evidence": "Runner-verified weight manifest and hashes are bound; this audit rehashes tokenizer/config assets when supplied, not full weight shards"
+  },
+  "job_id": "13353",
+  "limitations": [
+    "One of four swapped pairs changed category and binary positive decision; tiny diagnostic sample is not an estimate of population order sensitivity.",
+    "Token eligibility excludes empty or replacement-character standalone decodings, including some legitimate split-codepoint paths. Full original input texts were retained.",
+    "Post-run audit independently reconstructs source text, tokenizer vocabulary and grammar/token eligibility. Logit argmax selection is runtime-attested; full logits are not retained.",
+    "This audit binds runner-verified weights; it independently rehashes tokenizer/configuration assets, not full weight shards.",
+    "840-row context census covers engineering pack orientations, not a future scientific frame."
+  ],
+  "model_panel_calibration_passed": false,
+  "primary_input_acceptance": false,
+  "scheduler_accounting": "13353|COMPLETED|0:0|00:26:43|1603||csis.cn3\n13353.batch|COMPLETED|0:0|00:26:43|1603|2415524K|csis.cn3\n",
+  "scheduler_exit_code": "0:0",
+  "scheduler_state": "COMPLETED",
+  "schema": "third-executed-annotation-pilot-result-v5",
+  "scope": "Engineering pilot on 40 exposed pairs plus four swapped-order diagnostic calls; no semantic quality, calibration, scientific-frame or human-validity claim.",
+  "source_bindings": {
+    "independent_artifact_audit.json": "a01c50f924d7033e36ab95d46fad2504859d2ed0a640da36f387943d24aa1b1d",
+    "inference/summary.json": "ab9fae2b9fa66f53c85ef97813694c99c5721aabe7f1d61da745769d699b3c4f",
+    "launch_receipt.json": "813ad3c739ca832c9ee7c68b9dbb1a6f07150edc8d53d51b0bc3e33b2c3f3944"
+  },
+  "summary": {
+    "attempt_accounting": {
+      "attempts": 44,
+      "format_retry_attempts": 0,
+      "full_input_tokens_across_attempts": 157813,
+      "generation_seconds": 1193.5678578168154,
+      "output_tokens_across_attempts": 5611,
+      "peak_gpu_allocated_bytes": 19468430336,
+      "peak_gpu_reserved_bytes": 20059258880,
+      "total_attempt_seconds": 1332.468943759799
+    },
+    "canonical_category_counts": {
+      "overlapping_information": 1,
+      "substantially_same_meaning": 1,
+      "unrelated": 38
+    },
+    "canonical_pairs": 40,
+    "completed": true,
+    "confirmatory_study_ready": false,
+    "diagnostic_calls_are_extra_votes": false,
+    "fatal_error": null,
+    "format_retry_limit": 0,
+    "human_completed": false,
+    "human_responses_created": 0,
+    "model_panel_calibration_passed": false,
+    "pilot_id": "qwen-pilot-v5-20261011-a01",
+    "planned_input_rows": 44,
+    "process_peak_rss_kib": 5156712,
+    "recorded_input_rows": 44,
+    "rss_scope": "Linux process high-water mark including model loading and prior pairs",
+    "runtime_plan_sha256": "4dd23f5d55201eedf9e5c6d57e9106390b6f1a54d8b7f7a42f5433cdbd84ab73",
+    "schedule_sha256": "e268501865b1d7bb2a28d147e5ddbc3f3354145f253716420b88abe99001c6df",
+    "schema": "third-model-annotation-technical-pilot-summary-v5",
+    "seconds": 1373.0701392050833,
+    "slurm_job_id": "13353",
+    "source_role": "engineering_only",
+    "status_counts_all_calls": {
+      "valid": 44
+    },
+    "status_counts_canonical": {
+      "valid": 40
+    },
+    "swapped_order_diagnostics": {
+      "binary_positive_changed": 1,
+      "category_changed": 1,
+      "valid_comparison": 4
+    },
+    "threshold_selected": false,
+    "v1_human_gate_satisfied": false
+  },
+  "technical_pilot_passed": true,
+  "terminal_inventory_sha256": "e6fd3264ca159563ffe5107118a0f714dcb36648c82bf0b9fb19804f991a4bcd",
+  "threshold_selected": false,
+  "v1_human_gate_satisfied": false
+}

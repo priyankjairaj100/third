@@ -1,0 +1,104 @@
+{
+  "audit_seconds": 183.01378837414086,
+  "confirmatory_study_ready": false,
+  "copied_artifact_bytes": 30943,
+  "copied_artifact_hashes_verified": 11,
+  "deferred": [
+    "external_archive_authenticity_completeness_and_attribution",
+    "full_frozen_CPU_E5_encoding_and_fresh_process_cache_replay",
+    "semantic_and_human_or_prospectively_versioned_study_gates"
+  ],
+  "execution_commit": "694c0f59e254b41e4dd21e1b34b1af517a63f451",
+  "full_population_cache_acceptance": false,
+  "human_responses_created": 0,
+  "independent_local_review": {
+    "code_and_package_files_rehashed": 21,
+    "copied_file_hashes": 11,
+    "final_watched_bindings_consistent": 48,
+    "passed": true,
+    "prior_lineage_artifacts_rehashed": 8,
+    "scope": "Independent local receipts and code review; not a second complete corpus execution.",
+    "stage_receipts_equal": 5
+  },
+  "job_id": "13357",
+  "model_execution_performed": false,
+  "passed": true,
+  "primary_input_acceptance": false,
+  "process_peak_rss_kib_linux": 4648964,
+  "runtime": {
+    "idna": "3.19",
+    "numpy": "2.4.2",
+    "platform": "Linux-4.18.0-553.el8_10.x86_64-x86_64-with-glibc2.28",
+    "python": "3.13.7",
+    "sqlite": "3.50.4"
+  },
+  "scheduler_accounting": "13357|COMPLETED|0:0|00:03:04|184||csis.cn1\n13357.batch|COMPLETED|0:0|00:03:04|184|1794076K|csis.cn1\n",
+  "scheduler_exit_code": "0:0",
+  "scheduler_state": "COMPLETED",
+  "schema": "third-executed-source-replay-result-v1",
+  "scope": "Complete unchanged adapter and population preparation replay against the supplied local source bytes; not external authenticity or historical execution proof.",
+  "source_authenticity_verified": false,
+  "source_bindings": {
+    "launch_receipt.json": "dbd5d1c678aff83473b8b232ac0ba5b13960fe7939f82645669b6ee9d22aef16",
+    "package_manifest.json": "d8ccfc2b7ccd350df50ebbe281b189d821cd38ba7637c60c37a40ba24a20347d",
+    "replay/result.json": "c997b2ca344a5d99d4de0d450419a355c1bb655b8e11851fd3257c4936790e99"
+  },
+  "stages": {
+    "final_immutability": {
+      "all_watched_files_equal_initial_bytes": true,
+      "watched_files": 48
+    },
+    "frozen_adapter_replay": {
+      "all_output_bytes_equal": true,
+      "all_settings_counts_and_audit_metadata_equal": true,
+      "replayed_output_inventory": {
+        "duplicate_link_metadata.jsonl": {
+          "bytes": 9978213,
+          "sha256": "6b609d2b8fab475f098f5f0ea72ca7d4483f76c18a992e12e9742dd0b9655571"
+        },
+        "duplicate_links.json": {
+          "bytes": 877640,
+          "sha256": "4b315c7dfc92f7076d61331097b0ad766ead365d535a4c21fbec270978bab7fa"
+        },
+        "duplicate_links.jsonl": {
+          "bytes": 835603,
+          "sha256": "66496ae8bdb8da0109180699eee9bb5a18aade4af0d7c12c7d3027618de18353"
+        },
+        "exclusions.jsonl": {
+          "bytes": 43645595,
+          "sha256": "4a6e915bddc669a1a4f711cf9f8f403049dd3ab2c404c3f2a8b65cf158fe3a01"
+        },
+        "identity_index.sqlite3": {
+          "bytes": 4685824,
+          "sha256": "72b4d2ec244fb0f20f7e23e36b09c05339aa87e33a8b3a167693b067dcedc03c"
+        },
+        "records.jsonl": {
+          "bytes": 560830666,
+          "sha256": "3807b18f11c002515ef7533efc3932a1853487a19922212c65a528bbe1efa637"
+        }
+      },
+      "rows": 141307
+    },
+    "frozen_preparation_replay": {
+      "all_prepared_objects_and_order_equal": true,
+      "all_rebuilt_population_audit_fields_equal": true,
+      "panel_id_sha256": "a09383dd7acde3d272bc73c4a07edaefbb9bfd3e778a5853847a3a9a027f3af6",
+      "panel_ids_equal": true,
+      "rows": 140250,
+      "unchanged_frozen_loader_passed": true
+    },
+    "lineage_gate": {
+      "all_recorded_inputs_rebound": true,
+      "lineage_package_sha256": "98f215a0c57ec0807d9e7025a06fad49cd61c5c7374cebfea34bc72b19bc4e46",
+      "lineage_result_sha256": "ab2aa1f89319fb34b147a565f94eb68e4bbb5f1326ea28d8ece49e03f48cb28e",
+      "prior_stage_reports_equal": true
+    },
+    "prepared_ascii_view": {
+      "complete_object_order_and_ascii_bytes_rechecked": true,
+      "derived_audit_seal": "a00da08387568266391fbc0cdd684e27dcc6389221a8972af2c6ced3d0f5b221",
+      "original_audit_seal": "6bf8bd37e0051115c207612b8fcc087e0f8f185ee1a228d198c270e1c39b6b51",
+      "rows": 140250
+    }
+  },
+  "terminal_inventory_sha256": "33e4cdbdef96f753e32530d18b5d9c530c53d84467fabf0157e54a9f3d5e7ae3"
+}

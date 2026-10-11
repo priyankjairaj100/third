@@ -1,58 +1,75 @@
-THIRD LOCAL LLM ANNOTATION — RESUMABLE CHECKPOINT, 11 OCTOBER 2026
+THIRD — EXECUTED LOCAL/CLUSTER CHECKPOINT, 11 OCTOBER 2026
 
-The v5 decoder correction and CPU source-lineage audit are implemented and
-locally tested. Neither new cluster job has been launched. Cluster access
-closed after v4 cancellation; no SSH retry or new authentication was attempted.
-Existing authorization to run the planned work remains in effect after access
-is restored. Ask the user to reconnect csis and confirm readiness; do not probe
-or loop after a failed connection.
+The local workflow and first GPU annotation runner are operational. All three
+new jobs completed successfully. The primary semantic study remains unstarted.
 
-Completed evidence
-V4 Slurm job 13331 is CANCELLED, with 615 seconds allocated execution. All44
-planned requests remain:13 completed (12 format-valid,1 invalid);1 began without
-a response and30 did not begin. The completed outputs are unchanged. All119
-copied artifact hashes were verified against the remote inventory digest.
-The inventory file was reconstructed from local bytes and the received exact
-sacct text; its SHA256 matches the digest received before SSH failed.
+VERIFIED TERMINAL RESULTS
+GPU pilot v5, job13353, COMPLETED0:0,26min43s on csis.cn3/A10080GB.
+All44 calls were valid:40 canonical pairs plus4 swapped-order diagnostics.
+There were zero format retries, runtime errors, context overflows or truncated
+inputs. The44 cluster preflight tests passed with zero skips. The post-run audit
+passed independent source-text reconstruction, tokenizer vocabulary, full-prefix
+transition, grammar/token-filter and final-schema checks. All336 copied file
+hashes match the terminal cluster receipt.
+Peak GPU allocated19,468,430,336bytes(18.13GiB); reserved20,059,258,880bytes.
+Input tokens157,813; output tokens5,611. Inference runner1373.07s; complete job1603s.
+One of four swapped pairs changed both category and positive/nonpositive decision.
+This tiny exposed engineering pilot establishes technical operation, not label
+accuracy or population order stability. Do not select thresholds from this pack.
 
-V4 failed because LMFE's trailing-replacement-character stripping could hide
-invalid byte tokens from the guard. V5 rejects empty or U+FFFD-containing
-standalone token decodings, requires nonempty emitted transitions, and compares
-the complete raw token-prefix decoding to the guarded text after every token.
-The actual pinned Qwen tokenizer regression passed:150194 eligible tokens,
-1457 excluded. This narrower vocabulary excludes some valid split-codepoint
-paths too; input text is unchanged. No empirical semantic-accuracy claim follows.
+The v5 vocabulary deliberately rejects standalone tokens with empty decoding or
+U+FFFD, including some legitimate split-codepoint paths. Original inputs are
+unchanged. Logit argmax selection remains runtime-attested; full logits are not
+retained. The audit binds runner-verified weight hashes but only independently
+rehashes tokenizer/config assets. The840-prompt context census covers the
+engineering pack, not an unbuilt scientific frame. Earlier v2-v4 failures remain.
 
-V5 software:44 tests discovered,42 passed,2 PyTorch integration checks skipped
-locally. The Slurm preflight requires all44 with zero skips. Local test runtime
-and actual tokenizer artifacts are recorded in SOFTWARE_VALIDATION.json.
-CPU source-lineage package:8 tests passed; shell syntax and independent review
-passed. It checks archive/member bytes, Tags-only changes, physical-line JSON
-transport, adapter/population bindings and end-of-run immutability. It does not
-establish publisher authenticity or substitute for full frozen pipeline replay.
+CPU lineage audit, job13356, COMPLETED0:0,70s on csis.cn1.
+All seven stages passed: inventory, archive/member equality, exact Tags-only
+transformation, adapter bindings, physical-LF ASCII transport, population
+bindings and input immutability. All16 copied file hashes were verified.
 
-Resume sequence after authenticated cluster access is restored
-1. Fast-forward the clean cluster checkout to the backed-up local commit.
-   Repo:/nfs_home/users/poonam/ccu-acl2027/repo
-   Workspace:/nfs_home/users/poonam/ccu-acl2027/local_workspace
-2. Submit the CPU audit from local_run/source_lineage_audit_v1_20261011/README.md
-   into a new private qualification run directory. Record launch intent/receipt,
-   package-manifest digest and commit. Stop on missing assets or any failed gate.
-3. Submit v5 only in new annotation_v5/qwen-pilot-v5-20261011-a01, with the same
-   cached Qwen snapshot and envs/judge-qwen-v3-20261011/bin/python. Source input
-   reference:annotation_v4/qwen-pilot-v4-20261011-a01. Runtime instructions and
-   exact package hashes:local_run/model_annotation_runtime_v5_20261011.
-   Task-local helper work/annotation-v5/launch_remote.py is prepared; substitute
-   the verified expected commit before execution. Do not duplicate an ambiguous
-   launch or overwrite an existing run root.
-4. Audit all44 outcomes and copy private evidence only after terminal state.
-   Qualification still requires full untruncated inputs and valid outputs for
-   all44; keep failed results and account for every attempted/unavailable call.
-5. Before substantive annotation: accept AskUbuntu source lineage and complete
-   frozen CPU/E5 cache; then qualify the second judge and freeze the scientific
-   frame/thresholds before blinded author review. The engineering pack is exposed.
+Full frozen adapter/preparation replay, job13357, COMPLETED0:0,184s on csis.cn1.
+The unchanged adapter reproduced all six outputs byte-for-byte, including SQLite.
+All141,307 adapter rows and140,250 prepared rows/order, panel IDs and generated
+audit fields matched. Frozen prepared-record loading passed; all48 watched
+bindings were preserved. All11 copied file hashes and five stage receipts were
+independently checked. This proves derivation from the supplied local bytes;
+publisher authenticity, archive completeness and attribution remain unresolved.
+No embeddings or model forwards ran in the source replay.
 
-Human reviews used:0. Reserve the user's50-100 reviews for the later blinded
-quality audit; no model judgments populate human annotation files. Original
-human-calibration and confirmatory gates remain false. The user's TODO/locks
-and all sealed v2-v4 sources were verified unchanged.
+FILES AND REPRODUCIBILITY
+Repository:https://github.com/priyankjairaj100/third
+Mac:/Users/priyankjairaj/Downloads/ACL/Three
+Cluster repo:/nfs_home/users/poonam/ccu-acl2027/repo
+Private cluster root:/nfs_home/users/poonam/ccu-acl2027/local_workspace
+Compact public results:local_run/local_llm_execution_20261011/*.json
+Local private evidence:local_workspace/reports/{annotation-pilot-v5-20261011,
+ source-lineage-v1-20261011,source-replay-v1-20261011}/a01
+Execution commits:GPUv5 ebd73ba3a6ed28489479f99626a6eee2f9dc8d65;
+source replay694c0f59e254b41e4dd21e1b34b1af517a63f451.
+V5/source packages and frozen Phases3-10 remain unchanged. Existing TODO and
+both ANALYSIS_LOCK files retain their recorded original hashes.
+
+NEXT EXECUTABLE WORK
+1. Measure full E5 token/chunk counts without model forwards to budget exact
+   CPU embedding. Use the qualified CPU runtime, original frozen chunker and
+   accepted lossless ASCII view. No input/representation or threshold changes.
+2. Complete frozen CPU FP32/E5 encoding on all140,250 prepared AskUbuntu rows
+   plus independent full-cache replay in a fresh process. Existing sample/GPU
+   evidence cannot replace this; the encoder is not resumable and walltime must
+   be budgeted before starting. External source acceptance remains separate.
+3. Qualify a second judge from a different model family after quota/assets review;
+   then build and freeze the scientific pair frame and v2 model-calibration gate.
+4. Reserve the author's50-100 reviews for the later blinded audit. Target100=
+   80 probability-sampled pairs+20 challenge pairs; choose any50 fallback before
+   the first answer. Use the full above-threshold frame, including disagreement
+   and unavailable labels. Do not expose model answers before original reviews.
+
+Human reviews consumed:0. Threshold selected:false. Model calibration:false.
+Original three-human gate:false. Full CPU-cache acceptance:false. Primary input
+acceptance:false. Confirmatory readiness:false. No paid compute or contacts.
+Use the existing SSH master; if it fails, stop and request restoration rather
+than retry/probe. Run corpus/model computation through Slurm, not on the login.
+Local execution uses the cluster for these model jobs; it does not move the
+Codex assistant's inference onto the cluster or guarantee lower token usage.
