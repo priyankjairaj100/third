@@ -1,0 +1,20 @@
+{
+  "schema": "third-mistral-pilot-in-progress-v1",
+  "job_id": 13368,
+  "submitted_utc": "2026-10-11T16:38:07.096932+00:00",
+  "execution_commit": "a32795d7db4cf5c2a6684552718659a442ddc972",
+  "runtime_plan_sha256": "a9331c1400f7f63f883a240a193ef9a0d15f44bbe58c1502dd058a2f88907953",
+  "acquisition_result_sha256": "ea41884648562c51bf36e02eaa08bfa6271ac8497985e66d8bdf202c82fb4fdd",
+  "last_observed_utc": "2026-10-11T16:41:32.622861+00:00",
+  "last_observed_state": "RUNNING",
+  "last_observed_elapsed": "00:03:25",
+  "last_observed_node": "csis.cn3",
+  "cluster_preflight_tests": 46,
+  "cluster_preflight_skips": 0,
+  "response_rows_last_observed": 2,
+  "planned_response_rows": 44,
+  "current_state": "unknown_after_SSH_transport_closed",
+  "terminal_result_available": false,
+  "human_reviews_used": 0,
+  "confirmatory_study_ready": false
+}

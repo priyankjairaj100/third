@@ -1,94 +1,89 @@
-THIRD — VERIFIED LOCAL / CLUSTER CHECKPOINT
-11 October 2026
+THIRD — LOCAL / CLUSTER CHECKPOINT
+Updated 2026-10-11T17:08:06.813772+00:00
 
-The local workflow and first GPU annotation runner are operational. All five
-jobs in this continuation completed successfully. The semantic study is not yet
-ready, and no human reviews have been consumed.
+The local workflow is operational and the second GPU judge pilot has started.
+Full CPU encoding and substantive model calibration remain unfinished.
+Human reviews used: 0.
 
-COMPLETED
+CONNECTION STOP
+The existing SSH transport closed while submitting the corrected SciPy repair:
+exit 255, "kex_exchange_identification: Connection closed by remote host".
+No job ID or remote output was returned. No retry was attempted, following the
+saved cluster rule. Reestablish authenticated access before further remote work.
+Mistral may continue on the cluster; its current terminal status is unknown.
 
-GPU annotation pilot, Slurm 13353 — COMPLETED, exit 0:0, 26 min 43 sec.
-Qwen2.5-7B ran on one A100 80GB. All 44 calls passed format validation: 40
-canonical pairs plus four swapped-order diagnostics. No retries, runtime errors,
-context overflows or truncated inputs occurred. All 44 cluster software tests
-passed. Independent cluster and local audits checked source text, tokenizer,
-token ledger, full-prefix decoding, grammar and schema. All 336 copied files
-match their cluster hashes.
+VERIFIED PROGRESS
+- Qwen pilot 13353: 44 valid calls, no retries, truncation or runtime errors.
+  One of four swaps changed positive to nonpositive. This is engineering evidence.
+- Source-v2 dossier: a documentary bridge now connects the exact mirror to the
+  corrected April 2024 release, supported by byte-identical preparation replay.
+  The adapter reports zero ambiguous legacy notices. This qualifies separate v2
+  development, not original human gates or blanket content redistribution.
+- CPU timing 13363: completed 0:0 in 178 seconds; 48 forwards and 216 chunks on
+  16 real records. Repeated/reversed vectors were byte-identical in one process.
+  Modeled full encoding: 61.32 CPU-hours per pass, 122.64 for two. Not guarantees.
+- Mistral acquisition 13364: completed 0:0 in 1,478 seconds. All 13 files,
+  totaling 24,510,683,806 bytes, verified; 14 quota receipt chains checked.
+  Terminal soft-quota headroom was 14,250,110,976 bytes, not a reservation.
 
-One of four swaps changed a positive decision to nonpositive. Thirty-eight
-responses reached the 80-word reason limit. These are exposed engineering pairs;
-format success does not establish semantic accuracy or order stability.
-The restricted output vocabulary excludes 1,457 tokens, including some valid
-split-codepoint paths. Logit selection is runtime-attested; full logits were not
-retained. The audit independently rehashed tokenizer/config assets and bound the
-runner's full-weight verification. Peak allocated GPU memory was 18.13 GiB;
-157,813 input tokens and 5,611 output tokens were processed.
+CURRENT JOBS AND FAILURES
+Mistral pilot 13368 was last observed RUNNING on csis.cn3 at
+2026-10-11T16:41:32.622861+00:00, elapsed 3m25s. All 46 cluster tests passed
+without skips; 2 of 44 response rows existed. No final result has been inspected.
+It uses 40 exposed engineering pairs plus four swaps. Do not duplicate this job.
+Execution commit: a32795d7db4cf5c2a6684552718659a442ddc972.
 
-Source lineage, Slurm 13356 — COMPLETED, exit 0:0, 70 sec.
-Archive/member equality, exact Tags-only transformation, physical-line JSON
-transport, population bindings and input immutability passed. All 16 copied
-artifact hashes match.
+CPU qualification 13366 failed before model forwards because SciPy was absent.
+Repair-v1 job 13370 then failed before installation: its inventory mistook
+bundled setuptools RECORD files for competing installation metadata.
+Both failed attempts and their packages are preserved.
 
-Full source/preparation replay, Slurm 13357 — COMPLETED, exit 0:0, 184 sec.
-The unchanged adapter reproduced all six outputs byte-for-byte, including the
-SQLite index. All 141,307 adapter rows and 140,250 prepared records matched,
-including order, panel IDs and generated audit fields. All 48 watched bindings
-remained unchanged. All 11 copied files and five stage receipts were checked.
+Repair v2 fixes that inventory bug; two regression fixtures and independent
+review passed. It adds only pinned SciPy 1.17.1, compares all existing versions
+and available owning RECORD hashes, and checks frozen encoder versions/imports.
+Its submission was interrupted by the SSH failure; no job ID was received.
+Manifest SHA256:
+9110c05b7c48cbde819c8e3b40b5a9ad9cb7370d85f849bc2abbf1fd335b5d03
 
-Complete E5 token census, Slurm 13358 — COMPLETED, exit 0:0, 175 sec.
-All 140,250 records contain 61,576,539 content tokens, 312,159 chunks and 147,825
-within-document batches under the frozen batch-size-8 rule. Fixed padding is
-261 tokens. The longest record needs 60 chunks and eight batches. A first-chunk
-shortcut would lose content from 55,346 records; a single model window would
-lose content from 26,906. No content was dropped in the census.
+Full encoding: NOT LAUNCHED. Core software tests (28) and dispatch tests (9) pass,
+but real-model shard qualification has not passed. The plan is 32 whole-record
+shards, at most eight concurrent, each with a fresh replay. All 140,250 records
+and full text remain in scope. Software tests do not establish numerical parity.
 
-All 10 copied files and the complete ledger arithmetic were independently
-verified. The future FP32 vector payload alone is 430,848,000 bytes; a calibration
-gather adds 64,499,712 bytes. Headers, ledgers, model and working memory are extra.
-The census performed zero model forwards and created no embedding cache.
-Tokenization speed is not an estimate of model execution time.
+RESUME IN ORDER
+1. After access is restored, read job 13368's scheduler and receipts. Check for
+   any repair-v2 launch receipt before submitting anything; avoid duplicate jobs.
+2. Fast-forward the clean cluster checkout. Submit repair v2 into a new private
+   directory only if absent, and independently verify its completed receipt.
+3. Bind that repair receipt to a fresh a02 qualification. Require exact original-
+   writer vectors/logs on 19 genuine records and all four fresh shard replays.
+4. Only after independent review, generate and inspect the full plan, then launch
+   one 32-task array with at most eight concurrent tasks on the qualified node.
+   Recheck quota for a 4 GiB output allowance plus 8 GiB reserve before launch.
+5. After every encode/replay pair passes, assemble the new cache and qualify a
+   separate v2 adapter. Do not manufacture v1 cache or three-human acceptance.
+6. Budget the 220,405,510-pair calibration census, then construct the full frame
+   and execute the locked two-model selection/validation. Retain failed gates.
+7. Reserve your 50–100 reviews for the later blinded audit: target 80 probability
+   samples plus 20 challenges, or 40+10 chosen before any human response.
 
-Archive mirror identity, Slurm 13360 — COMPLETED, exit 0:0, 4 sec.
-The existing 1,071,610,861-byte archive matches the saved Internet Archive mirror
-metadata's SHA1, MD5, CRC32 and size, plus the previously verified local SHA256.
-All eight copied files match. This establishes identity to community-mirror item
-stackexchange_20240402_bis. Official publisher authenticity, the frozen corrected-
-release claim, snapshot completeness and attribution review remain unresolved.
+Full encoding will be an extended cluster run; launch is not completed evidence.
+Original tags and exact full recomputation remain independent utility anchors.
+Threshold selected: false. Model calibration: false. Human reviews used: 0.
+Full cache acceptance: false. Confirmatory readiness: false.
+No scheduled automation exists. Stop after SSH refusal/authentication failure/
+timeout; do not probe or retry. Run heavy work through Slurm, excluding csis.mn1.
 
-NEXT STEPS
-
-1. Use the full census and measured CPU forward throughput to budget the frozen
-   complete E5 encoding and a fresh-process full-cache replay. The current
-   encoder is not resumable. No complete encoding job has been launched.
-2. Resolve source acceptance and qualify a second judge from another model
-   family, with storage headroom checked before any new model acquisition.
-3. Build the scientific pair frame from the qualified CPU cache, lock the v2
-   model-panel calibration and validation protocol, and retain failed gates.
-4. Anchor useful-quality claims in original AskUbuntu tag labels and exact
-   comparisons to full recomputation. Native duplicate links provide positive
-   anchors; missing links are not verified negatives.
-5. Reserve the author's 50–100 reviews for the blinded audit. Target 100 means
-   80 probability-sampled pairs plus 20 challenge pairs; a 50-pair fallback must
-   be chosen before the first response. Include model disagreement and unavailable
-   labels in the probability frame. Hide model judgments before original reviews.
-
-Human reviews used: 0. Threshold selected: false. Model calibration: false.
-Original three-human gate: false. Full CPU-cache acceptance: false.
-Primary input acceptance: false. Confirmatory readiness: false.
-Earlier v2–v4 failures, frozen Phases 3–10, TODO and analysis locks are preserved.
-No background job or scheduled automation remains from these five stages.
-
-REPRODUCIBILITY
-
+BACKUP AND LOCATIONS
 GitHub: https://github.com/priyankjairaj100/third
-Mac repository: /Users/priyankjairaj/Downloads/ACL/Three
-Cluster repository: /nfs_home/users/poonam/ccu-acl2027/repo
+Latest execution package: 4260cd9ebec39be0ba97e65a9cae1bf13c769f8c
+Last verified cluster commit: 57a8f848d8c201a0ffa0710ed426c2dffa1b1243
+Mac: /Users/priyankjairaj/Downloads/ACL/Three
+Cluster: /nfs_home/users/poonam/ccu-acl2027/repo
 Private cluster workspace: /nfs_home/users/poonam/ccu-acl2027/local_workspace
-Public result receipts: local_run/local_llm_execution_20261011/*.json
-Private local evidence: local_workspace/reports/<stage-version>/a01
-Machine-readable latest checkpoint: third_latest_checkpoint.json
-
-Use the existing authenticated SSH connection. Stop after refusal, authentication
-failure or timeout; do not probe or retry. Run corpus/model computation via Slurm.
-Cluster GPUs run the project's models; they do not run the Codex assistant or
-provide a guaranteed discount on assistant token usage.
+Public receipts: local_run/local_llm_execution_20261011/*.json
+Private copied evidence: local_workspace/reports/<stage-version>/a01
+Chat work notes: next-v2-adapter-audit.txt and remote_stop_resume.txt.
+Frozen Phases 3–10, TODO and analysis locks remain unchanged.
+Cluster GPUs run project models; they do not run the Codex assistant or guarantee
+an assistant-token discount.

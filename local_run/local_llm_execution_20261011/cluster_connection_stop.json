@@ -1,0 +1,14 @@
+{
+  "schema": "third-cluster-connection-stop-v1",
+  "recorded_utc": "2026-10-11T17:08:06.813772+00:00",
+  "attempted_action": "Submit separately versioned SciPy v2 import repair after fast-forward synchronization",
+  "transport_exit_code": 255,
+  "transport_stderr": "kex_exchange_identification: Connection closed by remote host\nConnection closed by UNKNOWN port 65535",
+  "launch_transport_stdout_bytes": 0,
+  "new_job_id_received": false,
+  "no_remote_retry_performed": true,
+  "last_successful_cluster_commit": "57a8f848d8c201a0ffa0710ed426c2dffa1b1243",
+  "corrected_package_git_commit": "4260cd9ebec39be0ba97e65a9cae1bf13c769f8c",
+  "corrected_package_manifest_sha256": "9110c05b7c48cbde819c8e3b40b5a9ad9cb7370d85f849bc2abbf1fd335b5d03",
+  "next_action": "User reestablishes authenticated cluster connection; first perform a read-only job/receipt check and then synchronize and submit corrected repair only if no prior launch exists. Never infer Mistral completion or duplicate it."
+}
