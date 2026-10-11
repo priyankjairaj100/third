@@ -1,0 +1,20 @@
+THIRD V4 ENGINEERING STOP — 11 OCTOBER 2026
+
+Job 13331 was deliberately stopped after 10m15s because LMFE's lossy
+trailing-replacement decoder allowed invisible output-token transitions.
+All 44 requests remain in the census: 13 completed (12 valid, 1 invalid),
+31 unavailable. No output was repaired, replaced, dropped or retried.
+Completed-subset raw/schema/80-word checks and transport hashes passed.
+A complete-run independent audit did not occur; qualification remains false.
+GPU peak among completed calls: 19,468,430,336 bytes (a lower bound for run).
+Unfinished-request token/compute metrics are unavailable, not assumed zero.
+
+The stopped result and private stop intent/receipt are preserved. The next
+correction has its own v5 runtime version and will reject output tokens whose
+standalone decoding is empty or contains U+FFFD; this explicitly narrows the
+output vocabulary, including some legitimate split-codepoint paths.
+All input documents remain complete. Human reviews used: 0.
+
+Before substantive model annotation: accept the actual source lineage and
+complete frozen CPU/E5 cache. Format qualification alone does not establish
+semantic accuracy, source authenticity, or replace the original human gates.

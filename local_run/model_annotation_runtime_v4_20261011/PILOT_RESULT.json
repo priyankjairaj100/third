@@ -1,0 +1,54 @@
+{
+  "schema": "third-annotation-v4-stopped-result",
+  "execution_commit": "209db2631be6f4c231d73ea68999c7bf376c3353",
+  "source_role": "engineering_only",
+  "slurm_job_id": "13331",
+  "scheduler_state": "CANCELLED by 1007",
+  "scheduler_exit_code": "0:0",
+  "scheduler_elapsed_seconds": 615,
+  "scheduler_batch_maxrss_kib": 3145776,
+  "scheduled_calls": 44,
+  "completed_calls": 13,
+  "completed_status_counts": {
+    "valid": 12,
+    "invalid_json": 1
+  },
+  "unavailable_calls": 31,
+  "request_state_counts": {
+    "not_begun": 30,
+    "completed": 13,
+    "begun_without_completed_response": 1
+  },
+  "format_retries": 0,
+  "completed_output_tokens_lower_bound": 2081,
+  "completed_generation_seconds_lower_bound": 480.6717772167176,
+  "completed_guard_seconds_lower_bound": 277.7839505132288,
+  "completed_peak_gpu_allocation_bytes_lower_bound": 19468430336,
+  "accounting_note": "In-flight request compute and generated tokens were not persisted; sums and peaks from completed attempts are lower bounds. Scheduler elapsed includes all allocated execution.",
+  "stop_reason": "Known LMFE trailing U+FFFD stripping hides invalid UTF8 byte transitions; v4 guard reproduced this loss and could accept zero-character transitions. Stopped without using semantic labels to select requests.",
+  "failure_detail": {
+    "input_index": 40,
+    "output_token_cap": 512,
+    "empty_transitions": 387,
+    "raw_suffix_hidden_replacement_characters": 195,
+    "raw_sha256": "cecca8389864c90f48d23e7111cf2d9c21f4ea08b89bdf4e6a54e0bc76a5ec15"
+  },
+  "transport_verified_files": 119,
+  "completed_subset_final_format_independently_rechecked": true,
+  "complete_run_independent_audit": false,
+  "bounded_execution_qualification_passed": false,
+  "human_reviews_used": 0,
+  "confirmatory_study_ready": false,
+  "prior_outputs_changed": false,
+  "artifact_bindings": {
+    "launch_receipt.json": "9467690bc219bfe1f7ccab0f847fd47b94e55c0d9193aeb18d89094ee36ec54d",
+    "engineering_stop_intent.json": "5a626875682e029418e6eee6b3fcd5807d18cd6605f51c700702e044a789b2b6",
+    "engineering_stop_receipt.json": "53b3790c87ca15dba61fc27495cf997e00b1a5fabc356f5eab167ebf320d4ece",
+    "engineering_stop_inventory.json": "2c4de582ae101e89c49483ef0de6d7aeec4e96a9a685cfd25ab0810e35b3e24e",
+    "local_engineering_stop_audit.json": "5d31d368990486568bf93fec34c7cbaa3110187b9518cd7f05fd8ca9e661e933",
+    "preparation/manifest.json": "57fa0993e2efdf29b576dc90c53e4dcf24ad7ae5646058786803464d416394b3",
+    "inference/attempts.jsonl": "274a8d8b11e061bda03b5a1178c6b6f5430612a36fa574108cc68cc7a7d6b6f3",
+    "inference/responses.jsonl": "03e9f2347eadfe4b888a8aa57ddd9228b1c132b3ee97218753a63779d82c167a"
+  },
+  "next_action": "Prospective v5 restricts output tokens to individually nonempty U+FFFD-free decodings, plus full prefix consistency, with regression tests and independent vocabulary reconstruction. Inputs and prior output artifacts unchanged."
+}
