@@ -1,0 +1,60 @@
+{
+  "archive_content_passes": 1,
+  "attribution_review_completed": false,
+  "complete_child_seconds": 3.5289260242134333,
+  "confirmatory_study_ready": false,
+  "copied_artifact_bytes": 103922,
+  "copied_artifact_hashes_verified": 8,
+  "created_utc": "2026-10-11T15:39:17.216149+00:00",
+  "execution_commit": "6ef993c888c3cbe11f959270286826525e047dae",
+  "expected": {
+    "bytes": 1071610861,
+    "crc32": "7c083c97",
+    "md5": "eb73b916968b8580e10f208941991eb3",
+    "sha1": "15102a3bfa4578cd67ed34df8952ed5064184c7a",
+    "sha256": "59632526b760472f0345347d30f478975a5a3c88206598d1420bb69b9ae5df4e"
+  },
+  "frozen_source_route_changed": false,
+  "full_population_cache_acceptance": false,
+  "initial_final_bindings_equal": true,
+  "initial_final_descriptor_and_path_stat_equal": true,
+  "job_id": "13360",
+  "local_verification": "All copied hashes, pinned metadata entry, observed/expected checksums, code/expectation hashes, false admission flags and before/after stat equality checked; archive reread occurred only on cluster.",
+  "metadata_source": {
+    "item_identifier": "stackexchange_20240402_bis",
+    "metadata_retrieved_utc": "2026-10-11T15:23:52.208264+00:00",
+    "metadata_url": "https://archive.org/metadata/stackexchange_20240402_bis"
+  },
+  "mirror_identity_verified": true,
+  "network_requests": 0,
+  "new_human_responses": 0,
+  "observed": {
+    "bytes": 1071610861,
+    "crc32": "7c083c97",
+    "md5": "eb73b916968b8580e10f208941991eb3",
+    "sha1": "15102a3bfa4578cd67ed34df8952ed5064184c7a",
+    "sha256": "59632526b760472f0345347d30f478975a5a3c88206598d1420bb69b9ae5df4e"
+  },
+  "passed": true,
+  "peak_rss_native_units": 20544,
+  "peak_rss_unit": "KiB",
+  "primary_input_acceptance": false,
+  "publisher_authenticity_verified": false,
+  "scheduler_accounting": "13360|COMPLETED|0:0|00:00:04|4||csis.cn1\n13360.batch|COMPLETED|0:0|00:00:04|4|1060K|csis.cn1\n",
+  "scheduler_exit_code": "0:0",
+  "scheduler_state": "COMPLETED",
+  "schema": "third-executed-source-mirror-result-v1",
+  "scope": "Identity against pinned community-mirror metadata only; no official origin or corrected-release authentication.",
+  "seconds_before_result_write": 3.4800553042441607,
+  "snapshot_completeness_verified": false,
+  "source_bindings": {
+    "archive_metadata_raw.json": "93c3ecb9cc437b4e9005d2662248803aeb6f166ea9b3417afa06be7cfe89c9ad",
+    "check_mirror.py": "60422b5dc1b068b09dac10103898fe8b71cf26caa4ce2258b1105e13d47dab59",
+    "expectations.json": "e38ba260e390e0e596f9bbc77e4885c482316a0dc20faff52f727505568e2330",
+    "launch_receipt.json": "08fcf1573db9fd881fc339bfd8148bfd6815c1e2d907d6fa766eb4d288394972",
+    "mirror.sbatch": "c557840027a39266e148e9bcc2aecdc5c0c86166fd49e65bb8a9459de42afcdb",
+    "process_completion.json": "83922cde2ae4d9ae49579d9251da07c777b117667cb1138c91084e6b6044d58f",
+    "result.json": "95715c34e245247d457ff94802552c99e8585ab87ce4b7e7380ce6ab66904989"
+  },
+  "stream_read_seconds": 3.476571461185813
+}
