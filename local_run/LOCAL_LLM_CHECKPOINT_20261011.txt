@@ -1,0 +1,58 @@
+THIRD LOCAL LLM ANNOTATION — RESUMABLE CHECKPOINT, 11 OCTOBER 2026
+
+The v5 decoder correction and CPU source-lineage audit are implemented and
+locally tested. Neither new cluster job has been launched. Cluster access
+closed after v4 cancellation; no SSH retry or new authentication was attempted.
+Existing authorization to run the planned work remains in effect after access
+is restored. Ask the user to reconnect csis and confirm readiness; do not probe
+or loop after a failed connection.
+
+Completed evidence
+V4 Slurm job 13331 is CANCELLED, with 615 seconds allocated execution. All44
+planned requests remain:13 completed (12 format-valid,1 invalid);1 began without
+a response and30 did not begin. The completed outputs are unchanged. All119
+copied artifact hashes were verified against the remote inventory digest.
+The inventory file was reconstructed from local bytes and the received exact
+sacct text; its SHA256 matches the digest received before SSH failed.
+
+V4 failed because LMFE's trailing-replacement-character stripping could hide
+invalid byte tokens from the guard. V5 rejects empty or U+FFFD-containing
+standalone token decodings, requires nonempty emitted transitions, and compares
+the complete raw token-prefix decoding to the guarded text after every token.
+The actual pinned Qwen tokenizer regression passed:150194 eligible tokens,
+1457 excluded. This narrower vocabulary excludes some valid split-codepoint
+paths too; input text is unchanged. No empirical semantic-accuracy claim follows.
+
+V5 software:44 tests discovered,42 passed,2 PyTorch integration checks skipped
+locally. The Slurm preflight requires all44 with zero skips. Local test runtime
+and actual tokenizer artifacts are recorded in SOFTWARE_VALIDATION.json.
+CPU source-lineage package:8 tests passed; shell syntax and independent review
+passed. It checks archive/member bytes, Tags-only changes, physical-line JSON
+transport, adapter/population bindings and end-of-run immutability. It does not
+establish publisher authenticity or substitute for full frozen pipeline replay.
+
+Resume sequence after authenticated cluster access is restored
+1. Fast-forward the clean cluster checkout to the backed-up local commit.
+   Repo:/nfs_home/users/poonam/ccu-acl2027/repo
+   Workspace:/nfs_home/users/poonam/ccu-acl2027/local_workspace
+2. Submit the CPU audit from local_run/source_lineage_audit_v1_20261011/README.md
+   into a new private qualification run directory. Record launch intent/receipt,
+   package-manifest digest and commit. Stop on missing assets or any failed gate.
+3. Submit v5 only in new annotation_v5/qwen-pilot-v5-20261011-a01, with the same
+   cached Qwen snapshot and envs/judge-qwen-v3-20261011/bin/python. Source input
+   reference:annotation_v4/qwen-pilot-v4-20261011-a01. Runtime instructions and
+   exact package hashes:local_run/model_annotation_runtime_v5_20261011.
+   Task-local helper work/annotation-v5/launch_remote.py is prepared; substitute
+   the verified expected commit before execution. Do not duplicate an ambiguous
+   launch or overwrite an existing run root.
+4. Audit all44 outcomes and copy private evidence only after terminal state.
+   Qualification still requires full untruncated inputs and valid outputs for
+   all44; keep failed results and account for every attempted/unavailable call.
+5. Before substantive annotation: accept AskUbuntu source lineage and complete
+   frozen CPU/E5 cache; then qualify the second judge and freeze the scientific
+   frame/thresholds before blinded author review. The engineering pack is exposed.
+
+Human reviews used:0. Reserve the user's50-100 reviews for the later blinded
+quality audit; no model judgments populate human annotation files. Original
+human-calibration and confirmatory gates remain false. The user's TODO/locks
+and all sealed v2-v4 sources were verified unchanged.

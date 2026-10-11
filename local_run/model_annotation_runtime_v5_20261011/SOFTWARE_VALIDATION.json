@@ -1,0 +1,44 @@
+{
+  "schema": "third-v5-local-software-validation",
+  "python": "3.14.2",
+  "platform": "Darwin",
+  "discovered": 44,
+  "passed": 42,
+  "skipped": [
+    {
+      "test": "test_real_torch_processor_ties_mask_order_and_history (test_runner.GreedyGuardTests.test_real_torch_processor_ties_mask_order_and_history)",
+      "reason": "Actual torch tensor integration requires the pinned runtime environment; no package installation"
+    },
+    {
+      "test": "test_real_transformers_prefix_then_custom_smoke (test_runner.GreedyGuardTests.test_real_transformers_prefix_then_custom_smoke)",
+      "reason": "Actual torch/Transformers processor integration requires the pinned runtime environment"
+    }
+  ],
+  "errors": 0,
+  "failures": 0,
+  "seconds": 11.827147584059276,
+  "actual_pinned_tokenizer_regression_executed": true,
+  "model_weights_downloaded": false,
+  "cluster_v5_tests_executed": false,
+  "cluster_v5_job_launched": false,
+  "packages": {
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "lm-format-enforcer": "0.11.3",
+    "jsonschema": "4.25.1"
+  },
+  "token_inventory": {
+    "regular": 151651,
+    "eligible": 150194,
+    "excluded": 1457,
+    "policy_artifact_sha256": "913f44f2d02b09d6415d209b9f85b0190aec9ff138883060be898938a3335e3e"
+  },
+  "software_source_sha256": {
+    "bounded_reason.py": "6f5ce5b653813d705b0918a299d8e61625e4dd02bb7c3cc260b50246f905ccc7",
+    "run_pilot.py": "66dfd4a718033b78b791ad3403250ee9b5d8b5011192df75f804e6cc3500a6f6",
+    "test_runner.py": "9dfd8a123dab6c180dd746826d1a981cc5b720149fe8812bfa930fdc81400f97",
+    "audit_pilot_artifacts.py": "68847f21438a03c7ac3ffb172da7185033c2bb2aa800ac2f26ad1f97a5e5c8e8"
+  },
+  "log_sha256": "5f830a86356e3474b75ba6ca2f4316f8f755c1f372a701b989b21b533201affa",
+  "scope": "Local software and tokenizer validation only; two real PyTorch processor integrations and CUDA model inference remain unexecuted for v5. Slurm preflight requires all44 tests with zero skips."
+}

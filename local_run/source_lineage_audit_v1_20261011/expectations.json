@@ -1,0 +1,28 @@
+{
+  "schema": "third-askubuntu-lineage-expectations-v1",
+  "evidence_role": "historical_local_receipts_not_publisher_authentication",
+  "source_url_declared": "https://archive.org/download/stackexchange_20240402_bis/askubuntu.com.7z",
+  "archive_release": "stackexchange_20240402_bis",
+  "archive_sha256": "59632526b760472f0345347d30f478975a5a3c88206598d1420bb69b9ae5df4e",
+  "archive_bytes": 1071610861,
+  "tags_converted": 414451,
+  "tags_unchanged": 0,
+  "adapter_rows": 141307,
+  "population_rows": 140250,
+  "design_sha256": "11bb7a38665769efd9b539370361ef2b1d39b91ee2a01b44a040ba8f2a5b6fb4",
+  "population_audit_seal": "6bf8bd37e0051115c207612b8fcc087e0f8f185ee1a228d198c270e1c39b6b51",
+  "files": {
+    "inputs/askubuntu/Posts.xml": {"bytes": 1400891844},
+    "inputs/askubuntu/PostLinks.xml": {"bytes": 26086907, "sha256": "e239b73279b6ed409029789513bb6336334e958ba29185169e6fdd93a8d53c10"},
+    "inputs/askubuntu/Posts.angle.xml": {"bytes": 1408615887, "sha256": "a8af2bf2cc9489d8c99572f80e5e4092dcecb0153388593fff847c0150cc65f1"},
+    "prepared/askubuntu/a02/adapter/records.jsonl": {"bytes": 560830666, "sha256": "3807b18f11c002515ef7533efc3932a1853487a19922212c65a528bbe1efa637"},
+    "prepared/askubuntu/a02/adapter/records.line_safe.jsonl": {"bytes": 570935895, "sha256": "1841980f67178af345ce54cc401a7617f2e8d9037e64be8a45bd7bd8242259d9"},
+    "prepared/askubuntu/a02/population/records.jsonl": {"bytes": 568963573, "sha256": "4b87c7050590539192feb50b88f3cdafe79e72244687d093e7bd252df6ec11f3"},
+    "prepared/askubuntu/a02/population/audit.json": {"bytes": 7024328, "sha256": "fb708a60c06f3d3bdc7279fa64f1aa1787b1af9205770cdc137b07c69cb36a4a"}
+  },
+  "code": {
+    "empirical_execution/phase4/adapters.py": "7171b59802dff219636a08b53f13d8b3bdbb7bc400f5712f041280e61e8d6f0d",
+    "empirical_execution/phase3/panels.py": "bd2409958ac9a9e27faf463b44b2f839260a3195c7cde32fb3bfb76aeb14a04b",
+    "empirical_execution/phase3/run_preparation.py": "0408e0be569d7cd7c3fa252a01e651b542de551c3073b54a108d8e84d670373a"
+  }
+}

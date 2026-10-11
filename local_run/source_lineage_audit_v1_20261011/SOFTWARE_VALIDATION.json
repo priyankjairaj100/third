@@ -1,0 +1,14 @@
+{
+  "checked_at_utc": "2026-10-11T14:44:40.793592+00:00",
+  "evidence_role": "software_fixtures_only",
+  "independent_read_only_review": "runtime_qualification: no blocker found; all 8 tests and bash -n independently passed",
+  "remote_audit_executed": false,
+  "schema": "third-source-lineage-software-validation-v1",
+  "slurm_bash_syntax_passed": true,
+  "source_or_cache_acceptance": false,
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s local_run/source_lineage_audit_v1_20261011 -p test_audit.py",
+    "count": 8,
+    "passed": true
+  }
+}

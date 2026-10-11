@@ -1,0 +1,31 @@
+{
+  "files": {
+    "README.md": {
+      "bytes": 4496,
+      "sha256": "a1880954c92d649fcbdb74296405173fc59e67ff8e2d37976d50460bd67c6a07"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 584,
+      "sha256": "97bdcb88f1920f43fb010d687e95a1c259e246bef6a96072870b5c60143165b4"
+    },
+    "audit.sbatch": {
+      "bytes": 1720,
+      "sha256": "72083e80bf29be0181e2bf921e5725a62f4c0392aa4bbaadbe29f633c19c4fdf"
+    },
+    "audit_source.py": {
+      "bytes": 16882,
+      "sha256": "8d79b30dd9a66b9741fd6f3631ec3a2f51b79c4862891823d4eb8e03d2dc39e4"
+    },
+    "expectations.json": {
+      "bytes": 2028,
+      "sha256": "1fc0a09299e31254e282c9c06bf5520ac52c7c2c4c03d851a4005680fdd8a844"
+    },
+    "test_audit.py": {
+      "bytes": 5923,
+      "sha256": "7b5d87a49d24ce58426dad71c8c9e965bd97590275f7888b715ea91d83580863"
+    }
+  },
+  "manifest_self_excluded": true,
+  "purpose": "prospective code binding; root manifest SHA must be recorded separately for a launch",
+  "schema": "third-source-lineage-package-manifest-v1"
+}
