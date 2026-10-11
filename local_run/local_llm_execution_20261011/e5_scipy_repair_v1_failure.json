@@ -1,0 +1,13 @@
+{
+  "schema": "third-scipy-repair-preflight-failure-v1",
+  "job_id": 13370,
+  "state": "FAILED",
+  "exit_code": "2:0",
+  "elapsed_seconds": 1,
+  "error": "ambiguous_distribution_RECORD",
+  "pip_install_attempts": 0,
+  "environment_changed": false,
+  "cause": "setuptools distribution file list contains bundled vendor distribution RECORD files; inventory must address its owning metadata directory",
+  "result_sha256": "d21d1178ed3ed16ba170cee3f1479845947480547f7c435d51a711b4c93cfd48",
+  "decision": "Preserve v1 failure and create separately versioned inventory correction with a regression fixture. No retry of this package."
+}

@@ -1,0 +1,45 @@
+{
+  "all_7_v1_members_rechecked_unchanged": true,
+  "code_bindings": {
+    "expectations.json": {
+      "bytes": 2303,
+      "sha256": "8027ecea219cebc32ffe585d8b8877c1a10ccddb2dc5ab04a027c46ded1518d1"
+    },
+    "repair.py": {
+      "bytes": 11989,
+      "sha256": "22708273510fcf302e8424c7da1b29b5d72a05a7fa48cc016e585ae2b450f23e"
+    },
+    "repair.sbatch": {
+      "bytes": 1731,
+      "sha256": "688041796b83f09a37c1b5e60d401eae9f3d672bafc6e7b6083e509de8108766"
+    },
+    "requirements.txt": {
+      "bytes": 93,
+      "sha256": "d13c3aff453c9c1df6f54e7d4fe34266868a3db19b1810e0d77a9af856c6154a"
+    },
+    "test_record.py": {
+      "bytes": 2975,
+      "sha256": "9a07a0df8e45a35d312b4c59a49c4a81ec84a6987bcff1eb318c36b0fae5839f"
+    }
+  },
+  "environment_modified": false,
+  "independent_review": {
+    "additional_read_only_probe": "Actual local setuptools with13 candidate RECORD paths selected its own RECORD",
+    "concrete_blockers": [],
+    "reviewer": "source_gate_audit",
+    "tests_passed": 2
+  },
+  "installer_executed": false,
+  "passed": true,
+  "python_syntax": "repair.py and test_record.py AST parse passed",
+  "python_used_for_tests": "3.14.2",
+  "schema": "third-e5-scipy-import-repair-software-validation-v2",
+  "scope": "Software ownership regression and static review only; actual installation and frozen import repair remain unexecuted here.",
+  "shell_syntax": "bash -n passed",
+  "test_scope": "Owning metadata directory identity, multiple vendored RECORDs, raw owning RECORD change and explicit missing-owner handling only",
+  "tests_discovered": 2,
+  "tests_passed": 2,
+  "tests_skipped": 0,
+  "v1_manifest_sha256_preserved": "386ec55273d9a4c0818739f48a54206f95277c6c6e17ce64539bef46e26fd632",
+  "validation_seconds": 0.1386940840166062
+}
