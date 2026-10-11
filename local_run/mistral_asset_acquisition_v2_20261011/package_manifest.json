@@ -1,0 +1,39 @@
+{
+  "asset_expectations_sha256": "e79a30e87ece097cea63dd1e3af8e977970f7715abf55c3b858b4180146460b5",
+  "files": {
+    "README.txt": {
+      "bytes": 2833,
+      "sha256": "64f70a49337f5992bebccf422ae872f63cb47135dd17ac4b1a6d52cda234278a"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 2160,
+      "sha256": "ce7667b3fad5d9d99c85e8df0cdbb00b5f01387e18e1f7e31fd3455fdcad6fbf"
+    },
+    "acquire.py": {
+      "bytes": 7346,
+      "sha256": "309e3d2ca1d8213930643a29b505b15dda16224b4b12d4e505a5b495fe9a2c5c"
+    },
+    "acquire.sbatch": {
+      "bytes": 1217,
+      "sha256": "344358cbf4b404af84399ba262db2003a30c8bf35d1f8db85bc8e454b45f716b"
+    },
+    "grant_quota.py": {
+      "bytes": 3424,
+      "sha256": "89684115a60675a63a5618d08a5688cd10222a4f04925e8491c5a3b5640adc2f"
+    },
+    "package_check.py": {
+      "bytes": 958,
+      "sha256": "976f0a79188ca310034cb5740a9713f4eb2cab2a47eb9ff517ec21b298204ffb"
+    },
+    "quota_grants.py": {
+      "bytes": 9454,
+      "sha256": "dc7b31d9ed6a4b5dc7a8a5a8e66ffeaad31e057747832641694234c0ed4093bc"
+    },
+    "test_quota.py": {
+      "bytes": 10303,
+      "sha256": "ed9f601c81f89cd64a769daebe6eb40a7cf2b29b344b6100fcdb0a9402b97fa7"
+    }
+  },
+  "schema": "third-mistral-acquisition-package-v2",
+  "self_excluded": true
+}

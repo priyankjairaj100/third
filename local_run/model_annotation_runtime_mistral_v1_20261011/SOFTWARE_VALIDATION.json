@@ -1,0 +1,65 @@
+{
+  "actual_pinned_tokenizer_regression_executed": true,
+  "cluster_mistral_tests_executed": false,
+  "created_utc": "2026-10-11T16:04:29.088851+00:00",
+  "discovered": 46,
+  "downloads_performed_by_validation": false,
+  "errors": 0,
+  "failures": 0,
+  "log_sha256": "e9ea5d7bcb10a842fab0cc9378e9a4e718a0adc640e8fb262d2bfad2f3820917",
+  "model_inference_performed": false,
+  "packages": {
+    "jsonschema": "4.25.1",
+    "lm-format-enforcer": "0.11.3",
+    "tokenizers": "0.22.2",
+    "transformers": "4.57.6"
+  },
+  "passed": 44,
+  "platform": "Darwin",
+  "python": "3.14.2",
+  "schema": "third-mistral-v1-local-software-validation",
+  "scope": "Local software and actual pinned tokenizer validation only; two actual PyTorch processor integrations and CUDA inference remain pending. Slurm preflight requires all46 tests with zero skips.",
+  "seconds": 11.144866041955538,
+  "skipped": [
+    {
+      "reason": "Actual torch tensor integration requires the pinned runtime environment; no package installation",
+      "test": "test_real_torch_processor_ties_mask_order_and_history (test_runner.GreedyGuardTests.test_real_torch_processor_ties_mask_order_and_history)"
+    },
+    {
+      "reason": "Actual torch/Transformers processor integration requires the pinned runtime environment",
+      "test": "test_real_transformers_prefix_then_custom_smoke (test_runner.GreedyGuardTests.test_real_transformers_prefix_then_custom_smoke)"
+    }
+  ],
+  "software_source_sha256": {
+    "audit_pilot_artifacts.py": "33df2e4682f771d9b1ae4e2397b5bdde40466f6e24bbf187f1272a6af45ff594",
+    "bounded_reason.py": "6f5ce5b653813d705b0918a299d8e61625e4dd02bb7c3cc260b50246f905ccc7",
+    "prepare_pilot.py": "28139cd7e1b7f2faa8b97027b4090f3e5c42b61a8cd151c29574e2f56aa3b3fd",
+    "run_pilot.py": "fe3de36730663f160057d633f5cb4db3a60877b10a533d824a5b0e44069f36df",
+    "test_runner.py": "ce7065acd49349ce30f82fb60b2e0c78e203d6e902494772d6da5de7c0144a9f"
+  },
+  "tokenizer_acquisition_receipt_sha256": "20c6d23b2c46802903d1647e98dbd14cacd6a57bce322794dd9b1f0b5eb75b02",
+  "tokenizer_assets": {
+    "all_Git_blob_SHA1_and_sizes_verified": true,
+    "bytes": 15076702,
+    "files": 8,
+    "model_weights_downloaded": false
+  },
+  "tokenizer_warning": {
+    "diagnosis": {
+      "code_sha256": "a2d62f7e5d58f908b3a2d0b24ce6329e1e52c815082cedde29a5c007a23e7e83",
+      "conclusion": "The pinned tokenizer already contains the regex this runtime would install. Warning is a broad detection false positive for this pinned asset; no tokenizer flag or source change is needed.",
+      "created_utc": "2026-10-11T16:05:36.318275+00:00",
+      "installed_transformers_version": "4.57.6",
+      "native_split_behavior": "Isolated",
+      "pinned_native_regex_equals_runtime_proposed_fix_regex": true,
+      "production_sources_changed": false,
+      "schema": "third-mistral-regex-warning-diagnosis-v1",
+      "tokenizer_file_sha256": "e11c71726323d33da7b8d6f6f269f1988931c0a52b7122bcdd8c05042974e0db",
+      "tokenizer_files_changed": false,
+      "warning_detection": "Vocabulary over100000 plus local Mistral config; warning branch does not compare actual existing regex."
+    },
+    "observed": "Transformers reported a potentially incorrect Mistral regex.",
+    "private_diagnosis_sha256": "651a53cb642e99fc069d035e079b223d9a16d9b922ff627e0a6a1cd8293977ea",
+    "requires_production_tokenizer_change": false
+  }
+}

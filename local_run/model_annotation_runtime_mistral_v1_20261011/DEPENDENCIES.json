@@ -1,0 +1,28 @@
+{
+  "schema": "third-judge-dependency-reuse-mistral-v1",
+  "scope": "Reuses the unchanged dedicated v3 cluster judge environment and encoder-cuda packages already used by Qwen v5. Mistral changes are separately versioned repository Python source and model assets; no environment installation is performed. The cluster preflight must observe all pinned packages and execute actual tokenizer and torch checks.",
+  "installation_report_sha256": "df43f0a15fdd43e546c7193fa22351635a251c953e84f2a54cf835ae960711ca",
+  "audit_dependency_installation_report_sha256": "955c527887670819f493ca3b643a34cb3fa0334ab394d9a27c010193d290f304",
+  "grammar_wheel_sha256": "cf586350875def1ae7a8fba84fcbbfc8371424b6c9d05c1fcba70aa233fbf06f",
+  "audit_schema_wheel_sha256": "3fba0169e345c7175110351d456342c364814cfcf3b964ba4587f22915230a63",
+  "required_packages": {
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "lm-format-enforcer": "0.11.3",
+    "pydantic": "2.12.5",
+    "pydantic-core": "2.41.5",
+    "interegular": "0.3.3",
+    "packaging": "26.3",
+    "PyYAML": "6.0.3",
+    "jsonschema": "4.25.1",
+    "annotated-types": "0.8.0",
+    "typing-inspection": "0.4.4",
+    "attrs": "26.1.0",
+    "jsonschema-specifications": "2025.9.1",
+    "referencing": "0.37.0",
+    "rpds-py": "2026.9.1",
+    "safetensors": "0.8.0",
+    "huggingface-hub": "0.36.2"
+  }
+}

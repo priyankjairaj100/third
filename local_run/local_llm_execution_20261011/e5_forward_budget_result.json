@@ -1,0 +1,48 @@
+{
+  "schema": "third-executed-e5-forward-budget-v1",
+  "job_id": 13363,
+  "scheduler_state": "COMPLETED",
+  "scheduler_exit_code": "0:0",
+  "scheduler_elapsed_seconds": 178,
+  "passed": true,
+  "selected_documents": 16,
+  "document_encodings": 48,
+  "model_forwards": 48,
+  "chunks_processed": 216,
+  "exact_repeat_and_reverse_FP32_bytes": true,
+  "same_process_replay_only": true,
+  "peak_rss_kib": 1570656,
+  "complete_child_seconds": 177.21976112015545,
+  "full_pass_modeled_hours": {
+    "observed_max_scenario": 62.926231910910765,
+    "observed_median_scenario": 61.32200541354393,
+    "observed_min_scenario": 60.55210145750253
+  },
+  "two_pass_median_modeled_hours": 122.64401082708785,
+  "projection_is_guarantee_or_confidence_interval": false,
+  "limitations": [
+    "Only two calibration documents per batch size, repeated three times in one fresh process shared by all eight batch sizes on this node; CPU contention, frequency, node and run variability are unmeasured.",
+    "Documents above eight chunks are extrapolated as their exact within-record size-eight batches plus remainder; no long document was encoded in this bounded test.",
+    "Per-chunk nonforward extrapolation includes timing checks and duplicate padding but approximates per-document costs; it is not a statistically fitted scaling model.",
+    "Full-cache serialization, calibration gathers, extra replay acceptance checks, and future filesystem contention are not measured. Qualification fixed costs cannot guarantee their coverage.",
+    "Minimum and maximum are observed sample scenarios, not confidence intervals or safe scheduler limits; no full nonresumable job should launch solely on a point estimate."
+  ],
+  "local_review": {
+    "all16_copied_files_hash_verified": true,
+    "all_result_artifact_bindings_verified": true,
+    "all_three_vector_files_byte_identical": true,
+    "48_forward_ledger_shapes_and_repeats_checked": true,
+    "projection_arithmetic_independently_recomputed": true
+  },
+  "source_bindings": {
+    "budget/result.json": "ab461ca5540778e6427a73630ef3d7aacc96e58eaaadc8a35eb8d28efa5a2181",
+    "budget/budget_projection.json": "a57c7b22a6439dc8abe46884b5cce62df66995526c4706e5a04642d9f577acd3",
+    "process_completion.json": "c08415f79959ef4215f2ce6c44bd13c0f64afa3a105dc0e2d69ca1dbf1d82e18",
+    "terminal_inventory.json": "7903faf846d3c6d7ec0accb7e191933185345f0718845fdad1828ef266651bfa"
+  },
+  "execution_commit": "99a8b6e6694ad5b9f2bed43f252c3ceb1c01a8be",
+  "decision": "Do not launch the unchanged nonresumable full writer under a24hour limit. Prepare separately versioned sharding preserving exact frozen per-document CPU computation and qualify against golden unchanged writer before fulllaunch.",
+  "complete_population_cache_created": false,
+  "human_reviews_used": 0,
+  "confirmatory_study_ready": false
+}

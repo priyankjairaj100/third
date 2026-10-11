@@ -1,0 +1,59 @@
+{
+  "cluster_execution_performed_by_this_validation": false,
+  "created_utc": "2026-10-11T16:09:52.913630+00:00",
+  "independent_read_only_review": "Clear; separate source_gate_audit review and12 tests passed",
+  "network_or_model_calls": 0,
+  "platform": "macOS-13.0-arm64-arm-64bit-Mach-O",
+  "python": "3.14.2",
+  "quota_observation_is_reservation": false,
+  "schema": "third-mistral-acquisition-software-validation-v2",
+  "scope": [
+    "Synthetic exact request/job/nonce/file binding",
+    "120-second grant and300-second request limits with5-second clock tolerance",
+    "Initial total plus8GiB and per-file plus8GiB quota arithmetic",
+    "Exact observed login-ext4 versus compute-NFS mapping",
+    "Atomic exclusive request/grant publication",
+    "Worker receipt acceptance and raw quota provenance",
+    "One-shot mocked login controller grant followed by idle; no overwrite",
+    "Strict JSON and finite timestamp checks"
+  ],
+  "shell_syntax": "bash -n acquire.sbatch passed",
+  "software_tests": {
+    "command": "python3 -B -m unittest discover -s . -p test_quota.py",
+    "discovered": 12,
+    "passed": 12,
+    "skipped": 0,
+    "status": "passed"
+  },
+  "source_bindings": {
+    "README.txt": {
+      "bytes": 2833,
+      "sha256": "64f70a49337f5992bebccf422ae872f63cb47135dd17ac4b1a6d52cda234278a"
+    },
+    "acquire.py": {
+      "bytes": 7346,
+      "sha256": "309e3d2ca1d8213930643a29b505b15dda16224b4b12d4e505a5b495fe9a2c5c"
+    },
+    "acquire.sbatch": {
+      "bytes": 1217,
+      "sha256": "344358cbf4b404af84399ba262db2003a30c8bf35d1f8db85bc8e454b45f716b"
+    },
+    "grant_quota.py": {
+      "bytes": 3424,
+      "sha256": "89684115a60675a63a5618d08a5688cd10222a4f04925e8491c5a3b5640adc2f"
+    },
+    "package_check.py": {
+      "bytes": 958,
+      "sha256": "976f0a79188ca310034cb5740a9713f4eb2cab2a47eb9ff517ec21b298204ffb"
+    },
+    "quota_grants.py": {
+      "bytes": 9454,
+      "sha256": "dc7b31d9ed6a4b5dc7a8a5a8e66ffeaad31e057747832641694234c0ed4093bc"
+    },
+    "test_quota.py": {
+      "bytes": 10303,
+      "sha256": "ed9f601c81f89cd64a769daebe6eb40a7cf2b29b344b6100fcdb0a9402b97fa7"
+    }
+  },
+  "v1_preserved": true
+}
