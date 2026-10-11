@@ -1,0 +1,12 @@
+{
+  "schema": "third-mistral-asset-metadata-source-v1",
+  "retrieved_utc": "2026-10-11T15:47:48.282801+00:00",
+  "url": "https://huggingface.co/api/models/mistralai/Mistral-Nemo-Instruct-2407/revision/04d8a90549d23fc6bd7f642064003592df51e9b3?blobs=true",
+  "raw_file": "hub_model_metadata.raw.json",
+  "raw_sha256": "deb3c67bda9cbf60303c64dc4ce630e35755f13de524913d19919cce20a1819f",
+  "raw_bytes": 10978,
+  "model_id": "mistralai/Mistral-Nemo-Instruct-2407",
+  "revision": "04d8a90549d23fc6bd7f642064003592df51e9b3",
+  "weights_downloaded_by_this_step": false,
+  "scope": "Official model repository metadata at pinned revision; local byte identity must be verified after acquisition. Ordinary files use Git blob SHA1; weights use published LFS SHA256. No claim that metadata checks establish annotation correctness."
+}
