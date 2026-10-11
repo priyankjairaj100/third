@@ -1,0 +1,21 @@
+{
+  "files": {
+    "empirical_execution/phase3/calibration.py": {
+      "bytes": 26084,
+      "sha256": "2a6ce3b19de3063f32b010ebfa19ffc4003ffc09acfc41a1ead4f74bc6c81b13"
+    },
+    "empirical_execution/phase3/panels.py": {
+      "bytes": 20216,
+      "sha256": "bd2409958ac9a9e27faf463b44b2f839260a3195c7cde32fb3bfb76aeb14a04b"
+    },
+    "empirical_execution/phase3/run_preparation.py": {
+      "bytes": 11567,
+      "sha256": "0408e0be569d7cd7c3fa252a01e651b542de551c3073b54a108d8e84d670373a"
+    },
+    "empirical_execution/phase4/embeddings.py": {
+      "bytes": 27522,
+      "sha256": "bb1af9a6583a90372f7641f406afdb418017797cc8d86ee67f117f215c65d2c1"
+    }
+  },
+  "schema": "third-e5-forward-budget-frozen-code-v1"
+}

@@ -1,0 +1,35 @@
+{
+  "files": {
+    "README.md": {
+      "bytes": 4798,
+      "sha256": "cb8d2bc1df5e27a841a40d8fca36c4e6ac3775cd57da17ba127c0b7e20fa7685"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 1104,
+      "sha256": "339a71317bd71811b91b2f64a24c45a6038d17b1d3e57a229dddbf7fa39a2fde"
+    },
+    "budget.py": {
+      "bytes": 29194,
+      "sha256": "75692382e73234454d0663030a63dfebae4dc2edfb379ba885a610c6b5e3a78d"
+    },
+    "budget.sbatch": {
+      "bytes": 3301,
+      "sha256": "9361033cb65bd8a493ad863a646b3d4a927dea4e9ecfb5ef825649afbb0e5518"
+    },
+    "expectations.json": {
+      "bytes": 2572,
+      "sha256": "37011e050216b95583b4836b337c6267551b90973a5868c32f49f87ce8dd037b"
+    },
+    "frozen_code.json": {
+      "bytes": 724,
+      "sha256": "948ac38e93e66526c8da9eaf0760844a6718d6f3b3be354e14cfd3df2325dc69"
+    },
+    "test_budget.py": {
+      "bytes": 7959,
+      "sha256": "933485cbde5ad2b97ab2ddc68fd24d0bdba7fe03ed263766ec460b7889417394"
+    }
+  },
+  "manifest_self_excluded": true,
+  "purpose": "Bounded prospective CPU throughput qualification binding; launch requires this manifest SHA separately",
+  "schema": "third-e5-forward-budget-package-manifest-v1"
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "third-mistral-acquisition-v1-failure",
+  "job_id": 13361,
+  "state": "FAILED",
+  "exit_code": "2:0",
+  "duration_seconds": 1,
+  "verified_files": 0,
+  "downloaded_bytes": 0,
+  "error": "Cache filesystem does not match quota device",
+  "diagnostic_job_id": 13362,
+  "diagnostic_state": "FAILED",
+  "diagnostic_exit_code": "1:0",
+  "diagnosis": "Compute /nfs_home is the csis.mn1:/nfs_home NFS export, while login uses /dev/sdb1. Compute quota RPC unavailable. Root authenticated SSH remained successful.",
+  "next_action": "New version with login-side per-file quota grants and explicit NFS mapping; retain original failure and empty cache.",
+  "human_reviews_used": 0,
+  "confirmatory_study_ready": false,
+  "raw_transport_sha256": "4eb0e6cb2dd9508dbdca69d85014db09672fef85fdcc9e5d4a96a7450e655f0f"
+}

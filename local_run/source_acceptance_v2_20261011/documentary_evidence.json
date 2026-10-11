@@ -1,0 +1,103 @@
+{
+  "created_utc": "2026-10-11T15:54:53.109756+00:00",
+  "hash_scope": "Hashes of these observation records identify our saved evidence, not publisher signatures or independently verified historical publisher bytes.",
+  "observations": [
+    {
+      "corrected_release_mirror_url": "https://archive.org/details/stackexchange_20240402_bis",
+      "corrected_release_staff_link": "https://meta.stackexchange.com/a/398606",
+      "direct_http_receipt": {
+        "error": "HTTP Error 403: Forbidden",
+        "error_type": "HTTPError",
+        "id": "release_index",
+        "retrieved_utc": "2026-10-11T15:52:14.670566+00:00",
+        "url": "https://meta.stackexchange.com/questions/224873/all-stack-exchange-data-dump-releases"
+      },
+      "id": "release_index",
+      "limitation": "Direct HTML request returned403; no retry. The recorded observation is not an exact publisher-page byte capture.",
+      "observation_method": "web.run rendered page inspection on 2026-10-11",
+      "observed_utc": "2026-10-11T15:54:53.109756+00:00",
+      "paraphrase": "The corrected April 2024 XML row identifies a company torrent with prefix 2ef5246c and links its community mirror to stackexchange_20240402_bis. The initial buggy release is listed separately with torrent prefix ab12faae.",
+      "raw_publisher_page_sha256": null,
+      "source_role": "community-maintained index hosted on Stack Exchange",
+      "url": "https://meta.stackexchange.com/questions/224873/all-stack-exchange-data-dump-releases"
+    },
+    {
+      "direct_http_receipt": {
+        "error": "HTTP Error 403: Forbidden",
+        "error_type": "HTTPError",
+        "id": "publisher_correction",
+        "retrieved_utc": "2026-10-11T15:52:15.061726+00:00",
+        "url": "https://meta.stackexchange.com/questions/398279/shifting-the-data-dump-schedule-a-proposal/398606"
+      },
+      "id": "publisher_correction",
+      "limitation": "Direct HTML request returned403; no retry. The recorded observation is not an exact publisher-page byte capture.",
+      "observation_method": "web.run rendered page inspection on 2026-10-11",
+      "observed_utc": "2026-10-11T15:54:53.109756+00:00",
+      "paraphrase": "The staff update dates the corrected batch completion to April 7, 2024 at 19:38 UTC; most corrected files uploaded April 6 and the remainder April 7.",
+      "raw_publisher_page_sha256": null,
+      "source_role": "Stack Exchange staff answer by Aaron Bertrand",
+      "url": "https://meta.stackexchange.com/questions/398279/shifting-the-data-dump-schedule-a-proposal/398606"
+    },
+    {
+      "direct_http_receipt": {
+        "error": "HTTP Error 403: Forbidden",
+        "error_type": "HTTPError",
+        "id": "publisher_tag_note",
+        "retrieved_utc": "2026-10-11T15:52:15.158738+00:00",
+        "url": "https://meta.stackexchange.com/questions/398983/tags-column-of-posts-table-changed-delimiter-format-many-historical-queries-bro/398984"
+      },
+      "id": "publisher_tag_note",
+      "limitation": "Direct HTML request returned403; no retry. The recorded observation is not an exact publisher-page byte capture.",
+      "observation_method": "web.run rendered page inspection on 2026-10-11",
+      "observed_utc": "2026-10-11T15:54:53.109756+00:00",
+      "paraphrase": "The available first-quarter 2024 dump retains pipe-delimited tags; the delimiter fix was to appear in a subsequent dump. Pipe tags therefore do not alone identify the initial buggy release.",
+      "raw_publisher_page_sha256": null,
+      "source_role": "Stack Exchange staff answer by Aaron Bertrand",
+      "url": "https://meta.stackexchange.com/questions/398983/tags-column-of-posts-table-changed-delimiter-format-many-historical-queries-bro/398984"
+    },
+    {
+      "direct_http_receipt": {
+        "bytes": 90247,
+        "content_type": "text/html; charset=utf-8",
+        "final_url": "https://stackoverflow.com/help/licensing",
+        "http_status": 200,
+        "id": "publisher_licensing",
+        "private_file": "publisher_licensing.html",
+        "retrieved_utc": "2026-10-11T15:52:15.259787+00:00",
+        "sha256": "a629cafd16a74d0d4e4560abb6dca46e09b1c16d2eeb410f04dace053828ee31",
+        "url": "https://stackoverflow.com/help/licensing"
+      },
+      "id": "publisher_licensing",
+      "observation_method": "web.run rendered page inspection on 2026-10-11",
+      "observed_utc": "2026-10-11T15:54:53.109756+00:00",
+      "paraphrase": "Public contributions created on or after May 2, 2018 use CC BY-SA 4.0; individual post revision license information is available through the timeline.",
+      "source_role": "Stack Overflow official help policy",
+      "url": "https://stackoverflow.com/help/licensing"
+    },
+    {
+      "direct_http_receipt": {
+        "bytes": 51645,
+        "content_type": "text/html",
+        "final_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+        "http_status": 200,
+        "id": "license_legalcode",
+        "private_file": "license_legalcode.html",
+        "retrieved_utc": "2026-10-11T15:52:15.904600+00:00",
+        "sha256": "47c0a954c88d793bdefe92fb007ae3c038fb3807f1a27083433d01aa7542c0d8",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en"
+      },
+      "id": "license_legalcode",
+      "observation_method": "web.run rendered page inspection on 2026-10-11",
+      "observed_utc": "2026-10-11T15:54:53.109756+00:00",
+      "paraphrase": "For sharing, preserve supplied attribution and licensing notices, provide the source URI where practicable, identify modifications, and satisfy applicable ShareAlike terms.",
+      "source_role": "Creative Commons license legal code",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en"
+    }
+  ],
+  "private_retrieval_receipts": {
+    "bytes": 1762,
+    "path": "local_workspace/reports/source-acceptance-v2-20261011/a01/retrieval_receipts.json",
+    "sha256": "61b2b535d574ce1c19d7465eaae74895ba274b7a1c2666b4520634a2f0c739db"
+  },
+  "schema": "third-source-documentary-evidence-v2"
+}

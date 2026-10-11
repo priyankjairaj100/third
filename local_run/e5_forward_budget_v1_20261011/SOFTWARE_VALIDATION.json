@@ -1,0 +1,31 @@
+{
+  "actual_140250_row_census_selection_and_cost_checks_passed": true,
+  "actual_calibration_candidates_by_chunks": {
+    "1": 12731,
+    "2": 4364,
+    "3": 1489,
+    "4": 711,
+    "5": 424,
+    "6": 262,
+    "7": 203,
+    "8": 130
+  },
+  "all_four_copied_census_file_bindings_verified": true,
+  "all_four_frozen_code_bindings_verified": true,
+  "checked_at_utc": "2026-10-11T15:58:18.895811+00:00",
+  "downloads_performed": false,
+  "evidence_role": "tiny_software_fixtures_plus_read_only_passed_census_selection",
+  "frozen_artifacts_modified": false,
+  "independent_driver_review": "Runtime qualification agent found no execution blocker; one-process wording corrected.",
+  "model_forwards": 0,
+  "models_instantiated": 0,
+  "remote_qualification_executed": false,
+  "schema": "third-e5-forward-budget-software-validation-v1",
+  "slurm_bash_syntax_passed": true,
+  "source_or_cache_acceptance": false,
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest discover -s local_run/e5_forward_budget_v1_20261011 -p test_budget.py",
+    "count": 10,
+    "passed": true
+  }
+}

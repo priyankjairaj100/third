@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-10-11T15:54:53.109756+00:00",
+  "files": {
+    "README.md": {
+      "bytes": 3345,
+      "sha256": "f84c09100a46bfc3b7cd573befd64ce32fa2ad4d5c2e04174f5df56a23ccc78a"
+    },
+    "documentary_evidence.json": {
+      "bytes": 6029,
+      "sha256": "c2b59aed24edd08ff6de13e7eeb63e7bc2f925b788beac883aaa504d3f040eb4"
+    },
+    "qualification.json": {
+      "bytes": 7325,
+      "sha256": "a8ee71c5b95318d0496ed26b3987627db36e309cd83f51432a7a42d3635f2e98"
+    }
+  },
+  "schema": "third-source-qualification-package-v2"
+}
