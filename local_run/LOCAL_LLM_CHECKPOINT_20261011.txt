@@ -1,11 +1,11 @@
 THIRD — LOCAL / CLUSTER CHECKPOINT
-Updated 2026-10-13T10:53:19.902581+00:00
+Updated 2026-10-13T10:57:02.859730+00:00
 
 CURRENT STATUS
 Authenticated cluster access was restored with one authorized login.
 Both GPU judge pilots and the SciPy repair are complete and independently audited.
 CPU qualification job 13495: COMPLETED.
-Full array launched: False.
+Full array launched: True.
 Human reviews used: 0. Threshold selected: false. Confirmatory readiness: false.
 
 VERIFIED PROGRESS
@@ -34,7 +34,7 @@ ACTIVE EXECUTION
   "attempt": "a01",
   "status": "passed_and_independently_reviewed",
   "state": "COMPLETED",
-  "last_observed_elapsed_seconds": 249,
+  "last_observed_elapsed_seconds": 526,
   "completed_child_receipts": 9,
   "elapsed_seconds": 526,
   "exit_code": "0:0",
@@ -42,14 +42,36 @@ ACTIVE EXECUTION
   "all_vector_bytes_and_logs_equal": true,
   "independent_local_review_passed": true
 }
-No full-population array submitted yet.
+{
+  "job_id": 13498,
+  "state": "RUNNING",
+  "submitted_utc": "2026-10-13T10:54:52.060299+00:00",
+  "documents": 140250,
+  "tasks": 32,
+  "max_concurrent_tasks": 8,
+  "node": "csis.cn1",
+  "cpus_per_task": 2,
+  "memory_GiB_per_task": 12,
+  "time_cap_hours_per_task": 8,
+  "encode_and_fresh_replay": true,
+  "full_plan_sha256": "857fcf65cf5a8a2e55d6abbc5b8c96335c5aca3905f701b37d9b2a51aae116f3",
+  "qualification_sha256": "bb84fc18556e6a7d57eda5fa1fffe2c9e2ca5a3f7da5e85f2b96fac11d2e484f",
+  "estimated_hours_at_eight_concurrent": 16,
+  "estimate_not_guarantee": true,
+  "assembly_submitted": false,
+  "last_observed_utc": "2026-10-13T10:56:16.879949+00:00",
+  "running_tasks": 8,
+  "pending_tasks": 24,
+  "completed_tasks": 0,
+  "terminal_dispatch_receipts": 0
+}
 
 NEXT ACTIONS
-1. Complete prospective disk-output accounting while preserving8GiBreserve; otherwise free verified disposable space before any array submission.
-2. Launch only one32-task array after fresh capacity and duplicate-job checks; each shard requires encode plus fresh replay.
-3. Require all32pairs to pass before canonical assembly and independent cache audit.
-4. Use a separately versioned calibration adapter; benchmark220405510pair census before constructing full frame.
-5. Reserve50-100human reviews until models, prompt, threshold, frame and blind audit are locked.
+1. Reconcile job13498 and its32task receipts; do not duplicate the array or retry failed shards automatically.
+2. Require every encode and fresh replay to pass, then launch separate canonical assembly after capacity review and independently audit the complete cache.
+3. Use a separate versioned calibration adapter; run bounded scoring benchmark before the220405510pair census and scientific frame construction.
+4. Freeze the substantive two-model activation plan and preserve any failed precision or stability gates.
+5. Keep the50-100author reviews unused and blinded until models, prompt, threshold, frame, seed and reporting rules are locked.
 
 Scientific plan: source-disjoint calibration,220,405,510-pair census, 20 cosine bins,
 locked two-family panel and independent validation. Reserve 100 blinded author
@@ -58,7 +80,7 @@ Failed precision gates remain failures. No model labels count as human labels.
 Original tags and exact full recomputation provide independent utility anchors.
 
 OPERATIONS AND BACKUP
-Execution commit (local/GitHub/cluster verified): 360ddda619fb4b41deaa956ef636db93efb4f3e8
+Cluster execution commit (backed up on GitHub): de9de39a1a72db40485878452561affe2fbd24aa
 https://github.com/priyankjairaj100/third
 Mac:/Users/priyankjairaj/Downloads/ACL/Three
 Cluster:/nfs_home/users/poonam/ccu-acl2027/repo
