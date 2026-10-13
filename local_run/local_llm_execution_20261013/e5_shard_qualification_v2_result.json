@@ -1,0 +1,158 @@
+{
+  "bindings": {
+    "asset_manifest": {
+      "bytes": 1624,
+      "sha256": "59fb3fb5b29dd4b752d9bf344530d932a907ce675143b47e9ba9ad4ff3151e55"
+    },
+    "asset_manifest_seal_sha256": "0877e4b010b6e39678a61ca7ce3264c84cf31e796e43e2ae94fe8f12c62b46fb",
+    "census_ledger": {
+      "bytes": 108040812,
+      "sha256": "15802ff8ae42c714b4d4799259906472dba6626c3c313dd12e758b6e349b20d9"
+    },
+    "census_result_sha256": "f56ed041f550127a0d8125fad83280ddd4d47c552d2176d351ed6ed39c0c1466",
+    "core_package_manifest_sha256": "0eb7309ea3bc4e92d37ac155eef03ce2a59a5daffefc3e3725f511de557cfa81",
+    "dispatch_package_manifest_sha256": "d68d07cae7c8d5c1640650a9464156ec9cdcd396e8f41c6af9f881e6417e3697",
+    "full_source_prepared_rows_sha256": "decd53334651c3a5bbede1e57146722e7d852f784577dff4dc93311065934419",
+    "model_weight": {
+      "bytes": 1112201288,
+      "path": "model.safetensors",
+      "sha256": "a18a44fad1d0b46ded15928144138cff1135d5cc8233bdd90be5f18822de09a7"
+    },
+    "plan": {
+      "bytes": 2049,
+      "sha256": "9a7e2e478b54fdc446d477780ee9ab62e16e2fc85c556bf25f8fcb12aeffdb14"
+    },
+    "plan_seal_sha256": "2c9b9633ae66d87a0aac3c96c82bcf7da0ab2ba54756d83164cab618fcfede7b",
+    "prepared_ascii_view": {
+      "audit.json": {
+        "bytes": 7025828,
+        "sha256": "733802fb0e0393cc7feef659d539d1663a8a4b4401b07893d94a8796753c7487"
+      },
+      "receipt.json": {
+        "bytes": 3107,
+        "sha256": "234f4e2e4abe7fe34909f16115f7f4d771729460b1b2d9800c29aec47de40498"
+      },
+      "records.jsonl": {
+        "bytes": 570048810,
+        "sha256": "c003933aa4e04cddc5fda8bfa9e0d6752c80bef92eddaf85400b29c1512d086e"
+      }
+    },
+    "raw_result": {
+      "bytes": 11974,
+      "sha256": "bb84fc18556e6a7d57eda5fa1fffe2c9e2ca5a3f7da5e85f2b96fac11d2e484f"
+    },
+    "raw_result_seal_sha256": "cc783d5a1cc62715ea738f320ef8302685b8f1adcfd96a5aaef1217dbc3421dd",
+    "runtime_fingerprint": "294e0abb55aeae76430cfca566630b737426c9fa92197707c5a2d08fa887147d",
+    "scipy_import_repair_result_sha256": "fc1c54310d6258b39179a350c6ef4e66fdd466c45cec20ca76b85c6682d47af6",
+    "source_replay_result_sha256": "c997b2ca344a5d99d4de0d450419a355c1bb655b8e11851fd3257c4936790e99"
+  },
+  "confirmatory_study_ready": false,
+  "created_utc": "2026-10-13T10:46:16.674722+00:00",
+  "evidence_role": "Bounded CPU execution qualification; independent local audit of copied terminal artifacts.",
+  "full_population_cache_acceptance": false,
+  "full_population_encoding_executed_by_this_qualification": false,
+  "full_population_launch_authorized_by_this_report": false,
+  "independent_local_checks": {
+    "additive_SciPy_repair_separately_bound_by_launch_receipt": true,
+    "all_19_golden_and_assembled_FP32_vector_bytes_equal": true,
+    "all_census_content_token_ID_hashes_and_text_hashes_match": true,
+    "all_complete_chunk_logs_equal_census_details_in_exact_subset_order": true,
+    "all_eight_shard_completion_inventories_bindings_runtime_contracts_and_work_counters_verified": true,
+    "all_four_encoded_and_replayed_vector_arrays_equal_golden_and_assembled_slices": true,
+    "all_result_evidence_bindings_and_manifest_seals_verified": true,
+    "copied_bytes_verified": 583458,
+    "copied_files_verified": 68,
+    "core_package_members_verified": 10,
+    "dispatch_package_members_verified": 7,
+    "exact_commands_cwd_and_PYTHONPATH_verified_for_nine_child_receipts": true,
+    "frozen_code_files_verified": 110,
+    "nine_distinct_child_PIDs_one_launcher": true,
+    "selection_recomputed_from_complete_140250_row_census": true,
+    "source_replay_census_budget_and_asset_binding_chain_consistent": true,
+    "weighted_whole_document_boundaries_recomputed": true
+  },
+  "job": {
+    "elapsed_seconds": 526,
+    "execution_commit": "360ddda619fb4b41deaa956ef636db93efb4f3e8",
+    "exit_code": "0:0",
+    "id": "13495",
+    "node": "csis.cn1",
+    "state": "COMPLETED"
+  },
+  "limits": [
+    "This audit used copied artifacts and the local complete token census; it did not rerun tokenization or model inference.",
+    "Complete source text and model assets remained on the cluster. Initial/final byte checks and full-frame source scans are evidenced by the sealed implementation and successful execution; local review rechecked their receipt bindings, not those remote bytes.",
+    "Census comparison binds each selected record ID, partition, text hash and complete token/chunk detail. Full native row-object lineage is supported by the runtime full-frame digest and subset audit, not a separate local replay of the complete source.",
+    "The original writer hardcodes a complete-population scope field in its manifest. Here its explicitly named engineering-subset dataset, 19-row shape and qualification receipt govern the claim; it did not encode all 140250 rows.",
+    "Phase6 acceptance was imported as a dependency preflight; its original full-cache acceptance routine was not executed.",
+    "Successful qualification permits separately gated planning for this version and runtime; full 32-shard encode/replay, canonical full assembly and subsequent versioned cache/pair-frame acceptance remain separate work.",
+    "No cross-machine identity, source publisher authenticity, semantic annotation quality, human calibration or confirmatory scientific result is established."
+  ],
+  "numerical_runtime": {
+    "attention": "eager",
+    "content_tokens_per_chunk": 256,
+    "cpu_model": "AMD EPYC 7502 32-Core Processor",
+    "deterministic_algorithms": true,
+    "device": "cpu",
+    "dtype": "float32",
+    "environment_limit": "Fingerprint covers recorded numerical runtime and package pins; SciPy 1.17.1 addition is separately evidenced by the repair receipt, not incorporated as a claim about the entire environment.",
+    "fixed_padding_length": 261,
+    "interop_threads": 1,
+    "libraries": {
+      "numpy": "2.5.3",
+      "safetensors": "0.8.0",
+      "tokenizers": "0.22.2",
+      "torch": "2.14.1+cpu",
+      "transformers": "4.57.6"
+    },
+    "mkldnn": false,
+    "model": "intfloat/multilingual-e5-base",
+    "python": "3.13.7",
+    "revision": "d128750597153bb5987e10b1c3493a34e5a4502a",
+    "seed": 0,
+    "threads": 1,
+    "within_record_chunk_batch_size": 8
+  },
+  "original_monolithic_full_replay_executed": false,
+  "original_monolithic_full_writer_executed": false,
+  "passed": true,
+  "primary_input_acceptance": false,
+  "resources": {
+    "driver_child_wall_seconds_through_exit": 524.690556652844,
+    "driver_peak_rss_kib_linux": 535956,
+    "golden_process_peak_rss_kib_linux": 1414496,
+    "interpretation": "Driver, golden and worker RSS observations are separate process measurements; Slurm batch MaxRSS is scheduler accounting. These are not summed and do not establish simultaneous full-array memory or a guaranteed allocation bound. Worker/backend timings overlap; use the 524.691-second parent-child wall timer for the complete qualification through result write and process exit.",
+    "maximum_worker_peak_rss_kib_linux": 1526172,
+    "slurm_batch_reported_MaxRSS_kib": 1666640,
+    "slurm_elapsed_seconds": 526
+  },
+  "schema": "third-e5-sharded-cpu-qualification-v2-independent-result-v1",
+  "scope": {
+    "chunks_per_pass": 149,
+    "content_tokens_per_pass": 35619,
+    "document_encodings": 57,
+    "encoded_qualification_rows": 19,
+    "forward_batches_per_pass": 28,
+    "golden_chunk_log": {
+      "bytes": 10797,
+      "sha256": "b9febaf4ebd692663dc08054242dd288a65a7c4345c1b3667ef5ff940e03aec5"
+    },
+    "golden_dataset_id": "askubuntu_engineering_subset_19_v1",
+    "golden_entrypoint": "Unchanged phase4.embeddings encode via python -m from repository cwd with PYTHONPATH restricted to empirical_execution.",
+    "golden_vectors": {
+      "bytes": 58496,
+      "sha256": "1e324f33c8eb391a0d03df8897b186ba7ec7b0bf01cbcce55f12f5ce9121b035"
+    },
+    "logical_passes": 3,
+    "selected_partition": "calibration",
+    "selection": "Two lowest fixed-salt SHA256 record keys per exact chunk count 1 through 8; one each at 9, 17 and longest calibration count 51; original source order retained.",
+    "selection_salt": "third-e5-forward-budget-v1-20261011",
+    "shards": 4,
+    "source_population_rows": 140250,
+    "subset_ordered_ids_sha256": "0e9472d2fba6d3b18ea2ecacf31914786b1a030b6b549657d9ef66abb159f01d",
+    "subset_prepared_rows_sha256": "f8aa4ffca37f741067791c30bbda412fd88a972d7192e68096009c04b63abb89",
+    "total_chunks_processed": 447,
+    "total_model_forward_batches": 84
+  },
+  "source_authenticity_verified": false
+}

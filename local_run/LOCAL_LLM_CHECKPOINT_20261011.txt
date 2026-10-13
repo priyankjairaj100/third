@@ -1,89 +1,71 @@
 THIRD — LOCAL / CLUSTER CHECKPOINT
-Updated 2026-10-11T17:08:06.813772+00:00
+Updated 2026-10-13T10:53:19.902581+00:00
 
-The local workflow is operational and the second GPU judge pilot has started.
-Full CPU encoding and substantive model calibration remain unfinished.
-Human reviews used: 0.
-
-CONNECTION STOP
-The existing SSH transport closed while submitting the corrected SciPy repair:
-exit 255, "kex_exchange_identification: Connection closed by remote host".
-No job ID or remote output was returned. No retry was attempted, following the
-saved cluster rule. Reestablish authenticated access before further remote work.
-Mistral may continue on the cluster; its current terminal status is unknown.
+CURRENT STATUS
+Authenticated cluster access was restored with one authorized login.
+Both GPU judge pilots and the SciPy repair are complete and independently audited.
+CPU qualification job 13495: COMPLETED.
+Full array launched: False.
+Human reviews used: 0. Threshold selected: false. Confirmatory readiness: false.
 
 VERIFIED PROGRESS
-- Qwen pilot 13353: 44 valid calls, no retries, truncation or runtime errors.
-  One of four swaps changed positive to nonpositive. This is engineering evidence.
-- Source-v2 dossier: a documentary bridge now connects the exact mirror to the
-  corrected April 2024 release, supported by byte-identical preparation replay.
-  The adapter reports zero ambiguous legacy notices. This qualifies separate v2
-  development, not original human gates or blanket content redistribution.
-- CPU timing 13363: completed 0:0 in 178 seconds; 48 forwards and 216 chunks on
-  16 real records. Repeated/reversed vectors were byte-identical in one process.
-  Modeled full encoding: 61.32 CPU-hours per pass, 122.64 for two. Not guarantees.
-- Mistral acquisition 13364: completed 0:0 in 1,478 seconds. All 13 files,
-  totaling 24,510,683,806 bytes, verified; 14 quota receipt chains checked.
-  Terminal soft-quota headroom was 14,250,110,976 bytes, not a reservation.
+- Mistral pilot 13368: COMPLETED 0:0 in 887 seconds. All 44 calls valid;336 copied files checked.
+  Qwen pilot 13353 also has44 valid calls. These are exposed engineering examples.
+  Across 40 shared canonical pairs:0 joint positives,3 binary disagreements,
+  30 category disagreements. These results do not establish semantic accuracy.
+- SciPy repair 13490: COMPLETED 0:0 in 10 seconds; only pinned SciPy 1.17.1 added.
+  Existing 38 distribution versions and owning RECORD hashes unchanged.
+  ResultSHA: fc1c54310d6258b39179a350c6ef4e66fdd466c45cec20ca76b85c6682d47af6
+- Original qualification 13491 failed before model loading because direct-file
+  execution shadowed installed requests with phase4/requests.py. Probe 13493
+  confirmed the cause. Both failure and original package remain preserved.
+- Version 2 uses module execution with verified cwd/PYTHONPATH;30 core and 9 dispatch
+  software tests and independent review pass. All 110 frozen source files unchanged.
+  CoreSHA:0eb7309ea3bc4e92d37ac155eef03ce2a59a5daffefc3e3725f511de557cfa81
+  DispatchSHA:d68d07cae7c8d5c1640650a9464156ec9cdcd396e8f41c6af9f881e6417e3697
+- Full source preparation was previously replayed byte-for-byte. Census covers
+  all 140,250 records and 312,159 full-text chunks. Original monolithic full encoding
+  has not run. Sharded execution requires all encoded rows and fresh replays.
 
-CURRENT JOBS AND FAILURES
-Mistral pilot 13368 was last observed RUNNING on csis.cn3 at
-2026-10-11T16:41:32.622861+00:00, elapsed 3m25s. All 46 cluster tests passed
-without skips; 2 of 44 response rows existed. No final result has been inspected.
-It uses 40 exposed engineering pairs plus four swaps. Do not duplicate this job.
-Execution commit: a32795d7db4cf5c2a6684552718659a442ddc972.
+ACTIVE EXECUTION
+{
+  "job_id": 13495,
+  "package": "e5_sharded_cpu_v2_20261013",
+  "attempt": "a01",
+  "status": "passed_and_independently_reviewed",
+  "state": "COMPLETED",
+  "last_observed_elapsed_seconds": 249,
+  "completed_child_receipts": 9,
+  "elapsed_seconds": 526,
+  "exit_code": "0:0",
+  "result_sha256": "bb84fc18556e6a7d57eda5fa1fffe2c9e2ca5a3f7da5e85f2b96fac11d2e484f",
+  "all_vector_bytes_and_logs_equal": true,
+  "independent_local_review_passed": true
+}
+No full-population array submitted yet.
 
-CPU qualification 13366 failed before model forwards because SciPy was absent.
-Repair-v1 job 13370 then failed before installation: its inventory mistook
-bundled setuptools RECORD files for competing installation metadata.
-Both failed attempts and their packages are preserved.
+NEXT ACTIONS
+1. Complete prospective disk-output accounting while preserving8GiBreserve; otherwise free verified disposable space before any array submission.
+2. Launch only one32-task array after fresh capacity and duplicate-job checks; each shard requires encode plus fresh replay.
+3. Require all32pairs to pass before canonical assembly and independent cache audit.
+4. Use a separately versioned calibration adapter; benchmark220405510pair census before constructing full frame.
+5. Reserve50-100human reviews until models, prompt, threshold, frame and blind audit are locked.
 
-Repair v2 fixes that inventory bug; two regression fixtures and independent
-review passed. It adds only pinned SciPy 1.17.1, compares all existing versions
-and available owning RECORD hashes, and checks frozen encoder versions/imports.
-Its submission was interrupted by the SSH failure; no job ID was received.
-Manifest SHA256:
-9110c05b7c48cbde819c8e3b40b5a9ad9cb7370d85f849bc2abbf1fd335b5d03
+Scientific plan: source-disjoint calibration,220,405,510-pair census, 20 cosine bins,
+locked two-family panel and independent validation. Reserve 100 blinded author
+reviews (80 probability + 20 challenge), or 50 (40 + 10) chosen before first response.
+Failed precision gates remain failures. No model labels count as human labels.
+Original tags and exact full recomputation provide independent utility anchors.
 
-Full encoding: NOT LAUNCHED. Core software tests (28) and dispatch tests (9) pass,
-but real-model shard qualification has not passed. The plan is 32 whole-record
-shards, at most eight concurrent, each with a fresh replay. All 140,250 records
-and full text remain in scope. Software tests do not establish numerical parity.
-
-RESUME IN ORDER
-1. After access is restored, read job 13368's scheduler and receipts. Check for
-   any repair-v2 launch receipt before submitting anything; avoid duplicate jobs.
-2. Fast-forward the clean cluster checkout. Submit repair v2 into a new private
-   directory only if absent, and independently verify its completed receipt.
-3. Bind that repair receipt to a fresh a02 qualification. Require exact original-
-   writer vectors/logs on 19 genuine records and all four fresh shard replays.
-4. Only after independent review, generate and inspect the full plan, then launch
-   one 32-task array with at most eight concurrent tasks on the qualified node.
-   Recheck quota for a 4 GiB output allowance plus 8 GiB reserve before launch.
-5. After every encode/replay pair passes, assemble the new cache and qualify a
-   separate v2 adapter. Do not manufacture v1 cache or three-human acceptance.
-6. Budget the 220,405,510-pair calibration census, then construct the full frame
-   and execute the locked two-model selection/validation. Retain failed gates.
-7. Reserve your 50–100 reviews for the later blinded audit: target 80 probability
-   samples plus 20 challenges, or 40+10 chosen before any human response.
-
-Full encoding will be an extended cluster run; launch is not completed evidence.
-Original tags and exact full recomputation remain independent utility anchors.
-Threshold selected: false. Model calibration: false. Human reviews used: 0.
-Full cache acceptance: false. Confirmatory readiness: false.
-No scheduled automation exists. Stop after SSH refusal/authentication failure/
-timeout; do not probe or retry. Run heavy work through Slurm, excluding csis.mn1.
-
-BACKUP AND LOCATIONS
-GitHub: https://github.com/priyankjairaj100/third
-Latest execution package: 4260cd9ebec39be0ba97e65a9cae1bf13c769f8c
-Last verified cluster commit: 57a8f848d8c201a0ffa0710ed426c2dffa1b1243
-Mac: /Users/priyankjairaj/Downloads/ACL/Three
-Cluster: /nfs_home/users/poonam/ccu-acl2027/repo
-Private cluster workspace: /nfs_home/users/poonam/ccu-acl2027/local_workspace
-Public receipts: local_run/local_llm_execution_20261011/*.json
-Private copied evidence: local_workspace/reports/<stage-version>/a01
-Chat work notes: next-v2-adapter-audit.txt and remote_stop_resume.txt.
+OPERATIONS AND BACKUP
+Execution commit (local/GitHub/cluster verified): 360ddda619fb4b41deaa956ef636db93efb4f3e8
+https://github.com/priyankjairaj100/third
+Mac:/Users/priyankjairaj/Downloads/ACL/Three
+Cluster:/nfs_home/users/poonam/ccu-acl2027/repo
+Private evidence:local_workspace/reports/<stage-version>/a01
+Public reports:local_run/local_llm_execution_20261013/*.json
+Stop after SSH refusal/authentication failure/timeout; do not probe or retry.
+Run heavy work through Slurm, excluding csis.mn1. No scheduled automation exists.
 Frozen Phases 3–10, TODO and analysis locks remain unchanged.
 Cluster GPUs run project models; they do not run the Codex assistant or guarantee
-an assistant-token discount.
+an assistant-token discount. Credentials are not retained in these files.
