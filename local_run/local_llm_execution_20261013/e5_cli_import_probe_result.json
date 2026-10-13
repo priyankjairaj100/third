@@ -1,0 +1,20 @@
+{
+  "schema": "third-e5-cli-import-probe-v1",
+  "job_id": 13493,
+  "scheduler_state": "COMPLETED",
+  "scheduler_exit_code": "0:0",
+  "elapsed_seconds": 8,
+  "direct_script_path_import_exit_code": 1,
+  "package_module_path_import_exit_code": 0,
+  "cause_confirmed": "phase4/requests.py shadows installed Requests package under the direct script search path",
+  "model_forwards": 0,
+  "environment_mutation": false,
+  "files": {
+    "direct_file_path.json": "2ebd0687b18bd3c694c11b2bd0e47d701b9a0578a8632beb83cf114537872a06",
+    "package_module_path.json": "cecd5716129ea0f8c60a514b881e29a3432953815f862e2f99a267a3c91a6af5",
+    "probe.py": "6ccc4bfe0a2397f18372369840765a95981fb0fc6173026f36b4a6022db3499c",
+    "probe.sbatch": "baf2a751f07d81a7539f8870189ac6d37157bdc0f6fbb8f285d0b1c4b3bd44d0",
+    "terminal_inventory.json": "20d3bc55ba8012c45f3f3188b2c80bbea1fedc3afa47d779b457d1b291c644de"
+  },
+  "claim_scope": "Import-route diagnosis only; not numerical parity or full cache acceptance"
+}

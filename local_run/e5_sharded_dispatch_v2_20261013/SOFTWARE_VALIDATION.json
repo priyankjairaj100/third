@@ -1,0 +1,48 @@
+{
+  "all_v1_dispatch_members_rechecked_unchanged": true,
+  "checked_at_utc": "2026-10-13T10:28:05.656942+00:00",
+  "cluster_integration_executed": false,
+  "code_bindings": {
+    "assembly.sbatch": {
+      "bytes": 1813,
+      "sha256": "9aedd498d13a0ccf1ad818669b86101ef142f3bd1fbde3a8ce5ea41b3425ab2e"
+    },
+    "dispatch.py": {
+      "bytes": 11076,
+      "sha256": "3f0f49699229bf71295ac74a1d3059178fe647d43f29679cca4815c9f2dc283e"
+    },
+    "plan.sbatch": {
+      "bytes": 1805,
+      "sha256": "0453e69f4bf2218f6ae7b4c48f86c7eb103b285ae38f4e40e42ce2afe97519bd"
+    },
+    "shard.sbatch": {
+      "bytes": 1830,
+      "sha256": "6f72ba519eeff805a8acce7093e29abd66b9cc7592d3c69d2a58dc255e1072ad"
+    },
+    "test_dispatch.py": {
+      "bytes": 9505,
+      "sha256": "57caa8b7dc5d4936b078d04f74879b6eb5fd99eb6e55af724fb1bf0b356578ee"
+    }
+  },
+  "confirmatory_study_ready": false,
+  "core_package_sha256": "0eb7309ea3bc4e92d37ac155eef03ce2a59a5daffefc3e3725f511de557cfa81",
+  "full_population_cache_acceptance": false,
+  "independent_review": {
+    "concrete_blockers": [],
+    "reviewer": "handoff_audit"
+  },
+  "only_executable_changes": "Exact core/self folder route and core manifest SHA replacements",
+  "passed": true,
+  "preserved_v1_dispatch_manifest_sha256": "fe9b7da1b93d9c1a816a411bdb9dc074d58119d1f3bda7d8c8ff1e0199afe70f",
+  "python": "3.9.6",
+  "schema": "third-e5-sharded-dispatch-software-validation-v2",
+  "scope": "Software launcher fixtures and independent version-route review only; no model, scheduler or source-data execution.",
+  "shell_syntax_passed": [
+    "plan.sbatch",
+    "shard.sbatch",
+    "assembly.sbatch"
+  ],
+  "tests_discovered": 9,
+  "tests_passed": 9,
+  "tests_skipped": 0
+}

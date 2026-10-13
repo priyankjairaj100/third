@@ -1,0 +1,132 @@
+{
+  "bindings": {
+    "cluster_audit": {
+      "bytes": 100352,
+      "sha256": "0fa30d23b494c7f510b575fbcf4afd9c58f0bb1959169e69adcb10aa5361de48"
+    },
+    "input_sha256": "9fbf8ec87c2571d4dee65d5c0b851f36b50c430a3cf1973796e54cbe0def1a5a",
+    "local_receipt_consistency": {
+      "bytes": 364,
+      "sha256": "b153fcce1e1c5a7bb0c91c873da78aa67c0b19412454ae91946d1c589a904834"
+    },
+    "local_replay_review": {
+      "bytes": 93846,
+      "sha256": "e08d6ea3a5825250fcb9f5bb6f8d8b9baefb7fb52f64de6d8c0bdf0ffe91b0c2"
+    },
+    "local_review_script_sha256": "c49a579ea51ba2e0cd5c1409f9ea71379f47fa9e582051903f605bd003afbaf3",
+    "runtime_plan_sha256": "a9331c1400f7f63f883a240a193ef9a0d15f44bbe58c1502dd058a2f88907953",
+    "summary": {
+      "bytes": 1669,
+      "sha256": "5748c41b7f0e6fb44944e9e46f523fc94d5e44b6b04fde0e848b6fa8c0daf927"
+    },
+    "terminal_inventory": {
+      "bytes": 62973,
+      "sha256": "248d1410ff98a8c5da916e40f20a89973f055860e30f2a00efdb02555dc8109a"
+    }
+  },
+  "comparison_with_Qwen_v5": {
+    "binary_positive_disagreements": 3,
+    "both_nonpositive": 37,
+    "both_positive": 0,
+    "canonical_pairs": 40,
+    "category_agreements": 10,
+    "category_disagreements": 30,
+    "mistral_only_positive": 2,
+    "mistral_positive": 2,
+    "positive_categories": [
+      "exact_copy",
+      "substantially_same_meaning"
+    ],
+    "qwen_only_positive": 1,
+    "qwen_positive": 1,
+    "same40_pair_mapping": true,
+    "same44_input_bytes": true,
+    "scope": "Same exposed hash-selected engineering subset; not a probability sample for precision, recall, population prevalence or model accuracy. Zero joint positives supplies no positive-consensus examples for calibration. No thresholds or label rules changed."
+  },
+  "confirmatory_study_ready": false,
+  "constraint_limits": {
+    "eligible_regular_tokens": 129632,
+    "excluded_regular_tokens": 1437,
+    "restricted_vocabulary": "Valid split-codepoint tokens and literal U+FFFD are excluded by the frozen standalone-valid-token policy.",
+    "score_argmax_evidence": "Runtime-attested; full logits were not retained. Local replay verifies selected token eligibility, not original logit rankings.",
+    "swap_evidence_limit": "Four diagnostic pairs; neither invariance nor correctness is established."
+  },
+  "full_population_cache_acceptance": false,
+  "human_responses_created": 0,
+  "job": {
+    "elapsed_seconds": 887,
+    "exit_code": "0:0",
+    "gpu": "one A100 80GB",
+    "id": 13368,
+    "node": "csis.cn3",
+    "state": "COMPLETED"
+  },
+  "labels_changed": false,
+  "model": {
+    "execution_total_token_budget": 32768,
+    "id": "mistralai/Mistral-Nemo-Instruct-2407",
+    "maximum_output_tokens": 512,
+    "native_position_limit": 131072,
+    "revision": "04d8a90549d23fc6bd7f642064003592df51e9b3"
+  },
+  "model_panel_calibration_passed": false,
+  "new_inference_calls_by_review": 0,
+  "next_gate": "Keep the blinded author audit reserved; define and freeze the source-bound scientific pair frame and calibration protocol before collecting population evidence. Technical success does not resolve semantic disagreement.",
+  "original_three_human_gate_satisfied": false,
+  "outcomes": {
+    "attempts": 44,
+    "canonical_categories": {
+      "merely_related": 10,
+      "overlapping_information": 19,
+      "substantially_same_meaning": 2,
+      "unrelated": 9
+    },
+    "canonical_pairs": 40,
+    "context_overflows": 0,
+    "format_retries": 0,
+    "invalid_outputs": 0,
+    "runtime_errors": 0,
+    "scheduled_calls": 44,
+    "swapped_diagnostics": 4,
+    "swapped_order_diagnostics": {
+      "binary_positive_changed": 0,
+      "category_changed": 2,
+      "valid_comparison": 4
+    },
+    "truncated_inputs": 0,
+    "valid_outputs": 44
+  },
+  "passed": true,
+  "resources": {
+    "attempts": 44,
+    "cluster_engineering_census_max_input_tokens": 23532,
+    "cluster_engineering_census_orientations": 840,
+    "cluster_engineering_census_over_budget": 0,
+    "format_retry_attempts": 0,
+    "full_input_tokens_across_attempts": 163378,
+    "generation_seconds": 687.3438585810363,
+    "max_pilot_input_tokens": 21345,
+    "output_tokens_across_attempts": 3900,
+    "peak_gpu_allocated_bytes": 30750925312,
+    "peak_gpu_reserved_bytes": 31641829376,
+    "reason_words_max": 80,
+    "reasons_at80_words": 2,
+    "total_attempt_seconds": 695.4664395004511
+  },
+  "reviewed_utc": "2026-10-13T10:24:18.765207+00:00",
+  "schema": "third-mistral-technical-pilot-public-result-v1",
+  "scope": "Completed technical development pilot; provenance/format checks passed, semantic accuracy and model-panel calibration not established.",
+  "threshold_selected": false,
+  "validation": {
+    "cluster_full_source_and_840_orientation_token_census_audit_passed": true,
+    "cluster_software_tests_passed": 46,
+    "cluster_software_tests_skipped": 0,
+    "local_all44_prompt_hashes_full_token_IDs_raw_JSON_schema_word_limit_character_grammar_raw_prefix_and_token_filter_checks_passed": true,
+    "local_checker_implementation": "Existing pinned Transformers4.57.6/tokenizers0.22.2/LMFE0.11.3; pure tokenizer-data algorithm from sealed regression without Torch adapter. Literal expansion of the exact bound system+single-user/no-tools template branch; all44 rendered hashes and token IDs match. No installations, downloads or inference.",
+    "local_nonweight_assets_rehashed": 8,
+    "local_original_source_frame_and_840_token_census_reconstruction": false,
+    "local_scope_limit": "Original full source records and sampling manifest are not present locally. Their reconstruction is established by the hash-bound cluster audit, not rerun locally. Full weight rehash was performed by the cluster runner; local checks bind its receipts.",
+    "transport_file_bytes": 5269532,
+    "transport_files_independently_hashed": 336
+  }
+}

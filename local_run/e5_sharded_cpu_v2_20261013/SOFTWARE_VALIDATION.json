@@ -1,0 +1,41 @@
+{
+  "actual_frozen_module_CLI_help_passed": true,
+  "actual_model_forwards": 0,
+  "actual_models_loaded": 0,
+  "all_v1_package_members_rechecked_unchanged": true,
+  "byte_identical_to_v1": [
+    "worker.py",
+    "expectations.json",
+    "frozen_code.json",
+    "CONTRACT.md"
+  ],
+  "checked_at_utc": "2026-10-13T10:26:11.015110+00:00",
+  "confirmatory_study_ready": false,
+  "frozen_code_files_rechecked": 110,
+  "frozen_files_modified": false,
+  "full_population_cache_acceptance": false,
+  "full_population_encoding_executed": false,
+  "independent_review": {
+    "remaining_blockers": [],
+    "reviewer": "handoff_audit",
+    "skips": 0,
+    "tests_passed": 30
+  },
+  "new_regressions": [
+    "Real subprocess direct-script requests shadowing versus safe module entry",
+    "Exact golden CLI/cwd/PYTHONPATH receipt tampering"
+  ],
+  "orchestration_version": 2,
+  "preserved_v1_manifest_sha256": "c7619b96b080500aeee439b3128e034d8138dd89657f8799a2a9a0da9f1c6312",
+  "python": "3.9.6",
+  "qualification_executed": false,
+  "schema": "third-e5-sharded-cpu-software-validation-v2",
+  "scope": "Only prospective orchestration entry point and launch-receipt validation changed; numerical source, worker, assets, selection, and v1 data schemas unchanged.",
+  "slurm_bash_syntax_passed": true,
+  "tests": {
+    "command": "python3 -m unittest discover -s local_run/e5_sharded_cpu_v2_20261013 -p test_shards.py",
+    "count": 30,
+    "passed": true,
+    "skipped": 0
+  }
+}

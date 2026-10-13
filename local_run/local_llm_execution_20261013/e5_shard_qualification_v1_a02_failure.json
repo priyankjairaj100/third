@@ -1,0 +1,19 @@
+{
+  "schema": "third-e5-sharded-qualification-v1-a02-failure",
+  "job_id": 13491,
+  "scheduler_state": "FAILED",
+  "scheduler_exit_code": "2:0",
+  "scheduler_elapsed_seconds": 24,
+  "stage": "golden_unmodified_writer",
+  "error": "fresh_child_failed_see_private_receipt",
+  "golden_child_exit_code": 2,
+  "captured_error": "BLOCKED: Offline semantic encoding needs already installed torch and transformers; no runtime download is attempted",
+  "model_load_reached": false,
+  "model_forwards": 0,
+  "independent_probe_job": 13493,
+  "confirmed_cause": "Direct script execution leaves phase4/requests.py ahead of the installed Requests package; Transformers cannot import requests.exceptions. Clean package-module import succeeds.",
+  "decision": "Version the golden subprocess launch and its provenance/verification; invoke unchanged phase4.embeddings module from an explicit safe directory and controlled Python path. Preserve v1 package and both failed runs.",
+  "result_sha256": "0bfb1a0e81e42ce94ec512f4fc652f1a2ae71ccb0a692168eb3e36c83bbd3f07",
+  "human_reviews_used": 0,
+  "confirmatory_study_ready": false
+}

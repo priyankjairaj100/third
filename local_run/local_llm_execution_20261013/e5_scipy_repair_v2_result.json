@@ -1,0 +1,128 @@
+{
+  "bindings": {
+    "distributions_after": {
+      "bytes": 12616,
+      "sha256": "66fab56ab517ebf4036bb369d11d4bc319472ffd77f1b7568e4e4ee6b4ca5272"
+    },
+    "distributions_before": {
+      "bytes": 12296,
+      "sha256": "55fdcb13a671bf52c4a501ea28f59b4c7571b4d2db165da1ab8f6bd532d6c5a0"
+    },
+    "frozen_code_manifest": {
+      "bytes": 18567,
+      "sha256": "967d0250721e260d580e29c5267119a1aa32c123ec9a3f7c7ad3210acc8095f8"
+    },
+    "imported_repository_modules": {
+      "bytes": 4493,
+      "sha256": "63508c03cf64cf5e7d33e2f05903f7f403ef4eff0d8466fa34c96601e2142090"
+    },
+    "launch_receipt": {
+      "bytes": 1063,
+      "sha256": "077ae31941eae778adad8b2499dfdc4994bd7557ae33a5c993f58033c0f4734e"
+    },
+    "official_wheel_metadata": {
+      "bytes": 115668,
+      "sha256": "64100ae97ba1779a5e40b650496d1714bb494c8d9733b1223d3d3e804025103d"
+    },
+    "pip_report": {
+      "bytes": 56996,
+      "sha256": "56ae59e5ecf6ce3bb359743eb1f0d313b491d75840a412e4067de84571ee9ec6"
+    },
+    "repair_package_manifest": {
+      "bytes": 1173,
+      "sha256": "9110c05b7c48cbde819c8e3b40b5a9ad9cb7370d85f849bc2abbf1fd335b5d03"
+    },
+    "repair_result": {
+      "bytes": 2556,
+      "sha256": "fc1c54310d6258b39179a350c6ef4e66fdd466c45cec20ca76b85c6682d47af6"
+    },
+    "terminal_inventory": {
+      "bytes": 2720,
+      "sha256": "f06ec6cfa56e40b0007c4d155453e0aeb375bf81f2445f914188e178de4844d5"
+    }
+  },
+  "confirmatory_study_ready": false,
+  "environment": {
+    "all_preexisting_versions_and_owning_RECORD_bindings_identical": true,
+    "frozen_encoder_versions_unchanged": {
+      "numpy": "2.5.3",
+      "safetensors": "0.8.0",
+      "tokenizers": "0.22.2",
+      "torch": "2.14.1+cpu",
+      "transformers": "4.57.6"
+    },
+    "idna_unchanged": "3.20",
+    "only_added_distribution": "scipy",
+    "preexisting_distributions": 38,
+    "preexisting_distributions_with_RECORD_bindings": 38,
+    "python": "3.13.7",
+    "resulting_distributions": 39,
+    "whole_installed_package_payloads_rehashed": false
+  },
+  "execution_commit": "b5f86977e38a45a28d861976623b275277e7653a",
+  "full_population_cache_acceptance": false,
+  "human_reviews_used": 0,
+  "import_validation": {
+    "acceptance_routines_executed": false,
+    "frozen_source_file_bindings_locally_verified": 110,
+    "imported_repository_module_file_bindings_locally_verified": 29,
+    "numerical_parity_established": false,
+    "phase6_acceptance_import_passed": true
+  },
+  "installation": {
+    "dependency_resolution_disabled": true,
+    "installer_returncode": 0,
+    "official_metadata_url": "https://pypi.org/pypi/scipy/1.17.1/json",
+    "offline_local_wheel_pip": true,
+    "package": "scipy",
+    "pip_install_attempts": 1,
+    "pip_seconds_through_exit": 6.7620275635272264,
+    "pip_version": "25.2",
+    "source_builds_allowed": false,
+    "version": "1.17.1",
+    "wheel": {
+      "bytes": 35203952,
+      "filename": "scipy-1.17.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "581b2264fc0aa555f3f435a5944da7504ea3a065d7029ad60e7c3d1ae09c5464",
+      "url": "https://files.pythonhosted.org/packages/f5/5f/f17563f28ff03c7b6799c50d01d5d856a1d55f2676f537ca8d28c7f627cd/scipy-1.17.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl"
+    },
+    "wheel_bytes_rehashed_locally_by_reviewer": false
+  },
+  "job": {
+    "elapsed_seconds": 10,
+    "exit_code": "0:0",
+    "id": 13490,
+    "node": "csis.cn1",
+    "state": "COMPLETED"
+  },
+  "limits": [
+    "The wheel remains on the cluster. Its exact byte/hash check was executed by the sealed Slurm worker; this review compares copied download and pip receipts to the saved official metadata.",
+    "Version and owning RECORD equality do not constitute hashing every installed package payload. The preexisting38 entries all retained identical versions, paths and RECORD hashes.",
+    "The sealed CPU core fingerprint covers the recorded numerical settings and five encoder packages, not this whole environment. Bind this repair result explicitly in later launch provenance.",
+    "Import success is not execution or passage of Phase6 acceptance, real-model shard parity or full-population cache acceptance."
+  ],
+  "local_review": {
+    "all_available_result_artifact_bindings_verified": true,
+    "before_after_distribution_and_encoder_inventory_recompared": true,
+    "copied_artifact_bytes": 93200,
+    "copied_artifact_files_independently_hashed": 16,
+    "published_wheel_identity_matches_download_and_pip_receipts": true,
+    "sealed_repair_package_members_verified": 8
+  },
+  "model_forwards": 0,
+  "next_step": "Use a new bounded qualification attempt bound to this exact repair result hash, then independently review golden-writer and fresh-process shard parity before any full array.",
+  "original_route_acceptance": false,
+  "passed": true,
+  "preserved_failures": {
+    "qualification_missing_scipy_job": 13366,
+    "repair_v1_inventory_failure_job": 13370
+  },
+  "reviewed_utc": "2026-10-13T10:18:14.799507+00:00",
+  "reviewer": "Codex handoff_audit agent, independent local artifact review",
+  "schema": "third-executed-scipy-import-repair-v2",
+  "scope": "One additive SciPy installation and frozen Phase6 import availability; no numerical encoding or acceptance execution.",
+  "software_validation": {
+    "cluster_record_ownership_tests_passed": 2,
+    "skipped": 0
+  }
+}

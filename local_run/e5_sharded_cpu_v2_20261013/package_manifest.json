@@ -1,0 +1,45 @@
+{
+  "files": {
+    "CONTRACT.md": {
+      "bytes": 5525,
+      "sha256": "213366424b4c4375558615adf7bcbf9736f020eb4c79f127fac4afe96717e631"
+    },
+    "README.md": {
+      "bytes": 6315,
+      "sha256": "cc5cbd519db4f6b0ededdc49b6902de63f8d0f7b44ad4f8b9adee9c01c47ac47"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 1467,
+      "sha256": "dd8e4b728bdfaa5efebbd5d8a7d55069afa592ee69bcfbe783a5217cab9c9c8c"
+    },
+    "common.py": {
+      "bytes": 20078,
+      "sha256": "33e903a0134f8c3d2ac6d20550c30e2c0070e17ba4bd5f8a46915d5e15f4034d"
+    },
+    "driver.py": {
+      "bytes": 19406,
+      "sha256": "0fd84964858ab77d53ba2d8b938ad98d6fedeb180778aca5291916aca7b5fa2c"
+    },
+    "expectations.json": {
+      "bytes": 3008,
+      "sha256": "68442e55534e49f02573c4b05d602bd6ebea67d35bbcb673dac083608131bcbe"
+    },
+    "frozen_code.json": {
+      "bytes": 18567,
+      "sha256": "967d0250721e260d580e29c5267119a1aa32c123ec9a3f7c7ad3210acc8095f8"
+    },
+    "qualify.sbatch": {
+      "bytes": 3271,
+      "sha256": "ffee14dfe42e0b10a0bea3a71344c2b15d26acc94663821e10cfd9b6d77438ad"
+    },
+    "test_shards.py": {
+      "bytes": 35934,
+      "sha256": "147688ef5e95cb721c5a5463509474bb22271013dfef752fe566285106b6dc3d"
+    },
+    "worker.py": {
+      "bytes": 16945,
+      "sha256": "e3e6d7d500334c461efaf6acc643f462740f3f4942244ab5ba78452284cc05f4"
+    }
+  },
+  "schema": "third-e5-sharded-cpu-package-v2"
+}
