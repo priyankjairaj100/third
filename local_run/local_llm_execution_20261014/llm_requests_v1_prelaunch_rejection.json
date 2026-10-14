@@ -1,0 +1,13 @@
+{
+  "schema": "third-request-candidate-prelaunch-rejection-v1",
+  "observed_utc": "2026-10-14T05:35:11.840840+00:00",
+  "preparation_manifest_sha256": "b1af7af322c2ba51a4d632683136f84f6c6a3a0ab2a8f951f849563462968372",
+  "controller_manifest_sha256": "ee38a39e09f397ef56982f5b4cec62de2e7a544c10fbd3d4bcbae0d10a1c7ef6",
+  "reason": "Template identity used raw UTF8 instead of qualified pilot canonical JSON string hash; actual pinned Mistral template would fail identity check.",
+  "packages_staged": false,
+  "jobs_submitted": 0,
+  "model_inference_calls": 0,
+  "seeds_changed": false,
+  "sampler13571_affected": false,
+  "resolution": "Preserve v1 sealed candidates and qualify distinct v2 implementation/control."
+}

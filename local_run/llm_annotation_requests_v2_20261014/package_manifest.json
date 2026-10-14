@@ -1,0 +1,30 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 11821,
+      "sha256": "ef4a28bd4fbd6cfeb28eaa7b0eca10917f0a2253a5f78a7c3cd49de2f3452fc6"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 2292,
+      "sha256": "d4cebedca0ad910f49411fe834b9c8ce56bcdf15a38abc4cb966c75eeb7e2d19"
+    },
+    "expectations.json": {
+      "bytes": 18756,
+      "sha256": "8afc7ed323384febcec835685045d33a342d1efe51d16e8f0b5cfa68fb58df96"
+    },
+    "prepare_requests.py": {
+      "bytes": 33967,
+      "sha256": "5fc329da157b08f121968f7b2bc7992dbfaa1e217ca36ec09710154f9c90229f"
+    },
+    "test_requests.py": {
+      "bytes": 18053,
+      "sha256": "decd3abebb66df05e72b1cc32d59a3fe3d9e07636e3ab34049f531c0269c9c13"
+    },
+    "tokenizer_templates.fixture.json": {
+      "bytes": 7820,
+      "sha256": "96494585ef548be4ccf31775c3d118e9d84c8fdd7229633cf8dd0b3a41229c4a"
+    }
+  },
+  "manifest_self_excluded": true,
+  "schema": "third-llm-annotation-requests-package-v2"
+}

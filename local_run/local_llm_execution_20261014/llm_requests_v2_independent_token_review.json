@@ -1,0 +1,669 @@
+{
+  "all_input_token_IDs_and_rendered_prompt_hashes_independently_replayed": true,
+  "all_request_text_joins_and_hashes_checked": true,
+  "audit_source": {
+    "bytes": 28222,
+    "sha256": "eaef54bb18a9e29ea6183fc1372bd0932b7b9698213bc9dc331faa3ae9c7616a"
+  },
+  "checked_sample": {
+    "all_sample_identity_orientation_weight_checks_passed": true,
+    "exact_weighted_denominator": 220405510,
+    "independent_swap_reservoir_replay_passed": true,
+    "selected_pairs": 90,
+    "swap_pairs": 9
+  },
+  "complete_canonical_and_swap_coverage": true,
+  "complete_source_frame_mapping_independently_replayed": false,
+  "confirmatory_study_ready": false,
+  "elapsed_seconds": 3.1324240829999326,
+  "execution_attestations_required_and_bound": [
+    "full source/frame hashes",
+    "all calibration row/text mapping",
+    "retained pair vector scores",
+    "initial/final code/source/tokenizer equality",
+    "final remote inventories"
+  ],
+  "full_selection_census_independently_replayed": false,
+  "human_annotation_calls": 0,
+  "independent_selection_auditor": {
+    "bytes": 26233,
+    "sha256": "1980929cd3b9c677b8fe0295580a8956a193cb00513d0fce7111d4fe77047659"
+  },
+  "inference_activation": false,
+  "local_audit_input_bindings": {
+    "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/resume-20261014/sampling_v1/audit_full_selection.py": {
+      "bytes": 26233,
+      "sha256": "1980929cd3b9c677b8fe0295580a8956a193cb00513d0fce7111d4fe77047659"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/resume-20261014/sampling_v1/audit_requests.py": {
+      "bytes": 28222,
+      "sha256": "eaef54bb18a9e29ea6183fc1372bd0932b7b9698213bc9dc331faa3ae9c7616a"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/resume-20261014/sampling_v1/requests_terminal_export.json": {
+      "bytes": 3473801,
+      "sha256": "7ba99cb4284a11214e35ead8a47dccd5b1fd12b30fdddbf940dfb4a4dcd91b21"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/resume-20261014/sampling_v1/selection_independent_review.json": {
+      "bytes": 6020,
+      "sha256": "8b0f5f62c1cfed4344ce590eacca73b0597c79d7b5e8a486d0fca635d76ff220"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/resume-20261014/sampling_v1/selection_terminal_export.json": {
+      "bytes": 163962,
+      "sha256": "e15689c257f80ef9a3259b38ce2ae8372ba862cdd065a040e7de2052730322e9"
+    },
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_run/llm_annotation_request_control_v2_20261014/README.txt": {
+      "bytes": 2154,
+      "sha256": "7ed53feac74d3060670ff06052c1533cc8d59a85c7e8510de5ab9e4599e722a6"
+    },
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_run/llm_annotation_request_control_v2_20261014/SOFTWARE_VALIDATION.json": {
+      "bytes": 531,
+      "sha256": "4fee1cf344f3cf282c0cc8d53ec1b8d287dbbd24a47adfb9b002f89ba0564aa4"
+    },
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_run/llm_annotation_request_control_v2_20261014/control.py": {
+      "bytes": 9486,
+      "sha256": "679de2b3bd3432eeafe29ba7ad1bcd5901806ad64a5ac385ba6497142e395b86"
+    },
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_run/llm_annotation_request_control_v2_20261014/package_manifest.json": {
+      "bytes": 1002,
+      "sha256": "d20c325301a2a0564f65f78c25fa3f9347bb560ec0e0ef5dd952bd5221a79704"
+    },
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_run/llm_annotation_request_control_v2_20261014/requests.sbatch": {
+      "bytes": 1236,
+      "sha256": "0018a2a9f0f8ae100cd555fc31f5ad22021de8b630911f6b874d5d944a09e0a9"
+    },
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_run/llm_annotation_request_control_v2_20261014/runner.py": {
+      "bytes": 3041,
+      "sha256": "56bacd57406339f7b67993c59a2e863f6ce8e91d86e45993d953c8a4e69c1efc"
+    },
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_run/llm_annotation_request_control_v2_20261014/test_control.py": {
+      "bytes": 3243,
+      "sha256": "ad6d6008dce2d1211f3bc54f80534c8c22feda6849f64a183062441ea1aa7d4c"
+    },
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_run/llm_annotation_requests_v2_20261014/README.txt": {
+      "bytes": 11821,
+      "sha256": "ef4a28bd4fbd6cfeb28eaa7b0eca10917f0a2253a5f78a7c3cd49de2f3452fc6"
+    },
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_run/llm_annotation_requests_v2_20261014/SOFTWARE_VALIDATION.json": {
+      "bytes": 2292,
+      "sha256": "d4cebedca0ad910f49411fe834b9c8ce56bcdf15a38abc4cb966c75eeb7e2d19"
+    },
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_run/llm_annotation_requests_v2_20261014/expectations.json": {
+      "bytes": 18756,
+      "sha256": "8afc7ed323384febcec835685045d33a342d1efe51d16e8f0b5cfa68fb58df96"
+    },
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_run/llm_annotation_requests_v2_20261014/package_manifest.json": {
+      "bytes": 958,
+      "sha256": "bf70b015f39ad0421d8bf66f6b357123f24aceaf9f99b5158fb9b51f490e92d7"
+    },
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_run/llm_annotation_requests_v2_20261014/prepare_requests.py": {
+      "bytes": 33967,
+      "sha256": "5fc329da157b08f121968f7b2bc7992dbfaa1e217ca36ec09710154f9c90229f"
+    },
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_run/llm_annotation_requests_v2_20261014/test_requests.py": {
+      "bytes": 18053,
+      "sha256": "decd3abebb66df05e72b1cc32d59a3fe3d9e07636e3ab34049f531c0269c9c13"
+    },
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_run/llm_annotation_requests_v2_20261014/tokenizer_templates.fixture.json": {
+      "bytes": 7820,
+      "sha256": "96494585ef548be4ccf31775c3d118e9d84c8fdd7229633cf8dd0b3a41229c4a"
+    },
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_run/model_annotation_v2_20261011/judge_system_prompt.txt": {
+      "bytes": 1967,
+      "sha256": "52978c91ca9ddd8f3d055197a188ddb64bc61d7249bec476c0bb8c6106b84982"
+    },
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_run/model_annotation_v2_20261011/judge_task_definition.txt": {
+      "bytes": 140,
+      "sha256": "aef7daf9b52723b13ccf9d2a0e334e91fb12ab03cc072870e9e57acdae799a47"
+    },
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_run/model_annotation_v3_20261014/PLAN.json": {
+      "bytes": 29547,
+      "sha256": "7910272ad6d05e012b101c782ea2268b5585eb6ab0f9b49f38c1aac9b5e13419"
+    },
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_workspace/reports/llm-selection-sampler-v1-20261014/sampling-lock-a01/sampling_lock.json": {
+      "bytes": 7535,
+      "sha256": "52823fc3cbfcc358f58dab29a21b5d01746bd0dbc8cd90c232113cae4c8d39b7"
+    }
+  },
+  "local_input_and_tokenizer_initial_final_equal": true,
+  "local_renderer_files": {
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/__init__.py": {
+      "bytes": 1928,
+      "sha256": "c717a93bd8bb0c7b2a910ae004476e2ed7e8cf6402b93ebf81b2f85d237585b5"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/_identifier.py": {
+      "bytes": 1958,
+      "sha256": "ff361cb4d2b346a964fe6bab4cd973ae3bb514524bed56bf223aaa77b8a2da55"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/async_utils.py": {
+      "bytes": 2834,
+      "sha256": "bcaf8f76cba8ace3275929c4913de25094489139d880ed93e8c9c6c43807239a"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/bccache.py": {
+      "bytes": 14061,
+      "sha256": "821d2ab3daee9675e8d0f857e634c9cb6507cc8f3016743ade8fefc3b9e1cd18"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/compiler.py": {
+      "bytes": 74131,
+      "sha256": "f51a42425e57f3c0479652623ec1cf876f791e1d2e029bf0149350baeb542de3"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/constants.py": {
+      "bytes": 1433,
+      "sha256": "18ca05c9d045fe476969128fa0ce5c97932f8aab9544b57266d7e9e7ed7a8e0d"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/debug.py": {
+      "bytes": 6297,
+      "sha256": "0a71ea0831ddf81546bed8bff19b13a259d7361037102b18fba9ffda9c14f07c"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/defaults.py": {
+      "bytes": 1267,
+      "sha256": "6e805c4b0efc87e969db461b697489b2a900236b8dfe60ff4ed0b27697aae705"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/environment.py": {
+      "bytes": 61513,
+      "sha256": "f6786b3fb0a1f8d6c65f4d30bf2af8cb2fae84d1ead8e09ceb48201ab9e2fdf9"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/exceptions.py": {
+      "bytes": 5071,
+      "sha256": "8a81de1eb5b009635a5d7d629c798755b96f73885a3bb017b230a9dc67d6bf1d"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/ext.py": {
+      "bytes": 31875,
+      "sha256": "e4f1797877e1f265c02315c71d1076c576d7a218bca44de71d23b16baeae4bb1"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/filters.py": {
+      "bytes": 55212,
+      "sha256": "3d0fc481df67f634a0b671906321782b98f69d8c21508ba584f9f28a691dafe9"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/idtracking.py": {
+      "bytes": 10555,
+      "sha256": "fa5979948a7bde930bdc4ad46222098fbb5d996c5c1ff2250efdf203f862658a"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/lexer.py": {
+      "bytes": 29786,
+      "sha256": "2d88988a8e9bafe4dea7d9cf72ea565ec3c4b6396ec37a75994fa534155151f9"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/loaders.py": {
+      "bytes": 24055,
+      "sha256": "c08ae7c63bdc6ea8795705b6f0d4a47e8b620eaf2a342c4839215b1948922c1e"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/meta.py": {
+      "bytes": 4397,
+      "sha256": "3930cf91a16f5361e0bf1fba6a4cfbd79e05f012166919af25c045bf0a291f0c"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/nativetypes.py": {
+      "bytes": 4210,
+      "sha256": "ec620600b54981dc8bf34a1925d4146947f04ade6ada549265b5edd1d35ffcce"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/nodes.py": {
+      "bytes": 34579,
+      "sha256": "9b50eecdcafaaa1648f0943a57226050d8a78c07f96d0ce28d29839ccb2f531f"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/optimizer.py": {
+      "bytes": 1651,
+      "sha256": "ac99c246543ba59b04126321b100e00bfa4ac831f13f94cf4bacd53c6b2072ef"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/parser.py": {
+      "bytes": 40383,
+      "sha256": "94b385cb7b0498773921a1074621f5b1056721dda6a14433872789653b5d637d"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/py.typed": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/runtime.py": {
+      "bytes": 34249,
+      "sha256": "80393e1af76b8895ea82c19b1e0adc2933f4629eb33d7ce1ceb2290851f78c05"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/sandbox.py": {
+      "bytes": 15009,
+      "sha256": "330d9a8ad958d88f256bb15885c5f6606f41b5461c2e70f41a1ddddbd7035ab6"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/tests.py": {
+      "bytes": 5926,
+      "sha256": "54bb018551675a0f8fc52073d4c8519cd5a03f5a2f5e4de778ed452d031e0bd4"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/utils.py": {
+      "bytes": 24129,
+      "sha256": "ad1a77a3d7bb64a4b87f2ad645b10bc8b729b8655315c9e8a1a39ad6ac7f1489"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/jinja2/visitor.py": {
+      "bytes": 3557,
+      "sha256": "11c9cbd4f2307ffe1154238cc6c44db91f005c76d2d6a7c074c384da780a273e"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/markupsafe/__init__.py": {
+      "bytes": 13248,
+      "sha256": "bb57cb70d0b1d0ff04ecb4facf73977fa8a99d29a09ba69e7e77b9cbe77ba38d"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/markupsafe/_native.py": {
+      "bytes": 210,
+      "sha256": "8522ecf099b3e5aa9acae7a780927791d4f93f0369056a4aae6412762a67742f"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/markupsafe/_speedups.c": {
+      "bytes": 4327,
+      "sha256": "b77b42ea8555efe6e6294aaf08ee69552932f86f000885e958c689c2436d2638"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/markupsafe/_speedups.cpython-314-darwin.so": {
+      "bytes": 50656,
+      "sha256": "978a43e8fddff30a513d84d407d78935692665bdd2d83d93afeecac42a95f293"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/markupsafe/_speedups.pyi": {
+      "bytes": 41,
+      "sha256": "10d7756d87bb81b0547f6cb0c9858e194a675ce1cd27e7204cda9eb655bc8799"
+    },
+    "/opt/homebrew/lib/python3.14/site-packages/markupsafe/py.typed": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "local_replay_runtime": {
+    "jinja2": "3.1.6",
+    "markupsafe": "3.0.3",
+    "model_weights_loaded": false,
+    "python": "3.14.8",
+    "renderer_site": "/opt/homebrew/lib/python3.14/site-packages",
+    "tokenizers": "0.22.2",
+    "torch_imported": false,
+    "transformers": "4.57.6"
+  },
+  "local_tokenizer_files": {
+    "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/mistral-tokenizer/04d8a90549d23fc6bd7f642064003592df51e9b3/config.json": {
+      "bytes": 622,
+      "sha256": "8a42669219f4caadedb891be88c34712572573d42b3d02d665d527f92d94ddfe"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/mistral-tokenizer/04d8a90549d23fc6bd7f642064003592df51e9b3/generation_config.json": {
+      "bytes": 116,
+      "sha256": "c052c7f6082ca59fbee5478371f6dd18cbd9ec059b657f8081ff165deb9ea0fa"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/mistral-tokenizer/04d8a90549d23fc6bd7f642064003592df51e9b3/merges.txt": {
+      "bytes": 3127378,
+      "sha256": "4e4d41c64d2ed2e26713ae7af7c958b07df532a6f4498dffa9a2cf7f4c6c0aa6"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/mistral-tokenizer/04d8a90549d23fc6bd7f642064003592df51e9b3/model.safetensors.index.json": {
+      "bytes": 29894,
+      "sha256": "f14ac27ce39aa8652e83b8e3a9c59babba2831711e5b31512c1f96bfeeee09cf"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/mistral-tokenizer/04d8a90549d23fc6bd7f642064003592df51e9b3/special_tokens_map.json": {
+      "bytes": 414,
+      "sha256": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/mistral-tokenizer/04d8a90549d23fc6bd7f642064003592df51e9b3/tokenizer.json": {
+      "bytes": 9264445,
+      "sha256": "e11c71726323d33da7b8d6f6f269f1988931c0a52b7122bcdd8c05042974e0db"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/mistral-tokenizer/04d8a90549d23fc6bd7f642064003592df51e9b3/tokenizer_config.json": {
+      "bytes": 181297,
+      "sha256": "67f3aeef765b7d78012a081dba98efd4900cd2bac24eac182296841c7e2aef2a"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/mistral-tokenizer/04d8a90549d23fc6bd7f642064003592df51e9b3/vocab.json": {
+      "bytes": 2472536,
+      "sha256": "8572e8853a6b2f2d830de4afa15d43c49257d367abf3c5fd2f6f7687bcd8f63d"
+    },
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_workspace/tokenizers/qwen-v5-regression/config.json": {
+      "bytes": 663,
+      "sha256": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c"
+    },
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_workspace/tokenizers/qwen-v5-regression/merges.txt": {
+      "bytes": 1671839,
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+    },
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_workspace/tokenizers/qwen-v5-regression/tokenizer.json": {
+      "bytes": 7031645,
+      "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+    },
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_workspace/tokenizers/qwen-v5-regression/tokenizer_config.json": {
+      "bytes": 7305,
+      "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+    },
+    "/Users/priyankjairaj/Downloads/ACL/Three/local_workspace/tokenizers/qwen-v5-regression/vocab.json": {
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+  },
+  "model_censuses": {
+    "mistral": {
+      "all_planned_requests_retained": true,
+      "canonical_overflows": 0,
+      "canonical_requests": 90,
+      "diagnostic_requests": 9,
+      "max_input_tokens": 14171,
+      "overflow_requests": 0,
+      "overflow_retains_full_sampling_denominator": true,
+      "requests": 99,
+      "schedule_rule": "input_tokens descending, selection_index ascending, canonical before diagnostic tie",
+      "scheduled_request_indices": [
+        4,
+        50,
+        23,
+        20,
+        92,
+        87,
+        24,
+        41,
+        94,
+        40,
+        13,
+        32,
+        29,
+        89,
+        76,
+        17,
+        91,
+        79,
+        42,
+        95,
+        16,
+        3,
+        37,
+        36,
+        70,
+        98,
+        54,
+        68,
+        48,
+        88,
+        61,
+        43,
+        21,
+        8,
+        69,
+        62,
+        78,
+        47,
+        59,
+        86,
+        72,
+        30,
+        75,
+        18,
+        63,
+        39,
+        60,
+        2,
+        74,
+        5,
+        55,
+        77,
+        51,
+        26,
+        80,
+        22,
+        58,
+        97,
+        15,
+        7,
+        90,
+        28,
+        93,
+        82,
+        64,
+        71,
+        44,
+        96,
+        12,
+        81,
+        84,
+        57,
+        27,
+        56,
+        9,
+        65,
+        83,
+        66,
+        45,
+        35,
+        14,
+        10,
+        52,
+        49,
+        34,
+        53,
+        1,
+        33,
+        6,
+        11,
+        19,
+        31,
+        67,
+        85,
+        38,
+        46,
+        0,
+        25,
+        73
+      ],
+      "tokenizer_identity": {
+        "chat_template_sha256": "a0a5aa4eaec3e69b25dd3a09f7019f83317e115d2b9b1ab1aff57f2d77ccc327",
+        "tokenizer_backend_json_sha256": "b416887368c51e5dd129e48ee8016c89b538601b778b1e16fcb22567ef302b34",
+        "tokenizer_class": "transformers.tokenization_utils_fast.PreTrainedTokenizerFast",
+        "tokenizer_length": 131072,
+        "tokenizer_special_ids": [
+          1,
+          2,
+          0
+        ],
+        "tokenizer_vocab_size": 131072
+      },
+      "total_input_tokens": 180968
+    },
+    "qwen": {
+      "all_planned_requests_retained": true,
+      "canonical_overflows": 0,
+      "canonical_requests": 90,
+      "diagnostic_requests": 9,
+      "max_input_tokens": 13838,
+      "overflow_requests": 0,
+      "overflow_retains_full_sampling_denominator": true,
+      "requests": 99,
+      "schedule_rule": "input_tokens descending, selection_index ascending, canonical before diagnostic tie",
+      "scheduled_request_indices": [
+        4,
+        50,
+        23,
+        20,
+        92,
+        87,
+        24,
+        40,
+        41,
+        94,
+        13,
+        29,
+        32,
+        89,
+        76,
+        17,
+        91,
+        79,
+        16,
+        42,
+        95,
+        3,
+        37,
+        36,
+        70,
+        98,
+        54,
+        68,
+        48,
+        88,
+        61,
+        43,
+        21,
+        69,
+        8,
+        62,
+        78,
+        47,
+        59,
+        86,
+        72,
+        30,
+        18,
+        75,
+        63,
+        39,
+        2,
+        60,
+        74,
+        5,
+        55,
+        77,
+        26,
+        51,
+        80,
+        22,
+        58,
+        97,
+        15,
+        28,
+        93,
+        64,
+        71,
+        7,
+        90,
+        82,
+        44,
+        96,
+        12,
+        81,
+        84,
+        57,
+        27,
+        83,
+        56,
+        9,
+        65,
+        66,
+        45,
+        14,
+        35,
+        10,
+        34,
+        52,
+        49,
+        53,
+        1,
+        33,
+        6,
+        11,
+        19,
+        31,
+        67,
+        85,
+        38,
+        46,
+        0,
+        25,
+        73
+      ],
+      "tokenizer_identity": {
+        "chat_template_sha256": "2e2d2512cfe46af53dc1eed45368ecaab26ac4461c480e6b69fe571cf0ceaa75",
+        "tokenizer_backend_json_sha256": "f884026e05f6dfffe68b72d580b588006d98b3bc0a128bb1ac425c76f7fc438c",
+        "tokenizer_class": "transformers.models.qwen2.tokenization_qwen2_fast.Qwen2TokenizerFast",
+        "tokenizer_length": 151665,
+        "tokenizer_special_ids": [
+          151645,
+          151643,
+          151644,
+          151646,
+          151647,
+          151648,
+          151649,
+          151650,
+          151651,
+          151652,
+          151653,
+          151654,
+          151655,
+          151656
+        ],
+        "tokenizer_vocab_size": 151643
+      },
+      "total_input_tokens": 175620
+    }
+  },
+  "model_inference_calls": 0,
+  "new_activation_still_required": true,
+  "overflow_retained_in_full_denominator": true,
+  "passed": true,
+  "prepared_files": {
+    "census.json": {
+      "bytes": 2535,
+      "sha256": "1984f2606a5c5569034cc6010dbbfd77f07deaa126167def60f529078c72130a"
+    },
+    "input_bindings.json": {
+      "bytes": 37097,
+      "sha256": "ab4d418254588c5b3ebc951d536529aaef6e61ab92681a0026173aa169173fbf"
+    },
+    "mistral_tokens.private.jsonl": {
+      "bytes": 1100537,
+      "sha256": "333380ddfc64977f871a84c51dd6d1733ec6aa9bac011ec62c6c8b748e1a4c92"
+    },
+    "qwen_tokens.private.jsonl": {
+      "bytes": 904964,
+      "sha256": "b7e8165fde4598f81064052523bc24e76c5418efcaf3e409c19b67da2345c04e"
+    },
+    "requests.private.jsonl": {
+      "bytes": 63917,
+      "sha256": "1f357a4df6cdb74dd0aec233c2fabc384dfa75a8feb85836a5c44241176d0eea"
+    },
+    "sample.private.jsonl": {
+      "bytes": 73677,
+      "sha256": "4c827b85df913a5ea5aed064c035098bcc5285e37befbf1e9b0bc2d1de3a51af"
+    },
+    "texts.private.jsonl": {
+      "bytes": 395142,
+      "sha256": "1a3db8219b95711baeb6ba55dd03a2359773374072739ba1f5600e6019893b7c"
+    }
+  },
+  "remote_initial_final_hashes_independently_reexecuted": false,
+  "request_control_package": {
+    "bytes": 1002,
+    "sha256": "d20c325301a2a0564f65f78c25fa3f9347bb560ec0e0ef5dd952bd5221a79704"
+  },
+  "request_package": {
+    "bytes": 958,
+    "sha256": "bf70b015f39ad0421d8bf66f6b357123f24aceaf9f99b5158fb9b51f490e92d7"
+  },
+  "request_result": {
+    "bytes": 6268,
+    "sha256": "ca81b6bf7f60d6805245a4c9d74e1e42e2db4794caa04d60e74f7052d97fc6a2"
+  },
+  "request_result_internal_seal": "35234c1a6ca7702a734d0d72367c0cc2db73b14fe846f7c0dad8139cd76c789f",
+  "request_stage": "selection",
+  "retained_vector_scores_independently_replayed_here": false,
+  "sampling_lock": {
+    "bytes": 7535,
+    "sha256": "52823fc3cbfcc358f58dab29a21b5d01746bd0dbc8cd90c232113cae4c8d39b7"
+  },
+  "schema": "third-llm-request-independent-token-review-v1",
+  "scope": "Local exported-artifact plus complete offline prompt/token replay. Original full source bytes, frame vector checks and remote initial/final equality remain bound execution evidence; no source-authenticity or semantic/human claim.",
+  "selection_result": {
+    "bytes": 4788,
+    "sha256": "1b17c194be4825da9fc9b7af2d3e63ad5d3ed0c377e3fdfb33374bae8094225d"
+  },
+  "selection_review": {
+    "bytes": 6020,
+    "sha256": "8b0f5f62c1cfed4344ce590eacca73b0597c79d7b5e8a486d0fca635d76ff220"
+  },
+  "semantic_validity_established": false,
+  "source_authenticity_verified": false,
+  "source_frame_result": {
+    "bytes": 15372,
+    "sha256": "d4fc45ec0d38ddc94c2a9c82ee3948020d0acd1f47fd84582b87ad5e273aedb1"
+  },
+  "source_full_bytes_independently_rehashed": false,
+  "terminal": {
+    "child_wall_seconds_through_exit": 15.907741133123636,
+    "exit_code": "0:0",
+    "job_id": "13572",
+    "node": "csis.cn1",
+    "skips": 0,
+    "state": "COMPLETED",
+    "tests": 19
+  },
+  "terminal_export": {
+    "bytes": 3473801,
+    "sha256": "7ba99cb4284a11214e35ead8a47dccd5b1fd12b30fdddbf940dfb4a4dcd91b21"
+  }
+}

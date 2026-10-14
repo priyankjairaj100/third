@@ -1,0 +1,81 @@
+{
+  "activation_created": false,
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "local_run/llm_annotation_inference_v1_20261014",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "component_check": {
+    "activation_created": false,
+    "entropy_draws": 0,
+    "model_calls": 0,
+    "production_execution_enabled": false,
+    "remaining": [
+      "independent request artifact audit",
+      "exclusive activation writer and reviewed receipt",
+      "complete runtime controller and bounded Slurm resources",
+      "independent output/token/grammar auditor",
+      "joint statistics producer-consumer tests",
+      "new actual-tokenizer and GPU integration qualification"
+    ],
+    "schema": "third-llm-inference-components-status-v1",
+    "source_pins_verified": true
+  },
+  "created_utc": "2026-10-14T05:44:29.091426+00:00",
+  "entropy_draws": 0,
+  "human_annotation_calls": 0,
+  "independent_review_receipt": {
+    "bytes": 2828,
+    "sha256": "a7f590a2c128300d4b7b4116920df19f112c84d2b4aa0e619deb8df77ba19fb4"
+  },
+  "independent_review_scope": "Component scope clear. Subsequent own-package watcher strengthening separately peer reviewed before this final seal; earlier review preserved.",
+  "model_calls": 0,
+  "passed": true,
+  "production_execution_enabled": false,
+  "production_or_gpu_integration_qualified": false,
+  "python": "3.9.6 (default, Oct 18 2022, 12:41:40) \n[Clang 14.0.0 (clang-1400.0.29.202)]",
+  "schema": "third-llm-inference-components-software-validation-v1",
+  "scope": "Nonlaunching library and synthetic software fixtures only; no real model inference or activation",
+  "source_bindings": {
+    "README.txt": {
+      "bytes": 7404,
+      "sha256": "367e668783afa3ba0ac83e77bda7028be6ef01fc2c3ddb2762c3ea1eda345c2e"
+    },
+    "component_check.py": {
+      "bytes": 1379,
+      "sha256": "35244b92fe0b185f95f62a4f12c7308ea74653df74d150790b9f190b40734cb2"
+    },
+    "contract.py": {
+      "bytes": 22957,
+      "sha256": "38e13774767cf4bcc2c6ffc77b96f20533f0f4adbe173199d54178a45750e8b4"
+    },
+    "expectations.json": {
+      "bytes": 13050,
+      "sha256": "4edc2537cd088eb005fe98fa3de56a64b87c0f2d0d1a7a77476ce7c0b5a0a0f5"
+    },
+    "kernel.py": {
+      "bytes": 13794,
+      "sha256": "186d3c9ef40630a118906a90e42df83d082bce787e8e01cd8294880a344dcf9b"
+    },
+    "ledger.py": {
+      "bytes": 6218,
+      "sha256": "213b9af9fea900ecf9d9e5b48e2b68fb03c39f27c9c971b7fd4d9da76f878dcd"
+    },
+    "test_components.py": {
+      "bytes": 19874,
+      "sha256": "98994e24d53b468d737c9244e4961e74805827bd2ab5c54adb104db944700ac4"
+    }
+  },
+  "syntax_all_python_passed": true,
+  "test_elapsed_seconds": 0.123100083,
+  "tests_discovered": 30,
+  "tests_passed": 30,
+  "tests_skipped": 0
+}

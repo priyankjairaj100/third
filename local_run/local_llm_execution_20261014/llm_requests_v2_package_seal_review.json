@@ -1,0 +1,82 @@
+{
+  "packages": {
+    "llm_annotation_request_control_v2_20261014": {
+      "every_member_verified": true,
+      "manifest": {
+        "bytes": 1002,
+        "sha256": "d20c325301a2a0564f65f78c25fa3f9347bb560ec0e0ef5dd952bd5221a79704"
+      },
+      "members": {
+        "README.txt": {
+          "bytes": 2154,
+          "sha256": "7ed53feac74d3060670ff06052c1533cc8d59a85c7e8510de5ab9e4599e722a6"
+        },
+        "SOFTWARE_VALIDATION.json": {
+          "bytes": 531,
+          "sha256": "4fee1cf344f3cf282c0cc8d53ec1b8d287dbbd24a47adfb9b002f89ba0564aa4"
+        },
+        "control.py": {
+          "bytes": 9486,
+          "sha256": "679de2b3bd3432eeafe29ba7ad1bcd5901806ad64a5ac385ba6497142e395b86"
+        },
+        "requests.sbatch": {
+          "bytes": 1236,
+          "sha256": "0018a2a9f0f8ae100cd555fc31f5ad22021de8b630911f6b874d5d944a09e0a9"
+        },
+        "runner.py": {
+          "bytes": 3041,
+          "sha256": "56bacd57406339f7b67993c59a2e863f6ce8e91d86e45993d953c8a4e69c1efc"
+        },
+        "test_control.py": {
+          "bytes": 3243,
+          "sha256": "ad6d6008dce2d1211f3bc54f80534c8c22feda6849f64a183062441ea1aa7d4c"
+        }
+      }
+    },
+    "llm_annotation_requests_v2_20261014": {
+      "every_member_verified": true,
+      "manifest": {
+        "bytes": 958,
+        "sha256": "bf70b015f39ad0421d8bf66f6b357123f24aceaf9f99b5158fb9b51f490e92d7"
+      },
+      "members": {
+        "README.txt": {
+          "bytes": 11821,
+          "sha256": "ef4a28bd4fbd6cfeb28eaa7b0eca10917f0a2253a5f78a7c3cd49de2f3452fc6"
+        },
+        "SOFTWARE_VALIDATION.json": {
+          "bytes": 2292,
+          "sha256": "d4cebedca0ad910f49411fe834b9c8ce56bcdf15a38abc4cb966c75eeb7e2d19"
+        },
+        "expectations.json": {
+          "bytes": 18756,
+          "sha256": "8afc7ed323384febcec835685045d33a342d1efe51d16e8f0b5cfa68fb58df96"
+        },
+        "prepare_requests.py": {
+          "bytes": 33967,
+          "sha256": "5fc329da157b08f121968f7b2bc7992dbfaa1e217ca36ec09710154f9c90229f"
+        },
+        "test_requests.py": {
+          "bytes": 18053,
+          "sha256": "decd3abebb66df05e72b1cc32d59a3fe3d9e07636e3ab34049f531c0269c9c13"
+        },
+        "tokenizer_templates.fixture.json": {
+          "bytes": 7820,
+          "sha256": "96494585ef548be4ccf31775c3d118e9d84c8fdd7229633cf8dd0b3a41229c4a"
+        }
+      }
+    }
+  },
+  "passed": true,
+  "recorded_utc": "2026-10-14T05:40:51.633763+00:00",
+  "schema": "third-request-v2-package-seal-independent-review",
+  "scope": "Prospective CPU-only preparation. No remote execution or inference independently claimed here.",
+  "source_review": {
+    "bytes": 4091,
+    "sha256": "74d80affdaeb8a1e14668b790cbac6d653a111aa0722ae8988ddb112f6cc262c"
+  },
+  "superseding_v1_rejection": {
+    "bytes": 2268,
+    "sha256": "9fd3350ec86c513fbf3178d2b4ef46281d31f6dc30f78d123dbb224bdc8264d1"
+  }
+}

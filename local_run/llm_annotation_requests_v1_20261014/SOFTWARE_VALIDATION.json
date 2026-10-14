@@ -1,0 +1,43 @@
+{
+  "actual_tokenizer_assets_loaded": false,
+  "author_run": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s local_run/llm_annotation_requests_v1_20261014 -p test_requests.py -v",
+    "errors": 0,
+    "failures": 0,
+    "numpy": "1.26.3",
+    "python": "3.9.6",
+    "reported_seconds": 0.063,
+    "scope": "Local synthetic fixtures, actual frozen scorer and actual pilot renderer functions with a fake tokenizer; not target runtime execution",
+    "skips": 0,
+    "tests": 18
+  },
+  "human_annotation_calls": 0,
+  "independent_review": {
+    "passed": true,
+    "reviewer": "source_gate_audit",
+    "scope": "Source/frame mapping, retained score and full denominator, exact pilot rendering/hash, overflow preservation, bounded output, tokenizer symlink and final inventory checks",
+    "skips": 0,
+    "tests": 18
+  },
+  "inference_activation": false,
+  "model_forwards_executed": false,
+  "model_weights_loaded": false,
+  "passed": true,
+  "preseal_findings_resolved": [
+    "Mutation test temporary path resolved past macOS var symlink; no production symlink relaxation",
+    "Retained score local variable renamed after fixture caught shadowing exact-type comparator",
+    "Pilot ASCII-escaped canonical input-row hashing explicitly preserved; UTF8 renderer unchanged",
+    "Separate staged package paths supplied through named test environment overrides"
+  ],
+  "production_entropy_drawn": false,
+  "production_sampling_performed": false,
+  "production_source_used": false,
+  "required_execution": "Actual completed full selection and independently raw-hash-pinned review, fresh full source/frame/tokenizer rehash in pinned judge CPU Slurm runtime, then independent terminal request artifact review; no execution performed by software validation",
+  "schema": "third-llm-annotation-requests-software-validation-v1",
+  "skipped": 0,
+  "syntax_checked": [
+    "prepare_requests.py",
+    "test_requests.py"
+  ],
+  "tests": 18
+}

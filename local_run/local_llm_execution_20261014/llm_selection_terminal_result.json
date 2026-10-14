@@ -1,0 +1,57 @@
+{
+  "bin_populations": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    7969887,
+    203659684,
+    8775939
+  ],
+  "confirmatory_study_ready": false,
+  "exit_code": "0:0",
+  "full_census_counts_scope": "Execution-attested under qualified scorer/sampler; exact first512 qualification scores independently replayed.",
+  "full_census_independently_replayed": false,
+  "human_annotation_calls": 0,
+  "independent_sample_identity_weights_and_swaps_passed": true,
+  "job_id": "13571",
+  "model_inference_calls": 0,
+  "node": "csis.cn1",
+  "production_entropy_generation_rounds": 1,
+  "result": {
+    "bytes": 4788,
+    "sha256": "1b17c194be4825da9fc9b7af2d3e63ad5d3ed0c377e3fdfb33374bae8094225d"
+  },
+  "review": {
+    "bytes": 6020,
+    "sha256": "8b0f5f62c1cfed4344ce590eacca73b0597c79d7b5e8a486d0fca635d76ff220"
+  },
+  "sampling_lock": {
+    "bytes": 7535,
+    "sha256": "52823fc3cbfcc358f58dab29a21b5d01746bd0dbc8cd90c232113cae4c8d39b7"
+  },
+  "scheduler_elapsed_seconds": 1261,
+  "schema": "third-llm-selection-terminal-result-v1",
+  "selected_frame_rows": 20996,
+  "selected_pairs": 90,
+  "semantic_validity_established": false,
+  "source_authenticity_verified": false,
+  "state": "COMPLETED",
+  "swap_pairs": 9,
+  "tests": 22,
+  "unordered_pair_count": 220405510,
+  "updated_utc": "2026-10-14T05:55:50.875376+00:00"
+}

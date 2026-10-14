@@ -1,0 +1,15 @@
+{
+  "schema":"third-request-auditor-independent-source-review-v1",
+  "reviewer":"root independent source review",
+  "verdict":"clear for actual exported request and offline tokenizer audit",
+  "source":{"bytes":28222,"sha256":"eaef54bb18a9e29ea6183fc1372bd0932b7b9698213bc9dc331faa3ae9c7616a"},
+  "actual_review":{"bytes":23900,"sha256":"5a8142889333338fa1bc3fa00837b23f645309220681fb83376900d720f9ec5c"},
+  "independently_run_mutation_tests":8,
+  "skipped":0,
+  "checked":["Exact 17-file transport, Slurm terminal and process receipts", "Complete 90 canonical plus 9 swapped diagnostic requests per family", "Independent prompt reconstruction and list tokenization, preserved Unicode and source-text hashes", "Exact canonical JSON input-row/template hashes, tokenizer assets and initial/final runtime files", "Declared full-source/frame/census limitations remain execution-attested"],
+  "findings":[],
+  "inference_activation":false,
+  "model_calls":0,
+  "human_annotation_calls":0,
+  "semantic_validity_established":false
+}

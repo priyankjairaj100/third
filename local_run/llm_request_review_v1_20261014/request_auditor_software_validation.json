@@ -1,0 +1,67 @@
+{
+  "actual_local_replay": {
+    "all_full_token_IDs_and_rendered_hashes_equal": true,
+    "mistral": 99,
+    "model_requests": 198,
+    "model_weights_loaded": false,
+    "network_or_installs": false,
+    "offline": true,
+    "qwen": 99,
+    "torch_imported": false
+  },
+  "actual_review": {
+    "bytes": 23900,
+    "sha256": "5a8142889333338fa1bc3fa00837b23f645309220681fb83376900d720f9ec5c"
+  },
+  "inference_activation": false,
+  "meaningful_checks": [
+    "transport hash and exact inventory tampering",
+    "failed or unrelated scheduler receipts",
+    "physical LF with Unicode record text",
+    "missing/duplicate/text mutation and orientation refusal",
+    "full token mismatch, rendered prompt hash mismatch and invented activation identity refusal",
+    "32256/32257 context boundary retained in denominator"
+  ],
+  "passed": true,
+  "preserved_development_events": [
+    {
+      "event": "initial local replay refused missing Jinja2 before token replay",
+      "receipt": {
+        "bytes": 321,
+        "sha256": "8322ac4fc09c369d6d6f9a22541a8bd1c42f3ef0291db80feb2a0e531ebfbef1"
+      }
+    },
+    {
+      "correction": "cache len(tokenizer) once per model, preserving integer range check and token equality",
+      "event": "second local process stopped for inefficient repeated vocabulary size lookup; no terminal report emitted"
+    },
+    {
+      "event": "final local replay uses existing Jinja2 3.1.6 and MarkupSafe3.0.3 with initial/final package-file hashes"
+    }
+  ],
+  "schema": "third-llm-request-auditor-software-validation-v1",
+  "semantic_validity_established": false,
+  "skips": 0,
+  "source": {
+    "bytes": 28222,
+    "sha256": "eaef54bb18a9e29ea6183fc1372bd0932b7b9698213bc9dc331faa3ae9c7616a"
+  },
+  "source_authenticity_verified": false,
+  "test_command": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "work/resume-20261014/sampling_v1",
+    "-p",
+    "test_audit_requests.py",
+    "-v"
+  ],
+  "tests": 8,
+  "tests_source": {
+    "bytes": 7048,
+    "sha256": "f707c4713f3daa8f2094f3f4a53a91444a75f49473ac58dfcf99d37b75a626a0"
+  }
+}

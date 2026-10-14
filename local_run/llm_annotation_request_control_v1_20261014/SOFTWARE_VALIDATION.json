@@ -1,0 +1,13 @@
+{
+  "schema": "third-llm-request-control-software-validation-v1",
+  "observed_utc": "2026-10-14T05:30:10.068951+00:00",
+  "tests": 5,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true,
+  "shell_syntax_passed": true,
+  "independent_source_review_passed": true,
+  "scope": "Local metadata/queue/CLI gate tests and source review only; no tokenizer or cluster execution",
+  "command": "python3 -B -m unittest discover -s local_run/llm_annotation_request_control_v1_20261014 -p test_control.py -v"
+}

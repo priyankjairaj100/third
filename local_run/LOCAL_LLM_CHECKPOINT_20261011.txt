@@ -1,68 +1,73 @@
-THIRD — VERIFIED LOCAL / CLUSTER CHECKPOINT
-Updated 2026-10-14T05:22:41.412397+00:00
+THIRD — LOCAL / CLUSTER CHECKPOINT
+Updated 14 October 2026, 05:59 UTC
 
 ACTIVE POLICY: FULLY LLM, ZERO HUMAN ANNOTATION
-The user's 14 October instruction supersedes the earlier 50–100 author reviews.
-Protocol local_run/model_annotation_v3_20261014 remains the active prospective
-policy. Human gates stay historical/unmet, with no active human dependency.
-No model inference or threshold selection has yet occurred under this v3 branch.
+The user's latest instruction supersedes the earlier 50–100 author reviews.
+Active protocol: local_run/model_annotation_v3_20261014. Historical human gates
+remain unmet and are not active dependencies. Model labels are development
+measurements; they do not establish human agreement or semantic truth.
 
-LATEST QUALIFIED STAGE
-Sampler qualification 13560 COMPLETED 0:0 in 7 seconds on csis.cn1; 22 tests passed.
-All 130,816 first 512-vector scores,20 bins,90 reservoir records,9 swaps and171 scalar
-reference pairs matched independent local replay. Qualifier rawresultSHA:
-a1c26a50d18094e44431fc009ddfbc308f759a84c77a916e2408c1c07fcb09dc
-ReviewSHA:048477e44feb2ea4afdf14f5596c71eaaf6c6b3a3dcb492625cb5d8c494c9e2b
-Complete source/frame payload validation remains bound Slurm execution evidence;
-the local reviewer independently used the exact copied first 512 slice.
+COMPLETED
+13560: sampler qualification, COMPLETED 0:0, 7 seconds, 22 tests. Independent
+replay matched all 130,816 first-512-vector scores, bins, sampled records and swaps.
+13571: full census, COMPLETED 0:0, 1,261 seconds, 22 tests. Scanned all
+220,405,510 pairs from 20,996 calibration records. Three occupied bins contain
+7,969,887 / 203,659,684 / 8,775,939 pairs. Selected 90 pairs plus 9 order swaps.
+Independent identity, orientation, exact-weight and swap review passed. The full
+220M census counts, selection reservoir and stream remain execution-attested.
+13572: corrected v2 tokenizer preparation, COMPLETED 0:0, 17 seconds, 19 tests.
+Prepared 198 requests (99 per model), using 180 unique full texts. Zero overflow;
+maximum input lengths are 13,838 Qwen / 14,171 Mistral tokens. No truncation.
+Independent offline replay reproduced all 198 token sequences and prompt hashes.
+Eight request-auditor mutation tests passed independently. No weights were loaded.
 
-ACTIVE FULL CENSUS — RECONCILE BEFORE ACTION
-Job 13571 submitted 2026-10-14T05:15:54.453785+00:00; last observed RUNNING at
-2026-10-14T05:17:55.374608+00:00, elapsed 121 seconds on csis.cn1.
-It must complete all 220,405,510 unordered pairs from 20,996 calibration records with
-same-source pairs included,20 bins and at most30 sampled pairs per bin.
-2 CPUs, 8 GiB, 60 minute cap; 128 MiB output allowance plus 8 GiB reserve.
-Estimated scoring/collector cost 25.67 minutes by pair rate, 17.29 minutes by tile
-entries. These are conditional scenarios, not guaranteed bounds.
-Production randomness was committed once in the private sampling lock:
-SHA52823fc3cbfcc358f58dab29a21b5d01746bd0dbc8cd90c232113cae4c8d39b7
-Remote lockroot:local_workspace/qualification/llm-only-v3-sampling-lock-a01
-Remote censusroot:local_workspace/qualification/llm-selection-sampler-v1-20261014-selection-a01
-Do not regenerate seeds, choose an alternate slot or duplicate a submission.
+Public results: local_run/local_llm_execution_20261014/
+  llm_selection_terminal_result.json
+  llm_selection_terminal_independent_review.json
+  llm_requests_v2_terminal_result.json
+  llm_requests_v2_independent_token_review.json
+Private terminal artifacts remain under ignored local_workspace/reports/.
 
-NEXT STAGES
-1. Reconcile full census13571 terminal state and exact output evidence; never duplicate or accept partial results.
-2. Run the sealed full-result reviewer with exact sampling lock/intent; its full-census counts remain execution-attested, not independently replayed.
-3. Finish and qualify new source-bound v3 request preparation/tokenizer census, activation and inference runner; use Qwen/Mistral only and zero human annotation.
-Pure model-only statistics are implemented/reviewed; 14 tests pass, including
-finite-population coverage checks. They do not activate inference or validate
-source/call provenance. New request and inference packages are in development;
-consume only their final reviewed seals, never in-progress files.
+PRESERVED PRELAUNCH FAILURE
+Request v1 used raw UTF-8 template hashing instead of the qualified pilot's
+canonical-JSON string convention. The sealed v1 preparer and control were never
+staged or run. Corrected v2 passed source review and actual token replay.
+The independent local auditor initially lacked Jinja2; it used already-installed
+Jinja2/MarkupSafe without downloads. No request or production outcome changed.
 
-EARLIER COMPLETE MILESTONES
-Array 13498: 32 tasks complete,140,250 documents encoded and freshly replayed.
-Assembly 13546 complete; canonical 140250 x 768 FP32 cache.
-Frame 13556 complete 79 seconds / 16 tests, 20,996 calibration rows, full source/cache
-hash/replay/slice checks. Frame resultSHA:
-d4fc45ec0d38ddc94c2a9c82ee3948020d0acd1f47fd84582b87ad5e273aedb1
-Prior Qwen/Mistral pilots remain engineering-only with 40 shared pairs and zero
-joint positives. No semantic accuracy or source authenticity is inferred.
+NEXT: INFERENCE INTEGRATION — NO V3 LABELS OR ACTIVATION YET
+Inference components passed 30 tests; pure statistics passed 14 tests. New runner,
+activation admission, independent output audit, statistics ingestion and Slurm
+control are being integrated. Do not launch incomplete or unsealed packages.
+CPU qualification will exercise the actual prepared requests in the pinned
+runtime with stubbed generation. The first real GPU generation will count as its
+planned attempt under the activation; no unrecorded probe or retry is permitted.
+Planned resource limits: one A100 80GB and 4 CPUs per family; Qwen 48 GiB host RAM,
+Mistral 64 GiB; four-hour Slurm caps, 64 MiB output caps, and an 8 GiB quota reserve.
+These are prospective limits, not observed runtime guarantees. Families run serially.
+Missing or failed responses remain in the full denominator; swaps are diagnostics.
+Inspect current scheduler/receipts before any new submission.
 
-RESUME AND CLAIM BOUNDARIES
-Public compact evidence:local_run/local_llm_execution_20261014/llm_selection_*.json
-Local private evidence:local_workspace/reports/llm-selection-sampler-v1-20261014
-Sampler/helper/control/reviewer/statistics packages each have exact manifests.
-The private 39-file snapshot preserves historical PLAN inputs absent from the
-unchanged cluster checkout; frozen executing scorer code is bound separately.
-Original Phases 3–10, v2 and user TODO/analysis locks remain unchanged.
-Source authenticity, legacy-route acceptance, semantic validity, inference
-activation and confirmatory readiness remain false. All labels remain model-
-defined development evidence even after future model execution.
-Stop after SSH authentication/transport refusal or timeout; inspect existing
-jobs/receipts before new mutations. Heavy work only through Slurm, exclude csis.mn1.
-No credentials stored. No automation created. No paid/cloud compute authorized.
-GitHub:https://github.com/priyankjairaj100/third
-Local:/Users/priyankjairaj/Downloads/ACL/Three
-Cluster:/nfs_home/users/poonam/ccu-acl2027/repo (de9de39a1a72db40485878452561affe2fbd24aa unchanged)
-Complete machine-readable history:task outputs/third_latest_checkpoint.json
+IMMUTABLE RANDOMNESS AND SOURCES
+Sampling lock was created once with four OS seeds. Never regenerate or duplicate.
+Lock SHA: 52823fc3cbfcc358f58dab29a21b5d01746bd0dbc8cd90c232113cae4c8d39b7
+Remote roots beneath local_workspace/qualification:
+  llm-only-v3-sampling-lock-a01
+  llm-selection-sampler-v1-20261014-selection-a01
+  llm-annotation-requests-v2-20261014-selection-a01
+Array 13498 completed all 32 tasks; 140,250 documents encoded and freshly replayed.
+Assembly 13546 and calibration frame 13556 are complete. Historical model pilots
+had 40 shared engineering pairs and zero joint positives; retain that negative result.
+Original Phases 3–10, historical protocols and user TODO/analysis locks are unchanged.
+The private 39-file historical snapshot and frozen executing code have distinct roles.
+Source authenticity, legacy admission, semantic validity and confirmatory readiness
+remain false. Heavy work runs through Slurm; exclude the login node csis.mn1.
+Stop after SSH authentication/transport refusal or timeout; never blindly retry an
+uncertain submission. No credentials, raw texts or private model outputs are public.
+
+Repository: https://github.com/priyankjairaj100/third
+Local: /Users/priyankjairaj/Downloads/ACL/Three
+Cluster: /nfs_home/users/poonam/ccu-acl2027/repo
+Cluster revision: de9de39a1a72db40485878452561affe2fbd24aa (unchanged)
+Complete machine-readable history: task outputs/third_latest_checkpoint.json
 Cluster GPUs run project models; they do not run Codex or guarantee token savings.

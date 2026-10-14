@@ -1,0 +1,31 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 2154,
+      "sha256": "7ed53feac74d3060670ff06052c1533cc8d59a85c7e8510de5ab9e4599e722a6"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 531,
+      "sha256": "4fee1cf344f3cf282c0cc8d53ec1b8d287dbbd24a47adfb9b002f89ba0564aa4"
+    },
+    "control.py": {
+      "bytes": 9486,
+      "sha256": "679de2b3bd3432eeafe29ba7ad1bcd5901806ad64a5ac385ba6497142e395b86"
+    },
+    "requests.sbatch": {
+      "bytes": 1236,
+      "sha256": "0018a2a9f0f8ae100cd555fc31f5ad22021de8b630911f6b874d5d944a09e0a9"
+    },
+    "runner.py": {
+      "bytes": 3041,
+      "sha256": "56bacd57406339f7b67993c59a2e863f6ce8e91d86e45993d953c8a4e69c1efc"
+    },
+    "test_control.py": {
+      "bytes": 3243,
+      "sha256": "ad6d6008dce2d1211f3bc54f80534c8c22feda6849f64a183062441ea1aa7d4c"
+    }
+  },
+  "manifest_self_excluded": true,
+  "schema": "third-llm-request-control-package-v2",
+  "scope": "Single tokenizer-only Slurm preparation with corrected v2 request package"
+}

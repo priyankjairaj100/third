@@ -1,0 +1,114 @@
+{
+  "actual_metadata_evidence": {
+    "mistral": {
+      "actual_AutoTokenizer_loaded_offline_without_torch": true,
+      "complete_tokenizer_identity_equal_to_pilot": true,
+      "exact_compact_fixture_string_equal": true,
+      "qualified_canonical_template_sha256": "a0a5aa4eaec3e69b25dd3a09f7019f83317e115d2b9b1ab1aff57f2d77ccc327",
+      "raw_utf8_template_sha256": "e4676cb56dffea7782fd3e2b577cfaf1e123537e6ef49b3ec7caa6c095c62272",
+      "source_config": {
+        "bytes": 181297,
+        "sha256": "67f3aeef765b7d78012a081dba98efd4900cd2bac24eac182296841c7e2aef2a"
+      }
+    },
+    "qwen": {
+      "actual_AutoTokenizer_loaded_offline_without_torch": true,
+      "complete_tokenizer_identity_equal_to_pilot": true,
+      "exact_compact_fixture_string_equal": true,
+      "qualified_canonical_template_sha256": "2e2d2512cfe46af53dc1eed45368ecaab26ac4461c480e6b69fe571cf0ceaa75",
+      "raw_utf8_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+      "source_config": {
+        "bytes": 7305,
+        "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+      }
+    }
+  },
+  "blockers": [],
+  "control_tests": {
+    "passed": 5,
+    "run": 5,
+    "skipped": 0
+  },
+  "local_tokenizer_runtime": {
+    "tokenizers": "0.22.2",
+    "torch_installed": false,
+    "transformers": "4.57.6"
+  },
+  "preparation_tests": {
+    "passed": 19,
+    "run": 19,
+    "skipped": 0
+  },
+  "preserved_v1": {
+    "control": {
+      "all_members_unchanged": true,
+      "package": {
+        "bytes": 1032,
+        "sha256": "ee38a39e09f397ef56982f5b4cec62de2e7a544c10fbd3d4bcbae0d10a1c7ef6"
+      }
+    },
+    "preparation": {
+      "all_members_unchanged": true,
+      "package": {
+        "bytes": 805,
+        "sha256": "b1af7af322c2ba51a4d632683136f84f6c6a3a0ab2a8f951f849563462968372"
+      }
+    }
+  },
+  "recorded_utc": "2026-10-14T05:38:58.838376+00:00",
+  "reviewed_files": {
+    "llm_annotation_request_control_v2_20261014": {
+      "README.txt": {
+        "bytes": 2154,
+        "sha256": "7ed53feac74d3060670ff06052c1533cc8d59a85c7e8510de5ab9e4599e722a6"
+      },
+      "control.py": {
+        "bytes": 9486,
+        "sha256": "679de2b3bd3432eeafe29ba7ad1bcd5901806ad64a5ac385ba6497142e395b86"
+      },
+      "requests.sbatch": {
+        "bytes": 1236,
+        "sha256": "0018a2a9f0f8ae100cd555fc31f5ad22021de8b630911f6b874d5d944a09e0a9"
+      },
+      "runner.py": {
+        "bytes": 3041,
+        "sha256": "56bacd57406339f7b67993c59a2e863f6ce8e91d86e45993d953c8a4e69c1efc"
+      },
+      "test_control.py": {
+        "bytes": 3243,
+        "sha256": "ad6d6008dce2d1211f3bc54f80534c8c22feda6849f64a183062441ea1aa7d4c"
+      }
+    },
+    "llm_annotation_requests_v2_20261014": {
+      "README.txt": {
+        "bytes": 11821,
+        "sha256": "ef4a28bd4fbd6cfeb28eaa7b0eca10917f0a2253a5f78a7c3cd49de2f3452fc6"
+      },
+      "expectations.json": {
+        "bytes": 18756,
+        "sha256": "8afc7ed323384febcec835685045d33a342d1efe51d16e8f0b5cfa68fb58df96"
+      },
+      "prepare_requests.py": {
+        "bytes": 33967,
+        "sha256": "5fc329da157b08f121968f7b2bc7992dbfaa1e217ca36ec09710154f9c90229f"
+      },
+      "test_requests.py": {
+        "bytes": 18053,
+        "sha256": "decd3abebb66df05e72b1cc32d59a3fe3d9e07636e3ab34049f531c0269c9c13"
+      },
+      "tokenizer_templates.fixture.json": {
+        "bytes": 7820,
+        "sha256": "96494585ef548be4ccf31775c3d118e9d84c8fdd7229633cf8dd0b3a41229c4a"
+      }
+    }
+  },
+  "schema": "third-independent-request-preparation-review-v2",
+  "scope": [
+    "Only prospective CPU tokenizer preparation and bounded one-shot controller reviewed.",
+    "No model weights, forwards, remote calls, production randomness, human annotation or activation.",
+    "Actual source/population checks are still to be executed by Slurm; no claim of completed preparation.",
+    "Pinned Mistral tokenizer emitted existing regex warning; no silent tokenizer behavior change made."
+  ],
+  "shell_syntax_passed": true,
+  "verdict": "clear_for_package_seal_and_parent_reviewed_CPU_preparation"
+}

@@ -1,0 +1,60 @@
+{
+  "actual_regression_fixture": {
+    "bytes": 7820,
+    "file": "tokenizer_templates.fixture.json",
+    "sha256": "96494585ef548be4ccf31775c3d118e9d84c8fdd7229633cf8dd0b3a41229c4a",
+    "source": "Exact chat_template strings derived from already-private actual pinned Qwen/Mistral tokenizer configurations; full configs not published",
+    "source_configs": {
+      "mistral": {
+        "bytes": 181297,
+        "sha256": "67f3aeef765b7d78012a081dba98efd4900cd2bac24eac182296841c7e2aef2a"
+      },
+      "qwen": {
+        "bytes": 7305,
+        "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+      }
+    }
+  },
+  "author_run": {
+    "errors": 0,
+    "failures": 0,
+    "numpy": "1.26.3",
+    "python": "3.9.6",
+    "reported_seconds": 0.152,
+    "scope": "Synthetic software fixtures plus actual pinned Qwen/Mistral template hash regressions; no production source/model execution",
+    "skips": 0,
+    "tests": 19
+  },
+  "correction": "Use exact qualified pilot digest_bytes(canonical(tokenizer.chat_template)), JSON-string serialization; raw template UTF8 hash was wrong. No request/sample/seed/schema/model policy changes.",
+  "human_annotation_calls": 0,
+  "independent_review": {
+    "actual_offline_Qwen_and_Mistral_AutoTokenizer_identity_checked": true,
+    "compact_templates_match_actual_private_source_configs": true,
+    "model_weights_loaded": false,
+    "passed": true,
+    "review_sha256": "74d80affdaeb8a1e14668b790cbac6d653a111aa0722ae8988ddb112f6cc262c",
+    "reviewer": "source_gate_audit",
+    "skips": 0,
+    "tests": 19
+  },
+  "inference_activation": false,
+  "model_forwards_executed": false,
+  "model_weights_loaded": false,
+  "passed": true,
+  "predecessor": {
+    "execution_performed": false,
+    "manifest_and_all_members_reverified_unchanged": true,
+    "manifest_sha256": "b1af7af322c2ba51a4d632683136f84f6c6a3a0ab2a8f951f849563462968372",
+    "package": "llm_annotation_requests_v1_20261014",
+    "status": "retired before launch after prelaunch template-hash mismatch"
+  },
+  "production_entropy_drawn": false,
+  "production_sampling_performed": false,
+  "schema": "third-llm-annotation-requests-software-validation-v2",
+  "skipped": 0,
+  "syntax_checked": [
+    "prepare_requests.py",
+    "test_requests.py"
+  ],
+  "tests": 19
+}

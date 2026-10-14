@@ -1,0 +1,29 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 809,
+      "sha256": "a46e3de212ee3ffc6eda8a259604c3b21229142ce072e1eba438d0162ca8f0bd"
+    },
+    "audit_full_selection.py": {
+      "bytes": 26233,
+      "sha256": "1980929cd3b9c677b8fe0295580a8956a193cb00513d0fce7111d4fe77047659"
+    },
+    "audit_requests.py": {
+      "bytes": 28222,
+      "sha256": "eaef54bb18a9e29ea6183fc1372bd0932b7b9698213bc9dc331faa3ae9c7616a"
+    },
+    "request_auditor_independent_source_review.json": {
+      "bytes": 1026,
+      "sha256": "e42c5c8f60b272cd98fdeed1c487d777c9cf062934717a3daa6f6cafa6a00458"
+    },
+    "request_auditor_software_validation.json": {
+      "bytes": 2104,
+      "sha256": "08ec41a448d541c9512ab68f988cce8cfb3aa23cb0ac28b12505e4521417f9ea"
+    },
+    "test_audit_requests.py": {
+      "bytes": 7048,
+      "sha256": "f707c4713f3daa8f2094f3f4a53a91444a75f49473ac58dfcf99d37b75a626a0"
+    }
+  },
+  "schema": "third-llm-request-review-package-v1"
+}

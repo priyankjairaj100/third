@@ -1,0 +1,177 @@
+{
+  "audit_source": {
+    "bytes": 26233,
+    "sha256": "1980929cd3b9c677b8fe0295580a8956a193cb00513d0fce7111d4fe77047659"
+  },
+  "bin_population_counts_independently_recomputed": false,
+  "checked": {
+    "all_sample_identity_orientation_weight_checks_passed": true,
+    "exact_weighted_denominator": 220405510,
+    "independent_swap_reservoir_replay_passed": true,
+    "selected_pairs": 90,
+    "swap_pairs": 9
+  },
+  "complete_census_independently_replayed": false,
+  "confirmatory_study_ready": false,
+  "control_package": {
+    "bytes": 1045,
+    "sha256": "a1779a1ea98b0968ab46680be6a0249983381bcd25a02a2c405877a32b237cf9"
+  },
+  "execution_attestations": {
+    "bin_populations": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      7969887,
+      203659684,
+      8775939
+    ],
+    "numerical_audit": {
+      "authority": "shared coordinate-ordered FP64 reference decides, including any disagreement",
+      "band": 1e-12,
+      "examples": [],
+      "independent_accumulation": "math.fsum of FP64 component products after shared FP64 normalization",
+      "maximum_absolute_score_difference": 0.0,
+      "out_of_range_raw_scores": 0,
+      "real_arithmetic_certificate": false,
+      "recomputed_pairs": 0,
+      "threshold_decision_disagreements": 0
+    },
+    "score_stream_sha256": "899114828d4f9d130d57f900660efc5d07f6b90e4a76c76d3eaedc7233323ea2",
+    "workload": {
+      "blocks": 83,
+      "computed_tile_entries": 223102992,
+      "coordinate_products": 171343097856,
+      "rows": 20996,
+      "unordered_pairs": 220405510,
+      "upper_tiles": 3486
+    }
+  },
+  "human_annotation_calls": 0,
+  "inference_activation": false,
+  "local_review_runtime": {
+    "python": "3.9.6"
+  },
+  "lock_helper_package": {
+    "bytes": 789,
+    "sha256": "bcd8d75df5c8e973314ea664ed3acc249c94a75804c8965c9ba842af9524ef21"
+  },
+  "lock_intent": {
+    "bytes": 6356,
+    "sha256": "7412565d049a598406569a42972a0a1aba0b187010adde1bbee2d112d05ec1a4"
+  },
+  "model_inference_calls": 0,
+  "next_inference_builder_bindings": {
+    "frame_files": {
+      "input_bindings.json": {
+        "bytes": 121674,
+        "sha256": "75086e6c43e840db0b5310ce4f027e09c5b6dce5fb51e3156e494d28d68b723d"
+      },
+      "records.private.jsonl": {
+        "bytes": 6415732,
+        "sha256": "9260b4ec7f576c2181bddbf78a79a6c9fe0021aca942eea21cb215ba1b172c0a"
+      },
+      "vectors.npy": {
+        "bytes": 64499840,
+        "sha256": "c254719d68d4b0ffd14f0917075cabc7984ba6bcb7c9085cba66f5b48e78bae6"
+      }
+    },
+    "frame_raw_result_sha256": "d4fc45ec0d38ddc94c2a9c82ee3948020d0acd1f47fd84582b87ad5e273aedb1",
+    "fresh_validation_calls_required": true,
+    "inference_activation_still_required": true,
+    "ordered_ids_sha256": "e10f795a158fea20a7fcddd7ab5ee141615eec10730f7e352037b8ed5b5c4d82",
+    "plan_raw_sha256": "7910272ad6d05e012b101c782ea2268b5585eb6ab0f9b49f38c1aac9b5e13419",
+    "required_text_lookup": "Original full row index plus exact record_id and text_sha256 from bound rowmap; never vector position alone.",
+    "sampling_lock": {
+      "bytes": 7535,
+      "sha256": "52823fc3cbfcc358f58dab29a21b5d01746bd0dbc8cd90c232113cae4c8d39b7"
+    },
+    "selection_files": {
+      "input_bindings.json": {
+        "bytes": 20764,
+        "sha256": "c21fa27601da91182d62c9d85ae0434f495f5bfa1bef692bdc31b09b2a0b4020"
+      },
+      "selection.private.jsonl": {
+        "bytes": 73677,
+        "sha256": "4c827b85df913a5ea5aed064c035098bcc5285e37befbf1e9b0bc2d1de3a51af"
+      },
+      "selection_swap.private.jsonl": {
+        "bytes": 3014,
+        "sha256": "8676f0a857020f473040059c5103e093cff26b656dca1ff69fdcf71731da7b68"
+      }
+    },
+    "source_audit": {
+      "bytes": 7025828,
+      "sha256": "733802fb0e0393cc7feef659d539d1663a8a4b4401b07893d94a8796753c7487"
+    },
+    "source_records": {
+      "bytes": 570048810,
+      "sha256": "c003933aa4e04cddc5fda8bfa9e0d6752c80bef92eddaf85400b29c1512d086e"
+    }
+  },
+  "optional_retained_replay": {
+    "executed": false,
+    "reason": "Original complete frame vectors and rowmap were not supplied; exported hashes are execution evidence only.",
+    "record_to_frame_mapping_independently_verified": false,
+    "retained_scores_independently_verified": false
+  },
+  "passed": true,
+  "qualification_result": {
+    "bytes": 5028,
+    "sha256": "a1c26a50d18094e44431fc009ddfbc308f759a84c77a916e2408c1c07fcb09dc"
+  },
+  "qualification_review": {
+    "bytes": 5685,
+    "sha256": "048477e44feb2ea4afdf14f5596c71eaaf6c6b3a3dcb492625cb5d8c494c9e2b"
+  },
+  "sampler_package": {
+    "bytes": 791,
+    "sha256": "c1da01e546c4ee0b5e84503b8513ec66f6ee5ae1ded16f46b2ce6b7801e18ce2"
+  },
+  "sampling_lock": {
+    "bytes": 7535,
+    "sha256": "52823fc3cbfcc358f58dab29a21b5d01746bd0dbc8cd90c232113cae4c8d39b7"
+  },
+  "schema": "third-llm-selection-metadata-identity-review-v1",
+  "scope": "Independent local exported-artifact, identity, exact-weight and swap audit. Full census/bin totals/selection reservoir/stream SHA remain original execution attestations under the qualified pinned sampler.",
+  "score_stream_independently_recomputed": false,
+  "selection_reservoir_independently_replayed": false,
+  "selection_result": {
+    "bytes": 4788,
+    "sha256": "1b17c194be4825da9fc9b7af2d3e63ad5d3ed0c377e3fdfb33374bae8094225d"
+  },
+  "selection_result_internal_seal": "155a1f39c267c96479c278f85e87847c0fcf9fafa2998828bf1ad581f2243649",
+  "semantic_validity_established": false,
+  "source_frame_result": {
+    "bytes": 15372,
+    "sha256": "d4fc45ec0d38ddc94c2a9c82ee3948020d0acd1f47fd84582b87ad5e273aedb1"
+  },
+  "state": "COMPLETED",
+  "terminal": {
+    "child_wall_seconds_through_exit": 1258.790338974446,
+    "exit_code": "0:0",
+    "job_id": "13571",
+    "node": "csis.cn1",
+    "parent": "COMPLETED",
+    "skips": 0,
+    "tests": 22
+  },
+  "terminal_export": {
+    "bytes": 163962,
+    "sha256": "e15689c257f80ef9a3259b38ce2ae8372ba862cdd065a040e7de2052730322e9"
+  }
+}
