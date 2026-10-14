@@ -1,0 +1,182 @@
+{
+  "actual_human_responses": 0,
+  "actual_model_calls": 0,
+  "admission_checks_reviewed": [
+    "All140250 source rows and census bindings checked once, all32 encoded/replay payloads and every assembled slice checked by unchanged validators; final watcher includes those files.",
+    "Original native source IDs/kinds and fixed partition hash recomputed globally; every20996 calibration row retained in original source order; same-source calibration pairs and unknown-owner singletons remain eligible.",
+    "No normalization or new embedding calls: calibration vectors gathered and compared as exact FP32 bytes; metadata binds full-source index, record ID and text hash.",
+    "Fixed core, dispatch, qualification, additive repair, source/cache manifest and payload hashes; current files/assets checked initially/finally.",
+    "New schema and historical false acceptance/semantic/human flags preserved; no legacy acceptance API used.",
+    "Exclusive new outputs, actual prewrite aggregate cap, final output inventory, durable last sealed result; failures preserved.",
+    "One-shot parent launcher requires fresh exact quota mount/parser, prior terminal jobs and empty relevant queue; immutable intent precedes single submission; failure/unknown outcome never automatically retried.",
+    "LLM-only protocol retains complete weighted denominator including unavailable outputs; independent validation frame is all above-tau pairs, not model positives; strict two-model AND with category/status replay instability rejection.",
+    "Prospective model-only claim scope; no current human dependency and no claim that historical independent-human gate passed."
+  ],
+  "blocking_findings": [],
+  "created_utc": "2026-10-14T04:42:26.109872+00:00",
+  "independent_checks": {
+    "author_command_compatibility_receipt": {
+      "binding": {
+        "bytes": 877,
+        "sha256": "63c6f67c83364432f0e9040b9910c51614d16ebc41ff64b0739c73acca4f9cdd"
+      },
+      "execution_of_65_command_check_by_this_reviewer": false,
+      "reported_child_commands": 65,
+      "source_export_and_code_hashes_independently_verified": true
+    },
+    "control_bash_syntax": true,
+    "control_tests": {
+      "last_elapsed_seconds": 0.066,
+      "passed": 9,
+      "skipped": 0,
+      "tests": 9
+    },
+    "frame_tests": {
+      "last_elapsed_seconds": 0.032,
+      "passed": 16,
+      "skipped": 0,
+      "tests": 16
+    },
+    "protocol_bound_file_validator": {
+      "bound_files_verified": 39,
+      "passed": true
+    },
+    "protocol_tests": {
+      "last_elapsed_seconds": 0.007,
+      "passed": 10,
+      "skipped": 0,
+      "tests": 10
+    }
+  },
+  "limitations": [
+    "Local synthetic tests and code review do not constitute actual production full-cache frame admission; heavy actual payload/source/assets checks must pass in the launched compute allocation.",
+    "Native ownership is a contributor proxy; documented source/mirror identity is not cryptographic publisher attestation or complete historical-content coverage.",
+    "Technical model pilots and proposed finite-population model-panel bound are not semantic truth, human accuracy or independent model error guarantees.",
+    "Complete pair-score/bin census, new v3 sampling/ingestion/inference implementation and prospective locks still required; no scientific sample or seed has been created by this review.",
+    "Child process timer includes bounded output-pipe draining before return; no pure-inference timing claim.",
+    "No human annotation is active in this branch; original v1 three-human and historical v2 author-audit completion remain false."
+  ],
+  "output_budget": {
+    "combined_child_console_cap_bytes": 14680064,
+    "contingency_bytes": 134217728,
+    "filesystem_allowance_bytes": 16777216,
+    "frame_directory_cap_bytes": 100663296,
+    "quota_snapshot_is_not_reservation": true,
+    "test_console_cap_bytes": 1048576,
+    "total_allowance_bytes": 268435456,
+    "total_console_allowance_bytes": 16777216,
+    "unchanged_reserve_bytes": 8589934592,
+    "vectors_npy_exact_bytes": 64499840
+  },
+  "packages": {
+    "e5_calibration_frame_control_v1_20261014": {
+      "files": {
+        "README.txt": {
+          "bytes": 1885,
+          "sha256": "21e90dbbc67a3a92ad9e0fa5a30ebecb42500caa123e8e375de769ce5ec806c9"
+        },
+        "SOFTWARE_VALIDATION.json": {
+          "bytes": 504,
+          "sha256": "98b05ce70f56b46f45ddd9f99049b464ec265cb557718536c9dfd44b8404cf34"
+        },
+        "frame.sbatch": {
+          "bytes": 1274,
+          "sha256": "84ddafb7580c1494202bddb82a81d3eb54eb6ae479d4af2193859df3f997b979"
+        },
+        "launch.py": {
+          "bytes": 7831,
+          "sha256": "2c17c69eb0695bb7c60b77060df4704c95cc11957fac44f6a1388e8c493781f5"
+        },
+        "runner.py": {
+          "bytes": 3997,
+          "sha256": "9c8c0252a0e18590b64a03d70ae232ff74c1a28ae20ea988e3c09090adcf862c"
+        },
+        "test_control.py": {
+          "bytes": 3280,
+          "sha256": "f5b874216950b135dd3bf519aa523d6590d2d250087cd6d8e4f2390777b32b9a"
+        }
+      },
+      "manifest": {
+        "bytes": 1039,
+        "sha256": "b118394966d36b9783dd209d9f1c494e03a38618dba114c0ff0347ed445d35bd"
+      },
+      "members_verified": 6
+    },
+    "e5_calibration_frame_v1_20261014": {
+      "files": {
+        "README.txt": {
+          "bytes": 7354,
+          "sha256": "1aa4c5097262327f923d3aea1411b2f586a611d2523dd3f64bbc3ffedd2a115f"
+        },
+        "SOFTWARE_VALIDATION.json": {
+          "bytes": 1638,
+          "sha256": "be59035564b632986462ffd1ce376b0e300d82b9e920458026cbba0575a23747"
+        },
+        "expectations.json": {
+          "bytes": 2486,
+          "sha256": "dfcc1245dd5607f03311b6a2bf8daa221ad9cb657b883d2120a2f5cb9e9d33b9"
+        },
+        "frame.py": {
+          "bytes": 25196,
+          "sha256": "0fcab7393bae2caab812264f7b615d4e27396bbbb6f51208e6b21853a156c931"
+        },
+        "recorded_cli_validation.json": {
+          "bytes": 877,
+          "sha256": "63c6f67c83364432f0e9040b9910c51614d16ebc41ff64b0739c73acca4f9cdd"
+        },
+        "test_frame.py": {
+          "bytes": 10466,
+          "sha256": "3da243019ec4ef81ce20258118b49c1f95f8b91bf7372ba06330d09b4bf0428b"
+        }
+      },
+      "manifest": {
+        "bytes": 934,
+        "sha256": "015ea8122ba5b7a366eba6f96fc3e4d64767bb7d8425c48b3b047ff5fad87fa8"
+      },
+      "members_verified": 6
+    },
+    "model_annotation_v3_20261014": {
+      "files": {
+        "PLAN.json": {
+          "bytes": 29547,
+          "sha256": "7910272ad6d05e012b101c782ea2268b5585eb6ab0f9b49f38c1aac9b5e13419"
+        },
+        "PLAN.txt": {
+          "bytes": 11588,
+          "sha256": "23ab740b10de37a344be077334aaf7553bf3a5e5880db89e7ff0de2ae06ba424"
+        },
+        "README.txt": {
+          "bytes": 1213,
+          "sha256": "815eab4ea42af5f8ed7c18004e22facf2f5d6079e0ed57c8958d8e751ba7a0af"
+        },
+        "SOFTWARE_VALIDATION.json": {
+          "bytes": 2104,
+          "sha256": "d3724b789197ae7061ff51ed830ed83cd2bb4a7263f3242567d34eccce123949"
+        },
+        "protocol.py": {
+          "bytes": 10634,
+          "sha256": "6211ad9afefcd8e22017d4a39bd1357424000710bc131a549f7c6bd4cd1c4d31"
+        },
+        "test_protocol.py": {
+          "bytes": 4514,
+          "sha256": "5add972b48d1ec4427db8802a06228e29636da45fded689e225daec9bc3a9ad5"
+        }
+      },
+      "manifest": {
+        "bytes": 994,
+        "sha256": "56e97fe1b55f4047f4b8ddac1c7db00be22d69d45b270c8b31beab33d685aa01"
+      },
+      "members_verified": 6
+    }
+  },
+  "passed": true,
+  "production_frame_passed_by_this_review": false,
+  "remote_actions": 0,
+  "resolved_finding": {
+    "issue": "Command compatibility receipt initially bound older unsealed frame.py",
+    "resolution": "Author reran all65 actual copied metadata compatibility checks after cache ancestor and exact output inventory changes; final code and source export hashes independently verified. Final16tests rerun independently."
+  },
+  "schema": "third-llm-only-v3-independent-package-review-v1",
+  "scientific_activation": false,
+  "scope": "Local independent code/protocol review, targeted software tests and package binding verification only. No actual full-cache admission, sample, entropy draw, remote command, model inference or human response."
+}

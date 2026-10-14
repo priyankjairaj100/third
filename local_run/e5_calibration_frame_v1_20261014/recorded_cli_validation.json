@@ -1,0 +1,22 @@
+{
+  "assembly_stages": 1,
+  "child_commands": 65,
+  "frame_code": {
+    "bytes": 25196,
+    "sha256": "0fcab7393bae2caab812264f7b615d4e27396bbbb6f51208e6b21853a156c931"
+  },
+  "inputs": {
+    "local_workspace/reports/e5-full-sharded-v2-20261013/a01-assembly/terminal_export.json": {
+      "bytes": 4327502,
+      "sha256": "aa30909618420d62a2ceead9f678808d570cfde14d511fbfacce90d5e9bf5a0d"
+    },
+    "local_workspace/reports/e5-full-sharded-v2-20261013/a01-terminal-metadata/bundle.json": {
+      "bytes": 3199444,
+      "sha256": "393a90c6f4518f9e9292b8ebce07eebc09d4588697bd67c322c40ebabd24feb6"
+    }
+  },
+  "passed": true,
+  "schema": "third-calibration-frame-recorded-CLI-compatibility-check-v1",
+  "scope": "Locally copied immutable metadata; raw inputs read only, file I/O supplied from hash-bound exports; no heavy payload/model/remote checks",
+  "shard_stages": 32
+}

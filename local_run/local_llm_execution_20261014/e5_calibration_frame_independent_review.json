@@ -1,0 +1,114 @@
+{
+  "blocking_findings": [],
+  "cluster_software_tests": {
+    "passed": 16,
+    "skipped": 0,
+    "tests": 16
+  },
+  "confirmatory_study_ready": false,
+  "created_utc": "2026-10-14T04:48:19.955098+00:00",
+  "executed_slurm_checks_reported": {
+    "actual_cache_payload_hashes_verified": true,
+    "all_32_assembled_slices_exact": true,
+    "all_32_encoded_and_fresh_replay_payloads_verified": true,
+    "all_calibration_vectors_exact_FP32_gather": true,
+    "input_code_assets_initial_final_equal": true
+  },
+  "frame": {
+    "dtype": "float32",
+    "files": {
+      "input_bindings.json": {
+        "bytes": 121674,
+        "sha256": "75086e6c43e840db0b5310ce4f027e09c5b6dce5fb51e3156e494d28d68b723d"
+      },
+      "records.private.jsonl": {
+        "bytes": 6415732,
+        "sha256": "9260b4ec7f576c2181bddbf78a79a6c9fe0021aca942eea21cb215ba1b172c0a"
+      },
+      "vectors.npy": {
+        "bytes": 64499840,
+        "sha256": "c254719d68d4b0ffd14f0917075cabc7984ba6bcb7c9085cba66f5b48e78bae6"
+      }
+    },
+    "rows": 20996,
+    "same_source_pairs_excluded": false,
+    "shape": [
+      20996,
+      768
+    ],
+    "source_grouping": {
+      "calibration_source_units": 13394,
+      "calibration_unknown_singletons": 247,
+      "full_source_units": 88344,
+      "partition_counts": {
+        "calibration": 20996,
+        "test": 21067,
+        "train": 98187
+      },
+      "source_disjoint_across_partitions": true,
+      "source_grouping_limit": "Native account metadata is a contributor proxy; unknown owners remain record singletons. No new authenticity or actual-authorship claim.",
+      "source_kind_counts": {
+        "native_metadata_requires_provenance_review": 138728,
+        "unknown_singleton": 1522
+      },
+      "within_calibration_same_source_pairs_excluded": false
+    },
+    "total_frame_bytes": 71052618,
+    "unordered_pairs": 220405510
+  },
+  "frame_result_file": {
+    "bytes": 15372,
+    "sha256": "d4fc45ec0d38ddc94c2a9c82ee3948020d0acd1f47fd84582b87ad5e273aedb1"
+  },
+  "frame_result_internal_seal": "2db07387d60fd743d7b7511ea2a7917e0eb21dcd52fecf344aad9a7d6f2bb4de",
+  "full_population_cache_acceptance": false,
+  "heavy_payloads_independently_read_locally": false,
+  "human_responses": 0,
+  "independent_local_checks": {
+    "all33_process_stage_references_match": true,
+    "command_exact": true,
+    "decoded_metadata_files_rehashed": 11,
+    "input_receipt_bindings": 556,
+    "local_bound_code_files_rehashed": 153,
+    "output_receipt_and_exported_sizes_match": true,
+    "package_members_reverified": true,
+    "prior_metadata_bindings_compared": 218,
+    "result_internal_seal_valid": true
+  },
+  "job": {
+    "child_ru_maxrss_kib": 2187316,
+    "child_wall_seconds_including_console_drain": 78.06441940180957,
+    "elapsed_seconds": 79,
+    "exit": "0:0",
+    "id": "13556",
+    "node": "csis.cn1",
+    "slurm_batch_maxrss_kib": 1783800,
+    "state": "COMPLETED"
+  },
+  "limits": [
+    "Independent local review rehashed copied metadata and compared existing source/code receipts; complete source, calibration mapping and vector payloads were not copied or rehashed locally. Their actual read/hash/byte-gather checks were executed by the reviewed Slurm adapter.",
+    "native_metadata_requires_provenance_review remains the original source-kind label for138728 rows; source-authenticity and human/scientific acceptance flags remain false. Native accounts are contributor proxies and unknown owners remain singletons.",
+    "This admits a separate exact-byte calibration frame only. No pairs were sampled, no thresholds selected, no model judgments or human responses produced; complete pair census and prospective model-only locks remain future work.",
+    "Quota was a fresh launch snapshot, not a reservation. Slurm sampled MaxRSS and child ru_maxrss are distinct measurements."
+  ],
+  "model_calls": 0,
+  "passed": true,
+  "prior_metadata_inputs": {
+    "local_workspace/reports/e5-full-sharded-v2-20261013/a01-assembly/terminal_export.json": {
+      "bytes": 4327502,
+      "sha256": "aa30909618420d62a2ceead9f678808d570cfde14d511fbfacce90d5e9bf5a0d"
+    },
+    "local_workspace/reports/e5-full-sharded-v2-20261013/a01-terminal-metadata/bundle.json": {
+      "bytes": 3199444,
+      "sha256": "393a90c6f4518f9e9292b8ebce07eebc09d4588697bd67c322c40ebabd24feb6"
+    }
+  },
+  "remote_actions_by_reviewer": 0,
+  "schema": "third-e5-calibration-frame-terminal-independent-metadata-review-v1",
+  "semantic_validity_established": false,
+  "source_authenticity_verified": false,
+  "terminal_export": {
+    "bytes": 160255,
+    "sha256": "9e4279cae7c0c035ecbf2c039086039d0cf5d8ea39810ed524c008ef32ab35ce"
+  }
+}

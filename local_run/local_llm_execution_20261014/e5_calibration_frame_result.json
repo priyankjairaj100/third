@@ -1,0 +1,153 @@
+{
+  "schema": "third-calibration-frame-completed-summary-v1",
+  "observed_utc": "2026-10-14T04:45:02.415203+00:00",
+  "job_id": 13556,
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "scheduler_elapsed_seconds": 79,
+  "scheduler_batch_maxrss_kib": 1783800,
+  "node": "csis.cn1",
+  "source_result": {
+    "bytes": 15372,
+    "sha256": "d4fc45ec0d38ddc94c2a9c82ee3948020d0acd1f47fd84582b87ad5e273aedb1"
+  },
+  "source_result_internal_seal": "2db07387d60fd743d7b7511ea2a7917e0eb21dcd52fecf344aad9a7d6f2bb4de",
+  "terminal_export": {
+    "bytes": 160255,
+    "sha256": "9e4279cae7c0c035ecbf2c039086039d0cf5d8ea39810ed524c008ef32ab35ce"
+  },
+  "cluster_tests": {
+    "elapsed_seconds": 0.1948715392500162,
+    "errors": 0,
+    "failures": 0,
+    "passed": true,
+    "skipped": 0,
+    "tests": 16
+  },
+  "child_wall_seconds_through_exit": 78.06441940180957,
+  "process_receipt": {
+    "bytes": 2131,
+    "sha256": "3d98bf665a968b6a440825f92cea08ca8efbaa8e73eb24968849ec839c23cf52"
+  },
+  "runner_children_maxrss_kib": 2187316,
+  "independent_local_payload_rehash": false,
+  "independent_scope": "Local metadata hash/seal review; actual source and payload validation executed by the reviewed Slurm adapter.",
+  "active_annotation_mode": "fully_llm",
+  "planned_human_reviews": 0,
+  "actual_cache_payload_hashes_verified": true,
+  "all_32_assembled_slices_exact": true,
+  "all_32_encoded_and_fresh_replay_payloads_verified": true,
+  "all_calibration_vectors_exact_FP32_gather": true,
+  "calibration_ordered_ids_sha256": "e10f795a158fea20a7fcddd7ab5ee141615eec10730f7e352037b8ed5b5c4d82",
+  "calibration_ordered_source_ids_sha256": "e94fd22dd063eafc7b5755efd5fde9cfe92466bb7bdb88f098e1d57cd1e6e859",
+  "confirmatory_study_ready": false,
+  "created_utc": "2026-10-14T04:43:44.755014+00:00",
+  "downstream_text_lookup": "Use original_full_row_index against bound full source, require record_id and text_sha256 equality. No full text is duplicated here.",
+  "dtype": "float32",
+  "elapsed_seconds_before_publication": 77.27962121739984,
+  "files": {
+    "input_bindings.json": {
+      "bytes": 121674,
+      "sha256": "75086e6c43e840db0b5310ce4f027e09c5b6dce5fb51e3156e494d28d68b723d"
+    },
+    "records.private.jsonl": {
+      "bytes": 6415732,
+      "sha256": "9260b4ec7f576c2181bddbf78a79a6c9fe0021aca942eea21cb215ba1b172c0a"
+    },
+    "vectors.npy": {
+      "bytes": 64499840,
+      "sha256": "c254719d68d4b0ffd14f0917075cabc7984ba6bcb7c9085cba66f5b48e78bae6"
+    }
+  },
+  "final_verification_seconds": 2.9050231650471687,
+  "fingerprint": "294e0abb55aeae76430cfca566630b737426c9fa92197707c5a2d08fa887147d",
+  "frame_package_sha256": "015ea8122ba5b7a366eba6f96fc3e4d64767bb7d8425c48b3b047ff5fad87fa8",
+  "frame_scope": "Every calibration row of the complete replayed prepared frame, in original order. This versioned adapter supports later LLM-only sampling; no sampling or judgments performed.",
+  "full_plan": {
+    "bytes": 1577354,
+    "sha256": "857fcf65cf5a8a2e55d6abbc5b8c96335c5aca3905f701b37d9b2a51aae116f3"
+  },
+  "full_population_cache_acceptance": false,
+  "full_population_rows": 140250,
+  "human_responses": 0,
+  "human_validation_claimed": false,
+  "input_code_assets_initial_final_equal": true,
+  "model_forwards": 0,
+  "new_model_judgments": 0,
+  "original_full_row_indices_sha256": "e52d66ab705920c7099a139b7b6006e4d0aa7a11e494b5229daded24958eea03",
+  "original_monolithic_full_replay_executed": false,
+  "original_monolithic_full_writer_executed": false,
+  "original_route_acceptance": false,
+  "passed": true,
+  "payload_validation_seconds": 73.32471912354231,
+  "peak_rss_kib_linux": 2187316,
+  "prepared_source_audit_file": {
+    "bytes": 7025828,
+    "sha256": "733802fb0e0393cc7feef659d539d1663a8a4b4401b07893d94a8796753c7487"
+  },
+  "prepared_source_records_file": {
+    "bytes": 570048810,
+    "sha256": "c003933aa4e04cddc5fda8bfa9e0d6752c80bef92eddaf85400b29c1512d086e"
+  },
+  "primary_input_acceptance": false,
+  "qualification_result": {
+    "bytes": 11974,
+    "sha256": "bb84fc18556e6a7d57eda5fa1fffe2c9e2ca5a3f7da5e85f2b96fac11d2e484f"
+  },
+  "repair_result": {
+    "bytes": 2556,
+    "sha256": "fc1c54310d6258b39179a350c6ef4e66fdd466c45cec20ca76b85c6682d47af6"
+  },
+  "requires_human_annotations": false,
+  "rows": 20996,
+  "sampling_performed": false,
+  "semantic_validity_established": false,
+  "shape": [
+    20996,
+    768
+  ],
+  "source_authenticity_verified": false,
+  "source_cache_files": {
+    "chunk_log.jsonl": {
+      "bytes": 75706969,
+      "sha256": "53157ef3a9c32f89d6d3d7e26eb6157f734314dbf5ba2e30fb7a16ae26aaca9e"
+    },
+    "vectors.npy": {
+      "bytes": 430848128,
+      "sha256": "cbc1f9a06079048144f406ec11925350aa057215869819b0967ac2749e25284e"
+    }
+  },
+  "source_cache_manifest": {
+    "bytes": 13293,
+    "sha256": "0a27cdc151a99c5f1fb6d6a94669e42bf91e14adc3c2afa20fc9f33a74539cbc"
+  },
+  "source_counts": {
+    "chunks": 312159,
+    "content_tokens": 61576539,
+    "model_forward_batches": 147825,
+    "rows": 140250
+  },
+  "source_full_rows_sha256": "decd53334651c3a5bbede1e57146722e7d852f784577dff4dc93311065934419",
+  "source_grouping": {
+    "calibration_source_units": 13394,
+    "calibration_unknown_singletons": 247,
+    "full_source_units": 88344,
+    "partition_counts": {
+      "calibration": 20996,
+      "test": 21067,
+      "train": 98187
+    },
+    "source_disjoint_across_partitions": true,
+    "source_grouping_limit": "Native account metadata is a contributor proxy; unknown owners remain record singletons. No new authenticity or actual-authorship claim.",
+    "source_kind_counts": {
+      "native_metadata_requires_provenance_review": 138728,
+      "unknown_singleton": 1522
+    },
+    "within_calibration_same_source_pairs_excluded": false
+  },
+  "source_text_binding": "dcfa74c795fdd7fba48f3e7e8efad25260053d753a39092ff2dc706349cf6044",
+  "stage": "complete",
+  "threshold_selected": false,
+  "unordered_pair_count": 220405510,
+  "within_calibration_same_source_exclusion": false
+}

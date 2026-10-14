@@ -1,0 +1,23 @@
+{
+  "schema": "third-e5-calibration-frame-launch-summary-v1",
+  "job_id": "13556",
+  "created_utc": "2026-10-14T04:42:26.299161+00:00",
+  "returncode": 0,
+  "control_package": {
+    "bytes": 1039,
+    "sha256": "b118394966d36b9783dd209d9f1c494e03a38618dba114c0ff0347ed445d35bd"
+  },
+  "frame_package": {
+    "bytes": 934,
+    "sha256": "015ea8122ba5b7a366eba6f96fc3e4d64767bb7d8425c48b3b047ff5fad87fa8"
+  },
+  "quota_available_bytes": 8960794624,
+  "reserve_bytes": 8589934592,
+  "output_allowance_bytes": 268435456,
+  "automatic_retry": false,
+  "planned_human_reviews": 0,
+  "human_annotation_required": false,
+  "sampling_performed": false,
+  "model_inference_calls": 0,
+  "scientific_activation": false
+}

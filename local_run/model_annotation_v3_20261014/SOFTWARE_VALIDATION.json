@@ -1,0 +1,45 @@
+{
+  "activation_performed": false,
+  "checks": [
+    "all36 six-way label combinations preserve two-positive AND rule",
+    "all unavailable statuses retain full exact-weight denominator",
+    "duplicate-model and unavailable substantive judgment refusal",
+    "six-way and availability overlap changes trigger instability",
+    "stable unordered pair identity with unnormalized Unicode",
+    "structured distinct v3 domains and revision-bound replay seeds",
+    "zero planned humans and historical gate/activation false",
+    "frozen0.95/0.90/200 thresholds and full-denominator policy preserved",
+    "qualified512/32768/0-retry pilot runtime/report pins agree",
+    "all39 historical source/protocol/runtime/result file bindings unchanged"
+  ],
+  "empirical_fixture_outputs_saved": false,
+  "human_annotation_calls": 0,
+  "independent_review": {
+    "bound_files_verified": 39,
+    "passed": true,
+    "reviewer": "source_gate_audit",
+    "scope": "Read-only protocol, explicit no-human scope, complete denominator/frame, runtime/prompt/source pins, randomness, stability and prospective gates",
+    "tests_passed": 10,
+    "tests_skipped": 0
+  },
+  "last_observed_test_seconds": 0.007,
+  "model_inference_calls": 0,
+  "passed": true,
+  "protocol_validation": {
+    "bound_files_verified": 39,
+    "human_annotation_calls": 0,
+    "model_inference_calls": 0,
+    "passed": true,
+    "scientific_gates_completed": false,
+    "scope": "Prospective protocol and local file bindings only; no activation, sampling, inference or acceptance"
+  },
+  "python_version": "3.9.6",
+  "sampling_or_entropy_draws": 0,
+  "schema": "third-llm-only-plan-software-validation-v3",
+  "scientific_acceptance_passed": false,
+  "scope": "Local protocol invariants, bound-file hashes and small explicitly synthetic identity/label fixtures only. No sampler, source/cache admission, inference runner or statistical evaluator execution is established.",
+  "test_command": "python3 -B -m unittest discover -s local_run/model_annotation_v3_20261014 -p 'test_*.py'",
+  "test_count": 10,
+  "tests_passed": 10,
+  "tests_skipped": 0
+}

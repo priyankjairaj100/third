@@ -1,0 +1,31 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 1885,
+      "sha256": "21e90dbbc67a3a92ad9e0fa5a30ebecb42500caa123e8e375de769ce5ec806c9"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 504,
+      "sha256": "98b05ce70f56b46f45ddd9f99049b464ec265cb557718536c9dfd44b8404cf34"
+    },
+    "frame.sbatch": {
+      "bytes": 1274,
+      "sha256": "84ddafb7580c1494202bddb82a81d3eb54eb6ae479d4af2193859df3f997b979"
+    },
+    "launch.py": {
+      "bytes": 7831,
+      "sha256": "2c17c69eb0695bb7c60b77060df4704c95cc11957fac44f6a1388e8c493781f5"
+    },
+    "runner.py": {
+      "bytes": 3997,
+      "sha256": "9c8c0252a0e18590b64a03d70ae232ff74c1a28ae20ea988e3c09090adcf862c"
+    },
+    "test_control.py": {
+      "bytes": 3280,
+      "sha256": "f5b874216950b135dd3bf519aa523d6590d2d250087cd6d8e4f2390777b32b9a"
+    }
+  },
+  "manifest_self_excluded": true,
+  "schema": "third-calibration-frame-control-package-v1",
+  "scope": "One read-only admission preflight and one bounded Slurm frame verification; no inference or human annotation"
+}

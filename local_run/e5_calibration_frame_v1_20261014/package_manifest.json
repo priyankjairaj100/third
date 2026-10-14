@@ -1,0 +1,30 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 7354,
+      "sha256": "1aa4c5097262327f923d3aea1411b2f586a611d2523dd3f64bbc3ffedd2a115f"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 1638,
+      "sha256": "be59035564b632986462ffd1ce376b0e300d82b9e920458026cbba0575a23747"
+    },
+    "expectations.json": {
+      "bytes": 2486,
+      "sha256": "dfcc1245dd5607f03311b6a2bf8daa221ad9cb657b883d2120a2f5cb9e9d33b9"
+    },
+    "frame.py": {
+      "bytes": 25196,
+      "sha256": "0fcab7393bae2caab812264f7b615d4e27396bbbb6f51208e6b21853a156c931"
+    },
+    "recorded_cli_validation.json": {
+      "bytes": 877,
+      "sha256": "63c6f67c83364432f0e9040b9910c51614d16ebc41ff64b0739c73acca4f9cdd"
+    },
+    "test_frame.py": {
+      "bytes": 10466,
+      "sha256": "3da243019ec4ef81ce20258118b49c1f95f8b91bf7372ba06330d09b4bf0428b"
+    }
+  },
+  "manifest_self_excluded": true,
+  "schema": "third-e5-calibration-frame-package-v1"
+}

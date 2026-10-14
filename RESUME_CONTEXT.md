@@ -1,5 +1,7 @@
 # Resume this research project
 
+Active local continuation, 14 October 2026: read `local_run/LOCAL_LLM_CHECKPOINT_20261011.txt` for current execution and `local_run/model_annotation_v3_20261014/PLAN.txt` for the active prospective annotation policy. The user now requires **fully LLM annotation with zero human reviews**; the earlier 50–100-pair author audit is superseded. Job 13556 completed the separately versioned calibration-frame verification. Historical human protocols below remain unchanged and unmet, but are not active dependencies of the LLM-only branch.
+
 Last substantive checkpoint: **5 October 2026, local empirical execution handoff**.
 The latest theory remains Phase 10 finite-format memory bounds and canonical sequential repair.
 The user now runs empirical work on their local machine and reports results back.

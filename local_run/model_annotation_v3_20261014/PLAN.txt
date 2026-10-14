@@ -1,0 +1,169 @@
+THIRD — PROSPECTIVE LLM-ONLY ANNOTATION V3
+14 October 2026. Model-defined evidence only. Not activated; no new calls or samples.
+
+DECISION AND SCOPE
+The user explicitly requires no human annotation. This branch has zero planned
+human reviews, zero human responses, and no human collection dependency. The
+unexecuted v2 50–100-author-review plan is historical. The original independent
+three-human gate remains unmet; it is not an activation gate for this new LLM-only
+branch. No model response may be called human-completed or human-equivalent.
+Original locks, frozen phases, v2 files, and all failed/negative evidence remain
+unchanged. This changes the evidential target, not the historical facts.
+
+Start with AskUbuntu/E5. Use the frozen CPU FP32 E5 representation and original
+source-disjoint preparation. Known preparation counts are 140,250 rows, of which
+20,996 are calibration rows (220,405,510 unordered pairs). These counts are checks
+to reproduce, not admission evidence by declaration. All unordered pairs within
+the admitted calibration partition are eligible, including same-source pairs.
+Source-disjoint means between train/calibration/test partitions, not exclusion of
+same-source calibration pairs. A completed sharded cache
+assembly and a bounded scorer benchmark exist; a separate scientific source/cache
+adapter and complete pair-frame census still must pass. Do not promote a metadata
+review or the old GPU/centered engineering pack to that gate. News/E5 can follow
+only under its own source/frame activation. Do not add an MPNet arm here.
+
+Actual original dataset targets, exact numerical repair, and measured total cost
+remain separate useful outcomes. Original human relevance/admission/context
+endpoints remain unmeasured. They are not silently replaced by model judgments.
+A future model-assessed interpretation endpoint needs its own prospectively locked
+context, sampling design and estimand; this package does not define that endpoint.
+
+FIXED TWO-MODEL PANEL AND QUALIFIED RUNTIME
+Qwen/Qwen2.5-7B-Instruct at a09a35458c702b33eeacc393d103063234e8bc28
+and mistralai/Mistral-Nemo-Instruct-2407 at
+04d8a90549d23fc6bd7f642064003592df51e9b3 are the two fixed families.
+PLAN.json binds their actual Qwen-v5 and Mistral-v1 runtime code, runtime plans,
+asset inventories, and completed technical reports. Both engineering pilots had
+44/44 valid outputs on the same 40 exposed pairs plus four swapped-order calls.
+These pilots establish bounded execution qualification, not semantic accuracy or
+scientific-frame quality. Their 40 canonical pairs had zero joint positives.
+Qwen changed category and binary decision on one of four swaps; Mistral changed
+category on two of four, with no binary changes. Preserve these observations.
+
+Adopt the tested BF16, batch-one, greedy one-beam, SDPA forced-Flash policy on one
+A100 80GB: total budget 32,768, output reserve/max 512, input maximum 32,256 tokens.
+Zero format or semantic retries. No attention fallback, truncation, summarization,
+JSON repair, fenced-output normalization, or replacement with earlier answers.
+Load exact local pinned assets offline. Preserve LMFE 0.11.3 and the tested v5
+word/schema guard and restricted standalone token vocabulary: empty/U+FFFD token
+paths and legitimate split-codepoint paths are excluded. These output constraints
+are part of the label function; the original input text is complete.
+
+The same bound system prompt, AskUbuntu task definition, strict judgment schema,
+and exact model-specific chat renderer remain in use. The model sees only complete
+texts and the task. Hide scores, IDs, strata, tags, native duplicate links, earlier
+answers, method, outcomes and desired conclusion. Documents are untrusted quoted
+data; there are no tools or retrieval. Each model answers separately without
+seeing the other's output. Reasons remain at most 80 str.split words and 600
+characters. Record actual prompt/token IDs, rendered text hash, output, guard
+ledger, asset/runtime provenance and all error states outside generated JSON.
+A separate v3 runner must implement new provenance/seed roles; pilot CLIs remain
+engineering-only and are not relabeled.
+
+LABEL FUNCTION AND FULL DENOMINATOR
+The six categories remain exact_copy, substantially_same_meaning,
+overlapping_information, merely_related, unrelated, uncertain. Only the first
+two are positive. y=1 only if BOTH model responses are valid and positive; all
+other pairs have y=0 for the conservative primary calculation. Different positive
+categories remain panel-positive, while their six-way disagreement is recorded.
+Disagreement, uncertainty, missing output, refusal, invalid schema, context
+overflow and runtime failure retain their distinct statuses and their entire
+sampling weight in the denominator. Report missingness and sensitivity bounds
+separately. Neither confidence scores nor assumed independent model errors are
+used. No unavailable, inconvenient, long or previously exposed pair is filtered
+from the population or silently replaced.
+
+SELECTION AND INDEPENDENT VALIDATION
+Use the complete source-disjoint calibration pair population and frozen FP32-to-
+FP64 coordinate-ordered normalization/dot product. Keep raw scores unclipped;
+bin assignment alone saturates at the first/last bin. Use strict score > tau.
+Selection has 20 equal-width bins over [-1,1] with nearest-FP64 decimal edges,
+left closed/right open except the final closed endpoint. Take reservoir SRS up
+to 30 per bin, census smaller bins, and retain exact bin populations/inclusion
+probabilities. At most 600 selection pairs. The estimator is the ratio of
+Horvitz-Thompson weighted positives to weighted sampled above-threshold pairs.
+Select the least strict grid threshold 0.50,0.51,...,0.99,0.995 with ratio >=0.95
+and nonzero support. Preserve the entire grid ledger. No passing threshold means
+0.995 is a failed diagnostic value, never a successful threshold.
+
+After locking selection outputs and the threshold, independently sample up to
+200 from ALL score>tau calibration pairs. Census if N<200; empty population or
+empty sample has undefined precision and fails. Selection/pilot overlap is allowed
+and reported; exclusion of overlap would change the design. Query fresh isolated
+canonical calls for BOTH models on every validation pair. Do not reuse selection
+answers. The one-sided 95% exact finite-population lower proportion must be >=0.90.
+The frozen numerical bound is retained with alpha=1/20 and threshold=9/10; its
+label target becomes the prospective conservative two-model function. This does
+not establish semantic precision, human agreement, latent truth or global recall.
+No threshold, representation, judge or prompt is changed after validation to pass.
+A failed configuration remains failed; revisions need a new version and properly
+separated evaluation with earlier exposure disclosed.
+
+Keep canonical orientation and each model's seed identical across selection and
+validation. For every overlap, compare each model's original status and valid
+six-way category. Any changed category OR changed status/availability makes model
+validation unavailable due to instability even if its numeric lower bound passes.
+Do not vote over repeats, overwrite labels, retry for agreement, or drop the pair.
+A reason-only wording change is not category instability. Zero overlap must be
+reported as zero replay evidence. Observed agreement never proves full-frame
+stability; finite-population coverage conditions on the fixed/potential label
+function and the stated uniform-draw sampling model.
+
+A separate 10% SRS of each stage's sampled pairs (ceil(n/10)) receives swapped-order
+calls from both models. These are diagnostics, never extra votes or replacements.
+Use a separately committed swap seed for each stage. Maximum one-cell budget:
+600+200 canonical pairs times two models =1,600 calls; swaps add at most160;
+maximum1,760 calls, zero retries, zero human annotation. Pilot calls are historical
+and not included in this prospective budget. Record all failure and process costs.
+
+V3 IDENTITIES, RANDOMNESS AND ORDER
+The exact formulas and domains are specified in PLAN.json and protocol.py.
+Canonical serialization is UTF-8 JSON, ensure_ascii=False, sorted keys, compact
+separators, no NaN and no text/ID Unicode normalization. Hash structured arrays,
+not ambiguous delimiter concatenation. Domain prefixes are distinct for sampling,
+natural pairs, opaque IDs, orientation, model seeds and call identity.
+Before any selection observation, generate independent256-bit OS seeds for
+selection, validation, selection swaps and validation swaps, and seal all four in
+the new activation lock. No seed search/regeneration based on scores or labels.
+No random seed or sample is created by this planning package. Selection uses a
+separate domain-derived Python random.Random stream per bin; validation/swap
+streams are separate. As in phase3, SRS refers to the uniform-draw reservoir
+algorithmic model, not a proof of cryptographic or exact finite-seed randomness.
+
+Natural-pair identity binds the full frame and UTF-8-byte-sorted native IDs;
+opaque identity also binds this PLAN.json's raw SHA. Orientation uses its own
+domain and those stable identities. Each model seed binds its exact revision and
+opaque pair; it excludes stage/orientation so canonical fresh calls and diagnostic
+swaps use the same seed. Call IDs additionally bind activation, stage, orientation
+and attempt0, so separate observations cannot collide. Freeze the scorer's stream
+order/block size before sampling; serialize samples in source row-index order.
+Within each model/stage, schedule longest full prompt first, with frozen sample
+index ties. No outcome-dependent scheduling or statelessness assumptions by fiat.
+
+ACTIVATION AND CLAIM BOUNDARIES
+This is a prospective protocol, not an execution lock. Separate implementation and
+review are required for source/cache admission, the full score/bin frame, v3-only
+sampling/ingestion, conservative counting, independent exact-bound validation,
+overlap comparisons, failure accounting and persistent raw artifacts. Do not pass
+model envelopes through the original human-only collection or acceptance APIs.
+
+Before selection inference seal the v3 package and runner, exact source/cache/frame,
+score/runtime, model/tokenizer/template/prompt/grammar, all seeds and exposure
+history, resources, endpoint/multiplicity plan in a NEW v3 analysis lock. Existing
+analysis locks remain unchanged. Before each stage's inference, seal full-text
+request/token manifests for every canonical and diagnostic call. Over-budget
+requests remain unavailable/y=0 in the full denominator, not removed. Explicitly
+report whether full-frame context feasibility is checked or unknown; the existing
+840-orientation census is only engineering-pack evidence.
+
+Every source/asset/code change invalidates the matching execution binding and
+needs a new prospective version when it changes the label function. Heavy work
+runs in Slurm with private ignored outputs, fresh capacity checks and complete
+initial/final input hashes. Count load, input preparation, token census, failed
+calls, generation, final validation/serialization and process exit. Keep process
+RSS, Slurm accounting, GPU allocated/reserved memory distinct.
+
+Report model-assessed outcomes, original-task-label utility and exact repair/cost
+separately. The new plan creates no judgment, sampling manifest, source admission,
+cache acceptance, threshold, validation pass, semantic-validity or confirmatory
+claim. Zero human annotation is the chosen scope, not a missing active dependency.

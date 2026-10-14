@@ -1,0 +1,11 @@
+{
+  "schema": "third-frame-control-software-validation-v1",
+  "observed_utc": "2026-10-14T04:37:44.751751+00:00",
+  "tests": 9,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true,
+  "scope": "Local software fixtures for quota, duplicate-job checks, bounded logging and single-submission failure capture; no cluster job or source acceptance",
+  "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s local_run/e5_calibration_frame_control_v1_20261014 -p test_control.py -v"
+}

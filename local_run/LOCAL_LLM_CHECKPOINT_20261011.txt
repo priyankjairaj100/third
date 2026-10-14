@@ -1,91 +1,87 @@
 THIRD — VERIFIED LOCAL / CLUSTER CHECKPOINT
-Updated 2026-10-14T04:12:24.325885+00:00
+Updated 2026-10-14T04:48:26.972178+00:00
 
-COMPLETED
-- Array 13498: all 32 tasks COMPLETED, exit 0:0, on csis.cn1.
-  All 140,250 documents were encoded and independently replayed in fresh
-  processes: 280,500 document encodings, 624,318 chunks and 295,650 forward
-  batches across the two passes. The terminal metadata audit and independent
-  review checked 222 files and all 32 dispatch / 64 process / 64 completion
-  records, including every range, count, command and source/runtime binding.
-- Assembly 13546: COMPLETED, exit 0:0, in 76 seconds on csis.cn1.
-  The canonical cache contains 140,250 x 768 FP32 vectors. The sealed assembly
-  validated actual shard vectors/logs, fresh replay, source/code/assets and
-  every assembled slice before publishing its manifest. Independent local
-  review checked metadata, seals, file identities and sizes. It did not perform
-  a second independent scan of the full payload contents.
-- Scorer benchmark 13547: COMPLETED, exit 0:0, in 49 seconds on csis.cn1.
-  All 16 cluster software tests passed without skips. All 28 numerical cases
-  passed. Independent review rehashed all 11 exported files and reconstructed
-  every score stream, bin count and boundary count from the original 19-vector
-  fixture using the frozen pair-at-a-time numerical authority.
+ACTIVE ANNOTATION POLICY — FULLY LLM
+The user explicitly instructed on 14 October: no human annotation, fully LLM.
+Planned human reviews: 0. The earlier 50–100-pair author audit is superseded.
+New protocol: local_run/model_annotation_v3_20261014/PLAN.txt and PLAN.json.
+Protocol package SHA256:
+56e97fe1b55f4047f4b8ddac1c7db00be22d69d45b270c8b31beab33d685aa01
+Qwen2.5-7B and Mistral-Nemo remain separate model judges. Both must give valid
+positive labels for a panel positive. Missing, uncertain or disagreeing judgments
+retain full denominator weight. Preserve the 0.95 selection rule, independent
+200-pair validation, 0.90 lower-bound rule and fresh-call instability checks.
+Historical human gates stay unmet; they do not block this new LLM-only branch.
+No human forms, author audit or annotator recruitment are planned.
 
-BENCHMARK SCOPE
-The 19 genuine records are prior engineering qualification examples. Their 171
-unordered pairs test correctness; shapes 256, 260 and 512 repeat vector indices
-and remain explicitly synthetic software fixtures. No natural pairs were
-selected for annotation. No model forward or new model/human judgment occurred.
-The numerical suite took 11.268 seconds; the benchmark child took 31.504 seconds
-through exit. Its recorded peak RSS was 467,844 KiB. Slurm batch sampled MaxRSS
-was 155,772 KiB; these are different observations and must not be interchanged.
-A simple pair-rate extrapolation for scoring plus bins gives 23.47–28.57 minutes
-for 220,405,510 pairs across the three shapes. This is a conditional software-
-fixture scenario, not a measured natural-population or end-to-end runtime.
-Natural boundary frequency, reservoir sampling and future load are unmeasured.
-Preserve raw floating-point scores, including fixture excursions above 1.
+LATEST COMPLETED STAGE
+Job 13556: COMPLETED, exit 0:0, 79 seconds, csis.cn1. All 16 cluster tests passed.
+The new frame adapter validated actual source/cache bytes, all 32 encoded/fresh-
+replay payload pairs, exact assembled slices, full source order and partitions.
+It gathered all 20,996 calibration records as exact FP32 rows from the 140,250-row
+cache, defining 220,405,510 unordered pairs. Within-calibration same-source pairs
+remain eligible. There are 13,394 calibration source units, including 247 unknown
+singletons. Partitions: 98,187 train / 20,996 calibration / 21,067 test.
+Vectors occupy 64,499,840 bytes; metadata-only row map 6,415,732 bytes. Texts remain
+in the original bound source. Child wall time through exit: 78.0644 seconds.
+Process peak RSS: 2,187,316 KiB; Slurm batch sampled MaxRSS: 1,783,800 KiB.
+These are distinct observations. Actual source/payload validation ran in Slurm.
+Independent local review covers metadata/seals/stat identities, not another full
+payload scan. No sampling, new model judgment, threshold or semantic validation
+was performed. Native account metadata remains a contributor proxy; this does
+not newly establish publisher authenticity or actual authorship.
 
-STORAGE AND ACCESS
-The initial 1.25 GiB remaining-output + 8 GiB reserve check failed BEFORE any
-assembly intent or submission. That failure is preserved. A separate reviewed
-policy budgets 832 MiB for the single assembly: exact payload 506,555,097 bytes,
-16 MiB console files, 32 MiB JSON, 16 MiB filesystem margin, unchanged 256 MiB
-contingency, and rounding slack. The original 2.25 GiB total output envelope
-and 8 GiB reserve remain unchanged. Fresh quota passed before the sole launch.
-The earlier SSH refusal was consistent with a local ControlMaster option
-conflict enabling ask mode. Corrected options and a separate private master
-restored access without changing the user's working Terminal connection.
-No credentials are stored. Stop on authentication/transport refusal or timeout;
-reconcile existing jobs and receipts before another mutation. Never repeat an
-uncertain submission. Heavy work runs through Slurm, excluding csis.mn1.
+FRAME RESUME BINDINGS
+Remote root:
+/nfs_home/users/poonam/ccu-acl2027/local_workspace/qualification/e5-calibration-frame-v1-20261014-a01/run/frame
+Result SHA256: d4fc45ec0d38ddc94c2a9c82ee3948020d0acd1f47fd84582b87ad5e273aedb1
+Vector SHA256: c254719d68d4b0ffd14f0917075cabc7984ba6bcb7c9085cba66f5b48e78bae6
+Row-map SHA256: 9260b4ec7f576c2181bddbf78a79a6c9fe0021aca942eea21cb215ba1b172c0a
+Frame package: 015ea8122ba5b7a366eba6f96fc3e4d64767bb7d8425c48b3b047ff5fad87fa8
+Control package: b118394966d36b9783dd209d9f1c494e03a38618dba114c0ff0347ed445d35bd
+Private metadata: local_workspace/reports/e5-calibration-frame-v1-20261014/a01
+Public reports: local_run/local_llm_execution_20261014/e5_calibration_frame_*.json
 
-SCIENTIFIC GATES — STILL UNMET
-Human reviews used: 0. Threshold selected: false. Model calibration: incomplete.
-Full scientific cache acceptance and confirmatory readiness remain false.
-Original monolithic full writer/replay has not executed; do not relabel this
-versioned sharded cache as the legacy route or fabricate its manifest schema.
-Both GPU judge pilots are technically complete engineering tests. Across their
-40 shared exposed pairs, there were zero joint positive labels. Preserve this
-result; it is not an estimate of semantic accuracy. No model labels count as
-human labels. Reserve 100 blinded author reviews (80 probability + 20 challenge),
-or 50 (40 + 10) chosen before the first response. Frozen Phases 3–10 and the
-user's TODO / analysis-lock files remain unchanged.
+EARLIER VERIFIED MILESTONES
+Array 13498: all 32 tasks completed; 140,250 documents encoded and freshly replayed,
+280,500 document encodings, 624,318 chunks and 295,650 forward batches in total.
+Assembly 13546: COMPLETED, exit 0:0, 76 seconds; canonical 140250 x 768 FP32 cache.
+Scorer 13547: COMPLETED, exit 0:0, 49 seconds; 16 tests and 28 numerical cases
+passed, with independently reconstructed streams on 19 engineering vectors.
+Repeated-index 256/260/512 cases are software fixtures. Their 23.47–28.57-minute
+full-pair-rate projection is conditional, not a measured natural runtime or bound.
+Reservoir cost and the full natural score distribution remain unmeasured.
+Judge pilots 13353/13368 are engineering-only. Their 40 shared canonical pairs had
+zero joint positives; preserve this negative history. It is not accuracy evidence.
 
-NEXT STAGE
-1. Implement and qualify a separate v2 cache/calibration-frame adapter. Recheck
-   actual cache bytes, source/census identity and exact row order. Gather all
-   20,996 calibration rows in source order; preserve source-disjoint partitions.
-   Do not exclude pairs sharing a source within the calibration partition.
-2. Prospectively lock the v2 sampling implementation before producing model
-   annotation packs. The complete universe has 220,405,510 unordered pairs and
-   20 cosine bins. Keep bounded streaming memory; never materialize a Python
-   list of every pair. Preserve frozen panel, denominator and precision rules.
-3. Run two-family model selection and independent validation, preserving any
-   failed gate. Activate the blinded author audit only after its prerequisites.
+NEXT EXECUTABLE STAGE
+1. Implement the small v3 streaming scorer/bin/reservoir sampler described in
+   local_run/local_llm_execution_20261014/next_llm_selection_sampler_design.txt.
+   Bind the successful frame and frozen coordinate-ordered FP64 scorer.
+2. Qualify bounded cost and correctness, then seal a NEW pre-sampling lock with
+   the complete population, source order, code, domains and all four seeds.
+   Run the full census and at most 30 SRS pairs/bin across 20 bins. Do not
+   materialize 220 million scores or filter eligibility by input context length.
+3. Separately activate Qwen/Mistral inference after complete census, request
+   token/runtime and source-eligibility checks. Preserve denominator failures,
+   independent validation and failed thresholds. No human-annotation dependency.
 
-PROVENANCE AND RESUME PATHS
+BOUNDARIES AND OPERATIONS
+Full scientific source acceptance, legacy-route acceptance, model calibration,
+threshold selection and confirmatory readiness remain false. New byte-verified
+frame success has its own schema; never fabricate legacy cache/human schemas.
+Original Phases 3–10, v2 protocol and user TODO/analysis locks remain unchanged.
+The frame launch preserved the 8 GiB reserve with a 256 MiB output allowance.
+Fresh available quota was 8,960,794,624 bytes; a snapshot, not a reservation.
+Earlier capacity-preflight failure history remains saved. Heavy work uses Slurm,
+excluding csis.mn1. Stop after authentication/transport refusal or timeout;
+inspect jobs/receipts before mutations and never repeat an uncertain submission.
+No credentials stored. No automation created. No job is claimed active after
+the verified completion of 13556; obtain fresh status on resume.
+
 GitHub: https://github.com/priyankjairaj100/third
 Local repository: /Users/priyankjairaj/Downloads/ACL/Three
 Cluster repository: /nfs_home/users/poonam/ccu-acl2027/repo
-Recorded cluster execution commit: de9de39a1a72db40485878452561affe2fbd24aa
-Remote cache: /nfs_home/users/poonam/ccu-acl2027/local_workspace/qualification/e5-full-sharded-v2-20261013-a01/assembly-run/cache
-Manifest SHA256: 0a27cdc151a99c5f1fb6d6a94669e42bf91e14adc3c2afa20fc9f33a74539cbc
-Vectors SHA256: cbc1f9a06079048144f406ec11925350aa057215869819b0967ac2749e25284e
-Chunk log SHA256: 53157ef3a9c32f89d6d3d7e26eb6157f734314dbf5ba2e30fb7a16ae26aaca9e
-Public reports: local_run/local_llm_execution_20261014/
-Private assembly evidence: local_workspace/reports/e5-full-sharded-v2-20261013/
-Private scorer evidence: local_workspace/reports/e5-pair-scorer-benchmark-v1-20261014/a01/
+Cluster execution commit: de9de39a1a72db40485878452561affe2fbd24aa (unchanged).
 Full machine-readable checkpoint: task outputs/third_latest_checkpoint.json
-New execution helpers are sealed in private cluster tools outside the unchanged
-cluster checkout, with their exact source copies in this repository backup.
-Cluster GPUs execute project models; they do not run Codex or guarantee an
-assistant-token discount. No scheduled automation was created.
+Cluster GPUs run project models; they do not run Codex or guarantee fewer assistant tokens.

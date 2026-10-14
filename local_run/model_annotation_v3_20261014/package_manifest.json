@@ -1,0 +1,30 @@
+{
+  "files": {
+    "PLAN.json": {
+      "bytes": 29547,
+      "sha256": "7910272ad6d05e012b101c782ea2268b5585eb6ab0f9b49f38c1aac9b5e13419"
+    },
+    "PLAN.txt": {
+      "bytes": 11588,
+      "sha256": "23ab740b10de37a344be077334aaf7553bf3a5e5880db89e7ff0de2ae06ba424"
+    },
+    "README.txt": {
+      "bytes": 1213,
+      "sha256": "815eab4ea42af5f8ed7c18004e22facf2f5d6079e0ed57c8958d8e751ba7a0af"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 2104,
+      "sha256": "d3724b789197ae7061ff51ed830ed83cd2bb4a7263f3242567d34eccce123949"
+    },
+    "protocol.py": {
+      "bytes": 10634,
+      "sha256": "6211ad9afefcd8e22017d4a39bd1357424000710bc131a549f7c6bd4cd1c4d31"
+    },
+    "test_protocol.py": {
+      "bytes": 4514,
+      "sha256": "5add972b48d1ec4427db8802a06228e29636da45fded689e225daec9bc3a9ad5"
+    }
+  },
+  "schema": "third-llm-only-annotation-plan-package-v3",
+  "scope": "Prospective protocol/software checks only; no empirical execution or scientific gate completion"
+}

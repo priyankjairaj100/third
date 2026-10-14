@@ -1,0 +1,25 @@
+{
+  "schema": "third-llm-only-policy-adoption-v3",
+  "recorded_utc": "2026-10-14T04:40:16.956565+00:00",
+  "authority": "Explicit user instruction on 2026-10-14: there will be no human annotation; keep it fully LLM.",
+  "active_plan": "local_run/model_annotation_v3_20261014/PLAN.json",
+  "plan": {
+    "bytes": 29547,
+    "sha256": "7910272ad6d05e012b101c782ea2268b5585eb6ab0f9b49f38c1aac9b5e13419"
+  },
+  "protocol_package": {
+    "bytes": 994,
+    "sha256": "56e97fe1b55f4047f4b8ddac1c7db00be22d69d45b270c8b31beab33d685aa01"
+  },
+  "human_annotation_required": false,
+  "planned_human_reviews": 0,
+  "prior_author_review_plan_superseded": true,
+  "historical_human_gate_passed": false,
+  "active_human_dependency": false,
+  "technical_pilot_only_until_substantive_validation": true,
+  "protocol_tests": 10,
+  "bound_files_verified": 39,
+  "original_protocol_and_analysis_locks_preserved": true,
+  "new_inference_calls": 0,
+  "new_sampling_performed": false
+}
