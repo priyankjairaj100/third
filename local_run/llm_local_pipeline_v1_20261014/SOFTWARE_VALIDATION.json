@@ -1,0 +1,13 @@
+{
+  "errors": 0,
+  "failures": 0,
+  "fixtures_only": true,
+  "human_annotation_calls": 0,
+  "new_model_calls": 0,
+  "passed": true,
+  "remote_calls": 0,
+  "review": "Root source review; no claim of an additional independent agent review.",
+  "schema": "third-local-pipeline-software-validation-v1",
+  "skipped": 0,
+  "tests": 10
+}

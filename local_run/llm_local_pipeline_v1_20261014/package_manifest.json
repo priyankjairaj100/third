@@ -1,0 +1,29 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 2611,
+      "sha256": "a2b3ba27d56ffd307ab4c2fa10913879251454a1f4dc5172021deecb76c5769c"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 331,
+      "sha256": "55e45e808dd1e3396a5d1aa9819f0d246168dbc5ce5e0b0ae6eba18c6dae6e2f"
+    },
+    "review_family_terminal.py": {
+      "bytes": 9611,
+      "sha256": "c8fa2c162f3d5899a7e616e4634cb6e83d42795d842a08099fb1bbf7c47ca477"
+    },
+    "review_postprocess_terminal.py": {
+      "bytes": 10237,
+      "sha256": "1c3478a6aed6808b5e0cc696d501c45fc6a8990bb7f0f6b0644321b9aa822920"
+    },
+    "run_remaining_pipeline.py": {
+      "bytes": 10292,
+      "sha256": "f0d8f770ff0449eb800a824a7f3430889e63956ea0bd3f5181735045fcceb520"
+    },
+    "test_remaining_pipeline.py": {
+      "bytes": 6792,
+      "sha256": "35888a61ace932857aa9d8c4a8fd4e2548e60725b06d6cf8991ddbbdea697ef2"
+    }
+  },
+  "schema": "third-local-pipeline-source-package-v1"
+}

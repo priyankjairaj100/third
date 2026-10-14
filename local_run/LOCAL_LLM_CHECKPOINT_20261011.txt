@@ -1,5 +1,5 @@
 THIRD — LOCAL / CLUSTER CHECKPOINT
-Updated 14 October 2026, 06:25:45 UTC observation
+Updated 14 October 2026, 06:47:41 UTC observation
 
 ACTIVE POLICY: FULLY LLM, ZERO HUMAN ANNOTATION
 The user's latest instruction supersedes the earlier 50–100 author reviews.
@@ -47,7 +47,7 @@ staged or run. Corrected v2 passed source review and actual token replay.
 The independent local auditor initially lacked Jinja2; it used already-installed
 Jinja2/MarkupSafe without downloads. No request or production outcome changed.
 
-ACTIVE: QWEN 13574 RUNNING AT LAST OBSERVATION; NO ACCEPTED V3 LABELS
+ACTIVE: LOCAL CONTROLLER RUNNING; QWEN 13574 HAS NO ACCEPTED V3 LABELS
 Activation was created once at 06:23:02 UTC, then Qwen was submitted once as job
 13574 at 06:23:19 UTC. At 06:25:45 UTC it was RUNNING on csis.cn3 (2:26 elapsed),
 with two durable call intents, one durable completion and no terminal result.
@@ -74,18 +74,40 @@ was staged. Its manifest is 885 bytes,
   dbdd004e7f4277eac873228188a95e47ca1ee994d776a3b1316f80627c378eb2
 No production output audit or paired-model statistics have run yet.
 
+AUTOMATIC REMAINING EXECUTION
+At 06:47:37 UTC, local PID 9496 started the single remaining_pipeline_a01
+controller. At 06:47:41 UTC, Qwen13574 was RUNNING on csis.cn3, 24:22 elapsed.
+This later scheduler observation supersedes the earlier completion-count snapshot.
+The controller waits locally, exports/reviews the terminal Qwen artifacts, runs
+the sealed CPU auditor, submits Mistral once after all required Qwen gates, then
+audits Mistral and computes the frozen statistics. It independently recomputes
+all 51 exact weighted threshold decisions and swap/panel diagnostics locally.
+Ten software-fixture tests passed. This is a bounded run, not a recurring Codex
+automation, and the controller makes no Codex/LLM API calls of its own.
+Its 120-second metadata polling and ten-hour total deadline leave the unchanged
+four-hour GPU and twenty-minute CPU job limits intact. All remote failures stop
+it without reconnects/retries; it does not cancel already submitted cluster jobs.
+A failed selection threshold ends as a preserved negative result. No validation
+activation, calls beyond the fixed plan, human review or Git push happens automatically.
+Source: local_run/llm_local_pipeline_v1_20261014/
+Public startup receipt: local_run/local_llm_execution_20261014/llm_local_pipeline_start.json
+Private controller state in the original task workspace:
+  work/resume-20261014/sampling_v1/remaining_pipeline_a01/
+  intent.json (PID, source/input pins), events.jsonl, completion.json or failure.json
+
 EXACT NEXT RESUMPTION
-1. Inspect existing job 13574 queue/accounting and the fixed launch intent,
-   receipt and output metadata before any action. Preserve an uncertain/failed
-   job; never recreate activation or resubmit its occupied Qwen slot.
-2. After terminal status, preserve/export bounded raw evidence and use the sealed
-   CPU postprocessor with exact activation/result bindings. A completion count
-   or zero exit alone is not an accepted model judgment. Quarantine failures.
-3. Submit Mistral once through the sealed serial controller only after required
-   Qwen terminal evidence, a clear project queue and fresh quota/remaining-output
-   checks. It must use the existing activation and unchanged 99-request panel.
-4. Audit both eligible completed families before statistics ingestion. Independent
-   held-out validation remains a later separate stage requiring fresh calls.
+1. Read the local controller state and inspect PID 9496 first. While it runs,
+   do not separately submit, export into its occupied destinations, edit its
+   pinned sources or launch a second controller. It owns the remaining sequence.
+2. If completion.json exists, verify the saved terminal/review artifacts and
+   report the actual result. A negative selection result remains negative.
+3. If failure.json exists or the process is gone, inspect the stage logs and
+   existing local/Slurm receipts before any new action. Never rerun this occupied
+   controller slot or an uncertain model submission. Stop after any new SSH
+   authentication/transport failure or timeout; reconcile only after access returns.
+4. Preserve all planned requests and denominator weights. Any independent
+   validation is a later separate stage, conditional on selection passing.
+5. Update the public compact evidence/handoff and make an ordinary GitHub backup.
 
 IMMUTABLE RANDOMNESS AND SOURCES
 Sampling lock was created once with four OS seeds. Never regenerate or duplicate.

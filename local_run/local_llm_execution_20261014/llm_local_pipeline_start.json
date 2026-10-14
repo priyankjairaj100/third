@@ -1,0 +1,50 @@
+{
+  "additional_Codex_model_calls_by_controller": 0,
+  "confirmatory_study_ready": false,
+  "controller_started_utc": "2026-10-14T06:47:37.521091+00:00",
+  "controller_state": "running_at_latest_observation",
+  "existing_qwen_job": "13574",
+  "human_annotation_calls": 0,
+  "independent_validation_performed": false,
+  "local_software_tests": 10,
+  "model_calls_complete": false,
+  "model_retries": 0,
+  "new_activation_or_sampling_seeds": false,
+  "on_stop": "No reconnect, retry, duplicate submission, or automatic cancellation. Inspect saved evidence before continuing.",
+  "pipeline_package": {
+    "bytes": 941,
+    "sha256": "4cb84a72192769bd5bbc74a6b91548d0b47ebc360e8f4b961e41b7db4fa81be3"
+  },
+  "private_state_location": "task work/resume-20261014/sampling_v1/remaining_pipeline_a01",
+  "qwen_latest_observation": {
+    "accounting": "13574|RUNNING|0:0|1462||csis.cn3\n13574.batch|RUNNING|0:0|1462||csis.cn3\n",
+    "job_id": "13574",
+    "observed_utc": "2026-10-14T06:47:41.154991+00:00",
+    "queue": "13574|RUNNING|24:22|csis.cn3",
+    "root": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/qualification/llm-only-v3-selection-qwen-a01",
+    "schema": "third-llm-execution-terminal-export-v1"
+  },
+  "recurring_automation": false,
+  "schema": "third-llm-local-pipeline-activation-checkpoint-v1",
+  "semantic_validity_established": false,
+  "sequence": [
+    "preserve_and_review_existing_Qwen_terminal_outputs",
+    "run_sealed_Qwen_CPU_artifact_audit",
+    "submit_fixed_Mistral99_request_family_once_after_successful_Qwen_audit",
+    "preserve_and_review_Mistral_outputs",
+    "run_sealed_Mistral_CPU_artifact_audit",
+    "run_frozen_selection_statistics_and_independently_recompute51cuts"
+  ],
+  "source_and_input_binding_record": {
+    "bytes": 12284,
+    "sha256": "97d87d59fc0036892a22cc3473099fd48fcc89ed245e40c530e7188a15dbad0d"
+  },
+  "source_review": "Root source review; no additional independent agent review claimed.",
+  "stop_conditions": [
+    "SSH/authentication/transport failure or timeout",
+    "failed integrity, source, quota, runtime, or audit gate",
+    "existing or uncertain submission receipt",
+    "10-hour coordinator deadline"
+  ],
+  "updated_utc": "2026-10-14T06:50:42.428866+00:00"
+}
