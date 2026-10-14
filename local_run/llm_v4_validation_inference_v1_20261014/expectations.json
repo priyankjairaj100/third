@@ -1,0 +1,346 @@
+{
+  "derivation": {
+    "parent_kernel_package": {
+      "bytes": 1251,
+      "sha256": "7bc506e2f7df244ac06782118400388708db1097420ca616f03a2cd196e442bb"
+    },
+    "scope": "Only versioned protocol paths, call domains, bundle and activation metadata change. Generation/guard code remains unchanged."
+  },
+  "execution_requires_fresh_source_bound_activation": true,
+  "frame_result_sha256": "d4fc45ec0d38ddc94c2a9c82ee3948020d0acd1f47fd84582b87ad5e273aedb1",
+  "models": {
+    "mistral": {
+      "asset_files": {
+        "config.json": {
+          "bytes": 622,
+          "sha256": "8a42669219f4caadedb891be88c34712572573d42b3d02d665d527f92d94ddfe"
+        },
+        "generation_config.json": {
+          "bytes": 116,
+          "sha256": "c052c7f6082ca59fbee5478371f6dd18cbd9ec059b657f8081ff165deb9ea0fa"
+        },
+        "merges.txt": {
+          "bytes": 3127378,
+          "sha256": "4e4d41c64d2ed2e26713ae7af7c958b07df532a6f4498dffa9a2cf7f4c6c0aa6"
+        },
+        "model-00001-of-00005.safetensors": {
+          "bytes": 4865522496,
+          "sha256": "37597b50c825674e56ff1b058f0d148b57dcbc1c39727b641a87ffbf247886ec"
+        },
+        "model-00002-of-00005.safetensors": {
+          "bytes": 4907529424,
+          "sha256": "cec7e36f1451270477569401d5c06af9df8f12da341ff446322796979a30d88b"
+        },
+        "model-00003-of-00005.safetensors": {
+          "bytes": 4907529456,
+          "sha256": "fd68cdd7584ed9bdb5d891cd72fe05abbb50b6ad2860d147786d27a15f764aaa"
+        },
+        "model-00004-of-00005.safetensors": {
+          "bytes": 4907529456,
+          "sha256": "02a05716064ca298c767b7accf9aed9153f9e090eff4605b871de005ce7ce3a9"
+        },
+        "model-00005-of-00005.safetensors": {
+          "bytes": 4907496272,
+          "sha256": "f41f0dd6989345ad1f29d6ab341cbf965bec0954bd90884913ff4cb1b8cc8402"
+        },
+        "model.safetensors.index.json": {
+          "bytes": 29894,
+          "sha256": "f14ac27ce39aa8652e83b8e3a9c59babba2831711e5b31512c1f96bfeeee09cf"
+        },
+        "special_tokens_map.json": {
+          "bytes": 414,
+          "sha256": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0"
+        },
+        "tokenizer.json": {
+          "bytes": 9264445,
+          "sha256": "e11c71726323d33da7b8d6f6f269f1988931c0a52b7122bcdd8c05042974e0db"
+        },
+        "tokenizer_config.json": {
+          "bytes": 181297,
+          "sha256": "67f3aeef765b7d78012a081dba98efd4900cd2bac24eac182296841c7e2aef2a"
+        },
+        "vocab.json": {
+          "bytes": 2472536,
+          "sha256": "8572e8853a6b2f2d830de4afa15d43c49257d367abf3c5fd2f6f7687bcd8f63d"
+        }
+      },
+      "asset_manifest": {
+        "bytes": 2614,
+        "sha256": "0fba5cf51d83b650e9c116ee490adf94d9f140cd3ad6f04d79b758f07d55bb29"
+      },
+      "model_id": "mistralai/Mistral-Nemo-Instruct-2407",
+      "pilot_code_relative": "local_run/model_annotation_runtime_mistral_v1_20261011/run_pilot.py",
+      "pilot_runtime_receipt": {
+        "bytes": 11907,
+        "sha256": "4104df913a935af5243735fbe0e792774a520164dd827995bc633ec219ad3cbd"
+      },
+      "revision": "04d8a90549d23fc6bd7f642064003592df51e9b3",
+      "tokenizer_assets": {
+        "config.json": {
+          "bytes": 622,
+          "sha256": "8a42669219f4caadedb891be88c34712572573d42b3d02d665d527f92d94ddfe"
+        },
+        "generation_config.json": {
+          "bytes": 116,
+          "sha256": "c052c7f6082ca59fbee5478371f6dd18cbd9ec059b657f8081ff165deb9ea0fa"
+        },
+        "merges.txt": {
+          "bytes": 3127378,
+          "sha256": "4e4d41c64d2ed2e26713ae7af7c958b07df532a6f4498dffa9a2cf7f4c6c0aa6"
+        },
+        "model.safetensors.index.json": {
+          "bytes": 29894,
+          "sha256": "f14ac27ce39aa8652e83b8e3a9c59babba2831711e5b31512c1f96bfeeee09cf"
+        },
+        "special_tokens_map.json": {
+          "bytes": 414,
+          "sha256": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0"
+        },
+        "tokenizer.json": {
+          "bytes": 9264445,
+          "sha256": "e11c71726323d33da7b8d6f6f269f1988931c0a52b7122bcdd8c05042974e0db"
+        },
+        "tokenizer_config.json": {
+          "bytes": 181297,
+          "sha256": "67f3aeef765b7d78012a081dba98efd4900cd2bac24eac182296841c7e2aef2a"
+        },
+        "vocab.json": {
+          "bytes": 2472536,
+          "sha256": "8572e8853a6b2f2d830de4afa15d43c49257d367abf3c5fd2f6f7687bcd8f63d"
+        }
+      },
+      "tokenizer_identity": {
+        "chat_template_sha256": "a0a5aa4eaec3e69b25dd3a09f7019f83317e115d2b9b1ab1aff57f2d77ccc327",
+        "tokenizer_backend_json_sha256": "b416887368c51e5dd129e48ee8016c89b538601b778b1e16fcb22567ef302b34",
+        "tokenizer_class": "transformers.tokenization_utils_fast.PreTrainedTokenizerFast",
+        "tokenizer_length": 131072,
+        "tokenizer_special_ids": [
+          1,
+          2,
+          0
+        ],
+        "tokenizer_vocab_size": 131072
+      }
+    },
+    "qwen": {
+      "asset_files": {
+        ".gitattributes": {
+          "bytes": 1519,
+          "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+        },
+        "LICENSE": {
+          "bytes": 11343,
+          "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+        },
+        "README.md": {
+          "bytes": 6240,
+          "sha256": "f366f33bbf6bcadbb7d87f0a21a7b65584a56b8d58b0743c77c88bee625b93a6"
+        },
+        "config.json": {
+          "bytes": 663,
+          "sha256": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c"
+        },
+        "generation_config.json": {
+          "bytes": 243,
+          "sha256": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f"
+        },
+        "merges.txt": {
+          "bytes": 1671839,
+          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+        },
+        "model-00001-of-00004.safetensors": {
+          "bytes": 3945441440,
+          "sha256": "a1333e6293854747c481288ea83b348226af178dd565c49b6f9495ba1966aba7"
+        },
+        "model-00002-of-00004.safetensors": {
+          "bytes": 3864726352,
+          "sha256": "f5d25a2772cb825164a2a2c0fb6d51a87e282abf21e4dd75bc5cfb3cd0ea6185"
+        },
+        "model-00003-of-00004.safetensors": {
+          "bytes": 3864726424,
+          "sha256": "8efdec4c1bc12317ae1a38dc42b595ce777738a64deea3fcb8a0a91381bcdfd5"
+        },
+        "model-00004-of-00004.safetensors": {
+          "bytes": 3556377672,
+          "sha256": "1a72d403cdf0c1ec3cb7f289f17b394a01e64394c2e9b3c0f94dbce3faf879bd"
+        },
+        "model.safetensors.index.json": {
+          "bytes": 27752,
+          "sha256": "624bf7c47cd12468fdc16e38a47cf4f19e0415b859a223ba3c027eed2f0e1028"
+        },
+        "tokenizer.json": {
+          "bytes": 7031645,
+          "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+        },
+        "tokenizer_config.json": {
+          "bytes": 7305,
+          "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+        },
+        "vocab.json": {
+          "bytes": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+        }
+      },
+      "asset_manifest": {
+        "bytes": 2720,
+        "sha256": "5e89ce9479d130f3ee1d199720e42c56304494edee307bb3f618e19ca089ffc3"
+      },
+      "model_id": "Qwen/Qwen2.5-7B-Instruct",
+      "pilot_code_relative": "local_run/model_annotation_runtime_v5_20261011/run_pilot.py",
+      "pilot_runtime_receipt": {
+        "bytes": 11617,
+        "sha256": "e4adfcdbd57e3294e37cb350fdc39c2e31f8b622a87d09c315fcee8d7c40246d"
+      },
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "tokenizer_assets": {
+        ".gitattributes": {
+          "bytes": 1519,
+          "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+        },
+        "LICENSE": {
+          "bytes": 11343,
+          "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+        },
+        "README.md": {
+          "bytes": 6240,
+          "sha256": "f366f33bbf6bcadbb7d87f0a21a7b65584a56b8d58b0743c77c88bee625b93a6"
+        },
+        "config.json": {
+          "bytes": 663,
+          "sha256": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c"
+        },
+        "generation_config.json": {
+          "bytes": 243,
+          "sha256": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f"
+        },
+        "merges.txt": {
+          "bytes": 1671839,
+          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+        },
+        "model.safetensors.index.json": {
+          "bytes": 27752,
+          "sha256": "624bf7c47cd12468fdc16e38a47cf4f19e0415b859a223ba3c027eed2f0e1028"
+        },
+        "tokenizer.json": {
+          "bytes": 7031645,
+          "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+        },
+        "tokenizer_config.json": {
+          "bytes": 7305,
+          "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+        },
+        "vocab.json": {
+          "bytes": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+        }
+      },
+      "tokenizer_identity": {
+        "chat_template_sha256": "2e2d2512cfe46af53dc1eed45368ecaab26ac4461c480e6b69fe571cf0ceaa75",
+        "tokenizer_backend_json_sha256": "f884026e05f6dfffe68b72d580b588006d98b3bc0a128bb1ac425c76f7fc438c",
+        "tokenizer_class": "transformers.models.qwen2.tokenization_qwen2_fast.Qwen2TokenizerFast",
+        "tokenizer_length": 151665,
+        "tokenizer_special_ids": [
+          151645,
+          151643,
+          151644,
+          151646,
+          151647,
+          151648,
+          151649,
+          151650,
+          151651,
+          151652,
+          151653,
+          151654,
+          151655,
+          151656
+        ],
+        "tokenizer_vocab_size": 151643
+      }
+    }
+  },
+  "production_execution_enabled": true,
+  "protocol_evidence_sha256": "25a0dae8bad0023ec1183b0ca4978ee1b2e64aedf20f7b0fe1cc3aad8810b754",
+  "protocol_package": {
+    "bytes": 1612,
+    "sha256": "959d32cfeb07598d7eb453f1564f2f4f1566227e62792bd9fab5e38a69dedcff"
+  },
+  "protocol_plan_sha256": "10ebb3cb8f872c2efaf69306ca5bb23dcec2a015b2747988aafa31485dbbdcae",
+  "request_preparation_folder": "llm-v4-validation-requests-v1-20261014",
+  "request_preparation_package": {
+    "bytes": 870,
+    "sha256": "321cc83af9e54f8dd454e6704afc77b93f4156fbadce1aa8baf2af625b10b906"
+  },
+  "runtime": {
+    "interpreter_relative": "envs/judge-qwen-v3-20261011/bin/python",
+    "package_versions": {
+      "PyYAML": "6.0.3",
+      "annotated-types": "0.8.0",
+      "attrs": "26.1.0",
+      "huggingface-hub": "0.36.2",
+      "interegular": "0.3.3",
+      "jsonschema": "4.25.1",
+      "jsonschema-specifications": "2025.9.1",
+      "lm-format-enforcer": "0.11.3",
+      "numpy": "2.5.3",
+      "packaging": "26.3",
+      "pydantic": "2.12.5",
+      "pydantic-core": "2.41.5",
+      "referencing": "0.37.0",
+      "rpds-py": "2026.9.1",
+      "safetensors": "0.8.0",
+      "tokenizers": "0.22.2",
+      "torch": "2.11.0+cu128",
+      "transformers": "4.57.6",
+      "typing-inspection": "0.4.4"
+    },
+    "python": "3.13.7"
+  },
+  "schema": "third-llm-v4-inference-expectations-v1",
+  "source_files": {
+    "local_run/model_annotation_runtime_mistral_v1_20261011/bounded_reason.py": {
+      "bytes": 16317,
+      "sha256": "6f5ce5b653813d705b0918a299d8e61625e4dd02bb7c3cc260b50246f905ccc7"
+    },
+    "local_run/model_annotation_runtime_mistral_v1_20261011/run_pilot.py": {
+      "bytes": 50864,
+      "sha256": "fe3de36730663f160057d633f5cb4db3a60877b10a533d824a5b0e44069f36df"
+    },
+    "local_run/model_annotation_runtime_mistral_v1_20261011/runtime_plan.json": {
+      "bytes": 11521,
+      "sha256": "a9331c1400f7f63f883a240a193ef9a0d15f44bbe58c1502dd058a2f88907953"
+    },
+    "local_run/model_annotation_runtime_v5_20261011/bounded_reason.py": {
+      "bytes": 16317,
+      "sha256": "6f5ce5b653813d705b0918a299d8e61625e4dd02bb7c3cc260b50246f905ccc7"
+    },
+    "local_run/model_annotation_runtime_v5_20261011/run_pilot.py": {
+      "bytes": 49253,
+      "sha256": "66dfd4a718033b78b791ad3403250ee9b5d8b5011192df75f804e6cc3500a6f6"
+    },
+    "local_run/model_annotation_runtime_v5_20261011/runtime_plan.json": {
+      "bytes": 9276,
+      "sha256": "4dd23f5d55201eedf9e5c6d57e9106390b6f1a54d8b7f7a42f5433cdbd84ab73"
+    },
+    "local_run/model_annotation_v2_20261011/judge_system_prompt.txt": {
+      "bytes": 1967,
+      "sha256": "52978c91ca9ddd8f3d055197a188ddb64bc61d7249bec476c0bb8c6106b84982"
+    },
+    "local_run/model_annotation_v2_20261011/judge_task_definition.txt": {
+      "bytes": 140,
+      "sha256": "aef7daf9b52723b13ccf9d2a0e334e91fb12ab03cc072870e9e57acdae799a47"
+    },
+    "local_run/model_annotation_v2_20261011/model_judgment.schema.json": {
+      "bytes": 918,
+      "sha256": "b30e7324c4a77bbc3ed798f22982a0d49bdcd9eda56439911896db24260e5c8b"
+    },
+    "local_run/model_annotation_v4_20261014/PLAN.json": {
+      "bytes": 16694,
+      "sha256": "10ebb3cb8f872c2efaf69306ca5bb23dcec2a015b2747988aafa31485dbbdcae"
+    },
+    "local_run/model_annotation_v4_20261014/protocol.py": {
+      "bytes": 6924,
+      "sha256": "9c6deb4aadfcb81a07fd6160722d2b7e552c5918d0ae030e37d6390cfc962590"
+    }
+  }
+}

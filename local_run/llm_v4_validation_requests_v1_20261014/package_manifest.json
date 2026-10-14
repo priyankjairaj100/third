@@ -1,0 +1,29 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 591,
+      "sha256": "38359ea75bb9b1bf040de95a1a31e9be6aa91f63de875993825d366ed7f3a3a6"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 241,
+      "sha256": "27bed4ffaac9d7701a37e38b24ce147313de9e561e2e0e6f4baf82a6825df467"
+    },
+    "launch.py": {
+      "bytes": 3190,
+      "sha256": "1b7caa116e2813f550a6d01d7de259787deaea157551659d625b714f4ecfa7e9"
+    },
+    "prepare.py": {
+      "bytes": 13346,
+      "sha256": "9b4416d1b23d3f5c244749c336ab56e9f2790536ace76c7139d75f1fd0ffc60c"
+    },
+    "requests.sbatch": {
+      "bytes": 1185,
+      "sha256": "089a1f2945862814df0d4449175b89972420de1a1151d57f6dec74bd91487897"
+    },
+    "test_requests.py": {
+      "bytes": 1710,
+      "sha256": "4bf02c469cee8709f5467ae34ee3113b66806a048418decb8a24bfe9c2d32b08"
+    }
+  },
+  "schema": "third-package-manifest-v1"
+}

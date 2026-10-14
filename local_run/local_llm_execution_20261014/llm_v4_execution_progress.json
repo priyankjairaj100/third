@@ -24,6 +24,12 @@
     "bytes": 2946,
     "sha256": "ef7449595cb5a90e8fc8a009103f958eb92a73abc7943d52c19a552e816c4207"
   },
+  "latest_model_job_observation": {
+    "job_id": "13641",
+    "observed_utc": "2026-10-14T10:44:16.208222+00:00",
+    "stage": "qwen_selection",
+    "state": "PENDING"
+  },
   "portable_controller_source": "local_run/llm_v4_controller_v1_20261014/continue_pipeline.py",
   "project_complete": false,
   "qualification": {
@@ -157,5 +163,25 @@
   },
   "sampling_job": "13636",
   "schema": "third-v4-execution-progress-v1",
-  "updated_utc": "2026-10-14T10:29:06.819892+00:00"
+  "updated_utc": "2026-10-14T10:45:05.885342+00:00",
+  "validation_continuation": {
+    "controller_active": true,
+    "controller_backup": "local_run/llm_v4_validation_controller_v1_20261014/continue_validation.py",
+    "controller_software_scenarios_passed": 3,
+    "full_project_complete": false,
+    "human_annotation_calls": 0,
+    "independent_exact_bound_and_overlap_review": true,
+    "local_and_cluster_software_tests_passed": 21,
+    "max_additional_model_calls": 440,
+    "packages": {
+      "llm-v4-validation-inference-v1-20261014": "6c294e4ff3efd52f98552d8cbe41803eb44a2c5b61ba8500880a0358b93595b8",
+      "llm-v4-validation-requests-v1-20261014": "321cc83af9e54f8dd454e6704afc77b93f4156fbadce1aa8baf2af625b10b906",
+      "llm-v4-validation-sampler-v1-20261014": "110744b78528532f543701df77c4397484b188003aca3a3a47c39177c111d538"
+    },
+    "requires_actual_token_replay_before_activation": true,
+    "requires_positive_selection": true,
+    "running_controller_sha256": "9648e14fffec5e868fcaea2fb3c6a5a0405049f31bdab4ff4232c9860c15a652",
+    "status": "waiting_for_successful_independently_reviewed_selection",
+    "validation_jobs_submitted": 0
+  }
 }

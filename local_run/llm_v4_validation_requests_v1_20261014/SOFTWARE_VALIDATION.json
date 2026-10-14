@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "tests": 3,
+  "scope": "source admission fixtures only; actual full-token qualification required before activation",
+  "cluster_validation_executed": false,
+  "model_inference_calls": 0,
+  "human_annotation_calls": 0
+}

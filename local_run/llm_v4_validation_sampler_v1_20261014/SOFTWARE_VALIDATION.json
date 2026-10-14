@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "tests": 5,
+  "scope": "analytic reservoir, strict cut, empty/incomplete/nonfinite population and identity/seed invariance fixtures only",
+  "cluster_validation_executed": false,
+  "model_inference_calls": 0,
+  "human_annotation_calls": 0
+}

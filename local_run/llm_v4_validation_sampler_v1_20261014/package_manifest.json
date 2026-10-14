@@ -1,0 +1,33 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 605,
+      "sha256": "848b489d5d78b9280bf2e780b7ef286483fca3cdaa0438b7dbf1f7dab35c614b"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 263,
+      "sha256": "c368b03676c4b5efa00fd04bbf8acd80f653cb241d1bb7b6a0f33a9f8b23bb12"
+    },
+    "launch.py": {
+      "bytes": 4127,
+      "sha256": "e87accfa2eac8e8e436f1f9ef38eb241d195c57d39e9ae6778ab465f52087b44"
+    },
+    "primitives.py": {
+      "bytes": 3074,
+      "sha256": "90f8c000d957bcca38f2cc4712793af35ab217712f680b027ecd9b6570e2071c"
+    },
+    "sample.sbatch": {
+      "bytes": 1164,
+      "sha256": "7e459c095bab7c3bf4470f19b1a292e1f833d244fd60eab2ff29bbb426ede272"
+    },
+    "test_validation.py": {
+      "bytes": 3040,
+      "sha256": "8754e681e77db096e16b4a248022b44b64e4cb3da008f06d7befc57a9f1c30f9"
+    },
+    "worker.py": {
+      "bytes": 10612,
+      "sha256": "929a751aa7a4a3a4075cb130a9074aca6eb7af235b297b285613c66240ec82d3"
+    }
+  },
+  "schema": "third-package-manifest-v1"
+}

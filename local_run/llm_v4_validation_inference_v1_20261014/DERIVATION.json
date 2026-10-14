@@ -1,0 +1,45 @@
+{
+  "audit_source": {
+    "bytes": 25138,
+    "sha256": "ae908c29e49d829537ad41c834b57816f343da8cff6df20ee62df0a4fb1d2708"
+  },
+  "changes": [
+    "New v4 call IDs and response envelope schema",
+    "New v4 plan/source and request package bindings",
+    "Activation binds the implemented pipeline components directly",
+    "New v4 bundle ingestion is implemented separately",
+    "Independent audit primitives retain token/grammar checks with v4 call domains",
+    "Estimator changes only stratification validation to the 13 declared right-closed strata"
+  ],
+  "model_numeric_kernel_changed": false,
+  "parent": "local_run/llm_annotation_inference_v1_20261014",
+  "source_bindings": {
+    "contract.py": {
+      "bytes": 22957,
+      "sha256": "38e13774767cf4bcc2c6ffc77b96f20533f0f4adbe173199d54178a45750e8b4"
+    },
+    "expectations.json": {
+      "bytes": 13050,
+      "sha256": "4edc2537cd088eb005fe98fa3de56a64b87c0f2d0d1a7a77476ce7c0b5a0a0f5"
+    },
+    "kernel.py": {
+      "bytes": 13794,
+      "sha256": "186d3c9ef40630a118906a90e42df83d082bce787e8e01cd8294880a344dcf9b"
+    },
+    "ledger.py": {
+      "bytes": 6218,
+      "sha256": "213b9af9fea900ecf9d9e5b48e2b68fb03c39f27c9c971b7fd4d9da76f878dcd"
+    }
+  },
+  "statistics_source": {
+    "bytes": 10436,
+    "sha256": "95e031f6f0d4ebb32853d804848b7ae752bb2a5ecbf1590ef3dac13449a29828"
+  },
+  "validation_derivation": {
+    "parent_package": {
+      "bytes": 2946,
+      "sha256": "ef7449595cb5a90e8fc8a009103f958eb92a73abc7943d52c19a552e816c4207"
+    },
+    "scope": "Separate validation roots and activation; stage domains validation/validation_swap. Numerical kernel, prompts, two-model positive rule, frozen finite-population bound and overlap stability unchanged. Validation statistics bind original selection evidence."
+  }
+}

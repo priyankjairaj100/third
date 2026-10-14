@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "tests": 13,
+  "scope": "call identity migration and exact kernel preservation; 51-cut analytic fixtures; exhaustive small-population confidence coverage; census, unstable overlap and missing-output denominator fixtures",
+  "actual_validation_requests_token_replay_performed": false,
+  "model_inference_calls": 0,
+  "human_annotation_calls": 0
+}
