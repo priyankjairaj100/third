@@ -1,0 +1,544 @@
+{
+  "schema": "third-llm-only-annotation-plan-v3-20261014",
+  "created_date": "2026-10-14",
+  "status": "prospective_not_activated",
+  "base_repository_commit": "81d24835dda6aa3a465b2e9b15bfe44c630957c4",
+  "supersession": {
+    "authority": "Explicit user instruction 2026-10-14: continue with NO human annotation, fully LLM.",
+    "supersedes_active_plan": "local_run/model_annotation_v2_20261011/PLAN.json",
+    "scope": "Future annotation branch only; preserve old v1/v2 evidence, failures and analysis locks byte-for-byte. No relabeling of historical outputs.",
+    "human_annotation_required": false,
+    "human_reviews_planned": 0,
+    "human_reviews_completed": 0,
+    "original_v1_three_human_gate": "unmet; not applicable as an activation dependency of this model-only branch",
+    "original_v1_three_human_gate_satisfied": false,
+    "v2_single_author_audit_completed": false
+  },
+  "first_cell": {
+    "dataset": "askubuntu",
+    "curator": "e5",
+    "representation": "original frozen CPU FP32 E5 with complete source-disjoint scientific cache/frame admission through separately versioned adapter",
+    "known_prepared_rows": 140250,
+    "expected_calibration_rows": 20996,
+    "expected_unordered_calibration_pairs": 220405510,
+    "counts_are_activation_evidence": false,
+    "pair_eligibility": "All unordered pairs of the admitted calibration partition, including two records from the same source group. Source-disjoint means between training/calibration/test partitions; it does not exclude within-calibration same-source pairs."
+  },
+  "later_cells": "News/E5 only under separate source/cache/frame eligibility and cell-specific pre-outcome activation; no new MPNet arm or automatic five-cell completion.",
+  "models": [
+    {
+      "model_id": "Qwen/Qwen2.5-7B-Instruct",
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "family": "Qwen",
+      "runtime_plan_path": "local_run/model_annotation_runtime_v5_20261011/runtime_plan.json",
+      "asset_expectations_path": "local_run/model_annotation_runtime_v2_20261011/qwen_asset_expectations.json",
+      "technical_result_path": "local_run/local_llm_execution_20261011/annotation_v5_result.json",
+      "technical_pilot_qualified": true,
+      "qualified_scope": "40 exposed engineering pairs plus 4 swapped calls only; not semantic accuracy, scientific-frame coverage, or calibration",
+      "runtime_package_versions": {
+        "torch": "2.11.0+cu128",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "lm-format-enforcer": "0.11.3",
+        "pydantic": "2.12.5",
+        "pydantic-core": "2.41.5",
+        "interegular": "0.3.3",
+        "packaging": "26.3",
+        "PyYAML": "6.0.3",
+        "jsonschema": "4.25.1",
+        "annotated-types": "0.8.0",
+        "typing-inspection": "0.4.4",
+        "attrs": "26.1.0",
+        "jsonschema-specifications": "2025.9.1",
+        "referencing": "0.37.0",
+        "rpds-py": "2026.9.1"
+      },
+      "effective_constraint_policy": {
+        "reason_word_limit": 80,
+        "word_count_semantics": "Python str.split on decoded reason value",
+        "tokenizer_alphabet": true,
+        "base_proposal_shortcut_allowed": true,
+        "guard_shortcut_allowed": false,
+        "effective_config_verified_after_enforcer_creation": true,
+        "selection": "Descending finite native-proposal score, then lowest token ID; first candidate whose exact tokenizer-state transition passes full schema and decoded-word guard",
+        "non_prefix_stable_token_transition": "rejected with explicit evidence",
+        "sampling_allowed": false,
+        "beam_count": 1,
+        "logit_argmax_evidence": "Runtime code, assertions and candidate-count ledger; no independent full-logit replay",
+        "standalone_token_policy": {
+          "schema": "third-standalone-token-policy-v5",
+          "standalone_decode": {
+            "skip_special_tokens": false,
+            "clean_up_tokenization_spaces": false
+          },
+          "regular_token_must_decode_nonempty": true,
+          "regular_token_must_not_contain": "U+FFFD",
+          "eos_policy": "Separate EOS IDs; permitted only after complete guarded JSON",
+          "non_eos_emitted_transition_must_be_nonempty": true,
+          "full_output_prefix_decode_must_equal_guarded_text": true,
+          "scope": "Narrower token vocabulary; valid split-codepoint tokens and literal U+FFFD are excluded"
+        }
+      },
+      "substantive_calibration_qualified": false
+    },
+    {
+      "model_id": "mistralai/Mistral-Nemo-Instruct-2407",
+      "revision": "04d8a90549d23fc6bd7f642064003592df51e9b3",
+      "family": "Mistral",
+      "runtime_plan_path": "local_run/model_annotation_runtime_mistral_v1_20261011/runtime_plan.json",
+      "asset_expectations_path": "local_run/model_annotation_runtime_mistral_v1_20261011/asset_expectations.json",
+      "technical_result_path": "local_run/local_llm_execution_20261013/mistral_pilot_result.json",
+      "technical_pilot_qualified": true,
+      "qualified_scope": "40 exposed engineering pairs plus 4 swapped calls only; not semantic accuracy, scientific-frame coverage, or calibration",
+      "runtime_package_versions": {
+        "torch": "2.11.0+cu128",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "lm-format-enforcer": "0.11.3",
+        "pydantic": "2.12.5",
+        "pydantic-core": "2.41.5",
+        "interegular": "0.3.3",
+        "packaging": "26.3",
+        "PyYAML": "6.0.3",
+        "jsonschema": "4.25.1",
+        "annotated-types": "0.8.0",
+        "typing-inspection": "0.4.4",
+        "attrs": "26.1.0",
+        "jsonschema-specifications": "2025.9.1",
+        "referencing": "0.37.0",
+        "rpds-py": "2026.9.1",
+        "safetensors": "0.8.0",
+        "huggingface-hub": "0.36.2"
+      },
+      "effective_constraint_policy": {
+        "reason_word_limit": 80,
+        "word_count_semantics": "Python str.split on decoded reason value",
+        "tokenizer_alphabet": true,
+        "base_proposal_shortcut_allowed": true,
+        "guard_shortcut_allowed": false,
+        "effective_config_verified_after_enforcer_creation": true,
+        "selection": "Descending finite native-proposal score, then lowest token ID; first candidate whose exact tokenizer-state transition passes full schema and decoded-word guard",
+        "non_prefix_stable_token_transition": "rejected with explicit evidence",
+        "sampling_allowed": false,
+        "beam_count": 1,
+        "logit_argmax_evidence": "Runtime code, assertions and candidate-count ledger; no independent full-logit replay",
+        "standalone_token_policy": {
+          "schema": "third-standalone-token-policy-v5",
+          "standalone_decode": {
+            "skip_special_tokens": false,
+            "clean_up_tokenization_spaces": false
+          },
+          "regular_token_must_decode_nonempty": true,
+          "regular_token_must_not_contain": "U+FFFD",
+          "eos_policy": "Separate EOS IDs; permitted only after complete guarded JSON",
+          "non_eos_emitted_transition_must_be_nonempty": true,
+          "full_output_prefix_decode_must_equal_guarded_text": true,
+          "scope": "Narrower token vocabulary; valid split-codepoint tokens and literal U+FFFD are excluded"
+        }
+      },
+      "substantive_calibration_qualified": false
+    }
+  ],
+  "judge_runtime": {
+    "gpu": "one A100 80GB under Slurm",
+    "dtype": "bfloat16",
+    "do_sample": false,
+    "batch_size": 1,
+    "beam_count": 1,
+    "max_new_tokens": 512,
+    "total_token_budget": 32768,
+    "max_input_tokens_with_output_reserve": 32256,
+    "format_only_retry_limit": 0,
+    "semantic_retry_limit": 0,
+    "truncation_allowed": false,
+    "summarization_allowed": false,
+    "attention_implementation": "sdpa",
+    "sdpa_backend": "FLASH_ATTENTION",
+    "attention_fallback_allowed": false,
+    "lm_format_enforcer_version": "0.11.3",
+    "scheduling": "per model, stage: full_input_tokens descending then frozen sample index; no label-dependent ordering",
+    "loading": "offline exact pinned model/tokenizer/config/template files; bind weight hashes, package versions, code, driver/GPU and actual effective decoding config before and after execution",
+    "scope": "Adopt qualified pilot numerical/grammar settings. A separate v3 runner must bind new sampling/seed/response roles; sealed engineering pilot CLIs must not be relabeled as substantive runners."
+  },
+  "prompt": {
+    "system_path": "local_run/model_annotation_v2_20261011/judge_system_prompt.txt",
+    "task_path": "local_run/model_annotation_v2_20261011/judge_task_definition.txt",
+    "judgment_schema_path": "local_run/model_annotation_v2_20261011/model_judgment.schema.json",
+    "renderer": "same pilot renderer: system message then json.dumps({task_definition, documents:[{label:A,text:text_a},{label:B,text:text_b}]}, ensure_ascii=False); pinned model chat template, add_generation_prompt=True; tokenize add_special_tokens=False, truncation=False",
+    "displayed_fields": "complete original texts and fixed task only; no IDs, score, stratum, method, tags, native duplicate labels, prior answers, outcomes or desired conclusion",
+    "reason_limit": "<=80 Python str.split words and <=600 characters; strict final schema; no JSON repair or fence stripping",
+    "untrusted_text_rule": "document instructions are quoted source data; model receives no tools/retrieval and never sees the other model response"
+  },
+  "model_labels": {
+    "categories": [
+      "exact_copy",
+      "substantially_same_meaning",
+      "overlapping_information",
+      "merely_related",
+      "unrelated",
+      "uncertain"
+    ],
+    "positive_categories": [
+      "exact_copy",
+      "substantially_same_meaning"
+    ],
+    "primary_positive_rule": "both distinct-family judge outputs valid and positive",
+    "uncertain_disagreement_unavailable_rule": "binary positive/nonpositive disagreement, uncertainty, or unavailable: zero positive numerator; retain full denominator weight and distinct status. Different positive categories remain panel-positive and are logged as six-way disagreement.",
+    "confidence_score_used": false,
+    "models_assumed_independent": false,
+    "label_function": "y(pair)=1 iff both model calls have status valid and categories in the two positive categories; else 0",
+    "retain_all_sampled_units": true,
+    "drop_unavailable_from_denominator": false
+  },
+  "calibration": {
+    "selection_bins": 20,
+    "selection_pairs_per_bin_max": 30,
+    "selection_pair_max": 600,
+    "bin_population_and_inclusion_weights_required": true,
+    "threshold_grid": [
+      0.5,
+      0.51,
+      0.52,
+      0.53,
+      0.54,
+      0.55,
+      0.56,
+      0.57,
+      0.58,
+      0.59,
+      0.6,
+      0.61,
+      0.62,
+      0.63,
+      0.64,
+      0.65,
+      0.66,
+      0.67,
+      0.68,
+      0.69,
+      0.7,
+      0.71,
+      0.72,
+      0.73,
+      0.74,
+      0.75,
+      0.76,
+      0.77,
+      0.78,
+      0.79,
+      0.8,
+      0.81,
+      0.82,
+      0.83,
+      0.84,
+      0.85,
+      0.86,
+      0.87,
+      0.88,
+      0.89,
+      0.9,
+      0.91,
+      0.92,
+      0.93,
+      0.94,
+      0.95,
+      0.96,
+      0.97,
+      0.98,
+      0.99,
+      0.995
+    ],
+    "selection_weighted_precision_min": 0.95,
+    "validation_pair_max": 200,
+    "validation_frame": "ALL score>locked_tau calibration pairs; not only model positives",
+    "validation_lower_bound_min": 0.9,
+    "validation_alpha": 0.05,
+    "bound_target": "fixed/potential conservative two-model-panel label function under the locked runtime and uniform-draw sampling model; not semantic truth, human judgment, or independent model votes",
+    "calls_max_one_cell_base": 1600,
+    "swap_calls_max_one_cell": 160,
+    "failed_tau_0995_is_only_diagnostic": true,
+    "selection_bins_range": [
+      -1,
+      1
+    ],
+    "selection_bin_edges": "nearest FP64 decimal edges; left closed/right open/final endpoint closed; saturate bin only, never clip raw scores",
+    "selection_sampling": "independent reservoir SRS without replacement per bin; census if bin population <30",
+    "selection_estimator": "ratio of Horvitz-Thompson weighted positives to weighted sampled above-threshold pairs; exact rational inclusion weights",
+    "selection_threshold_rule": "least strict existing grid threshold with weighted ratio >=19/20 and nonzero support; predicate raw_score > float(tau)",
+    "validation_sampling": "independent reservoir SRS without replacement from ALL above-threshold calibration pairs, including selection/pilot overlap, model nonpositive/uncertain/unavailable cases; census if N<200",
+    "validation_bound": "one-sided exact finite-population hypergeometric lower proportion; alpha=1/20; >=9/10 required; empty population/sample is undefined and fails",
+    "post_validation_retuning_allowed": false,
+    "no_threshold_pass_policy": "0.995 remains failed diagnostic only; no substantive validation pass or post-outcome representation/prompt/judge substitution",
+    "validation_failure_policy": "stop this configuration, retain failure; any substantive change requires a new protocol and evaluation whose prior exposure is disclosed",
+    "selection_calibration_requires_context_available_filter": false
+  },
+  "randomness": {
+    "canonical_serialization": "UTF-8 JSON ensure_ascii=False, sort_keys=True, separators=(comma,colon), allow_nan=False; exact text/IDs, no Unicode normalization",
+    "protocol_id": "third-llm-only-annotation-v3",
+    "domain_digest": "SHA256(canonical_json([domain, *values]))",
+    "domains": {
+      "sampling": "third-llm-only-v3/sampling",
+      "natural_pair": "third-llm-only-v3/natural-pair",
+      "opaque_pair": "third-llm-only-v3/opaque-pair",
+      "orientation": "third-llm-only-v3/orientation",
+      "model_seed": "third-llm-only-v3/model-seed",
+      "call_id": "third-llm-only-v3/call-id"
+    },
+    "seed_generation": "Before selection observations, draw independent 256-bit OS seeds for selection, validation, selection_swap and validation_swap; record exact hex seeds and creation provenance in immutable v3 activation lock. Never search seeds or regenerate them after labels/scores/outcomes. No seeds drawn by this plan.",
+    "sampling_rng": "Python random.Random(int(domain_digest(sampling,[plan_file_sha256,frame_sha256,stage,seed_hex,bin_index_or_null]),16)); one independent selection stream per bin; separate validation/swap domains via stage. Same frozen reservoir algorithm and uniform-draw SRS model as phase3, not a cryptographic/exact-PRNG-randomness claim.",
+    "sampling_order": "complete frozen pair-score stream with block size/scorer/runtime/order pinned before selection; reservoir samples serialized in row-index order. Swaps draw from each complete stage sample in that order.",
+    "natural_pair_id": "domain_digest(natural_pair,[frame_sha256, sorted(record_ids by UTF-8 bytes)]); unordered, stable across stages",
+    "opaque_pair_id": "domain_digest(opaque_pair,[plan_file_sha256,frame_sha256,natural_pair_id]); never shown to judge",
+    "canonical_orientation": "UTF-8-byte sorted IDs; reverse iff int(domain_digest(orientation,[plan_file_sha256,frame_sha256,natural_pair_id]),16) mod 2 == 1; same orientation across both models and selection/validation",
+    "model_seed": "int(domain_digest(model_seed,[plan_file_sha256,frame_sha256,opaque_pair_id,model_id,model_revision]),16) mod 2^63; same seed for canonical replay and swapped diagnostic, independent of stage/call index",
+    "call_identity": "domain_digest(call_id,[activation_lock_sha256,stage,opaque_pair_id,model_id,model_revision,orientation,0]); unique stages; attempt always0"
+  },
+  "validation_stability": {
+    "fresh_canonical_calls_for_all_validation_pairs": true,
+    "reuse_selection_or_pilot_output_as_validation": false,
+    "preserve_original_labels": true,
+    "overlap_rule": "For selection/validation overlap under identical canonical orientation, compare each model status and each valid six-way category. Any category change OR status/availability change makes model validation unavailable due to instability, regardless of the numerical lower bound. No majority over repeats, relabeling, agreement retries or outcome-dependent exclusion.",
+    "reason_text_change_alone_is_instability": false,
+    "no_overlap_limit": "Absence of replayed overlap does not establish label-function stability elsewhere; report zero overlap explicitly.",
+    "statistical_assumption": "Bounds condition on a fixed/potential panel-label function. Passing observed replay checks does not prove deterministic stability on unsampled pairs or semantic accuracy."
+  },
+  "swapped_diagnostics": {
+    "fraction": "1/10",
+    "pairs_per_stage": "ceil(actual stage sample count/10), SRS without replacement using separate committed stage-swap seed",
+    "models_per_pair": 2,
+    "extra_votes": false,
+    "canonical_labels_replaced": false,
+    "scope": "descriptive six-way and binary order sensitivity only; retain failures and full diagnostic denominator; no primary quality gain or new independence claim"
+  },
+  "cost_budget": {
+    "selection_pairs_max": 600,
+    "validation_pairs_max": 200,
+    "models_per_pair": 2,
+    "base_calls_max": 1600,
+    "swapped_calls_max": 160,
+    "all_calls_max": 1760,
+    "generation_retries": 0,
+    "human_annotation_calls": 0,
+    "accounting": "Log planned/started/completed/failed/skipped calls; raw outputs/errors, tokens, loading, context census, generation, all final hashing/serialization/exit costs, peak GPU allocation/reservation and separate process/scheduler memory. Infrastructure failure never silently replaces attempted labels."
+  },
+  "evidence_roles": {
+    "model": "model_assessed_v3",
+    "task": "original_dataset_labels",
+    "algorithmic": "exact_target_and_measured_cost",
+    "human": "not collected; no active human annotation component"
+  },
+  "reporting": {
+    "required": [
+      "per-model six-way counts and binary labels",
+      "joint conservative positive fraction with complete denominator and exact weights",
+      "binary and six-way disagreement separately",
+      "uncertainty/refusal/invalid/context/runtime/missing counts by model and stage",
+      "canonical replay and swapped-order instability",
+      "all grid results and failed thresholds, validation failures and exposure overlap",
+      "model-only finite-population bound with conditional target stated",
+      "separate original-task-label utility and exact repair/cost results if actually executed"
+    ],
+    "prohibited_claims": [
+      "human equivalent, human consensus, independent human annotation or v1 human-gate completion",
+      "semantic truth or general semantic validity from model agreement",
+      "global duplicate recall from above-threshold validation",
+      "native missing duplicate links as verified negatives",
+      "engineering pilot outcomes promoted to population calibration",
+      "independence of model errors or confidence-calibrated labels"
+    ],
+    "historical_pilot_disclosure": "Qwen and Mistral both completed44/44 on the same40 exposed engineering pairs plus4swaps; their40canonical pairs had0joint positives. Qwen1/4swaps changed category+binary label; Mistral2/4changed category and0/4binary. Preserve these negative/instability observations, never replace them.",
+    "human_dependent_endpoints": "Original semantic admission/relevance/context-human audits remain unmeasured historical endpoints; omit their human-validity claims from v3. Any future model-assessed admission/context endpoint requires its own prospective sampling/context/estimand lock, not an automatic substitute."
+  },
+  "activation": {
+    "required": true,
+    "completed": false,
+    "lock_schema": "third-llm-only-annotation-activation-v3",
+    "dependencies": [
+      "Separate source acceptance for the current source/view and exact preparation lineage; hashes do not establish publisher authenticity.",
+      "Separate scientific cache/frame adapter validates actual140250row vectors and logs, full ordered frame/source partition and calibration-only20996row extraction; original monolithic cache route remains unexecuted.",
+      "Complete220405510pair score/bin census under the frozen coordinate-ordered scorer, counts, numerical audit and strict threshold predicates; bounded19row benchmark is feasibility evidence only.",
+      "Implement and independently validate v3-only ingestion, reservoir sampling, conservative labels, finite-population bound, complete failure accounting, overlap comparison and raw result artifacts; do not use human-only APIs.",
+      "Before selection inference, seal plan/package/runner/source/cache/frame/scorer/model/tokenizer/template/prompt/grammar/runtime hashes, all seeds/domains, exposure history, endpoint/multiplicity plan and resources in a new v3 analysis lock; preserve the old locks.",
+      "Seal selection sample and all tokenized full-text canonical+diagnostic request manifests; overflow remains unavailable/y=0 in the complete denominator, never frame filtering. Validate every required prompt token count and full-text/token hashes before inference; full-frame context feasibility must be reported as checked or unknown.",
+      "Freeze chosen threshold from sealed selection labels before independent validation; seal validation manifest and fresh calls with the same fixed label function; no post-validation tuning.",
+      "Fresh resource/quota checks and exact input/code/asset validation before any Slurm execution; private raw records/results under ignored local_workspace only."
+    ],
+    "human_annotation_dependency": false
+  },
+  "not_completed": {
+    "v3_annotation_jobs": 0,
+    "v3_model_judgments": 0,
+    "human_responses": 0,
+    "sampling_seed_generation": false,
+    "v3_activation": false,
+    "scientific_source_admission": false,
+    "scientific_full_cache_admission": false,
+    "full_pair_frame_census": false,
+    "selection_sampling": false,
+    "threshold_selected": false,
+    "model_calibration_complete": false,
+    "validation_complete": false,
+    "semantic_validity_established": false,
+    "v1_human_gate_satisfied": false,
+    "confirmatory_study_ready": false
+  },
+  "bound_files": {
+    "empirical_execution/phase3/CALIBRATION_ANNOTATION_GUIDE.txt": {
+      "bytes": 2563,
+      "sha256": "2023017dbb4218a1670987355ceb832084b503f9a9c10fad68148a5883622e44"
+    },
+    "empirical_execution/phase3/calibration.py": {
+      "bytes": 26084,
+      "sha256": "2a6ce3b19de3063f32b010ebfa19ffc4003ffc09acfc41a1ead4f74bc6c81b13"
+    },
+    "empirical_execution/phase3/panels.py": {
+      "bytes": 20216,
+      "sha256": "bd2409958ac9a9e27faf463b44b2f839260a3195c7cde32fb3bfb76aeb14a04b"
+    },
+    "local_run/ANALYSIS_LOCK.json": {
+      "bytes": 1559,
+      "sha256": "c70d7c360e02a13de98ca24e0ae3ac8dd116fbb8bd7b705fa4c934cc84d2b2ff"
+    },
+    "local_run/ANALYSIS_LOCK_EXECUTION.json": {
+      "bytes": 1479,
+      "sha256": "09b6ff50df8b4124aa44398c33d67884acff65b552f46c4fd0b8fac5b2656d7c"
+    },
+    "local_run/EMPIRICAL_PROGRAM.md": {
+      "bytes": 36402,
+      "sha256": "35c2bac50f542a4657ff4f53050bbcfe34362f12aa4d063c6b7f20071504f834"
+    },
+    "local_run/INPUTS_AND_PREPARATION.md": {
+      "bytes": 25825,
+      "sha256": "b3cbc51684410ade6d669b0fb8ceb164a251342c97c0157d89d8bf21cc189e3e"
+    },
+    "local_run/TODO.json": {
+      "bytes": 2910,
+      "sha256": "80a0385769ab9270db5791e025b1ec81523156e29f03fafa59d08d6ccdd22b4e"
+    },
+    "local_run/local_llm_execution_20261011/annotation_v5_result.json": {
+      "bytes": 7714,
+      "sha256": "f097d2b41ef7682a3fa0b70a47cabbe6ca006aafe6555a2f9b424859a7295d83"
+    },
+    "local_run/local_llm_execution_20261013/mistral_pilot_result.json": {
+      "bytes": 5817,
+      "sha256": "04e64826361829eb1f6be67d7e090ede814adb56668c07233b96328db65bc125"
+    },
+    "local_run/local_llm_execution_20261014/e5_assembly_independent_metadata_review.json": {
+      "bytes": 2734,
+      "sha256": "cb3db6eae34faccf8cb7fbbeb4dac752f556ceb440b79dc4945258843f6adff5"
+    },
+    "local_run/local_llm_execution_20261014/e5_assembly_terminal_metadata_result.json": {
+      "bytes": 2397,
+      "sha256": "c599c77cab42fdbb13ddaf95a6b26042b24ca0e70e34510e98b9de2db7cf824d"
+    },
+    "local_run/local_llm_execution_20261014/e5_pair_scorer_benchmark_result.json": {
+      "bytes": 44907,
+      "sha256": "bbedb03e7ad11ac8def0d68ace096b0b68c0a3f91ce578fa6016392f0c3108af"
+    },
+    "local_run/model_annotation_runtime_mistral_v1_20261011/DEPENDENCIES.json": {
+      "bytes": 1385,
+      "sha256": "7e86d647d3db846a7d7f159feb9b969e737b0b2b786f88ba8d3dcce386544407"
+    },
+    "local_run/model_annotation_runtime_mistral_v1_20261011/asset_expectations.json": {
+      "bytes": 3662,
+      "sha256": "e79a30e87ece097cea63dd1e3af8e977970f7715abf55c3b858b4180146460b5"
+    },
+    "local_run/model_annotation_runtime_mistral_v1_20261011/audit_pilot_artifacts.py": {
+      "bytes": 52986,
+      "sha256": "33df2e4682f771d9b1ae4e2397b5bdde40466f6e24bbf187f1272a6af45ff594"
+    },
+    "local_run/model_annotation_runtime_mistral_v1_20261011/bounded_reason.py": {
+      "bytes": 16317,
+      "sha256": "6f5ce5b653813d705b0918a299d8e61625e4dd02bb7c3cc260b50246f905ccc7"
+    },
+    "local_run/model_annotation_runtime_mistral_v1_20261011/prepare_pilot.py": {
+      "bytes": 12393,
+      "sha256": "28139cd7e1b7f2faa8b97027b4090f3e5c42b61a8cd151c29574e2f56aa3b3fd"
+    },
+    "local_run/model_annotation_runtime_mistral_v1_20261011/requirements.txt": {
+      "bytes": 284,
+      "sha256": "5821fa518d03c24888f7819b21179980ad9ed26dc210847910bf2009359e8fd5"
+    },
+    "local_run/model_annotation_runtime_mistral_v1_20261011/run_pilot.py": {
+      "bytes": 50864,
+      "sha256": "fe3de36730663f160057d633f5cb4db3a60877b10a533d824a5b0e44069f36df"
+    },
+    "local_run/model_annotation_runtime_mistral_v1_20261011/runtime_plan.json": {
+      "bytes": 11521,
+      "sha256": "a9331c1400f7f63f883a240a193ef9a0d15f44bbe58c1502dd058a2f88907953"
+    },
+    "local_run/model_annotation_runtime_v2_20261011/qwen_asset_expectations.json": {
+      "bytes": 2520,
+      "sha256": "6b52dee1f0dce5f3541026ac7cb9999ce8679210def62c07186eb8dd59b4b48b"
+    },
+    "local_run/model_annotation_runtime_v5_20261011/DEPENDENCIES.json": {
+      "bytes": 1222,
+      "sha256": "5e2d0f9db7c151c90a304a562d81f59e93dd3d2703b7d8fef989ba3f9f0d6253"
+    },
+    "local_run/model_annotation_runtime_v5_20261011/audit_pilot_artifacts.py": {
+      "bytes": 49661,
+      "sha256": "68847f21438a03c7ac3ffb172da7185033c2bb2aa800ac2f26ad1f97a5e5c8e8"
+    },
+    "local_run/model_annotation_runtime_v5_20261011/bounded_reason.py": {
+      "bytes": 16317,
+      "sha256": "6f5ce5b653813d705b0918a299d8e61625e4dd02bb7c3cc260b50246f905ccc7"
+    },
+    "local_run/model_annotation_runtime_v5_20261011/prepare_pilot.py": {
+      "bytes": 11323,
+      "sha256": "f4629b410b03673f4f5b652aff5f43d25526554da64ae4c928f90cdf4d16c5c8"
+    },
+    "local_run/model_annotation_runtime_v5_20261011/requirements.txt": {
+      "bytes": 240,
+      "sha256": "83f039a3bbff610910e3b0c8f23afefc1855b87fa88da7fc90ca4b934e95eb2d"
+    },
+    "local_run/model_annotation_runtime_v5_20261011/run_pilot.py": {
+      "bytes": 49253,
+      "sha256": "66dfd4a718033b78b791ad3403250ee9b5d8b5011192df75f804e6cc3500a6f6"
+    },
+    "local_run/model_annotation_runtime_v5_20261011/runtime_plan.json": {
+      "bytes": 9276,
+      "sha256": "4dd23f5d55201eedf9e5c6d57e9106390b6f1a54d8b7f7a42f5433cdbd84ab73"
+    },
+    "local_run/model_annotation_v2_20261011/PLAN.json": {
+      "bytes": 9119,
+      "sha256": "0f32141cb82443859c1fe596140c0b9224c1a4a50c8db467902087f2f3532ca7"
+    },
+    "local_run/model_annotation_v2_20261011/PLAN.txt": {
+      "bytes": 14269,
+      "sha256": "50d5ab9732e8624e09f676b9be1d278af0dfa55893012ac3efea5f9e81f0952d"
+    },
+    "local_run/model_annotation_v2_20261011/README.txt": {
+      "bytes": 683,
+      "sha256": "d5813b39a17f9060f10094cbb65749e6291d63555c7981ad5d018084d971e631"
+    },
+    "local_run/model_annotation_v2_20261011/REFERENCES.txt": {
+      "bytes": 2740,
+      "sha256": "e8577424ced6c4532c41dacd69193fdab2763380f0511dccdd3495087cc9b7a9"
+    },
+    "local_run/model_annotation_v2_20261011/SOFTWARE_VALIDATION.json": {
+      "bytes": 964,
+      "sha256": "2a39858558518bff8b73f8351c336336bc66dc37315da9d09af643b5df7448ee"
+    },
+    "local_run/model_annotation_v2_20261011/judge_system_prompt.txt": {
+      "bytes": 1967,
+      "sha256": "52978c91ca9ddd8f3d055197a188ddb64bc61d7249bec476c0bb8c6106b84982"
+    },
+    "local_run/model_annotation_v2_20261011/judge_task_definition.txt": {
+      "bytes": 140,
+      "sha256": "aef7daf9b52723b13ccf9d2a0e334e91fb12ab03cc072870e9e57acdae799a47"
+    },
+    "local_run/model_annotation_v2_20261011/model_judgment.schema.json": {
+      "bytes": 918,
+      "sha256": "b30e7324c4a77bbc3ed798f22982a0d49bdcd9eda56439911896db24260e5c8b"
+    },
+    "local_run/model_annotation_v2_20261011/model_response.schema.json": {
+      "bytes": 5270,
+      "sha256": "37d270fc578df44e14a1d97735552b72cbd1721b1de8169054eb25af79cfb2e4"
+    },
+    "local_run/model_annotation_v2_20261011/single_author_response.schema.json": {
+      "bytes": 2139,
+      "sha256": "b3156a062f69283bbb916c95bf352073e21a57e347f29da87d8a9882eb33b813"
+    }
+  },
+  "binding_scope": "Current local source/report hashes bind this prospective plan; they do not rerun GPU inference, full source/asset reads or cluster payload checks. Historical status text in bound files remains historical and is not an active v3 human requirement."
+}

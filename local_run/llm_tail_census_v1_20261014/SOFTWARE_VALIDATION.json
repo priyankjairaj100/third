@@ -1,0 +1,7 @@
+{
+  "tests": 5,
+  "failures": 0,
+  "errors": 0,
+  "scope": "software boundary fixtures only; worker first512 and full-stream parity pending",
+  "created_utc": "2026-10-14T09:39:28.057519+00:00"
+}

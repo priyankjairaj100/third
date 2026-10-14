@@ -1,0 +1,8 @@
+{
+  "tests": 8,
+  "errors": 0,
+  "failures": 0,
+  "passed": true,
+  "created_utc": "2026-10-14T09:49:15.843124+00:00",
+  "scope": "local software fixtures only; full frame sampling and cluster parity not yet executed"
+}

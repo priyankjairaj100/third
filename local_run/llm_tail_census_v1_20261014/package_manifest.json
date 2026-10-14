@@ -1,0 +1,30 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 1719,
+      "sha256": "c3ff221b0a52affa08ef8e940c795c497bf6369459f20c7f1b0e447a66ae2ed1"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 196,
+      "sha256": "667cf6cfaf434cf89dec216ac611e2ee8c2ad701a05f13ecdd6fe58895df681a"
+    },
+    "census.py": {
+      "bytes": 8686,
+      "sha256": "8ebee4f2d8d1d55960a676e54f68830b481974570a08a2469373faf8b3b04e76"
+    },
+    "census.sbatch": {
+      "bytes": 1119,
+      "sha256": "2a63f32c7001af066023c2e74ef3083c418e24f329766ba92898e74753a11662"
+    },
+    "launch.py": {
+      "bytes": 2853,
+      "sha256": "1049449d86a606dcff05d6013411feb8298b0c5b32a182f53b2120fe3f843a49"
+    },
+    "test_census.py": {
+      "bytes": 1803,
+      "sha256": "d133fdd91c3e91ec1e36d84af67daf3d57493083bb84ebf7f6a9fc20156deeaf"
+    }
+  },
+  "manifest_self_excluded": true,
+  "schema": "third-tail-census-package-v1"
+}

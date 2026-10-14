@@ -1,0 +1,50 @@
+{
+  "files": {
+    "PLAN.json": {
+      "bytes": 16694,
+      "sha256": "10ebb3cb8f872c2efaf69306ca5bb23dcec2a015b2747988aafa31485dbbdcae"
+    },
+    "README.txt": {
+      "bytes": 1771,
+      "sha256": "9af92ccba7174bc68a3edf5a29cde27ac10765d354473b8750d5a429361af8bb"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 220,
+      "sha256": "1cac9b7215b4b7c158d479dcea744ed5b6b3b4ef5e0a977cc55cb0759652c8c7"
+    },
+    "launch_selection.py": {
+      "bytes": 4668,
+      "sha256": "45c0a487753d7584e96c3a4c4e3ad059d9ac67e6541b8776977d4cc39b0004ba"
+    },
+    "parent_PLAN.json": {
+      "bytes": 29547,
+      "sha256": "7910272ad6d05e012b101c782ea2268b5585eb6ab0f9b49f38c1aac9b5e13419"
+    },
+    "prior_v3_terminal_result.json": {
+      "bytes": 37823,
+      "sha256": "48979e72e212d2a7e6bdd4966f32ed1f36b422ca3ae1f48a70c80e6f4b0929eb"
+    },
+    "protocol.py": {
+      "bytes": 6924,
+      "sha256": "9c6deb4aadfcb81a07fd6160722d2b7e552c5918d0ae030e37d6390cfc962590"
+    },
+    "sampling.py": {
+      "bytes": 2139,
+      "sha256": "7defdb2363ae151be676f8f357799a6cb39dffd965320ca03c057154642614bd"
+    },
+    "select_worker.py": {
+      "bytes": 9483,
+      "sha256": "d5fe8de0ac2e92d65c6c61c7fa885b0e2cd5fb338d7ba7785e32fd692df90efb"
+    },
+    "selection.sbatch": {
+      "bytes": 1161,
+      "sha256": "91ab4ee40db3ae8c41bd5e42309f59fc278a3bc8796f24ce67650fbb3ab17f09"
+    },
+    "test_v4.py": {
+      "bytes": 3769,
+      "sha256": "c6f3655aee96647aadc52c6094a8a05192b2bd6a480d61310c6ff141094abd9b"
+    }
+  },
+  "manifest_self_excluded": true,
+  "schema": "third-llm-v4-plan-and-sampling-package"
+}

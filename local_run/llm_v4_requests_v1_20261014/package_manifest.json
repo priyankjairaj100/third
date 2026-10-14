@@ -1,0 +1,30 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 940,
+      "sha256": "e61ae5fe7300a50eaf47c200fb4691af1fd2a77e9a0b5dd7698b087ac94ac33c"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 194,
+      "sha256": "57e9ac8fc693d950bdc4d12c79fa2a27efbade9288baf8016c831a3e086b9f59"
+    },
+    "launch.py": {
+      "bytes": 3168,
+      "sha256": "12bace08e81249f332a3b3ef2ae5cc598cfe177aa19baaa0bb51c7d255ac89b9"
+    },
+    "prepare.py": {
+      "bytes": 12682,
+      "sha256": "771b3daf313f6c16a5216918878dc8eccb84185948224c1b6bdb30ea0a9e37e2"
+    },
+    "requests.sbatch": {
+      "bytes": 1185,
+      "sha256": "089a1f2945862814df0d4449175b89972420de1a1151d57f6dec74bd91487897"
+    },
+    "test_requests.py": {
+      "bytes": 1629,
+      "sha256": "f75729160c811d831b91e31d0e54abb6b284e8a9f28190eba16859f5807624bc"
+    }
+  },
+  "manifest_self_excluded": true,
+  "schema": "third-llm-v4-request-package-v1"
+}
