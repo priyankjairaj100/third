@@ -1,0 +1,93 @@
+{
+  "audit_shortfall_bytes": 1303379968,
+  "confirmatory_study_ready": false,
+  "controller": {
+    "automatic_retry": false,
+    "failure_utc": "2026-10-14T07:08:23.460349+00:00",
+    "reason": "storage quota below unchanged 8 GiB reserve plus stage allowance",
+    "state": "stopped"
+  },
+  "estimate_excludes_queue_time_and_is_not_guaranteed": true,
+  "fresh_storage_check": {
+    "audit_required_bytes": 8623489024,
+    "mistral_required_bytes": 8690597888,
+    "mount": {
+      "fstype": "ext4",
+      "source": "/dev/sdb1",
+      "target": "/nfs_home"
+    },
+    "next_stage_slots": {
+      "mistral": {
+        "exists": false,
+        "intent_exists": false,
+        "receipt_exists": false
+      },
+      "mistral_audit": {
+        "exists": false,
+        "intent_exists": false,
+        "receipt_exists": false
+      },
+      "qwen_audit": {
+        "exists": false,
+        "intent_exists": false,
+        "receipt_exists": false
+      },
+      "statistics": {
+        "exists": false,
+        "intent_exists": false,
+        "receipt_exists": false
+      }
+    },
+    "observed_utc": "2026-10-14T08:21:40.859701+00:00",
+    "project_queue": "",
+    "quota": {
+      "available_soft_bytes": 7320109056,
+      "hard_kib": 1048576000,
+      "soft_kib": 1047527424,
+      "used_kib": 1040378880
+    },
+    "qwen_accounting": "13574|COMPLETED|0:0|2634||csis.cn3\n13574.batch|COMPLETED|0:0|2634|2307420K|csis.cn3\n",
+    "read_only": true,
+    "reserve_bytes": 8589934592
+  },
+  "human_annotation_calls": 0,
+  "independent_validation_performed": false,
+  "mistral_shortfall_bytes": 1370488832,
+  "mistral_submitted": false,
+  "next_actions": [
+    "Restore enough available quota without deleting retained evidence or lowering the frozen reserve.",
+    "Inspect existing receipts and obtain a fresh quota check; preserve stopped controller and empty failed local audit-launch receipt.",
+    "Resume from the Qwen output audit using the existing99 outputs; never rerun Qwen, resample, recreate activation or restart occupied controllera01.",
+    "After passed audit, submit Mistral once, audit it and run frozen statistics."
+  ],
+  "planned_requests_not_repeated": true,
+  "qwen": {
+    "completed_requests": 99,
+    "execution_result": {
+      "bytes": 110974,
+      "sha256": "fbc6b7a9d73a56a924982bad2c39d513338d83d29940a7a2e754b022917b21ca"
+    },
+    "exit_code": "0:0",
+    "independent_CPU_output_audit_completed": false,
+    "job_id": "13574",
+    "local_terminal_review": {
+      "bytes": 1935,
+      "sha256": "ab88f6feb94e2c6be44ad326aeda5379fc89d1f971052ed31652c5ce735f8859"
+    },
+    "local_terminal_review_passed": true,
+    "runner_status_counts": {
+      "valid": 99
+    },
+    "scheduler_seconds": 2634,
+    "state": "COMPLETED"
+  },
+  "qwen_audit_submitted": false,
+  "remaining_estimate_minutes_after_storage_is_available": [
+    45,
+    75
+  ],
+  "schema": "third-llm-qwen-terminal-storage-stop-v1",
+  "semantic_validity_established": false,
+  "threshold_selected": false,
+  "updated_utc": "2026-10-14T08:21:40.859701+00:00"
+}

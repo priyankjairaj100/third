@@ -1,5 +1,21 @@
 THIRD — LOCAL / CLUSTER CHECKPOINT
-Updated 14 October 2026, 06:47:41 UTC observation
+Updated 14 October 2026, 08:21:40 UTC observation
+
+CURRENT STATE — QWEN COMPLETE; CONTROLLER STOPPED ON STORAGE GATE
+Qwen13574 completed0:0 on csis.cn3 in2,634 seconds. All99 responses have runner
+status valid; exact exported bytes and planned call identities passed local review.
+The independent CPU prompt/output/grammar audit has NOT run yet.
+At07:08:23 UTC, controllera01 stopped before the audit launch because available
+quota failed the unchanged8GiB reserve plus32MiB audit allowance. No audit intent
+or job was created. At08:21:40 UTC, available soft quota was7,320,109,056bytes.
+The audit needs1,303,379,968 additional bytes; Mistral needs1,370,488,832bytes
+(about1.3GiB). No Third jobs are active and Mistral has not been submitted.
+Do not restart controllera01 or repeat Qwen. Preserve its failed local receipt.
+Restore capacity, recheck quota/receipts, and resume from the Qwen output audit.
+Do not delete retained evidence or lower the frozen reserve. Estimated remaining
+execution after capacity returns:45–75minutes plus queue time, not guaranteed.
+Public result: local_run/local_llm_execution_20261014/llm_qwen_completed_storage_stop.json
+The chronological startup descriptions below are historical, not current status.
 
 ACTIVE POLICY: FULLY LLM, ZERO HUMAN ANNOTATION
 The user's latest instruction supersedes the earlier 50–100 author reviews.
