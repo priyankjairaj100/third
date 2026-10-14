@@ -1,0 +1,143 @@
+{
+  "bins": 20,
+  "block_size": 256,
+  "capacity": 30,
+  "dimension": 768,
+  "frame_files": {
+    "input_bindings.json": {
+      "bytes": 121674,
+      "sha256": "75086e6c43e840db0b5310ce4f027e09c5b6dce5fb51e3156e494d28d68b723d"
+    },
+    "records.private.jsonl": {
+      "bytes": 6415732,
+      "sha256": "9260b4ec7f576c2181bddbf78a79a6c9fe0021aca942eea21cb215ba1b172c0a"
+    },
+    "vectors.npy": {
+      "bytes": 64499840,
+      "sha256": "c254719d68d4b0ffd14f0917075cabc7984ba6bcb7c9085cba66f5b48e78bae6"
+    }
+  },
+  "frame_inherited": {
+    "calibration_ordered_ids_sha256": "e10f795a158fea20a7fcddd7ab5ee141615eec10730f7e352037b8ed5b5c4d82",
+    "calibration_ordered_source_ids_sha256": "e94fd22dd063eafc7b5755efd5fde9cfe92466bb7bdb88f098e1d57cd1e6e859",
+    "fingerprint": "294e0abb55aeae76430cfca566630b737426c9fa92197707c5a2d08fa887147d",
+    "full_plan": {
+      "bytes": 1577354,
+      "sha256": "857fcf65cf5a8a2e55d6abbc5b8c96335c5aca3905f701b37d9b2a51aae116f3"
+    },
+    "inherited_derivation_runtime": {
+      "attention": "eager",
+      "batch_size": 8,
+      "cpu": {
+        "cpu family": "23",
+        "flags": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd amd_ppin arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip rdpid overflow_recov succor smca sme sev sev_es",
+        "microcode": "0x830107d",
+        "model": "49",
+        "model name": "AMD EPYC 7502 32-Core Processor",
+        "stepping": "0",
+        "vendor_id": "AuthenticAMD"
+      },
+      "deterministic_algorithms": true,
+      "device": "cpu",
+      "dtype": "float32",
+      "interop_threads": 1,
+      "libraries": {
+        "numpy": "2.5.3",
+        "safetensors": "0.8.0",
+        "tokenizers": "0.22.2",
+        "torch": "2.14.1+cpu",
+        "transformers": "4.57.6"
+      },
+      "machine": "x86_64",
+      "mkldnn": false,
+      "padding": 261,
+      "platform": "Linux-4.18.0-553.el8_10.x86_64-x86_64-with-glibc2.28",
+      "python": "3.13.7",
+      "seed": 0,
+      "threads": 1
+    },
+    "original_full_row_indices_sha256": "e52d66ab705920c7099a139b7b6006e4d0aa7a11e494b5229daded24958eea03",
+    "prepared_source_audit_file": {
+      "bytes": 7025828,
+      "sha256": "733802fb0e0393cc7feef659d539d1663a8a4b4401b07893d94a8796753c7487"
+    },
+    "prepared_source_records_file": {
+      "bytes": 570048810,
+      "sha256": "c003933aa4e04cddc5fda8bfa9e0d6752c80bef92eddaf85400b29c1512d086e"
+    },
+    "qualification_result": {
+      "bytes": 11974,
+      "sha256": "bb84fc18556e6a7d57eda5fa1fffe2c9e2ca5a3f7da5e85f2b96fac11d2e484f"
+    },
+    "repair_result": {
+      "bytes": 2556,
+      "sha256": "fc1c54310d6258b39179a350c6ef4e66fdd466c45cec20ca76b85c6682d47af6"
+    },
+    "source_cache_files": {
+      "chunk_log.jsonl": {
+        "bytes": 75706969,
+        "sha256": "53157ef3a9c32f89d6d3d7e26eb6157f734314dbf5ba2e30fb7a16ae26aaca9e"
+      },
+      "vectors.npy": {
+        "bytes": 430848128,
+        "sha256": "cbc1f9a06079048144f406ec11925350aa057215869819b0967ac2749e25284e"
+      }
+    },
+    "source_cache_manifest": {
+      "bytes": 13293,
+      "sha256": "0a27cdc151a99c5f1fb6d6a94669e42bf91e14adc3c2afa20fc9f33a74539cbc"
+    },
+    "source_full_rows_sha256": "decd53334651c3a5bbede1e57146722e7d852f784577dff4dc93311065934419",
+    "source_grouping": {
+      "calibration_source_units": 13394,
+      "calibration_unknown_singletons": 247,
+      "full_source_units": 88344,
+      "partition_counts": {
+        "calibration": 20996,
+        "test": 21067,
+        "train": 98187
+      },
+      "source_disjoint_across_partitions": true,
+      "source_grouping_limit": "Native account metadata is a contributor proxy; unknown owners remain record singletons. No new authenticity or actual-authorship claim.",
+      "source_kind_counts": {
+        "native_metadata_requires_provenance_review": 138728,
+        "unknown_singleton": 1522
+      },
+      "within_calibration_same_source_pairs_excluded": false
+    },
+    "source_text_binding": "dcfa74c795fdd7fba48f3e7e8efad25260053d753a39092ff2dc706349cf6044"
+  },
+  "frame_package_sha256": "015ea8122ba5b7a366eba6f96fc3e4d64767bb7d8425c48b3b047ff5fad87fa8",
+  "frame_relative": "qualification/e5-calibration-frame-v1-20261014-a01/run/frame",
+  "frame_result": {
+    "bytes": 15372,
+    "sha256": "d4fc45ec0d38ddc94c2a9c82ee3948020d0acd1f47fd84582b87ad5e273aedb1"
+  },
+  "frame_result_seal": "2db07387d60fd743d7b7511ea2a7917e0eb21dcd52fecf344aad9a7d6f2bb4de",
+  "frozen_files": {
+    "empirical_execution/phase3/calibration.py": {
+      "bytes": 26084,
+      "sha256": "2a6ce3b19de3063f32b010ebfa19ffc4003ffc09acfc41a1ead4f74bc6c81b13"
+    },
+    "empirical_execution/phase3/panels.py": {
+      "bytes": 20216,
+      "sha256": "bd2409958ac9a9e27faf463b44b2f839260a3195c7cde32fb3bfb76aeb14a04b"
+    }
+  },
+  "lock_package_sha256": "bcd8d75df5c8e973314ea664ed3acc249c94a75804c8965c9ba842af9524ef21",
+  "output_directory_cap_bytes": 16777216,
+  "pairs": 220405510,
+  "plan_sha256": "7910272ad6d05e012b101c782ea2268b5585eb6ab0f9b49f38c1aac9b5e13419",
+  "protocol_evidence_sha256": "25a0dae8bad0023ec1183b0ca4978ee1b2e64aedf20f7b0fe1cc3aad8810b754",
+  "protocol_package_sha256": "56e97fe1b55f4047f4b8ddac1c7db00be22d69d45b270c8b31beab33d685aa01",
+  "qualification_rows": 512,
+  "rows": 20996,
+  "runtime": {
+    "hostname": "csis.cn1",
+    "numpy": "2.5.3",
+    "python": "3.13.7"
+  },
+  "schema": "third-llm-selection-sampler-expectations-v1",
+  "source_relative": "qualification/cpu-qualification-20261011T143735+0530-transport-v1-a02/views/askubuntu",
+  "source_split_salt": "ccu-v1-source-split"
+}

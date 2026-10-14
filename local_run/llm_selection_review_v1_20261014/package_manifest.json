@@ -1,0 +1,34 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 920,
+      "sha256": "a8db91bf62ea449ac79ab3082f9c566096b88b5636ee058ed015a5aae44e9505"
+    },
+    "audit_full_selection.py": {
+      "bytes": 26233,
+      "sha256": "1980929cd3b9c677b8fe0295580a8956a193cb00513d0fce7111d4fe77047659"
+    },
+    "audit_qualification.py": {
+      "bytes": 23768,
+      "sha256": "effb232f6157a0b65bf72caf68c161562cc35b713207329192029b117f6554cf"
+    },
+    "full_selection_audit_software_validation.json": {
+      "bytes": 803,
+      "sha256": "a86a27ea2018348919fbe17ecec52d06115c967bbaeb8b3658fc9538b64466d7"
+    },
+    "independent_review_software_validation.json": {
+      "bytes": 1202,
+      "sha256": "31949bfb10bd56230d7b4ecfa091c18247297f8377869869e1d1310a570aea07"
+    },
+    "test_full_selection_audit.py": {
+      "bytes": 6761,
+      "sha256": "726b4a659a4140837027fad60f88ad259191b0753b3222efdbf79d49e7c185b8"
+    },
+    "test_independent_review.py": {
+      "bytes": 3273,
+      "sha256": "37000a8f07eedbe0c170ecfe432401e52ed869d82fd4d6f919cc736caf897c9b"
+    }
+  },
+  "manifest_self_excluded": true,
+  "schema": "third-llm-selection-review-package-v1"
+}

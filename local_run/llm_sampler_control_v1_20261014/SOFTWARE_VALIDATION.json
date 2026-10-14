@@ -1,0 +1,12 @@
+{
+  "schema": "third-llm-sampler-control-software-validation-v1",
+  "observed_utc": "2026-10-14T05:05:28.884179+00:00",
+  "tests": 8,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true,
+  "shell_syntax_passed": true,
+  "scope": "Local control software fixtures; no real frame scoring, seed creation, cluster launch or source acceptance",
+  "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s local_run/llm_sampler_control_v1_20261014 -p test_control.py -v"
+}

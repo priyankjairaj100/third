@@ -1,0 +1,57 @@
+{
+  "created_utc": "2026-10-14T05:15:19.647207+00:00",
+  "human_annotation_calls": 0,
+  "model_inference_calls": 0,
+  "output_resource_scope": "Slurm8GiB;128MiB stage allowance plus unchanged8GiB quota reserve,16MiB sampler output cap. Quota check is a snapshot, not reservation.",
+  "packages": {
+    "llm_sampler_control_v1_20261014": {
+      "manifest": {
+        "bytes": 1045,
+        "sha256": "a1779a1ea98b0968ab46680be6a0249983381bcd25a02a2c405877a32b237cf9"
+      },
+      "members_verified": 6
+    },
+    "llm_sampling_lock_v1_20261014": {
+      "manifest": {
+        "bytes": 789,
+        "sha256": "bcd8d75df5c8e973314ea664ed3acc249c94a75804c8965c9ba842af9524ef21"
+      },
+      "members_verified": 5
+    },
+    "llm_selection_sampler_v1_20261014": {
+      "manifest": {
+        "bytes": 791,
+        "sha256": "c1da01e546c4ee0b5e84503b8513ec66f6ee5ae1ded16f46b2ce6b7801e18ce2"
+      },
+      "members_verified": 5
+    }
+  },
+  "passed": true,
+  "production_entropy_draws": 0,
+  "remote_actions": 0,
+  "resolved_findings": [
+    "Exact canonical orientation and all row/ID/weight fields checked, not identity hashes alone.",
+    "Linux+Slurm runtime gate, completed-lock intent/inventory, final source/frame/evidence/qualification inventories.",
+    "Five-artifact qualification evidence includes exact first512 vector and metadata copies.",
+    "Controller sets NUMEXPR_NUM_THREADS=1 and correct protocol path in privately staged tests."
+  ],
+  "schema": "third-llm-selection-prospective-independent-review-v1",
+  "scientific_contract": [
+    "All20996 calibration rows and220405510 unordered pairs, including same-source/unknown/exposed pairs, stay eligible.",
+    "Exact frozen coordinate-ordered FP64 scorer/B256; raw unclipped scores;20bins30reservoir capacity.",
+    "Qualification first512 uses fixed engineering randomness; retained exposure is explicit.",
+    "Fresh production four OS seed draws only after durable exclusive intent, successful qualification and separate raw-pinned review; no resuming/redrawing/alternate slot.",
+    "Historical39-file protocol evidence snapshot is not executing checkout; actual scorer separately hash-bound.",
+    "No human annotation dependency, calls or planned reviews. Source authenticity, original acceptance and semantic validity remain false."
+  ],
+  "scope": "Read-only scientific/software review and targeted software tests of final prospective selection sampler, one-time four-seed commitment helper and single-submit control. Does not create entropy or authorize inference. Actual diagnostic qualification is reviewed separately.",
+  "software_tests": {
+    "controller": 8,
+    "errors": 0,
+    "failures": 0,
+    "helper": 13,
+    "sampler": 22,
+    "skips": 0,
+    "total": 43
+  }
+}

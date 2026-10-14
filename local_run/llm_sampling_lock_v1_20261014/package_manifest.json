@@ -1,0 +1,26 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 7864,
+      "sha256": "a82c7957f679244e2e196bff5d232a539caa3a3cf87471138350509be8c35cac"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 2002,
+      "sha256": "d7440bd35aeb1f18cea8a3019643195212bae4cd2e038a5f131c25e25dfa08e3"
+    },
+    "expectations.json": {
+      "bytes": 6578,
+      "sha256": "248bcdd217ecab2951e7b3aa24037cbf4a9374c4f765bd96ce83a3d56a9ad7b0"
+    },
+    "sampling_lock.py": {
+      "bytes": 21938,
+      "sha256": "f9b43c3fef087170f19d1e85693f81ebf1d20fe15b4ec86f0003edce1d9793bf"
+    },
+    "test_lock.py": {
+      "bytes": 9687,
+      "sha256": "8cd49e9eecf1da78987580cbc9bf55d8e646bcba6c98015026e57e630fc90039"
+    }
+  },
+  "manifest_self_excluded": true,
+  "schema": "third-llm-sampling-lock-package-v1"
+}

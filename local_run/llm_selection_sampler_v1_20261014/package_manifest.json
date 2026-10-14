@@ -1,0 +1,26 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 7491,
+      "sha256": "87f898697a31e796d678984b51109169fca56c2564443797a29f82a125961539"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 1783,
+      "sha256": "8288b981e26fc0d7bdd701f1d72a05d0466aa52bb552c69148e29011d0ac52c8"
+    },
+    "expectations.json": {
+      "bytes": 6332,
+      "sha256": "4296fb56be9e9fa5b412880c600d56bdddbe60ba68b8049d2cbea13ef2f31719"
+    },
+    "sampler.py": {
+      "bytes": 36578,
+      "sha256": "c8a31255cd7c002b0b1578d1f20b94ebc15d1acbea6f6f3e3de5a6c488420d3d"
+    },
+    "test_sampler.py": {
+      "bytes": 13380,
+      "sha256": "8b29ac1c2c2259d301cd62d6dda7c3d9b89f281659ab46b2b4186147dfbb214b"
+    }
+  },
+  "manifest_self_excluded": true,
+  "schema": "third-llm-selection-sampler-package-v1"
+}

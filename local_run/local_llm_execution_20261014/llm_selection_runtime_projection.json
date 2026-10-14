@@ -1,0 +1,14 @@
+{
+  "schema": "third-llm-selection-runtime-projection-v1",
+  "qualification_job": "13560",
+  "qualified_collector_seconds": 0.9141346514225006,
+  "qualification_pairs": 130816,
+  "full_pairs": 220405510,
+  "pair_ratio": 1684.8513178816047,
+  "conditional_pair_rate_seconds": 1540.1809721704415,
+  "tile_entry_ratio": 1134.760498046875,
+  "conditional_tile_entry_seconds": 1037.3238923301033,
+  "chosen_scheduler_cap_minutes": 60,
+  "memory_request_gib": 8,
+  "scope": "Alternative conditional scaling scenarios, not a lower-upper bound or guaranteed runtime; pair auditing/RNG/hash and tile arithmetic scale differently. Concurrent load and full-frame near-grid incidence unknown. No automatic retry or partial acceptance on timeout."
+}

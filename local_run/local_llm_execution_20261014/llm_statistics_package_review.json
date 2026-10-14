@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-10-14T05:20:35.596234+00:00",
+  "members_rehashed": 4,
+  "package_manifest": {
+    "bytes": 754,
+    "sha256": "d622e951c9d2eba9fc6b694645512d425d17872818fbb4109c4819e9bdb14311"
+  },
+  "passed": true,
+  "scope": "Pure model-defined statistics and software fixtures only; no real annotation results, sampling, inference or scientific acceptance.",
+  "source_test_review": {
+    "bytes": 2052,
+    "sha256": "de9382aa99567a22aa9ed3d15910dd9f2ef124e6e256d03c7de08792a9771c5d"
+  },
+  "source_tests_unchanged_from_review": true
+}

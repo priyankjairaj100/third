@@ -1,0 +1,12 @@
+{
+  "schema": "third-llm-only-statistics-software-validation-v1",
+  "observed_utc": "2026-10-14T05:20:15.710047+00:00",
+  "tests": 14,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true,
+  "independent_review_passed": true,
+  "scope": "Pure numerical fixtures and exhaustive finite-population coverage for N<=12; no empirical labels, model calls, sampling or inference activation",
+  "command": "python -B -m unittest discover -s local_run/llm_annotation_statistics_v1_20261014 -p test_statistics.py -v"
+}

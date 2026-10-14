@@ -1,0 +1,31 @@
+{
+  "cases": [
+    "changed transported bytes rejected",
+    "fully resealed false score stream rejected",
+    "fully resealed changed canonical orientation rejected",
+    "fully resealed duplicate/wrong reservoir member rejected"
+  ],
+  "created_utc": "2026-10-14T05:16:33.578107+00:00",
+  "errors": 0,
+  "failures": 0,
+  "files": {
+    "audit_qualification.py": {
+      "bytes": 23768,
+      "sha256": "effb232f6157a0b65bf72caf68c161562cc35b713207329192029b117f6554cf"
+    },
+    "qualification_independent_review.json": {
+      "bytes": 5685,
+      "sha256": "048477e44feb2ea4afdf14f5596c71eaaf6c6b3a3dcb492625cb5d8c494c9e2b"
+    },
+    "test_independent_review.py": {
+      "bytes": 3273,
+      "sha256": "37000a8f07eedbe0c170ecfe432401e52ed869d82fd4d6f919cc736caf897c9b"
+    }
+  },
+  "fixtures": "Disposable copies of actual qualification evidence; originals untouched, no models or remote calls. Initial fixture paths resolved macOS /var symlink before final run.",
+  "passed": true,
+  "peer_review": "runtime_qualification read complete auditor and found no concrete false-pass blocker.",
+  "schema": "third-qualification-independent-review-software-validation-v1",
+  "skips": 0,
+  "tests": 4
+}

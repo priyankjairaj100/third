@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-10-14T05:20:05.171721+00:00",
+  "errors": 0,
+  "failures": 0,
+  "files": {
+    "statistics_core.py": {
+      "bytes": 10436,
+      "sha256": "95e031f6f0d4ebb32853d804848b7ae752bb2a5ecbf1590ef3dac13449a29828"
+    },
+    "test_statistics.py": {
+      "bytes": 9494,
+      "sha256": "c42791d8b334ad33b8d8ca4bbfb9f1b053d593e00229342718c502187317fdad"
+    }
+  },
+  "human_annotation_calls": 0,
+  "model_inference_calls": 0,
+  "passed": true,
+  "remaining_external_prerequisites": [
+    "Future ingestion must bind exact stage/orientation/attempt/raw-output provenance, sealed sampling frame and all supplied row/result/observation artifacts.",
+    "Random sampling design and fixed potential model labels are assumptions/inputs, not proven by estimator.",
+    "Model-defined target does not establish human semantic validity or source authenticity."
+  ],
+  "schema": "third-model-only-statistics-core-independent-review-v1",
+  "scope": "Pure numerical/statistical core and software fixtures; no real annotation ingest, labels, entropy, inference or scientific acceptance.",
+  "skips": 0,
+  "tests": 14,
+  "verified": [
+    "Pinned frozen finite_population_lower_bound numerical helper loads from namespace package without nonexistent/unpinned init execution.",
+    "Selection validates20-bin design and exact rational weights; all missing/invalid/uncertain observations retain denominator and conservative zero label.",
+    "Strict raw score>tau, complete51-point grid and least qualifying19/20 threshold; .995 failed diagnostic only.",
+    "Validation reproduces complete supplied selection result from rows, populations and observations before accepting locked threshold.",
+    "Finite-population lower bound alpha1/20 with9/10 acceptance; census exact, empty undefined/fails.",
+    "Any overlapping model status or six-way category change makes model validation unavailable, even positive-to-positive change.",
+    "Exhaustive small-N<=12 hypergeometric coverage fixtures independently verify rejection probability<=1/20."
+  ]
+}

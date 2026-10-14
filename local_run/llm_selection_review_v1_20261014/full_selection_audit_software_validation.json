@@ -1,0 +1,23 @@
+{
+  "cli_help_exit_code": 0,
+  "errors": 0,
+  "failures": 0,
+  "passed": true,
+  "python": "3.9.6",
+  "schema": "third-full-selection-review-software-validation-v1",
+  "scope": "Synthetic metadata/identity/weight/swap and refusal fixtures only; no actual full selection result reviewed or full score census replayed by these software checks. No remote access, seed draw, model call or inference activation.",
+  "seconds": 0.023,
+  "skipped": 0,
+  "source_files": {
+    "audit_full_selection.py": {
+      "bytes": 26233,
+      "sha256": "1980929cd3b9c677b8fe0295580a8956a193cb00513d0fce7111d4fe77047659"
+    },
+    "test_full_selection_audit.py": {
+      "bytes": 6761,
+      "sha256": "726b4a659a4140837027fad60f88ad259191b0753b3222efdbf79d49e7c185b8"
+    }
+  },
+  "syntax_passed": true,
+  "tests": 8
+}

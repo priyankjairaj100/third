@@ -1,0 +1,23 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 4184,
+      "sha256": "90ccf0a9a0170e5d8ae549dd89c051cbc933dc25c91d40ac806f11d6bad4fdd0"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 520,
+      "sha256": "467de0836e390c6be9c35ea4e18a092d266d5824c1ca140f0a3b1260c95c0e77"
+    },
+    "statistics_core.py": {
+      "bytes": 10436,
+      "sha256": "95e031f6f0d4ebb32853d804848b7ae752bb2a5ecbf1590ef3dac13449a29828"
+    },
+    "test_statistics.py": {
+      "bytes": 9494,
+      "sha256": "c42791d8b334ad33b8d8ca4bbfb9f1b053d593e00229342718c502187317fdad"
+    }
+  },
+  "manifest_self_excluded": true,
+  "schema": "third-llm-only-statistics-package-v1",
+  "scope": "Pure model-only statistics; no ingestion, inference, source or human acceptance"
+}

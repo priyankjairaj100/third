@@ -1,0 +1,31 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 2352,
+      "sha256": "fc0a5ddb78b9a9a4fdc752253a90d33660c537398c2abdb5ae4b438eaba3441f"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 491,
+      "sha256": "d9864b8acf1ee86ad3a8c7494b521b76c460fa47f000226cc3794295d787c9b9"
+    },
+    "control.py": {
+      "bytes": 11366,
+      "sha256": "9ebec18746f65b662a15b0786d2a0f372181273c3ed28e9c3d96be8d712b3970"
+    },
+    "runner.py": {
+      "bytes": 2791,
+      "sha256": "6e780d5e4170cbe3ff4015ef783494b4b377bc9c59866157aaf1a596c987d7e1"
+    },
+    "sampler.sbatch": {
+      "bytes": 1288,
+      "sha256": "9afcc0345c1186cdfe42792c02b361fac5b5db2454f1b7de2d75c7773bdae9ca"
+    },
+    "test_control.py": {
+      "bytes": 3785,
+      "sha256": "c3e8f67cf69b3331d75bde2bf6acb4fe1151731bae1ad69f06c5d907ba427d26"
+    }
+  },
+  "manifest_self_excluded": true,
+  "schema": "third-llm-sampler-control-package-v1",
+  "scope": "Single bounded qualification and independently reviewed production sampling launch; no inference or human annotation"
+}

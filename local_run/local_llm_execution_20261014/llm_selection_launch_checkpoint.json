@@ -1,0 +1,60 @@
+{
+  "schema": "third-llm-selection-launch-checkpoint-v1",
+  "updated_utc": "2026-10-14T05:22:41.412397+00:00",
+  "human_annotation_required": false,
+  "human_reviews_planned": 0,
+  "model_inference_calls_this_stage": 0,
+  "qualification": {
+    "job_id": "13560",
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed_seconds": 7,
+    "rows": 512,
+    "pairs": 130816,
+    "tests": 22,
+    "independent_full_subset_replay_passed": true,
+    "result": {
+      "bytes": 5028,
+      "sha256": "a1c26a50d18094e44431fc009ddfbc308f759a84c77a916e2408c1c07fcb09dc"
+    },
+    "review": {
+      "bytes": 5685,
+      "sha256": "048477e44feb2ea4afdf14f5596c71eaaf6c6b3a3dcb492625cb5d8c494c9e2b"
+    }
+  },
+  "sampling_lock": {
+    "bytes": 7535,
+    "sha256": "52823fc3cbfcc358f58dab29a21b5d01746bd0dbc8cd90c232113cae4c8d39b7"
+  },
+  "production_entropy_generation_rounds": 1,
+  "full_census": {
+    "job_id": "13571",
+    "submitted_utc": "2026-10-14T05:15:54.453785+00:00",
+    "last_observed_utc": "2026-10-14T05:17:55.374608+00:00",
+    "last_observed_state": "RUNNING",
+    "last_observed_elapsed_seconds": 121,
+    "rows": 20996,
+    "pairs_required": 220405510,
+    "cpu_node": "csis.cn1",
+    "cpus": 2,
+    "memory_gib": 8,
+    "time_cap_minutes": 60,
+    "output_allowance_bytes": 134217728,
+    "reserve_bytes": 8589934592,
+    "available_soft_bytes_at_launch": 8859914240,
+    "result_available": false,
+    "root": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/qualification/llm-selection-sampler-v1-20261014-selection-a01"
+  },
+  "packages": {
+    "sampler": "c1da01e546c4ee0b5e84503b8513ec66f6ee5ae1ded16f46b2ce6b7801e18ce2",
+    "lock_helper": "bcd8d75df5c8e973314ea664ed3acc249c94a75804c8965c9ba842af9524ef21",
+    "control": "a1779a1ea98b0968ab46680be6a0249983381bcd25a02a2c405877a32b237cf9",
+    "review": "e2919b1e6abafa49b5c7953c52d16be467a548c58c0bae9c1af3e1bdce158390",
+    "statistics": "d622e951c9d2eba9fc6b694645512d425d17872818fbb4109c4819e9bdb14311"
+  },
+  "source_authenticity_verified": false,
+  "inference_activation": false,
+  "semantic_validity_established": false,
+  "confirmatory_study_ready": false,
+  "operational_note": "One read-only preflight failed because terminal13560 was absent from squeue -j; sacct confirmed completion. No lock or entropy existed. Corrected to user-queue query and verified absent review/lock before single creation. No retry of entropy or uncertain submission."
+}

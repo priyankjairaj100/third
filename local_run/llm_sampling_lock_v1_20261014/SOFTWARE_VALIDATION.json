@@ -1,0 +1,39 @@
+{
+  "author_test_seconds": 0.032,
+  "checks": [
+    "pure builder/validator never draws entropy",
+    "exact four mocked draws after durable exclusive intent",
+    "repeat slot refusal without entropy",
+    "entropy failure retained and never retried",
+    "metadata mutation after draws retains failure and prevents completion",
+    "failed/extra/partial lock inventory refused",
+    "exact reviewed qualification counts/parity/runtime/diagnostic seeds/artifact pins",
+    "independent review bound to result/sampler/frame",
+    "unchanged no-human and false scientific/inference gates",
+    "exact39-file historical snapshot with nested-manifest extra refused",
+    "strict JSON duplicate/nonfinite and symlink refusals",
+    "runtime/source/seed contract drift refused",
+    "exact five qualification artifacts and first512 FP32 copy flag/1572992byte NPY required"
+  ],
+  "human_annotation_calls": 0,
+  "independent_review_passed": true,
+  "independent_test_seconds": 0.03,
+  "inference_activation": false,
+  "model_inference_calls": 0,
+  "passed": true,
+  "pre_release_interface_correction": {
+    "draft_released_or_executed": false,
+    "production_seeds_generated": 0,
+    "reason": "Before any helper hash was released or used, peer identified concurrently authorized addition of two first512 qualification artifacts; updated exact inventory and regression checks.",
+    "unreleased_draft_manifest_sha256": "97de6b38b786ce3e6f3d52ec0182b2bcf5c0843b6235bee7d6bcdcb1cb443fba"
+  },
+  "production_seeds_generated": 0,
+  "python": "3.9.6",
+  "sampling_performed": false,
+  "schema": "third-llm-sampling-lock-software-validation-v1",
+  "scientific_acceptance": false,
+  "scope": "Small software metadata fixtures and mocked entropy only; no real production seed generation, no source/vector hashing, no scoring/model calls or cluster action.",
+  "test_command": "python3 -B -m unittest discover -s local_run/llm_sampling_lock_v1_20261014 -p 'test_*.py'",
+  "tests_passed": 13,
+  "tests_skipped": 0
+}

@@ -1,0 +1,44 @@
+{
+  "actual_historical_snapshot_and_frozen_code_hashes_checked": true,
+  "cli_help_exit_code": 0,
+  "cluster_runtime_qualification_executed": false,
+  "command": "python3 -m unittest discover -s local_run/llm_selection_sampler_v1_20261014 -p test_sampler.py -v",
+  "errors": 0,
+  "failures": 0,
+  "human_annotation_calls": 0,
+  "independent_review": "source_gate_audit reviewed implementation and independently repeated22 tests without skips; final manifest member rehash remains separately reported",
+  "local_runtime": {
+    "numpy": "1.26.3",
+    "python": "3.9.6",
+    "system": "Darwin"
+  },
+  "model_inference_calls": 0,
+  "natural_frame_scores_computed": false,
+  "observed_test_seconds": 0.965,
+  "passed": true,
+  "production_seed_draws": 0,
+  "schema": "third-llm-selection-sampler-software-validation-v1",
+  "scope": "Local software qualification only, including independent collector/reference parity on labeled small algebraic fixtures and mocked full512 publication. Does not execute natural qualification, full selection, inferential activation, source acceptance or scientific claims.",
+  "skipped": 0,
+  "source_bindings": {
+    "README.txt": {
+      "bytes": 7491,
+      "sha256": "87f898697a31e796d678984b51109169fca56c2564443797a29f82a125961539"
+    },
+    "expectations.json": {
+      "bytes": 6332,
+      "sha256": "4296fb56be9e9fa5b412880c600d56bdddbe60ba68b8049d2cbea13ef2f31719"
+    },
+    "sampler.py": {
+      "bytes": 36578,
+      "sha256": "c8a31255cd7c002b0b1578d1f20b94ebc15d1acbea6f6f3e3de5a6c488420d3d"
+    },
+    "test_sampler.py": {
+      "bytes": 13380,
+      "sha256": "8b29ac1c2c2259d301cd62d6dda7c3d9b89f281659ab46b2b4186147dfbb214b"
+    }
+  },
+  "syntax_compile_passed": true,
+  "tests": 22,
+  "tests_used_synthetic_algebraic_vectors": true
+}
