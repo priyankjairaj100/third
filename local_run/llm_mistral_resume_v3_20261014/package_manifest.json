@@ -1,0 +1,17 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 1841,
+      "sha256": "ab5835748c8313183e582e425b1b86e10d38a89a0f9ab314eae1190281e7e2a6"
+    },
+    "review_family_terminal_v2.py": {
+      "bytes": 9849,
+      "sha256": "28f682e5d89752b98c7a7de6ebb0e2ee9d2e67a4c74adb26d2392fa84d6b7352"
+    },
+    "run_mistral_resume_v3.py": {
+      "bytes": 6749,
+      "sha256": "4c3d39d08511a4fe3ddecb812f1c9e45028ee78f84c611ca916d981cab1e7831"
+    }
+  },
+  "schema": "third-local-mistral-resume-package-v3"
+}

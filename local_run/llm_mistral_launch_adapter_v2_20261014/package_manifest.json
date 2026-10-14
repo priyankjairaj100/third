@@ -1,0 +1,17 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 1637,
+      "sha256": "e6acc3d7d1f80f7aad27da6b3126fe30e2abb557a0924eb8bf1e5f9504798fbc"
+    },
+    "launch.py": {
+      "bytes": 7071,
+      "sha256": "67e562e77316740c69b348c82c18813fa45c32aac012f2479a79cf91dbae4d91"
+    },
+    "test_adapter.py": {
+      "bytes": 1928,
+      "sha256": "f5e03145aaa68ac3a73ae182c2b3d76e621c2d88d23e3b03a5c422e187ea2b0f"
+    }
+  },
+  "schema": "third-mistral-launch-adapter-v2"
+}

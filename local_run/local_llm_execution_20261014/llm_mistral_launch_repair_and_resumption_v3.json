@@ -1,0 +1,122 @@
+{
+  "adapter_package": {
+    "bytes": 464,
+    "sha256": "26174a8441fae27ec9bbf46fe95d78ebb977f994c41c84a3cda13526963a585a"
+  },
+  "adapter_software_tests_cluster": 7,
+  "adapter_software_tests_local": 7,
+  "adapter_staging": {
+    "bytes": 347,
+    "sha256": "0e0de4696f3b5888d6dffac04feccceae3e1b52947a8de7b9f22f7a314e6e000"
+  },
+  "confirmatory_study_ready": false,
+  "controller_intent": {
+    "bytes": 14995,
+    "sha256": "358e3e55c271cf6be47bdb653b088361756d8292ae1e4d6d281d252af0b7d0f7"
+  },
+  "controller_package": {
+    "bytes": 498,
+    "sha256": "d3fc3933492d76b407b0a5fdfdff86608d7ba3d8b865706e260fecea35054a84"
+  },
+  "controller_pid": 14404,
+  "controller_state_folder": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/resume-20261014/sampling_v1/mistral_resume_v3_a01",
+  "controller_status": "running",
+  "events": [
+    {
+      "pid": 14404,
+      "quota_available_bytes": 12820340736,
+      "stage": "mistral_resumption_started",
+      "utc": "2026-10-14T08:47:08.477280+00:00"
+    },
+    {
+      "job_id": "13625",
+      "receipt": {
+        "bytes": 6617,
+        "sha256": "6bef6408b77c2bfafad9ae08006c6031eeaaf077e7e8d43e41b4b4df5c0ed352"
+      },
+      "stage": "mistral_submitted_once",
+      "utc": "2026-10-14T08:47:12.923040+00:00"
+    },
+    {
+      "job_id": "13625",
+      "mode": "mistral",
+      "stage": "observed_inference",
+      "state": "RUNNING",
+      "utc": "2026-10-14T08:47:16.771152+00:00"
+    }
+  ],
+  "human_annotation_calls": 0,
+  "launch_adapter": {
+    "package": {
+      "bytes": 464,
+      "sha256": "26174a8441fae27ec9bbf46fe95d78ebb977f994c41c84a3cda13526963a585a"
+    },
+    "qwen_checks": 2,
+    "qwen_cpu_audit_accounting": "13623|COMPLETED|0:0|181||csis.cn1\n13623.batch|COMPLETED|0:0|181|1263232K|csis.cn1\n",
+    "qwen_cpu_audit_files": {
+      "run/postprocess_result.json": {
+        "bytes": 3119,
+        "sha256": "2bc82df0044471dfffc0a2e17dadfc85ee0c6eb46ef2c5f427d6392798de1bd9"
+      },
+      "run/process_completion.json": {
+        "bytes": 1668,
+        "sha256": "e07a60305779f867cc53f04179069ff5a72697d12d244e4bf4c4fc7c23ee55d8"
+      },
+      "run/report.json": {
+        "bytes": 31324,
+        "sha256": "c58c3279179f27190f309e2f5c19ebce4cb9ead991e4a6afa34c8781b3e6f1d4"
+      }
+    },
+    "role_fix": "Only completed Qwen13574 uses its exact GPU worker csis.cn3; request/qualification/audit CPU checks unchanged.",
+    "unchanged_model_child_and_resource_plan": true
+  },
+  "mistral_job_id": "13625",
+  "mistral_launch_quota_available_bytes": 12820340736,
+  "mistral_launch_receipt": {
+    "bytes": 6617,
+    "sha256": "6bef6408b77c2bfafad9ae08006c6031eeaaf077e7e8d43e41b4b4df5c0ed352"
+  },
+  "new_activation_or_entropy": false,
+  "old_controllers_and_empty_receipts_preserved": true,
+  "original_inference_child_unchanged": true,
+  "previous_failure": "CPU assembly terminal-node helper incorrectly required Qwen GPU job on csis.cn1; stopped before Mistral intent/submission.",
+  "previous_v2_controller_stopped_utc": "2026-10-14T08:41:04.328434+00:00",
+  "qwen_audit": {
+    "actual_software_tests": 12,
+    "all_actual_output_replays_passed": true,
+    "all_exported_bytes_verified": true,
+    "exit_code": "0:0",
+    "human_annotation_calls": 0,
+    "job_id": "13623",
+    "local_review": {
+      "bytes": 1728,
+      "sha256": "dd20af7bf2a13c8af32c45207e260fe77e04d3cc322b6db1936dbfa6b3c2f26b"
+    },
+    "mode": "qwen",
+    "passed": true,
+    "process_receipt": {
+      "bytes": 1668,
+      "sha256": "e07a60305779f867cc53f04179069ff5a72697d12d244e4bf4c4fc7c23ee55d8"
+    },
+    "report": {
+      "bytes": 31324,
+      "sha256": "c58c3279179f27190f309e2f5c19ebce4cb9ead991e4a6afa34c8781b3e6f1d4"
+    },
+    "review_source": {
+      "bytes": 10475,
+      "sha256": "2f642289e8a5755eab4b121a48222265be26f420ea64a9f1b28a08832ade2450"
+    },
+    "scheduler_elapsed_seconds": 181,
+    "schema": "third-llm-postprocess-local-terminal-review-v1",
+    "semantic_validity_established": false,
+    "state": "COMPLETED",
+    "status_counts": {
+      "valid": 99
+    }
+  },
+  "qwen_model_or_audit_repeated": false,
+  "resource_plan_unchanged": true,
+  "schema": "third-mistral-launch-repair-and-resumption-v3",
+  "semantic_validity_established": false,
+  "updated_utc": "2026-10-14T08:48:37.608613+00:00"
+}

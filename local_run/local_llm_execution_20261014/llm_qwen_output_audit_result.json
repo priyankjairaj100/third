@@ -1,0 +1,33 @@
+{
+  "actual_software_tests": 12,
+  "all_actual_output_replays_passed": true,
+  "all_exported_bytes_verified": true,
+  "exit_code": "0:0",
+  "human_annotation_calls": 0,
+  "job_id": "13623",
+  "local_review": {
+    "bytes": 1728,
+    "sha256": "dd20af7bf2a13c8af32c45207e260fe77e04d3cc322b6db1936dbfa6b3c2f26b"
+  },
+  "mode": "qwen",
+  "passed": true,
+  "process_receipt": {
+    "bytes": 1668,
+    "sha256": "e07a60305779f867cc53f04179069ff5a72697d12d244e4bf4c4fc7c23ee55d8"
+  },
+  "report": {
+    "bytes": 31324,
+    "sha256": "c58c3279179f27190f309e2f5c19ebce4cb9ead991e4a6afa34c8781b3e6f1d4"
+  },
+  "review_source": {
+    "bytes": 10475,
+    "sha256": "2f642289e8a5755eab4b121a48222265be26f420ea64a9f1b28a08832ade2450"
+  },
+  "scheduler_elapsed_seconds": 181,
+  "schema": "third-llm-postprocess-local-terminal-review-v1",
+  "semantic_validity_established": false,
+  "state": "COMPLETED",
+  "status_counts": {
+    "valid": 99
+  }
+}
