@@ -1,0 +1,60 @@
+{
+  "assembly_job_id": "13546",
+  "batch_max_rss_KiB": 1755916,
+  "cache_manifest_file": {
+    "bytes": 13293,
+    "sha256": "0a27cdc151a99c5f1fb6d6a94669e42bf91e14adc3c2afa20fc9f33a74539cbc"
+  },
+  "cache_manifest_internal_seal": "df630b0240f915b731a39ddb39039fa61f588191f2c6e07de5a9158d040850d9",
+  "cache_payload_hash_references": {
+    "chunk_log.jsonl": {
+      "bytes": 75706969,
+      "sha256": "53157ef3a9c32f89d6d3d7e26eb6157f734314dbf5ba2e30fb7a16ae26aaca9e"
+    },
+    "vectors.npy": {
+      "bytes": 430848128,
+      "sha256": "cbc1f9a06079048144f406ec11925350aa057215869819b0967ac2749e25284e"
+    }
+  },
+  "confirmatory_study_ready": false,
+  "dtype": "float32",
+  "full_population_cache_acceptance": false,
+  "independent_cache_payload_hashes_verified": false,
+  "independent_numerical_or_source_validation_performed": false,
+  "independent_payload_verification_route": "If needed, run a separately reviewed read-only compute-node verifier of actual cache hashes, frozen source/census bindings and exact shard slices; no model forward or duplicate assembly required.",
+  "launcher_package_manifest": {
+    "bytes": 787,
+    "sha256": "66511a7a14deaca6c73a7d9c04fc925b9942cbef72aa9f39def7c33e6036f092"
+  },
+  "local_private_evidence": "local_workspace/reports/e5-full-sharded-v2-20261013/a01-assembly",
+  "observed_scheduler_elapsed_seconds": 76,
+  "original_route_acceptance": false,
+  "passed_metadata_checks": true,
+  "remote_scheduler_and_stat_observations_are_attested": true,
+  "rows": 140250,
+  "schema": "third-e5-canonical-assembly-metadata-verification-v2",
+  "scope": "Successful sealed Slurm assembly and exact metadata bindings. Payload content validation is attested by the unchanged assembly execution; this reader independently checks metadata, stat identities and sizes only.",
+  "sealed_assembly_execution_reports_payload_checks_passed": true,
+  "shape": [
+    140250,
+    768
+  ],
+  "shard_pairs": 32,
+  "source_array_job_id": "13498",
+  "stage_budget_report": {
+    "bytes": 6117,
+    "sha256": "3068158ad2379cbfe251ca38ad313e17c6860488cf292f7b0cff93c71796275c"
+  },
+  "terminal_parent": {
+    "ElapsedRaw": "76",
+    "ExitCode": "0:0",
+    "JobIDRaw": "13546",
+    "MaxRSS": "",
+    "NodeList": "csis.cn1",
+    "State": "COMPLETED"
+  },
+  "transport": {
+    "bytes": 4327502,
+    "sha256": "aa30909618420d62a2ceead9f678808d570cfde14d511fbfacce90d5e9bf5a0d"
+  }
+}

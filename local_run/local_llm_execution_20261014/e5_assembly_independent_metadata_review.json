@@ -1,0 +1,75 @@
+{
+  "all32_prior_shard_pairs_exactly_bound": true,
+  "array_job_id": "13498",
+  "assembly_job_id": "13546",
+  "assembly_process_receipt": {
+    "bytes": 10310,
+    "sha256": "ce39aa8aaf19634db1dc6fb2b399a8f24407ce33e7604e9d30979e6ae0c8e8b6"
+  },
+  "cache_manifest": {
+    "bytes": 13293,
+    "sha256": "0a27cdc151a99c5f1fb6d6a94669e42bf91e14adc3c2afa20fc9f33a74539cbc"
+  },
+  "cache_manifest_internal_seal": "df630b0240f915b731a39ddb39039fa61f588191f2c6e07de5a9158d040850d9",
+  "cache_payload_references": {
+    "chunk_log.jsonl": {
+      "bytes": 75706969,
+      "sha256": "53157ef3a9c32f89d6d3d7e26eb6157f734314dbf5ba2e30fb7a16ae26aaca9e"
+    },
+    "vectors.npy": {
+      "bytes": 430848128,
+      "sha256": "cbc1f9a06079048144f406ec11925350aa057215869819b0967ac2749e25284e"
+    }
+  },
+  "confirmatory_study_ready": false,
+  "dispatch_result": {
+    "bytes": 1240,
+    "sha256": "112b9851c0bc1e2b908e08db485d5ba1b5b9e258cb3b8694a70184bcbe089595"
+  },
+  "dtype": "float32",
+  "exact_submission_and_child_commands_verified": true,
+  "full_population_cache_acceptance": false,
+  "independent_numerical_or_source_validation_performed": false,
+  "independent_payload_hashes_recomputed": false,
+  "launch_receipt": {
+    "bytes": 7061,
+    "sha256": "26b367cd65203af30b3d767c0193529313aa4eef6ce34e9b3f590f2f3c8deef2"
+  },
+  "metadata_gate_clear_for_downstream_bounded_planning": true,
+  "metadata_records_rehashed": 8,
+  "original_route_acceptance": false,
+  "passed": true,
+  "primary_input_acceptance": false,
+  "prior_metadata_bundle_revalidated": true,
+  "reader_package": {
+    "bytes": 763,
+    "sha256": "4dcc38221aa803b1c985ffb6686a8a5531476805adb50c7bdd584b93eb873556"
+  },
+  "recorded_complete_child_seconds": 75.62312376312912,
+  "retained_cache_file_inventory": [
+    "chunk_log.jsonl",
+    "manifest.json",
+    "vectors.npy"
+  ],
+  "reviewed_utc": "2026-10-14T04:05:58.360350+00:00",
+  "rows": 140250,
+  "scheduler": {
+    "batch_MaxRSS_KiB": 1755916,
+    "elapsed_seconds": 76,
+    "exit_code": "0:0",
+    "node": "csis.cn1",
+    "state": "COMPLETED"
+  },
+  "schema": "third-independent-completed-assembly-metadata-review-v1",
+  "scope": "Independent local export hash, manifest seal and metadata invariants. Scheduler/stat observations and actual full payload validation are attested by the successful unchanged Slurm assembly; vectors/log bodies were not copied or hashed locally. This is metadata evidence only.",
+  "shape": [
+    140250,
+    768
+  ],
+  "source_authenticity_verified": false,
+  "source_runtime_plan_qualification_repair_gate_launcher_and_stage_budget_bindings_verified": true,
+  "transport": {
+    "bytes": 4327502,
+    "sha256": "aa30909618420d62a2ceead9f678808d570cfde14d511fbfacce90d5e9bf5a0d"
+  }
+}

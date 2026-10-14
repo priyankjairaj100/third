@@ -1,93 +1,91 @@
-THIRD — LOCAL / CLUSTER CHECKPOINT
-Updated 2026-10-13T10:57:02.859730+00:00
+THIRD — VERIFIED LOCAL / CLUSTER CHECKPOINT
+Updated 2026-10-14T04:12:24.325885+00:00
 
-CURRENT STATUS
-Authenticated cluster access was restored with one authorized login.
-Both GPU judge pilots and the SciPy repair are complete and independently audited.
-CPU qualification job 13495: COMPLETED.
-Full array launched: True.
-Human reviews used: 0. Threshold selected: false. Confirmatory readiness: false.
+COMPLETED
+- Array 13498: all 32 tasks COMPLETED, exit 0:0, on csis.cn1.
+  All 140,250 documents were encoded and independently replayed in fresh
+  processes: 280,500 document encodings, 624,318 chunks and 295,650 forward
+  batches across the two passes. The terminal metadata audit and independent
+  review checked 222 files and all 32 dispatch / 64 process / 64 completion
+  records, including every range, count, command and source/runtime binding.
+- Assembly 13546: COMPLETED, exit 0:0, in 76 seconds on csis.cn1.
+  The canonical cache contains 140,250 x 768 FP32 vectors. The sealed assembly
+  validated actual shard vectors/logs, fresh replay, source/code/assets and
+  every assembled slice before publishing its manifest. Independent local
+  review checked metadata, seals, file identities and sizes. It did not perform
+  a second independent scan of the full payload contents.
+- Scorer benchmark 13547: COMPLETED, exit 0:0, in 49 seconds on csis.cn1.
+  All 16 cluster software tests passed without skips. All 28 numerical cases
+  passed. Independent review rehashed all 11 exported files and reconstructed
+  every score stream, bin count and boundary count from the original 19-vector
+  fixture using the frozen pair-at-a-time numerical authority.
 
-VERIFIED PROGRESS
-- Mistral pilot 13368: COMPLETED 0:0 in 887 seconds. All 44 calls valid;336 copied files checked.
-  Qwen pilot 13353 also has44 valid calls. These are exposed engineering examples.
-  Across 40 shared canonical pairs:0 joint positives,3 binary disagreements,
-  30 category disagreements. These results do not establish semantic accuracy.
-- SciPy repair 13490: COMPLETED 0:0 in 10 seconds; only pinned SciPy 1.17.1 added.
-  Existing 38 distribution versions and owning RECORD hashes unchanged.
-  ResultSHA: fc1c54310d6258b39179a350c6ef4e66fdd466c45cec20ca76b85c6682d47af6
-- Original qualification 13491 failed before model loading because direct-file
-  execution shadowed installed requests with phase4/requests.py. Probe 13493
-  confirmed the cause. Both failure and original package remain preserved.
-- Version 2 uses module execution with verified cwd/PYTHONPATH;30 core and 9 dispatch
-  software tests and independent review pass. All 110 frozen source files unchanged.
-  CoreSHA:0eb7309ea3bc4e92d37ac155eef03ce2a59a5daffefc3e3725f511de557cfa81
-  DispatchSHA:d68d07cae7c8d5c1640650a9464156ec9cdcd396e8f41c6af9f881e6417e3697
-- Full source preparation was previously replayed byte-for-byte. Census covers
-  all 140,250 records and 312,159 full-text chunks. Original monolithic full encoding
-  has not run. Sharded execution requires all encoded rows and fresh replays.
+BENCHMARK SCOPE
+The 19 genuine records are prior engineering qualification examples. Their 171
+unordered pairs test correctness; shapes 256, 260 and 512 repeat vector indices
+and remain explicitly synthetic software fixtures. No natural pairs were
+selected for annotation. No model forward or new model/human judgment occurred.
+The numerical suite took 11.268 seconds; the benchmark child took 31.504 seconds
+through exit. Its recorded peak RSS was 467,844 KiB. Slurm batch sampled MaxRSS
+was 155,772 KiB; these are different observations and must not be interchanged.
+A simple pair-rate extrapolation for scoring plus bins gives 23.47–28.57 minutes
+for 220,405,510 pairs across the three shapes. This is a conditional software-
+fixture scenario, not a measured natural-population or end-to-end runtime.
+Natural boundary frequency, reservoir sampling and future load are unmeasured.
+Preserve raw floating-point scores, including fixture excursions above 1.
 
-ACTIVE EXECUTION
-{
-  "job_id": 13495,
-  "package": "e5_sharded_cpu_v2_20261013",
-  "attempt": "a01",
-  "status": "passed_and_independently_reviewed",
-  "state": "COMPLETED",
-  "last_observed_elapsed_seconds": 526,
-  "completed_child_receipts": 9,
-  "elapsed_seconds": 526,
-  "exit_code": "0:0",
-  "result_sha256": "bb84fc18556e6a7d57eda5fa1fffe2c9e2ca5a3f7da5e85f2b96fac11d2e484f",
-  "all_vector_bytes_and_logs_equal": true,
-  "independent_local_review_passed": true
-}
-{
-  "job_id": 13498,
-  "state": "RUNNING",
-  "submitted_utc": "2026-10-13T10:54:52.060299+00:00",
-  "documents": 140250,
-  "tasks": 32,
-  "max_concurrent_tasks": 8,
-  "node": "csis.cn1",
-  "cpus_per_task": 2,
-  "memory_GiB_per_task": 12,
-  "time_cap_hours_per_task": 8,
-  "encode_and_fresh_replay": true,
-  "full_plan_sha256": "857fcf65cf5a8a2e55d6abbc5b8c96335c5aca3905f701b37d9b2a51aae116f3",
-  "qualification_sha256": "bb84fc18556e6a7d57eda5fa1fffe2c9e2ca5a3f7da5e85f2b96fac11d2e484f",
-  "estimated_hours_at_eight_concurrent": 16,
-  "estimate_not_guarantee": true,
-  "assembly_submitted": false,
-  "last_observed_utc": "2026-10-13T10:56:16.879949+00:00",
-  "running_tasks": 8,
-  "pending_tasks": 24,
-  "completed_tasks": 0,
-  "terminal_dispatch_receipts": 0
-}
+STORAGE AND ACCESS
+The initial 1.25 GiB remaining-output + 8 GiB reserve check failed BEFORE any
+assembly intent or submission. That failure is preserved. A separate reviewed
+policy budgets 832 MiB for the single assembly: exact payload 506,555,097 bytes,
+16 MiB console files, 32 MiB JSON, 16 MiB filesystem margin, unchanged 256 MiB
+contingency, and rounding slack. The original 2.25 GiB total output envelope
+and 8 GiB reserve remain unchanged. Fresh quota passed before the sole launch.
+The earlier SSH refusal was consistent with a local ControlMaster option
+conflict enabling ask mode. Corrected options and a separate private master
+restored access without changing the user's working Terminal connection.
+No credentials are stored. Stop on authentication/transport refusal or timeout;
+reconcile existing jobs and receipts before another mutation. Never repeat an
+uncertain submission. Heavy work runs through Slurm, excluding csis.mn1.
 
-NEXT ACTIONS
-1. Reconcile job13498 and its32task receipts; do not duplicate the array or retry failed shards automatically.
-2. Require every encode and fresh replay to pass, then launch separate canonical assembly after capacity review and independently audit the complete cache.
-3. Use a separate versioned calibration adapter; run bounded scoring benchmark before the220405510pair census and scientific frame construction.
-4. Freeze the substantive two-model activation plan and preserve any failed precision or stability gates.
-5. Keep the50-100author reviews unused and blinded until models, prompt, threshold, frame, seed and reporting rules are locked.
+SCIENTIFIC GATES — STILL UNMET
+Human reviews used: 0. Threshold selected: false. Model calibration: incomplete.
+Full scientific cache acceptance and confirmatory readiness remain false.
+Original monolithic full writer/replay has not executed; do not relabel this
+versioned sharded cache as the legacy route or fabricate its manifest schema.
+Both GPU judge pilots are technically complete engineering tests. Across their
+40 shared exposed pairs, there were zero joint positive labels. Preserve this
+result; it is not an estimate of semantic accuracy. No model labels count as
+human labels. Reserve 100 blinded author reviews (80 probability + 20 challenge),
+or 50 (40 + 10) chosen before the first response. Frozen Phases 3–10 and the
+user's TODO / analysis-lock files remain unchanged.
 
-Scientific plan: source-disjoint calibration,220,405,510-pair census, 20 cosine bins,
-locked two-family panel and independent validation. Reserve 100 blinded author
-reviews (80 probability + 20 challenge), or 50 (40 + 10) chosen before first response.
-Failed precision gates remain failures. No model labels count as human labels.
-Original tags and exact full recomputation provide independent utility anchors.
+NEXT STAGE
+1. Implement and qualify a separate v2 cache/calibration-frame adapter. Recheck
+   actual cache bytes, source/census identity and exact row order. Gather all
+   20,996 calibration rows in source order; preserve source-disjoint partitions.
+   Do not exclude pairs sharing a source within the calibration partition.
+2. Prospectively lock the v2 sampling implementation before producing model
+   annotation packs. The complete universe has 220,405,510 unordered pairs and
+   20 cosine bins. Keep bounded streaming memory; never materialize a Python
+   list of every pair. Preserve frozen panel, denominator and precision rules.
+3. Run two-family model selection and independent validation, preserving any
+   failed gate. Activate the blinded author audit only after its prerequisites.
 
-OPERATIONS AND BACKUP
-Cluster execution commit (backed up on GitHub): de9de39a1a72db40485878452561affe2fbd24aa
-https://github.com/priyankjairaj100/third
-Mac:/Users/priyankjairaj/Downloads/ACL/Three
-Cluster:/nfs_home/users/poonam/ccu-acl2027/repo
-Private evidence:local_workspace/reports/<stage-version>/a01
-Public reports:local_run/local_llm_execution_20261013/*.json
-Stop after SSH refusal/authentication failure/timeout; do not probe or retry.
-Run heavy work through Slurm, excluding csis.mn1. No scheduled automation exists.
-Frozen Phases 3–10, TODO and analysis locks remain unchanged.
-Cluster GPUs run project models; they do not run the Codex assistant or guarantee
-an assistant-token discount. Credentials are not retained in these files.
+PROVENANCE AND RESUME PATHS
+GitHub: https://github.com/priyankjairaj100/third
+Local repository: /Users/priyankjairaj/Downloads/ACL/Three
+Cluster repository: /nfs_home/users/poonam/ccu-acl2027/repo
+Recorded cluster execution commit: de9de39a1a72db40485878452561affe2fbd24aa
+Remote cache: /nfs_home/users/poonam/ccu-acl2027/local_workspace/qualification/e5-full-sharded-v2-20261013-a01/assembly-run/cache
+Manifest SHA256: 0a27cdc151a99c5f1fb6d6a94669e42bf91e14adc3c2afa20fc9f33a74539cbc
+Vectors SHA256: cbc1f9a06079048144f406ec11925350aa057215869819b0967ac2749e25284e
+Chunk log SHA256: 53157ef3a9c32f89d6d3d7e26eb6157f734314dbf5ba2e30fb7a16ae26aaca9e
+Public reports: local_run/local_llm_execution_20261014/
+Private assembly evidence: local_workspace/reports/e5-full-sharded-v2-20261013/
+Private scorer evidence: local_workspace/reports/e5-pair-scorer-benchmark-v1-20261014/a01/
+Full machine-readable checkpoint: task outputs/third_latest_checkpoint.json
+New execution helpers are sealed in private cluster tools outside the unchanged
+cluster checkout, with their exact source copies in this repository backup.
+Cluster GPUs execute project models; they do not run Codex or guarantee an
+assistant-token discount. No scheduled automation was created.

@@ -1,0 +1,59 @@
+{
+  "confirmatory_study_ready": false,
+  "core_package": {
+    "bytes": 1414,
+    "sha256": "0eb7309ea3bc4e92d37ac155eef03ce2a59a5daffefc3e3725f511de557cfa81"
+  },
+  "cpus": 2,
+  "created_utc": "2026-10-14T03:56:13.071756+00:00",
+  "dispatch_package": {
+    "bytes": 1019,
+    "sha256": "d68d07cae7c8d5c1640650a9464156ec9cdcd396e8f41c6af9f881e6417e3697"
+  },
+  "execution_commit": "de9de39a1a72db40485878452561affe2fbd24aa",
+  "fresh_available_soft_bytes": 9496137728,
+  "full_population_cache_acceptance": false,
+  "gate_package_manifest": {
+    "bytes": 1303,
+    "sha256": "94147011564dffa8354680ca3e0a912d3a32667b8a9c791a083ad68858ebc616"
+  },
+  "job_id": "13546",
+  "launch_receipt": {
+    "bytes": 7061,
+    "sha256": "26b367cd65203af30b3d767c0193529313aa4eef6ce34e9b3f590f2f3c8deef2"
+  },
+  "launcher_package_manifest": {
+    "bytes": 787,
+    "sha256": "66511a7a14deaca6c73a7d9c04fc925b9942cbef72aa9f39def7c33e6036f092"
+  },
+  "materialized_output_budget": {
+    "directory_and_stat_slack_bytes": 16777216,
+    "logical_bytes": 1018432791,
+    "original_output_allowance_bytes": 2415919104,
+    "regular_files": 527,
+    "remaining_allowance_bytes": 872415232,
+    "sum_max_logical_or_allocated_bytes": 1020026880
+  },
+  "memory_GiB": 48,
+  "model_forwards": 0,
+  "qualified_node": "csis.cn1",
+  "quota_snapshot_not_reservation": true,
+  "remaining_output_allowance_bytes": 872415232,
+  "reserve_bytes": 8589934592,
+  "returncode": 0,
+  "reviewed_metadata_bundle": {
+    "bytes": 3199444,
+    "sha256": "393a90c6f4518f9e9292b8ebce07eebc09d4588697bd67c322c40ebabd24feb6"
+  },
+  "reviewed_metadata_result": {
+    "bytes": 1707,
+    "sha256": "8ceccfbda805bcf7a4e73b304ea88bdd2c218c3af5f1cb584240b9818b09c047"
+  },
+  "schema": "third-public-canonical-assembly-launch-v1",
+  "source_array_job_id": "13498",
+  "stage_budget_report": {
+    "bytes": 6117,
+    "sha256": "3068158ad2379cbfe251ca38ad313e17c6860488cf292f7b0cff93c71796275c"
+  },
+  "time_cap_minutes": 30
+}

@@ -1,0 +1,46 @@
+{
+  "claim_scope": "Engineering scoring only; no pair sampling or threshold selection",
+  "core_folder": "local_run/e5_sharded_cpu_v2_20261013",
+  "core_package_sha256": "0eb7309ea3bc4e92d37ac155eef03ce2a59a5daffefc3e3725f511de557cfa81",
+  "dispatch_folder": "local_run/e5_sharded_dispatch_v2_20261013",
+  "dispatch_package_sha256": "d68d07cae7c8d5c1640650a9464156ec9cdcd396e8f41c6af9f881e6417e3697",
+  "expected_completed_cases": 28,
+  "fingerprint": "294e0abb55aeae76430cfca566630b737426c9fa92197707c5a2d08fa887147d",
+  "numerical_budget_seconds": 300,
+  "qualification_result": {
+    "bytes": 11974,
+    "sha256": "bb84fc18556e6a7d57eda5fa1fffe2c9e2ca5a3f7da5e85f2b96fac11d2e484f"
+  },
+  "qualification_vectors": {
+    "bytes": 58496,
+    "sha256": "1e324f33c8eb391a0d03df8897b186ba7ec7b0bf01cbcce55f12f5ce9121b035"
+  },
+  "repair_result": {
+    "bytes": 2556,
+    "sha256": "fc1c54310d6258b39179a350c6ef4e66fdd466c45cec20ca76b85c6682d47af6"
+  },
+  "repository_files": {
+    "empirical_execution/phase3/calibration.py": {
+      "bytes": 26084,
+      "sha256": "2a6ce3b19de3063f32b010ebfa19ffc4003ffc09acfc41a1ead4f74bc6c81b13"
+    },
+    "empirical_execution/phase3/panels.py": {
+      "bytes": 20216,
+      "sha256": "bd2409958ac9a9e27faf463b44b2f839260a3195c7cde32fb3bfb76aeb14a04b"
+    },
+    "local_run/EMPIRICAL_PROGRAM.md": {
+      "bytes": 36402,
+      "sha256": "35c2bac50f542a4657ff4f53050bbcfe34362f12aa4d063c6b7f20071504f834"
+    },
+    "local_run/local_llm_execution_20261013/e5_shard_qualification_v2_result.json": {
+      "bytes": 8515,
+      "sha256": "819e62a36e5c18bc8a56b8ea314e764888ac1d000f28d18172dfe6b3084863cc"
+    },
+    "local_run/model_annotation_v2_20261011/PLAN.json": {
+      "bytes": 9119,
+      "sha256": "0f32141cb82443859c1fe596140c0b9224c1a4a50c8db467902087f2f3532ca7"
+    }
+  },
+  "schema": "third-pair-scorer-benchmark-expectations-v1",
+  "scientific_pair_population": 220405510
+}

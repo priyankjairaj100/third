@@ -1,0 +1,132 @@
+{
+  "actual_payload_verification_by_this_metadata_audit": false,
+  "all32_terminal_success": true,
+  "array_job_id": 13498,
+  "confirmatory_study_ready": false,
+  "full_population_cache_acceptance": false,
+  "independent_review": {
+    "actual_payload_stat_records_reconciled": 128,
+    "all_exact_child_commands_launch_job_mappings_census_counts_runtime_and_prior_bindings_verified": true,
+    "all_replay_claims_and_same_file_hash_references_match_encode": true,
+    "array_job_id": "13498",
+    "bundle": {
+      "bytes": 3199444,
+      "sha256": "393a90c6f4518f9e9292b8ebce07eebc09d4588697bd67c322c40ebabd24feb6"
+    },
+    "child_wall_seconds_range": [
+      7156.520665027201,
+      8017.40114993602
+    ],
+    "completion_receipts_verified": 64,
+    "confirmatory_study_ready": false,
+    "counts_per_pass": {
+      "chunks": 312159,
+      "content_tokens": 61576539,
+      "model_forward_batches": 147825,
+      "rows": 140250
+    },
+    "dispatch_receipts_verified": 32,
+    "exit_code": "0:0",
+    "full_population_cache_acceptance": false,
+    "gate_package": {
+      "bytes": 1303,
+      "sha256": "94147011564dffa8354680ca3e0a912d3a32667b8a9c791a083ad68858ebc616"
+    },
+    "independent_numerical_parity_performed": false,
+    "independent_payload_hashes_verified": false,
+    "metadata_files_rehashed": 222,
+    "metadata_gate_clear_for_one_shot_assembly_subject_to_fresh_launcher_checks": true,
+    "metadata_result": {
+      "bytes": 1707,
+      "sha256": "8ceccfbda805bcf7a4e73b304ea88bdd2c218c3af5f1cb584240b9818b09c047"
+    },
+    "next_required_checks": "One-shot sealed launcher must again check scheduler/no-duplicate intent and fresh9.25GiB quota. Unchanged Slurm assembly must verify all actual vectors/logs, source/code/assets and final canonical slices before publishing its manifest.",
+    "passed": true,
+    "payload_bytes_referenced_and_statted": 1013118130,
+    "primary_input_acceptance": false,
+    "reviewed_utc": "2026-10-14T03:48:18.593413+00:00",
+    "scheduler_elapsed_seconds_range": [
+      14349,
+      15930
+    ],
+    "schema": "third-independent-array-terminal-metadata-review-v1",
+    "scope": "Independent local raw artifact hashes, metadata invariants, exact source-bound counters, process commands and scheduler/stat evidence. Remote scheduler and lstat observations remain attested. Actual vector/log contents were not copied or read here.",
+    "source_authenticity_verified": false,
+    "successful_child_process_receipts_verified": 64,
+    "terminal_node": "csis.cn1",
+    "terminal_state": "COMPLETED",
+    "terminal_tasks_verified": 32,
+    "total_chunks_processed": 624318,
+    "total_document_encodings": 280500,
+    "total_model_forward_batches": 295650,
+    "transport": {
+      "bytes": 4268970,
+      "sha256": "da9c2dcf5abe4abe904d4b1a82953659c8dd5a47b623477596524ceda1c33347"
+    },
+    "worker_peak_rss_kib_linux_range": [
+      1815864,
+      2101108
+    ]
+  },
+  "local_private_evidence": "local_workspace/reports/e5-full-sharded-v2-20261013/a01-terminal-metadata",
+  "metadata_gate": {
+    "array_job_id": "13498",
+    "bundle_file": {
+      "bytes": 3199444,
+      "name": "bundle.json",
+      "sha256": "393a90c6f4518f9e9292b8ebce07eebc09d4588697bd67c322c40ebabd24feb6"
+    },
+    "child_process_receipt_count": 64,
+    "completion_receipt_count": 64,
+    "confirmatory_study_ready": false,
+    "core_package": {
+      "bytes": 1414,
+      "sha256": "0eb7309ea3bc4e92d37ac155eef03ce2a59a5daffefc3e3725f511de557cfa81"
+    },
+    "counts_per_pass": {
+      "chunks": 312159,
+      "content_tokens": 61576539,
+      "model_forward_batches": 147825,
+      "rows": 140250
+    },
+    "created_utc": "2026-10-14T03:46:18.370895+00:00",
+    "dispatch_package": {
+      "bytes": 1019,
+      "sha256": "d68d07cae7c8d5c1640650a9464156ec9cdcd396e8f41c6af9f881e6417e3697"
+    },
+    "dispatch_receipt_count": 32,
+    "fingerprint": "294e0abb55aeae76430cfca566630b737426c9fa92197707c5a2d08fa887147d",
+    "full_plan_file": {
+      "bytes": 1577354,
+      "sha256": "857fcf65cf5a8a2e55d6abbc5b8c96335c5aca3905f701b37d9b2a51aae116f3"
+    },
+    "full_population_cache_acceptance": false,
+    "gate_seconds": 0.5096630956977606,
+    "heavy_vector_or_log_hashes_verified": false,
+    "metadata_file_count": 222,
+    "passed": true,
+    "payload_file_count": 128,
+    "qualification_result": {
+      "bytes": 11974,
+      "sha256": "bb84fc18556e6a7d57eda5fa1fffe2c9e2ca5a3f7da5e85f2b96fac11d2e484f"
+    },
+    "requires_unchanged_slurm_assembly_validation": true,
+    "root": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/qualification/e5-full-sharded-v2-20261013-a01",
+    "schema": "third-e5-full-array-metadata-gate-v1",
+    "scipy_repair_result": {
+      "bytes": 2556,
+      "sha256": "fc1c54310d6258b39179a350c6ef4e66fdd466c45cec20ca76b85c6682d47af6"
+    },
+    "scope": "Terminal scheduler and metadata bindings only. Payload hashes are recorded claims with actual file sizes/identities; payload contents, numerical equality and source admission are not independently verified here.",
+    "terminal_task_count": 32
+  },
+  "observed_utc": "2026-10-14T03:45:49.974603+00:00",
+  "raw_bundle": {
+    "bytes": 3199444,
+    "sha256": "393a90c6f4518f9e9292b8ebce07eebc09d4588697bd67c322c40ebabd24feb6"
+  },
+  "scheduler_task_states": {
+    "COMPLETED": 32
+  },
+  "schema": "third-public-array-terminal-metadata-result-v1"
+}

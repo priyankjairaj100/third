@@ -1,0 +1,35 @@
+{
+  "created_utc": "2026-10-14T03:49:48.327522+00:00",
+  "current_assembly_state": "not observed",
+  "files": {
+    "README.txt": {
+      "bytes": 5508,
+      "sha256": "a7e7924ee74e4f0d77ef5a7577a39eb0afb578049bfe29ee74d6db595f9025f0"
+    },
+    "read_remote.py": {
+      "bytes": 17828,
+      "sha256": "e69960b40dd0bbe119a3b4a396a0e012a68ac4ea3e20c6d5a95ebf032c16d373"
+    },
+    "test_acceptance.py": {
+      "bytes": 10345,
+      "sha256": "86a8a511c1290492ebff7fafe838bcf88ddb3cfb0c75e2200183bb1740babd31"
+    },
+    "verify_local.py": {
+      "bytes": 1662,
+      "sha256": "678655754d54a31139f7d8983242d9c0957fadcfb78d01d582218d990f8593b5"
+    }
+  },
+  "independent_read_only_review": "handoff_audit: no blocker, exact artifact/command/provenance scopes verified",
+  "independent_test_seconds": 1.315,
+  "jobs_created": 0,
+  "observed_test_seconds": 1.27,
+  "passed": true,
+  "payload_reads": 0,
+  "prior_sealed_gate_unchanged": true,
+  "remote_calls_executed_by_author": false,
+  "repository_edits": false,
+  "schema": "third-post-assembly-metadata-software-validation-v1",
+  "skipped": 0,
+  "syntax_passed": true,
+  "synthetic_assembly_tests": 7
+}

@@ -1,0 +1,48 @@
+{
+  "created_utc": "2026-10-14T03:40:03.701955+00:00",
+  "current_array_state": "not observed by this package author",
+  "files": {
+    "README.txt": {
+      "bytes": 4844,
+      "sha256": "5d85025a69fc1f00ff2c1ef0920011caa77f49aa4006446fdc6e92faa1a77fca"
+    },
+    "assembly_launch_remote.py": {
+      "bytes": 13800,
+      "sha256": "e4a92d5027b0a7a62047a2da37b4f1b3002622a9a10adea064a2fb02a7314144"
+    },
+    "expectations.json": {
+      "bytes": 2219,
+      "sha256": "223012a25a54c76c230091e794761038d96c8b0ac2618a51457ce58f954d04fa"
+    },
+    "export_remote.py": {
+      "bytes": 1972,
+      "sha256": "4de65060bb60939b9c8453cc8cb4c8b3d899479fa78ad00bea2ddb5ec2a4f06a"
+    },
+    "gate.py": {
+      "bytes": 23818,
+      "sha256": "88d0d3e81d7a807dc181180156104721e4009b7008034cd8616cf34a9622e121"
+    },
+    "test_gate.py": {
+      "bytes": 12383,
+      "sha256": "28135ffdec0ecce74c0d371096388d36868cb42feb2d110e4576e0819f4d29aa"
+    },
+    "test_launcher.py": {
+      "bytes": 3488,
+      "sha256": "1acda871c85197ba400f5b00af02789b0af3f983378a0240bbc238e13e59aafd"
+    },
+    "verify_local.py": {
+      "bytes": 3530,
+      "sha256": "9c07aab21bb0cfecf7358a479c9049dd3b2ef43d9e64cff0a928eb6957ec22fa"
+    }
+  },
+  "independent_read_only_review": "handoff_audit reviewed gate/export/verifier; runtime_qualification reviewed launcher and interface",
+  "model_calls_executed": false,
+  "observed_test_seconds": 0.814,
+  "passed": true,
+  "remote_requests_executed": false,
+  "repository_or_sealed_source_edits": false,
+  "schema": "third-e5-assembly-gate-software-validation-v1",
+  "skipped": 0,
+  "syntax_passed": true,
+  "synthetic_tests": 20
+}

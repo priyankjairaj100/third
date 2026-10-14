@@ -1,0 +1,25 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 5508,
+      "sha256": "a7e7924ee74e4f0d77ef5a7577a39eb0afb578049bfe29ee74d6db595f9025f0"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 1158,
+      "sha256": "c7fad9c5bb4b790b963aa3d71e6797a53672c8d83cfed7ecc17737dd84a8d1e7"
+    },
+    "read_remote.py": {
+      "bytes": 17828,
+      "sha256": "e69960b40dd0bbe119a3b4a396a0e012a68ac4ea3e20c6d5a95ebf032c16d373"
+    },
+    "test_acceptance.py": {
+      "bytes": 10345,
+      "sha256": "86a8a511c1290492ebff7fafe838bcf88ddb3cfb0c75e2200183bb1740babd31"
+    },
+    "verify_local.py": {
+      "bytes": 1662,
+      "sha256": "678655754d54a31139f7d8983242d9c0957fadcfb78d01d582218d990f8593b5"
+    }
+  },
+  "schema": "third-post-assembly-metadata-package-v1"
+}

@@ -1,0 +1,21 @@
+{
+  "confirmatory_study_ready": false,
+  "frozen_core_and_dispatch_unchanged": true,
+  "full_population_cache_acceptance": false,
+  "independent_review": "runtime_qualification reviewed exact diff, inherited guards, report/code/policy bindings and arithmetic; no blocker.",
+  "model_execution_performed": false,
+  "prior_sealed_gate_unchanged": true,
+  "remote_execution_performed": false,
+  "schema": "third-prospective-software-validation-v1",
+  "submission_performed": false,
+  "syntax": "passed",
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s work/resume-20261014/assembly_stage_budget_v1 -p 'test_*.py'",
+    "failed": 0,
+    "independent_review_seconds": 0.006,
+    "independent_review_tests_passed": 11,
+    "passed": 11,
+    "skipped": 0
+  },
+  "validated_utc": "2026-10-14T03:55:14.785393+00:00"
+}

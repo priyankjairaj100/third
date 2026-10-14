@@ -1,0 +1,40 @@
+{
+  "array_job_id": "13498",
+  "array_launch_canonical_sha256": "f8f6c05cd54010a46ddd1853793d538504f5a736fbc6f1ff1815e5f259d1e4fc",
+  "fingerprint": "294e0abb55aeae76430cfca566630b737426c9fa92197707c5a2d08fa887147d",
+  "pinned_files": {
+    "/nfs_home/users/poonam/ccu-acl2027/local_workspace/qualification/e5-full-sharded-v2-20261013-a01/plan-run/output/plan.json": {
+      "bytes": 1577354,
+      "sha256": "857fcf65cf5a8a2e55d6abbc5b8c96335c5aca3905f701b37d9b2a51aae116f3"
+    },
+    "/nfs_home/users/poonam/ccu-acl2027/local_workspace/qualification/e5-full-sharded-v2-20261013-a01/plan_launch_receipt.json": {
+      "bytes": 3132,
+      "sha256": "c3f2c19c2d41963d0f43be8ac1edc322bb002fa777598b42fa23c3fb2a4aad06"
+    },
+    "/nfs_home/users/poonam/ccu-acl2027/local_workspace/qualification/e5-scipy-import-repair-v2-20261011-a01/repair/result.json": {
+      "bytes": 2556,
+      "sha256": "fc1c54310d6258b39179a350c6ef4e66fdd466c45cec20ca76b85c6682d47af6"
+    },
+    "/nfs_home/users/poonam/ccu-acl2027/local_workspace/qualification/e5-sharded-cpu-v2-20261013-a01/qualification/result.json": {
+      "bytes": 11974,
+      "sha256": "bb84fc18556e6a7d57eda5fa1fffe2c9e2ca5a3f7da5e85f2b96fac11d2e484f"
+    },
+    "/nfs_home/users/poonam/ccu-acl2027/repo/local_run/e5_sharded_cpu_v2_20261013/package_manifest.json": {
+      "bytes": 1414,
+      "sha256": "0eb7309ea3bc4e92d37ac155eef03ce2a59a5daffefc3e3725f511de557cfa81"
+    },
+    "/nfs_home/users/poonam/ccu-acl2027/repo/local_run/e5_sharded_dispatch_v2_20261013/package_manifest.json": {
+      "bytes": 1019,
+      "sha256": "d68d07cae7c8d5c1640650a9464156ec9cdcd396e8f41c6af9f881e6417e3697"
+    },
+    "/nfs_home/users/poonam/ccu-acl2027/repo/local_run/local_llm_execution_20261013/e5_full_output_budget_v2.json": {
+      "bytes": 20037,
+      "sha256": "d386ec1c1d22f4d23fc231d145aaeac297221a8fecb90d625e786d2823f07e31"
+    }
+  },
+  "qualified_node": "csis.cn1",
+  "repository": "/nfs_home/users/poonam/ccu-acl2027/repo",
+  "root": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/qualification/e5-full-sharded-v2-20261013-a01",
+  "schema": "third-e5-full-array-metadata-expectations-v1",
+  "workspace": "/nfs_home/users/poonam/ccu-acl2027/local_workspace"
+}

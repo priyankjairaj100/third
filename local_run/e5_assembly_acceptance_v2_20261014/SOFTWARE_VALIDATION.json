@@ -1,0 +1,42 @@
+{
+  "actual_copied_launch_receipt_validation": {
+    "bytes": 7061,
+    "job_id": "13546",
+    "passed": true,
+    "scope": "Only copied launch metadata validated locally; terminal assembly/payload success not independently asserted by these software checks",
+    "sha256": "26b367cd65203af30b3d767c0193529313aa4eef6ce34e9b3f590f2f3c8deef2"
+  },
+  "created_utc": "2026-10-14T04:01:08.915867+00:00",
+  "files": {
+    "README.txt": {
+      "bytes": 6290,
+      "sha256": "5d386ac58dcfe7b581c9b43ebf5be9f8dcbfc8a9cf77ebfba290840d6deceedc"
+    },
+    "read_remote.py": {
+      "bytes": 19235,
+      "sha256": "942733660c921482f9ce912d3a1accdf87e22f53d552c30134ac4a9cb9b483b8"
+    },
+    "test_acceptance.py": {
+      "bytes": 11750,
+      "sha256": "4136f171ee9dc20cae271e7f2a40a00a1c4e32e25c3524c74283bc1ccbff78cb"
+    },
+    "verify_local.py": {
+      "bytes": 1662,
+      "sha256": "678655754d54a31139f7d8983242d9c0957fadcfb78d01d582218d990f8593b5"
+    }
+  },
+  "independent_read_only_review": "handoff_audit: clear; exact new launcher/budget identity, capacity arithmetic and unchanged original commands/cache schemas/metadata-only scope",
+  "independent_test_seconds": 1.449,
+  "jobs_created": 0,
+  "observed_test_seconds": 1.368,
+  "passed": true,
+  "payload_reads": 0,
+  "prior_sealed_gate_and_acceptance_v1_unchanged": true,
+  "remote_calls_executed_by_author": false,
+  "repository_edits": false,
+  "schema": "third-post-assembly-metadata-software-validation-v2",
+  "skipped": 0,
+  "stage_budget_package_unchanged": true,
+  "syntax_passed": true,
+  "synthetic_assembly_tests": 8
+}

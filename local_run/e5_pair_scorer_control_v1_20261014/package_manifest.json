@@ -1,0 +1,26 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 4312,
+      "sha256": "be75212f0a175136390aa4e4f018cc43325c38bc97a14e4643c342d6ee83202c"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 1221,
+      "sha256": "c5405788bf2192b5f17e5d2049d175203bde205e1b63e44f655640c26413138e"
+    },
+    "export_remote.py": {
+      "bytes": 7566,
+      "sha256": "cd670321d1303c668f4f8a06c61ab9cfc430d75ed04fb1cb79292dcd8b716084"
+    },
+    "launch_remote.py": {
+      "bytes": 16256,
+      "sha256": "135a0f058fb90f6673f3f261769920f63950061d0e71ea876a5846770226d84f"
+    },
+    "test_control.py": {
+      "bytes": 5854,
+      "sha256": "806f5e18c57e3fa162e54767a20e90492a04c78a6c659e01b0f1990f1ee20acb"
+    }
+  },
+  "manifest_self_excluded": true,
+  "schema": "third-pair-scorer-control-package-v1"
+}

@@ -1,0 +1,110 @@
+{
+  "confirmatory_study_ready": false,
+  "created_utc": "2026-10-14T03:53:56.113851+00:00",
+  "derivation_independent_of_observed_quota": true,
+  "evidence": {
+    "dispatch_main_print_call_count": 1,
+    "driver_main_print_call_count": 1,
+    "inspected_code": {
+      "empirical_execution/phase4/embeddings.py": {
+        "bytes": 27522,
+        "sha256": "bb1af9a6583a90372f7641f406afdb418017797cc8d86ee67f117f215c65d2c1"
+      },
+      "local_run/e5_sharded_cpu_v2_20261013/common.py": {
+        "bytes": 20078,
+        "sha256": "33e903a0134f8c3d2ac6d20550c30e2c0070e17ba4bd5f8a46915d5e15f4034d"
+      },
+      "local_run/e5_sharded_cpu_v2_20261013/driver.py": {
+        "bytes": 19406,
+        "sha256": "0fd84964858ab77d53ba2d8b938ad98d6fedeb180778aca5291916aca7b5fa2c"
+      },
+      "local_run/e5_sharded_cpu_v2_20261013/worker.py": {
+        "bytes": 16945,
+        "sha256": "e3e6d7d500334c461efaf6acc643f462740f3f4942244ab5ba78452284cc05f4"
+      },
+      "local_run/e5_sharded_dispatch_v2_20261013/assembly.sbatch": {
+        "bytes": 1813,
+        "sha256": "9aedd498d13a0ccf1ad818669b86101ef142f3bd1fbde3a8ce5ea41b3425ab2e"
+      },
+      "local_run/e5_sharded_dispatch_v2_20261013/dispatch.py": {
+        "bytes": 11076,
+        "sha256": "3f0f49699229bf71295ac74a1d3059178fe647d43f29679cca4815c9f2dc283e"
+      }
+    },
+    "passed_terminal_metadata_bundle": {
+      "bytes": 3199444,
+      "sha256": "393a90c6f4518f9e9292b8ebce07eebc09d4588697bd67c322c40ebabd24feb6"
+    },
+    "passed_terminal_metadata_result": {
+      "bytes": 1707,
+      "sha256": "8ceccfbda805bcf7a4e73b304ea88bdd2c218c3af5f1cb584240b9818b09c047"
+    },
+    "prior_full_run_budget": {
+      "bytes": 20037,
+      "sha256": "d386ec1c1d22f4d23fc231d145aaeac297221a8fecb90d625e786d2823f07e31"
+    },
+    "prior_sealed_gate_manifest": {
+      "bytes": 1303,
+      "sha256": "94147011564dffa8354680ca3e0a912d3a32667b8a9c791a083ad68858ebc616"
+    },
+    "prior_sealed_launcher": {
+      "bytes": 13800,
+      "sha256": "e4a92d5027b0a7a62047a2da37b4f1b3002622a9a10adea064a2fb02a7314144"
+    }
+  },
+  "exact_assembly_payload": {
+    "NPY_header_bytes": 128,
+    "chunk_log_jsonl_bytes": 75706969,
+    "complete_chunk_log_sha256": "53157ef3a9c32f89d6d3d7e26eb6157f734314dbf5ba2e30fb7a16ae26aaca9e",
+    "dimension": 768,
+    "dtype": "float32",
+    "rows": 140250,
+    "total_bytes": 506555097,
+    "vectors_npy_bytes": 430848128
+  },
+  "exact_payload_plus_margins_bytes": 842099417,
+  "fresh_available_soft_bytes_required": 9462349824,
+  "full_population_cache_acceptance": false,
+  "limits": [
+    "One successful assembly, retaining all original shard/replay data. No concurrent benchmark, downloads, remote export archive, full-output copy, second run or automatic retry is included.",
+    "No actual assembly log is claimed to have been observed. The stage console estimate is derived from the unchanged code path.",
+    "Quota is shared and not reserved. The new launcher must repeat terminal, idempotency, package, source-binding and fresh filesystem/quota checks immediately before a single submission.",
+    "The unchanged assembly must validate actual vectors/logs/source/code/assets before publishing its manifest. This resource policy does not imply cache or scientific acceptance."
+  ],
+  "log_allowance_basis": [
+    "Only four stage console files are created: assembly.stdout.txt, assembly.stderr.txt, assembly-<job>.out and assembly-<job>.err. No new32-worker console sets are created.",
+    "The unchanged driver assemble path validates and concatenates existing arrays/logs. It does not call LocalTransformer, tokenizer encoding, model forward or worker.run.",
+    "The driver main and dispatcher main each contain one final JSON console print. Per-record log writes go solely to chunk_log.jsonl, whose75706969-byte payload is already exactly counted. No per-record progress printing or log-body copy is present in the assembly path.",
+    "The16MiB allowance is aggregate for all four console files, allowing4MiB per file on average, far beyond the two normal JSON summary lines. It is a conservative planning margin, not a runtime-enforced cap or a bound on arbitrary dependency/scheduler error output.",
+    "The32MiB JSON,16MiB filesystem and256MiB extra contingency amounts are carried unchanged from the original full-run audit; only console allowance is scoped to this one remaining stage instead of64 encoding processes plus assembly."
+  ],
+  "original_envelope_guard": "Fresh stat accounting sums max(logical,allocated bytes) of every already-materialized full-run file, adds16MiB directory/stat slack, then requires materialized+slack+872415232 <=2415919104. This retains the original2.25GiB total limit; the8GiB reserve is separately unchanged.",
+  "original_total_output_allowance_bytes_unchanged": 2415919104,
+  "preserved_failure": "The original1.25GiB+8GiB preflight stopped before intent/receipt/stage/job. Its files and failed transport remain unchanged. This new policy is versioned and does not overwrite that evidence.",
+  "primary_input_acceptance": false,
+  "purpose": "Prospective disk bookkeeping for one canonical assembly only; no numerical, metadata, source or scientific gate change.",
+  "reserve_bytes_unchanged": 8589934592,
+  "rounded_stage_allowance_bytes": 872415232,
+  "rounding_slack_bytes": 30315815,
+  "schema": "third-assembly-only-capacity-policy-v1",
+  "snapshot_comparison_only": {
+    "above_new_threshold_bytes": 33898496,
+    "assembly_intent_exists": false,
+    "assembly_receipt_exists": false,
+    "assembly_stage_exists": false,
+    "available_soft_bytes": 9496248320,
+    "evidence": {
+      "bytes": 730,
+      "sha256": "8822f6a5e542c88d25733cf2cc5fd951b638e3df949c047a593936491b9266e5"
+    },
+    "not_launch_authorization": true,
+    "observed_utc": "2026-10-14T03:49:32.663402+00:00"
+  },
+  "source_authenticity_verified": false,
+  "stage_margins_bytes": {
+    "additional_contingency_unchanged": 268435456,
+    "all_JSON_metadata_and_receipts": 33554432,
+    "filesystem_allocation_and_directories": 16777216,
+    "four_stage_stdout_stderr_files": 16777216
+  }
+}

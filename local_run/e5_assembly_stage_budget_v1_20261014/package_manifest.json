@@ -1,0 +1,25 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 4294,
+      "sha256": "7cc9ea33c727478aaafeda0c71be8eb0d23f03c080d7a4b8d868a5a097eb159a"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 848,
+      "sha256": "de9d8882e2b44577a861d940f835cb64860f2f257cf3e389ecbf7013d640427b"
+    },
+    "assembly_launch_remote.py": {
+      "bytes": 16282,
+      "sha256": "9d209630a94f28b274a9aa904b7e79548f0db847cce0aa86615eb04d94ef22e9"
+    },
+    "stage_budget_report.json": {
+      "bytes": 6117,
+      "sha256": "3068158ad2379cbfe251ca38ad313e17c6860488cf292f7b0cff93c71796275c"
+    },
+    "test_launcher.py": {
+      "bytes": 4972,
+      "sha256": "cd004e93c8dba7a8d44584265b5264d58fa1e51d9c3e13bd0b6bd3ef6c66a10a"
+    }
+  },
+  "schema": "third-assembly-stage-budget-launcher-package-v1"
+}

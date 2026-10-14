@@ -1,0 +1,35 @@
+{
+  "created_utc": "2026-10-14T04:00:27.033155+00:00",
+  "elapsed_seconds": 0.005,
+  "errors": 0,
+  "failures": 0,
+  "files": {
+    "export_remote.py": {
+      "bytes": 7566,
+      "sha256": "cd670321d1303c668f4f8a06c61ab9cfc430d75ed04fb1cb79292dcd8b716084"
+    },
+    "launch_remote.py": {
+      "bytes": 16256,
+      "sha256": "135a0f058fb90f6673f3f261769920f63950061d0e71ea876a5846770226d84f"
+    },
+    "test_control.py": {
+      "bytes": 5854,
+      "sha256": "806f5e18c57e3fa162e54767a20e90492a04c78a6c659e01b0f1990f1ee20acb"
+    }
+  },
+  "limitations": [
+    "All scheduler interactions mocked locally",
+    "Actual mount/quota/assembly terminal evidence must be fresh at execution",
+    "No helper main was run against cluster or local project paths"
+  ],
+  "model_forwards": 0,
+  "passed": true,
+  "python": "3.9.6",
+  "real_scheduler_calls": 0,
+  "remote_calls": 0,
+  "review": "Root reviewed initial source/argument/quota/launch gates. Requested aged-job squeue, successful cn1 and exact child command/walltime checks applied before seal. Final independent case audit remains separate.",
+  "schema": "third-pair-scorer-control-software-validation-v1",
+  "skipped": 0,
+  "syntax_checked": true,
+  "tests": 12
+}

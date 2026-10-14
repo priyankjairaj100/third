@@ -1,0 +1,22 @@
+{
+  "assembly_queue": [],
+  "assembly_stage_exists": false,
+  "available_soft_bytes": 9496248320,
+  "failed_launcher_sha256": "e4a92d5027b0a7a62047a2da37b4f1b3002622a9a10adea064a2fb02a7314144",
+  "failure": {
+    "automatic_retry": false,
+    "error": "need_1_25GiB_remaining_output_plus_8GiB_reserve",
+    "error_type": "ValueError",
+    "full_population_cache_acceptance": false,
+    "passed": false
+  },
+  "job_submitted": false,
+  "launch_intent_written": false,
+  "launch_receipt_written": false,
+  "observed_utc": "2026-10-14T03:49:32.663402+00:00",
+  "original_remaining_allowance_bytes": 1342177280,
+  "required_bytes": 9932111872,
+  "reserve_bytes_unchanged": 8589934592,
+  "revised_stage_specific_policy": "../e5_assembly_stage_budget_v1_20261014/stage_budget_report.json",
+  "schema": "third-assembly-capacity-preflight-failure-v1"
+}

@@ -1,0 +1,31 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 6017,
+      "sha256": "537aec93366220194bd717e5d1cc4ce9d32f9ef6dd7d01e24496facf7608668e"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 2295,
+      "sha256": "23e711776f55fb5413d6a1c475d96f36861b3b800d17e60f4fe6c6ba61bb4f46"
+    },
+    "benchmark.py": {
+      "bytes": 14791,
+      "sha256": "1c2e1426b30f1a3676a36d881b2259b481dcd46ed876e2048bfe4f69bcf6f610"
+    },
+    "benchmark.sbatch": {
+      "bytes": 3486,
+      "sha256": "90c84218dbcbdcab7452f691fbe5fb770af8037e4d1f69c373501fdbc923f35c"
+    },
+    "expectations.json": {
+      "bytes": 1920,
+      "sha256": "ca79aa2f39f43228252950a4a37515756d76238d9a76f45bdfa2eaa4a5e48b36"
+    },
+    "test_benchmark.py": {
+      "bytes": 8380,
+      "sha256": "38980b89d95998e28c35a1b79eae365abcfb646cf984726f3a8f7486385f5cc9"
+    }
+  },
+  "manifest_self_excluded": true,
+  "purpose": "Prospective bounded engineering benchmark; no launch or scientific acceptance authorized by manifest",
+  "schema": "third-pair-scorer-benchmark-package-v1"
+}
