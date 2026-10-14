@@ -1,3 +1,26 @@
+Latest continuation — 14 October 2026, 2026-10-14T11:47:01.887747+00:00
+
+Execution v2 supersedes all older active-controller/job descriptions below.
+Qwen job 13663 is RUNNING on csis.cn4 in the latest scheduler observation.
+Old cn3-only job 13641 was cancelled while held PENDING with zero runtime and
+no model outputs. Original controllers were stopped and preserved. One finite
+local controller PID 31630 now uses the approved compute A100 pool
+(cn1/cn3/cn4), retaining one GPU, unchanged model kernels, prompts, seeds,
+360 canonical pairs plus 36 swaps per model, and the same scientific v4 plan.
+CPU qualification 13662 passed all 792 exact token replays with no overflow.
+Hardware probe 13659 completed in 6 seconds on cn4; the actual Qwen allocation
+also passed A10080GB/BF16/forced-Flash admission. These are capability checks,
+not cross-device full-model output equivalence or semantic validation.
+All 35 cluster package tests and 9 controller scenarios passed. The controller
+advances Qwen, its audit, Mistral, its audit, selection statistics and independent
+51-cut review, then conditional fresh validation and independent bound/stability
+review. It stops on failure, with no retry, retuning or human annotation.
+Local progression requires this Mac and its authenticated connection. Inspect
+work/resume-20261014/node_pool_v2_pipeline_a01 before any further launch.
+The full repair/utility/cost study and final reporting remain incomplete.
+Public source and receipts: local_run/llm_node_pool_controller_v2_20261014 and
+local_run/local_llm_execution_20261014/llm_node_pool_v2_execution.json.
+
 Latest continuation — 14 October 2026, 2026-10-14T10:45:05.885342+00:00
 
 Qwen selection job 13641 remains PENDING in the latest controller observation. Selection controller PID 22317 remains active. Conditional validation controller PID 25429 is now active and waits locally for successful selection plus its independent 51-cut arithmetic review. It then runs fresh SRS validation sampling with the already committed seed, request preparation, actual full-token CPU qualification, separate Qwen and Mistral calls with audits, exact finite-population confidence bounds, overlap stability, and independent local bound/decision review. Three new frozen packages passed all 21 software tests locally and on the cluster; controller negative/transport-failure/order scenarios passed. No validation model calls have occurred yet; no humans or retries. Failed selection skips validation; failed validation stops this configuration. Local controllers require this Mac and the authenticated connection to remain available. The full repair/utility/cost empirical program, complete family outcomes and final reporting remain incomplete. Preserve all prior negative evidence and protected locks. Source packages and live scope: local_run/local_llm_execution_20261014/llm_v4_execution_progress.json.

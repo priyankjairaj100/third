@@ -1,0 +1,6 @@
+{
+  "expected_tests": 5,
+  "human_annotation_calls": 0,
+  "model_inference_calls": 0,
+  "scope": "Versioned compute-node policy and existing analytic/kernel tests; actual qualification required before model activation"
+}

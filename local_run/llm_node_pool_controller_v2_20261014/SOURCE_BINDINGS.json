@@ -1,0 +1,39 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 1348,
+      "sha256": "45d45aea0a967e2eb326248e99fac2e43d335c5aeaf069781e41d8b7f6d5b87d"
+    },
+    "continue_pipeline.py": {
+      "bytes": 7842,
+      "sha256": "e5c632d822e2a410938ff5c171533b77c21ddef8f06996f9c585ee3757913225"
+    },
+    "remote_existing_session.py": {
+      "bytes": 1391,
+      "sha256": "ced719504d23a40a2edfa7e7574e4aec6898dc08d3dc3cd63d3338375fbf1142"
+    },
+    "selection_helpers.py": {
+      "bytes": 11086,
+      "sha256": "720a783a2d034b351452f6089329a9086f3dbec849a00c6bda166544dcae56e7"
+    },
+    "test_controller.py": {
+      "bytes": 5813,
+      "sha256": "a1c5f7cd859dddfd180f68d02ba54d9b09afc8f5b5c8bfaf36c1f9b0ebf793ed"
+    },
+    "validation_helpers.py": {
+      "bytes": 11557,
+      "sha256": "f3cda717f5e6b93e48fbb20c1cf1abda6cc531f8439aab4c56e318d800ca8505"
+    }
+  },
+  "original_helper_sha256": {
+    "selection": "8b18f4fe98bccf53ebca31c75a4b8c1daf8ab48e41c6b626b6c5af6c9f975272",
+    "validation": "9648e14fffec5e868fcaea2fb3c6a5a0405049f31bdab4ff4232c9860c15a652"
+  },
+  "portable_changes": [
+    "Local TASK and REPO roots become required environment variables",
+    "Helper imports refer to colocated backup sources and their updated hashes"
+  ],
+  "running_private_controller_sha256": "19cf0cf7296b723faaa12b776782906759dc9a25f3793c569910a6240c4e3e34",
+  "runtime_source_was_not_modified": true,
+  "software_fixture_tests_passed": 9
+}

@@ -1,0 +1,244 @@
+{
+  "activation": {
+    "activated": true,
+    "activation": {
+      "bytes": 1609,
+      "sha256": "d2a61920214a8291976d537f442d73aabf74e542d29c8aa9343fe20856b36436"
+    },
+    "model_calls_started": 0,
+    "resource_plan": {
+      "bytes": 1682,
+      "sha256": "a154ba396b72d340421a8b7da9226202144ef8c3c5c5791346cb048e7eb5f16d"
+    },
+    "total_requests": 792
+  },
+  "allowed_gpu_compute_nodes": [
+    "csis.cn1",
+    "csis.cn3",
+    "csis.cn4"
+  ],
+  "authority": "User explicitly authorized verification and rerouting to available compute A100 nodes",
+  "automatic_retries": false,
+  "cluster_software_tests_passed": 35,
+  "controller": {
+    "active_at_observation": true,
+    "finite_scope": "Selection and conditional fresh validation, stopping without retries",
+    "location": "task/work/resume-20261014/node_pool_v2_pipeline_a01",
+    "portable_backup": "local_run/llm_node_pool_controller_v2_20261014",
+    "requires_local_machine_and_authenticated_connection": true,
+    "source_sha256": "19cf0cf7296b723faaa12b776782906759dc9a25f3793c569910a6240c4e3e34"
+  },
+  "controller_software_scenarios_passed": 9,
+  "cpu_node": "csis.cn1",
+  "excluded_nodes": [
+    "csis.mn1",
+    "csis.cn2"
+  ],
+  "execution_note_correction": "DERIVATION.json was sealed while probe 13659 was pending and says it would be superseded. It started and completed successfully before cancellation was considered; it was retained, not cancelled. The v2 controller explicitly requires that completed probe. No model calls occurred in that probe. Frozen packages are preserved.",
+  "free_soft_quota_bytes_at_model_launch": 11812741120,
+  "gpu_count_per_model": 1,
+  "human_annotation_calls": 0,
+  "latest_model_status": {
+    "accounting": "13663|RUNNING|0:0|68||csis.cn4\n13663.batch|RUNNING|0:0|68||csis.cn4\n",
+    "console_tail": "",
+    "exit": "0:0",
+    "node": "csis.cn4",
+    "observed_utc": "2026-10-14T11:46:06.063367+00:00",
+    "result": null,
+    "result_binding": null,
+    "state": "RUNNING"
+  },
+  "launch_resources": [
+    "--partition=gpu-short",
+    "--nodes=1",
+    "--constraint=a100-80gb",
+    "--exclude=csis.mn1,csis.cn2",
+    "--gres=gpu:a100-80gb:1",
+    "--cpus-per-task=4",
+    "--mem=48G",
+    "--time=360"
+  ],
+  "model_allocation_observation": {
+    "accounting": "13663|RUNNING|0:0|57|csis.cn4\n13663.batch|RUNNING|0:0|57|csis.cn4\n",
+    "allocated_gpu_capability": {
+      "cuda_capability": [
+        8,
+        0
+      ],
+      "driver_versions": [
+        "570.158.01",
+        "570.158.01"
+      ],
+      "flash_sdpa_flags": {
+        "cudnn": false,
+        "flash": true,
+        "math": false,
+        "mem_efficient": false
+      },
+      "gpu": "NVIDIA A100 80GB PCIe",
+      "gpu_total_bytes": 85095874560,
+      "host": "csis.cn4",
+      "human_annotation_calls": 0,
+      "job_id": "13663",
+      "model_inference_calls": 0,
+      "passed": true,
+      "scope": "Hardware/software capability only, not full-model cross-device output equivalence",
+      "torch_cuda_version": "12.8"
+    },
+    "calls_completed_at_observation": 0,
+    "calls_started": 0,
+    "capability_binding": {
+      "bytes": 437,
+      "sha256": "5675ab5baa0f2260a4545feba5cbe2e136c5e09ba889dba71cc67a2a7ebc64ac"
+    },
+    "console_tail": "",
+    "counts_are_operational_not_audited_labels": true,
+    "job_id": "13663",
+    "observed_utc": "2026-10-14T11:45:55.076879+00:00",
+    "planned_calls": 396
+  },
+  "model_numeric_kernel_unchanged": true,
+  "no_cross_device_model_output_equivalence_claim": true,
+  "old_controllers_superseded": true,
+  "old_qwen_job": {
+    "elapsed_seconds": 0,
+    "job_id": "13641",
+    "model_outputs_existed": false,
+    "state": "CANCELLED"
+  },
+  "original_request_job_reused": "13639",
+  "package_manifests": {
+    "selection_inference": {
+      "bytes": 3179,
+      "sha256": "adcd4704a99bb6d3eabfbd8e5409453a96faa891b00aef93e399e2a23d1034fe"
+    },
+    "validation_inference": {
+      "bytes": 3329,
+      "sha256": "3b5d8a811909d33cefd9fd6b7c5dbb0e8d17fd1facca447fa0717f1f2ce438c7"
+    },
+    "validation_requests": {
+      "bytes": 870,
+      "sha256": "8721e0499db68998ef509f9f4263410f786ec2e7c9118f970270965b4ee68b67"
+    },
+    "validation_sampler": {
+      "bytes": 1003,
+      "sha256": "1abac2e6d14f38c55e78b32031040e7ee387bfe92b8234998187ee1b91e21ad2"
+    }
+  },
+  "portable_controller_same_scenarios_passed": 9,
+  "project_complete": false,
+  "protected_local_files_sha256": {
+    "ANALYSIS_LOCK.json": "c70d7c360e02a13de98ca24e0ae3ac8dd116fbb8bd7b705fa4c934cc84d2b2ff",
+    "ANALYSIS_LOCK_EXECUTION.json": "09b6ff50df8b4124aa44398c33d67884acff65b552f46c4fd0b8fac5b2656d7c",
+    "TODO.json": "80a0385769ab9270db5791e025b1ec81523156e29f03fafa59d08d6ccdd22b4e"
+  },
+  "qualification": {
+    "accounting": "13662|COMPLETED|0:0|19||csis.cn1\n13662.batch|COMPLETED|0:0|19|1056K|csis.cn1\n",
+    "console_tail": "{\"passed\": true, \"models\": {\"mistral\": {\"requests\": 396, \"all_full_token_sequences_exact\": true, \"overflow_requests\": 0}, \"qwen\": {\"requests\": 396, \"all_full_token_sequences_exact\": true, \"overflow_requests\": 0}}}\n",
+    "exit": "0:0",
+    "node": "csis.cn1",
+    "observed_utc": "2026-10-14T11:44:50.617202+00:00",
+    "result": {
+      "models": {
+        "mistral": {
+          "all_full_token_sequences_exact": true,
+          "overflow_requests": 0,
+          "requests": 396
+        },
+        "qwen": {
+          "all_full_token_sequences_exact": true,
+          "overflow_requests": 0,
+          "requests": 396
+        }
+      },
+      "package_sha256": "adcd4704a99bb6d3eabfbd8e5409453a96faa891b00aef93e399e2a23d1034fe",
+      "passed": true,
+      "schema": "third-v4-producer-consumer-qualification-v1"
+    },
+    "result_binding": {
+      "bytes": 2167,
+      "sha256": "0f6cb9847493cd3d540f990cbf0ef710c9162546a32e4d4205f6bdfbd2e4fa2d"
+    },
+    "state": "COMPLETED"
+  },
+  "qualification_job": "13662",
+  "qwen_job": "13663",
+  "request_result_sha256": "334e193f0cac3aa0d36bac510d06719b98efe5f715b031b7944c1c1ec7757db4",
+  "reserve_bytes": 8589934592,
+  "sampling_prompts_seeds_labels_thresholds_unchanged": true,
+  "scheduler_time_limit_seconds_per_model": 21600,
+  "schema": "third-v4-node-pool-migration-v2",
+  "scope": "Same prospective scientific v4 protocol; versioned scheduler and hardware admission change",
+  "semantic_validity_established": false,
+  "source_validation": {
+    "all_frozen_manifest_files_verified": true,
+    "all_python_sources_parse": true,
+    "diff_check_notes": [
+      "Inherited terminal blank line in each frozen audit_helpers.py preserved to keep sealed source hashes unchanged"
+    ],
+    "no_other_diff_whitespace_findings": true,
+    "portable_backup_local_paths_parameterized": true
+  },
+  "standalone_hardware_probe": {
+    "binding": {
+      "bytes": 1360,
+      "sha256": "460d1b67e00b5faef3655dd6bf42245fe7e9089eaf57487b211ab2e92222bce8"
+    },
+    "elapsed_seconds": 6,
+    "exit_code": "0:0",
+    "job_id": "13659",
+    "node": "csis.cn4",
+    "result": {
+      "cuda_capability": [
+        8,
+        0
+      ],
+      "flash_sdpa_flags": {
+        "cudnn": false,
+        "flash": true,
+        "math": false,
+        "mem_efficient": false
+      },
+      "gpu": "NVIDIA A100 80GB PCIe",
+      "gpu_total_bytes": 85095874560,
+      "host": "csis.cn4",
+      "human_annotation_calls": 0,
+      "job_id": "13659",
+      "model_inference_calls": 0,
+      "natural_data_loaded": false,
+      "nvidia_driver": [
+        "570.158.01",
+        "570.158.01"
+      ],
+      "package_sha256": "06959441993fa77b95db461ba568e2049fbb0d57bd042df6eac40cd5acdf10b2",
+      "passed": true,
+      "runtime_packages": {
+        "PyYAML": "6.0.3",
+        "annotated-types": "0.8.0",
+        "attrs": "26.1.0",
+        "huggingface-hub": "0.36.2",
+        "interegular": "0.3.3",
+        "jsonschema": "4.25.1",
+        "jsonschema-specifications": "2025.9.1",
+        "lm-format-enforcer": "0.11.3",
+        "numpy": "2.5.3",
+        "packaging": "26.3",
+        "pydantic": "2.12.5",
+        "pydantic-core": "2.41.5",
+        "referencing": "0.37.0",
+        "rpds-py": "2026.9.1",
+        "safetensors": "0.8.0",
+        "tokenizers": "0.22.2",
+        "torch": "2.11.0+cu128",
+        "transformers": "4.57.6",
+        "typing-inspection": "0.4.4"
+      },
+      "schema": "third-node-pool-hardware-probe-v1",
+      "scope": "Hardware and pinned environment admission only; no claim of full-model output parity or semantic validity",
+      "torch_cuda_version": "12.8",
+      "utc": "2026-10-14T11:36:05.325196+00:00"
+    },
+    "state": "COMPLETED"
+  },
+  "updated_utc": "2026-10-14T11:47:01.887747+00:00"
+}

@@ -3,41 +3,45 @@
     "activated": true,
     "activation": {
       "bytes": 1609,
-      "sha256": "23b51d0b686fa9f3b8f6bd09232280a56ad2a6f3fd812710de059e2ec6470bc8"
+      "sha256": "d2a61920214a8291976d537f442d73aabf74e542d29c8aa9343fe20856b36436"
     },
     "model_calls_started": 0,
     "resource_plan": {
-      "bytes": 1456,
-      "sha256": "03090f20c0751f7866345cbf1c3b31341502e574cd40d2dbb1d4e39592231ad4"
+      "bytes": 1682,
+      "sha256": "a154ba396b72d340421a8b7da9226202144ef8c3c5c5791346cb048e7eb5f16d"
     },
     "total_requests": 792
   },
   "all792_prompt_sequences_replayed": true,
   "automatic_retries": false,
   "context_overflow_requests": 0,
-  "controller_code_sha256": "8b18f4fe98bccf53ebca31c75a4b8c1daf8ab48e41c6b626b6c5af6c9f975272",
-  "controller_location": "task/work/resume-20261014/v4_pipeline_a01",
+  "controller_code_sha256": "19cf0cf7296b723faaa12b776782906759dc9a25f3793c569910a6240c4e3e34",
+  "controller_location": "task/work/resume-20261014/node_pool_v2_pipeline_a01",
+  "execution_version": "node-pool-v2",
   "finite_controller_active": true,
   "human_annotation_calls": 0,
   "inference_activated_at_this_observation": true,
   "inference_package": {
-    "bytes": 2946,
-    "sha256": "ef7449595cb5a90e8fc8a009103f958eb92a73abc7943d52c19a552e816c4207"
+    "bytes": 3179,
+    "sha256": "adcd4704a99bb6d3eabfbd8e5409453a96faa891b00aef93e399e2a23d1034fe"
   },
   "latest_model_job_observation": {
-    "job_id": "13641",
-    "observed_utc": "2026-10-14T10:44:16.208222+00:00",
+    "job_id": "13663",
+    "node": "csis.cn4",
+    "observed_utc": "2026-10-14T11:46:06.063367+00:00",
     "stage": "qwen_selection",
-    "state": "PENDING"
+    "state": "RUNNING"
   },
-  "portable_controller_source": "local_run/llm_v4_controller_v1_20261014/continue_pipeline.py",
+  "node_pool_migration_report": "local_run/local_llm_execution_20261014/llm_node_pool_v2_execution.json",
+  "portable_controller_source": "local_run/llm_node_pool_controller_v2_20261014/continue_pipeline.py",
+  "previous_execution_snapshot": "local_run/local_llm_execution_20261014/llm_v4_execution_v1_superseded_snapshot.json",
   "project_complete": false,
   "qualification": {
-    "accounting": "13640|COMPLETED|0:0|19||csis.cn1\n13640.batch|COMPLETED|0:0|19|1060K|csis.cn1\n",
+    "accounting": "13662|COMPLETED|0:0|19||csis.cn1\n13662.batch|COMPLETED|0:0|19|1056K|csis.cn1\n",
     "console_tail": "{\"passed\": true, \"models\": {\"mistral\": {\"requests\": 396, \"all_full_token_sequences_exact\": true, \"overflow_requests\": 0}, \"qwen\": {\"requests\": 396, \"all_full_token_sequences_exact\": true, \"overflow_requests\": 0}}}\n",
     "exit": "0:0",
     "node": "csis.cn1",
-    "observed_utc": "2026-10-14T10:24:54.631059+00:00",
+    "observed_utc": "2026-10-14T11:44:50.617202+00:00",
     "result": {
       "models": {
         "mistral": {
@@ -51,30 +55,25 @@
           "requests": 396
         }
       },
-      "package_sha256": "ef7449595cb5a90e8fc8a009103f958eb92a73abc7943d52c19a552e816c4207",
+      "package_sha256": "adcd4704a99bb6d3eabfbd8e5409453a96faa891b00aef93e399e2a23d1034fe",
       "passed": true,
       "schema": "third-v4-producer-consumer-qualification-v1"
     },
     "result_binding": {
-      "bytes": 2168,
-      "sha256": "09b65e7a1a85fb58facdd72402d23030edba657d21165aed499ecab85d12e54a"
+      "bytes": 2167,
+      "sha256": "0f6cb9847493cd3d540f990cbf0ef710c9162546a32e4d4205f6bdfbd2e4fa2d"
     },
     "state": "COMPLETED"
   },
-  "queue_note": "Both A100 devices were allocated at 10:07 UTC. Queue wait is unknown.",
-  "qwen_job": "13641",
-  "qwen_last_observed_state": "PENDING",
+  "queue_note": "The old cn3-only job 13641 was cancelled unstarted. Replacement 13663 started on cn4 at 11:44:58 UTC on 14 October. Future stages remain subject to the shared queue.",
+  "qwen_job": "13663",
+  "qwen_last_observed_state": "RUNNING",
   "qwen_launch": {
-    "created_utc": "2026-10-14T10:25:02.762917+00:00",
-    "job_id": "13641",
+    "created_utc": "2026-10-14T11:44:58.502202+00:00",
+    "free_soft_quota_bytes": 11812741120,
+    "job_id": "13663",
     "mode": "qwen",
-    "package_sha256": "ef7449595cb5a90e8fc8a009103f958eb92a73abc7943d52c19a552e816c4207",
-    "quota": {
-      "available_soft_bytes": 12394659840,
-      "hard_kib": 1048576000,
-      "soft_kib": 1047527424,
-      "used_kib": 1035423264
-    },
+    "package_sha256": "adcd4704a99bb6d3eabfbd8e5409453a96faa891b00aef93e399e2a23d1034fe",
     "stage_allowance_bytes": 301989888
   },
   "remaining_project_work": [
@@ -162,25 +161,33 @@
     "state": "COMPLETED"
   },
   "sampling_job": "13636",
-  "schema": "third-v4-execution-progress-v1",
-  "updated_utc": "2026-10-14T10:45:05.885342+00:00",
+  "schema": "third-v4-execution-progress-v2",
+  "updated_utc": "2026-10-14T11:47:01.887747+00:00",
   "validation_continuation": {
     "controller_active": true,
-    "controller_backup": "local_run/llm_v4_validation_controller_v1_20261014/continue_validation.py",
-    "controller_software_scenarios_passed": 3,
+    "controller_backup": "local_run/llm_node_pool_controller_v2_20261014/continue_pipeline.py",
     "full_project_complete": false,
     "human_annotation_calls": 0,
     "independent_exact_bound_and_overlap_review": true,
-    "local_and_cluster_software_tests_passed": 21,
     "max_additional_model_calls": 440,
     "packages": {
-      "llm-v4-validation-inference-v1-20261014": "6c294e4ff3efd52f98552d8cbe41803eb44a2c5b61ba8500880a0358b93595b8",
-      "llm-v4-validation-requests-v1-20261014": "321cc83af9e54f8dd454e6704afc77b93f4156fbadce1aa8baf2af625b10b906",
-      "llm-v4-validation-sampler-v1-20261014": "110744b78528532f543701df77c4397484b188003aca3a3a47c39177c111d538"
+      "validation_inference": {
+        "bytes": 3329,
+        "sha256": "3b5d8a811909d33cefd9fd6b7c5dbb0e8d17fd1facca447fa0717f1f2ce438c7"
+      },
+      "validation_requests": {
+        "bytes": 870,
+        "sha256": "8721e0499db68998ef509f9f4263410f786ec2e7c9118f970270965b4ee68b67"
+      },
+      "validation_sampler": {
+        "bytes": 1003,
+        "sha256": "1abac2e6d14f38c55e78b32031040e7ee387bfe92b8234998187ee1b91e21ad2"
+      }
     },
     "requires_actual_token_replay_before_activation": true,
     "requires_positive_selection": true,
-    "running_controller_sha256": "9648e14fffec5e868fcaea2fb3c6a5a0405049f31bdab4ff4232c9860c15a652",
+    "running_controller_sha256": "19cf0cf7296b723faaa12b776782906759dc9a25f3793c569910a6240c4e3e34",
+    "same_finite_controller_as_selection": true,
     "status": "waiting_for_successful_independently_reviewed_selection",
     "validation_jobs_submitted": 0
   }

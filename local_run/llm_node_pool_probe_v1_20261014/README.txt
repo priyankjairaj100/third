@@ -1,0 +1,1 @@
+A single bounded Slurm capability check on csis.cn4. No model loads, natural data, labels or scientific inference. Checks same pinned environment, A100 80GB/SM80, BF16 and forced Flash SDPA. Success does not prove output equivalence across physical GPUs.
