@@ -1,0 +1,1428 @@
+{
+  "all51_exact_weighted_cuts_independently_recomputed": true,
+  "completed_utc": "2026-10-14T09:16:26.757490+00:00",
+  "confirmatory_study_ready": false,
+  "conservative_positives_of90": 0,
+  "controller_completion": {
+    "bytes": 601,
+    "sha256": "d08908138813795575b443edeb982b563c80493d2879ad3a0c8f4c3f1d142649"
+  },
+  "execution_complete": true,
+  "full_denominator_preserved": true,
+  "human_annotation_calls": 0,
+  "independent_validation_performed": false,
+  "interpretation": "The registered model-defined selection criterion failed. No threshold was selected. Zero joint positives is a result under these models and requests, not evidence that all population pairs are semantically distinct.",
+  "invalid_response_handling": "One Mistral canonical response was invalid JSON, retained as nonpositive under the frozen rule; no repair or retry.",
+  "local_terminal_reviews": {
+    "inference_mistral_local_terminal_review.json": {
+      "bytes": 2291,
+      "sha256": "9a22344487a22609718fa2c750eccb849e00af48025977bc10ed917977318140"
+    },
+    "inference_qwen_local_terminal_review.json": {
+      "bytes": 1935,
+      "sha256": "ab88f6feb94e2c6be44ad326aeda5379fc89d1f971052ed31652c5ce735f8859"
+    },
+    "postprocess_mistral_local_terminal_review.json": {
+      "bytes": 1413,
+      "sha256": "1a7eab51f2e84b112bcf9e7a1b703e3e5962d32d19bfb00853083468fc057bb5"
+    },
+    "postprocess_qwen_local_terminal_review.json": {
+      "bytes": 1728,
+      "sha256": "dd20af7bf2a13c8af32c45207e260fe77e04d3cc322b6db1936dbfa6b3c2f26b"
+    },
+    "postprocess_statistics_local_terminal_review.json": {
+      "bytes": 1357,
+      "sha256": "3ad62ce7fe07d22e69d2028e92607c5f3e92994bd24c5659aee9613a29b92a24"
+    }
+  },
+  "model_requests_attempted": 198,
+  "model_retries": 0,
+  "models": {
+    "mistral": {
+      "canonical_calls": 90,
+      "diagnostic_calls": 9,
+      "execution_passed": true,
+      "execution_result": {
+        "bytes": 111000,
+        "sha256": "0b78379a6f19df26445d626f09dbd1fcfed733be6ff2d8041dfefb09635ca132"
+      },
+      "job_id": "13625",
+      "planned_calls": 99,
+      "scheduler": {
+        "elapsed_seconds": 1590,
+        "exit_code": "0:0",
+        "node": "csis.cn4",
+        "state": "COMPLETED"
+      },
+      "status_counts": {
+        "invalid_json": 1,
+        "valid": 98
+      }
+    },
+    "qwen": {
+      "canonical_calls": 90,
+      "diagnostic_calls": 9,
+      "execution_passed": true,
+      "execution_result": {
+        "bytes": 110974,
+        "sha256": "fbc6b7a9d73a56a924982bad2c39d513338d83d29940a7a2e754b022917b21ca"
+      },
+      "job_id": "13574",
+      "planned_calls": 99,
+      "scheduler": {
+        "elapsed_seconds": 2634,
+        "exit_code": "0:0",
+        "node": "csis.cn3",
+        "state": "COMPLETED"
+      },
+      "status_counts": {
+        "valid": 99
+      }
+    }
+  },
+  "next_stage": "No automatic validation: selection did not pass. Preserve this completed negative result; any future design is a separate version.",
+  "output_audits": {
+    "mistral": {
+      "actual_software_tests": 12,
+      "all_actual_output_replays_passed": true,
+      "elapsed_seconds": 28,
+      "exit_code": "0:0",
+      "job_id": "13629",
+      "report": {
+        "bytes": 33291,
+        "sha256": "48313792e50715886ba513e0969e463c19c4c34a33e15e8843f2c5a0b6f7da61"
+      },
+      "state": "COMPLETED"
+    },
+    "qwen": {
+      "actual_software_tests": 12,
+      "all_actual_output_replays_passed": true,
+      "elapsed_seconds": 181,
+      "exit_code": "0:0",
+      "job_id": "13623",
+      "report": {
+        "bytes": 31324,
+        "sha256": "c58c3279179f27190f309e2f5c19ebce4cb9ead991e4a6afa34c8781b3e6f1d4"
+      },
+      "state": "COMPLETED"
+    }
+  },
+  "private_statistics_report": {
+    "bytes": 21431,
+    "sha256": "c64987cc60bf729b753a8b2e587d49134bc5b147f2155f24b2fb7dcff04120d0"
+  },
+  "schema": "third-fully-llm-selection-terminal-v3",
+  "selected_tau": null,
+  "selection_pairs": 90,
+  "selection_passed": false,
+  "selection_statistics": {
+    "diagnostics": {
+      "category_counts": {
+        "Qwen/Qwen2.5-7B-Instruct": {
+          "merely_related": 3,
+          "overlapping_information": 2,
+          "unrelated": 85
+        },
+        "mistralai/Mistral-Nemo-Instruct-2407": {
+          "merely_related": 32,
+          "overlapping_information": 32,
+          "substantially_same_meaning": 4,
+          "unrelated": 21
+        }
+      },
+      "conservative_positives": 0,
+      "pairs": 90,
+      "status_counts": {
+        "Qwen/Qwen2.5-7B-Instruct": {
+          "valid": 90
+        },
+        "mistralai/Mistral-Nemo-Instruct-2407": {
+          "invalid_json": 1,
+          "valid": 89
+        }
+      },
+      "valid_six_way_disagreements": 66
+    },
+    "failed_diagnostic_tau": {
+      "denominator": 200,
+      "numerator": 199
+    },
+    "grid_ledger": [
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "tau_float_hex": "0x1.0000000000000p-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 100,
+          "numerator": 51
+        },
+        "tau_float_hex": "0x1.051eb851eb852p-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 25,
+          "numerator": 13
+        },
+        "tau_float_hex": "0x1.0a3d70a3d70a4p-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 100,
+          "numerator": 53
+        },
+        "tau_float_hex": "0x1.0f5c28f5c28f6p-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 50,
+          "numerator": 27
+        },
+        "tau_float_hex": "0x1.147ae147ae148p-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 20,
+          "numerator": 11
+        },
+        "tau_float_hex": "0x1.199999999999ap-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 25,
+          "numerator": 14
+        },
+        "tau_float_hex": "0x1.1eb851eb851ecp-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 100,
+          "numerator": 57
+        },
+        "tau_float_hex": "0x1.23d70a3d70a3dp-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 50,
+          "numerator": 29
+        },
+        "tau_float_hex": "0x1.28f5c28f5c28fp-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 100,
+          "numerator": 59
+        },
+        "tau_float_hex": "0x1.2e147ae147ae1p-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 5,
+          "numerator": 3
+        },
+        "tau_float_hex": "0x1.3333333333333p-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 100,
+          "numerator": 61
+        },
+        "tau_float_hex": "0x1.3851eb851eb85p-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 50,
+          "numerator": 31
+        },
+        "tau_float_hex": "0x1.3d70a3d70a3d7p-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 100,
+          "numerator": 63
+        },
+        "tau_float_hex": "0x1.428f5c28f5c29p-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 25,
+          "numerator": 16
+        },
+        "tau_float_hex": "0x1.47ae147ae147bp-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 20,
+          "numerator": 13
+        },
+        "tau_float_hex": "0x1.4cccccccccccdp-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 50,
+          "numerator": 33
+        },
+        "tau_float_hex": "0x1.51eb851eb851fp-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 100,
+          "numerator": 67
+        },
+        "tau_float_hex": "0x1.570a3d70a3d71p-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 25,
+          "numerator": 17
+        },
+        "tau_float_hex": "0x1.5c28f5c28f5c3p-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 100,
+          "numerator": 69
+        },
+        "tau_float_hex": "0x1.6147ae147ae14p-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 10,
+          "numerator": 7
+        },
+        "tau_float_hex": "0x1.6666666666666p-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 100,
+          "numerator": 71
+        },
+        "tau_float_hex": "0x1.6b851eb851eb8p-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 25,
+          "numerator": 18
+        },
+        "tau_float_hex": "0x1.70a3d70a3d70ap-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 100,
+          "numerator": 73
+        },
+        "tau_float_hex": "0x1.75c28f5c28f5cp-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 50,
+          "numerator": 37
+        },
+        "tau_float_hex": "0x1.7ae147ae147aep-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 4,
+          "numerator": 3
+        },
+        "tau_float_hex": "0x1.8000000000000p-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 25,
+          "numerator": 19
+        },
+        "tau_float_hex": "0x1.851eb851eb852p-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 90,
+        "tau": {
+          "denominator": 100,
+          "numerator": 77
+        },
+        "tau_float_hex": "0x1.8a3d70a3d70a4p-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 220405510
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 88,
+        "tau": {
+          "denominator": 50,
+          "numerator": 39
+        },
+        "tau_float_hex": "0x1.8f5c28f5c28f6p-1",
+        "weighted_denominator": {
+          "denominator": 5,
+          "numerator": 1099370921
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 78,
+        "tau": {
+          "denominator": 100,
+          "numerator": 79
+        },
+        "tau_float_hex": "0x1.947ae147ae148p-1",
+        "weighted_denominator": {
+          "denominator": 5,
+          "numerator": 1086087776
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 60,
+        "tau": {
+          "denominator": 5,
+          "numerator": 4
+        },
+        "tau_float_hex": "0x1.999999999999ap-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 212435623
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 58,
+        "tau": {
+          "denominator": 100,
+          "numerator": 81
+        },
+        "tau_float_hex": "0x1.9eb851eb851ecp-1",
+        "weighted_denominator": {
+          "denominator": 15,
+          "numerator": 2982874661
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 57,
+        "tau": {
+          "denominator": 50,
+          "numerator": 41
+        },
+        "tau_float_hex": "0x1.a3d70a3d70a3dp-1",
+        "weighted_denominator": {
+          "denominator": 5,
+          "numerator": 960348273
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 54,
+        "tau": {
+          "denominator": 100,
+          "numerator": 83
+        },
+        "tau_float_hex": "0x1.a8f5c28f5c28fp-1",
+        "weighted_denominator": {
+          "denominator": 5,
+          "numerator": 858518431
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 49,
+        "tau": {
+          "denominator": 25,
+          "numerator": 21
+        },
+        "tau_float_hex": "0x1.ae147ae147ae1p-1",
+        "weighted_denominator": {
+          "denominator": 15,
+          "numerator": 2066406083
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 42,
+        "tau": {
+          "denominator": 20,
+          "numerator": 17
+        },
+        "tau_float_hex": "0x1.b333333333333p-1",
+        "weighted_denominator": {
+          "denominator": 5,
+          "numerator": 451199063
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 40,
+        "tau": {
+          "denominator": 50,
+          "numerator": 43
+        },
+        "tau_float_hex": "0x1.b851eb851eb85p-1",
+        "weighted_denominator": {
+          "denominator": 3,
+          "numerator": 229987501
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 38,
+        "tau": {
+          "denominator": 100,
+          "numerator": 87
+        },
+        "tau_float_hex": "0x1.bd70a3d70a3d7p-1",
+        "weighted_denominator": {
+          "denominator": 15,
+          "numerator": 946277821
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 35,
+        "tau": {
+          "denominator": 25,
+          "numerator": 22
+        },
+        "tau_float_hex": "0x1.c28f5c28f5c29p-1",
+        "weighted_denominator": {
+          "denominator": 3,
+          "numerator": 128157659
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 31,
+        "tau": {
+          "denominator": 100,
+          "numerator": 89
+        },
+        "tau_float_hex": "0x1.c7ae147ae147bp-1",
+        "weighted_denominator": {
+          "denominator": 15,
+          "numerator": 233468927
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 30,
+        "tau": {
+          "denominator": 10,
+          "numerator": 9
+        },
+        "tau_float_hex": "0x1.ccccccccccccdp-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 8775939
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 20,
+        "tau": {
+          "denominator": 100,
+          "numerator": 91
+        },
+        "tau_float_hex": "0x1.d1eb851eb851fp-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 5850626
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 10,
+        "tau": {
+          "denominator": 25,
+          "numerator": 23
+        },
+        "tau_float_hex": "0x1.d70a3d70a3d71p-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 2925313
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 5,
+        "tau": {
+          "denominator": 100,
+          "numerator": 93
+        },
+        "tau_float_hex": "0x1.dc28f5c28f5c3p-1",
+        "weighted_denominator": {
+          "denominator": 2,
+          "numerator": 2925313
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 3,
+        "tau": {
+          "denominator": 50,
+          "numerator": 47
+        },
+        "tau_float_hex": "0x1.e147ae147ae14p-1",
+        "weighted_denominator": {
+          "denominator": 10,
+          "numerator": 8775939
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "missing_uncertain_sensitivity_upper": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "passes_selection_rule": false,
+        "sample_support": 1,
+        "tau": {
+          "denominator": 20,
+          "numerator": 19
+        },
+        "tau_float_hex": "0x1.e666666666666p-1",
+        "weighted_denominator": {
+          "denominator": 10,
+          "numerator": 2925313
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": null,
+        "missing_uncertain_sensitivity_upper": null,
+        "passes_selection_rule": false,
+        "sample_support": 0,
+        "tau": {
+          "denominator": 25,
+          "numerator": 24
+        },
+        "tau_float_hex": "0x1.eb851eb851eb8p-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": null,
+        "missing_uncertain_sensitivity_upper": null,
+        "passes_selection_rule": false,
+        "sample_support": 0,
+        "tau": {
+          "denominator": 100,
+          "numerator": 97
+        },
+        "tau_float_hex": "0x1.f0a3d70a3d70ap-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": null,
+        "missing_uncertain_sensitivity_upper": null,
+        "passes_selection_rule": false,
+        "sample_support": 0,
+        "tau": {
+          "denominator": 50,
+          "numerator": 49
+        },
+        "tau_float_hex": "0x1.f5c28f5c28f5cp-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": null,
+        "missing_uncertain_sensitivity_upper": null,
+        "passes_selection_rule": false,
+        "sample_support": 0,
+        "tau": {
+          "denominator": 100,
+          "numerator": 99
+        },
+        "tau_float_hex": "0x1.fae147ae147aep-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "conservative_precision": null,
+        "missing_uncertain_sensitivity_upper": null,
+        "passes_selection_rule": false,
+        "sample_support": 0,
+        "tau": {
+          "denominator": 200,
+          "numerator": 199
+        },
+        "tau_float_hex": "0x1.fd70a3d70a3d7p-1",
+        "weighted_denominator": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "weighted_positive_numerator": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      }
+    ],
+    "human_annotation_calls": 0,
+    "inference_activation": false,
+    "model_defined_target_only": true,
+    "schema": "third-llm-only-selection-statistics-v1",
+    "selected_tau": null,
+    "selection_passed": false,
+    "semantic_validity_established": false
+  },
+  "semantic_validity_established": false,
+  "statistics_job": {
+    "elapsed_seconds": 1,
+    "exit_code": "0:0",
+    "job_id": "13630",
+    "state": "COMPLETED"
+  },
+  "swap_checks_per_model": 9,
+  "swap_diagnostics": {
+    "mistral": {
+      "binary_positive_changes": 1,
+      "pairs": 9,
+      "status_or_category_changes": 7,
+      "used_in_threshold_estimator": false
+    },
+    "qwen": {
+      "binary_positive_changes": 0,
+      "pairs": 9,
+      "status_or_category_changes": 0,
+      "used_in_threshold_estimator": false
+    }
+  },
+  "verified_utc": "2026-10-14T09:28:16.382094+00:00"
+}

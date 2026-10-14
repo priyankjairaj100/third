@@ -1,43 +1,46 @@
 THIRD — LOCAL / CLUSTER CHECKPOINT
-Updated 14 October 2026, 08:47:16 UTC Mistral observation
+Completed 14 October 2026, 09:16:26 UTC / 14:46 IST
 
-CURRENT STATE — STORAGE CLEARED; QWEN AUDITED; MISTRAL13625 RUNNING
-Authorized cleanup13621 completed0:0 after inspection13620 on csis.cn1.
-Seven old pip HTTP download-cache entries (14 unshared regular files) were
-removed:5,718,274,048 allocated bytes (5.33GiB). Quota was12,820,471,808bytes
-available at08:34:38 UTC, and still above the unchanged8GiB reserve at launch.
-Installed environments, model weights, datasets and research results were outside
-the cleanup allowlist. Exact private plans and deletion journals are retained.
+CURRENT STATE — FULLY LLM SELECTION COMPLETE; CRITERION FAILED
+All198 planned requests were attempted. No human annotation, model retries,
+new seeds, repaired responses or post-outcome threshold changes were used.
+Qwen13574: COMPLETED0:0,2634seconds,99valid requests.
+Mistral13625: COMPLETED0:0,1590seconds,98valid and1invalid_JSON request.
+The invalid response was canonical; it retains its full denominator weight as
+nonpositive under the frozen rule. All9 Mistral swap diagnostics were valid.
+CPU audits13623/13629: completed and passed actual prompt/output token, grammar,
+call-identity and denominator replay (181/28seconds;12 software checks each).
+Statistics13630: COMPLETED0:0,1second. Local separate recomputation agreed on
+all51 exact weighted candidate thresholds and the complete diagnostics.
 
-Qwen13574 completed99 requests in2,634seconds. Its CPU output audit13623 passed
-in181seconds, including12 software checks and full actual token/grammar/identity
-replay. Exact exported artifacts passed local review; no Qwen calls were repeated.
-The first Mistral preflight then exposed a CPU-node helper incorrectly applied
-to Qwen's successful GPU job on csis.cn3. No Mistral intent/job was created.
-An explicit sealed adapter corrects only that role check and requires the pinned
-passed Qwen audit. Original inference code, resource plan, activation, prompts,
-seeds and statistics are unchanged. Seven adapter tests passed locally/cluster.
+RESULT:0/90 canonical pairs were positive under the required two-model rule.
+No threshold was selected.0.995 remains a failed diagnostic value, not a passed
+threshold. No independent validation was activated. Model calibration/confirmatory
+readiness remain false; this is a completed model-defined negative result.
+Qwen canonical positives:0. Mistral canonical positives:4. There were66 valid
+six-way category disagreements. Mistral changed status/category on7/9 swaps,
+including1 binary positive change; Qwen changed0/9. Swaps are diagnostics only.
+These measurements do not establish latent semantic truth or human agreement.
 
-Mistral13625 launched once at08:47:12 UTC and was RUNNING at08:47:16 UTC.
-New one-shot local controller PID14404 owns: Mistral99requests -> Mistral audit
--> frozen selection statistics and independent exact local recomputation.
-No human annotations, model retries, new sampling/activation or threshold changes.
-A failed selection remains a negative result; no automatic validation follows.
+The one-shot controller finished at09:16:26 UTC and PID14404 is no longer active.
+Preserve all occupied controller folders, both earlier failures and empty local
+receipts. Do not repeat cleanup, rerun models/audits or activate validation after
+failed selection. Any follow-up design is separately versioned and cannot
+relabel, silently retune or pool these results as a passing calibration run.
 
-Original v1 and v2 controllers, failures and zero-byte local launch receipts
-remain unchanged. V3 uses a separate Mistral launch receipt. Never restart any
-occupied controller or duplicate a stage. Inspect original task workspace:
-  work/resume-20261014/sampling_v1/mistral_resume_v3_a01/
-  intent.json (PID/source pins), events.jsonl, completion.json or failure.json
-Stop after any SSH refusal/timeout; preserve receipts and reconcile before action.
+Authoritative public result:
+  local_run/local_llm_execution_20261014/llm_selection_v3_terminal_result.json
+Exact private completion/review copies:
+  local_workspace/reports/llm-only-v3-selection-completion-a01/
+Private inference/audit/statistics outputs remain in their existing report roots.
+Controller evidence in the original task:
+  work/resume-20261014/sampling_v1/mistral_resume_v3_a01/completion.json
+  events.jsonl and all retained per-stage receipts/reviews
 
-Public receipts: local_run/local_llm_execution_20261014/
-  llm_storage_clearance.json; llm_qwen_output_audit_result.json
-  llm_mistral_launch_repair_and_resumption_v3.json
-New source archives: local_run/llm_mistral_launch_adapter_v2_20261014/
-  and local_run/llm_mistral_resume_v3_20261014/
-Earlier storage-resumption and controller reports describe historical states.
-The chronological startup descriptions below are historical, not current status.
+Storage cleanup and operational launch repair are recorded separately. They
+preserved models/data/results and did not change the8GiB reserve, resource plan,
+activation, scientific prompts, seeds or selection rule. All earlier running,
+startup and storage-stop descriptions below are historical, not current status.
 
 ACTIVE POLICY: FULLY LLM, ZERO HUMAN ANNOTATION
 The user's latest instruction supersedes the earlier 50–100 author reviews.
