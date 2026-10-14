@@ -1,0 +1,161 @@
+{
+  "activation": {
+    "activated": true,
+    "activation": {
+      "bytes": 1609,
+      "sha256": "23b51d0b686fa9f3b8f6bd09232280a56ad2a6f3fd812710de059e2ec6470bc8"
+    },
+    "model_calls_started": 0,
+    "resource_plan": {
+      "bytes": 1456,
+      "sha256": "03090f20c0751f7866345cbf1c3b31341502e574cd40d2dbb1d4e39592231ad4"
+    },
+    "total_requests": 792
+  },
+  "all792_prompt_sequences_replayed": true,
+  "automatic_retries": false,
+  "context_overflow_requests": 0,
+  "controller_code_sha256": "8b18f4fe98bccf53ebca31c75a4b8c1daf8ab48e41c6b626b6c5af6c9f975272",
+  "controller_location": "task/work/resume-20261014/v4_pipeline_a01",
+  "finite_controller_active": true,
+  "human_annotation_calls": 0,
+  "inference_activated_at_this_observation": true,
+  "inference_package": {
+    "bytes": 2946,
+    "sha256": "ef7449595cb5a90e8fc8a009103f958eb92a73abc7943d52c19a552e816c4207"
+  },
+  "portable_controller_source": "local_run/llm_v4_controller_v1_20261014/continue_pipeline.py",
+  "project_complete": false,
+  "qualification": {
+    "accounting": "13640|COMPLETED|0:0|19||csis.cn1\n13640.batch|COMPLETED|0:0|19|1060K|csis.cn1\n",
+    "console_tail": "{\"passed\": true, \"models\": {\"mistral\": {\"requests\": 396, \"all_full_token_sequences_exact\": true, \"overflow_requests\": 0}, \"qwen\": {\"requests\": 396, \"all_full_token_sequences_exact\": true, \"overflow_requests\": 0}}}\n",
+    "exit": "0:0",
+    "node": "csis.cn1",
+    "observed_utc": "2026-10-14T10:24:54.631059+00:00",
+    "result": {
+      "models": {
+        "mistral": {
+          "all_full_token_sequences_exact": true,
+          "overflow_requests": 0,
+          "requests": 396
+        },
+        "qwen": {
+          "all_full_token_sequences_exact": true,
+          "overflow_requests": 0,
+          "requests": 396
+        }
+      },
+      "package_sha256": "ef7449595cb5a90e8fc8a009103f958eb92a73abc7943d52c19a552e816c4207",
+      "passed": true,
+      "schema": "third-v4-producer-consumer-qualification-v1"
+    },
+    "result_binding": {
+      "bytes": 2168,
+      "sha256": "09b65e7a1a85fb58facdd72402d23030edba657d21165aed499ecab85d12e54a"
+    },
+    "state": "COMPLETED"
+  },
+  "queue_note": "Both A100 devices were allocated at 10:07 UTC. Queue wait is unknown.",
+  "qwen_job": "13641",
+  "qwen_last_observed_state": "PENDING",
+  "qwen_launch": {
+    "created_utc": "2026-10-14T10:25:02.762917+00:00",
+    "job_id": "13641",
+    "mode": "qwen",
+    "package_sha256": "ef7449595cb5a90e8fc8a009103f958eb92a73abc7943d52c19a552e816c4207",
+    "quota": {
+      "available_soft_bytes": 12394659840,
+      "hard_kib": 1048576000,
+      "soft_kib": 1047527424,
+      "used_kib": 1035423264
+    },
+    "stage_allowance_bytes": 301989888
+  },
+  "remaining_project_work": [
+    "Complete v4 selection and fresh validation if a threshold passes",
+    "Freeze task labels, learner settings and source panels",
+    "Run source-disjoint development, exact repair and strong B-E comparisons with complete resource accounting",
+    "Close all registered-family outcomes and model-only interpretation scope",
+    "Produce the bound figures, tables, claim ledger and reproducibility release"
+  ],
+  "request_preparation_package_sha256": "2995c12d996b362e13eb273a54807a95c3516e8a223bc34efc77dc53220050db",
+  "requests": {
+    "accounting": "13639|COMPLETED|0:0|25||csis.cn1\n13639.batch|COMPLETED|0:0|25|3220K|csis.cn1\n",
+    "console_tail": "{\"passed\": true, \"selected_pairs\": 360, \"planned_requests\": 792}\n",
+    "exit": "0:0",
+    "node": "csis.cn1",
+    "observed_utc": "2026-10-14T10:23:42.606178+00:00",
+    "result": {
+      "package_sha256": "2995c12d996b362e13eb273a54807a95c3516e8a223bc34efc77dc53220050db",
+      "passed": true,
+      "plan_sha256": "10ebb3cb8f872c2efaf69306ca5bb23dcec2a015b2747988aafa31485dbbdcae",
+      "planned_requests": 792,
+      "schema": "third-llm-v4-requests-v1",
+      "selected_pairs": 360,
+      "swap_pairs": 36
+    },
+    "result_binding": {
+      "bytes": 7311,
+      "sha256": "334e193f0cac3aa0d36bac510d06719b98efe5f715b031b7944c1c1ec7757db4"
+    },
+    "state": "COMPLETED"
+  },
+  "requests_complete": true,
+  "requests_job": "13639",
+  "requests_launched": true,
+  "sampling": {
+    "accounting": "13636|COMPLETED|0:0|1255||csis.cn1\n13636.batch|COMPLETED|0:0|1255|144264K|csis.cn1\n",
+    "console_tail": "{\"pairs\": 10000000, \"elapsed_seconds\": 59.434318110346794}\n{\"pairs\": 20000000, \"elapsed_seconds\": 115.87625238858163}\n{\"pairs\": 30000000, \"elapsed_seconds\": 172.19248463399708}\n{\"pairs\": 40000000, \"elapsed_seconds\": 228.7995480503887}\n{\"pairs\": 50000000, \"elapsed_seconds\": 285.23355781659484}\n{\"pairs\": 60000000, \"elapsed_seconds\": 341.57935167104006}\n{\"pairs\": 70000000, \"elapsed_seconds\": 397.9422387238592}\n{\"pairs\": 80000000, \"elapsed_seconds\": 454.46757493540645}\n{\"pairs\": 90000000, \"elapsed_seconds\": 510.96756050363183}\n{\"pairs\": 100000000, \"elapsed_seconds\": 567.5891897138208}\n{\"pairs\": 110000000, \"elapsed_seconds\": 624.352145826444}\n{\"pairs\": 120000000, \"elapsed_seconds\": 680.5219509433955}\n{\"pairs\": 130000000, \"elapsed_seconds\": 737.0547297280282}\n{\"pairs\": 140000000, \"elapsed_seconds\": 793.6292578671128}\n{\"pairs\": 150000000, \"elapsed_seconds\": 850.9322165027261}\n{\"pairs\": 160000000, \"elapsed_seconds\": 907.4831059165299}\n{\"pairs\": 170000000, \"elapsed_seconds\": 964.3150451462716}\n{\"pairs\": 180000000, \"elapsed_seconds\": 1021.2405278626829}\n{\"pairs\": 190000000, \"elapsed_seconds\": 1078.3042664192617}\n{\"pairs\": 200000000, \"elapsed_seconds\": 1135.0236645825207}\n{\"pairs\": 210000000, \"elapsed_seconds\": 1191.9717755634338}\n{\"pairs\": 220000000, \"elapsed_seconds\": 1249.2723540272564}\n{\"passed\": true, \"selected_pairs\": 360, \"swap_pairs\": 36}\n",
+    "exit": "0:0",
+    "node": "csis.cn1",
+    "observed_utc": "2026-10-14T10:22:30.889893+00:00",
+    "result": {
+      "package_sha256": "959d32cfeb07598d7eb453f1564f2f4f1566227e62792bd9fab5e38a69dedcff",
+      "pair_count": 220405510,
+      "passed": true,
+      "plan_sha256": "10ebb3cb8f872c2efaf69306ca5bb23dcec2a015b2747988aafa31485dbbdcae",
+      "populations": [
+        0,
+        211629571,
+        3507019,
+        2212392,
+        1406455,
+        854947,
+        470156,
+        218575,
+        81689,
+        21557,
+        2866,
+        245,
+        38
+      ],
+      "sample_counts": [
+        0,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "schema": "third-llm-tail-selection-v4",
+      "score_stream_sha256": "899114828d4f9d130d57f900660efc5d07f6b90e4a76c76d3eaedc7233323ea2",
+      "selected_pairs": 360,
+      "swap_pairs": 36
+    },
+    "result_binding": {
+      "bytes": 2682,
+      "sha256": "04814d0904d02d7c955e9827903d116e49c80fc58d2de6b71e2b2207eb318e9e"
+    },
+    "state": "COMPLETED"
+  },
+  "sampling_job": "13636",
+  "schema": "third-v4-execution-progress-v1",
+  "updated_utc": "2026-10-14T10:29:06.819892+00:00"
+}

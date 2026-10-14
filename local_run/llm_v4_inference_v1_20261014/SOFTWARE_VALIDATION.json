@@ -1,0 +1,18 @@
+{
+  "tests": 8,
+  "errors": 0,
+  "failures": 0,
+  "passed": true,
+  "created_utc": "2026-10-14T10:17:29.704046+00:00",
+  "checks": [
+    "generation, loading and token-verification functions byte-identical to v3",
+    "independent v4 call-ID reconstruction",
+    "legacy identity and retry refusal",
+    "missing status preservation",
+    "strict threshold and full-denominator analytic fixtures",
+    "console success and output-cap termination",
+    "undefined-name static check for new inference package"
+  ],
+  "scope": "software qualification only; actual v4 token replay is required before activation",
+  "dependency_static_warning_review": "Sealed v4 request preparer has a conservative closure warning for tokenizer after del. Output.jsonl synchronously exhausts token_rows before del; no generator escapes. Source preserved; actual token execution still required."
+}
