@@ -1,0 +1,93 @@
+{
+  "confirmatory_study_ready": false,
+  "controller_intent": {
+    "bytes": 15109,
+    "sha256": "70cf4e6ccba3c19970a8137c47932049633679bb49e6a138e7620e8c948aaf1f"
+  },
+  "controller_pid": 13247,
+  "controller_state_folder": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/resume-20261014/sampling_v1/storage_resume_v2_a01",
+  "controller_status": "running",
+  "events": [
+    {
+      "pid": 13247,
+      "quota_available_bytes": 12820467712,
+      "stage": "storage_resumption_started",
+      "utc": "2026-10-14T08:36:45.239922+00:00"
+    },
+    {
+      "job_id": "13574",
+      "model_calls_repeated": 0,
+      "review": {
+        "bytes": 1935,
+        "sha256": "ab88f6feb94e2c6be44ad326aeda5379fc89d1f971052ed31652c5ce735f8859"
+      },
+      "stage": "reused_completed_qwen_review",
+      "utc": "2026-10-14T08:36:45.241519+00:00"
+    },
+    {
+      "job_id": "13623",
+      "mode": "qwen",
+      "receipt": {
+        "bytes": 5028,
+        "sha256": "a21576ca9e4482f2d991a247fce9236d7dca4bcecf3ae053c9f46f06caf52331"
+      },
+      "stage": "postprocess_submitted_once",
+      "utc": "2026-10-14T08:36:49.212232+00:00"
+    },
+    {
+      "job_id": "13623",
+      "mode": "qwen",
+      "stage": "observed_postprocess",
+      "state": "RUNNING",
+      "utc": "2026-10-14T08:36:52.851711+00:00"
+    }
+  ],
+  "human_annotation_calls": 0,
+  "local_resumption_tests_passed": 6,
+  "old_controller_and_empty_receipt_preserved": true,
+  "planned_model_requests_unchanged": 198,
+  "qwen_model_calls_repeated": 0,
+  "qwen_model_job": "13574",
+  "recurring_automation": false,
+  "schema": "third-storage-resumption-checkpoint-v2",
+  "semantic_validity_established": false,
+  "source_package": {
+    "bytes": 784,
+    "sha256": "30a863cd23a03ac35438b422d68c8840084be7e740d207a71eedd482860e0ff0"
+  },
+  "storage_clearance": {
+    "cache_script": {
+      "bytes": 6824,
+      "sha256": "a59c5e7575db92e351bc53c828809d3e2514c204216e6a205d8de55fc92d8277"
+    },
+    "cleanup_job": "13621",
+    "exit_code": "0:0",
+    "fresh_quota_required_at_each_stage": true,
+    "human_annotation_calls": 0,
+    "inspection_job": "13620",
+    "installed_environments_modified": false,
+    "mistral_admission_required_bytes": 8690597888,
+    "models_datasets_or_results_deleted": false,
+    "observed_utc": "2026-10-14T08:34:38.397901+00:00",
+    "private_plan": {
+      "bytes": 6894,
+      "sha256": "e6eb088d031b2e094d0a0a5c69735e8d4f5faf67fc1099aec815d417817f1989"
+    },
+    "private_result": {
+      "bytes": 420,
+      "sha256": "7ad7cc1e3cf78825a2b5698c0313a0b7e2a5c8039280f0467b5632fc1224d86b"
+    },
+    "quota_after_bytes": 12820471808,
+    "quota_before_bytes": 7102267392,
+    "removed_allocated_bytes": 5718274048,
+    "removed_cache_entries": 7,
+    "removed_files": 14,
+    "schema": "third-storage-clearance-v1",
+    "scope": "Pip HTTP download cache only; seven-day minimum age; regular files owned by account, single hard link, exact metadata rechecked before unlink.",
+    "state": "COMPLETED",
+    "storage_gate_cleared_at_observation": true,
+    "unchanged_reserve_bytes": 8589934592,
+    "user_authorized_cleanup": true
+  },
+  "updated_utc": "2026-10-14T08:40:01.405690+00:00"
+}

@@ -1,20 +1,33 @@
 THIRD — LOCAL / CLUSTER CHECKPOINT
-Updated 14 October 2026, 08:21:40 UTC observation
+Updated 14 October 2026, storage cleared and bounded pipeline resumed
 
-CURRENT STATE — QWEN COMPLETE; CONTROLLER STOPPED ON STORAGE GATE
-Qwen13574 completed0:0 on csis.cn3 in2,634 seconds. All99 responses have runner
-status valid; exact exported bytes and planned call identities passed local review.
-The independent CPU prompt/output/grammar audit has NOT run yet.
-At07:08:23 UTC, controllera01 stopped before the audit launch because available
-quota failed the unchanged8GiB reserve plus32MiB audit allowance. No audit intent
-or job was created. At08:21:40 UTC, available soft quota was7,320,109,056bytes.
-The audit needs1,303,379,968 additional bytes; Mistral needs1,370,488,832bytes
-(about1.3GiB). No Third jobs are active and Mistral has not been submitted.
-Do not restart controllera01 or repeat Qwen. Preserve its failed local receipt.
-Restore capacity, recheck quota/receipts, and resume from the Qwen output audit.
-Do not delete retained evidence or lower the frozen reserve. Estimated remaining
-execution after capacity returns:45–75minutes plus queue time, not guaranteed.
-Public result: local_run/local_llm_execution_20261014/llm_qwen_completed_storage_stop.json
+CURRENT STATE — STORAGE CLEARED; QWEN OUTPUT AUDIT RUNNING
+Authorized cleanup13621 completed0:0 after inspection13620 on csis.cn1.
+Seven old pip HTTP download-cache entries (14 unshared regular files) were
+removed:5,718,274,048 allocated bytes (5.33GiB). Quota was12,820,471,808bytes
+available at08:34:38 UTC. The8GiB reserve remains; each launch rechecks quota.
+Installed environments, model weights, datasets and research results were outside
+the cleanup allowlist. Exact private plans and deletion journals are retained.
+
+Qwen13574 completed99 requests in2,634seconds; it is reused without rerunning.
+The actual Qwen CPU output audit13623 launched at08:36:49 UTC and was last
+observed RUNNING. Its terminal output replay/review has not yet been accepted.
+The new one-shot local controller PID13247 owns the serial remaining stages:
+Qwen audit -> Mistral99requests -> Mistral audit -> frozen selection statistics.
+No human annotations, new sampling/activation, model retries or threshold changes.
+
+The original controllera01 failure and zero-byte local launch receipt remain
+unchanged. Its failed preflight created no remote audit intent/job. V2 uses a
+separate Qwen audit-launch receipt and exact same remote audit package.
+Never restart either occupied controller slot or duplicate a stage. First inspect:
+  original task work/resume-20261014/sampling_v1/storage_resume_v2_a01/
+  intent.json (PID/source pins), events.jsonl, completion.json or failure.json
+Stop after any SSH refusal/timeout; preserve receipts and reconcile before action.
+A selection failure remains a negative result; no automatic validation follows.
+
+Public receipts: local_run/local_llm_execution_20261014/
+  llm_storage_clearance.json; llm_storage_resumption_v2.json
+Source archive: local_run/llm_storage_resume_v2_20261014/
 The chronological startup descriptions below are historical, not current status.
 
 ACTIVE POLICY: FULLY LLM, ZERO HUMAN ANNOTATION

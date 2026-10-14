@@ -1,0 +1,25 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 2710,
+      "sha256": "3d9f4cc86298e891f6be3f6005629da5e9262a4a56ebde9b297de5bcdc98df27"
+    },
+    "pip_cache_cleanup.py": {
+      "bytes": 6824,
+      "sha256": "a59c5e7575db92e351bc53c828809d3e2514c204216e6a205d8de55fc92d8277"
+    },
+    "review_postprocess_terminal_v2.py": {
+      "bytes": 10475,
+      "sha256": "2f642289e8a5755eab4b121a48222265be26f420ea64a9f1b28a08832ade2450"
+    },
+    "run_storage_resume_v2.py": {
+      "bytes": 6713,
+      "sha256": "ffa49e3b2a3d5f79a5368b0be62e09ee5dd1a58b5a73a9ef70224a4fa8886564"
+    },
+    "test_resumption.py": {
+      "bytes": 1983,
+      "sha256": "fb18335d9cce94b309f16d86fb687d3871a74ee01a1ca43e2b87c3a2171cb511"
+    }
+  },
+  "schema": "third-local-storage-resume-package-v2"
+}
