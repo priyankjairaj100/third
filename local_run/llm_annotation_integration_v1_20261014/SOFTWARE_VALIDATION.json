@@ -1,0 +1,57 @@
+{
+  "actual_new_GPU_orchestration_tested": false,
+  "development_failures_preserved_in_chat": "Initial synthetic LMFE vocabulary lacked free-text tokens and a complete first-character alphabet. Fixture was corrected to ASCII; no production inputs/results changed.",
+  "entropy_draws": 0,
+  "errors": 0,
+  "failures": 0,
+  "first_GPU_call_policy": "First generation is a counted planned call; no unreported engineering model calls.",
+  "human_annotation_calls": 0,
+  "independent_reviews": [
+    "Root independently ran16tests/0skips and reviewed admission/audit/ingestion.",
+    "handoff_audit independently ran final16tests/0skips and reviewed final role/inventory/ordinary-error checks."
+  ],
+  "interpreter": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a/work/annotation-v3-testenv/bin/python",
+  "model_calls": 0,
+  "passed": true,
+  "pending_execution_gates": [
+    "Final runner/control seals and externally reviewed resource/admission.",
+    "CPU Slurm actual198-request qualification plus prior exposed-output token replay.",
+    "Exclusive activation publication by root after qualification and fresh resources."
+  ],
+  "production_activation_created": false,
+  "recorded_utc": "2026-10-14T06:06:58.293557+00:00",
+  "schema": "third-llm-annotation-integration-software-validation-v1",
+  "skipped": 0,
+  "source_bindings": {
+    "README.txt": {
+      "bytes": 6636,
+      "sha256": "bee74e848029dcf075040ea0916ac70d66b6c85702c569ef021479ad20d505d5"
+    },
+    "activation.py": {
+      "bytes": 10915,
+      "sha256": "399f863c270b1da8764cae0a6ed95a9bb054845ac9b5f8653cc5326cd88df29f"
+    },
+    "audit.py": {
+      "bytes": 25138,
+      "sha256": "ae908c29e49d829537ad41c834b57816f343da8cff6df20ee62df0a4fb1d2708"
+    },
+    "common.py": {
+      "bytes": 3878,
+      "sha256": "cb6e2b3f7a8cb8bda7f778b24b0efdada72fc88e32e4851b781fb83add49a647"
+    },
+    "expectations.json": {
+      "bytes": 16689,
+      "sha256": "67dfb3522b54d3891365b6fd92fb1dcbe4a80d88e8a1976ac664d7c0435768d9"
+    },
+    "ingest.py": {
+      "bytes": 7628,
+      "sha256": "f2c087bcfa4b938230f6f0626fdeb426fdc3ff341b541c463d7cfc725d6cb9cf"
+    },
+    "test_integration.py": {
+      "bytes": 12935,
+      "sha256": "0411f40bb9a2ff45768e3c10170a194b1cffdb2e6ee5043d17f9c1c5a798bdcc"
+    }
+  },
+  "syntax": "All Python source ASTs passed.",
+  "tests": 16
+}

@@ -1,0 +1,87 @@
+{
+  "families": {
+    "mistral": {
+      "console_limit_bytes": 14680064,
+      "cpus": 4,
+      "gpu_count": 1,
+      "gpu_model": "A10080GB",
+      "host_memory_bytes": 68719476736,
+      "output_dir": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/qualification/llm-only-v3-selection-mistral-a01/run/output",
+      "output_limit_bytes": 67108864,
+      "slurm_time_seconds": 14400
+    },
+    "qwen": {
+      "console_limit_bytes": 14680064,
+      "cpus": 4,
+      "gpu_count": 1,
+      "gpu_model": "A10080GB",
+      "host_memory_bytes": 51539607552,
+      "output_dir": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/qualification/llm-only-v3-selection-qwen-a01/run/output",
+      "output_limit_bytes": 67108864,
+      "slurm_time_seconds": 14400
+    }
+  },
+  "packages": {
+    "component": {
+      "bytes": 1251,
+      "sha256": "7bc506e2f7df244ac06782118400388708db1097420ca616f03a2cd196e442bb"
+    },
+    "control": {
+      "bytes": 883,
+      "sha256": "8999a6328c13dff99cea662944b31a10f5a6f9d50c37cfd0d91e5cfb4c715a6c"
+    },
+    "integration": {
+      "bytes": 962,
+      "sha256": "6baf3ffaa5d64304293e382913db8b2943ea2de17fb142a50c54659697d2fedb"
+    },
+    "preparation": {
+      "bytes": 958,
+      "sha256": "bf70b015f39ad0421d8bf66f6b357123f24aceaf9f99b5158fb9b51f490e92d7"
+    },
+    "protocol": {
+      "bytes": 994,
+      "sha256": "56e97fe1b55f4047f4b8ddac1c7db00be22d69d45b270c8b31beab33d685aa01"
+    },
+    "runner": {
+      "bytes": 1377,
+      "sha256": "221774c18ac2b1ab99cc37880cec45c2e36c4d547a882ef81a7d329d86472387"
+    },
+    "statistics": {
+      "bytes": 754,
+      "sha256": "d622e951c9d2eba9fc6b694645512d425d17872818fbb4109c4819e9bdb14311"
+    }
+  },
+  "planned": {
+    "canonical_pairs": 90,
+    "per_model": 99,
+    "swap_pairs": 9,
+    "total": 198
+  },
+  "policy": {
+    "invalid_json_and_overflow_retain_denominator": true,
+    "no_retries": true,
+    "one_model_per_process": true,
+    "remaining_after_runtime_error": "not_attempted",
+    "stop_on_runtime_error": true
+  },
+  "quota": {
+    "reserve_bytes": 8589934592,
+    "total_output_commitment_bytes": 201326592
+  },
+  "request_manifest": {
+    "bytes": 6268,
+    "sha256": "ca81b6bf7f60d6805245a4c9d74e1e42e2db4794caa04d60e74f7052d97fc6a2"
+  },
+  "request_review": {
+    "bytes": 23900,
+    "sha256": "5a8142889333338fa1bc3fa00837b23f645309220681fb83376900d720f9ec5c"
+  },
+  "sampling_lock": {
+    "bytes": 7535,
+    "sha256": "52823fc3cbfcc358f58dab29a21b5d01746bd0dbc8cd90c232113cae4c8d39b7"
+  },
+  "schema": "third-llm-selection-resource-plan-v1",
+  "sha256": "186ed94dd987a4c8bc48ab521f29263799a57d153db247ad87ef614dd90df5e2",
+  "source_role": "model-assessed development; no human validity or publisher authenticity",
+  "stage": "selection"
+}

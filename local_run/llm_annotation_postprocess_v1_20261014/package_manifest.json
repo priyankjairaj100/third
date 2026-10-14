@@ -1,0 +1,29 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 3723,
+      "sha256": "7238abfdb234f7a593f0db294244a62e9d741f6674b3f351c90629552a8b31bb"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 1610,
+      "sha256": "d7f5d56e6f6a6ad63bde4a4a0ebb91e784a1bb34bc49034fc99ca304c66f20c6"
+    },
+    "control.py": {
+      "bytes": 13122,
+      "sha256": "2ea3dd973dcf8e7df88e8b1847f08c6241278f353efb33a30d2f3b58feeca47b"
+    },
+    "postprocess.sbatch": {
+      "bytes": 1263,
+      "sha256": "69f8628558b4f8e6f9b8eb8b3e9ce25daa69660ac4434b5abc834c5174399a4e"
+    },
+    "runner.py": {
+      "bytes": 5315,
+      "sha256": "71c218e5c70b6ae7de05b514423856d2fadda5b55fc95fc2a57899472b773874"
+    },
+    "test_postprocess.py": {
+      "bytes": 5472,
+      "sha256": "ae9707e10c00e86cb69af5b1c5960c6283481a1c3f20a70662aa7bb2c2c1dcdb"
+    }
+  },
+  "schema": "third-llm-postprocess-package-v1"
+}

@@ -1,5 +1,5 @@
 THIRD — LOCAL / CLUSTER CHECKPOINT
-Updated 14 October 2026, 05:59 UTC
+Updated 14 October 2026, 06:25:45 UTC observation
 
 ACTIVE POLICY: FULLY LLM, ZERO HUMAN ANNOTATION
 The user's latest instruction supersedes the earlier 50–100 author reviews.
@@ -20,12 +20,24 @@ Prepared 198 requests (99 per model), using 180 unique full texts. Zero overflow
 maximum input lengths are 13,838 Qwen / 14,171 Mistral tokens. No truncation.
 Independent offline replay reproduced all 198 token sequences and prompt hashes.
 Eight request-auditor mutation tests passed independently. No weights were loaded.
+13573: CPU producer/consumer qualification, COMPLETED 0:0, 22 seconds, csis.cn1.
+All 82 tests passed with zero skips/errors/failures. All 198 full token sequences
+were replayed in the pinned CPU runtime; two fixed historical engineering outputs
+passed token, grammar and guard replay. Independent review verified all 22 files
+(90,821 bytes), 117 input bindings and package/command receipts. No model weights
+were loaded, no new model calls were made and no activation was created by this
+qualification. Child maximum RSS was 1,122,016 KiB; Slurm wrapper 1,060K is not
+whole-process memory. Actual new GPU execution remained untested at that point.
 
 Public results: local_run/local_llm_execution_20261014/
   llm_selection_terminal_result.json
   llm_selection_terminal_independent_review.json
   llm_requests_v2_terminal_result.json
   llm_requests_v2_independent_token_review.json
+  llm_inference_qualification_independent_review.json
+  audit_inference_qualification.py (exact local review source; private inputs required)
+  llm_inference_qualification_review_source.json
+  llm_inference_activation_and_qwen_launch.json
 Private terminal artifacts remain under ignored local_workspace/reports/.
 
 PRESERVED PRELAUNCH FAILURE
@@ -35,18 +47,45 @@ staged or run. Corrected v2 passed source review and actual token replay.
 The independent local auditor initially lacked Jinja2; it used already-installed
 Jinja2/MarkupSafe without downloads. No request or production outcome changed.
 
-NEXT: INFERENCE INTEGRATION — NO V3 LABELS OR ACTIVATION YET
-Inference components passed 30 tests; pure statistics passed 14 tests. New runner,
-activation admission, independent output audit, statistics ingestion and Slurm
-control are being integrated. Do not launch incomplete or unsealed packages.
-CPU qualification will exercise the actual prepared requests in the pinned
-runtime with stubbed generation. The first real GPU generation will count as its
-planned attempt under the activation; no unrecorded probe or retry is permitted.
-Planned resource limits: one A100 80GB and 4 CPUs per family; Qwen 48 GiB host RAM,
-Mistral 64 GiB; four-hour Slurm caps, 64 MiB output caps, and an 8 GiB quota reserve.
-These are prospective limits, not observed runtime guarantees. Families run serially.
-Missing or failed responses remain in the full denominator; swaps are diagnostics.
-Inspect current scheduler/receipts before any new submission.
+ACTIVE: QWEN 13574 RUNNING AT LAST OBSERVATION; NO ACCEPTED V3 LABELS
+Activation was created once at 06:23:02 UTC, then Qwen was submitted once as job
+13574 at 06:23:19 UTC. At 06:25:45 UTC it was RUNNING on csis.cn3 (2:26 elapsed),
+with two durable call intents, one durable completion and no terminal result.
+No partial labels have been read. These counts are progress metadata only.
+Mistral has not been submitted and remains pending serial execution.
+Activation: 2,189 bytes,
+  2de33cf3a91c51d8ce219df92c0e7b77678d5002f3aaa621850ccb53345620bf
+Admission: 4,087 bytes,
+  2a39e6f877cca49f823265a4c6589b013aecde342df776fdff14c6d9404e5df7
+Qualification result: 5,519 bytes,
+  dbdbd7279a7ca877564a344436e6d7167a5914e375bd14d8abb0d2cd4f0b4e2e
+Independent qualification review: 4,419 bytes,
+  4cf979bdce5a403c59c4eb25540a268f26060377bd3cfd78a4432576398e2ca2
+The first real generation counts as its planned attempt; no unrecorded probe,
+retry, new seed or resampling is permitted. Missing/failed responses retain their
+full denominator weight; order swaps are diagnostics, not additional labels.
+One A100 80GB and four CPUs per family; Qwen 48 GiB host RAM, Mistral 64 GiB;
+four-hour Slurm caps, 64 MiB output caps and an unchanged 8 GiB quota reserve.
+These are limits, not observed runtime guarantees. Qwen launch admitted 192 MiB
+remaining output commitment against 8,854,024,192 available bytes. Quota checks
+are snapshots, not reservations.
+The sealed CPU postprocessing package passed 12 independent software tests and
+was staged. Its manifest is 885 bytes,
+  dbdd004e7f4277eac873228188a95e47ca1ee994d776a3b1316f80627c378eb2
+No production output audit or paired-model statistics have run yet.
+
+EXACT NEXT RESUMPTION
+1. Inspect existing job 13574 queue/accounting and the fixed launch intent,
+   receipt and output metadata before any action. Preserve an uncertain/failed
+   job; never recreate activation or resubmit its occupied Qwen slot.
+2. After terminal status, preserve/export bounded raw evidence and use the sealed
+   CPU postprocessor with exact activation/result bindings. A completion count
+   or zero exit alone is not an accepted model judgment. Quarantine failures.
+3. Submit Mistral once through the sealed serial controller only after required
+   Qwen terminal evidence, a clear project queue and fresh quota/remaining-output
+   checks. It must use the existing activation and unchanged 99-request panel.
+4. Audit both eligible completed families before statistics ingestion. Independent
+   held-out validation remains a later separate stage requiring fresh calls.
 
 IMMUTABLE RANDOMNESS AND SOURCES
 Sampling lock was created once with four OS seeds. Never regenerate or duplicate.
@@ -55,6 +94,10 @@ Remote roots beneath local_workspace/qualification:
   llm-only-v3-sampling-lock-a01
   llm-selection-sampler-v1-20261014-selection-a01
   llm-annotation-requests-v2-20261014-selection-a01
+  llm-only-v3-execution-qualification-a01
+  llm-only-v3-selection-admission-a01
+  llm-only-v3-annotation-activation-a01
+  llm-only-v3-selection-qwen-a01
 Array 13498 completed all 32 tasks; 140,250 documents encoded and freshly replayed.
 Assembly 13546 and calibration frame 13556 are complete. Historical model pilots
 had 40 shared engineering pairs and zero joint positives; retain that negative result.

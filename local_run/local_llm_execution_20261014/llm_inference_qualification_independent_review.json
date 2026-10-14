@@ -1,0 +1,118 @@
+{
+  "activation_created": false,
+  "actual_token_replay_rows": 198,
+  "all117_input_bindings_verified": true,
+  "all_transport_and_extracted_bytes_verified": true,
+  "canonical_pairs": 90,
+  "checks": [
+    "exact qualified package members and sealed source dependencies",
+    "full launch/intent/child/suite command bindings",
+    "actual raw82-test logs with zero failures/errors/skips",
+    "198 tokenizer execution receipts and exact schedules/identities agree with prior independent local full-ID replay",
+    "two fixed already-exposed historical calls with exact18artifact bytes; reported token/grammar/guard success",
+    "all117 input identities plus source-bound absence of weight/model/activation calls"
+  ],
+  "children_maxrss_kib_linux": 1122016,
+  "confirmatory_study_ready": false,
+  "diagnostic_swaps": 9,
+  "elapsed_seconds": 22,
+  "entropy_draws": 0,
+  "errors": 0,
+  "exit_code": "0:0",
+  "failures": 0,
+  "historical_artifacts_independently_matched": 18,
+  "historical_engineering_replay_manifest": {
+    "bytes": 3785,
+    "sha256": "76c229739d0c6d1a012b9d922b5504999df919e592a607c4a7700a15d87b9c16"
+  },
+  "historical_outputs_replayed": 2,
+  "human_annotation_calls": 0,
+  "job_id": "13573",
+  "limitations": [
+    "Remote tokenizer and historical guard execution is attested by the sealed CPU program and terminal artifacts; this review does not rerun that job.",
+    "Prior request review independently replayed every full input ID/render hash locally; complete source/frame mapping remains separately bound earlier execution evidence.",
+    "No new GPU inference, labels, semantic validity, publisher authenticity, held-out validation or original human-gate completion established."
+  ],
+  "matches_prior_independent_full_local_token_replay": true,
+  "maxrss_interpretation": "Child resource.getrusage maximum1122016KiB; Slurm1060K is wrapper-only and not full process memory.",
+  "model_calls": 0,
+  "model_weights_loaded": false,
+  "new_gpu_orchestration_tested": false,
+  "node": "csis.cn1",
+  "overflow_requests": 0,
+  "packages": {
+    "component": {
+      "bytes": 1251,
+      "sha256": "7bc506e2f7df244ac06782118400388708db1097420ca616f03a2cd196e442bb"
+    },
+    "control": {
+      "bytes": 883,
+      "sha256": "8999a6328c13dff99cea662944b31a10f5a6f9d50c37cfd0d91e5cfb4c715a6c"
+    },
+    "integration": {
+      "bytes": 962,
+      "sha256": "6baf3ffaa5d64304293e382913db8b2943ea2de17fb142a50c54659697d2fedb"
+    },
+    "preparation": {
+      "bytes": 958,
+      "sha256": "bf70b015f39ad0421d8bf66f6b357123f24aceaf9f99b5158fb9b51f490e92d7"
+    },
+    "protocol": {
+      "bytes": 994,
+      "sha256": "56e97fe1b55f4047f4b8ddac1c7db00be22d69d45b270c8b31beab33d685aa01"
+    },
+    "runner": {
+      "bytes": 1377,
+      "sha256": "221774c18ac2b1ab99cc37880cec45c2e36c4d547a882ef81a7d329d86472387"
+    },
+    "statistics": {
+      "bytes": 754,
+      "sha256": "d622e951c9d2eba9fc6b694645512d425d17872818fbb4109c4819e9bdb14311"
+    }
+  },
+  "passed": true,
+  "per_model_requests": 99,
+  "production_call_ids_created": false,
+  "qualification": {
+    "bytes": 5519,
+    "sha256": "dbdbd7279a7ca877564a344436e6d7167a5914e375bd14d8abb0d2cd4f0b4e2e"
+  },
+  "qualification_internal_seal": "6498460f8c385d39945138d0d82d79d92eb92cbf0129be1b5da44528bb2666e1",
+  "request_independent_review": {
+    "bytes": 23900,
+    "sha256": "5a8142889333338fa1bc3fa00837b23f645309220681fb83376900d720f9ec5c"
+  },
+  "request_manifest": {
+    "bytes": 6268,
+    "sha256": "ca81b6bf7f60d6805245a4c9d74e1e42e2db4794caa04d60e74f7052d97fc6a2"
+  },
+  "resource_plan": {
+    "bytes": 2756,
+    "sha256": "5d5337cbf90119b87760c5f2feca1a8ef2ed5536a88c1953bacabcf68af54b9e"
+  },
+  "review_source": {
+    "bytes": 15594,
+    "sha256": "2f1cb6ff0147c62b8c90d4d392a2ae2ea42344f3f521c1c3869452afde32f1f8"
+  },
+  "schema": "third-llm-inference-qualification-independent-review-v1",
+  "semantic_validity_established": false,
+  "skipped": 0,
+  "source_authenticity_verified": false,
+  "state": "COMPLETED",
+  "suite_counts": {
+    "components": 30,
+    "control": 8,
+    "execution": 14,
+    "integration": 16,
+    "statistics": 14
+  },
+  "terminal_export": {
+    "bytes": 124697,
+    "sha256": "3423e973aa89009e5b6f595bea45a7b473efb72fd2893a8beb383757a8d7993c"
+  },
+  "tests": 82,
+  "transport_bytes": 90821,
+  "transport_files": 22,
+  "weight_bytes_rehashed": false,
+  "whole_child_seconds_through_exit": 20.72633576951921
+}

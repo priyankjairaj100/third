@@ -1,0 +1,56 @@
+{
+  "activation_created": false,
+  "actual_198_row_cpu_qualification_executed": false,
+  "all_local_suites_zero_failures_errors_skips": true,
+  "execution_tests": {
+    "elapsed_seconds": 0.214983333,
+    "errors": 0,
+    "failures": 0,
+    "interpreter": "3.9.6 (default, Oct 18 2022, 12:41:40) \n[Clang 14.0.0 (clang-1400.0.29.202)]",
+    "skipped": 0,
+    "tests": 14
+  },
+  "independent_source_review": {
+    "bytes": 2377,
+    "sha256": "02b3e26e68226e5ee06d2ce072a8c82a769e744081c6fd8cddcb34e04112858d"
+  },
+  "integration_test_interpreter": "task-local annotation-v3-testenv; no torch required",
+  "limits": "Local software checks only. Actual pinned-env CPU qualification and reviewed activation still required before a counted production attempt.",
+  "model_calls": 0,
+  "new_gpu_orchestration_executed": false,
+  "other_locally_executed_suites": {
+    "components": 30,
+    "control": 8,
+    "integration": 16,
+    "statistics_via_test_only_relocation": 14
+  },
+  "passed": true,
+  "schema": "third-llm-annotation-execution-software-validation-v1",
+  "sources": {
+    "expectations.json": {
+      "bytes": 518,
+      "sha256": "9dd2a60dc370ceb25e537b080c7d3274cfd24ce68f9af42f979a0f1cb5f97939"
+    },
+    "qualify.py": {
+      "bytes": 16617,
+      "sha256": "0a405374fc661ed6f5146eeb4ce9eca156c802ab59ee879168c48a27a83ea01b"
+    },
+    "run_model.py": {
+      "bytes": 17012,
+      "sha256": "19673df18c5d745adc403aeb01a3f45112198cc32b9c125b318176a801135922"
+    },
+    "run_statistics_tests.py": {
+      "bytes": 1255,
+      "sha256": "6eb6942ac0839bb546fd65e0c60c0c996801086aa4995cefc15ae3d56ee4c519"
+    },
+    "test_execution.py": {
+      "bytes": 7163,
+      "sha256": "7111a60448159336f7430b6dfce3bcb6659c297ce10e4e33f7332844210969bc"
+    },
+    "test_qualification.py": {
+      "bytes": 4008,
+      "sha256": "2b0dc73a7f59fce5db63ade40ac67356db7e78b06e3e7c1cdcd314b48ed707ae"
+    }
+  },
+  "syntax_and_three_cli_help_checks_passed": true
+}

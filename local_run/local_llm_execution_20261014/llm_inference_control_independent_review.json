@@ -1,0 +1,52 @@
+{
+  "all18_historical_engineering_file_bindings_independently_matched_local_copies": true,
+  "bash_syntax_passed": true,
+  "changes_since_prior_clear": [
+    "fixed engineering replay manifest pin and qualification-only lineage binding",
+    "qualification-only manifest CLI flags",
+    "README disclosure"
+  ],
+  "concrete_blockers": [],
+  "engineering_manifest": {
+    "bytes": 3785,
+    "sha256": "76c229739d0c6d1a012b9d922b5504999df919e592a607c4a7700a15d87b9c16"
+  },
+  "files": {
+    "README.txt": {
+      "bytes": 2543,
+      "sha256": "afa7dcc2b361a1c88ea6e897a65472f0ad7b032e4e8cfe2cb21b035e9121ee41"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 612,
+      "sha256": "fc0cfae124f2bad4b5d8bf4f6df303717342c70bbb09b8a6c5b40d89ff49c8d1"
+    },
+    "control.py": {
+      "bytes": 11228,
+      "sha256": "c9ce1994de1b59ead62d2124412fafbb287a53d3410b5ce68f3b645537dca194"
+    },
+    "execute.sbatch": {
+      "bytes": 1290,
+      "sha256": "df5fd25f3ecf24bec6a3b509a1249d975ea705acbb3963bea8bc4e66187b6a32"
+    },
+    "runner.py": {
+      "bytes": 2608,
+      "sha256": "c6f577b6fdd84c42302959bd0f4fcd196d8ede5b6c616b9966007dddb8285a98"
+    },
+    "test_control.py": {
+      "bytes": 2857,
+      "sha256": "cd2c2a2ded09bb10bbefdd9e58099ba87d38d4b3829d3122c8e76cbb63850acc"
+    }
+  },
+  "jobs_submitted": 0,
+  "model_calls": 0,
+  "passed": true,
+  "remote_calls": 0,
+  "schema": "third-llm-execution-control-independent-source-review-v1",
+  "scope": "Prospective source/software clear. Fixed already exposed call0000 from each historical pilot is engineering-only; no new generation, selection labels, activation, jobs or entropy.",
+  "skips": 0,
+  "supersedes_for_final_unsealed_source": {
+    "bytes": 1889,
+    "sha256": "96b7c1eb2f0d051714e15e59cf6e331e6d14352c61d90cd3c4b7407e95b5568a"
+  },
+  "tests": 8
+}

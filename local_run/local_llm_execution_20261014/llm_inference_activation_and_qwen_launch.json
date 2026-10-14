@@ -1,0 +1,104 @@
+{
+  "activation": {
+    "bytes": 2189,
+    "sha256": "2de33cf3a91c51d8ce219df92c0e7b77678d5002f3aaa621850ccb53345620bf"
+  },
+  "activation_attempt": 0,
+  "activation_created_utc": "2026-10-14T06:23:02.202583+00:00",
+  "activation_entropy_draws": 0,
+  "activation_intent": {
+    "bytes": 175,
+    "sha256": "6bf623663453e036a9f8adb3d6fdba8047d8267aa1e96e3120904cc05d7a76c4"
+  },
+  "activation_job_submissions": 0,
+  "activation_model_calls": 0,
+  "activation_raw_bytes_and_internal_seal_locally_verified": true,
+  "activation_receipt": {
+    "bytes": 4428,
+    "sha256": "93807e0455dfcf95cd2500f18643926359a92f400e4d3b1e8acf58baaee2ddd8"
+  },
+  "admission": {
+    "bytes": 4087,
+    "sha256": "2a39e6f877cca49f823265a4c6589b013aecde342df776fdff14c6d9404e5df7"
+  },
+  "confirmatory_study_ready": false,
+  "held_out_validation_executed": false,
+  "historical_human_gate": "unmet; not an active dependency of fully LLM v3",
+  "human_annotation_calls": 0,
+  "limits": [
+    "Running and durable-completion counts are timestamped metadata, not validated model judgments.",
+    "CPU qualification proves tested software/token replay boundaries, not new GPU orchestration or semantic correctness.",
+    "Publisher authenticity, original protocol admission and historical human gates are not promoted by this activation."
+  ],
+  "mistral": {
+    "planned_requests": 99,
+    "state": "pending serial execution after Qwen terminal evidence and fresh launch gates",
+    "submitted": false
+  },
+  "planned_canonical_pairs": 90,
+  "planned_diagnostic_swaps": 9,
+  "planned_human_reviews": 0,
+  "planned_requests_per_model": 99,
+  "postprocess_package": {
+    "bytes": 885,
+    "sha256": "dbdd004e7f4277eac873228188a95e47ca1ee994d776a3b1316f80627c378eb2"
+  },
+  "postprocess_package_locally_verified": true,
+  "postprocess_test_scope": "independent synthetic/software fixtures; no inference outcomes audited yet",
+  "postprocess_tests": 12,
+  "production_labels_reviewed": false,
+  "qualification": {
+    "bytes": 5519,
+    "sha256": "dbdbd7279a7ca877564a344436e6d7167a5914e375bd14d8abb0d2cd4f0b4e2e"
+  },
+  "qualification_independent_review": {
+    "bytes": 4419,
+    "sha256": "4cf979bdce5a403c59c4eb25540a268f26060377bd3cfd78a4432576398e2ca2"
+  },
+  "qwen": {
+    "automatic_retry": false,
+    "console_limit_bytes": 14680064,
+    "job_id": "13574",
+    "labels_accepted": false,
+    "last_observation": {
+      "accounting": "13574|RUNNING|0:0|146||csis.cn3\n13574.batch|RUNNING|0:0|146||csis.cn3\n",
+      "call_intents": 2,
+      "durable_completions": 1,
+      "job_id": "13574",
+      "observed_utc": "2026-10-14T06:25:45.786527+00:00",
+      "output_created": true,
+      "partial_labels_read": false,
+      "queue": "13574|RUNNING|2:26|csis.cn3",
+      "terminal_result_exists": false
+    },
+    "launch_commitment_bytes": 201326592,
+    "launch_receipt": {
+      "bytes": 5602,
+      "sha256": "231ee9ab1bd2d8cca63f64ccadd037fb3f087fcbad4d4538d801b5556f5f39e9"
+    },
+    "output_limit_bytes": 67108864,
+    "planned_cpus": 4,
+    "planned_gpu": "one A100 80GB",
+    "planned_host_memory_bytes": 51539607552,
+    "quota_available_soft_bytes_at_launch": 8854024192,
+    "quota_reserve_bytes": 8589934592,
+    "quota_snapshot_is_not_reservation": true,
+    "slurm_cap_seconds": 14400,
+    "submitted_once": true,
+    "submitted_utc": "2026-10-14T06:23:19.549671+00:00",
+    "terminal_evidence_reviewed": false
+  },
+  "resumption": [
+    "Read existing job 13574 queue/accounting, fixed launch intent/receipt and output metadata before any submission; never recreate activation or resubmit the Qwen slot.",
+    "After terminal status, preserve/export bounded raw receipts and run sealed CPU postprocessing against the exact activation and result; partial counts are not accepted labels.",
+    "Submit Mistral once only through the sealed serial controller after required Qwen terminal evidence, clear project queue and fresh 8 GiB reserve/remaining-output capacity gates.",
+    "Retain all planned requests and full weights: failures remain unavailable; swaps are diagnostic; no retries, resampling or new human annotation.",
+    "Stop after SSH authentication/transport refusal or timeout; resolve uncertain submission by existing receipts/job state rather than retrying."
+  ],
+  "schema": "third-llm-selection-activation-and-submission-public-checkpoint-v1",
+  "scope": "model-assessed development; no human validity or publisher authenticity",
+  "semantic_validity_established": false,
+  "source_authenticity_verified": false,
+  "source_role": "Compact metadata only; private admission, raw texts, token IDs, outputs and sampling seeds are excluded.",
+  "stage": "selection"
+}

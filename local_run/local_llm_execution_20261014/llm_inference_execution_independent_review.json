@@ -1,0 +1,58 @@
+{
+  "activation_created": false,
+  "actual_local_historical_guard_checks": {
+    "mistral_steps": 71,
+    "passed": true,
+    "qwen_steps": 117
+  },
+  "checked": [
+    "CPU-only tokenizer qualification does not call model loader or forwards",
+    "actual198 request reader/token/schedule path retained",
+    "fixed already-exposed engineering call0000 both families; full raw/token/grammar plus guard steps",
+    "exclusive family output and no-retry intents; runtime_error stops schedule and fills all remaining planned calls",
+    "complete initial/final source/runtime/assets bindings; weight hashes read only in activated GPU runner",
+    "fixed batch-one native model/guard kernels and full prepared-token parity before each generation",
+    "bounded output accounting and whole-process controller receipt separate from partial run timings"
+  ],
+  "dependency_package_members_verified": true,
+  "files": {
+    "expectations.json": {
+      "bytes": 518,
+      "sha256": "9dd2a60dc370ceb25e537b080c7d3274cfd24ce68f9af42f979a0f1cb5f97939"
+    },
+    "qualify.py": {
+      "bytes": 16413,
+      "sha256": "efcf32fd1faedec855e2f116af483cc761e37c2ebbd858cde7ac74cdd6da595a"
+    },
+    "run_model.py": {
+      "bytes": 17012,
+      "sha256": "19673df18c5d745adc403aeb01a3f45112198cc32b9c125b318176a801135922"
+    },
+    "run_statistics_tests.py": {
+      "bytes": 1255,
+      "sha256": "6eb6942ac0839bb546fd65e0c60c0c996801086aa4995cefc15ae3d56ee4c519"
+    },
+    "test_execution.py": {
+      "bytes": 7163,
+      "sha256": "7111a60448159336f7430b6dfce3bcb6659c297ce10e4e33f7332844210969bc"
+    },
+    "test_qualification.py": {
+      "bytes": 4008,
+      "sha256": "2b0dc73a7f59fce5db63ade40ac67356db7e78b06e3e7c1cdcd314b48ed707ae"
+    }
+  },
+  "fixed_in_draft_before_seal": [
+    "exact integration common import",
+    "activation/state tuple API",
+    "sealed statistics test root relocation",
+    "fixed nine-artifact engineering manifest schema"
+  ],
+  "model_calls": 0,
+  "no_current_blockers": true,
+  "passed": true,
+  "remote_calls": 0,
+  "schema": "third-llm-annotation-execution-independent-source-review-v1",
+  "scope": "Prospective source and software review. Actual CPU qualification/producer-consumer result and independent review remain necessary before activation. New GPU orchestration and semantic validity are not established.",
+  "skips": 0,
+  "tests": 14
+}

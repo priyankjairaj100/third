@@ -1,0 +1,23 @@
+{
+  "execution_note": "Archived exact local review source. Its fixed private task paths, companion audit_requests.py and bound private evidence are required for replay; this public source alone does not rerun or authorize a cluster job.",
+  "private_terminal_artifacts_published": false,
+  "required_helper": {
+    "binding": {
+      "bytes": 28222,
+      "sha256": "eaef54bb18a9e29ea6183fc1372bd0932b7b9698213bc9dc331faa3ae9c7616a"
+    },
+    "filename": "audit_requests.py"
+  },
+  "review": {
+    "bytes": 4419,
+    "sha256": "4cf979bdce5a403c59c4eb25540a268f26060377bd3cfd78a4432576398e2ca2"
+  },
+  "review_file": "llm_inference_qualification_independent_review.json",
+  "schema": "third-llm-qualification-review-source-provenance-v1",
+  "source": {
+    "bytes": 15594,
+    "sha256": "2f1cb6ff0147c62b8c90d4d392a2ae2ea42344f3f521c1c3869452afde32f1f8"
+  },
+  "source_copied_without_modification": true,
+  "source_file": "audit_inference_qualification.py"
+}

@@ -1,0 +1,29 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 2543,
+      "sha256": "afa7dcc2b361a1c88ea6e897a65472f0ad7b032e4e8cfe2cb21b035e9121ee41"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 612,
+      "sha256": "fc0cfae124f2bad4b5d8bf4f6df303717342c70bbb09b8a6c5b40d89ff49c8d1"
+    },
+    "control.py": {
+      "bytes": 11228,
+      "sha256": "c9ce1994de1b59ead62d2124412fafbb287a53d3410b5ce68f3b645537dca194"
+    },
+    "execute.sbatch": {
+      "bytes": 1290,
+      "sha256": "df5fd25f3ecf24bec6a3b509a1249d975ea705acbb3963bea8bc4e66187b6a32"
+    },
+    "runner.py": {
+      "bytes": 2608,
+      "sha256": "c6f577b6fdd84c42302959bd0f4fcd196d8ede5b6c616b9966007dddb8285a98"
+    },
+    "test_control.py": {
+      "bytes": 2857,
+      "sha256": "cd2c2a2ded09bb10bbefdd9e58099ba87d38d4b3829d3122c8e76cbb63850acc"
+    }
+  },
+  "schema": "third-llm-annotation-control-package-v1"
+}

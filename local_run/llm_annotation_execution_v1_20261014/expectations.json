@@ -1,0 +1,16 @@
+{
+  "component_package": {
+    "bytes": 1251,
+    "sha256": "7bc506e2f7df244ac06782118400388708db1097420ca616f03a2cd196e442bb"
+  },
+  "execution_requires_independently_reviewed_activation": true,
+  "integration_package": {
+    "bytes": 962,
+    "sha256": "6baf3ffaa5d64304293e382913db8b2943ea2de17fb142a50c54659697d2fedb"
+  },
+  "protocol_package": {
+    "bytes": 994,
+    "sha256": "56e97fe1b55f4047f4b8ddac1c7db00be22d69d45b270c8b31beab33d685aa01"
+  },
+  "schema": "third-llm-annotation-execution-expectations-v1"
+}

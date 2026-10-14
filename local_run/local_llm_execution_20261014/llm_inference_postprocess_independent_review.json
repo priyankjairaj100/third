@@ -1,0 +1,55 @@
+{
+  "checks": {
+    "actual_child_through_exit_timing_finite_positive": true,
+    "both_family_results_and_independent_audit_raw_hashes_required_for_statistics": true,
+    "console_tests_report_and_total_caps_checked": true,
+    "cpu_only_no_generation_no_retry_no_activation_creation": true,
+    "exact_audit_and_ingest_cli_matches_sealed_integration": true,
+    "exact_family_launch_process_admission_activation_and_resource_identity": true,
+    "fixed_separate_output_roots_exclusive_publication": true,
+    "inference_outputs_opened_read_only_and_source_receipts_rechecked": true,
+    "missing_result_supported_only_as_diagnostic_failure_not_statistics_admission": true,
+    "other_terminal_failures_quarantined_from_statistics": true,
+    "quota_8GiB_reserve_plus_32MiB_allowance": true,
+    "terminal_completed0_or_failed2_not_sufficient_without_passed_artifact_audit": true
+  },
+  "concrete_blockers": [],
+  "files_modified_outside_review_receipt": false,
+  "limits": [
+    "No remote execution, scheduler observation or real output audit performed by this review.",
+    "COMPLETED0 or FAILED2 eligibility admits only the recorded software outcome; independent artifact audit must pass before ingestion.",
+    "Statistical selection success is separate from artifact ingestion success; no human validity, semantic accuracy, publisher authenticity or confirmatory claim.",
+    "The unchanged integration auditor independently replays tokens and artifact identities but does not rehash full model weights or replay logits."
+  ],
+  "local_validation": {
+    "bash_syntax_passed": true,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 12
+  },
+  "model_calls": 0,
+  "package_relative_path": "local_run/llm_annotation_postprocess_v1_20261014",
+  "passed": true,
+  "remote_calls": 0,
+  "reviewed_at_utc": "2026-10-14T06:23:47.356543+00:00",
+  "schema": "third-llm-postprocess-independent-source-review-v1",
+  "source_files": {
+    "control.py": {
+      "bytes": 13122,
+      "sha256": "2ea3dd973dcf8e7df88e8b1847f08c6241278f353efb33a30d2f3b58feeca47b"
+    },
+    "postprocess.sbatch": {
+      "bytes": 1263,
+      "sha256": "69f8628558b4f8e6f9b8eb8b3e9ce25daa69660ac4434b5abc834c5174399a4e"
+    },
+    "runner.py": {
+      "bytes": 5315,
+      "sha256": "71c218e5c70b6ae7de05b514423856d2fadda5b55fc95fc2a57899472b773874"
+    },
+    "test_postprocess.py": {
+      "bytes": 5472,
+      "sha256": "ae9707e10c00e86cb69af5b1c5960c6283481a1c3f20a70662aa7bb2c2c1dcdb"
+    }
+  }
+}

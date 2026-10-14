@@ -1,0 +1,20 @@
+{
+  "bash_syntax_passed": true,
+  "human_annotation_calls": 0,
+  "meaningful_checks": [
+    "fixed unique stage output slots",
+    "qualification cannot receive activation",
+    "production requires raw activation pins",
+    "malformed pins and active project jobs refused",
+    "quota threshold and freshness boundaries",
+    "exact family model and output paths",
+    "qualification flags contain no activation"
+  ],
+  "model_calls": 0,
+  "passed": true,
+  "remote_jobs_submitted_by_tests": 0,
+  "sampling_entropy_draws": 0,
+  "schema": "third-llm-control-software-validation-v1",
+  "skips": 0,
+  "tests": 8
+}
