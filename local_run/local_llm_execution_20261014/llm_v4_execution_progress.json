@@ -17,8 +17,22 @@
   "context_overflow_requests": 0,
   "controller_code_sha256": "19cf0cf7296b723faaa12b776782906759dc9a25f3793c569910a6240c4e3e34",
   "controller_location": "task/work/resume-20261014/node_pool_v2_pipeline_a01",
+  "controller_stop": {
+    "automatic_retry": false,
+    "error": "stage_failed:selection_audit_qwen",
+    "error_type": "RuntimeError",
+    "reconcile_before_resume": true,
+    "utc": "2026-10-14T15:14:45.662904+00:00"
+  },
+  "current_stage": {
+    "exit": "1:0",
+    "job_id": "14187",
+    "observed_utc": "2026-10-14T15:14:45.601993+00:00",
+    "stage": "qwen_audit",
+    "state": "FAILED"
+  },
   "execution_version": "node-pool-v2",
-  "finite_controller_active": true,
+  "finite_controller_active": false,
   "human_annotation_calls": 0,
   "inference_activated_at_this_observation": true,
   "inference_package": {
@@ -28,10 +42,11 @@
   "latest_model_job_observation": {
     "job_id": "13663",
     "node": "csis.cn4",
-    "observed_utc": "2026-10-14T11:46:06.063367+00:00",
+    "observed_utc": "2026-10-14T15:02:54.502386+00:00",
     "stage": "qwen_selection",
-    "state": "RUNNING"
+    "state": "COMPLETED"
   },
+  "latest_stop_report": "local_run/local_llm_execution_20261014/llm_v4_qwen_audit_stop_20261015.json",
   "node_pool_migration_report": "local_run/local_llm_execution_20261014/llm_node_pool_v2_execution.json",
   "portable_controller_source": "local_run/llm_node_pool_controller_v2_20261014/continue_pipeline.py",
   "previous_execution_snapshot": "local_run/local_llm_execution_20261014/llm_v4_execution_v1_superseded_snapshot.json",
@@ -65,9 +80,9 @@
     },
     "state": "COMPLETED"
   },
-  "queue_note": "The old cn3-only job 13641 was cancelled unstarted. Replacement 13663 started on cn4 at 11:44:58 UTC on 14 October. Future stages remain subject to the shared queue.",
+  "queue_note": "Remote state not refreshed on 15 October: existing authenticated master refused a command session. The local controller previously stopped after audit 14187 failed.",
   "qwen_job": "13663",
-  "qwen_last_observed_state": "RUNNING",
+  "qwen_last_observed_state": "COMPLETED",
   "qwen_launch": {
     "created_utc": "2026-10-14T11:44:58.502202+00:00",
     "free_soft_quota_bytes": 11812741120,
@@ -75,6 +90,40 @@
     "mode": "qwen",
     "package_sha256": "adcd4704a99bb6d3eabfbd8e5409453a96faa891b00aef93e399e2a23d1034fe",
     "stage_allowance_bytes": 301989888
+  },
+  "qwen_terminal": {
+    "accounting": "13663|COMPLETED|0:0|11836||csis.cn4\n13663.batch|COMPLETED|0:0|11836|2581284K|csis.cn4\n",
+    "console_tail": "pleted_calls\": 260, \"planned_calls\": 396, \"elapsed_seconds\": 8033.413942610845}\n{\"model\": \"qwen\", \"completed_calls\": 270, \"planned_calls\": 396, \"elapsed_seconds\": 8307.416172804311}\n{\"model\": \"qwen\", \"completed_calls\": 280, \"planned_calls\": 396, \"elapsed_seconds\": 8592.242202270776}\n{\"model\": \"qwen\", \"completed_calls\": 290, \"planned_calls\": 396, \"elapsed_seconds\": 8842.844155516475}\n{\"model\": \"qwen\", \"completed_calls\": 300, \"planned_calls\": 396, \"elapsed_seconds\": 9133.2375037428}\n{\"model\": \"qwen\", \"completed_calls\": 310, \"planned_calls\": 396, \"elapsed_seconds\": 9430.585933951661}\n{\"model\": \"qwen\", \"completed_calls\": 320, \"planned_calls\": 396, \"elapsed_seconds\": 9700.57839724049}\n{\"model\": \"qwen\", \"completed_calls\": 330, \"planned_calls\": 396, \"elapsed_seconds\": 10100.545279987156}\n{\"model\": \"qwen\", \"completed_calls\": 340, \"planned_calls\": 396, \"elapsed_seconds\": 10403.818349469453}\n{\"model\": \"qwen\", \"completed_calls\": 350, \"planned_calls\": 396, \"elapsed_seconds\": 10672.169319136068}\n{\"model\": \"qwen\", \"completed_calls\": 360, \"planned_calls\": 396, \"elapsed_seconds\": 10983.13195470348}\n{\"model\": \"qwen\", \"completed_calls\": 370, \"planned_calls\": 396, \"elapsed_seconds\": 11244.750095611438}\n{\"model\": \"qwen\", \"completed_calls\": 380, \"planned_calls\": 396, \"elapsed_seconds\": 11503.511272061616}\n{\"model\": \"qwen\", \"completed_calls\": 390, \"planned_calls\": 396, \"elapsed_seconds\": 11709.74502518773}\n{\"passed\": true, \"model\": \"qwen\", \"ledger\": {\"schema\": \"third-llm-inference-ledger-v4\", \"planned_calls\": 396, \"recorded_calls\": 396, \"status_counts\": {\"valid\": 391, \"invalid_json\": 5}, \"ordinary_fatal\": null, \"complete_planned_denominator\": true, \"artifact_integrity_independently_verified\": false, \"human_annotation_calls\": 0, \"retry_calls\": 0, \"killed_process_completion_inferred\": false}}\n",
+    "exit": "0:0",
+    "node": "csis.cn4",
+    "observed_utc": "2026-10-14T15:02:54.502386+00:00",
+    "result": {
+      "ledger": {
+        "artifact_integrity_independently_verified": false,
+        "complete_planned_denominator": true,
+        "human_annotation_calls": 0,
+        "killed_process_completion_inferred": false,
+        "ordinary_fatal": null,
+        "planned_calls": 396,
+        "recorded_calls": 396,
+        "retry_calls": 0,
+        "schema": "third-llm-inference-ledger-v4",
+        "status_counts": {
+          "invalid_json": 5,
+          "valid": 391
+        }
+      },
+      "ordinary_fatal": null,
+      "package_sha256": "adcd4704a99bb6d3eabfbd8e5409453a96faa891b00aef93e399e2a23d1034fe",
+      "passed": true,
+      "planned_calls": 396,
+      "schema": "third-v4-model-execution-v1"
+    },
+    "result_binding": {
+      "bytes": 434458,
+      "sha256": "ba716a2588a174cf0968c60e3a8aa659b47b9e806b1d94534988539fb7b25011"
+    },
+    "state": "COMPLETED"
   },
   "remaining_project_work": [
     "Complete v4 selection and fresh validation if a threshold passes",
@@ -162,9 +211,9 @@
   },
   "sampling_job": "13636",
   "schema": "third-v4-execution-progress-v2",
-  "updated_utc": "2026-10-14T11:47:01.887747+00:00",
+  "updated_utc": "2026-10-15T11:16:07.512481+00:00",
   "validation_continuation": {
-    "controller_active": true,
+    "controller_active": false,
     "controller_backup": "local_run/llm_node_pool_controller_v2_20261014/continue_pipeline.py",
     "full_project_complete": false,
     "human_annotation_calls": 0,
@@ -188,7 +237,7 @@
     "requires_positive_selection": true,
     "running_controller_sha256": "19cf0cf7296b723faaa12b776782906759dc9a25f3793c569910a6240c4e3e34",
     "same_finite_controller_as_selection": true,
-    "status": "waiting_for_successful_independently_reviewed_selection",
+    "status": "not_launched_parent_stopped_at_Qwen_audit",
     "validation_jobs_submitted": 0
   }
 }

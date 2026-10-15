@@ -1,0 +1,78 @@
+{
+  "access": {
+    "errors": [
+      "Master refused session request: Permission denied",
+      "kex_exchange_identification: Connection closed by remote host",
+      "Connection closed by UNKNOWN port 65535"
+    ],
+    "existing_configured_master_local_check_passed": true,
+    "further_ssh_attempts_stopped": true,
+    "new_command_session_refused": true,
+    "old_dedicated_socket_absent": true,
+    "remote_commands_verified_this_turn": 0,
+    "user_confirmation_requested": "Restore access and confirm ssh csis hostname works"
+  },
+  "audit": {
+    "accounting": "14187|FAILED|1:0|583||csis.cn1\n14187.batch|FAILED|1:0|583|1298664K|csis.cn1\n",
+    "console_tail": "",
+    "exit": "1:0",
+    "node": "csis.cn1",
+    "observed_utc": "2026-10-14T15:14:45.601993+00:00",
+    "result": null,
+    "result_binding": null,
+    "state": "FAILED"
+  },
+  "controller_process_present_on_local_check": false,
+  "controller_stop": {
+    "automatic_retry": false,
+    "error": "stage_failed:selection_audit_qwen",
+    "error_type": "RuntimeError",
+    "reconcile_before_resume": true,
+    "utc": "2026-10-14T15:14:45.662904+00:00"
+  },
+  "human_annotation_calls": 0,
+  "mistral_launch_recorded_by_controller": false,
+  "model_retry_performed": false,
+  "next_action": "Read preserved audit stderr and lifecycle receipts using the prepared read-only diagnostic after command access is restored; do not rerun model calls or restart occupied stages",
+  "project_complete": false,
+  "qwen": {
+    "accounting": "13663|COMPLETED|0:0|11836||csis.cn4\n13663.batch|COMPLETED|0:0|11836|2581284K|csis.cn4\n",
+    "console_tail": "pleted_calls\": 260, \"planned_calls\": 396, \"elapsed_seconds\": 8033.413942610845}\n{\"model\": \"qwen\", \"completed_calls\": 270, \"planned_calls\": 396, \"elapsed_seconds\": 8307.416172804311}\n{\"model\": \"qwen\", \"completed_calls\": 280, \"planned_calls\": 396, \"elapsed_seconds\": 8592.242202270776}\n{\"model\": \"qwen\", \"completed_calls\": 290, \"planned_calls\": 396, \"elapsed_seconds\": 8842.844155516475}\n{\"model\": \"qwen\", \"completed_calls\": 300, \"planned_calls\": 396, \"elapsed_seconds\": 9133.2375037428}\n{\"model\": \"qwen\", \"completed_calls\": 310, \"planned_calls\": 396, \"elapsed_seconds\": 9430.585933951661}\n{\"model\": \"qwen\", \"completed_calls\": 320, \"planned_calls\": 396, \"elapsed_seconds\": 9700.57839724049}\n{\"model\": \"qwen\", \"completed_calls\": 330, \"planned_calls\": 396, \"elapsed_seconds\": 10100.545279987156}\n{\"model\": \"qwen\", \"completed_calls\": 340, \"planned_calls\": 396, \"elapsed_seconds\": 10403.818349469453}\n{\"model\": \"qwen\", \"completed_calls\": 350, \"planned_calls\": 396, \"elapsed_seconds\": 10672.169319136068}\n{\"model\": \"qwen\", \"completed_calls\": 360, \"planned_calls\": 396, \"elapsed_seconds\": 10983.13195470348}\n{\"model\": \"qwen\", \"completed_calls\": 370, \"planned_calls\": 396, \"elapsed_seconds\": 11244.750095611438}\n{\"model\": \"qwen\", \"completed_calls\": 380, \"planned_calls\": 396, \"elapsed_seconds\": 11503.511272061616}\n{\"model\": \"qwen\", \"completed_calls\": 390, \"planned_calls\": 396, \"elapsed_seconds\": 11709.74502518773}\n{\"passed\": true, \"model\": \"qwen\", \"ledger\": {\"schema\": \"third-llm-inference-ledger-v4\", \"planned_calls\": 396, \"recorded_calls\": 396, \"status_counts\": {\"valid\": 391, \"invalid_json\": 5}, \"ordinary_fatal\": null, \"complete_planned_denominator\": true, \"artifact_integrity_independently_verified\": false, \"human_annotation_calls\": 0, \"retry_calls\": 0, \"killed_process_completion_inferred\": false}}\n",
+    "exit": "0:0",
+    "node": "csis.cn4",
+    "observed_utc": "2026-10-14T15:02:54.502386+00:00",
+    "result": {
+      "ledger": {
+        "artifact_integrity_independently_verified": false,
+        "complete_planned_denominator": true,
+        "human_annotation_calls": 0,
+        "killed_process_completion_inferred": false,
+        "ordinary_fatal": null,
+        "planned_calls": 396,
+        "recorded_calls": 396,
+        "retry_calls": 0,
+        "schema": "third-llm-inference-ledger-v4",
+        "status_counts": {
+          "invalid_json": 5,
+          "valid": 391
+        }
+      },
+      "ordinary_fatal": null,
+      "package_sha256": "adcd4704a99bb6d3eabfbd8e5409453a96faa891b00aef93e399e2a23d1034fe",
+      "passed": true,
+      "planned_calls": 396,
+      "schema": "third-v4-model-execution-v1"
+    },
+    "result_binding": {
+      "bytes": 434458,
+      "sha256": "ba716a2588a174cf0968c60e3a8aa659b47b9e806b1d94534988539fb7b25011"
+    },
+    "state": "COMPLETED"
+  },
+  "recorded_utc": "2026-10-15T11:16:07.512481+00:00",
+  "schema": "third-v4-stopped-audit-checkpoint-v1",
+  "selection_statistics_available": false,
+  "semantic_validity_established": false,
+  "source": "Locally saved controller receipts from 14 October 2026; current remote state not refreshed",
+  "status": "Controller stopped after Qwen CPU audit failed; remote diagnosis awaits restored SSH command access"
+}

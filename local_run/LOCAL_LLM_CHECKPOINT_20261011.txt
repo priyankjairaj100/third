@@ -1,3 +1,23 @@
+Latest continuation — 15 October 2026, 2026-10-15T11:16:07.512481+00:00
+
+The v2 local controller is STOPPED, superseding the older running descriptions.
+Saved scheduler receipts show Qwen 13663 COMPLETED 0:0 with all 396 calls:
+391 valid responses and 5 invalid JSON responses, preserved without retry.
+CPU audit 14187 FAILED 1:0 after 583 seconds on cn1. Its exact stderr has not
+yet been retrieved; the failure must not be assumed harmless or waived.
+The controller stopped at 15:14:45 UTC on 14 October (20:44:45 IST).
+No Mistral launch is recorded by that controller. Calibration is incomplete.
+On 15 October the dedicated SSH socket was absent. Another configured master
+was alive locally, but the cluster refused its command session. No remote
+command was verified this turn; current remote state remains unrefreshed.
+Stop further SSH attempts until the user restores command access. The user was
+asked to confirm that ssh csis 'hostname' works in Terminal. Then run the saved
+read-only work/resume-20261015/diagnose_audit_remote.py through that turn's
+explicitly selected authenticated transport. Inspect existing jobs and all
+receipts before any mutation. Never restart either occupied model/audit slot.
+Public checkpoint: local_run/local_llm_execution_20261014/
+llm_v4_qwen_audit_stop_20261015.json. Fully LLM, zero human annotation.
+
 Latest continuation — 14 October 2026, 2026-10-14T11:47:01.887747+00:00
 
 Execution v2 supersedes all older active-controller/job descriptions below.
