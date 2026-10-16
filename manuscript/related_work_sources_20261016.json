@@ -38,18 +38,18 @@
     {
       "key": "arcane",
       "url": "https://www.ijcai.org/proceedings/2022/0556.pdf",
-      "scope": "Publisher PDF and inherited repository full-text comparison. Draft states only prior exact-unlearning architecture with data selection, not an exhaustive exclusion claim."
+      "scope": "Primary PDF Section3.2, page4008 visually checked: unselected-request retraining assumption is compared explicitly with the fixed raw-neighbor target."
     },
     {
       "key": "space",
       "url": "https://proceedings.mlr.press/v291/cherapanamjeri25b.html",
-      "full_preprint": "https://arxiv.org/abs/2506.13048",
-      "scope": "Publisher abstract and bibliographic metadata refreshed. Cite extended abstract accurately, PMLR291:1185-1193. Bounded-deletion and query-dependent memory are prior subjects."
+      "full_preprint": "https://arxiv.org/abs/2506.13048v1",
+      "scope": "Full v1 Definitions2.3, Theorems5.4/6.3 and AppendixG inspected. Bounded-deletion memory and ERM connections credited; comparisons distinguish output, access and continuing-state contracts."
     },
     {
       "key": "ticketed",
       "url": "https://proceedings.mlr.press/v195/ghazi23a.html",
-      "scope": "Publisher abstract/metadata; centralized state versus per-record ticket tradeoff, with all usable private information charged in our contract."
+      "scope": "Primary PDF Definitions1-2 and Remark3, pages4-5 checked: one-request exact ERM, supplied forgotten examples/tickets and separate central/per-ticket accounting."
     },
     {
       "key": "counterfactual",
@@ -57,7 +57,8 @@
       "doi": "https://doi.org/10.2139/ssrn.7520178",
       "official_code": "https://github.com/PranayTadakamalla/predictive-state-not-explanatory-state",
       "previously_reviewed_code_commit": "4143f408843394e21a0622c9eb5d5de10a687a8c",
-      "scope": "Primary search metadata/abstract available; direct full-paper retrieval failed. Earlier repository audit inspected official code. Broad conceptual overlap acknowledged; full proof and approximate-success comparison unresolved."
+      "scope": "Primary search metadata/abstract available; direct full-paper retrieval failed. Earlier repository audit inspected official code. Broad conceptual overlap acknowledged; full proof and approximate-success comparison unresolved.",
+      "followup": "Direct PDF returned403; full-paper and approximate-success gap remains."
     },
     {
       "key": "grace",
@@ -79,6 +80,12 @@
       "key": "shannon",
       "url": "https://gwern.net/doc/cs/algorithm/information/1959-shannon.pdf",
       "scope": "Original-paper scan previously cited in the frozen Phase 10 proof. Not newly reread this pass. Attribution to classical rate-distortion tools; squared-soft-bit specialization is derived explicitly in our appendix."
+    },
+    {
+      "key": "dominici",
+      "url": "https://leodom01.github.io/",
+      "lab_listing": "https://deem.berlin/",
+      "scope": "Metadata only: thesis title, author, joint MSc institutions and2025 date corroborated. Full text not retrieved; no technical exclusion claim."
     }
   ],
   "unresolved": [
@@ -90,5 +97,6 @@
     "Search absence is not evidence of novelty.",
     "Metadata and abstracts support only the bounded claims above; this pass is not a new full-paper review of every citation.",
     "The working manuscript retains explicit empirical and numerical limits."
-  ]
+  ],
+  "followup_contract_review": "literature_contract_review_20261016.json"
 }

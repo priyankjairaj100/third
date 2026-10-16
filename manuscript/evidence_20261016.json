@@ -1,21 +1,21 @@
 {
   "schema": "third-working-manuscript-evidence-v1",
-  "created_utc": "2026-10-16T09:09:26.104848+00:00",
+  "created_utc": "2026-10-16T10:00:32.374750+00:00",
   "manuscript": {
     "path": "manuscript/third_working_draft.tex",
-    "bytes": 46899,
-    "sha256": "89f70ca98827d2e337721f20c305755dad4f13074a58c6c33517a69297b4ca17"
+    "bytes": 50575,
+    "sha256": "299163bd737cec9feb96ef1a58432dea8bbb1792c6c5904dfd1707218001d22b"
   },
   "checker": {
     "path": "manuscript/build_evidence.py",
-    "bytes": 9359,
-    "sha256": "167a67317e311c7c64d346e4ce5e3ae03e30845896f71feff82f94144c74247c"
+    "bytes": 12993,
+    "sha256": "059e9297dda50ba98a3c2e1896dcaccd9f034f2cc472c31d0d9a174c5cbd6ec7"
   },
   "source_claim_check_passed": true,
   "reviewer_kind": "author AI assistant source and arithmetic check; not independent manuscript review",
   "standalone_source": true,
-  "bibliography_entries": 14,
-  "references_checked": 14,
+  "bibliography_entries": 15,
+  "references_checked": 16,
   "source_bindings": [
     {
       "path": "output/pdf/counterfactual_curation_theory.tex",
@@ -111,6 +111,31 @@
       "path": "local_run/local_llm_execution_20261014/e5_calibration_frame_result.json",
       "bytes": 5960,
       "sha256": "2344e6b255fce4e57bb90ea561e341258c6a95c06cc9675b5010e9ea489e211d"
+    },
+    {
+      "path": "manuscript/literature_contract_review_20261016.json",
+      "bytes": 4170,
+      "sha256": "d92b8abbf65753bd5f74fe58c5d7d3892eea3685093cf3d6c006a0e3f12f6a1a"
+    },
+    {
+      "path": "manuscript/related_work_sources_20261016.json",
+      "bytes": 5744,
+      "sha256": "813b96494c66b84b627f235907e052efad56640e4210c01e392669f2f93497ad"
+    },
+    {
+      "path": "local_run/local_llm_execution_20261014/llm_selection_v4_terminal_result.json",
+      "bytes": 85149,
+      "sha256": "961f1ab1b07b98d3c814d06e25d7825f2afee5422fca67c309d4a379c7793f86"
+    },
+    {
+      "path": "local_run/local_llm_execution_20261014/llm_v4_negative_diagnostics_20261016.json",
+      "bytes": 39226,
+      "sha256": "db31edff00875ba4a29a4f50d288bc3257beefd32f31555a09d9b3ad683a1651"
+    },
+    {
+      "path": "local_run/llm_v4_negative_analysis_v1_20261016/analyze.py",
+      "bytes": 11035,
+      "sha256": "2bf5df9d0a727365a4be0fc69f50329ef29a41c7a2a0a36f71f9492e25b0412c"
     }
   ],
   "claims": [
@@ -173,16 +198,20 @@
     },
     {
       "sections": [
-        "sec:evidence"
+        "sec:evidence",
+        "tab:calibration"
       ],
-      "claim": "Completed v3 negative, audited Qwen integrity, and guard resource pilot",
+      "claim": "Completed v3 and v4 negatives, audited model outputs, exact selection replay, order diagnostics, and guard resource pilot",
       "sources": [
         "local_run/local_llm_execution_20261014/llm_selection_v3_terminal_result.json",
         "local_run/local_llm_execution_20261014/llm_v4_qwen_audit_and_task_locks_20261016.json",
         "local_run/local_llm_execution_20261014/task_and_audit_independent_review_20261016.json",
-        "local_run/local_llm_execution_20261014/llm_guard_benchmark_completed_20261016.json"
+        "local_run/local_llm_execution_20261014/llm_guard_benchmark_completed_20261016.json",
+        "local_run/local_llm_execution_20261014/llm_selection_v4_terminal_result.json",
+        "local_run/local_llm_execution_20261014/llm_v4_negative_diagnostics_20261016.json",
+        "local_run/llm_v4_negative_analysis_v1_20261016/analyze.py"
       ],
-      "limit": "No passed v4 validation or full guard/effect study inferred."
+      "limit": "All51 v4 cuts failed; no fresh validation or full guard/effect study. Sensitivity is imputation, not a confidence bound; raw stratified sample counts are not population prevalence."
     },
     {
       "sections": [
@@ -194,9 +223,21 @@
         "empirical_execution/phase10/CONTRIBUTION_POSITION.md"
       ],
       "limit": "Historical lexical development remains distinct from the current natural semantic study."
+    },
+    {
+      "sections": [
+        "sec:related",
+        "app:repro"
+      ],
+      "claim": "Source-located comparison of ARCANE selection, ticketed access and bounded-deletion memory",
+      "sources": [
+        "manuscript/literature_contract_review_20261016.json",
+        "manuscript/related_work_sources_20261016.json"
+      ],
+      "limit": "Primary-text contract comparison only; two full-text gaps remain. No independent audit of prior proofs or exhaustive novelty clearance."
     }
   ],
-  "fixed_cutoff": "16 October 2026; pending v4 model results are not inferred",
+  "fixed_cutoff": "16 October 2026; terminal v4 negative at09:52:01UTC; downstream work blocked under this configuration",
   "human_annotation_calls": 0,
   "human_review_required": false,
   "historical_human_gates_unchanged": true,

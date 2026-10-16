@@ -1,3 +1,39 @@
+Latest continuation — 16 October 2026, 2026-10-16T10:02:39.672295+00:00
+
+TERMINAL NEGATIVE CALIBRATION: v4 selection completed at09:52:01UTC.
+Mistral15242 COMPLETED0:0 (7209seconds), corrected audit15276 COMPLETED0:0
+(130seconds), statistics15277 COMPLETED0:0. Qwen's earlier396calls and corrected
+audit15241 remain accepted. Total792calls, no retry, zero human annotation.
+Qwen391/396 valid; Mistral396/396 valid. Both exact-byte output audits passed.
+
+All51 frozen cuts FAILED, independently recomputed. No selected threshold.
+Maximum weighted joint-positive proportion2/5 (40%) versus19/20 (95%) required.
+Favorable missing/uncertain sensitivity maximum8/15, not a confidence bound.
+27/360 canonical joint positives is a stratified-sample count, not prevalence.
+308/355 valid pairs have different six-way categories. The controller ended
+normally and PID59318 is absent. Fresh validation was correctly skipped.
+Do not restart, retune, repeat invalid calls, or launch threshold-dependent work.
+
+The full guard package remains sealed/staged but UNLAUNCHED. No admission
+bundle, full guard, post-guard panels, development effects or held-out outcomes.
+The unchanged queue failure branch now governs: metadata, methods, theory,
+negative-result reporting and bounded manuscript/reproducibility work.
+Original empirical completion remains blocked, not completed by a scope label.
+
+Public terminal evidence: local_run/local_llm_execution_20261014/llm_selection_v4_terminal_result.json
+Aggregate diagnostic replay: llm_v4_negative_diagnostics_20261016.json in the
+same folder; separate local code reproduced every field of all51 cut records,
+plus swap counts. Private source texts, per-pair labels and IDs stay private.
+The revised manuscript includes actual v4 results/table and narrower primary-
+text literature comparisons. Native compilation passed;24 evidence bindings
+and15 references checked. Visual review remains unverified; two full-text gaps
+and final claim/package review remain. No submission-ready claim.
+
+This heartbeat made no SSH call or job submission; it consumed terminal
+receipts from the existing controller. Keep frozen remote checkout/protected
+lock bytes unchanged. Earlier v3 negative and original unmet human gates remain.
+Read QUEUE.json task09 for independent local work; no human review is planned.
+
 Latest continuation — 16 October 2026, 2026-10-16T09:40:39.119691+00:00
 
 FULL GUARD SOFTWARE MILESTONE: local_run/llm_development_guard_v1_20261016 is

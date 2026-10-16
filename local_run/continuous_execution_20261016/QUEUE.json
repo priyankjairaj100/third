@@ -1,4 +1,5 @@
 {
+  "active_branch": "negative_calibration_reporting_methods_theory",
   "authorization": "User requests autonomous sustained work, existing GitHub backup and cluster execution; fully LLM with zero human reviews.",
   "automation": {
     "cadence_minutes": 30,
@@ -8,8 +9,10 @@
     "status": "ACTIVE"
   },
   "completion_claim": false,
+  "controller_active": false,
   "controller_pid_at_creation": 59318,
   "controller_state": "work/resume-20261016/repair_pipeline_a01",
+  "controller_terminal_utc": "2026-10-16T09:52:01.158277+00:00",
   "private_task_root": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a",
   "repository": "/Users/priyankjairaj/Downloads/ACL/Three",
   "rules": [
@@ -25,26 +28,37 @@
     {
       "depends_on": [],
       "done_when": "Terminal controller receipt plus independently checked selection and, if selected, fresh validation result.",
+      "evidence": "local_run/local_llm_execution_20261014/llm_selection_v4_terminal_result.json",
       "failure_branch": "Preserve negative calibration; do not authorize threshold-dependent work. Continue metadata, methods, theory, and negative-result reporting.",
+      "historical_preterminal_observation": {
+        "latest_call_count": {
+          "call_completions": 118,
+          "call_intents": 119,
+          "latest_completion_utc": "2026-10-16T08:30:32.746510+00:00",
+          "model_result_present": false,
+          "note": "Count only; completions remain unaudited until terminal CPU replay.",
+          "observed_utc": "2026-10-16T08:30:37.143850+00:00",
+          "planned_calls": 396
+        },
+        "latest_scheduler_observation": {
+          "job_id": "15242",
+          "node": "csis.cn4",
+          "observed_utc": "2026-10-16T09:39:53.597301+00:00",
+          "source": "existing controller receipt selection_mistral_status_0102_transport.json; staging also checked current Slurm queue",
+          "state": "RUNNING"
+        }
+      },
       "id": "01-calibration",
-      "latest_call_count": {
-        "call_completions": 118,
-        "call_intents": 119,
-        "latest_completion_utc": "2026-10-16T08:30:32.746510+00:00",
-        "model_result_present": false,
-        "note": "Count only; completions remain unaudited until terminal CPU replay.",
-        "observed_utc": "2026-10-16T08:30:37.143850+00:00",
-        "planned_calls": 396
-      },
       "latest_scheduler_observation": {
-        "job_id": "15242",
-        "node": "csis.cn4",
-        "observed_utc": "2026-10-16T09:39:53.597301+00:00",
-        "source": "existing controller receipt selection_mistral_status_0102_transport.json; staging also checked current Slurm queue",
-        "state": "RUNNING"
+        "exit": "0:0",
+        "job_id": "15277",
+        "node": "csis.cn1",
+        "observed_utc": "2026-10-16T09:51:57.376512+00:00",
+        "source": "selection_statistics_terminal.json",
+        "state": "COMPLETED"
       },
-      "next_action": "Existing finite controller continues Mistral15242, exact-byte audit, 51-cut review and conditional fresh validation. Inspect completion/stopped receipts.",
-      "state": "running"
+      "next_action": "No restart. All792 calls and both output audits completed; all51 cuts failed, independently reproduced. Fresh validation skipped. Follow the frozen failure branch.",
+      "state": "complete_negative_selection"
     },
     {
       "depends_on": [],
@@ -55,6 +69,7 @@
       "state": "complete"
     },
     {
+      "blocking_evidence": "local_run/local_llm_execution_20261014/llm_selection_v4_terminal_result.json",
       "depends_on": [
         "01-calibration:validation_pass",
         "02-input-intake"
@@ -62,37 +77,48 @@
       "done_when": "Exhaustive intended-pair replay, bounded resource receipt and immutable disjoint panel memberships. Unavailable sizes recorded.",
       "evidence": "local_run/local_llm_execution_20261014/llm_full_guard_prepared_20261016.json",
       "id": "03-guard-panels",
-      "next_action": "Full-stage package is sealed and staged; 31 local tests passed. Wait for actual positive fresh validation, then prepare the private admission bundle and recheck queue/quota before one launch. Use python -B; see FULL_GUARD_HANDOFF.txt. No full guard launched yet.",
+      "next_action": "No launch under this configuration. Preserve prepared software, reserved populations and original study scope; no retuning or substituted threshold.",
       "package": "local_run/llm_development_guard_v1_20261016",
       "package_sha256": "b6ab54d229afbfb76786854d3103d9d4af112185d3d289d235e4ececd530ec10",
-      "state": "full_stage_software_verified_and_staged_waiting_for_validation"
+      "pre_failure_state": "full_stage_software_verified_and_staged_waiting_for_validation",
+      "prior_conditional_next_action": "Full-stage package is sealed and staged; 31 local tests passed. Wait for actual positive fresh validation, then prepare the private admission bundle and recheck queue/quota before one launch. Use python -B; see FULL_GUARD_HANDOFF.txt. No full guard launched yet.",
+      "state": "blocked_by_negative_v4_selection"
     },
     {
+      "blocking_evidence": "local_run/local_llm_execution_20261014/llm_selection_v4_terminal_result.json",
       "depends_on": [
         "03-guard-panels"
       ],
       "done_when": "Independent correctness review, full method comparisons, exact resource evidence and negative outcomes preserved.",
       "id": "04-development",
-      "next_action": "Run smallest prospectively frozen source-disjoint natural pilot, exact repair versus fresh recuration, optimized eligible-payload B-E and native task utility. Include full retained state, workspace, serialization and lifecycle costs.",
-      "state": "waiting"
+      "next_action": "No launch under this configuration. Preserve prepared software, reserved populations and original study scope; no retuning or substituted threshold.",
+      "pre_failure_state": "waiting",
+      "prior_conditional_next_action": "Run smallest prospectively frozen source-disjoint natural pilot, exact repair versus fresh recuration, optimized eligible-payload B-E and native task utility. Include full retained state, workspace, serialization and lifecycle costs.",
+      "state": "blocked_by_negative_v4_selection"
     },
     {
+      "blocking_evidence": "local_run/local_llm_execution_20261014/llm_selection_v4_terminal_result.json",
       "depends_on": [
         "04-development"
       ],
       "done_when": "Reviewed immutable scope and executable bounded family bundles; no claim that all21332 old planned jobs ran.",
       "id": "05-evaluation-scope",
-      "next_action": "Freeze feasible LLM-only evaluation families, representation-specific task locks, request streams and resource policies before later evaluation outcomes. Report original registry unavailable/unexecuted cells separately.",
-      "state": "waiting"
+      "next_action": "No launch under this configuration. Preserve prepared software, reserved populations and original study scope; no retuning or substituted threshold.",
+      "pre_failure_state": "waiting",
+      "prior_conditional_next_action": "Freeze feasible LLM-only evaluation families, representation-specific task locks, request streams and resource policies before later evaluation outcomes. Report original registry unavailable/unexecuted cells separately.",
+      "state": "blocked_by_negative_v4_selection"
     },
     {
+      "blocking_evidence": "local_run/local_llm_execution_20261014/llm_selection_v4_terminal_result.json",
       "depends_on": [
         "05-evaluation-scope"
       ],
       "done_when": "Every activated family terminal and audited; uncertainty and failed/infeasible cells included.",
       "id": "06-evaluation-analysis",
-      "next_action": "Execute admitted families and independent audits, then registered statistics, robustness and claim decisions.",
-      "state": "waiting"
+      "next_action": "No launch under this configuration. Preserve prepared software, reserved populations and original study scope; no retuning or substituted threshold.",
+      "pre_failure_state": "waiting",
+      "prior_conditional_next_action": "Execute admitted families and independent audits, then registered statistics, robustness and claim decisions.",
+      "state": "blocked_by_negative_v4_selection"
     },
     {
       "build_status": "manuscript/BUILD_STATUS.json",
@@ -100,8 +126,8 @@
       "done_when": "Compiled and visually reviewed complete manuscript, actual figures/tables, citations and defensible limits.",
       "evidence": "manuscript/evidence_20261016.json",
       "id": "07-manuscript",
-      "next_action": "Continue edits in manuscript/third_working_draft.tex. Native compilation passed; visual review is unverified because computer-use service was unavailable. Resolve close-prior full-text gaps and integrate only audited terminal calibration, guard, development and held-out results. Do not claim submission readiness.",
-      "state": "working_draft_compiled_empirical_sections_pending"
+      "next_action": "Continue in the same .tex. Both negatives and v4 result table are integrated;24 source bindings and15 references checked. Finish unified claim/reproducibility review and available layout review. Two close-prior full-text gaps remain; keep their uncertainty explicit.",
+      "state": "compiled_theory_and_negative_evidence_revision"
     },
     {
       "depends_on": [
@@ -110,9 +136,19 @@
       ],
       "done_when": "Verified final package and truthful completion report. Pause this heartbeat on completion.",
       "id": "08-release",
-      "next_action": "Audit reproducibility package, private-data exclusions and submission artifacts; push repository milestone.",
-      "state": "waiting"
+      "next_action": "Original empirical completion is unavailable after the failed calibration. Preserve missing families; use the negative-branch closure task for an honestly bounded manuscript/package, without claiming the original study completed.",
+      "state": "original_empirical_release_blocked"
+    },
+    {
+      "depends_on": [
+        "01-calibration:complete_negative_selection",
+        "07-manuscript"
+      ],
+      "done_when": "Reviewed manuscript and permitted reproducibility package accurately report both failed calibrations and all unexecuted scope; unresolved literature/layout limitations are explicit. Original empirical project remains incomplete unless its scope is separately resolved.",
+      "id": "09-negative-branch-closure",
+      "next_action": "Audit unified theory/method claims against frozen reviews, document compute and reproducibility boundaries, finish available manuscript/package review, and back up the bounded theory-plus-negative-evidence result. Do not create a replacement empirical configuration.",
+      "state": "ready_local_work"
     }
   ],
-  "updated_utc": "2026-10-16T09:40:39.119691+00:00"
+  "updated_utc": "2026-10-16T10:02:39.672295+00:00"
 }

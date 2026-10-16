@@ -1,3 +1,9 @@
+TERMINAL NEGATIVE v4 SELECTION — 2026-10-16T10:02:39.672295+00:00
+
+No threshold was selected. Validation was skipped. All launch instructions below
+remain conditional and are NOT authorized under this failed configuration.
+Preserve the sealed package; follow QUEUE.json negative branch. Do not retune.
+
 Prepared full-stage package — 2026-10-16T09:40:39.119691+00:00
 
 The implementation requested below is now prepared, sealed and staged.

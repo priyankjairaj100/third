@@ -1,0 +1,95 @@
+{
+  "author_contacts": 0,
+  "comparisons": [
+    {
+      "finding": "The selection cost analysis treats a request outside the chosen subset as requiring no retraining.",
+      "key": "arcane",
+      "limit": "No general exclusion claim about all preparation-aware unlearning.",
+      "locators": [
+        "Section3.2",
+        "publisher page4008; physical PDF page3"
+      ],
+      "manuscript_change": "Specify this contract when comparing with excluded-record activation under our fixed raw-neighbor rule.",
+      "page_visually_checked": 3,
+      "url": "https://www.ijcai.org/proceedings/2022/0556.pdf"
+    },
+    {
+      "finding": "Exact ERM predictor equality after one request; central auxiliary bits and per-record tickets are separate resources. Forgotten examples and their tickets are supplied to unlearning.",
+      "key": "ticketed",
+      "limit": "No theorem dominance or total-memory superiority follows.",
+      "locators": [
+        "Definitions1-2",
+        "Remark3",
+        "physical PDF pages4-5"
+      ],
+      "manuscript_change": "Compare explicit access, accounting and continuing-state contracts.",
+      "page_visually_checked": 5,
+      "url": "https://proceedings.mlr.press/v195/ghazi23a/ghazi23a.pdf"
+    },
+    {
+      "finding": "Bounded-deletion memory upper and lower bounds precede this project; realizability-testing results have stated ERM connections.",
+      "html": "https://arxiv.org/html/2506.13048v1",
+      "key": "space",
+      "limit": "No claim that earlier work only studies Boolean outputs; no new bound or proof audit.",
+      "locators": [
+        "Definition2.3",
+        "Theorems5.4 and6.3",
+        "AppendixG",
+        "physical PDF pages7,14,15"
+      ],
+      "manuscript_change": "Credit budget-dependent memory explicitly and identify the joint curator/feature/ridge/sequential object.",
+      "page_visually_checked": 15,
+      "url": "https://arxiv.org/pdf/2506.13048v1"
+    }
+  ],
+  "historical_phase10_sources_changed": false,
+  "manuscript_empirical_claims_added": false,
+  "novelty_clearance": false,
+  "observed_utc": "2026-10-16T09:49:52.583974+00:00",
+  "primary_artifacts": {
+    "arcane": {
+      "bytes": 480267,
+      "downloaded": true,
+      "resolved_url": "https://www.ijcai.org/proceedings/2022/0556.pdf",
+      "sha256": "7b0c4f9698e90424ea63af4cf91f19b952fdeffb9e51553171d944eb073f887a",
+      "url": "https://www.ijcai.org/proceedings/2022/0556.pdf"
+    },
+    "space": {
+      "bytes": 859506,
+      "downloaded": true,
+      "resolved_url": "https://arxiv.org/pdf/2506.13048v1",
+      "sha256": "04a067f7f6aed9f2a847118207135698b90f8fab96495a0301853b853d66a5b9",
+      "url": "https://arxiv.org/pdf/2506.13048v1"
+    },
+    "ticketed": {
+      "bytes": 561080,
+      "downloaded": true,
+      "resolved_url": "https://proceedings.mlr.press/v195/ghazi23a/ghazi23a.pdf",
+      "sha256": "51a403596e51747a85b670d3e4e03f719a425d55e1785c9fef1dd094eb6e743a",
+      "url": "https://proceedings.mlr.press/v195/ghazi23a/ghazi23a.pdf"
+    }
+  },
+  "schema": "third-literature-contract-review-v1",
+  "scientific_gates_changed": false,
+  "scope": "Primary-text contract comparison for manuscript wording; not independent theorem verification or exhaustive novelty clearance.",
+  "third_party_PDFs_published": false,
+  "unresolved_routes": [
+    {
+      "gap_closed": false,
+      "key": "counterfactual",
+      "outcome": "403 Forbidden; full paper not obtained. Public official repository still provides code/README, not the missing formal approximate-success definition.",
+      "url": "https://papers.ssrn.com/sol3/Delivery.cfm/7520178.pdf?abstractid=7520178&mirid=1"
+    },
+    {
+      "gap_closed": false,
+      "inference_limit": "Retrieval failure does not show nonexistence or absence of overlapping results.",
+      "key": "dominici",
+      "outcome": "Author and lab metadata corroborate thesis identity. New poster link leads to event homepage without a thesis/poster download. Targeted institutional search did not retrieve thesis text.",
+      "urls": [
+        "https://leodom01.github.io/",
+        "https://deem.berlin/",
+        "https://fro.tuebingen.ai/"
+      ]
+    }
+  ]
+}

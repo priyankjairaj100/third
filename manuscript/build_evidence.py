@@ -7,6 +7,7 @@ Only public reports and theory sources are read. No source texts or labels.
 import hashlib
 import json
 import re
+from fractions import Fraction
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -46,6 +47,32 @@ def main():
     locks = read_json(REPORT + "llm_v4_qwen_audit_and_task_locks_20261016.json")
     review = read_json(REPORT + "task_and_audit_independent_review_20261016.json")
     plan = read_json("local_run/model_annotation_v4_20261014/PLAN.json")
+    v4 = read_json(REPORT + "llm_selection_v4_terminal_result.json")
+    negative = read_json(REPORT + "llm_v4_negative_diagnostics_20261016.json")
+    assert v4["execution_complete"] and v4["all51_exact_weighted_cuts_independently_recomputed"]
+    assert (v4["selection_pairs"], v4["conservative_positives_of360"], v4["model_requests_attempted"]) == (360, 27, 792)
+    assert v4["selection_passed"] is False and v4["selected_tau"] is None
+    assert v4["independent_validation_performed"] is False and v4["no_retuning"]
+    assert not v4["threshold_dependent_downstream_authorized"]
+    assert negative["separate_author_arithmetic_replay_passed"]
+    assert negative["all51_full_cut_records_exactly_recomputed"]
+    assert negative["maximum_weighted_joint_positive_proportion"] == {"numerator": 2, "denominator": 5}
+    assert negative["maximum_missing_uncertain_sensitivity"] == {"numerator": 8, "denominator": 15}
+    assert negative["both_valid_pairs"] == 355 and negative["valid_six_way_disagreements"] == 308
+    assert negative["models"]["qwen"]["canonical_positive_count"] == 32
+    assert negative["models"]["mistral"]["canonical_positive_count"] == 151
+    assert negative["swap_diagnostics"]["qwen"]["status_or_category_changes"] == 3
+    assert negative["swap_diagnostics"]["qwen"]["binary_positive_changes"] == 1
+    assert negative["swap_diagnostics"]["mistral"]["status_or_category_changes"] == 14
+    assert negative["swap_diagnostics"]["mistral"]["binary_positive_changes"] == 6
+    # Verify the actual displayed rounded table cells against the exact ledger.
+    cuts = {Fraction(r["tau"]["numerator"], r["tau"]["denominator"]): r for r in negative["grid_ledger"]}
+    for display in [".90", ".95", ".98", ".99", ".995"]:
+        row = cuts[Fraction(display)]
+        values = [100 * Fraction(row[k]["numerator"], row[k]["denominator"])
+                  for k in ["conservative_precision", "missing_uncertain_sensitivity_upper"]]
+        cell = f'{display} & {row["sample_support"]} & {float(values[0]):.2f} & {float(values[1]):.2f}'
+        assert cell in tex, "calibration table mismatch"
     assert v3["execution_complete"] and v3["all51_exact_weighted_cuts_independently_recomputed"]
     assert (v3["selection_pairs"], v3["conservative_positives_of90"], v3["model_requests_attempted"]) == (90, 0, 198)
     assert v3["selection_passed"] is False and v3["independent_validation_performed"] is False
@@ -81,6 +108,13 @@ def main():
     assert plan["resources"]["human_annotation_calls"] == 0
     assert "zero human annotation and zero human review" in tex
     assert "No completed natural-text repair/utility/cost experiment" in tex
+    literature = read_json("manuscript/literature_contract_review_20261016.json")
+    citation_sources = read_json("manuscript/related_work_sources_20261016.json")
+    assert {entry["key"] for entry in citation_sources["sources"]} == set(bib)
+    assert set(literature["primary_artifacts"]) == {"arcane", "ticketed", "space"}
+    assert all(item["downloaded"] for item in literature["primary_artifacts"].values())
+    assert literature["novelty_clearance"] is False
+    assert all(item["gap_closed"] is False for item in literature["unresolved_routes"])
 
     sources = [
         "output/pdf/counterfactual_curation_theory.tex",
@@ -102,6 +136,11 @@ def main():
         REPORT + "llm_development_intake_completed_20261016.json",
         REPORT + "llm_guard_benchmark_completed_20261016.json",
         REPORT + "e5_calibration_frame_result.json",
+        "manuscript/literature_contract_review_20261016.json",
+        "manuscript/related_work_sources_20261016.json",
+        REPORT + "llm_selection_v4_terminal_result.json",
+        REPORT + "llm_v4_negative_diagnostics_20261016.json",
+        "local_run/llm_v4_negative_analysis_v1_20261016/analyze.py",
     ]
     claims = [
         {"sections": ["sec:setup", "sec:method", "app:work"],
@@ -116,11 +155,14 @@ def main():
          "limit": "Separate fully LLM development; pre-guard upper bounds; historical human and primary acceptance remain unmet."},
         {"sections": ["sec:judges"], "claim": "Frozen v4 two-model selection and fresh validation design",
          "sources": [sources[11]], "limit": "Prospective model-defined criterion, not semantic truth or independent model votes; failure stops configuration."},
-        {"sections": ["sec:evidence"], "claim": "Completed v3 negative, audited Qwen integrity, and guard resource pilot",
-         "sources": [sources[13], sources[14], sources[15], sources[17]],
-         "limit": "No passed v4 validation or full guard/effect study inferred."},
+        {"sections": ["sec:evidence", "tab:calibration"], "claim": "Completed v3 and v4 negatives, audited model outputs, exact selection replay, order diagnostics, and guard resource pilot",
+         "sources": [sources[13], sources[14], sources[15], sources[17], sources[21], sources[22], sources[23]],
+         "limit": "All51 v4 cuts failed; no fresh validation or full guard/effect study. Sensitivity is imputation, not a confidence bound; raw stratified sample counts are not population prevalence."},
         {"sections": ["sec:evidence", "sec:limits"], "claim": "Earlier lexical total-byte comparison favored B-E",
          "sources": [sources[8]], "limit": "Historical lexical development remains distinct from the current natural semantic study."},
+        {"sections": ["sec:related", "app:repro"], "claim": "Source-located comparison of ARCANE selection, ticketed access and bounded-deletion memory",
+         "sources": [sources[19], sources[20]],
+         "limit": "Primary-text contract comparison only; two full-text gaps remain. No independent audit of prior proofs or exhaustive novelty clearance."},
     ]
     report = {
         "schema": "third-working-manuscript-evidence-v1",
@@ -133,7 +175,7 @@ def main():
         "bibliography_entries": len(bib), "references_checked": len(refs),
         "source_bindings": [binding(s) for s in sources],
         "claims": claims,
-        "fixed_cutoff": "16 October 2026; pending v4 model results are not inferred",
+        "fixed_cutoff": "16 October 2026; terminal v4 negative at09:52:01UTC; downstream work blocked under this configuration",
         "human_annotation_calls": 0, "human_review_required": False,
         "historical_human_gates_unchanged": True,
         "primary_semantic_study_started": False,

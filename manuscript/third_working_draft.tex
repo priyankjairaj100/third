@@ -30,11 +30,12 @@ features for which increasing that budget by one changes the minimum private
 information needed for exact ridge recovery from zero to $mD$ bits. The graph
 is stable under a specified FP64 cosine scorer, and a sequential codec attains
 the conditional private-information minimum on this family. These are scoped
-algebraic and information results. An ongoing AskUbuntu study uses two local
-LLMs and no human annotation. Its earlier calibration attempt failed; a
-separately versioned follow-up and the downstream effect study remain
-incomplete. No natural-text utility, runtime, or total-memory advantage is
-claimed at this checkpoint.
+algebraic and information results. An AskUbuntu calibration study uses two
+local LLMs and no human annotation. Both completed calibration versions failed
+their frozen selection criteria. In the follow-up, the largest weighted
+joint-positive proportion over 51 cuts was 40\%, below the required 95\%.
+The downstream effect study therefore remains unexecuted. No natural-text
+utility, runtime, or total-memory advantage is claimed at this checkpoint.
 \end{abstract}
 
 \noindent\textbf{Draft status.} This is an integrated working paper, not a
@@ -511,14 +512,55 @@ model-defined selection criterion, not evidence that every population
 pair is semantically distinct.
 
 Version 4 is a separately versioned follow-up after that negative result;
-it is not independent confirmation or a rescue of version 3. At this
-draft's evidence cutoff, Qwen completed 396 calls, of which 391 were
-valid and five invalid JSON. A corrected raw-byte audit verified their
-prompt, token, and grammar identities without repeating model calls.
-The prior audit's newline-normalization failure and original outputs
-remain preserved. Mistral selection and the remaining validation chain
-are incomplete. These execution-integrity facts do not establish a
-validated threshold.
+it is not independent confirmation or a rescue of version 3. Both models
+completed all 396 calls. Qwen produced 391 valid responses and five invalid
+JSON responses; Mistral produced 396 valid responses. Separate exact-byte
+audits verified prompt, token, and grammar identities without repeating
+model calls. The prior Qwen audit's newline-normalization failure and all
+original outputs remain preserved.
+
+None of the 51 frozen cuts passed. The maximum weighted joint-positive
+proportion was $2/5$, reached at $.99$ and $.995$, against the required
+$19/20$. Independent arithmetic replay verified all 51 cuts and the
+negative decision. Fresh validation was consequently not run. Even the
+frozen favorable-imputation sensitivity calculation peaked at $8/15$:
+it treats invalid or uncertain judgments as potentially positive but
+preserves observed substantive negatives. This is not a confidence bound.
+Table~\ref{tab:calibration} reports representative frozen cuts; the companion
+ledger contains every cut and its exact rational arithmetic.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{rrrr}
+\hline
+$\tau$ & Pairs & Joint (\%) & Sensitivity (\%) \\
+\hline
+.90 & 330 & 0.01 & 1.72 \\
+.95 & 180 & 0.31 & 5.64 \\
+.98 & 90 & 9.66 & 10.08 \\
+.99 & 60 & 40.00 & 44.68 \\
+.995 & 30 & 40.00 & 53.33 \\
+\hline
+\end{tabular}
+\caption{Completed v4 selection. Pairs are sampled canonical pairs with
+score strictly above the cut. Joint proportions and sensitivity values
+use the frozen inclusion weights. Every one of the 51 cuts failed the
+95\% selection requirement. Sensitivity is favorable imputation, not a
+statistical confidence limit.}
+\label{tab:calibration}
+\end{table}
+
+The raw stratified sample contained 27 joint positives among 360 pairs;
+this ratio is not a population prevalence estimate. Qwen marked 32
+canonical pairs positive and Mistral marked 151. Their six-way categories
+differed on 308 of the 355 pairs with two valid responses. Reversing the
+order of the 36 diagnostic pairs changed status or category in three
+Qwen responses and 14 Mistral responses; binary-positive decisions changed
+in one and six, respectively. These are rater and order-sensitivity
+diagnostics, not measures of human accuracy. The failure concerns this
+fixed representation, rater pair, rubric, and selection protocol; it does
+not establish the absence of semantic duplicates in AskUbuntu.
 
 \paragraph{Completed development preparation.}
 Actual source/cache/task bindings and the source-disjoint development
@@ -539,22 +581,27 @@ reverse that observation or establish a storage win on natural data.
 
 \paragraph{What is still missing.}
 No completed natural-text repair/utility/cost experiment supports a
-practical benefit yet. Full guard and post-guard panels, admitted
-development runs, held-out evaluation, registered uncertainty analysis,
-cross-representation robustness, and empirical figures remain outstanding.
+practical benefit yet. The failed selection blocks the full guard,
+post-guard panels, development runs, and dependent held-out evaluation
+under this configuration. Their effects, uncertainty analysis, and
+cross-representation robustness remain unmeasured. The prepared guard
+package is software evidence only and was not launched.
 The original program's 21,332 prospective jobs are a design inventory,
-not executed evidence. Final claims depend on these results, including
-zeros, failures, infeasible sizes, and unfavorable baseline comparisons.
+not executed evidence. The planned study cannot be completed by substituting
+a favorable cut, prompt, or judge after observing this failure. The original
+evaluation reservation and human gates remain unchanged.
 
 \section{Related work}\label{sec:related}
 \paragraph{Curation and whole-pipeline targets.}
 SemDeDup studies embedding-based redundancy removal \cite{semdedup}.
 The released suppression computation motivates our fixed ordered rule
 \cite{semcode}; a full curation pipeline may have additional data-dependent
-steps. ARCANE is an earlier exact-unlearning architecture with data
-selection \cite{arcane}. These systems make it important to specify
-the actual selection contract rather than imply that every prior
-unlearning method ignores preparation. GRACE studies gradient-guided
+steps. ARCANE combines exact-unlearning architecture with representative
+data selection \cite{arcane}. Its Section~3.2 assigns no retraining cost
+to a request outside the selected subset. Under our raw-neighbor rule,
+such a request can instead admit surviving records and change the head,
+as Figure~\ref{fig:chain} shows. This comparison concerns that specific
+selection contract. GRACE studies gradient-guided
 forget/retain coresets for behavioral LLM unlearning \cite{grace}; its
 target differs from rerunning the original fixed curator in
 Equation~\eqref{eq:target}.
@@ -569,10 +616,20 @@ learner-level finite-feature obstruction. We do not claim that negative
 dependencies, moment updates, or deletion-induced additions originate here.
 
 \paragraph{Information needed for unlearning.}
-Learning-unlearning space complexity already shows that supporting
-deletion can require substantially more memory than ordinary learning
-\cite{space}. Ticketed schemes explicitly trade central storage against
-per-record information \cite{ticketed}. Our access contract charges both.
+Learning-unlearning space complexity already studies memory under a
+bounded number of deletions \cite{space}. In the full version,
+Theorems~5.4 and~6.3 give budget-dependent upper and lower bounds for
+realizability testing; Appendix~G connects this task to empirical risk
+minimization. Horizon-dependent memory and reconstruction arguments
+therefore precede our construction. Our theorem specifies the joint
+curator, stored feature values, ridge outputs, and sequential state.
+Ticketed schemes separately measure central auxiliary bits and
+per-record tickets supplied with forgotten examples \cite{ticketed}.
+Their Definitions~1--2 and Remark~3 require exact predictor recovery
+after one deletion request. Our contract additionally specifies the
+state for subsequent requests at the remaining horizon and charges
+all usable private information, including tickets. These different
+targets and access rules must accompany any comparison of bounds.
 Recent work on predictive versus counterfactual auditing state also
 overlaps with the broad memory-separation principle \cite{counterfactual}.
 Its public code was inspected in the earlier literature audit, but its
@@ -650,6 +707,7 @@ ARCANE: An efficient architecture for exact machine unlearning. IJCAI.
 and A. Shetty. 2025. The space complexity of learning-unlearning
 algorithms (extended abstract). COLT, PMLR 291:1185--1193.
 \url{https://proceedings.mlr.press/v291/cherapanamjeri25b.html}.
+Full version: \href{https://arxiv.org/abs/2506.13048v1}{arXiv:2506.13048v1}.
 \bibitem{ticketed} B. Ghazi, P. Kamath, R. Kumar, P. Manurangsi,
 A. Sekhari, and C. Zhang. 2023. Ticketed learning--unlearning schemes.
 COLT, PMLR 195:5110--5139.
@@ -661,6 +719,11 @@ SSRN manuscript. \url{https://doi.org/10.2139/ssrn.7520178}.
 \bibitem{grace} P. Bushipaka, A. D'Angelo, L. Passaro, and T. Cucinotta.
 2026. GRACE: Gradient-guided coreset selection for LLM unlearning.
 Author manuscript. \url{https://retis.santannapisa.it/~tommaso/publications/EMNLP-2026.pdf}.
+\bibitem{dominici} L. Dominici. 2025. End-to-end machine unlearning through
+data preparation pipelines and feature stores. Master's thesis, University
+of Amsterdam and Vrije Universiteit Amsterdam. Bibliographic identification
+from the author's page and DEEM thesis list; full text not inspected.
+\url{https://leodom01.github.io/}; \url{https://deem.berlin/}.
 \bibitem{e5} L. Wang, N. Yang, X. Huang, L. Yang, R. Majumder, and F. Wei.
 2024. Multilingual E5 text embeddings: A technical report.
 \href{https://arxiv.org/abs/2402.05672}{arXiv:2402.05672}.
@@ -847,10 +910,13 @@ curator refitting and additional corpus/representation families remain
 separate unexecuted scope until resource-qualified and admitted.
 
 Literature coverage is also bounded. Primary publication pages and
-official code were refreshed for the citations used here. The
+official code were refreshed for the citations used here. The full
+ARCANE selection description and the central, ticketed, and bounded-deletion
+contracts in \cite{ticketed,space} were checked against their primary PDFs.
+This is a contract comparison, not an independent audit of those proofs. The
 counterfactual-auditing full manuscript and the thesis titled
 \emph{End-to-end Machine Unlearning Through Data Preparation Pipelines
-and Feature Stores} remain unresolved full-text comparisons. Their
+and Feature Stores} \cite{dominici} remain unresolved full-text comparisons. Their
 absence from the completed comparison cannot support a novelty claim.
 The final review must revisit these gaps and the resulting claim wording.
 \end{document}

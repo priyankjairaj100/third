@@ -1,7 +1,8 @@
 Third integrated working manuscript
 
 Edit third_working_draft.tex in the native Codex LaTeX editor. It is a single
-standalone source with an embedded bibliography and one mathematical illustration.
+standalone source with an embedded bibliography, a mathematical illustration,
+and a source-checked table of completed v4 selection results.
 No external style, image, bibliography, or project files are required.
 This is a working research draft, not an ACL-format or submission-ready package.
 
@@ -18,20 +19,28 @@ quoted counts against already reviewed public reports, then binds those sources.
 It does not rerun empirical work or perform an independent manuscript review.
 BUILD_STATUS.json separately records native compiler and visual-review outcomes.
 related_work_sources_20261016.json records the bounded literature pass and gaps.
+literature_contract_review_20261016.json records primary-text contract locators.
+Current checks bind24 evidence sources and15 cited references. Native compilation
+passed for the current source; visual review remains unverified because the
+computer-use service failed to start. The editor opening is queued for this chat.
 
-The current semantic calibration is not complete. Do not infer a threshold,
-full guard, natural admissions, utility, speedup, or total-byte advantage.
+V4 selection is complete and NEGATIVE: all792 calls and both output audits
+completed; all51 frozen cuts failed independent arithmetic replay. The maximum
+weighted joint-positive proportion was40%, below the required95%. Fresh validation
+was skipped. The downstream full guard, development effects and held-out study
+are blocked under this configuration. There is no practical benefit result.
 The earlier v3 zero-positive result and earlier lexical B-E advantage remain.
 No human review is planned; old human gates remain false/unmet.
 
 Next substantive edits:
-1. Complete native compilation and visual layout review when available.
-2. Bind terminal v4 selection and any fresh validation result. Keep a failure
-   negative; no retuning or outcome-driven cutoff substitution.
-3. If admitted, integrate full guard/panel counts and audited development then
-   held-out results. Fill empirical figures/tables only from actual outputs.
-4. Resolve close-prior full-text gaps and independently review the unified claims.
-5. Apply the eventual conference template/page budget after the empirical scope
-   and final claims are known. Check references, attribution, and release limits.
+1. Review unified theory/method/negative-evidence claims against the frozen sources.
+2. Complete visual layout review when the native UI service becomes available.
+3. Resolve the remaining SSRN and Dominici full-text comparisons where accessible;
+   preserve unresolved scope if unavailable. No author contact is authorized.
+4. Finish the permitted reproducibility package, compute statement, attribution
+   and release limits for a bounded theory-plus-negative-evidence manuscript.
+5. Do not silently convert that manuscript into completion of the original
+   empirical program. No new threshold, prompt, judge or representation follows
+   from this failure. Submission readiness remains false.
 
 No raw source text, account-level data, private labels or credentials belong here.

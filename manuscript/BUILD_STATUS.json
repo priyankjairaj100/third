@@ -3,30 +3,38 @@
     "Initial native compilation timed out downloading Latin Modern font assets.",
     "Removed optional font packages and used standard fonts; two bounded follow-ups returned busy.",
     "Compiler then found extra alignment tabs in the finite-family display.",
-    "Reformatted that display as four aligned rows; native compiler returned success."
+    "Reformatted that display as four aligned rows; native compiler returned success.",
+    "Primary-text comparison revision compiled successfully; then terminal v4 negative results and the checked table compiled successfully with the native compiler."
   ],
+  "bibliography_entries_checked": 15,
   "compile_verified": true,
+  "current_revision_source_repairs": 0,
   "evidence_20261016.json": {
-    "bytes": 8508,
-    "sha256": "b2494a5cd8f4147da99668e505182f400e7b26a0cad80dfd6e16e6441f09f32c"
+    "bytes": 10479,
+    "sha256": "d9479993f620d549d51d2cf4c1e4ef28b556d38046cc43f34b795637379edf18"
   },
   "latex_installed_by_agent": false,
+  "literature_contract_review_20261016.json": {
+    "bytes": 4170,
+    "sha256": "d92b8abbf65753bd5f74fe58c5d7d3892eea3685093cf3d6c006a0e3f12f6a1a"
+  },
   "native_compiler_result": {
     "kind": "success",
     "message": "The current source compiled successfully with the desktop editor's compiler.",
     "path": "/Users/priyankjairaj/Downloads/ACL/Three/manuscript/third_working_draft.tex"
   },
-  "observed_utc": "2026-10-16T09:10:37.027854+00:00",
+  "observed_utc": "2026-10-16T10:02:39.672295+00:00",
   "open_in_codex_status": "queued",
   "related_work_sources_20261016.json": {
-    "bytes": 5276,
-    "sha256": "74e34b79279146fe7bf1a91c02c025f2a8c5c28dc224150c48eb38364407da22"
+    "bytes": 5744,
+    "sha256": "813b96494c66b84b627f235907e052efad56640e4210c01e392669f2f93497ad"
   },
   "schema": "third-manuscript-build-status-v1",
   "source_binding": {
-    "bytes": 46899,
-    "sha256": "89f70ca98827d2e337721f20c305755dad4f13074a58c6c33517a69297b4ca17"
+    "bytes": 50575,
+    "sha256": "299163bd737cec9feb96ef1a58432dea8bbb1792c6c5904dfd1707218001d22b"
   },
+  "source_bindings_checked": 24,
   "source_check_report": "evidence_20261016.json",
   "source_repairs": 2,
   "submission_ready": false,

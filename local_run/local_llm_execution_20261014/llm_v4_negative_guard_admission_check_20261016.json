@@ -1,0 +1,16 @@
+{
+  "actual_negative_completion": {
+    "bytes": 205,
+    "sha256": "ea96d2903b646bf518c8af0e5e644f0ec6975eb16c748138ff3e83766a72b3c0"
+  },
+  "admission_output_created": false,
+  "expected_rejection": "terminal_positive_calibration_required",
+  "guard_manifest_sha256": "b6ab54d229afbfb76786854d3103d9d4af112185d3d289d235e4ececd530ec10",
+  "human_annotation_calls": 0,
+  "jobs_submitted": 0,
+  "observed_utc": "2026-10-16T10:03:40.648499+00:00",
+  "passed": true,
+  "private_export_read": false,
+  "remote_attempts": 0,
+  "schema": "third-actual-negative-guard-admission-check-v1"
+}
