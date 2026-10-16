@@ -20,7 +20,7 @@ It does not rerun empirical work or perform an independent manuscript review.
 BUILD_STATUS.json separately records native compiler and visual-review outcomes.
 related_work_sources_20261016.json records the bounded literature pass and gaps.
 literature_contract_review_20261016.json records primary-text contract locators.
-Current checks bind32 evidence sources and15 cited references. Native compilation
+Current checks bind35 direct evidence sources and15 cited references. Native compilation
 passed for the current source; visual review remains unverified because the
 computer-use service failed to start. The user has this same source open in the editor.
 
@@ -28,6 +28,10 @@ claims_review_20261016.json records the bounded author review, four corrected
 descriptions and18 reverified historical source bindings. This is not a new
 independent proof review. compute_accounting_20261016.json records six saved v4
 jobs, including the failed CPU audit; it is not the whole project's compute budget.
+compute_history_20261016.json expands that overlapping subset to72 saved jobs,
+including32 embedding array tasks and four failures. Its33 source bindings and
+arithmetic are replayed by build_compute_history.py --check. Requested resource
+times remain separate from utilization, energy and project wall-clock duration.
 attribution_review_20261016.json binds the three pinned model identities and
 publisher license declarations, supplied metadata retention and replay limits.
 This documentary/code review is not complete per-record attribution clearance.

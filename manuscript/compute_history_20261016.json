@@ -1,0 +1,1163 @@
+{
+  "array_display_and_raw_ids_double_counted": false,
+  "builder": {
+    "bytes": 17087,
+    "path": "manuscript/build_compute_history.py",
+    "sha256": "778f91048e6e7f662c772677a174932aca3ee941c4e3178f3c638be98da2b28f"
+  },
+  "created_utc": "2026-10-16T11:21:46.349679+00:00",
+  "embedding_array_elapsed_hours_display": "133.20",
+  "embedding_array_elapsed_seconds": 479503,
+  "embedding_requested_cpu_times_elapsed_hours_display": "266.39",
+  "embedding_requested_cpu_times_elapsed_seconds": 959006,
+  "energy_or_utilization_measured": false,
+  "existing_v4_jobs_included_once": true,
+  "groups": {
+    "embedding_array": {
+      "elapsed_seconds_sum": 479503,
+      "jobs": 32
+    },
+    "model_inference": {
+      "elapsed_seconds_sum": 25759,
+      "jobs": 6
+    },
+    "other_stage": {
+      "elapsed_seconds_sum": 8396,
+      "jobs": 34
+    }
+  },
+  "job_count": 72,
+  "jobs": [
+    {
+      "elapsed_seconds": 1603,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261011/annotation_v5_result.json",
+        "pointer": "scheduler_accounting"
+      },
+      "exit_code": "0:0",
+      "gpu_count": 1,
+      "gpu_type": "A100 80GB",
+      "group": "model_inference",
+      "job_id": "13353",
+      "role": "Qwen successful engineering pilot",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 70,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261011/source_lineage_result.json",
+        "pointer": ""
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13356",
+      "role": "source lineage replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 184,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261011/source_replay_result.json",
+        "pointer": "scheduler_accounting"
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13357",
+      "role": "source preparation replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 175,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261011/e5_token_census_result.json",
+        "pointer": "scheduler_accounting"
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13358",
+      "role": "E5 token census",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 4,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261011/source_mirror_result.json",
+        "pointer": "scheduler_accounting"
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13360",
+      "role": "source mirror verification",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 178,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261011/e5_forward_budget_result.json",
+        "pointer": ""
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13363",
+      "role": "E5 forward budget pilot",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 1478,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261011/mistral_acquisition_v2_result.json",
+        "pointer": "job"
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13364",
+      "role": "Mistral asset acquisition",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 3,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261011/e5_shard_qualification_a01_failure.json",
+        "pointer": ""
+      },
+      "exit_code": "2:0",
+      "group": "other_stage",
+      "job_id": "13366",
+      "role": "failed E5 shard qualification",
+      "state": "FAILED"
+    },
+    {
+      "elapsed_seconds": 887,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261013/mistral_pilot_result.json",
+        "pointer": "job"
+      },
+      "exit_code": "0:0",
+      "gpu_count": 1,
+      "gpu_type": "A100 80GB",
+      "group": "model_inference",
+      "job_id": "13368",
+      "role": "Mistral successful engineering pilot",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 1,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261011/e5_scipy_repair_v1_failure.json",
+        "pointer": ""
+      },
+      "exit_code": "2:0",
+      "group": "other_stage",
+      "job_id": "13370",
+      "role": "failed SciPy environment repair",
+      "state": "FAILED"
+    },
+    {
+      "elapsed_seconds": 10,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261013/e5_scipy_repair_v2_result.json",
+        "pointer": "job"
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13490",
+      "role": "SciPy environment repair",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 24,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261013/e5_shard_qualification_v1_a02_failure.json",
+        "pointer": ""
+      },
+      "exit_code": "2:0",
+      "group": "other_stage",
+      "job_id": "13491",
+      "role": "failed second E5 shard qualification",
+      "state": "FAILED"
+    },
+    {
+      "elapsed_seconds": 8,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261013/e5_cli_import_probe_result.json",
+        "pointer": ""
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13493",
+      "role": "E5 CLI import probe",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 526,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261013/e5_shard_qualification_v2_result.json",
+        "pointer": "job"
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13495",
+      "role": "E5 shard qualification and replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 15836,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/0"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_0",
+      "job_id_raw": "13499",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 15820,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/1"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_1",
+      "job_id_raw": "13500",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 14458,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/10"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_10",
+      "job_id_raw": "13517",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 14367,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/11"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_11",
+      "job_id_raw": "13518",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 15040,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/12"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_12",
+      "job_id_raw": "13519",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 14986,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/13"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_13",
+      "job_id_raw": "13520",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 15034,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/14"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_14",
+      "job_id_raw": "13521",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 15019,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/15"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_15",
+      "job_id_raw": "13522",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 14467,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/16"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_16",
+      "job_id_raw": "13529",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 14552,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/17"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_17",
+      "job_id_raw": "13530",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 14859,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/18"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_18",
+      "job_id_raw": "13531",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 14963,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/19"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_19",
+      "job_id_raw": "13532",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 15768,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/2"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_2",
+      "job_id_raw": "13501",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 14859,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/20"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_20",
+      "job_id_raw": "13533",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 14608,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/21"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_21",
+      "job_id_raw": "13534",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 14606,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/22"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_22",
+      "job_id_raw": "13535",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 14602,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/23"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_23",
+      "job_id_raw": "13536",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 14580,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/24"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_24",
+      "job_id_raw": "13537",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 14497,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/25"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_25",
+      "job_id_raw": "13538",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 14860,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/26"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_26",
+      "job_id_raw": "13539",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 14889,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/27"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_27",
+      "job_id_raw": "13540",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 14644,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/28"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_28",
+      "job_id_raw": "13541",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 14625,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/29"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_29",
+      "job_id_raw": "13542",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 15903,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/3"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_3",
+      "job_id_raw": "13502",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 14654,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/30"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_30",
+      "job_id_raw": "13543",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 14828,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/31"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_31",
+      "job_id_raw": "13498",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 15782,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/4"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_4",
+      "job_id_raw": "13503",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 15841,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/5"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_5",
+      "job_id_raw": "13504",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 15906,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/6"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_6",
+      "job_id_raw": "13505",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 15930,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/7"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_7",
+      "job_id_raw": "13506",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 14349,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/8"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_8",
+      "job_id_raw": "13515",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 14371,
+      "evidence": {
+        "path": "manuscript/compute_receipts_extract_20261016.json",
+        "pointer": "array_rows/9"
+      },
+      "exit_code": "0:0",
+      "group": "embedding_array",
+      "job_id": "13498_9",
+      "job_id_raw": "13516",
+      "requested_cpus_per_task": 2,
+      "role": "E5 encode then fresh-process replay",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 76,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261014/e5_assembly_terminal_metadata_result.json",
+        "pointer": "terminal_parent"
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13546",
+      "role": "E5 cache assembly",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 49,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261014/e5_pair_scorer_benchmark_result.json",
+        "pointer": ""
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13547",
+      "role": "pair-scorer resource benchmark",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 79,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261014/e5_calibration_frame_independent_review.json",
+        "pointer": "job"
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13556",
+      "role": "E5 calibration frame",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 1261,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261014/llm_selection_terminal_result.json",
+        "pointer": ""
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13571",
+      "role": "v3 pair census and sampling",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 17,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261014/llm_requests_v2_terminal_result.json",
+        "pointer": ""
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13572",
+      "role": "v3 request preparation",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 22,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261014/llm_inference_qualification_independent_review.json",
+        "pointer": ""
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13573",
+      "role": "v3 execution qualification",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 2634,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261014/llm_selection_v3_terminal_result.json",
+        "pointer": "models/qwen/scheduler"
+      },
+      "exit_code": "0:0",
+      "gpu_count": 1,
+      "gpu_type": "A100 80GB",
+      "group": "model_inference",
+      "job_id": "13574",
+      "role": "qwen v3 selection",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 181,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261014/llm_selection_v3_terminal_result.json",
+        "pointer": "output_audits/qwen"
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13623",
+      "role": "qwen v3 output audit",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 1590,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261014/llm_selection_v3_terminal_result.json",
+        "pointer": "models/mistral/scheduler"
+      },
+      "exit_code": "0:0",
+      "gpu_count": 1,
+      "gpu_type": "A100 80GB",
+      "group": "model_inference",
+      "job_id": "13625",
+      "role": "mistral v3 selection",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 28,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261014/llm_selection_v3_terminal_result.json",
+        "pointer": "output_audits/mistral"
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13629",
+      "role": "mistral v3 output audit",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 1,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261014/llm_selection_v3_terminal_result.json",
+        "pointer": "statistics_job"
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13630",
+      "role": "v3 selection statistics",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 1186,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261014/llm_tail_census_and_v4_sampling.json",
+        "pointer": "local_review/accounting"
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13632",
+      "role": "tail score census",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 1255,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261014/llm_v4_execution_progress.json",
+        "pointer": "sampling/accounting"
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13636",
+      "role": "v4 pair sampling",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 25,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261014/llm_v4_execution_progress.json",
+        "pointer": "requests/accounting"
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13639",
+      "role": "v4 request preparation",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 19,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261014/llm_v4_execution_v1_superseded_snapshot.json",
+        "pointer": "qualification/accounting"
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13640",
+      "role": "superseded execution qualification",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 6,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261014/llm_node_pool_v2_execution.json",
+        "pointer": "standalone_hardware_probe"
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13659",
+      "role": "A100 hardware probe; allocation count not added to six-model-job subtotal",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 19,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261014/llm_node_pool_v2_execution.json",
+        "pointer": "qualification/accounting"
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "13662",
+      "role": "node-pool execution qualification",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 11836,
+      "evidence": {
+        "path": "manuscript/compute_accounting_20261016.json",
+        "pointer": "jobs/0"
+      },
+      "exit_code": "0:0",
+      "gpu_count": 1,
+      "gpu_type": "A100 80GB",
+      "group": "model_inference",
+      "job_id": "13663",
+      "role": "Qwen v4 inference",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 583,
+      "evidence": {
+        "path": "manuscript/compute_accounting_20261016.json",
+        "pointer": "jobs/2"
+      },
+      "exit_code": "1:0",
+      "group": "other_stage",
+      "job_id": "14187",
+      "role": "original Qwen audit; failed newline normalization",
+      "state": "FAILED"
+    },
+    {
+      "elapsed_seconds": 755,
+      "evidence": {
+        "path": "manuscript/compute_accounting_20261016.json",
+        "pointer": "jobs/3"
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "15241",
+      "role": "corrected exact-byte Qwen audit",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 7209,
+      "evidence": {
+        "path": "manuscript/compute_accounting_20261016.json",
+        "pointer": "jobs/1"
+      },
+      "exit_code": "0:0",
+      "gpu_count": 1,
+      "gpu_type": "A100 80GB",
+      "group": "model_inference",
+      "job_id": "15242",
+      "role": "Mistral v4 inference",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 21,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261014/llm_v4_qwen_audit_and_task_locks_20261016.json",
+        "pointer": "native_task_configuration"
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "15243",
+      "role": "native task calibration",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 15,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261014/llm_development_intake_completed_20261016.json",
+        "pointer": ""
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "15251",
+      "role": "development intake reservation",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 6,
+      "evidence": {
+        "path": "local_run/local_llm_execution_20261014/llm_guard_benchmark_completed_20261016.json",
+        "pointer": ""
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "15252",
+      "role": "guard resource pilot",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 130,
+      "evidence": {
+        "path": "manuscript/compute_accounting_20261016.json",
+        "pointer": "jobs/4"
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "15276",
+      "role": "exact-byte Mistral audit",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed_seconds": 1,
+      "evidence": {
+        "path": "manuscript/compute_accounting_20261016.json",
+        "pointer": "jobs/5"
+      },
+      "exit_code": "0:0",
+      "group": "other_stage",
+      "job_id": "15277",
+      "role": "v4 selection statistics",
+      "state": "COMPLETED"
+    }
+  ],
+  "limits": [
+    "Summed job/task elapsed time is not wall-clock project duration; concurrent tasks overlap.",
+    "GPU subtotal covers six successful model jobs only, not every hardware probe, failed pilot or earlier setup.",
+    "Two requested CPUs times elapsed is a reservation-derived quantity, not measured CPU busy time or verified billed core time.",
+    "Other-stage elapsed sums mix acquisition, preparation, audit and a hardware probe; they are not CPU-core or GPU-hours.",
+    "Queue waits, missing early setup/transfer and annotation-attempt receipts, local work, energy and monetary costs remain unaccounted.",
+    "Known excluded receipt gaps include acquisition13361 and planning13497 without terminal elapsed fields in the inspected public reports.",
+    "Cancelled pending13641 had zero recorded elapsed time and is outside the completed/failed-job subtotal.",
+    "No scientific outcome, model threshold, original gate or frozen protocol is changed by accounting."
+  ],
+  "new_cluster_queries": 0,
+  "new_model_calls": 0,
+  "parent_and_batch_double_counting": false,
+  "private_extract_replay_required_for_original_receipt_check": true,
+  "project_total_compute_complete": false,
+  "review_kind": "author receipt reconciliation and arithmetic; no new independent audit",
+  "schema": "third-expanded-historical-compute-v1",
+  "scope": "Explicit saved-job subset spanning successful model pilots, v3/v4 selection, E5 encode/replay and selected preparation/failure jobs.",
+  "six_model_job_gpu_allocation_hours_display": "7.16",
+  "six_model_job_gpu_allocation_seconds": 25759,
+  "source_bindings": [
+    {
+      "bytes": 7714,
+      "path": "local_run/local_llm_execution_20261011/annotation_v5_result.json",
+      "sha256": "f097d2b41ef7682a3fa0b70a47cabbe6ca006aafe6555a2f9b424859a7295d83"
+    },
+    {
+      "bytes": 2835,
+      "path": "local_run/local_llm_execution_20261011/e5_forward_budget_result.json",
+      "sha256": "b8206fdfa1942035496727017b9c4f3444d303e2d8c0b54dafbb2f776575f5c2"
+    },
+    {
+      "bytes": 631,
+      "path": "local_run/local_llm_execution_20261011/e5_scipy_repair_v1_failure.json",
+      "sha256": "cfab6511b29e0cb0c7836f4201b6ea9f03a40bf546d25b4c2729551c145138f9"
+    },
+    {
+      "bytes": 770,
+      "path": "local_run/local_llm_execution_20261011/e5_shard_qualification_a01_failure.json",
+      "sha256": "318ac2394a549c1bbc4de0c29f07f74bf03ba48e9d36500daa1aa634d63453cc"
+    },
+    {
+      "bytes": 7408,
+      "path": "local_run/local_llm_execution_20261011/e5_token_census_result.json",
+      "sha256": "8bcb92a7ea4720718cd7f34d48c1d0cea60eac3f8abde94daf6db1e64cdce697"
+    },
+    {
+      "bytes": 3733,
+      "path": "local_run/local_llm_execution_20261011/mistral_acquisition_v2_result.json",
+      "sha256": "ee30aaad41bfe3302929743d10a3c943677fceb5e253239166b58347bae17d18"
+    },
+    {
+      "bytes": 2942,
+      "path": "local_run/local_llm_execution_20261011/source_lineage_result.json",
+      "sha256": "743e1a9ae898715daeed83c466790fcbf9fee23dcef99691482320eac5ca20ec"
+    },
+    {
+      "bytes": 2958,
+      "path": "local_run/local_llm_execution_20261011/source_mirror_result.json",
+      "sha256": "50a79710c68667793d1a66d5c44ca052be61c3dfea98700a563ae768dbe609ba"
+    },
+    {
+      "bytes": 4338,
+      "path": "local_run/local_llm_execution_20261011/source_replay_result.json",
+      "sha256": "cbf59b5b0a2b6a306955d6de0d47acc45004d947f2b4f342f1459b6caa27b500"
+    },
+    {
+      "bytes": 995,
+      "path": "local_run/local_llm_execution_20261013/e5_cli_import_probe_result.json",
+      "sha256": "4d0951f8f512b5c5fc80881470ee86426d54214def1748690364c0fc984d0588"
+    },
+    {
+      "bytes": 2115,
+      "path": "local_run/local_llm_execution_20261013/e5_full_array_v2_launch.json",
+      "sha256": "9558a13f4eaad917b8f5112acd01452519998a800d191528a7bd1d50be8bee3c"
+    },
+    {
+      "bytes": 5371,
+      "path": "local_run/local_llm_execution_20261013/e5_scipy_repair_v2_result.json",
+      "sha256": "83ef982e7af9605c1e9b6d254c7f509b8aa421d17d1d15485371c8429f5ccb6c"
+    },
+    {
+      "bytes": 1114,
+      "path": "local_run/local_llm_execution_20261013/e5_shard_qualification_v1_a02_failure.json",
+      "sha256": "52eb42c2acfcb5e60c8c00b30b16718f11ae31e78930469cff9dc2f8f2a91a14"
+    },
+    {
+      "bytes": 8515,
+      "path": "local_run/local_llm_execution_20261013/e5_shard_qualification_v2_result.json",
+      "sha256": "819e62a36e5c18bc8a56b8ea314e764888ac1d000f28d18172dfe6b3084863cc"
+    },
+    {
+      "bytes": 5817,
+      "path": "local_run/local_llm_execution_20261013/mistral_pilot_result.json",
+      "sha256": "04e64826361829eb1f6be67d7e090ede814adb56668c07233b96328db65bc125"
+    },
+    {
+      "bytes": 5380,
+      "path": "local_run/local_llm_execution_20261014/e5_array_terminal_metadata_result.json",
+      "sha256": "30c136349719708fa4ea82606e00b25241a805a89d440cd95313fab7d5ff21eb"
+    },
+    {
+      "bytes": 2397,
+      "path": "local_run/local_llm_execution_20261014/e5_assembly_terminal_metadata_result.json",
+      "sha256": "c599c77cab42fdbb13ddaf95a6b26042b24ca0e70e34510e98b9de2db7cf824d"
+    },
+    {
+      "bytes": 4653,
+      "path": "local_run/local_llm_execution_20261014/e5_calibration_frame_independent_review.json",
+      "sha256": "80d91bb7e2f7622086e2c8f3ff4d9ef98cacf8e15a2ca2f00cf462b5c4a77b8b"
+    },
+    {
+      "bytes": 44907,
+      "path": "local_run/local_llm_execution_20261014/e5_pair_scorer_benchmark_result.json",
+      "sha256": "bbedb03e7ad11ac8def0d68ace096b0b68c0a3f91ce578fa6016392f0c3108af"
+    },
+    {
+      "bytes": 10867,
+      "path": "local_run/local_llm_execution_20261014/llm_development_intake_completed_20261016.json",
+      "sha256": "acfd9cd73c228199becd758389da0b387271a68f4de7798c88c06a2ccf37796f"
+    },
+    {
+      "bytes": 4429,
+      "path": "local_run/local_llm_execution_20261014/llm_guard_benchmark_completed_20261016.json",
+      "sha256": "f6c83af86a0c7f6b89d03c093dfe4bc7477f73199a16e9d197f099a3fda69a76"
+    },
+    {
+      "bytes": 4419,
+      "path": "local_run/local_llm_execution_20261014/llm_inference_qualification_independent_review.json",
+      "sha256": "4cf979bdce5a403c59c4eb25540a268f26060377bd3cfd78a4432576398e2ca2"
+    },
+    {
+      "bytes": 8636,
+      "path": "local_run/local_llm_execution_20261014/llm_node_pool_v2_execution.json",
+      "sha256": "d85f5405a140e6e797aec2682d81ded0972c520b3fdc921375f5620cf28cea01"
+    },
+    {
+      "bytes": 2440,
+      "path": "local_run/local_llm_execution_20261014/llm_requests_v2_terminal_result.json",
+      "sha256": "d403698e5e4754a6a2ae22ae56ea155820ec085bb7908583763813fa95d822be"
+    },
+    {
+      "bytes": 1395,
+      "path": "local_run/local_llm_execution_20261014/llm_selection_terminal_result.json",
+      "sha256": "51f327c274be44f613957bc48b79d7ded470e6ccfc2848a51811ad95f8f0828f"
+    },
+    {
+      "bytes": 37823,
+      "path": "local_run/local_llm_execution_20261014/llm_selection_v3_terminal_result.json",
+      "sha256": "48979e72e212d2a7e6bdd4966f32ed1f36b422ca3ae1f48a70c80e6f4b0929eb"
+    },
+    {
+      "bytes": 8324,
+      "path": "local_run/local_llm_execution_20261014/llm_tail_census_and_v4_sampling.json",
+      "sha256": "0a65203d8aea6a7be29481445c856d8ef954df67954465395bef9753ce67375e"
+    },
+    {
+      "bytes": 17551,
+      "path": "local_run/local_llm_execution_20261014/llm_v4_execution_progress.json",
+      "sha256": "67594d8b8f06be8038edccf030d734ced49cba34dbea70c6b834a1c8484b294b"
+    },
+    {
+      "bytes": 8363,
+      "path": "local_run/local_llm_execution_20261014/llm_v4_execution_v1_superseded_snapshot.json",
+      "sha256": "84ab35fb0c12312a8ec759e9a9c4b1dc714cbadf0ab5ceeb8a956a3118eb8800"
+    },
+    {
+      "bytes": 6769,
+      "path": "local_run/local_llm_execution_20261014/llm_v4_qwen_audit_and_task_locks_20261016.json",
+      "sha256": "d42704863228caaeb9d9c92df60d24fe9176a881bf0e84fae7a41d01a339e086"
+    },
+    {
+      "bytes": 2040,
+      "path": "local_run/model_annotation_runtime_v5_20261011/pilot.sbatch",
+      "sha256": "7e799b5d731a54ba28286c1699d9d8477d05464c32d117888b0edb2caad6c1f6"
+    },
+    {
+      "bytes": 4577,
+      "path": "manuscript/compute_accounting_20261016.json",
+      "sha256": "ee5e42741d440edf0dcd818959d2379a3f7008b337bf09d62812d433abec0f5d"
+    },
+    {
+      "bytes": 8264,
+      "path": "manuscript/compute_receipts_extract_20261016.json",
+      "sha256": "dc9ad7bf2a5aa14d59c3b32b71e0f7de8a59b5a2f904c0ed57de8af8f9d7c3fe"
+    }
+  ],
+  "state_counts": {
+    "COMPLETED": 68,
+    "FAILED": 4
+  }
+}

@@ -6,7 +6,8 @@
     "Reformatted that display as four aligned rows; native compiler returned success.",
     "Primary-text comparison revision compiled successfully; then terminal v4 negative results and the checked table compiled successfully with the native compiler.",
     "Bounded author claim review clarified stable handles, empirical retry rejection, private-state access and scorer range proof; partial v4 compute statement added. Native compilation succeeded without repair.",
-    "Pinned model identity, publisher attribution metadata and public/private replay limits added. Native compilation succeeded without repair;32 source bindings checked. Record-level attribution clearance remains unverified."
+    "Pinned model identity, publisher attribution metadata and public/private replay limits added. Native compilation succeeded without repair;32 source bindings checked. Record-level attribution clearance remains unverified.",
+    "Expanded historical compute ledger covers72 unique jobs and includes four failures; separate same-author arithmetic crosscheck matched all source rows and original32 array parent rows. Existing manuscript compiled successfully without repair.35 direct evidence bindings checked."
   ],
   "attribution_review_20261016.json": {
     "bytes": 10937,
@@ -15,18 +16,27 @@
   "bibliography_entries_checked": 15,
   "claims_review_20261016.json": {
     "bytes": 8655,
-    "sha256": "9407f89e209b6b9466d36dd7d850de40f1945d2bd3dfc30159b5199c2ba45398"
+    "sha256": "635bac29974987df2e89264f19953356a4c43fcaa1e3fd5b76bc1cf3fc27299a"
   },
   "compile_verified": true,
   "compute_accounting_20261016.json": {
     "bytes": 4577,
-    "sha256": "ca0868c261039037e4a4a02990ed992f5b94baa62fe68557236abc3265e77ab3"
+    "sha256": "ee5e42741d440edf0dcd818959d2379a3f7008b337bf09d62812d433abec0f5d"
+  },
+  "compute_history_20261016.json": {
+    "bytes": 36673,
+    "sha256": "bc3bfee70c06ab954b15b75fe27503f634fcc4119055d8babd5181431d780ee7"
+  },
+  "compute_receipts_extract_20261016.json": {
+    "bytes": 8264,
+    "sha256": "dc9ad7bf2a5aa14d59c3b32b71e0f7de8a59b5a2f904c0ed57de8af8f9d7c3fe"
   },
   "current_revision_source_repairs": 0,
   "evidence_20261016.json": {
-    "bytes": 13347,
-    "sha256": "198d55cfbc0a4f127bde12bd857e2d19aa6130d1881e75eae26b1317fc883a3f"
+    "bytes": 14520,
+    "sha256": "adbdbfb8f33b4b225cb3d2316f3307d0fd06d6389d45aee473ff2be949227428"
   },
+  "historical_compute_nested_source_bindings": 33,
   "latex_installed_by_agent": false,
   "literature_contract_review_20261016.json": {
     "bytes": 4170,
@@ -37,7 +47,7 @@
     "message": "The current source compiled successfully with the desktop editor's compiler.",
     "path": "/Users/priyankjairaj/Downloads/ACL/Three/manuscript/third_working_draft.tex"
   },
-  "observed_utc": "2026-10-16T10:51:23.177612+00:00",
+  "observed_utc": "2026-10-16T11:22:49.316336+00:00",
   "open_in_codex_status": "already open as reported by user",
   "related_work_sources_20261016.json": {
     "bytes": 5744,
@@ -45,10 +55,10 @@
   },
   "schema": "third-manuscript-build-status-v1",
   "source_binding": {
-    "bytes": 54506,
-    "sha256": "c9f4475cf865df21e7c870ba9b73c2fc96c310c106cf36725fca1926bc7dd5b5"
+    "bytes": 55267,
+    "sha256": "0d4eeb29878d3f84b8fbf9aef94d0402918d35c151023a3b985fb707d875c390"
   },
-  "source_bindings_checked": 32,
+  "source_bindings_checked": 35,
   "source_check_report": "evidence_20261016.json",
   "source_repairs": 2,
   "submission_ready": false,

@@ -952,10 +952,22 @@ GPU utilization, energy, or end-to-end project time. The corrected Qwen
 and Mistral CPU audits took 755 and 130 seconds; the retained failed Qwen
 audit took 583 seconds, and selection statistics took one second.
 These four CPU-job durations sum to 1,469 seconds, not CPU-core time.
-The accounting is deliberately partial: it excludes earlier pilot and v3
-inference, embedding preparation, sampling, runtime qualification, other
-preparation jobs, local development, and manuscript work. A complete
-project compute budget and energy estimate remain unavailable.
+
+A broader historical ledger covers 72 saved jobs, including those six.
+Adding the two successful engineering pilots and the two v3 selection
+jobs gives six model jobs totaling 25,759 A100-allocation seconds
+(7.16 hours). The 32 E5 tasks, each encoding and then replaying its shard,
+sum to 479,503 task-elapsed seconds (133.20 hours). Each requested two
+CPUs, giving 266.39 requested-CPU hours when multiplied by elapsed time;
+this is not measured CPU utilization or verified billed core time.
+The remaining 34 stages sum to 8,396 job-elapsed seconds and include
+preparation, acquisition, audits and a hardware probe. Four failed jobs
+remain in the ledger. Parent jobs and array tasks are each counted once;
+batch steps and raw/display aliases are not added again. Concurrent task
+times overlap, so these sums are not project wall-clock duration.
+Earlier setup, transfers and failed annotation attempts outside the saved
+subset, local work, queue waits and energy remain unaccounted. A complete
+project compute budget remains unavailable.
 
 The remaining empirical displays must be generated from audited outputs:
 admission curves and blocker structure; matched request-arm target

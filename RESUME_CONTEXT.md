@@ -1,3 +1,41 @@
+Latest continuation — 16 October 2026, 2026-10-16T11:23:51.360856+00:00
+
+HISTORICAL COMPUTE MILESTONE.
+Expanded manuscript/compute_history_20261016.json reconciles72 unique saved jobs:
+68 COMPLETED and4 FAILED. Six model jobs (two successful engineering pilots,
+two v3 selection jobs, two v4 selection jobs) total25759 A100-allocation seconds
+(7.16hours).32 E5 encoding/replay tasks sum479503 task-elapsed seconds (133.20hours).
+At two requested CPUs/task this is266.39 requested-CPU hours, not measured CPU
+busy time or verified billed cores.34 other preparation/acquisition/audit/probe
+stages sum8396 elapsed seconds. The four failures account for611seconds.
+
+Existing six-job v4 accounting is an INCLUDED SUBSET; never add its totals again.
+Parent/task IDs are unique; .batch steps and raw/display array aliases are not
+double-counted. Concurrent tasks overlap; these are not project wall-clock time.
+Earlier missing setup/transfers/annotation attempts, local work, queue waits,
+energy and monetary costs remain unaccounted. No full-project budget is claimed.
+
+Public builder: python3 -B manuscript/build_compute_history.py --check.
+Its33 source bindings and minimal32-task/three-launch receipt extract support
+public arithmetic replay. Recreating the extract needs private original receipts;
+no global queue, raw corpus or private model output was exported. A separate
+same-author arithmetic crosscheck matched all72 source rows, original32 parent
+rows and decimal displays. This is not a new independent scientific review.
+
+The SAME open manuscript compiled successfully.35 direct evidence bindings and
+15 references passed. New immutable package manuscript/release_20261016_v3.zip:
+SHA256 78988b5a943e81d4acad46108df7c15bc881c152d88d2d08fca89fcc43907b1d.
+85 payload files plus manifest passed CRC, exact hashes and clean-extraction
+source-check replay, including historical compute arithmetic. Prior v1/v2 packages
+and protected local locks remain unchanged. No new cluster query, job or model call.
+
+The scheduler remains ACTIVE every30minutes. Calibration stays terminal NEGATIVE;
+all51 cuts failed and no downstream guard/effect/held-out stage is authorized.
+No controller restart, retuning or new human review. Frozen sources and original
+unmet gates remain intact. Next useful local work is final unified manuscript
+review, available layout review and unresolved close-prior full-text comparisons.
+No submission-ready or original empirical-completion claim.
+
 Latest continuation — 16 October 2026, 2026-10-16T10:52:22.578367+00:00
 
 ATTRIBUTION AND REPLAY-LIMIT MILESTONE.

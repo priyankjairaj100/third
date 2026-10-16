@@ -1,15 +1,15 @@
 {
   "schema": "third-working-manuscript-evidence-v1",
-  "created_utc": "2026-10-16T10:51:04.429564+00:00",
+  "created_utc": "2026-10-16T11:21:46.422210+00:00",
   "manuscript": {
     "path": "manuscript/third_working_draft.tex",
-    "bytes": 54506,
-    "sha256": "c9f4475cf865df21e7c870ba9b73c2fc96c310c106cf36725fca1926bc7dd5b5"
+    "bytes": 55267,
+    "sha256": "0d4eeb29878d3f84b8fbf9aef94d0402918d35c151023a3b985fb707d875c390"
   },
   "checker": {
     "path": "manuscript/build_evidence.py",
-    "bytes": 16978,
-    "sha256": "d5058a95a0109315a1972753d0ea3174da8e3ef7160dee03de3255cf60e696a7"
+    "bytes": 18647,
+    "sha256": "d2693e5b8ea78eb28f2ef25caa95d256a48f9372075b669a42b9c09c9e0009b7"
   },
   "source_claim_check_passed": true,
   "reviewer_kind": "author AI assistant source and arithmetic check; not independent manuscript review",
@@ -140,12 +140,12 @@
     {
       "path": "manuscript/claims_review_20261016.json",
       "bytes": 8655,
-      "sha256": "9407f89e209b6b9466d36dd7d850de40f1945d2bd3dfc30159b5199c2ba45398"
+      "sha256": "635bac29974987df2e89264f19953356a4c43fcaa1e3fd5b76bc1cf3fc27299a"
     },
     {
       "path": "manuscript/compute_accounting_20261016.json",
       "bytes": 4577,
-      "sha256": "ca0868c261039037e4a4a02990ed992f5b94baa62fe68557236abc3265e77ab3"
+      "sha256": "ee5e42741d440edf0dcd818959d2379a3f7008b337bf09d62812d433abec0f5d"
     },
     {
       "path": "manuscript/build_review.py",
@@ -176,6 +176,21 @@
       "path": "local_run/e5_sharded_cpu_v2_20261013/expectations.json",
       "bytes": 3008,
       "sha256": "68442e55534e49f02573c4b05d602bd6ebea67d35bbcb673dac083608131bcbe"
+    },
+    {
+      "path": "manuscript/compute_history_20261016.json",
+      "bytes": 36673,
+      "sha256": "bc3bfee70c06ab954b15b75fe27503f634fcc4119055d8babd5181431d780ee7"
+    },
+    {
+      "path": "manuscript/compute_receipts_extract_20261016.json",
+      "bytes": 8264,
+      "sha256": "dc9ad7bf2a5aa14d59c3b32b71e0f7de8a59b5a2f904c0ed57de8af8f9d7c3fe"
+    },
+    {
+      "path": "manuscript/build_compute_history.py",
+      "bytes": 17087,
+      "sha256": "778f91048e6e7f662c772677a174932aca3ee941c4e3178f3c638be98da2b28f"
     }
   ],
   "claims": [
@@ -307,6 +322,18 @@
         "local_run/source_acceptance_v2_20261011/qualification.json"
       ],
       "limit": "Documentary and code review only; no complete record-level attribution census, legal clearance, source/model redistribution, bitwise inference portability or changed acceptance gate."
+    },
+    {
+      "sections": [
+        "app:repro"
+      ],
+      "claim": "Expanded72-job historical accounting with six model jobs,32 CPU embedding tasks,34 other stages and four preserved failures",
+      "sources": [
+        "manuscript/compute_history_20261016.json",
+        "manuscript/compute_receipts_extract_20261016.json",
+        "manuscript/build_compute_history.py"
+      ],
+      "limit": "Explicit saved subset, not complete project cost. Array and model launch excerpts require private originals for extraction replay; public arithmetic is reproducible. Requested CPU times elapsed is not utilization or billed core time."
     }
   ],
   "fixed_cutoff": "16 October 2026; terminal v4 negative at09:52:01UTC; downstream work blocked under this configuration",

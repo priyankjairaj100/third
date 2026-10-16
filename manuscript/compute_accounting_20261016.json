@@ -7,7 +7,7 @@
   },
   "cpu_core_seconds_computed": false,
   "cpu_job_elapsed_seconds_sum": 1469,
-  "created_utc": "2026-10-16T10:51:04.388490+00:00",
+  "created_utc": "2026-10-16T11:21:46.297959+00:00",
   "energy_measured": false,
   "excluded_scope": [
     "Earlier pilot and v3 inference",

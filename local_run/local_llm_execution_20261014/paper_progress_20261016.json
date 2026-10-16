@@ -89,6 +89,16 @@
       "evidence": "manuscript/attribution_review_20261016.json",
       "limit": "Bounded documentary/code review, not full record-level attribution clearance, raw corpus/model redistribution approval, full inference replay or submission readiness.",
       "work": "Pinned model/license declarations and source metadata/replay review; existing manuscript compiled; new public package with56 payload files passed clean-extraction replay"
+    },
+    {
+      "evidence": "manuscript/compute_history_20261016.json",
+      "limit": "Explicit saved subset only; allocation/task time is not utilization, billed core time, energy, project wall-clock duration or complete cost. Private extract originals remain necessary for original-receipt verification.",
+      "work": "Expanded72-job historical compute ledger: six model jobs,32 E5 tasks,34 other stages and four failures; public arithmetic and separate same-author source crosscheck passed"
+    },
+    {
+      "evidence": "manuscript/RELEASE_BUILD_STATUS.json",
+      "limit": "Not full inference replay, visual review, independent unified scientific review or submission readiness.",
+      "work": "Existing manuscript compiled with expanded compute; immutable85-file v3 package plus manifest passed clean-extraction replay"
     }
   ],
   "continuous_execution": {
@@ -113,7 +123,7 @@
   },
   "fully_llm_annotation": true,
   "human_review_required": false,
-  "observed_utc": "2026-10-16T10:52:22.578367+00:00",
+  "observed_utc": "2026-10-16T11:23:51.360856+00:00",
   "original_registry": {
     "core": 16912,
     "extensions": 4420,
@@ -129,8 +139,8 @@
     {
       "limit": "No renewed inference, cut selection, validation, guard or effect experiment.",
       "order": 1,
-      "state": "attribution_replay_documented_historical_compute_inventory_next",
-      "work": "Extend historical compute coverage from local receipts and finish available manuscript review; preserve record-level attribution/replay limits"
+      "state": "compute_attribution_and_replay_subset_documented_remaining_manuscript_review",
+      "work": "Final available unified manuscript review, visual layout and close-prior comparisons; preserve remaining source/compute coverage gaps"
     },
     {
       "limit": "Do not claim submission readiness or exhaustive novelty.",

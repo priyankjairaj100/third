@@ -128,8 +128,9 @@
       "depends_on": [],
       "done_when": "Compiled and visually reviewed complete manuscript, actual figures/tables, citations and defensible limits.",
       "evidence": "manuscript/evidence_20261016.json",
+      "historical_compute": "manuscript/compute_history_20261016.json",
       "id": "07-manuscript",
-      "next_action": "Same .tex remains open.32 source bindings and15 references checked; native compilation passed. Pinned model attribution and replay limits documented without changing original gates. Final independent unified review, visual layout, two close-prior full-text gaps and final submission framing remain.",
+      "next_action": "Same .tex remains open and compiles.35 direct source bindings,15 references and72-job historical compute arithmetic checked. Continue final available unified manuscript review, visual layout and two close-prior full-text gaps; preserve all unresolved limits and no submission-readiness claim.",
       "state": "compiled_author_reviewed_bounded_evidence_draft"
     },
     {
@@ -147,7 +148,10 @@
       "completed_milestones": [
         "Bounded author claim review and four description corrections",
         "Six-job partial v4 compute ledger with failed audit retained",
-        "Public51-file source-check closure plus manifest; clean-extraction replay passed"
+        "Public51-file source-check closure plus manifest; clean-extraction replay passed",
+        "Pinned model attribution and public/private replay limits documented; original gates unchanged",
+        "Expanded72-job historical accounting with four failures; no duplicate batch/array aliases",
+        "Public85-file source-check closure plus manifest; clean-extraction replay including compute passed"
       ],
       "coordinates_with": [
         "07-manuscript"
@@ -159,13 +163,15 @@
       "evidence": [
         "manuscript/claims_review_20261016.json",
         "manuscript/compute_accounting_20261016.json",
-        "manuscript/RELEASE_BUILD_STATUS.json"
+        "manuscript/RELEASE_BUILD_STATUS.json",
+        "manuscript/attribution_review_20261016.json",
+        "manuscript/compute_history_20261016.json"
       ],
       "id": "09-negative-branch-closure",
-      "next_action": "Inventory additional historical compute receipts locally and extend accounting only where source-bound terminal/resource data support it. Continue available manuscript/layout/full-text review. Do not claim complete attribution coverage or rerun failed calibration.",
-      "public_package": "manuscript/release_20261016_v2.zip",
-      "state": "attribution_replay_review_and_v2_public_package_verified_remaining_review_work"
+      "next_action": "Continue available final unified manuscript review, visual layout and unresolved close-prior full-text comparisons. Historical compute subset is reconciled; do not repeat unchanged accounting or remote jobs. Missing original receipts remain explicit. No retuning or downstream experimental launch.",
+      "public_package": "manuscript/release_20261016_v3.zip",
+      "state": "historical_compute_accounting_and_v3_package_verified_remaining_manuscript_review"
     }
   ],
-  "updated_utc": "2026-10-16T10:52:22.578367+00:00"
+  "updated_utc": "2026-10-16T11:23:51.360856+00:00"
 }

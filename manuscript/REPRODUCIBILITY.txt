@@ -9,6 +9,9 @@ selection gates; no threshold-dependent downstream experiment is authorized.
 Public verification, from the extracted package root:
   python3 -B manuscript/build_evidence.py
 
+The expanded historical compute arithmetic can also be checked separately:
+  python3 -B manuscript/build_compute_history.py --check
+
 This standard-library Python check verifies citations/references, source hashes,
 reported counts, the displayed calibration table, the bounded author review and
 partial compute ledger. It regenerates evidence_20261016.json with a new creation
@@ -70,8 +73,25 @@ The exact theorem concerns a constructed finite-format family and counts private
 information under its access model, not total deployment bytes or natural NLP
 utility. The historical proof-review receipt is source-bound; this manuscript's
 new reconciliation is an author review, not a new independent proof review.
-Compute accounting covers six saved v4 jobs, retains the failed audit and excludes
-other project phases. It is not a total compute, energy or monetary-cost estimate.
+The original compute_accounting_20261016.json covers six saved v4 jobs.
+compute_history_20261016.json expands the included subset to72 unique jobs:
+six successful model jobs,32 E5 encoding/replay tasks and34 other stages.
+Four failures are retained. The two ledgers overlap; never add their totals.
+The six model jobs use25759 A100-allocation seconds (7.16hours). The32 embedding
+tasks sum to479503 task-elapsed seconds (133.20hours), or266.39 requested-CPU hours
+at two requested CPUs/task. The other34 stages sum to8396 elapsed seconds and
+mix preparation, acquisition, audits and a hardware probe. These units do not
+measure CPU/GPU busy time or elapsed project duration. No total compute, energy
+or monetary-cost estimate is claimed. Missing earlier attempts/setup remain gaps.
+
+compute_receipts_extract_20261016.json contains only the32 project array-task
+scheduler rows and three model-launch resource records, bound to private original
+receipts. Array raw IDs and display IDs are aliases, not separate jobs. Batch
+steps are not counted again. Recreating that extract requires the original local
+receipts and the builder's explicit --refresh-private-extract option; the public
+package verifies its bindings and arithmetic, not inaccessible original bytes.
+One frozen pilot .sbatch file is included solely as resource-request evidence.
+Neither public checker submits jobs or connects to the cluster.
 The two unresolved close-prior full-text comparisons remain explicit. Original
 human gates remain unmet; prospective annotation and review are fully LLM only.
 

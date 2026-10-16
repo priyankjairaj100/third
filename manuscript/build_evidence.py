@@ -7,6 +7,8 @@ Only public reports and theory sources are read. No source texts or labels.
 import hashlib
 import json
 import re
+import subprocess
+import sys
 from fractions import Fraction
 from datetime import datetime, timezone
 from pathlib import Path
@@ -150,6 +152,19 @@ def main():
     assert not attribution["replay_availability"]["public_checker_checks_private_labels"]
     assert not attribution["replay_availability"]["threshold_dependent_relaunch_authorized"]
     assert "intfloat/multilingual-e5-base" in tex
+    history = read_json("manuscript/compute_history_20261016.json")
+    for saved in history["source_bindings"] + [history["builder"]]:
+        assert saved == binding(saved["path"]), "historical compute source binding drift"
+    checked = subprocess.run([sys.executable, "-B", str(HERE / "build_compute_history.py"), "--check"],
+                             cwd=ROOT, capture_output=True, text=True, timeout=30)
+    assert checked.returncode == 0, checked.stderr
+    assert history["job_count"] == 72 and history["state_counts"] == {"COMPLETED": 68, "FAILED": 4}
+    assert history["existing_v4_jobs_included_once"] and not history["project_total_compute_complete"]
+    for number in [history["six_model_job_gpu_allocation_seconds"],
+                   history["embedding_array_elapsed_seconds"],
+                   history["groups"]["other_stage"]["elapsed_seconds_sum"]]:
+        assert f"{number:,}" in tex, "historical compute manuscript count differs"
+    assert "266.39 requested-CPU hours" in tex
 
     sources = [
         "output/pdf/counterfactual_curation_theory.tex",
@@ -184,6 +199,9 @@ def main():
         "empirical_execution/phase4/ADAPTERS_README.txt",
         "empirical_execution/phase4/embeddings.py",
         "local_run/e5_sharded_cpu_v2_20261013/expectations.json",
+        "manuscript/compute_history_20261016.json",
+        "manuscript/compute_receipts_extract_20261016.json",
+        "manuscript/build_compute_history.py",
     ]
     claims = [
         {"sections": ["sec:setup", "sec:method", "app:work"],
@@ -212,8 +230,12 @@ def main():
          "limit": "No new independent proof review, visual layout verification, complete project compute/energy budget or empirical effect evidence."},
         {"sections": ["app:repro"],
          "claim": "Pinned model identity and publisher license declarations, supplied metadata retention and public/private replay boundaries",
-         "sources": sources[27:] + [sources[11], sources[12]],
+         "sources": sources[27:32] + [sources[11], sources[12]],
          "limit": "Documentary and code review only; no complete record-level attribution census, legal clearance, source/model redistribution, bitwise inference portability or changed acceptance gate."},
+        {"sections": ["app:repro"],
+         "claim": "Expanded72-job historical accounting with six model jobs,32 CPU embedding tasks,34 other stages and four preserved failures",
+         "sources": sources[32:35],
+         "limit": "Explicit saved subset, not complete project cost. Array and model launch excerpts require private originals for extraction replay; public arithmetic is reproducible. Requested CPU times elapsed is not utilization or billed core time."},
     ]
     report = {
         "schema": "third-working-manuscript-evidence-v1",

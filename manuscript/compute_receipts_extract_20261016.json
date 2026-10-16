@@ -1,0 +1,319 @@
+{
+  "array_bundle_binding": {
+    "bytes": 3199444,
+    "path": "local_workspace/reports/e5-full-sharded-v2-20261013/a01-terminal-metadata/bundle.json",
+    "sha256": "393a90c6f4518f9e9292b8ebce07eebc09d4588697bd67c322c40ebabd24feb6"
+  },
+  "array_observed_utc": "2026-10-14T03:46:17.861246+00:00",
+  "array_rows": [
+    {
+      "array_task_id": "13498_0",
+      "elapsed_seconds": 15836,
+      "exit_code": "0:0",
+      "job_id_raw": "13499",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_1",
+      "elapsed_seconds": 15820,
+      "exit_code": "0:0",
+      "job_id_raw": "13500",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_2",
+      "elapsed_seconds": 15768,
+      "exit_code": "0:0",
+      "job_id_raw": "13501",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_3",
+      "elapsed_seconds": 15903,
+      "exit_code": "0:0",
+      "job_id_raw": "13502",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_4",
+      "elapsed_seconds": 15782,
+      "exit_code": "0:0",
+      "job_id_raw": "13503",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_5",
+      "elapsed_seconds": 15841,
+      "exit_code": "0:0",
+      "job_id_raw": "13504",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_6",
+      "elapsed_seconds": 15906,
+      "exit_code": "0:0",
+      "job_id_raw": "13505",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_7",
+      "elapsed_seconds": 15930,
+      "exit_code": "0:0",
+      "job_id_raw": "13506",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_8",
+      "elapsed_seconds": 14349,
+      "exit_code": "0:0",
+      "job_id_raw": "13515",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_9",
+      "elapsed_seconds": 14371,
+      "exit_code": "0:0",
+      "job_id_raw": "13516",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_10",
+      "elapsed_seconds": 14458,
+      "exit_code": "0:0",
+      "job_id_raw": "13517",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_11",
+      "elapsed_seconds": 14367,
+      "exit_code": "0:0",
+      "job_id_raw": "13518",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_12",
+      "elapsed_seconds": 15040,
+      "exit_code": "0:0",
+      "job_id_raw": "13519",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_13",
+      "elapsed_seconds": 14986,
+      "exit_code": "0:0",
+      "job_id_raw": "13520",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_14",
+      "elapsed_seconds": 15034,
+      "exit_code": "0:0",
+      "job_id_raw": "13521",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_15",
+      "elapsed_seconds": 15019,
+      "exit_code": "0:0",
+      "job_id_raw": "13522",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_16",
+      "elapsed_seconds": 14467,
+      "exit_code": "0:0",
+      "job_id_raw": "13529",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_17",
+      "elapsed_seconds": 14552,
+      "exit_code": "0:0",
+      "job_id_raw": "13530",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_18",
+      "elapsed_seconds": 14859,
+      "exit_code": "0:0",
+      "job_id_raw": "13531",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_19",
+      "elapsed_seconds": 14963,
+      "exit_code": "0:0",
+      "job_id_raw": "13532",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_20",
+      "elapsed_seconds": 14859,
+      "exit_code": "0:0",
+      "job_id_raw": "13533",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_21",
+      "elapsed_seconds": 14608,
+      "exit_code": "0:0",
+      "job_id_raw": "13534",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_22",
+      "elapsed_seconds": 14606,
+      "exit_code": "0:0",
+      "job_id_raw": "13535",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_23",
+      "elapsed_seconds": 14602,
+      "exit_code": "0:0",
+      "job_id_raw": "13536",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_24",
+      "elapsed_seconds": 14580,
+      "exit_code": "0:0",
+      "job_id_raw": "13537",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_25",
+      "elapsed_seconds": 14497,
+      "exit_code": "0:0",
+      "job_id_raw": "13538",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_26",
+      "elapsed_seconds": 14860,
+      "exit_code": "0:0",
+      "job_id_raw": "13539",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_27",
+      "elapsed_seconds": 14889,
+      "exit_code": "0:0",
+      "job_id_raw": "13540",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_28",
+      "elapsed_seconds": 14644,
+      "exit_code": "0:0",
+      "job_id_raw": "13541",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_29",
+      "elapsed_seconds": 14625,
+      "exit_code": "0:0",
+      "job_id_raw": "13542",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_30",
+      "elapsed_seconds": 14654,
+      "exit_code": "0:0",
+      "job_id_raw": "13543",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    },
+    {
+      "array_task_id": "13498_31",
+      "elapsed_seconds": 14828,
+      "exit_code": "0:0",
+      "job_id_raw": "13498",
+      "node": "csis.cn1",
+      "state": "COMPLETED"
+    }
+  ],
+  "created_utc": "2026-10-16T11:20:10.648810+00:00",
+  "extractor": {
+    "bytes": 17087,
+    "path": "manuscript/build_compute_history.py",
+    "sha256": "778f91048e6e7f662c772677a174932aca3ee941c4e3178f3c638be98da2b28f"
+  },
+  "model_launch_resources": [
+    {
+      "gpu_count": 1,
+      "gpu_type": "A100 80GB",
+      "job_id": "13353",
+      "private_launch_binding": {
+        "bytes": 1191,
+        "path": "local_workspace/reports/annotation-pilot-v5-20261011/a01/launch_receipt.json",
+        "sha256": "813ad3c739ca832c9ee7c68b9dbb1a6f07150edc8d53d51b0bc3e33b2c3f3944"
+      },
+      "public_script_binding": {
+        "bytes": 2040,
+        "path": "local_run/model_annotation_runtime_v5_20261011/pilot.sbatch",
+        "sha256": "7e799b5d731a54ba28286c1699d9d8477d05464c32d117888b0edb2caad6c1f6"
+      },
+      "role": "Qwen successful engineering pilot"
+    },
+    {
+      "gpu_count": 1,
+      "gpu_type": "A100 80GB",
+      "job_id": "13574",
+      "private_launch_binding": {
+        "bytes": 6288,
+        "path": "local_workspace/reports/llm-only-v3-selection-qwen-a01/launch_receipt.json",
+        "sha256": "e41783fb011cfe9977c3e35ede0310e946122617f498b66745aff15cee707a06"
+      },
+      "public_script_binding": null,
+      "role": "Qwen v3 selection"
+    },
+    {
+      "gpu_count": 1,
+      "gpu_type": "A100 80GB",
+      "job_id": "13625",
+      "private_launch_binding": {
+        "bytes": 7451,
+        "path": "local_workspace/reports/llm-only-v3-selection-mistral-a01/launch_receipt.json",
+        "sha256": "730cdddb9bffb8395fe0598c7c724d2bd5c3b528125cbc04e4842bc0b5d6c71c"
+      },
+      "public_script_binding": null,
+      "role": "Mistral v3 selection"
+    }
+  ],
+  "new_cluster_queries": 0,
+  "private_queue_observations_exported": false,
+  "private_source_text_exported": false,
+  "review_kind": "author extraction of saved local receipts",
+  "schema": "third-minimal-historical-compute-extract-v1"
+}

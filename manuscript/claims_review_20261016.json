@@ -13,7 +13,7 @@
     {
       "bytes": 4577,
       "path": "manuscript/compute_accounting_20261016.json",
-      "sha256": "ca0868c261039037e4a4a02990ed992f5b94baa62fe68557236abc3265e77ab3"
+      "sha256": "ee5e42741d440edf0dcd818959d2379a3f7008b337bf09d62812d433abec0f5d"
     },
     {
       "bytes": 85149,
@@ -44,7 +44,7 @@
     "Completed v4 failure blocks downstream experiments; no effect, speed or total-byte advantage is claimed.",
     "Partial compute record counts each saved parent job once and includes the failed audit."
   ],
-  "created_utc": "2026-10-16T10:51:04.388490+00:00",
+  "created_utc": "2026-10-16T11:21:46.297959+00:00",
   "frozen_sources_changed": false,
   "historical_independent_review": {
     "bytes": 6971,
@@ -145,9 +145,9 @@
   ],
   "human_annotation_calls": 0,
   "manuscript": {
-    "bytes": 54506,
+    "bytes": 55267,
     "path": "manuscript/third_working_draft.tex",
-    "sha256": "c9f4475cf865df21e7c870ba9b73c2fc96c310c106cf36725fca1926bc7dd5b5"
+    "sha256": "0d4eeb29878d3f84b8fbf9aef94d0402918d35c151023a3b985fb707d875c390"
   },
   "new_empirical_experiments": 0,
   "new_independent_proof_review": false,

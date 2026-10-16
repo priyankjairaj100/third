@@ -35,11 +35,13 @@ def main():
     evidence = read('manuscript/evidence_20261016.json')
     author = read('manuscript/claims_review_20261016.json')
     compute = read('manuscript/compute_accounting_20261016.json')
+    history = read('manuscript/compute_history_20261016.json')
     build = read('manuscript/BUILD_STATUS.json')
     assert build['compile_verified'] and build['source_binding'] == binding(ROOT / 'manuscript/third_working_draft.tex')
     bound = evidence['source_bindings'] + [evidence['manuscript'], evidence['checker']]
     bound += author['historical_source_bindings_reverified'] + author['additional_sources']
     bound += [author['historical_independent_review']] + compute['source_bindings']
+    bound += history['source_bindings'] + [history['builder']]
     included = set()
     for entry in bound:
         path = entry['path']
@@ -56,7 +58,7 @@ def main():
     for name in included:
         path = ROOT / name
         assert name.startswith(allowed_roots) and path.is_file() and not path.is_symlink()
-        assert path.suffix in {'.py', '.json', '.md', '.tex', '.txt'}
+        assert path.suffix in {'.py', '.json', '.md', '.tex', '.txt', '.sbatch'}
         assert path.name not in {'TODO.json', 'ANALYSIS_LOCK.json', 'ANALYSIS_LOCK_EXECUTION.json'}
     manifest = {'schema': 'third-public-source-check-package-v1',
                 'created_utc': datetime.now(timezone.utc).isoformat(),
