@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "tests": 12,
+  "scope": "Synthetic fixtures only; no natural-data effects",
+  "preseal_fix": "Resolve macOS temporary-directory alias in audit fixture. Production absolute-path policy unchanged.",
+  "created_utc": "2026-10-16T08:22:14.116627+00:00"
+}

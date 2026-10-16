@@ -1,0 +1,96 @@
+{
+  "authorization": "User requests autonomous sustained work, existing GitHub backup and cluster execution; fully LLM with zero human reviews.",
+  "automation": {
+    "cadence_minutes": 30,
+    "id": "continue-third-research",
+    "kind": "heartbeat",
+    "same_chat": true,
+    "status": "ACTIVE"
+  },
+  "completion_claim": false,
+  "controller_pid_at_creation": 59318,
+  "controller_state": "work/resume-20261016/repair_pipeline_a01",
+  "private_task_root": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a",
+  "repository": "/Users/priyankjairaj/Downloads/ACL/Three",
+  "rules": [
+    "Reconcile existing controller and launch receipts before acting. Never duplicate an occupied stage.",
+    "Do useful independent work during cluster waits. Do not end solely after a status check if ready tasks remain.",
+    "Stop remote attempts on SSH refusal, timeout or transport failure until access is restored; continue local work.",
+    "Never change the original frozen remote checkout or protected local locks. Version every execution change.",
+    "Keep failures and unavailable families visible. No outcome-dependent tuning or human annotation.",
+    "Review executed outputs before promoting claims. Back up substantive completed milestones."
+  ],
+  "schema": "third-continuous-work-queue-v1",
+  "tasks": [
+    {
+      "depends_on": [],
+      "done_when": "Terminal controller receipt plus independently checked selection and, if selected, fresh validation result.",
+      "failure_branch": "Preserve negative calibration; do not authorize threshold-dependent work. Continue metadata, methods, theory, and negative-result reporting.",
+      "id": "01-calibration",
+      "next_action": "Existing finite controller continues Mistral15242, exact-byte audit, 51-cut review and conditional fresh validation. Inspect completion/stopped receipts.",
+      "state": "running"
+    },
+    {
+      "depends_on": [],
+      "done_when": "Actual Slurm result, exact payload bindings, source-disjoint membership inventory and independent arithmetic/count review.",
+      "id": "02-input-intake",
+      "next_action": "Finish and run source/cache/task binding and prospective whole-source development reservation in llm_development_intake_v1_20261016.",
+      "state": "in_progress"
+    },
+    {
+      "depends_on": [
+        "01-calibration:validation_pass",
+        "02-input-intake"
+      ],
+      "done_when": "Exhaustive intended-pair replay, bounded resource receipt and immutable disjoint panel memberships. Unavailable sizes recorded.",
+      "id": "03-guard-panels",
+      "next_action": "Implement and resource-qualify strict frozen E5 semantic leakage guard, bind passed model-defined threshold, freeze post-guard development and later evaluation panels.",
+      "state": "waiting"
+    },
+    {
+      "depends_on": [
+        "03-guard-panels"
+      ],
+      "done_when": "Independent correctness review, full method comparisons, exact resource evidence and negative outcomes preserved.",
+      "id": "04-development",
+      "next_action": "Run smallest prospectively frozen source-disjoint natural pilot, exact repair versus fresh recuration, optimized eligible-payload B-E and native task utility. Include full retained state, workspace, serialization and lifecycle costs.",
+      "state": "waiting"
+    },
+    {
+      "depends_on": [
+        "04-development"
+      ],
+      "done_when": "Reviewed immutable scope and executable bounded family bundles; no claim that all21332 old planned jobs ran.",
+      "id": "05-evaluation-scope",
+      "next_action": "Freeze feasible LLM-only evaluation families, representation-specific task locks, request streams and resource policies before later evaluation outcomes. Report original registry unavailable/unexecuted cells separately.",
+      "state": "waiting"
+    },
+    {
+      "depends_on": [
+        "05-evaluation-scope"
+      ],
+      "done_when": "Every activated family terminal and audited; uncertainty and failed/infeasible cells included.",
+      "id": "06-evaluation-analysis",
+      "next_action": "Execute admitted families and independent audits, then registered statistics, robustness and claim decisions.",
+      "state": "waiting"
+    },
+    {
+      "depends_on": [],
+      "done_when": "Compiled and visually reviewed complete manuscript, actual figures/tables, citations and defensible limits.",
+      "id": "07-manuscript",
+      "next_action": "Build unified theorem/methods/limitations and evidence-to-claim structure while empirical jobs run; refresh primary related work. Add empirical sections only from audited terminal results.",
+      "state": "ready_independent_parts"
+    },
+    {
+      "depends_on": [
+        "06-evaluation-analysis",
+        "07-manuscript"
+      ],
+      "done_when": "Verified final package and truthful completion report. Pause this heartbeat on completion.",
+      "id": "08-release",
+      "next_action": "Audit reproducibility package, private-data exclusions and submission artifacts; push repository milestone.",
+      "state": "waiting"
+    }
+  ],
+  "updated_utc": "2026-10-16T08:17:08.003515+00:00"
+}

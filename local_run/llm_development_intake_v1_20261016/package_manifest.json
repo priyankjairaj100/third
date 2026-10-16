@@ -1,0 +1,54 @@
+{
+  "created_utc": "2026-10-16T08:22:14.118289+00:00",
+  "files": {
+    "PLAN.json": {
+      "bytes": 2374,
+      "sha256": "9c21ba4a71733eeff30504beb4cf20ac3dbfdfb5898c025dbd258ad72ac77dca"
+    },
+    "README.txt": {
+      "bytes": 3202,
+      "sha256": "09f81cb9da37b3f2b4c8cf3cb395d887da8250603ba39e0ffcd5d2718eaaa345"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 273,
+      "sha256": "8e72e28e9b049daebbdbc1e9ecd453b6d5c0847cd8a16ea47f058238dd78d147"
+    },
+    "expectations.json": {
+      "bytes": 4124,
+      "sha256": "94a241781379b1c97b4455fe706b0b5fd18c5492408dcf7a7cf9df452d63edd3"
+    },
+    "intake.py": {
+      "bytes": 13636,
+      "sha256": "ec53a0faafdc7dd9007231568a3ac9383a29404084464ca34adef98859ee5d7f"
+    },
+    "intake.sbatch": {
+      "bytes": 595,
+      "sha256": "8b80d8a03e183258e80ad4f95cb8b867d7d2a9b34428c3403fdda2e5fc346d5f"
+    },
+    "launch.py": {
+      "bytes": 4064,
+      "sha256": "1718f13f18e4712c342bb8f7d464b673730994315396314bba3a761a275ff232"
+    },
+    "review.py": {
+      "bytes": 4225,
+      "sha256": "a2bf80b5fa0be3d22426c1bbfba17c3881f8dd3296e659b1d57a9b454275672d"
+    },
+    "runner.py": {
+      "bytes": 3238,
+      "sha256": "069f09bed7f62452ba764c91e023244ce5bc2627d4d4725d3102d3717d7122fd"
+    },
+    "source_qualification.json": {
+      "bytes": 7325,
+      "sha256": "a8ee71c5b95318d0496ed26b3987627db36e309cd83f51432a7a42d3635f2e98"
+    },
+    "task_independent_review.json": {
+      "bytes": 2767,
+      "sha256": "9da18a313b1324cf1471897421c04e37eec5e971f942b97c45fdbb5c7c85d183"
+    },
+    "test_intake.py": {
+      "bytes": 6618,
+      "sha256": "4a7f7de69e0795356e3dcb32f3f845815f13df38dafe0f68e50b06da9c2e95fb"
+    }
+  },
+  "schema": "third-llm-development-intake-package-v1"
+}

@@ -1,0 +1,145 @@
+{
+  "archive": {
+    "bytes": 1071610861,
+    "crc32": "7c083c97",
+    "md5": "eb73b916968b8580e10f208941991eb3",
+    "sha1": "15102a3bfa4578cd67ed34df8952ed5064184c7a",
+    "sha256": "59632526b760472f0345347d30f478975a5a3c88206598d1420bb69b9ae5df4e"
+  },
+  "construction": {
+    "adapter_rows": 141307,
+    "archive_members": {
+      "PostLinks.xml": {
+        "bytes": 26086907,
+        "sha256": "e239b73279b6ed409029789513bb6336334e958ba29185169e6fdd93a8d53c10"
+      },
+      "Posts.xml": {
+        "bytes": 1400891844,
+        "sha256": "59e3c17aa0db587a5a7d3f0ce11e185bbafa44b56f5271e230402c83641fdbb9"
+      }
+    },
+    "prepared_rows": 140250,
+    "tag_transport": {
+      "complete_expected_transformed_bytes_equal": true,
+      "tags_converted": 414451,
+      "tags_unchanged": 0
+    }
+  },
+  "created_utc": "2026-10-11T15:54:53.109756+00:00",
+  "documentary_evidence_binding": {
+    "bytes": 6029,
+    "sha256": "c2b59aed24edd08ff6de13e7eeb63e7bc2f925b788beac883aaa504d3f040eb4"
+  },
+  "evidence_bindings": {
+    "local_workspace/reports/source-lineage-v1-20261011/a01/audit/result.json": {
+      "bytes": 5687,
+      "sha256": "ab2aa1f89319fb34b147a565f94eb68e4bbb5f1326ea28d8ece49e03f48cb28e"
+    },
+    "local_workspace/reports/source-mirror-identity-v1-20261011/a01/result.json": {
+      "bytes": 2992,
+      "sha256": "95715c34e245247d457ff94802552c99e8585ab87ce4b7e7380ce6ab66904989"
+    },
+    "local_workspace/reports/source-replay-v1-20261011/a01/replay/result.json": {
+      "bytes": 14761,
+      "sha256": "c997b2ca344a5d99d4de0d450419a355c1bb655b8e11851fd3257c4936790e99"
+    }
+  },
+  "evidence_role": "documentary_source_qualification_for_separate_model_assisted_development",
+  "flags": {
+    "all_historical_snapshot_records_complete": false,
+    "archive_attribution_review_completed": false,
+    "confirmatory_study_ready": false,
+    "frozen_route_changed": false,
+    "full_population_cache_acceptance": false,
+    "genuine_independent_human_collection": false,
+    "model_inference_performed_by_this_review": false,
+    "primary_input_acceptance": false,
+    "publisher_bytes_cryptographically_authenticated": false,
+    "v1_external_evidence_review_created": false
+  },
+  "frozen_contract_bindings": {
+    "empirical_execution/phase4/ADAPTERS_README.txt": {
+      "bytes": 9605,
+      "sha256": "c617e8c412ba0b49f36ace410d7c7a4bb42606be430c389e83928802a75b1d75"
+    },
+    "empirical_execution/phase4/adapters.py": {
+      "bytes": 31889,
+      "sha256": "7171b59802dff219636a08b53f13d8b3bdbb7bc400f5712f041280e61e8d6f0d"
+    },
+    "empirical_execution/phase6/DISPATCH_README.md": {
+      "bytes": 9230,
+      "sha256": "3241dc4c80221678b78d25d9c95f644e3509bb38c40fd7fdd66a5a057ba769b9"
+    },
+    "empirical_execution/phase6/REQUIRED_INPUTS.md": {
+      "bytes": 3556,
+      "sha256": "868578a2684b1519a9126a590f2ab655e4d38b05bbeb1d2dea7ebdf06078d6ab"
+    },
+    "empirical_execution/phase6/acceptance.py": {
+      "bytes": 47319,
+      "sha256": "c324b08f3aa64cf06fa394743edea0a52209928dc4457d15f72cac5f135a2d8f"
+    },
+    "empirical_execution/phase6/dispatch.py": {
+      "bytes": 62093,
+      "sha256": "41033483d29e241940e9128c426fbb9aa1b865f6d1c37895738c5809bd446bc2"
+    },
+    "local_run/EMPIRICAL_PROGRAM.md": {
+      "bytes": 36402,
+      "sha256": "35c2bac50f542a4657ff4f53050bbcfe34362f12aa4d063c6b7f20071504f834"
+    },
+    "output/empirical_program/study_design.json": {
+      "bytes": 12554,
+      "sha256": "11bb7a38665769efd9b539370361ef2b1d39b91ee2a01b44a040ba8f2a5b6fb4"
+    }
+  },
+  "interpretation": {
+    "completeness": "The frozen target is surviving_records_after_fixed_guards. Exhaustive pre-semantic preparation from the supplied snapshot is verified; semantic guard application remains pending. No claim covers deleted/private posts or all historical account contributions.",
+    "corrected_release_identity": "Documentary inference from staff correction announcement, separately identified corrected release-index row, exact mirror target and matching mirror checksums. This is not cryptographic publisher authentication.",
+    "reviewer_contract": "The frozen validator requires a named nonempty reviewer string, timestamp, exact bundle/replay bindings and six accepted evidence entries; it does not explicitly require the reviewer identity to be human. No such all-six approval record is supplied here.",
+    "source_meaning": "Native non-community owner IDs are contributor proxies, not exclusive authorship. Unknown owners remain explicit singleton units outside the genuine-source request frame.",
+    "v2_separation": "V1 three-human admission is not imposed as a circular prerequisite for constructing the separate v2 model-assisted development population. V2 thresholds, labels and author audit must follow their own prospective plan."
+  },
+  "irreducible_limits": [
+    "No publisher-signed checksum or historical direct-publisher acquisition receipt was found; neither is an explicit frozen documentary-review requirement.",
+    "Release-index linkage is community-maintained evidence hosted on Stack Exchange, distinct from the staff correction announcement.",
+    "Raw Meta HTML capture returned403; web-rendered observations are preserved as agent records with this limitation."
+  ],
+  "mirror_metadata_source": {
+    "item_identifier": "stackexchange_20240402_bis",
+    "metadata_retrieved_utc": "2026-10-11T15:23:52.208264+00:00",
+    "metadata_url": "https://archive.org/metadata/stackexchange_20240402_bis"
+  },
+  "population": {
+    "independent_native_source_split_verified": true,
+    "ordered_record_ids_sha256": "30ea6e29cdf62a98ffaa50076f456ed63c2fda251adb48ac9e546fda02ed0004",
+    "partition_counts": {
+      "calibration": 20996,
+      "test": 21067,
+      "train": 98187
+    },
+    "prepared_rows_sha256": "decd53334651c3a5bbede1e57146722e7d852f784577dff4dc93311065934419",
+    "rows": 140250,
+    "source_units": 88344,
+    "text_binding": "dcfa74c795fdd7fba48f3e7e8efad25260053d753a39092ff2dc706349cf6044",
+    "unknown_source_units": 1522
+  },
+  "qualified_facts": {
+    "complete_pre_semantic_prepared_population_replayed": true,
+    "corrected_April_2024_release_documentary_bridge_supported": true,
+    "external_mirror_byte_identity_verified": true,
+    "frozen_adapter_and_preparation_replayed": true,
+    "native_owner_proxy_mapping_replayed": true,
+    "source_bound_v2_development_population_supported": true
+  },
+  "remaining_scoped_work": [
+    "Inspect the actual adapter audit count and retained examples for ambiguous_legacy_notice_text; do not alter the frozen parser or claim complete boilerplate coverage without archive inspection.",
+    "Before public text redistribution, preserve supplied attribution and native license/revision metadata and document source links, license links and transformations; do not invent missing authors or treat OwnerUserId as exclusive authorship.",
+    "Complete the separately planned CPU cache and numerical replay and v2 model/author-audit prerequisites before claims depending on those outputs."
+  ],
+  "review_author": {
+    "accountable_human_attestation_supplied": false,
+    "human_identity_claimed": false,
+    "identity": "Codex source_gate_audit agent",
+    "kind": "AI assistant documentary and code review"
+  },
+  "schema": "third-askubuntu-source-qualification-v2"
+}
