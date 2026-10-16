@@ -1,3 +1,32 @@
+Latest continuation — 16 October 2026, 2026-10-16T09:10:37.027854+00:00
+
+MANUSCRIPT MILESTONE: first unified standalone source is now
+manuscript/third_working_draft.tex. Native desktop compilation PASSED after
+standard-font simplification and equation alignment repair. Source/claim checks
+passed: 19 exact source bindings, 14 cited references, all quoted population,
+calibration, task-lock and pilot counts verified against existing reports.
+The draft contains the target, indexed finite-horizon repair, finite-format
+memory theorem with proofs, fully LLM study methods, completed negative evidence,
+related work and limitations. It is NOT submission-ready: visual review is
+unverified (computer-use service failed to start), natural empirical results and
+figures/tables are pending, and close-prior full-text comparisons remain open.
+See manuscript/README.txt, evidence_20261016.json, BUILD_STATUS.json and
+related_work_sources_20261016.json. Continue edits in the same .tex source.
+No frozen theory/protocol source or protected local lock was changed.
+
+Existing controller PID59318 remains active; its scheduler receipt at
+2026-10-16T09:10:04.380728+00:00 records Mistral15242 RUNNING on csis.cn4.
+No new cluster job, controller, annotation call or SSH attempt was launched by
+this heartbeat. No stopped/completion receipt exists. Earlier call count118/396
+at08:30:37UTC is historical, not refreshed. The current result is unaudited and
+no validated threshold is claimed. The existing controller owns progression.
+
+The 30-minute heartbeat continues the durable queue. Next dependent work is
+validated full development guard/panels, frozen development comparisons, then
+held-out evaluation and final empirical synthesis. Fully LLM, zero humans;
+failures stay negative and original human gates remain unmet. Backup preserves
+prior negative results, the frozen remote checkout, and protected lock bytes.
+
 Latest continuation — 16 October 2026, 2026-10-16T08:33:13.088513+00:00
 
 SUSTAINED EXECUTION: native heartbeat continue-third-research is ACTIVE in this

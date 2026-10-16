@@ -1,0 +1,856 @@
+\documentclass[10pt,twocolumn]{article}
+\usepackage[letterpaper,margin=0.75in,columnsep=0.25in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\R}{\mathbb R}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\minus}{\setminus}
+\newcommand{\cur}{\mathcal C}
+\newcommand{\bits}{\mathsf B}
+\setlength{\emergencystretch}{1em}
+\title{Unlearning What Was Never Trained:\\Counterfactual Repair of Semantic Data Curation}
+\author{Working research manuscript}
+\date{16 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Deleting a raw document can change which surviving documents enter training.
+A model trained after semantic deduplication may therefore need examples that
+were excluded from its original training set. We study this effect for a fixed
+ordered suppression rule: a document is retained only when no earlier raw
+document blocks it. We give a finite-horizon summary of additive training
+statistics whose exact update equals reconstruction after deletion, with the
+remaining deletion budget reduced accordingly. We also construct stored FP32
+features for which increasing that budget by one changes the minimum private
+information needed for exact ridge recovery from zero to $mD$ bits. The graph
+is stable under a specified FP64 cosine scorer, and a sequential codec attains
+the conditional private-information minimum on this family. These are scoped
+algebraic and information results. An ongoing AskUbuntu study uses two local
+LLMs and no human annotation. Its earlier calibration attempt failed; a
+separately versioned follow-up and the downstream effect study remain
+incomplete. No natural-text utility, runtime, or total-memory advantage is
+claimed at this checkpoint.
+\end{abstract}
+
+\noindent\textbf{Draft status.} This is an integrated working paper, not a
+submission-ready result. Sections~\ref{sec:study}--\ref{sec:evidence} separate
+executed preparation and negative evidence from prospective experiments.
+The fixed protocols and earlier failures remain authoritative.
+
+\section{Introduction}
+Data curation determines what a learner sees. Semantic deduplication removes
+examples judged too similar to earlier examples, often before training begins
+\cite{semdedup}. A later deletion request acts on the raw data collection.
+Repeating the same curator after that deletion can produce a different
+training set, including documents that were never used by the original model.
+An unlearning procedure must specify whether it promises to reproduce that
+new training set and learner.
+
+Let $D$ be a raw corpus, $F$ the records to forget, $\cur$ a curator, and
+$A$ a learner. The target studied here is
+\begin{equation}\label{eq:target}
+                    A\bigl(\cur(D\minus F)\bigr).
+\end{equation}
+Deleting $F$ from the already selected set instead gives
+$A(\cur(D)\minus F)$. These targets can differ even when $F$ contains no
+training example. For example, order three records $a\prec b\prec c$ and
+place similarity edges only between $a,b$ and $b,c$. If every earlier raw
+neighbor blocks a record, initially only $a$ is selected. Deleting the
+excluded record $b$ admits $c$ (Figure~\ref{fig:chain}). The example is an
+algebraic illustration; it is not a fabricated natural-language observation.
+
+\begin{figure}[t]
+\centering
+\setlength{\fboxsep}{7pt}
+\fbox{\begin{minipage}{0.88\columnwidth}\centering
+Priority: $a\prec b\prec c$\\[4pt]
+Similarity edges: $a\;---\;b\;---\;c$\\[5pt]
+Before deletion: $\cur(D)=\{a\}$\\
+Delete $b$: $\cur(D\minus\{b\})=\{a,c\}$
+\end{minipage}}
+\caption{An excluded record can block another record. Removing it changes
+the correct training target although it never trained the original model.
+There is no $a,c$ edge.}
+\label{fig:chain}
+\end{figure}
+
+This behavior raises two connected questions. What state supports exact
+repair without rereading the surviving raw corpus? How much information can
+be necessary about examples that remain excluded today but could enter after
+future deletions? The allowed number of deletions matters to both questions.
+With a limited cumulative budget, some examples can never lose all their
+blockers, so their private payloads need not be retained for this target.
+
+We make three scoped contributions. First, we specialize signed Boolean
+provenance to the ordered curator and derive a summary that repairs both
+training statistics and its own designated algebraic state. Second, we give
+a finite-format construction linking excluded feature bits to exact ridge
+heads, including a sharp change in required private information when the
+deletion horizon increases by one. Third, we define a fully LLM development
+study that separates target changes, downstream utility, and complete system
+cost. The third contribution is currently a protocol and audited preparation,
+not a completed empirical finding.
+
+Neither deletion-induced additions nor provenance maintenance is a new
+general principle. Nonmonotone database queries already exhibit the former,
+and provenance and incremental view maintenance address the latter
+\cite{green,aggregate,dbsp,priu}. Our claim concerns the stated curator,
+remaining-horizon repair contract, and shared-feature learner construction.
+The main unresolved practical question is whether these effects are large
+and useful enough in natural NLP pipelines to justify their full cost.
+
+\section{Target, curator, and access contract}\label{sec:setup}
+Each record $v$ has a stable identifier, a fixed feature row $z_v$, and, when
+needed, a task label $y_v$. A fixed graph defines eligible similarity edges,
+and a fixed total order $\prec$ defines priority. An edge may require a
+fixed partition membership as well as cosine similarity strictly above a
+threshold $\tau$. Define the earlier blockers
+\[
+                 B(v)=\{u:u\prec v,\ \{u,v\}\text{ is an edge}\}.
+\]
+The selection after cumulative deletion $F$ is
+\begin{equation}\label{eq:activation}
+ S_F=\cur(D\minus F)=\{v\notin F:B(v)\subseteq F\}.
+\end{equation}
+All earlier raw neighbors matter, including neighbors that the curator
+rejects. This is not greedy selection against only previously retained
+records. For nonnegative thresholds, the upper-triangle column-maximum
+test in the released SemDeDup code has this suppression form
+\cite{semcode}. We analyze its fixed graph and order; we do not identify
+our target with every stage or configuration of that pipeline.
+
+\paragraph{Restriction consistency.}
+Under deletion, feature rows, pair eligibility, relative priority, and the
+threshold remain unchanged on surviving records. A hash of each stable ID,
+with an explicit ID tie break, can preserve the order. Rerunning a
+corpus-dependent shuffle with the same random seed need not preserve it.
+Refitting clusters or embeddings can change surviving edges and defines a
+different counterfactual target. Such refitting requires separate oracles
+and evidence; it is outside the exact theorem below.
+
+\paragraph{Budget and eligible payloads.}
+Fix an original cumulative record budget $K$. After forgetting $F$, the
+remaining budget is $h=K-|F|$. A surviving record can appear under some
+allowed continuation exactly when it belongs to
+\begin{equation}\label{eq:eligible}
+       E(F,h)=\{v\notin F:|B(v)\minus F|\le h\}.
+\end{equation}
+Deleting all remaining blockers proves sufficiency; fewer deletions cannot
+remove them all, proving necessity. Along a valid continuation, a record
+outside this set cannot become eligible: its blocker count decreases by
+at most the number of newly deleted records while $h$ decreases by exactly
+that number. Existing selected survivors remain selected under this rule.
+
+\paragraph{Three separate guarantees.}
+Corpus recovery returns $S_F$. Model recovery returns the prescribed
+learner on $S_F$. State recovery reconstructs a specified retained-data
+state that supports further requests with budget $h$. The last guarantee
+does not erase earlier outputs, backups, allocator history, or every
+machine file. Our lower bound charges all usable private-data-dependent
+state, including caches, tickets, remote stores, retained random seeds,
+and earlier outputs available to the repair procedure. There is no free
+reread of an excluded candidate. Public metadata is distinguished from
+private information but remains part of physical cost.
+
+\section{Exact repair of training statistics}\label{sec:method}
+Let $t(v)\in\R^s$ be a fixed record-local statistic. It must be independent
+of a model or feature extractor fitted to the deletable corpus when exact
+state recovery is claimed. Introduce deletion indicators $x_u$ and write
+$x_J=\prod_{u\in J}x_u$, including $x_\varnothing=1$. Then
+\begin{align}
+ T(x)&=\sum_v t(v)(1-x_v)x_{B(v)}=\sum_J\alpha_J x_J,\label{eq:poly}\\
+ \alpha_J&=\sum_{v:B(v)=J}t(v)
+       -\sum_{v:B(v)\cup\{v\}=J}t(v).\label{eq:coeff}
+\end{align}
+Each record contributes to at most two keys. This is a signed Boolean
+provenance representation, building on established provenance ideas
+\cite{green,aggregate}, rather than a new polynomial formalism.
+
+\begin{theorem}[Finite-horizon state repair]\label{thm:repair}
+Keep only coefficients with $|J|\le K$. For every $|F|\le K$,
+\[
+             \sum_{v\in S_F}t(v)=\sum_{J\subseteq F}\alpha_J.
+\]
+After an allowed request $F$, form
+\begin{equation}\label{eq:update}
+ \beta_L=\sum_{J:J\minus F=L}\alpha_J,\qquad |L|\le K-|F|.
+\end{equation}
+In exact arithmetic this is the same coefficient map as fresh construction
+on $D\minus F$ with horizon $K-|F|$. Repeated requests therefore compose
+independently of their batching and order, for the same final deleted set.
+\end{theorem}
+\begin{proof}
+A monomial evaluates to one precisely when its key is contained in $F$;
+larger-than-budget keys vanish. Substituting $x_u=1$ for $u\in F$ removes
+deleted records through their $(1-x_u)$ factor and replaces each surviving
+record's blockers by $B(v)\minus F$. A discarded degree-$K+1$ or higher
+term loses at most $|F|$ variables, so it still exceeds the new cutoff.
+Thus early truncation loses no term needed in the retained-data map.
+Substitution commutes, and this argument also applies at every intermediate
+remaining horizon.
+\end{proof}
+
+The comparison uses the remaining budget, not a fresh budget of $K$ after
+every request. Replenishing the budget can require payloads that were
+correctly discarded under the original contract. Exact algebraic equality
+also does not imply bitwise equality of floating-point additions.
+
+\paragraph{Indexed implementation.}
+The P-I method stores nonzero coefficient keys, inverse incidences from
+identifiers to keys, and degree buckets. Deleting $u$ touches only incident
+keys, removes $u$ from each key, combines collisions, removes zero values,
+and drops keys above the new horizon. Repeated or already deleted IDs are
+no-ops; invalid IDs and over-budget requests are rejected before mutation.
+The reference P-S method scans all keys. Both implement
+Equation~\eqref{eq:update} under the same numerical contract.
+
+For initial key count $M_0$, total key length $L_0$, statistic dimension
+$s$, and $Q$ supplied request IDs, define
+$\Phi_0=\sum_{J}|J|(|J|+1)/2$. The indexed algorithm has sequence-wide
+update cost
+\begin{equation}\label{eq:work}
+              O(Q+\Phi_0+sM_0)
+              \subseteq O(Q+KL_0+sM_0),
+\end{equation}
+under expected constant-time dictionary operations apart from tuple
+processing. Each key shrink consumes its triangular-length potential;
+merges and pruning delete entries and incidences. There are at most
+$L_0$ incidence touches and $M_0$ merges. Appendix~\ref{app:work}
+gives the accounting. Construction, model solves, bit complexity, and
+canonical serialization are additional costs. A single request can touch
+all keys; there is no uniform sublinear per-request promise.
+
+\paragraph{Ridge target.}
+For $q$ responses and raw learner rows $z_v\in\R^d$, use
+$t(v)=(z_vz_v^\top,z_vy_v^\top,1)$. Write the selected statistics as
+$(G,H,n)$. Average-loss ridge with fixed $\lambda>0$ satisfies
+\begin{equation}\label{eq:ridge}
+                    (G+\lambda n I)W=H.
+\end{equation}
+The learner has no intercept, penalizes all coordinates, and returns zero
+when $n=0$. The regularizer scales with the current selected count.
+Features normalized for cosine scoring do not replace the stored raw
+learner rows. A dense solve costs $O(d^3+d^2q)$, and each dense statistic
+contains $O(d^2+dq)$ values. Storing these values can cost more than compact
+eligible rows; arithmetic convenience alone is no memory advantage.
+
+\paragraph{Source withdrawal.}
+For a partition of records into sources, let $g(v)$ be a record's source
+and $U(v)=\{g(u):u\in B(v)\}$. Replace the record contribution by
+$t(v)(1-x_{g(v)})x_{U(v)}$ and apply Boolean idempotence. If
+$g(v)\in U(v)$, the contribution vanishes: the record cannot survive the
+withdrawal of its own blocking source. Otherwise the same substitution
+and degree argument applies, now with a source-count budget. Mathematical
+singleton sources do not demonstrate genuine contributor withdrawal.
+
+\section{A finite-format memory obstruction}\label{sec:memory}
+The previous algorithm establishes sufficiency. We next show why an exact
+service may need information about excluded records even when the current
+head, and every head under a smaller budget, is zero. The construction is
+mathematical; no claim is made that a text encoder realizes these rows.
+
+Fix $b\ge1$, $m\ge2$, and powers of four $k,D$ with
+$d=2+k+D\le2^{20}$. Public signatures
+$u_i\in\{\pm1/\sqrt{k}\}^k$ satisfy $|u_i^\top u_j|\le1/6$ for
+$i\ne j$; orthogonal Hadamard rows suffice when $m\le k$.
+Sort fixed public IDs by their actual priority and assign roles: an anchor
+$a$, $b$ common blockers $S$, $m$ individual blockers $p_i$, and $m$
+candidates $w_i$, in that order. Use orthogonal coordinate blocks
+$e_0,e_1,U,H$ of dimensions $1,1,k,D$, and set $\alpha=1/128$.
+Only the signs of $z_i\in\{\pm1/\sqrt D\}^D$ are private. The raw rows are
+\begin{equation}\label{eq:rows}
+\begin{aligned}
+ a&=e_0,\\
+ s_j&=\tfrac12 e_0+\tfrac78 e_1,\\
+ p_i&=\tfrac12e_0+\tfrac78u_i,\\
+ w_i&=\tfrac12e_1+\tfrac78u_i+\alpha z_i.
+\end{aligned}
+\end{equation}
+Candidate labels are one; every other label is zero. All nonzero entries
+are exactly stored normal FP32 values in the stated dimension range.
+Candidate labels, graph, signatures, roles, and blocker payloads are public.
+
+At the stored binary64 threshold $\tau=\operatorname{float64}(0.4)$,
+the frozen ordered FP64 normalization and dot product give
+\[
+                         B(w_i)=S\cup\{p_i\}
+\]
+uniformly over all private signs. Ideal required edges exceed $.43$;
+required nonedges are below $.372$. The scorer error is below $2^{-32}$
+under the explicit arithmetic assumptions in Appendix~\ref{app:scorer}.
+This is a proof for that operation order, not a certificate for arbitrary
+BLAS kernels, GPUs, or reassociated arithmetic.
+
+Initially only the zero-label anchor is selected. At budget $b$, no
+candidate can lose its $b+1$ blockers, and every target head is zero.
+At budget $K=b+1$, the request $F_i=S\cup\{p_i\}$ selects $a,w_i$.
+For exact rational ridge with rational $\lambda>0$, define
+\[
+                t=16641/16384+2\lambda.
+\]
+Since $a\perp w_i$, the resulting head is
+\begin{equation}\label{eq:hardhead}
+ \theta_i=\frac{w_i}{t}
+     =\frac{\tfrac12e_1+\tfrac78u_i}{t}+\frac\alpha t z_i.
+\end{equation}
+Its $H$ coordinates reveal all $D$ private signs of candidate $i$.
+
+\begin{theorem}[Sharp private-information transition]\label{thm:bits}
+On this fixed public family, the minimum deterministic exact model-query
+state is zero private bits at horizon $b$ and $mD$ private bits at horizon
+$b+1$. The initial state of an exact sequential service has the same lower
+bound. It also holds for randomized services exactly correct almost surely
+for every fixed input and query.
+\end{theorem}
+\begin{proof}
+There are $2^{mD}$ independent sign assignments. Any two differ on some
+candidate $i$ and produce different heads on its public request $F_i$.
+Their states must therefore differ. Conversely, storing all signs allows
+reconstruction of the indicated head on $F_i$ and zero on all other
+allowed queries. At horizon $b$, always returning zero suffices. There
+are finitely many inputs and requests, so a randomized zero-error service
+has a common probability-one set of coins on which the deterministic
+distinguishability argument applies.
+\end{proof}
+
+Here a $\bits$-bit state has at most $2^{\bits}$ distinguishable values
+conditional on public information and independent public coins. Usable
+length or framing choices must also be charged. The probes delete only
+public blockers, so access to their forgotten payloads does not bypass
+the bound. This result concerns private information; public metadata,
+padding, workspace, and output representation still consume bytes.
+
+For cumulative deletion $F$ under the original $K=b+1$, define
+\begin{align}
+ I(F)&=\{i:w_i\notin F,\ |B(w_i)\minus F|\le K-|F|\}\nonumber\\
+     &=\{i:F\subseteq S\cup\{p_i\}\},\qquad e(F)=|I(F)|.\label{eq:live}
+\end{align}
+The equality uses the specific construction, not arbitrary graphs.
+
+\begin{corollary}[Conditional retained state]\label{cor:live}
+For a fixed admissible $F$, correctness for every private assignment and
+every allowed continuation requires and is achievable with exactly
+$e(F)D$ private bits.
+\end{corollary}
+\begin{proof}
+Each $i\in I(F)$ can still be isolated by deleting its remaining blockers,
+so its signs must be distinguishable. Storing just those words suffices.
+Under further deletion $F'\supseteq F$, $I(F')\subseteq I(F)$, so a
+discarded word never becomes relevant again within this horizon.
+\end{proof}
+
+The implemented finite-family codec packs these words in canonical order
+and copies only surviving eligible words at each transition. Its immutable
+export has a 48-byte header, the charged public deletion ledger, and
+$\lceil e(F)D/8\rceil$ payload bytes. Fresh retained-data initialization
+and sequential export produce the same bytes under the same public
+universe and remaining budget. This is not a general compressor for
+natural embeddings, physical erasure, or a claim about transcripts.
+The conditional theorem fixes $F$; an adaptive request policy can itself
+reveal private information through its requests.
+
+\paragraph{Approximate heads.}
+With expected squared parameter error at most $\varepsilon$ on each fixed
+input and hard probe, a standard information argument gives
+\begin{equation}\label{eq:rate}
+ \bits\ge mD R_{\rm sq}\!\left(\frac{t^2\varepsilon}{4\alpha^2}\right),
+\end{equation}
+where $h_2$ is binary entropy in bits,
+$R_{\rm sq}(v)=1-h_2((1-\sqrt{1-4v})/2)$ for $0\le v\le1/4$
+and zero above that range. The public component of
+Equation~\eqref{eq:hardhead} attains error $\alpha^2/t^2$ with no private
+information. Appendix~\ref{app:information} derives the bound. These are
+classical information tools specialized to this family, not a new general
+coding theorem. Parameter fidelity does not establish constant NLP test
+loss: averaging prediction error over hidden basis directions introduces
+a factor of $1/D$.
+
+\section{Fully LLM natural-text study}\label{sec:study}
+The empirical objective is to measure whether the target difference in
+Equation~\eqref{eq:target} matters in a real text pipeline and whether a
+repair method has useful total cost. The active branch uses existing
+AskUbuntu records, native tag labels, and two local model raters. It has
+zero human annotation and zero human review. Earlier human-gated protocol
+requirements remain unmet; this branch does not relabel model judgments
+as human evidence or inherit acceptance of the historical primary study.
+
+\subsection{Data and task configuration}
+The prepared population contains 140,250 question records, split into
+98,187 training, 20,996 calibration, and 21,067 test rows. Source grouping
+uses native account metadata as a contributor proxy. Missing or community
+owners remain explicit unknown singletons; these are not eligible targets
+for genuine source-withdrawal requests. The prepared data contain 88,344
+source units, including 1,522 unknown units. Source completeness means
+surviving records after the fixed export and filtering rules, not every
+historical, deleted, or private contribution.
+
+The corrected April 2024 release is supported by a documentary provenance
+chain and checksummed acquisition. This is not publisher cryptographic
+attestation. The active development acceptance is separate from earlier
+source gates. Raw text and account-level records remain private; the
+public return reports contain bindings and aggregate counts.
+
+The assembled E5 cache contains 140,250 rows of 768 FP32 coordinates,
+produced and replayed in 32 CPU shards. E5 provides fixed pretrained text
+representations \cite{e5}. The native prediction task uses 20 tags and
+retains questions with all-zero target vectors. Five source-grouped
+calibration folds selected $\lambda=10^{-5}$ from the six frozen values
+$10^{-6},10^{-5},\ldots,10^{-1}$; exact ties select larger $\lambda$.
+Out-of-fold calibration predictions fix one F1 threshold per tag, with
+the stricter threshold on ties and a never-positive rule when no
+calibration positive exists. Test labels and deletion outcomes are not
+used for this configuration. Other feature representations need their
+own task settings.
+
+Before effect measurements, a deterministic one-tenth whole-source
+reservation allocated 10,314 training and 2,138 test rows to development.
+The remaining evaluation allocation contains 87,873 training and 18,929
+test rows; calibration is unchanged. Every reserved source stays outside
+later evaluation, even if a small pilot does not use all its rows.
+The development targets of 1,000, 2,500, and 5,000 training rows include
+the entire boundary source and are selected in a frozen order after the
+guard. Current pre-guard counts are upper bounds. The original 100,000
+and 200,000 panels are infeasible on this preparation; unavailable cells
+must remain visible rather than be filled from held-out data.
+
+\subsection{Model-defined threshold calibration}\label{sec:judges}
+The raters are pinned Qwen2.5-7B-Instruct and Mistral-Nemo-Instruct-2407.
+They receive complete original pair texts and the same fixed task, with
+no IDs, cosine scores, tags, prior answers, or desired outcome. Each runs
+offline on an admitted A100 with BF16, batch size one, greedy constrained
+decoding, forced Flash attention, a 512-token output budget, and a
+32,768-token total budget. Truncation, summarization, format repairs,
+semantic retries, and fallback attention are disallowed. Source text is
+untrusted input; the judges have no tools or retrieval.
+
+A pair is positive only if both valid outputs label it either an exact
+copy or substantially the same meaning. Other labels, disagreements,
+uncertainty, and invalid or unavailable outputs contribute zero positive
+mass while remaining in the full denominator. The models are not assumed
+independent. Thus the target is a conservative two-model label function,
+not semantic truth. Known LLM-judge biases motivate retaining order
+diagnostics, but agreement cannot replace human validity
+\cite{judge}.
+
+Version 4 enumerates all 220,405,510 unordered calibration pairs,
+including pairs within the same source. Thirteen right-closed cosine
+strata use cuts $.50,.90,.91,\ldots,.99,.995$. Each nonempty stratum
+contributes a simple random sample without replacement of up to 30
+pairs. The realized selection has 360 canonical pairs and 36 swapped
+diagnostics per model. Exact inverse-inclusion weights estimate the
+joint-positive proportion above each of the 51 original thresholds
+$.50,.51,\ldots,.99,.995$, always with the strict stored-float comparison
+$\text{score}>\tau$. The least strict threshold with weighted proportion
+at least $.95$ and nonzero support is selected.
+
+Only a selected threshold proceeds to a fresh simple random sample of up
+to 200 pairs from \emph{all} above-threshold calibration pairs. A one-sided
+exact 95\% finite-population lower bound must reach $.90$. Any change in
+a model's availability/status or valid category on canonical overlap
+between selection and validation makes validation unavailable. Swapped
+pairs are diagnostics, not extra votes. No retuning follows a failure.
+The confidence bound concerns the fixed/potential model-label function
+under the sampling model; observed replay stability does not establish
+stability everywhere or accuracy against human judgments.
+
+\subsection{Guard, requests, and baselines}\label{sec:design}
+The full development guard is conditional on passed fresh model
+validation. It compares every reserved training row against all original
+calibration and test rows, removing training leakage using the locked
+threshold and the original scorer. This uses features and IDs, not later
+evaluation labels. The intended scope is
+$10{,}314\times42{,}063=433{,}837{,}782$ pairs. The 18,929 evaluation-test
+labels stay uninspected during development. Development utility may use
+only the 2,138 reserved test rows.
+
+The planned requests include uniform record deletion, uniform genuine
+source withdrawal, deletion among initially excluded records, and a
+label-blind graph search for high-amplification stress requests. Uniform
+record controls match source requests by removed-record volume. Stress
+search does not estimate ordinary user behavior and is not an optimal
+adversarial audit. Request streams, feasible panels, and resource bounds
+must be sealed before their effect outcomes; the historical registry is
+not authorization to mark every planned family as executed.
+
+O-G recomputes the fixed curator and learner from surviving input; O-T
+uses correct selected IDs but rebuilds moments. P-I uses indexed
+coefficient repair, P-S scans coefficients, and P-R uses rank-coordinate
+summaries with its reconstruction work charged. The essential B-E
+baseline retains compact eligible feature/label rows, blocker incidences,
+and buckets, then makes batched signed moment updates. It is not forced
+to store an outer product for every row. B-A retains all payloads.
+B-F deletes from the initial selected set and is a target-mismatch
+diagnostic, not a correctness oracle. The smallest natural pilot must
+compare at least P-I, O-G, and optimized B-E under identical requests.
+
+Primary task quality is native multilabel mean squared error, with
+micro/macro F1 and mean average precision secondary. Report selected-set
+admissions, parameter and prediction deviations from the fresh oracle,
+and the quality difference of the frozen-selection target. A large
+admission count alone does not establish useful model change.
+Costs include feature/cache access, graph/index state, moments, gathered
+rows, peak workspace, serialization, initialization, updates, and solves.
+Incremental timing and complete lifecycle timing are separate. A speedup
+over fresh graph reconstruction alone is insufficient evidence of an
+advantage over a strong incremental baseline.
+
+\section{Evidence available at this checkpoint}\label{sec:evidence}
+\paragraph{Completed negative calibration.}
+The earlier version 3 attempted all 198 model calls: 90 canonical pairs
+and nine swapped diagnostics per model. It produced zero joint positives
+among the 90 canonical pairs and no qualifying threshold. One canonical
+Mistral response was invalid JSON and stayed in the denominator without
+retry. All 51 weighted cuts were independently recomputed. Fresh
+validation was therefore not run. This is a failure of the registered
+model-defined selection criterion, not evidence that every population
+pair is semantically distinct.
+
+Version 4 is a separately versioned follow-up after that negative result;
+it is not independent confirmation or a rescue of version 3. At this
+draft's evidence cutoff, Qwen completed 396 calls, of which 391 were
+valid and five invalid JSON. A corrected raw-byte audit verified their
+prompt, token, and grammar identities without repeating model calls.
+The prior audit's newline-normalization failure and original outputs
+remain preserved. Mistral selection and the remaining validation chain
+are incomplete. These execution-integrity facts do not establish a
+validated threshold.
+
+\paragraph{Completed development preparation.}
+Actual source/cache/task bindings and the source-disjoint development
+allocation passed a separate implementation review. A resource pilot
+scanned 262,144 real-cache cross-pairs and matched the original guard's
+canonical first witness, score, and keep decision at $.50,.99,.995$.
+The scan kernel took 0.7783 seconds in that pilot. This does not establish
+full-scale runtime, full-guard completion, or empirical effect size.
+The first stable-ID witness is not the maximum-scoring witness.
+
+\paragraph{Theory and software evidence.}
+The inherited theory has separate algebraic, scorer, and codec reviews.
+Finite tests exercise reconstruction, graph margins, and sequential
+serialization; they are checks of implementations, not natural-text
+experiments or substitutes for proofs. Earlier lexical development
+favored B-E in total bytes. The new private-information theorem does not
+reverse that observation or establish a storage win on natural data.
+
+\paragraph{What is still missing.}
+No completed natural-text repair/utility/cost experiment supports a
+practical benefit yet. Full guard and post-guard panels, admitted
+development runs, held-out evaluation, registered uncertainty analysis,
+cross-representation robustness, and empirical figures remain outstanding.
+The original program's 21,332 prospective jobs are a design inventory,
+not executed evidence. Final claims depend on these results, including
+zeros, failures, infeasible sizes, and unfavorable baseline comparisons.
+
+\section{Related work}\label{sec:related}
+\paragraph{Curation and whole-pipeline targets.}
+SemDeDup studies embedding-based redundancy removal \cite{semdedup}.
+The released suppression computation motivates our fixed ordered rule
+\cite{semcode}; a full curation pipeline may have additional data-dependent
+steps. ARCANE is an earlier exact-unlearning architecture with data
+selection \cite{arcane}. These systems make it important to specify
+the actual selection contract rather than imply that every prior
+unlearning method ignores preparation. GRACE studies gradient-guided
+forget/retain coresets for behavioral LLM unlearning \cite{grace}; its
+target differs from rerunning the original fixed curator in
+Equation~\eqref{eq:target}.
+
+\paragraph{Provenance and incremental computation.}
+Polynomial provenance \cite{green}, provenance for aggregation and
+difference \cite{aggregate}, DBSP's incremental query framework
+\cite{dbsp}, and PrIU's provenance-based regression updates \cite{priu}
+are direct antecedents. Our Boolean expansion is a specialization.
+The scoped claims add the cumulative-horizon state contract and the
+learner-level finite-feature obstruction. We do not claim that negative
+dependencies, moment updates, or deletion-induced additions originate here.
+
+\paragraph{Information needed for unlearning.}
+Learning-unlearning space complexity already shows that supporting
+deletion can require substantially more memory than ordinary learning
+\cite{space}. Ticketed schemes explicitly trade central storage against
+per-record information \cite{ticketed}. Our access contract charges both.
+Recent work on predictive versus counterfactual auditing state also
+overlaps with the broad memory-separation principle \cite{counterfactual}.
+Its public code was inspected in the earlier literature audit, but its
+full-paper proof and approximate-success semantics remain unresolved in
+our comparison. We claim the stated fixed-scorer, shared-feature ridge
+construction, not a new general separation between prediction and
+counterfactual information. Information-distortion arguments are classical
+\cite{shannon}.
+
+\section{Limitations and responsible use}\label{sec:limits}
+The theory assumes restriction consistency, fixed features, and a fixed
+cumulative budget. It does not cover arbitrary reclustering, encoder
+refitting, overlapping ownership, or nonconvex language-model fine-tuning.
+The finite-family lower bound measures private information and exact
+rational heads. It neither proves total-byte optimality nor shows that
+natural text embeddings contain the constructed private sign patterns.
+A floating solver needs an actual error certificate before an exact-head
+lower bound transfers to its releases (Appendix~\ref{app:certificate}).
+
+The LLM-only study can establish properties of its model-defined labels.
+Shared training data and correlated biases can make both judges wrong;
+agreement is not human validation. Invalid responses remain part of the
+criterion, and order sensitivity is reported separately. Existing native
+tags are dataset labels, not newly obtained human annotations. No human
+review is planned, and no human-ground-truth claim is available.
+
+Native account identifiers are contributor proxies. Export filters and
+unknown ownership limit the scope of source withdrawal. Source text may
+contain personal information, so bodies and account-level manifests stay
+private. Redistribution and attribution requirements must be resolved
+before any raw-data release. Canonical state equality does not imply
+physical erasure, privacy of prior answers, or compliance with every
+possible deletion obligation.
+
+Finally, the main empirical study is unfinished. The working paper
+cannot yet claim natural semantic value or competitive efficiency. Its
+completed negative calibration and earlier unfavorable memory comparison
+are part of the evidence. The manuscript's eventual conclusions must
+follow the audited results rather than the desired outcome.
+
+\section{Conclusion}
+Under ordered raw-neighbor suppression, deleting an excluded record can
+change the learner's training target. A cumulative deletion horizon gives
+both an exact repair rule and a precise boundary on which excluded
+payloads can still matter. The finite-format family shows that this
+boundary can change required private information sharply, even when all
+lower-budget heads are identical. Whether the effect has practical NLP
+value remains the question for the fully LLM natural-text study.
+
+\begin{thebibliography}{99}\small
+\bibitem{semdedup} A. Abbas, K. Tirumala, D. Simig, S. Ganguli, and A. S.
+Morcos. 2023. SemDeDup: Data-efficient learning at web-scale through
+semantic deduplication. \href{https://arxiv.org/abs/2303.09540}{arXiv:2303.09540}.
+\bibitem{semcode} Meta/Facebook Research. SemDeDup official implementation,
+\texttt{semdedup.py}. Archived repository; inspected 16 October 2026.
+\url{https://github.com/facebookresearch/SemDeDup/blob/main/semdedup.py}.
+\bibitem{green} T. J. Green, G. Karvounarakis, and V. Tannen. 2007.
+Provenance semirings. PODS.
+\url{https://www.cs.ucdavis.edu/~green/papers/pods07.pdf}.
+\bibitem{aggregate} Y. Amsterdamer, D. Deutch, and V. Tannen. 2011.
+Provenance for aggregate queries. PODS.
+\href{https://arxiv.org/abs/1101.1110}{arXiv:1101.1110}.
+\bibitem{dbsp} M. Budiu, T. Chajed, F. McSherry, L. Ryzhyk, and V. Tannen.
+2023. DBSP: Automatic incremental view maintenance for rich query
+languages. PVLDB, 16(7):1601--1614.
+\url{https://www.vldb.org/pvldb/vol16/p1601-budiu.pdf}.
+\bibitem{priu} Y. Wu, V. Tannen, and S. B. Davidson. 2020.
+PrIU: A provenance-based approach for incrementally updating regression
+models. SIGMOD, 447--462.
+\href{https://arxiv.org/abs/2002.11791}{arXiv:2002.11791}.
+\bibitem{arcane} H. Yan, X. Li, Z. Guo, H. Li, F. Li, and X. Lin. 2022.
+ARCANE: An efficient architecture for exact machine unlearning. IJCAI.
+\url{https://www.ijcai.org/proceedings/2022/0556.pdf}.
+\bibitem{space} Y. Cherapanamjeri, S. Garg, N. Rajaraman, A. Sekhari,
+and A. Shetty. 2025. The space complexity of learning-unlearning
+algorithms (extended abstract). COLT, PMLR 291:1185--1193.
+\url{https://proceedings.mlr.press/v291/cherapanamjeri25b.html}.
+\bibitem{ticketed} B. Ghazi, P. Kamath, R. Kumar, P. Manurangsi,
+A. Sekhari, and C. Zhang. 2023. Ticketed learning--unlearning schemes.
+COLT, PMLR 195:5110--5139.
+\url{https://proceedings.mlr.press/v195/ghazi23a.html}.
+\bibitem{counterfactual} S. P. Tadakamalla, S. M. R. Prakash, and S. M.
+Asad. 2026. Predictive state is not explanatory state: An exponential
+memory separation between forecasting and counterfactual auditing.
+SSRN manuscript. \url{https://doi.org/10.2139/ssrn.7520178}.
+\bibitem{grace} P. Bushipaka, A. D'Angelo, L. Passaro, and T. Cucinotta.
+2026. GRACE: Gradient-guided coreset selection for LLM unlearning.
+Author manuscript. \url{https://retis.santannapisa.it/~tommaso/publications/EMNLP-2026.pdf}.
+\bibitem{e5} L. Wang, N. Yang, X. Huang, L. Yang, R. Majumder, and F. Wei.
+2024. Multilingual E5 text embeddings: A technical report.
+\href{https://arxiv.org/abs/2402.05672}{arXiv:2402.05672}.
+\bibitem{judge} L. Zheng et al. 2023. Judging LLM-as-a-judge with MT-Bench
+and Chatbot Arena. NeurIPS Datasets and Benchmarks.
+\href{https://arxiv.org/abs/2306.05685}{arXiv:2306.05685}.
+\bibitem{shannon} C. E. Shannon. 1959. Coding theorems for a discrete
+source with a fidelity criterion. IRE National Convention Record, Part 4,
+142--163. \href{https://gwern.net/doc/cs/algorithm/information/1959-shannon.pdf}{Original-paper scan}.
+\end{thebibliography}
+
+\appendix
+\section{Update accounting and state boundaries}\label{app:work}
+For singleton deletion of $u$, first obtain the inverse-incidence list
+of keys containing $u$. For each such key, detach its old dictionary and
+incidence entries, remove $u$, and insert the reduced key or merge with
+its existing destination. Moving a value transfers its reference; only
+merges perform vector arithmetic and a zero test. After reducing the
+horizon by one, remove the now-excessive degree bucket. No new key can
+have more elements than its predecessor, and the number of live keys
+never increases.
+
+Give each initial incidence a token. A shrink removes a token; a merge
+or prune removes its source tokens. None are created. Thus at most $L_0$
+identifier touches and incidence removals occur over the whole sequence.
+Each merge decreases key count, giving at most $M_0$ vector additions.
+A tuple shrink from size $j$ costs $O(j)$, and decreases its potential
+$j(j+1)/2$ by $j$. This charges tuple copying, hashing, and comparisons
+under the stated dictionary model. Input handling costs $O(Q)$, including
+repeated IDs. The resulting bound is Equation~\eqref{eq:work}.
+
+The coefficient values and incidence metadata occupy
+$O(sM_0+M_0+L_0)$ words, plus membership storage. Rational arithmetic
+requires additional bit-length accounting. A canonical export removes
+zero keys and orders keys and values, with at least linear output cost.
+The fast in-memory structure is canonical only as a logical map modulo
+handles, not as allocator memory. A final exact map can be equal to a
+fresh construction while both a floating-point accumulation order and
+its serialized bytes differ. Numerical checks against a fresh oracle
+must therefore state their contract rather than borrow exact equality.
+
+\section{Finite-family graph and scorer proof}\label{app:scorer}
+All statements in this appendix concern the mathematical rows of
+Equation~\eqref{eq:rows}, not natural encoder outputs. Powers-of-four
+$k,D$ make $1/\sqrt{k}$ and $1/\sqrt D$ dyadic. The dimension cap keeps
+every nonzero stored value and intermediate in the ordinary normal range.
+The norms, independent of private signs, are
+\[
+ \norm a^2=1,\quad \norm{s_j}^2=\norm{p_i}^2=65/64,
+ \quad \norm{w_i}^2=16641/16384=(129/128)^2.
+\]
+The anchor blocks every $s_j$ and $p_i$ since its cosine with them is
+$4/\sqrt{65}>.49$. It has zero dot product with every candidate.
+Common-blocker/candidate cosine is
+$448/(129\sqrt{65})>.43$; individual-blocker/own-candidate cosine is
+$784/(129\sqrt{65})>.75$. For $i\ne j$, the individual-blocker/candidate
+cosine is at most $784/(6\cdot129\sqrt{65})<.126$.
+Candidate-candidate cosine is at most
+\[
+ \frac{1/4+49/(64\cdot6)+1/16384}{16641/16384}
+                 =\frac{18563}{49923}<.372.
+\]
+These inequalities cover every earlier candidate blocker decision.
+Additional edges among the public blockers do not affect the proof,
+since the anchor initially suppresses them and they have zero labels.
+
+The exact stored threshold is
+\[
+ \tau=\frac{3602879701896397}{2^{53}}
+      =\frac25+\frac{1}{5\,2^{53}}.
+\]
+For this family, raw squared coordinates and partial norm-square sums
+are exact in binary64: they are multiples of $2^{-34}$ and have
+magnitude below two. Assume round-to-nearest ties-to-even, correctly
+rounded square root and division, and the specified coordinate order,
+without arithmetic-changing reassociation or clipping. With
+$u=2^{-53}$, set
+\[
+ \rho=\frac{2u}{1-u},\qquad
+ \gamma=\frac{(d+1)u}{1-(d+1)u}.
+\]
+The normalized coordinate relative error is at most $\rho$. Products
+therefore contribute at most $2\rho+\rho^2$ in absolute cosine error,
+using Cauchy--Schwarz. Ordered dot-product rounding contributes at most
+$\gamma(1+\rho)^2$. Hence
+\[
+ E_d=2\rho+\rho^2+\gamma(1+\rho)^2<2^{-32}
+                    \qquad(d\le2^{20}).
+\]
+This cannot cross the edge/nonedge margins. It proves the uniform graph
+under the stated scorer, independently of the $mD$ private signs.
+Native runtime admission and implementation replay remain separate checks.
+
+Public signature existence is also qualified. Hadamard rows give the
+stated orthogonal case. Alternatively, independent normalized signs have
+pairwise tail probability at most $2e^{-k/72}$. A union bound gives a
+code when $k\ge\lceil72\log(2m(m-1))\rceil$, choosing an admitted
+power of four that still obeys the dimension cap. This does not permit
+arbitrarily many signatures at fixed dimension.
+
+\section{Squared-error information bound}\label{app:information}
+Let $Y_{ij}$ be independent uniform bits and express the hidden signs as
+$2Y_{ij}-1$. There are $n=mD$ bits. Given a state $M$ and independent
+public coins $R$, rescale an approximate hard-probe head by
+\[
+ \widehat Y_{ij}=\frac12\left(1+
+                       \frac{t\sqrt D}{\alpha}\widehat\theta_i[H_j]\right).
+\]
+Clipping to $[0,1]$ cannot increase squared error, and
+\[
+ \frac1D\sum_j(\widehat Y_{ij}-Y_{ij})^2
+ \le\frac{t^2}{4\alpha^2}\norm{\widehat\theta_i-\theta_i}^2.
+\]
+Posterior means $p_l=\Pr(Y_l=1\mid M,R)$ minimize conditional squared
+error, even if a decoder uses fresh randomness. Thus average posterior
+variance is at most $v=t^2\varepsilon/(4\alpha^2)$. For
+$0\le s\le1/4$, the function
+\[
+ g(s)=h_2\!\left(\frac{1-\sqrt{1-4s}}2\right)
+\]
+is increasing and concave. One derivative check substitutes $s=q(1-q)$;
+the needed sign follows from
+$r-1/r-2\log r\ge0$ for $r\ge1$, whose derivative is
+$(r-1)^2/r^2\ge0$ and value at one is zero. Since
+$h_2(p)=g(p(1-p))$, conditional subadditivity and Jensen give
+\[
+ H(Y\mid M,R)\le\sum_l\mathbb E h_2(p_l)\le n g(v).
+\]
+The state alphabet contract implies $H(M\mid R)\le\bits$, so
+$\bits\ge I(Y;M\mid R)\ge n[1-g(v)]$, proving
+Equation~\eqref{eq:rate}. For $v\ge1/4$ the zero bound applies. Correctness
+averaged over uniform signs and a uniform hard-probe index already
+suffices. Averaging over all valid deletion sets is weaker because many
+produce a zero head and can dilute the error.
+
+The zero-information threshold is attained by returning just the public
+component of the hard-probe head. Its squared error is $\alpha^2/t^2$
+for every sign assignment. The repository also gives a finite covering
+code upper bound for a query summary. It can require an enormous public
+codebook and does not give an efficient sequentially erasable lossy codec;
+we make no such implementation claim here.
+
+\section{Finite-output and utility limits}\label{app:certificate}
+The hidden coordinate magnitude in a hard-probe exact head is
+$a_H=\alpha/(t\sqrt D)$. A deterministic certified parameter radius
+strictly below $a_H$ identifies every hidden sign and transfers the
+exact $mD$ private-bit bound. If $0<\lambda\le1$, then $t<4$ and
+$\sqrt D\le2^{10}$, giving $a_H>2^{-19}$. An actual radius at most
+$2^{-20}$ is therefore sufficient. A configured tolerance is not a
+certificate: the radius must cover moment accumulation, solving, and
+release rounding relative to the prescribed exact target. We have not
+established such a certificate for the ongoing natural-text learner.
+
+For a public test distribution uniformly sampling an $H$-basis vector,
+prediction discrepancy is $\norm{P_H e}^2/D$ for head error $e$.
+Uniform sampling of all coordinate basis vectors instead yields
+$\norm e^2/d$. Consequently a constant parameter-error obstruction does
+not establish constant task risk. Native tag prediction, natural source
+requests, and matched-cost baselines are needed to assess practical value.
+
+\section{Reproducibility and completion boundary}\label{app:repro}
+This standalone source uses an embedded bibliography and no external
+figures or style files. Its companion evidence ledger binds the exact
+repository sources used for every empirical count and theorem scope.
+The theorem fragments, previous code, negative results, and frozen
+execution contracts are preserved separately rather than overwritten.
+
+The active representation is pinned to E5 revision
+\texttt{d128750597153bb5987e10b1c3493a34e5a4502a}; judges use Qwen revision
+\texttt{a09a35458c702b33eeacc393d103063234e8bc28} and Mistral revision
+\texttt{04d8a90549d23fc6bd7f642064003592df51e9b3}. Protocol manifests
+bind tokenizer files, templates, prompt/schema, runtime, and sampling
+seeds. Source/cache/task intake and independent arithmetic reviews bind
+private outputs by exact bytes and hashes. Checksums support identity;
+they do not establish semantic correctness or source rights.
+
+The remaining empirical displays must be generated from audited outputs:
+admission curves and blocker structure; matched request-arm target
+differences; native task effects; total retained bytes and peak workspace;
+incremental and lifecycle time; and robustness/failure coverage. Planned
+tables must distinguish feasible populations, baseline coverage, and
+claim-supporting outcomes. Empty placeholders are not results. Full
+curator refitting and additional corpus/representation families remain
+separate unexecuted scope until resource-qualified and admitted.
+
+Literature coverage is also bounded. Primary publication pages and
+official code were refreshed for the citations used here. The
+counterfactual-auditing full manuscript and the thesis titled
+\emph{End-to-end Machine Unlearning Through Data Preparation Pipelines
+and Feature Stores} remain unresolved full-text comparisons. Their
+absence from the completed comparison cannot support a novelty claim.
+The final review must revisit these gaps and the resulting claim wording.
+\end{document}

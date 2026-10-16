@@ -1,0 +1,213 @@
+{
+  "schema": "third-working-manuscript-evidence-v1",
+  "created_utc": "2026-10-16T09:09:26.104848+00:00",
+  "manuscript": {
+    "path": "manuscript/third_working_draft.tex",
+    "bytes": 46899,
+    "sha256": "89f70ca98827d2e337721f20c305755dad4f13074a58c6c33517a69297b4ca17"
+  },
+  "checker": {
+    "path": "manuscript/build_evidence.py",
+    "bytes": 9359,
+    "sha256": "167a67317e311c7c64d346e4ce5e3ae03e30845896f71feff82f94144c74247c"
+  },
+  "source_claim_check_passed": true,
+  "reviewer_kind": "author AI assistant source and arithmetic check; not independent manuscript review",
+  "standalone_source": true,
+  "bibliography_entries": 14,
+  "references_checked": 14,
+  "source_bindings": [
+    {
+      "path": "output/pdf/counterfactual_curation_theory.tex",
+      "bytes": 109926,
+      "sha256": "8e7662935d0caf6cddede9cd12460d1362c67fddc227d8051424e4dce51d61aa"
+    },
+    {
+      "path": "empirical_execution/canonical_theory_addendum.tex",
+      "bytes": 13650,
+      "sha256": "54c933dcf5b3382824dcc2cfeee373a15435771cd79ede33d175da8339e774c2"
+    },
+    {
+      "path": "empirical_execution/phase10/finite_word_theory.tex",
+      "bytes": 16444,
+      "sha256": "c0afedb46c232444bf6b5165ebc492b630fe5255e25d16dde66f5c105d59f6cd"
+    },
+    {
+      "path": "empirical_execution/phase10/FINITE_WORD_THEORY.md",
+      "bytes": 25507,
+      "sha256": "5a17e0e3d7d37e5c27c5ac37f1898c2df40a18e75ce12df8b2255c9ac4900bfb"
+    },
+    {
+      "path": "empirical_execution/phase10/SCORER_TRANSFER.md",
+      "bytes": 12002,
+      "sha256": "ee9025a29a8071507c0ea331f9f7a06a38e879b1bf1bb7d6058c5701103f7b0a"
+    },
+    {
+      "path": "empirical_execution/phase10/FINITE_WORD_REVIEW.md",
+      "bytes": 14399,
+      "sha256": "014da1fa3672fe311fe45795d7470d0662e303bceb8c515522c5360d96c3efa1"
+    },
+    {
+      "path": "empirical_execution/phase10/CODEC.md",
+      "bytes": 11472,
+      "sha256": "29aacce59369e1b9eea8edd6bc7dece217214ddd1ef521e1747ea93499744d15"
+    },
+    {
+      "path": "empirical_execution/phase10/CODEC_REVIEW.md",
+      "bytes": 8239,
+      "sha256": "5605287126afd7ff1dce67abd60dc67d89047d78b64ccda74b378b8acce53912"
+    },
+    {
+      "path": "empirical_execution/phase10/CONTRIBUTION_POSITION.md",
+      "bytes": 4336,
+      "sha256": "433510bcf5c39529958c35c4247913638a95025b585424f44aca7b89c8392d50"
+    },
+    {
+      "path": "empirical_execution/phase10/LITERATURE_FOLLOWUP.md",
+      "bytes": 11654,
+      "sha256": "101d81a6fbeda49be185adbbf8bb75deb4ab6cd90f7bd179f5610436a85589ce"
+    },
+    {
+      "path": "local_run/EMPIRICAL_PROGRAM.md",
+      "bytes": 36402,
+      "sha256": "35c2bac50f542a4657ff4f53050bbcfe34362f12aa4d063c6b7f20071504f834"
+    },
+    {
+      "path": "local_run/model_annotation_v4_20261014/PLAN.json",
+      "bytes": 16694,
+      "sha256": "10ebb3cb8f872c2efaf69306ca5bb23dcec2a015b2747988aafa31485dbbdcae"
+    },
+    {
+      "path": "local_run/source_acceptance_v2_20261011/qualification.json",
+      "bytes": 7325,
+      "sha256": "a8ee71c5b95318d0496ed26b3987627db36e309cd83f51432a7a42d3635f2e98"
+    },
+    {
+      "path": "local_run/local_llm_execution_20261014/llm_selection_v3_terminal_result.json",
+      "bytes": 37823,
+      "sha256": "48979e72e212d2a7e6bdd4966f32ed1f36b422ca3ae1f48a70c80e6f4b0929eb"
+    },
+    {
+      "path": "local_run/local_llm_execution_20261014/llm_v4_qwen_audit_and_task_locks_20261016.json",
+      "bytes": 6769,
+      "sha256": "d42704863228caaeb9d9c92df60d24fe9176a881bf0e84fae7a41d01a339e086"
+    },
+    {
+      "path": "local_run/local_llm_execution_20261014/task_and_audit_independent_review_20261016.json",
+      "bytes": 2767,
+      "sha256": "9da18a313b1324cf1471897421c04e37eec5e971f942b97c45fdbb5c7c85d183"
+    },
+    {
+      "path": "local_run/local_llm_execution_20261014/llm_development_intake_completed_20261016.json",
+      "bytes": 10867,
+      "sha256": "acfd9cd73c228199becd758389da0b387271a68f4de7798c88c06a2ccf37796f"
+    },
+    {
+      "path": "local_run/local_llm_execution_20261014/llm_guard_benchmark_completed_20261016.json",
+      "bytes": 4429,
+      "sha256": "f6c83af86a0c7f6b89d03c093dfe4bc7477f73199a16e9d197f099a3fda69a76"
+    },
+    {
+      "path": "local_run/local_llm_execution_20261014/e5_calibration_frame_result.json",
+      "bytes": 5960,
+      "sha256": "2344e6b255fce4e57bb90ea561e341258c6a95c06cc9675b5010e9ea489e211d"
+    }
+  ],
+  "claims": [
+    {
+      "sections": [
+        "sec:setup",
+        "sec:method",
+        "app:work"
+      ],
+      "claim": "Fixed ordered curator, finite-horizon polynomial repair, indexed work, ridge and partition-source extension",
+      "sources": [
+        "output/pdf/counterfactual_curation_theory.tex",
+        "empirical_execution/canonical_theory_addendum.tex"
+      ],
+      "limit": "Exact algebraic designated state; construction, solves, export and bit complexity additional. No full-refit guarantee."
+    },
+    {
+      "sections": [
+        "sec:memory",
+        "app:scorer",
+        "app:information",
+        "app:certificate"
+      ],
+      "claim": "Stored FP32 family, frozen FP64 scorer, exact and approximate private-information bounds, canonical finite-family codec",
+      "sources": [
+        "empirical_execution/phase10/finite_word_theory.tex",
+        "empirical_execution/phase10/FINITE_WORD_THEORY.md",
+        "empirical_execution/phase10/SCORER_TRANSFER.md",
+        "empirical_execution/phase10/FINITE_WORD_REVIEW.md",
+        "empirical_execution/phase10/CODEC.md",
+        "empirical_execution/phase10/CODEC_REVIEW.md",
+        "empirical_execution/phase10/CONTRIBUTION_POSITION.md"
+      ],
+      "limit": "Constructed rows and rational head; no natural semantic, total-byte, physical erasure or uncertified floating-release claim."
+    },
+    {
+      "sections": [
+        "sec:study",
+        "sec:design"
+      ],
+      "claim": "Actual source/cache/task preparation and source-disjoint reservation",
+      "sources": [
+        "local_run/source_acceptance_v2_20261011/qualification.json",
+        "local_run/local_llm_execution_20261014/llm_v4_qwen_audit_and_task_locks_20261016.json",
+        "local_run/local_llm_execution_20261014/task_and_audit_independent_review_20261016.json",
+        "local_run/local_llm_execution_20261014/llm_development_intake_completed_20261016.json",
+        "local_run/local_llm_execution_20261014/e5_calibration_frame_result.json"
+      ],
+      "limit": "Separate fully LLM development; pre-guard upper bounds; historical human and primary acceptance remain unmet."
+    },
+    {
+      "sections": [
+        "sec:judges"
+      ],
+      "claim": "Frozen v4 two-model selection and fresh validation design",
+      "sources": [
+        "local_run/model_annotation_v4_20261014/PLAN.json"
+      ],
+      "limit": "Prospective model-defined criterion, not semantic truth or independent model votes; failure stops configuration."
+    },
+    {
+      "sections": [
+        "sec:evidence"
+      ],
+      "claim": "Completed v3 negative, audited Qwen integrity, and guard resource pilot",
+      "sources": [
+        "local_run/local_llm_execution_20261014/llm_selection_v3_terminal_result.json",
+        "local_run/local_llm_execution_20261014/llm_v4_qwen_audit_and_task_locks_20261016.json",
+        "local_run/local_llm_execution_20261014/task_and_audit_independent_review_20261016.json",
+        "local_run/local_llm_execution_20261014/llm_guard_benchmark_completed_20261016.json"
+      ],
+      "limit": "No passed v4 validation or full guard/effect study inferred."
+    },
+    {
+      "sections": [
+        "sec:evidence",
+        "sec:limits"
+      ],
+      "claim": "Earlier lexical total-byte comparison favored B-E",
+      "sources": [
+        "empirical_execution/phase10/CONTRIBUTION_POSITION.md"
+      ],
+      "limit": "Historical lexical development remains distinct from the current natural semantic study."
+    }
+  ],
+  "fixed_cutoff": "16 October 2026; pending v4 model results are not inferred",
+  "human_annotation_calls": 0,
+  "human_review_required": false,
+  "historical_human_gates_unchanged": true,
+  "primary_semantic_study_started": false,
+  "submission_ready": false,
+  "not_verified_here": [
+    "Native compilation and visual layout are tracked separately in BUILD_STATUS.json",
+    "No new independent proof or scientific audit",
+    "No native solver certificate",
+    "No model agreement validation, effect experiment, or held-out utility",
+    "No full literature novelty clearance",
+    "No permission for source text redistribution"
+  ]
+}

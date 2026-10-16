@@ -49,12 +49,18 @@
       "evidence": "local_run/local_llm_execution_20261014/llm_guard_benchmark_completed_20261016.json",
       "limit": "A pilot, not the full development guard or empirical effect study.",
       "work": "Exact guard implementation and real-cache resource pilot:262144 pairs, exact original-guard parity at three cuts"
+    },
+    {
+      "evidence": "manuscript/evidence_20261016.json",
+      "limit": "Native compilation and source/claim checks passed; visual review, empirical results, final claim review and submission formatting remain.",
+      "work": "First unified standalone manuscript: target, indexed repair, finite-format theorem and proofs, fully LLM methods, preserved negative evidence, related work and limitations"
     }
   ],
   "continuous_execution": {
     "automation_id": "continue-third-research",
     "cadence_minutes": 30,
     "latest_controller_pid": 59318,
+    "latest_scheduler_observation": "2026-10-16T09:10:04.380728+00:00",
     "no_new_continue_prompt_required_for_routine_progress": true,
     "queue": "local_run/continuous_execution_20261016/QUEUE.json",
     "single_calibration_controller_active": true
@@ -69,7 +75,7 @@
   },
   "fully_llm_annotation": true,
   "human_review_required": false,
-  "observed_utc": "2026-10-16T08:33:13.088513+00:00",
+  "observed_utc": "2026-10-16T09:10:37.027854+00:00",
   "original_registry": {
     "core": 16912,
     "extensions": 4420,
@@ -108,10 +114,10 @@
       "work": "Complete frozen statistical analysis, robustness/limitations and claim decisions"
     },
     {
-      "limit": "Existing theory/protocol sources are not a finished submission manuscript",
+      "limit": "A compiled working draft is available, not a submission-ready paper. Main effects and held-out analysis are still missing.",
       "order": 5,
-      "state": "incomplete",
-      "work": "Assemble unified manuscript, six planned figures, three planned tables, current related-work review and permitted reproducibility release"
+      "state": "working_draft_compiled_empirical_and_visual_review_pending",
+      "work": "Complete visual review, audited empirical figures/tables and final synthesis in the unified manuscript; resolve close-prior full-text gaps and permitted reproducibility release."
     }
   ],
   "schema": "third-overall-paper-progress-20261016-v1",

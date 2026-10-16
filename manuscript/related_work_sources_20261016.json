@@ -1,0 +1,94 @@
+{
+  "schema": "third-working-paper-primary-source-pass-v1",
+  "retrieved_date_utc": "2026-10-16",
+  "novelty_clearance": false,
+  "purpose": "Refresh primary metadata and narrow literature statements for the unified working manuscript; not an exhaustive novelty search.",
+  "sources": [
+    {
+      "key": "semdedup",
+      "url": "https://arxiv.org/abs/2303.09540",
+      "scope": "Primary preprint metadata and abstract; semantic deduplication motivation. Existing repository theory provides the earlier full comparison."
+    },
+    {
+      "key": "semcode",
+      "url": "https://github.com/facebookresearch/SemDeDup/blob/main/semdedup.py",
+      "scope": "Official archived code inspected this pass: upper triangle, column maximum, strict comparison M > 1-eps, and order variants. Only fixed nonnegative-threshold suppression is transferred."
+    },
+    {
+      "key": "green",
+      "url": "https://www.cs.ucdavis.edu/~green/papers/pods07.pdf",
+      "scope": "Author-hosted primary PDF, title/authors/abstract and polynomial provenance. No originality claim for polynomial dependency representation."
+    },
+    {
+      "key": "aggregate",
+      "url": "https://arxiv.org/abs/1101.1110",
+      "scope": "Primary abstract and metadata explicitly address aggregation and difference; bounded antecedent claim."
+    },
+    {
+      "key": "dbsp",
+      "url": "https://www.vldb.org/pvldb/vol16/p1601-budiu.pdf",
+      "scope": "Publisher primary paper/metadata. Published five-author list includes Tej Chajed; general incremental nonmonotone query antecedent."
+    },
+    {
+      "key": "priu",
+      "url": "https://arxiv.org/abs/2002.11791",
+      "publication_doi": "https://doi.org/10.1145/3318464.3380571",
+      "scope": "Primary abstract/metadata; provenance-based regression updates after deletion. No claim that its full scope excludes every possible preparation mechanism."
+    },
+    {
+      "key": "arcane",
+      "url": "https://www.ijcai.org/proceedings/2022/0556.pdf",
+      "scope": "Publisher PDF and inherited repository full-text comparison. Draft states only prior exact-unlearning architecture with data selection, not an exhaustive exclusion claim."
+    },
+    {
+      "key": "space",
+      "url": "https://proceedings.mlr.press/v291/cherapanamjeri25b.html",
+      "full_preprint": "https://arxiv.org/abs/2506.13048",
+      "scope": "Publisher abstract and bibliographic metadata refreshed. Cite extended abstract accurately, PMLR291:1185-1193. Bounded-deletion and query-dependent memory are prior subjects."
+    },
+    {
+      "key": "ticketed",
+      "url": "https://proceedings.mlr.press/v195/ghazi23a.html",
+      "scope": "Publisher abstract/metadata; centralized state versus per-record ticket tradeoff, with all usable private information charged in our contract."
+    },
+    {
+      "key": "counterfactual",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7520178",
+      "doi": "https://doi.org/10.2139/ssrn.7520178",
+      "official_code": "https://github.com/PranayTadakamalla/predictive-state-not-explanatory-state",
+      "previously_reviewed_code_commit": "4143f408843394e21a0622c9eb5d5de10a687a8c",
+      "scope": "Primary search metadata/abstract available; direct full-paper retrieval failed. Earlier repository audit inspected official code. Broad conceptual overlap acknowledged; full proof and approximate-success comparison unresolved."
+    },
+    {
+      "key": "grace",
+      "url": "https://retis.santannapisa.it/~tommaso/publications/EMNLP-2026.pdf",
+      "author_page": "https://retis.santannapisa.it/~tommaso/papers/emnlp26.php",
+      "scope": "Author page refreshed; earlier Phase 10 audit read the 20-page author PDF. Cited as author manuscript without claiming a future conference publication is completed."
+    },
+    {
+      "key": "e5",
+      "url": "https://arxiv.org/abs/2402.05672",
+      "scope": "Primary metadata/abstract for pretrained multilingual text embeddings; current cache identity comes from executed project receipts, not this reference."
+    },
+    {
+      "key": "judge",
+      "url": "https://arxiv.org/abs/2306.05685",
+      "scope": "Primary metadata/abstract for LLM-judge evaluation and known biases. Reported human-agreement rates in that work are not transferred to this study."
+    },
+    {
+      "key": "shannon",
+      "url": "https://gwern.net/doc/cs/algorithm/information/1959-shannon.pdf",
+      "scope": "Original-paper scan previously cited in the frozen Phase 10 proof. Not newly reread this pass. Attribution to classical rate-distortion tools; squared-soft-bit specialization is derived explicitly in our appendix."
+    }
+  ],
+  "unresolved": [
+    "Full manuscript and approximate-success semantics of Predictive State Is Not Explanatory State",
+    "Full text of Leonardo Dominici's 2025 thesis End-to-end Machine Unlearning Through Data Preparation Pipelines and Feature Stores",
+    "External independent novelty review and current full-text comparison before submission"
+  ],
+  "limitations": [
+    "Search absence is not evidence of novelty.",
+    "Metadata and abstracts support only the bounded claims above; this pass is not a new full-paper review of every citation.",
+    "The working manuscript retains explicit empirical and numerical limits."
+  ]
+}

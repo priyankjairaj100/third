@@ -1,0 +1,36 @@
+{
+  "attempt_history": [
+    "Initial native compilation timed out downloading Latin Modern font assets.",
+    "Removed optional font packages and used standard fonts; two bounded follow-ups returned busy.",
+    "Compiler then found extra alignment tabs in the finite-family display.",
+    "Reformatted that display as four aligned rows; native compiler returned success."
+  ],
+  "compile_verified": true,
+  "evidence_20261016.json": {
+    "bytes": 8508,
+    "sha256": "b2494a5cd8f4147da99668e505182f400e7b26a0cad80dfd6e16e6441f09f32c"
+  },
+  "latex_installed_by_agent": false,
+  "native_compiler_result": {
+    "kind": "success",
+    "message": "The current source compiled successfully with the desktop editor's compiler.",
+    "path": "/Users/priyankjairaj/Downloads/ACL/Three/manuscript/third_working_draft.tex"
+  },
+  "observed_utc": "2026-10-16T09:10:37.027854+00:00",
+  "open_in_codex_status": "queued",
+  "related_work_sources_20261016.json": {
+    "bytes": 5276,
+    "sha256": "74e34b79279146fe7bf1a91c02c025f2a8c5c28dc224150c48eb38364407da22"
+  },
+  "schema": "third-manuscript-build-status-v1",
+  "source_binding": {
+    "bytes": 46899,
+    "sha256": "89f70ca98827d2e337721f20c305755dad4f13074a58c6c33517a69297b4ca17"
+  },
+  "source_check_report": "evidence_20261016.json",
+  "source_repairs": 2,
+  "submission_ready": false,
+  "third_party_plugins_installed": false,
+  "visual_review_limitation": "Computer-use service failed to start (Sky Computer Use service startup request failed); native open_in_codex returned queued for this chat.",
+  "visual_review_verified": false
+}

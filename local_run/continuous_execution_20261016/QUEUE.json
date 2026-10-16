@@ -36,6 +36,13 @@
         "observed_utc": "2026-10-16T08:30:37.143850+00:00",
         "planned_calls": 396
       },
+      "latest_scheduler_observation": {
+        "job_id": "15242",
+        "node": "csis.cn4",
+        "observed_utc": "2026-10-16T09:10:04.380728+00:00",
+        "source": "existing controller receipt; no new launch",
+        "state": "RUNNING"
+      },
       "next_action": "Existing finite controller continues Mistral15242, exact-byte audit, 51-cut review and conditional fresh validation. Inspect completion/stopped receipts.",
       "state": "running"
     },
@@ -86,11 +93,13 @@
       "state": "waiting"
     },
     {
+      "build_status": "manuscript/BUILD_STATUS.json",
       "depends_on": [],
       "done_when": "Compiled and visually reviewed complete manuscript, actual figures/tables, citations and defensible limits.",
+      "evidence": "manuscript/evidence_20261016.json",
       "id": "07-manuscript",
-      "next_action": "Build unified theorem/methods/limitations and evidence-to-claim structure while empirical jobs run; refresh primary related work. Add empirical sections only from audited terminal results.",
-      "state": "ready_independent_parts"
+      "next_action": "Continue edits in manuscript/third_working_draft.tex. Native compilation passed; visual review is unverified because computer-use service was unavailable. Resolve close-prior full-text gaps and integrate only audited terminal calibration, guard, development and held-out results. Do not claim submission readiness.",
+      "state": "working_draft_compiled_empirical_sections_pending"
     },
     {
       "depends_on": [
@@ -103,5 +112,5 @@
       "state": "waiting"
     }
   ],
-  "updated_utc": "2026-10-16T08:33:13.088513+00:00"
+  "updated_utc": "2026-10-16T09:10:37.027854+00:00"
 }
