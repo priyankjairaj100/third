@@ -20,9 +20,16 @@ It does not rerun empirical work or perform an independent manuscript review.
 BUILD_STATUS.json separately records native compiler and visual-review outcomes.
 related_work_sources_20261016.json records the bounded literature pass and gaps.
 literature_contract_review_20261016.json records primary-text contract locators.
-Current checks bind24 evidence sources and15 cited references. Native compilation
+Current checks bind27 evidence sources and15 cited references. Native compilation
 passed for the current source; visual review remains unverified because the
-computer-use service failed to start. The editor opening is queued for this chat.
+computer-use service failed to start. The user has this same source open in the editor.
+
+claims_review_20261016.json records the bounded author review, four corrected
+descriptions and18 reverified historical source bindings. This is not a new
+independent proof review. compute_accounting_20261016.json records six saved v4
+jobs, including the failed CPU audit; it is not the whole project's compute budget.
+See REPRODUCIBILITY.txt for public/private verification boundaries and the versioned
+release manifest/archive. RELEASE_BUILD_STATUS.json records clean-extraction checks.
 
 V4 selection is complete and NEGATIVE: all792 calls and both output audits
 completed; all51 frozen cuts failed independent arithmetic replay. The maximum
@@ -33,7 +40,8 @@ The earlier v3 zero-positive result and earlier lexical B-E advantage remain.
 No human review is planned; old human gates remain false/unmet.
 
 Next substantive edits:
-1. Review unified theory/method/negative-evidence claims against the frozen sources.
+1. Obtain a final independent unified-manuscript review when available; the bounded
+   author comparison with frozen sources is complete and its limits are recorded.
 2. Complete visual layout review when the native UI service becomes available.
 3. Resolve the remaining SSRN and Dominici full-text comparisons where accessible;
    preserve unresolved scope if unavailable. No author contact is authorized.

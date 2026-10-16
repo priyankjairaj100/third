@@ -1,0 +1,132 @@
+{
+  "batch_step_times_added": false,
+  "builder": {
+    "bytes": 12513,
+    "path": "manuscript/build_review.py",
+    "sha256": "ad91a8f43fa5183c60a5c0b738085a964d0896c8e3a3dcd20b908cfbc6d12d56"
+  },
+  "cpu_core_seconds_computed": false,
+  "cpu_job_elapsed_seconds_sum": 1469,
+  "created_utc": "2026-10-16T10:19:13.862983+00:00",
+  "energy_measured": false,
+  "excluded_scope": [
+    "Earlier pilot and v3 inference",
+    "Embedding preparation",
+    "Sampling and request preparation",
+    "Hardware and runtime qualification",
+    "Other preparation jobs",
+    "Local development and manuscript work"
+  ],
+  "failed_audit_cost_retained": true,
+  "gpu_allocation_hours_display": "5.29",
+  "gpu_allocation_hours_exact": {
+    "denominator": 720,
+    "numerator": 3809
+  },
+  "gpu_allocation_seconds": 19045,
+  "gpu_utilization_measured": false,
+  "jobs": [
+    {
+      "allocated_gpu_count": 1,
+      "allocated_gpu_type": "A100 80GB",
+      "compute_node": "csis.cn4",
+      "elapsed_seconds": 11836,
+      "exit_code": "0:0",
+      "job_id": "13663",
+      "parent_accounting_row": "13663|COMPLETED|0:0|11836||csis.cn4",
+      "role": "Qwen v4 inference",
+      "saved_observation_utc": "2026-10-14T15:02:54.502386+00:00",
+      "state": "COMPLETED"
+    },
+    {
+      "allocated_gpu_count": 1,
+      "allocated_gpu_type": "A100 80GB",
+      "compute_node": "csis.cn4",
+      "elapsed_seconds": 7209,
+      "exit_code": "0:0",
+      "job_id": "15242",
+      "parent_accounting_row": "15242|COMPLETED|0:0|7209||csis.cn4",
+      "role": "Mistral v4 inference",
+      "saved_observation_utc": "2026-10-16T09:49:29.930722+00:00",
+      "state": "COMPLETED"
+    },
+    {
+      "compute_node": "csis.cn1",
+      "elapsed_seconds": 583,
+      "exit_code": "1:0",
+      "job_id": "14187",
+      "parent_accounting_row": "14187|FAILED|1:0|583||csis.cn1",
+      "role": "original Qwen audit; failed newline normalization",
+      "saved_observation_utc": "2026-10-14T15:14:45.601993+00:00",
+      "state": "FAILED"
+    },
+    {
+      "compute_node": "csis.cn1",
+      "elapsed_seconds": 755,
+      "exit_code": "0:0",
+      "job_id": "15241",
+      "parent_accounting_row": "15241|COMPLETED|0:0|755||csis.cn1",
+      "role": "corrected exact-byte Qwen audit",
+      "saved_observation_utc": "2026-10-16T07:48:20.608320+00:00",
+      "state": "COMPLETED"
+    },
+    {
+      "compute_node": "csis.cn1",
+      "elapsed_seconds": 130,
+      "exit_code": "0:0",
+      "job_id": "15276",
+      "parent_accounting_row": "15276|COMPLETED|0:0|130||csis.cn1",
+      "role": "exact-byte Mistral audit",
+      "saved_observation_utc": "2026-10-16T09:51:45.644182+00:00",
+      "state": "COMPLETED"
+    },
+    {
+      "compute_node": "csis.cn1",
+      "elapsed_seconds": 1,
+      "exit_code": "0:0",
+      "job_id": "15277",
+      "parent_accounting_row": "15277|COMPLETED|0:0|1||csis.cn1",
+      "role": "v4 selection statistics",
+      "saved_observation_utc": "2026-10-16T09:51:57.376512+00:00",
+      "state": "COMPLETED"
+    }
+  ],
+  "limitations": [
+    "Allocation time includes job overhead and loading; it is not GPU busy time.",
+    "CPU durations sum elapsed time across four jobs, not CPU-core usage.",
+    "Saved scheduler observations are historical; no fresh cluster poll was needed.",
+    "No total-project time, monetary cost, carbon or energy estimate is inferred."
+  ],
+  "new_cluster_queries": 0,
+  "private_Mistral_launch_binding": {
+    "bytes": 3211,
+    "sha256": "0342b5c7f6d951f854d29ef3823924931ee62efb4058210b07e68f44cd114458"
+  },
+  "private_Mistral_launch_export": {
+    "gpu_count": 1,
+    "gpu_type": "A100 80GB",
+    "job_id": "15242"
+  },
+  "project_total_compute_complete": false,
+  "queue_wait_included": false,
+  "saved_parent_rows_counted_once": true,
+  "schema": "third-partial-compute-accounting-v1",
+  "scope": "Six saved v4 inference, audit and statistics jobs only; not the complete project budget.",
+  "source_bindings": [
+    {
+      "bytes": 5001,
+      "path": "local_run/local_llm_execution_20261014/llm_v4_qwen_audit_stop_20261015.json",
+      "sha256": "444e8c484a4a2a3c8d06a1895c6daa298e9f3c8b0ca4a0af56c091ffe0afa9c4"
+    },
+    {
+      "bytes": 85149,
+      "path": "local_run/local_llm_execution_20261014/llm_selection_v4_terminal_result.json",
+      "sha256": "961f1ab1b07b98d3c814d06e25d7825f2afee5422fca67c309d4a379c7793f86"
+    },
+    {
+      "bytes": 8636,
+      "path": "local_run/local_llm_execution_20261014/llm_node_pool_v2_execution.json",
+      "sha256": "d85f5405a140e6e797aec2682d81ded0972c520b3fdc921375f5620cf28cea01"
+    }
+  ]
+}

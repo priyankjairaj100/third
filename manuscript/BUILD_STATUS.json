@@ -4,14 +4,23 @@
     "Removed optional font packages and used standard fonts; two bounded follow-ups returned busy.",
     "Compiler then found extra alignment tabs in the finite-family display.",
     "Reformatted that display as four aligned rows; native compiler returned success.",
-    "Primary-text comparison revision compiled successfully; then terminal v4 negative results and the checked table compiled successfully with the native compiler."
+    "Primary-text comparison revision compiled successfully; then terminal v4 negative results and the checked table compiled successfully with the native compiler.",
+    "Bounded author claim review clarified stable handles, empirical retry rejection, private-state access and scorer range proof; partial v4 compute statement added. Native compilation succeeded without repair."
   ],
   "bibliography_entries_checked": 15,
+  "claims_review_20261016.json": {
+    "bytes": 8655,
+    "sha256": "6532f86051a343938495d60eb1d41974e4428d101af080571ac45c51c12ebc55"
+  },
   "compile_verified": true,
+  "compute_accounting_20261016.json": {
+    "bytes": 4577,
+    "sha256": "6627d43e50fada0496ddbe8392d63b285fae609561a64acdd5be115432d53cc4"
+  },
   "current_revision_source_repairs": 0,
   "evidence_20261016.json": {
-    "bytes": 10479,
-    "sha256": "d9479993f620d549d51d2cf4c1e4ef28b556d38046cc43f34b795637379edf18"
+    "bytes": 11607,
+    "sha256": "c8af1fcf65db2724074b404be86785dc5f0268581b6081d758a6d3365a4d881f"
   },
   "latex_installed_by_agent": false,
   "literature_contract_review_20261016.json": {
@@ -23,18 +32,18 @@
     "message": "The current source compiled successfully with the desktop editor's compiler.",
     "path": "/Users/priyankjairaj/Downloads/ACL/Three/manuscript/third_working_draft.tex"
   },
-  "observed_utc": "2026-10-16T10:02:39.672295+00:00",
-  "open_in_codex_status": "queued",
+  "observed_utc": "2026-10-16T10:22:39.064437+00:00",
+  "open_in_codex_status": "already open as reported by user",
   "related_work_sources_20261016.json": {
     "bytes": 5744,
     "sha256": "813b96494c66b84b627f235907e052efad56640e4210c01e392669f2f93497ad"
   },
   "schema": "third-manuscript-build-status-v1",
   "source_binding": {
-    "bytes": 50575,
-    "sha256": "299163bd737cec9feb96ef1a58432dea8bbb1792c6c5904dfd1707218001d22b"
+    "bytes": 52898,
+    "sha256": "af0f1a6f71dffeb37a9fc2761fa06d699721db30e6cfddf19266b8e83f2281c1"
   },
-  "source_bindings_checked": 24,
+  "source_bindings_checked": 27,
   "source_check_report": "evidence_20261016.json",
   "source_repairs": 2,
   "submission_ready": false,

@@ -69,6 +69,21 @@
       "evidence": "manuscript/evidence_20261016.json",
       "limit": "24 source bindings,15 references; visual review and final independent manuscript review remain unverified. SSRN and Dominici full-text gaps remain.",
       "work": "Primary-text related-work contract checks and compiled v4 negative-result manuscript table"
+    },
+    {
+      "evidence": "manuscript/claims_review_20261016.json",
+      "limit": "Not a new independent proof/manuscript review; no theorem fixture rerun or new empirical evidence.",
+      "work": "Bounded author claim reconciliation resolved four manuscript descriptions;18 historical proof-review bindings verified unchanged"
+    },
+    {
+      "evidence": "manuscript/compute_accounting_20261016.json",
+      "limit": "Not GPU utilization, CPU-core time, energy, end-to-end latency or the complete project budget.",
+      "work": "Partial compute record for six v4 jobs:19045 GPU-allocation seconds and1469 summed CPU-job seconds including failed audit"
+    },
+    {
+      "evidence": "manuscript/RELEASE_BUILD_STATUS.json",
+      "limit": "No private source text, pair labels or model weights; not full empirical replay or submission readiness.",
+      "work": "Bounded public manuscript/evidence package with51 payload files and manifest; clean-extraction evidence check reproduced all claims and source bindings"
     }
   ],
   "continuous_execution": {
@@ -93,7 +108,7 @@
   },
   "fully_llm_annotation": true,
   "human_review_required": false,
-  "observed_utc": "2026-10-16T10:02:39.672295+00:00",
+  "observed_utc": "2026-10-16T10:24:26.593375+00:00",
   "original_registry": {
     "core": 16912,
     "extensions": 4420,
@@ -109,8 +124,8 @@
     {
       "limit": "No renewed inference, cut selection, validation, guard or effect experiment.",
       "order": 1,
-      "state": "ready_local_work",
-      "work": "Finish the theory-and-negative-evidence manuscript and reproducibility package"
+      "state": "public_source_check_package_verified_remaining_documentation_review",
+      "work": "Extend historical compute coverage, review attribution/replay boundaries and finish remaining manuscript review"
     },
     {
       "limit": "Do not claim submission readiness or exhaustive novelty.",

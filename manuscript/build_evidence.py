@@ -115,6 +115,20 @@ def main():
     assert all(item["downloaded"] for item in literature["primary_artifacts"].values())
     assert literature["novelty_clearance"] is False
     assert all(item["gap_closed"] is False for item in literature["unresolved_routes"])
+    author_review = read_json("manuscript/claims_review_20261016.json")
+    compute = read_json("manuscript/compute_accounting_20261016.json")
+    assert author_review["review_passed_in_stated_scope"] and not author_review["new_independent_proof_review"]
+    assert author_review["manuscript"] == binding("manuscript/third_working_draft.tex")
+    assert len(author_review["resolved_findings"]) == 4
+    assert len(author_review["historical_source_bindings_reverified"]) == 18
+    for saved in author_review["historical_source_bindings_reverified"] + author_review["additional_sources"]:
+        assert saved == binding(saved["path"]), "review source binding drift"
+    assert compute["gpu_allocation_seconds"] == 19045
+    assert compute["cpu_job_elapsed_seconds_sum"] == 1469
+    assert compute["project_total_compute_complete"] is False
+    assert compute["failed_audit_cost_retained"] and not compute["batch_step_times_added"]
+    for saved in compute["source_bindings"]:
+        assert saved == binding(saved["path"]), "compute source binding drift"
 
     sources = [
         "output/pdf/counterfactual_curation_theory.tex",
@@ -141,6 +155,9 @@ def main():
         REPORT + "llm_selection_v4_terminal_result.json",
         REPORT + "llm_v4_negative_diagnostics_20261016.json",
         "local_run/llm_v4_negative_analysis_v1_20261016/analyze.py",
+        "manuscript/claims_review_20261016.json",
+        "manuscript/compute_accounting_20261016.json",
+        "manuscript/build_review.py",
     ]
     claims = [
         {"sections": ["sec:setup", "sec:method", "app:work"],
@@ -163,6 +180,10 @@ def main():
         {"sections": ["sec:related", "app:repro"], "claim": "Source-located comparison of ARCANE selection, ticketed access and bounded-deletion memory",
          "sources": [sources[19], sources[20]],
          "limit": "Primary-text contract comparison only; two full-text gaps remain. No independent audit of prior proofs or exhaustive novelty clearance."},
+        {"sections": ["sec:method", "sec:memory", "app:work", "app:scorer", "app:repro"],
+         "claim": "Author claim comparison, four resolved descriptions, historical independent-review source checks, and partial v4 compute accounting",
+         "sources": [sources[24], sources[25], sources[26]],
+         "limit": "No new independent proof review, visual layout verification, complete project compute/energy budget or empirical effect evidence."},
     ]
     report = {
         "schema": "third-working-manuscript-evidence-v1",

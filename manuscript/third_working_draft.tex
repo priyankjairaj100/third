@@ -205,8 +205,10 @@ also does not imply bitwise equality of floating-point additions.
 The P-I method stores nonzero coefficient keys, inverse incidences from
 identifiers to keys, and degree buckets. Deleting $u$ touches only incident
 keys, removes $u$ from each key, combines collisions, removes zero values,
-and drops keys above the new horizon. Repeated or already deleted IDs are
-no-ops; invalid IDs and over-budget requests are rejected before mutation.
+and drops keys above the new horizon. The frozen empirical P-I interface
+rejects repeated, already deleted, invalid, and over-budget IDs before
+mutation. The earlier mathematical reference instead treats retries as
+no-ops; both apply the same substitution to valid fresh deletions.
 The reference P-S method scans all keys. Both implement
 Equation~\eqref{eq:update} under the same numerical contract.
 
@@ -275,6 +277,7 @@ Only the signs of $z_i\in\{\pm1/\sqrt D\}^D$ are private. The raw rows are
 Candidate labels are one; every other label is zero. All nonzero entries
 are exactly stored normal FP32 values in the stated dimension range.
 Candidate labels, graph, signatures, roles, and blocker payloads are public.
+The entire public contract is fixed independently of the private signs.
 
 At the stored binary64 threshold $\tau=\operatorname{float64}(0.4)$,
 the frozen ordered FP64 normalization and dot product give
@@ -325,6 +328,11 @@ length or framing choices must also be charged. The probes delete only
 public blockers, so access to their forgotten payloads does not bypass
 the bound. This result concerns private information; public metadata,
 padding, workspace, and output representation still consume bytes.
+Every usable sign-dependent model, cache, ticket, retained random seed,
+earlier output, or external store counts toward the private state. Repair
+cannot reread retained candidate features or use an uncharged private
+side channel. This access restriction is part of the theorem, not a
+property established by hashing an input file.
 
 For cumulative deletion $F$ under the original $K=b+1$, define
 \begin{align}
@@ -737,14 +745,17 @@ source with a fidelity criterion. IRE National Convention Record, Part 4,
 
 \appendix
 \section{Update accounting and state boundaries}\label{app:work}
-For singleton deletion of $u$, first obtain the inverse-incidence list
-of keys containing $u$. For each such key, detach its old dictionary and
-incidence entries, remove $u$, and insert the reduced key or merge with
-its existing destination. Moving a value transfers its reference; only
-merges perform vector arithmetic and a zero test. After reducing the
-horizon by one, remove the now-excessive degree bucket. No new key can
-have more elements than its predecessor, and the number of live keys
-never increases.
+For singleton deletion of $u$, first obtain the inverse-incidence handles
+of keys containing $u$. For each entry, remove its incidence at $u$, its
+old dictionary key, and its degree-bucket membership. Remove $u$ from
+the key. If the reduced key is absent, move the same entry handle to it;
+all surviving inverse references remain attached to that handle and are
+not rebuilt. If the key already exists, merge the values and remove all
+remaining incidences of the retired source entry. A zero result also
+retires the destination and its incidences. Moving a value transfers its
+reference; only merges perform vector arithmetic and a zero test. After
+reducing the horizon by one, remove the now-excessive degree bucket.
+No key gains an element, and the number of live keys never increases.
 
 Give each initial incidence a token. A shrink removes a token; a merge
 or prune removes its source tokens. None are created. Thus at most $L_0$
@@ -769,7 +780,8 @@ must therefore state their contract rather than borrow exact equality.
 All statements in this appendix concern the mathematical rows of
 Equation~\eqref{eq:rows}, not natural encoder outputs. Powers-of-four
 $k,D$ make $1/\sqrt{k}$ and $1/\sqrt D$ dyadic. The dimension cap keeps
-every nonzero stored value and intermediate in the ordinary normal range.
+every nonzero stored value in the ordinary normal range; the range argument
+below also excludes nonzero subnormal intermediates in scoring.
 The norms, independent of private signs, are
 \[
  \norm a^2=1,\quad \norm{s_j}^2=\norm{p_i}^2=65/64,
@@ -810,9 +822,17 @@ therefore contribute at most $2\rho+\rho^2$ in absolute cosine error,
 using Cauchy--Schwarz. Ordered dot-product rounding contributes at most
 $\gamma(1+\rho)^2$. Hence
 \[
- E_d=2\rho+\rho^2+\gamma(1+\rho)^2<2^{-32}
+E_d=2\rho+\rho^2+\gamma(1+\rho)^2<2^{-32}
                     \qquad(d\le2^{20}).
 \]
+To justify the relative-rounding model even under cancellation, nonzero
+computed normalized coordinates have magnitudes between $2^{-18}$ and
+two. Rounded nonzero products are at least $2^{-37}$ and are multiples
+of $2^{-89}$. Ordered sums remain on that grid: rounding either preserves
+the value or moves to a coarser subgrid. A sum is therefore zero or has
+magnitude at least $2^{-89}$, above the subnormal range. The crude bound
+$4d\le2^{22}$ excludes overflow. These facts cover the norm, division,
+product, and accumulation range assumptions used above.
 This cannot cross the edge/nonedge margins. It proves the uniform graph
 under the stated scorer, independently of the $mD$ private signs.
 Native runtime admission and implementation replay remain separate checks.
@@ -899,6 +919,20 @@ bind tokenizer files, templates, prompt/schema, runtime, and sampling
 seeds. Source/cache/task intake and independent arithmetic reviews bind
 private outputs by exact bytes and hashes. Checksums support identity;
 they do not establish semantic correctness or source rights.
+
+\paragraph{Observed compute scope.}
+The two completed v4 inference jobs each allocated one A100 80GB GPU.
+Their scheduler elapsed times were 11,836 seconds for Qwen and 7,209 for
+Mistral, totaling 19,045 GPU-allocation seconds (5.29 hours). This includes
+job overhead and model loading, excludes queue time, and is not measured
+GPU utilization, energy, or end-to-end project time. The corrected Qwen
+and Mistral CPU audits took 755 and 130 seconds; the retained failed Qwen
+audit took 583 seconds, and selection statistics took one second.
+These four CPU-job durations sum to 1,469 seconds, not CPU-core time.
+The accounting is deliberately partial: it excludes earlier pilot and v3
+inference, embedding preparation, sampling, runtime qualification, other
+preparation jobs, local development, and manuscript work. A complete
+project compute budget and energy estimate remain unavailable.
 
 The remaining empirical displays must be generated from audited outputs:
 admission curves and blocker structure; matched request-arm target

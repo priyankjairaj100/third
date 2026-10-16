@@ -1,3 +1,38 @@
+Latest continuation — 16 October 2026, 2026-10-16T10:24:26.593375+00:00
+
+MANUSCRIPT CLAIM AND REPRODUCIBILITY MILESTONE.
+The same open manuscript/third_working_draft.tex now specifies stable inverse
+handles, correct empirical P-I retry rejection, complete private-side-information
+accounting, and the scorer cancellation/underflow argument. Four description
+findings resolved against frozen sources;18 historical review bindings match.
+This is a bounded AUTHOR review, not a new independent proof/manuscript review.
+No frozen source changed and no theory fixtures or empirical jobs were rerun.
+
+Native compilation PASSED. Evidence checker now binds27 sources and15 references.
+Six saved v4 jobs are accounted:19045 GPU-allocation seconds (5.29hours) for two
+inference jobs;1469 summed CPU-job seconds for audits/statistics, including the
+failed audit. This is partial accounting, not utilization, energy or total budget.
+
+Public package: manuscript/release_20261016_v1.zip, SHA256
+3c3ab748fec84c70563a4eb237bcf830de6ac698966d8e9aacd001b79f0afad7.
+51 payload files plus manifest; CRC, exact member hashes and evidence checker
+passed in a clean temporary extraction. Reproduced ledger equals the original
+except creation time. No raw source text, per-pair IDs/labels, model weights,
+credentials, private orchestration or third-party PDFs are included. Public
+replay boundaries are explicit in manuscript/REPRODUCIBILITY.txt. This compact
+source-check package is not a full empirical replay or submission-ready release.
+
+V4 calibration remains terminal NEGATIVE. Controller completion at09:52:01UTC
+is unchanged; no selected threshold or fresh validation. No cluster connection,
+job submission or model call occurred this heartbeat. Guard and effects remain
+unlaunched. Zero humans; prior negatives and original human gates remain unmet.
+
+Next independent local work is the queue's negative branch: extend historical
+compute coverage and attribution/replay review; final unified independent review,
+visual layout and two inaccessible close-prior full texts remain unresolved.
+Keep existing scheduler, protected local locks and frozen remote checkout intact.
+Do not retune or label the original empirical program complete.
+
 Latest continuation — 16 October 2026, 2026-10-16T10:02:39.672295+00:00
 
 TERMINAL NEGATIVE CALIBRATION: v4 selection completed at09:52:01UTC.

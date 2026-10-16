@@ -1,0 +1,60 @@
+Third: bounded public manuscript and evidence package
+
+This package contains the current standalone manuscript, author evidence checker,
+aggregate reports, frozen source documents, and historical review bindings needed
+for the public source/claim check. It is not a full empirical replay archive or
+a submission-ready release. Both completed LLM calibration versions failed their
+selection gates; no threshold-dependent downstream experiment is authorized.
+
+Public verification, from the extracted package root:
+  python3 -B manuscript/build_evidence.py
+
+This standard-library Python check verifies citations/references, source hashes,
+reported counts, the displayed calibration table, the bounded author review and
+partial compute ledger. It regenerates evidence_20261016.json with a new creation
+time. It does not execute inference, rejudge labels, prove theorems, or establish
+raw source authenticity. The package build verifies this command in a fresh
+temporary extraction without using files elsewhere in the checkout.
+
+Open manuscript/third_working_draft.tex in the native document editor to compile
+the standalone source. It uses standard LaTeX packages and an embedded bibliography;
+no external images, bibliography or custom conference style are required. The
+saved build receipt establishes successful native compilation of its exact source.
+Visual layout review remains unverified. No compiled PDF is included or claimed
+as visually checked. The working manuscript is not yet in a final ACL template.
+
+Private verification boundaries:
+- Recomputing model-pair labels and all weighted cuts from the original selection
+  requires the private pinned sample and audited per-pair model observations.
+  The public aggregate ledger cannot establish those labels' semantic accuracy.
+  local_run/llm_v4_negative_analysis_v1_20261016/analyze.py documents exact inputs.
+- Regenerating manuscript/build_review.py's compute and review reports additionally
+  requires the original private Mistral launch receipt; only its hash and minimal
+  resource fields are released. No global cluster queue or other project data
+  belongs in this package.
+- Original raw corpora, per-record/account IDs, task labels, model outputs,
+  model weights, private orchestration, credentials and third-party paper PDFs
+  are excluded. Redistribution rights are not inferred from access or hashes.
+- Frozen runtime packages, full environment/model inventories and earlier failed
+  attempts remain in the main repository or private workspace as documented.
+  This compact package does not supply the environment/assets for full inference
+  replay. Do not launch a replacement experiment from the failed configuration.
+
+Scientific limits:
+The exact theorem concerns a constructed finite-format family and counts private
+information under its access model, not total deployment bytes or natural NLP
+utility. The historical proof-review receipt is source-bound; this manuscript's
+new reconciliation is an author review, not a new independent proof review.
+Compute accounting covers six saved v4 jobs, retains the failed audit and excludes
+other project phases. It is not a total compute, energy or monetary-cost estimate.
+The two unresolved close-prior full-text comparisons remain explicit. Original
+human gates remain unmet; prospective annotation and review are fully LLM only.
+
+Repository and complete development history:
+https://github.com/priyankjairaj100/third
+
+The release manifest lists each exact included file, byte count and SHA256.
+Its historical_base_commit records the pre-package repository state and is not
+presented as the final package commit. Final Git commit/push receipts are recorded
+separately. Archive hashes and the clean-extraction check are in
+manuscript/RELEASE_BUILD_STATUS.json outside the archive.

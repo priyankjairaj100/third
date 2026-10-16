@@ -1,0 +1,33 @@
+{
+  "archive": {
+    "bytes": 268944,
+    "path": "manuscript/release_20261016_v1.zip",
+    "sha256": "3c3ab748fec84c70563a4eb237bcf830de6ac698966d8e9aacd001b79f0afad7"
+  },
+  "archive_crc_and_exact_member_hashes_passed": true,
+  "archive_members": 52,
+  "builder": {
+    "bytes": 6097,
+    "sha256": "90450905027d04a48a983ef4623dc60cbd1868c03b1bddcc6511cbb386d76ec4"
+  },
+  "full_empirical_replay_tested": false,
+  "manifest": {
+    "bytes": 9400,
+    "path": "manuscript/release_manifest_20261016_v1.json",
+    "sha256": "5faa88855ce5b809cdae7a9ec98c8cfb713c67309558b01b01ca1b8008712136"
+  },
+  "native_compile_previously_verified_for_packaged_source": true,
+  "observed_utc": "2026-10-16T10:22:39.191984+00:00",
+  "payload_members": 51,
+  "public_source_check_in_clean_extraction_passed": true,
+  "reproduced_evidence_equal_except_creation_time": true,
+  "schema": "third-public-package-build-status-v1",
+  "source_check_summary": {
+    "bibliography_entries": 15,
+    "manuscript_sha256": "af0f1a6f71dffeb37a9fc2761fa06d699721db30e6cfddf19266b8e83f2281c1",
+    "source_bindings": 27,
+    "source_claim_check_passed": true
+  },
+  "submission_ready": false,
+  "visual_review_verified": false
+}

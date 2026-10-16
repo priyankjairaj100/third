@@ -1,15 +1,15 @@
 {
   "schema": "third-working-manuscript-evidence-v1",
-  "created_utc": "2026-10-16T10:00:32.374750+00:00",
+  "created_utc": "2026-10-16T10:19:56.845981+00:00",
   "manuscript": {
     "path": "manuscript/third_working_draft.tex",
-    "bytes": 50575,
-    "sha256": "299163bd737cec9feb96ef1a58432dea8bbb1792c6c5904dfd1707218001d22b"
+    "bytes": 52898,
+    "sha256": "af0f1a6f71dffeb37a9fc2761fa06d699721db30e6cfddf19266b8e83f2281c1"
   },
   "checker": {
     "path": "manuscript/build_evidence.py",
-    "bytes": 12993,
-    "sha256": "059e9297dda50ba98a3c2e1896dcaccd9f034f2cc472c31d0d9a174c5cbd6ec7"
+    "bytes": 14646,
+    "sha256": "856703eb7525af76aff00ad9100eb5fdb2701024e289bcff358aac737c27f5ea"
   },
   "source_claim_check_passed": true,
   "reviewer_kind": "author AI assistant source and arithmetic check; not independent manuscript review",
@@ -136,6 +136,21 @@
       "path": "local_run/llm_v4_negative_analysis_v1_20261016/analyze.py",
       "bytes": 11035,
       "sha256": "2bf5df9d0a727365a4be0fc69f50329ef29a41c7a2a0a36f71f9492e25b0412c"
+    },
+    {
+      "path": "manuscript/claims_review_20261016.json",
+      "bytes": 8655,
+      "sha256": "6532f86051a343938495d60eb1d41974e4428d101af080571ac45c51c12ebc55"
+    },
+    {
+      "path": "manuscript/compute_accounting_20261016.json",
+      "bytes": 4577,
+      "sha256": "6627d43e50fada0496ddbe8392d63b285fae609561a64acdd5be115432d53cc4"
+    },
+    {
+      "path": "manuscript/build_review.py",
+      "bytes": 12513,
+      "sha256": "ad91a8f43fa5183c60a5c0b738085a964d0896c8e3a3dcd20b908cfbc6d12d56"
     }
   ],
   "claims": [
@@ -235,6 +250,22 @@
         "manuscript/related_work_sources_20261016.json"
       ],
       "limit": "Primary-text contract comparison only; two full-text gaps remain. No independent audit of prior proofs or exhaustive novelty clearance."
+    },
+    {
+      "sections": [
+        "sec:method",
+        "sec:memory",
+        "app:work",
+        "app:scorer",
+        "app:repro"
+      ],
+      "claim": "Author claim comparison, four resolved descriptions, historical independent-review source checks, and partial v4 compute accounting",
+      "sources": [
+        "manuscript/claims_review_20261016.json",
+        "manuscript/compute_accounting_20261016.json",
+        "manuscript/build_review.py"
+      ],
+      "limit": "No new independent proof review, visual layout verification, complete project compute/energy budget or empirical effect evidence."
     }
   ],
   "fixed_cutoff": "16 October 2026; terminal v4 negative at09:52:01UTC; downstream work blocked under this configuration",
