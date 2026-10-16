@@ -1,3 +1,32 @@
+Latest continuation — 16 October 2026, 2026-10-16T09:40:39.119691+00:00
+
+FULL GUARD SOFTWARE MILESTONE: local_run/llm_development_guard_v1_20261016 is
+sealed and staged at local_workspace/tools/llm-development-guard-v1-20261016.
+Package manifest SHA256 b6ab54d229afbfb76786854d3103d9d4af112185d3d289d235e4ececd530ec10.
+All31 local software tests passed. Actual incomplete-calibration admission probe
+refused before creating output. Native job preflight is still pending. The package
+binds positive completed v4 selection/fresh validation and independently replays
+all51 cuts, exact bounds and overlap stability. It then runs two full433837782-pair
+scans in separate processes and separately verifies witnesses/scores/kept rows
+and whole-source prefixes. Fixed CPU budget is2cores/8GiB/3600seconds, not an ETA.
+No full guard, post-guard panel or effect result exists yet. No model threshold
+was selected by this preparation. All LLM, zero human review; old gates stay unmet.
+
+Controller PID59318 remains active. Latest saved scheduler observation:
+2026-10-16T09:39:53.597301+00:00: Mistral15242 RUNNING on csis.cn4.
+No completion, selection-completion or stopped receipt exists. One SSH staging
+operation succeeded, confirmed only15242 active, and wrote only the new package.
+No Slurm job, controller or annotation call was added; frozen remote HEAD stayed
+unchanged. Keep the existing controller in charge. Do not duplicate active stages.
+
+Read local_run/local_llm_execution_20261014/llm_full_guard_prepared_20261016.json
+and local_run/continuous_execution_20261016/FULL_GUARD_HANDOFF.txt. Use python -B
+for all package entrypoints so the exact sealed file inventory stays unchanged.
+After positive terminal validation, prepare/bind private admission, recheck
+queue/quota and launch once. On any negative gate preserve it without retuning.
+The compiled working manuscript, theory and prior negative results remain intact;
+main empirical comparisons, held-out evaluation and final synthesis remain open.
+
 Latest continuation — 16 October 2026, 2026-10-16T09:10:37.027854+00:00
 
 MANUSCRIPT MILESTONE: first unified standalone source is now

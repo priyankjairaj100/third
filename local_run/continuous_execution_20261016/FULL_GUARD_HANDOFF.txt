@@ -1,3 +1,38 @@
+Prepared full-stage package — 2026-10-16T09:40:39.119691+00:00
+
+The implementation requested below is now prepared, sealed and staged.
+Local: local_run/llm_development_guard_v1_20261016
+Remote: /nfs_home/users/poonam/ccu-acl2027/local_workspace/tools/llm-development-guard-v1-20261016
+Manifest SHA256: b6ab54d229afbfb76786854d3103d9d4af112185d3d289d235e4ececd530ec10
+31 local tests passed. These are synthetic software checks, not native execution
+or model validation. No admission bundle or full guard job exists yet.
+
+Use python -B or PYTHONDONTWRITEBYTECODE=1 for every package invocation. Exact
+package inventory rejects unbound files, including accidental bytecode caches.
+Never edit this sealed/staged version. README.txt documents the complete sequence.
+
+First reconcile controller terminal files and Slurm. Only after actual positive
+terminal fresh validation, export the ten fixed artifacts with the staged
+export_admission_remote.py. Save stdout privately, then locally run:
+  python3 -B local_run/llm_development_guard_v1_20261016/prepare_admission.py
+    --controller <task>/work/resume-20261016/repair_pipeline_a01
+    --export <private-export.json> --output <new-private-bundle-directory>
+The output gives admission_sha256. Stage the exact13 source files+admission.json
+exclusively at common.BUNDLE; verify every byte. No overwrite/retry is allowed.
+After the completed controller has no further transitions and Third's queue is
+empty, use staged launch.py with the manifest SHA and admission SHA. Its fresh
+quota and queue checks precede one sbatch. This is a60-minute CPU job; both full
+scans and separate review must succeed. Externally verify terminal0:0 plus bound
+payloads before marking task03 complete. No effect launch is automatic.
+
+If validation fails, keep the negative and follow the queue failure branch.
+No fallback threshold or repeat calls. Fully LLM, zero humans, old gates unmet.
+Private receipts: <task>/work/resume-20261016/full_guard_staging_transport.json,
+full_guard_local_software_tests.txt and full_guard_package_pin.txt.
+Public summary: local_run/local_llm_execution_20261014/llm_full_guard_prepared_20261016.json
+
+Earlier scope and constraints (preserved):
+
 Next executable stage after actual positive fresh v4 validation
 
 The queue has an active heartbeat; do not create another automation/controller.

@@ -54,13 +54,18 @@
       "evidence": "manuscript/evidence_20261016.json",
       "limit": "Native compilation and source/claim checks passed; visual review, empirical results, final claim review and submission formatting remain.",
       "work": "First unified standalone manuscript: target, indexed repair, finite-format theorem and proofs, fully LLM methods, preserved negative evidence, related work and limitations"
+    },
+    {
+      "evidence": "local_run/local_llm_execution_20261014/llm_full_guard_prepared_20261016.json",
+      "limit": "Software preparation only. No validated threshold, full guard result or post-guard panel exists; native runtime checks remain part of the future job.",
+      "work": "Full development guard package sealed and staged, 31 synthetic software tests passed, including exact admission gates and complete-reference replay interfaces"
     }
   ],
   "continuous_execution": {
     "automation_id": "continue-third-research",
     "cadence_minutes": 30,
     "latest_controller_pid": 59318,
-    "latest_scheduler_observation": "2026-10-16T09:10:04.380728+00:00",
+    "latest_scheduler_observation": "2026-10-16T09:39:53.597301+00:00",
     "no_new_continue_prompt_required_for_routine_progress": true,
     "queue": "local_run/continuous_execution_20261016/QUEUE.json",
     "single_calibration_controller_active": true
@@ -75,7 +80,7 @@
   },
   "fully_llm_annotation": true,
   "human_review_required": false,
-  "observed_utc": "2026-10-16T09:10:37.027854+00:00",
+  "observed_utc": "2026-10-16T09:40:39.119691+00:00",
   "original_registry": {
     "core": 16912,
     "extensions": 4420,
@@ -91,15 +96,15 @@
     {
       "limit": "Passing is not guaranteed; all LLM judgments are model-defined, not human ground truth",
       "order": 1,
-      "scale": "Mistral15242 has118/396 call completions at08:30:37UTC, still unaudited; controller advances audit and conditional fresh validation.",
+      "scale": "Mistral15242 remains RUNNING on csis.cn4 at 2026-10-16T09:39:53.597301+00:00; latest call count not refreshed. Controller advances audit and conditional fresh validation.",
       "state": "active",
       "work": "Finish v4 two-model selection and conditional fresh validation"
     },
     {
       "limit": "Native account metadata is only a contributor proxy; unknown owners remain singletons",
       "order": 2,
-      "state": "intake_and_reservation_complete_guard_pending",
-      "work": "Bind passed model validation, run full development leakage guard and freeze post-guard panels; other learner representations still need their own locks. Source/cache/task intake and pre-effect reservation are complete."
+      "state": "intake_complete_full_guard_package_staged_waiting_validation",
+      "work": "Bind actual positive model validation, execute staged full guard and separate full reference replay, audit post-guard panels, then freeze development effect scope. Other learner representations need their own task locks."
     },
     {
       "limit": "No practical speed, quality or memory benefit established yet",

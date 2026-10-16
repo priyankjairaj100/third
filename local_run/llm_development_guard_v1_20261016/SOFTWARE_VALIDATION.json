@@ -1,0 +1,28 @@
+{
+  "actual_missing_completion_refusal": {
+    "output_created": false,
+    "passed": true,
+    "reason": "actual_controller_completion_absent"
+  },
+  "created_utc": "2026-10-16T09:37:18.742458+00:00",
+  "elapsed_seconds": 2.2023970840000002,
+  "errors": 0,
+  "failures": 0,
+  "full_guard_executed": false,
+  "human_annotation_calls": 0,
+  "inherited_files_byte_identical": true,
+  "native_execution_verified": false,
+  "numpy": "1.26.3",
+  "passed": true,
+  "platform": "Darwin",
+  "python": "3.9.6",
+  "schema": "third-full-guard-software-validation-v1",
+  "skipped": 0,
+  "suite_log_binding": {
+    "bytes": 2454,
+    "sha256": "2c677a635e43202ec504dc8e1e08cce70caae5084cee9df0e7699a99ffaf7292"
+  },
+  "syntax_all_python_passed": true,
+  "synthetic_fixture_success_is_not_actual_calibration": true,
+  "tests": 31
+}

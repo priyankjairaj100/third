@@ -1,0 +1,93 @@
+{
+  "files": {
+    "INHERITED_SOURCES.json": {
+      "bytes": 1045,
+      "sha256": "073c794fdbd3bec309db0a4191bcd6932e8bd07496b5b2bf9702af82b18a6f84"
+    },
+    "PLAN.json": {
+      "bytes": 2521,
+      "sha256": "b4d4a6201e791f4247fe8ef0b7bd5a2bfadfef5483c5c7b57445bd941d1f1be2"
+    },
+    "README.txt": {
+      "bytes": 5281,
+      "sha256": "ca81130abd4776ce659bdac43aa18dcc1eb07e0f7cff1a6b774e01610b70f84e"
+    },
+    "RESERVATION_PLAN.json": {
+      "bytes": 2374,
+      "sha256": "9c21ba4a71733eeff30504beb4cf20ac3dbfdfb5898c025dbd258ad72ac77dca"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 818,
+      "sha256": "2ca988c2709d0e376bcedcb26ac2f033e13537ca930d1dcbb4257a8269e8bdfb"
+    },
+    "admission.py": {
+      "bytes": 14310,
+      "sha256": "a79f2b4ed28e90f87e40464657350ea54cc7b4cce68b3c90770d100f20066a91"
+    },
+    "common.py": {
+      "bytes": 5070,
+      "sha256": "aca3028fb30aafa1d6e0b1289098c9d6b4981733d0dd609c730eaa7fc64eec38"
+    },
+    "expectations.json": {
+      "bytes": 4960,
+      "sha256": "3f8cae5e211118e6da38256c7f7bc3df056eebccbcff653c8aa9052f7882f096"
+    },
+    "export_admission_remote.py": {
+      "bytes": 529,
+      "sha256": "de3611886f6f0cf1ab0da2e96da327db0847e9147303d514026b2f8166f15995"
+    },
+    "fixture_statistics.py": {
+      "bytes": 10417,
+      "sha256": "860af8d78a4307b270f588d7049f2155c4238c930f27051f0fb091427b962312"
+    },
+    "guard.sbatch": {
+      "bytes": 621,
+      "sha256": "3df34619d77c379fcd34e524f5a6b246fd12875620ffb6b9e04873e9d79da0e1"
+    },
+    "guard_core.py": {
+      "bytes": 2314,
+      "sha256": "1c6a97725f49adbb774b5a63d7aaf55e57e6ebd979e7c4b3f92e2c930866a2ec"
+    },
+    "launch.py": {
+      "bytes": 4082,
+      "sha256": "f24c1688552f0b01af261f742bf06d8274f0e51d8a11e0c937f06e19a2b5ba77"
+    },
+    "panel_core.py": {
+      "bytes": 3136,
+      "sha256": "bb079785d3e42471b628dd1e3e4e23f2ec8d7fb23ad7878656549bd962c0dad2"
+    },
+    "prepare_admission.py": {
+      "bytes": 2717,
+      "sha256": "c29b7e986e4abdde34c800ef41074c58a3e1ea2f691ec2d31ade907aebdabf18"
+    },
+    "review.py": {
+      "bytes": 8315,
+      "sha256": "b647e73af51a70753521f34bebf013232467ae638749c67f0c0f83620ed51cc0"
+    },
+    "runner.py": {
+      "bytes": 3843,
+      "sha256": "0568fe2b6997a6493e36b2f9d80a8d7401c48ddd90d0a0d8979cb162e2d4f913"
+    },
+    "test_admission.py": {
+      "bytes": 15451,
+      "sha256": "d3e2ce630c22cf61d2848c2171ea7118ef85f8769a11046be2a47a36fd6eb9b5"
+    },
+    "test_boundaries.py": {
+      "bytes": 3513,
+      "sha256": "a28ba936d1dc0087705b02cb2f1e905f3c403024fa336ddf0082efe47f40ea88"
+    },
+    "test_guard.py": {
+      "bytes": 3056,
+      "sha256": "e2be7353bcc9cfda1560e88bf6eea16871f58a5a3ec0ae414c0a9cc4edb609e6"
+    },
+    "test_panels.py": {
+      "bytes": 3800,
+      "sha256": "afe767eb202b67551136463729172d432d443a18eb6f2141e1e7ba04c4e51124"
+    },
+    "worker.py": {
+      "bytes": 7416,
+      "sha256": "50d5d8e32f76e477e08e2aa84fa14f2c2409c865c6c9e0c97a35219f1c2dfb5b"
+    }
+  },
+  "schema": "third-full-development-guard-package-v1"
+}

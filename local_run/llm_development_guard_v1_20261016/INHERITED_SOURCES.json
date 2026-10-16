@@ -1,0 +1,29 @@
+{
+  "files": {
+    "RESERVATION_PLAN.json": {
+      "byte_identical": true,
+      "bytes": 2374,
+      "sha256": "9c21ba4a71733eeff30504beb4cf20ac3dbfdfb5898c025dbd258ad72ac77dca",
+      "source": "local_run/llm_development_intake_v1_20261016/PLAN.json"
+    },
+    "fixture_statistics.py": {
+      "byte_identical": true,
+      "bytes": 10417,
+      "sha256": "860af8d78a4307b270f588d7049f2155c4238c930f27051f0fb091427b962312",
+      "source": "local_run/llm_v4_validation_inference_v2_20261014/statistics_core.py"
+    },
+    "guard_core.py": {
+      "byte_identical": true,
+      "bytes": 2314,
+      "sha256": "1c6a97725f49adbb774b5a63d7aaf55e57e6ebd979e7c4b3f92e2c930866a2ec",
+      "source": "local_run/llm_guard_benchmark_v1_20261016/guard_core.py"
+    },
+    "test_guard.py": {
+      "byte_identical": true,
+      "bytes": 3056,
+      "sha256": "e2be7353bcc9cfda1560e88bf6eea16871f58a5a3ec0ae414c0a9cc4edb609e6",
+      "source": "local_run/llm_guard_benchmark_v1_20261016/test_guard.py"
+    }
+  },
+  "historical_sources_modified": false
+}

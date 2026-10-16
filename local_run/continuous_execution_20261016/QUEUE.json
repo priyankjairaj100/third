@@ -39,8 +39,8 @@
       "latest_scheduler_observation": {
         "job_id": "15242",
         "node": "csis.cn4",
-        "observed_utc": "2026-10-16T09:10:04.380728+00:00",
-        "source": "existing controller receipt; no new launch",
+        "observed_utc": "2026-10-16T09:39:53.597301+00:00",
+        "source": "existing controller receipt selection_mistral_status_0102_transport.json; staging also checked current Slurm queue",
         "state": "RUNNING"
       },
       "next_action": "Existing finite controller continues Mistral15242, exact-byte audit, 51-cut review and conditional fresh validation. Inspect completion/stopped receipts.",
@@ -60,10 +60,12 @@
         "02-input-intake"
       ],
       "done_when": "Exhaustive intended-pair replay, bounded resource receipt and immutable disjoint panel memberships. Unavailable sizes recorded.",
-      "evidence": "local_run/local_llm_execution_20261014/llm_guard_benchmark_completed_20261016.json",
+      "evidence": "local_run/local_llm_execution_20261014/llm_full_guard_prepared_20261016.json",
       "id": "03-guard-panels",
-      "next_action": "Bind actual successful v4 fresh validation and independent-review bytes. Prepare full reserved-source guard and post-guard panels using the exact-parity-qualified routine; see FULL_GUARD_HANDOFF.txt. No full guard launched yet.",
-      "state": "software_and_resource_pilot_complete_waiting_for_validation"
+      "next_action": "Full-stage package is sealed and staged; 31 local tests passed. Wait for actual positive fresh validation, then prepare the private admission bundle and recheck queue/quota before one launch. Use python -B; see FULL_GUARD_HANDOFF.txt. No full guard launched yet.",
+      "package": "local_run/llm_development_guard_v1_20261016",
+      "package_sha256": "b6ab54d229afbfb76786854d3103d9d4af112185d3d289d235e4ececd530ec10",
+      "state": "full_stage_software_verified_and_staged_waiting_for_validation"
     },
     {
       "depends_on": [
@@ -112,5 +114,5 @@
       "state": "waiting"
     }
   ],
-  "updated_utc": "2026-10-16T09:10:37.027854+00:00"
+  "updated_utc": "2026-10-16T09:40:39.119691+00:00"
 }

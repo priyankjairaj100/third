@@ -1,0 +1,39 @@
+{
+  "acceptance": "Require actual COMPLETED0:0 Slurm state, pipeline_completion, full result, process receipts and payload/source binding review before development admission.",
+  "annotation": "fully_llm_zero_human_review",
+  "automatic_effect_launch": false,
+  "automatic_launch": false,
+  "automatic_retry": false,
+  "block_size": 256,
+  "cpu_resources": {
+    "cpus": 2,
+    "memory_gib": 8,
+    "node": "csis.cn1",
+    "numeric_threads": 1,
+    "partition": "cpu-short",
+    "wall_seconds": 3600
+  },
+  "created_utc": "2026-10-16T09:26:11.963459+00:00",
+  "development_train_rows": 10314,
+  "failure_branch": "Negative, unstable, missing or changed calibration refuses guard. Preserve all failure evidence and do not retune.",
+  "implementation": "Inherited exact-parity-qualified guard_core.scan, unchanged FP32 input and ordered FP64 normalization/dots",
+  "memory_accounting": "Linux wait4 exact-child peak RSS and child self RSS; full memmap, reference FP32 gather, row metadata, blocks, witnesses, temporary copies, admission and publication are charged. Scan-only and lifecycle times separate.",
+  "original_heldout_rows": 42063,
+  "pairs_per_full_scan": 433837782,
+  "pilot_projection_limit": "262144-pair pilot projects about1288seconds per full scan; two scans plus admission/publication have a fixed3600second cap. Scaling and queue delays can exceed this; failure is preserved without automatic retry.",
+  "post_guard_panels": "Original whole-source development order; targets1000,2500,5000 include whole boundary group and keep shortfalls",
+  "prerequisite": "Actual successful terminal v4 selection and fresh validation plus independent review, with exact artifact and arithmetic replay; no metadata-only pass",
+  "reference": "Original frozen panels.semantic_guard, separate fresh process, all same pairs and exact canonical witness/score/keep parity",
+  "schema": "third-full-development-guard-plan-v1",
+  "scope": "Separate development only; original human and primary gates remain unmet",
+  "selection_threshold_argument_allowed": false,
+  "storage": {
+    "admission_bundle_cap_bytes": 33554432,
+    "per_child_log_cap_bytes": 4194304,
+    "published_output_cap_bytes": 134217728,
+    "reserve_bytes": 8589934592,
+    "stage_allowance_bytes": 268435456
+  },
+  "threshold": "Only locked validated original-grid threshold, strict score greater than stored float",
+  "utility_labels": "None read. Future development may use only2138 reserved test rows.18929 evaluation-test labels remain untouched."
+}
