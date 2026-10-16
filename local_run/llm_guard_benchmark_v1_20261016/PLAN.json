@@ -1,0 +1,228 @@
+{
+  "all_train_heldout_pairs_required_for_actual_guard": true,
+  "automatic_full_guard_launch": false,
+  "block_size": 256,
+  "complete_guard_requires": "Fresh v4 model agreement validation plus a separately bound scope and launch package. Benchmark is not a passed semantic guard.",
+  "frozen_utc": "2026-10-16T08:27:38.705522+00:00",
+  "full_development_reserve_rows": 10314,
+  "full_original_heldout_rows": 42063,
+  "full_pair_count": 433837782,
+  "grid": [
+    {
+      "denominator": 100,
+      "numerator": 50
+    },
+    {
+      "denominator": 100,
+      "numerator": 51
+    },
+    {
+      "denominator": 100,
+      "numerator": 52
+    },
+    {
+      "denominator": 100,
+      "numerator": 53
+    },
+    {
+      "denominator": 100,
+      "numerator": 54
+    },
+    {
+      "denominator": 100,
+      "numerator": 55
+    },
+    {
+      "denominator": 100,
+      "numerator": 56
+    },
+    {
+      "denominator": 100,
+      "numerator": 57
+    },
+    {
+      "denominator": 100,
+      "numerator": 58
+    },
+    {
+      "denominator": 100,
+      "numerator": 59
+    },
+    {
+      "denominator": 100,
+      "numerator": 60
+    },
+    {
+      "denominator": 100,
+      "numerator": 61
+    },
+    {
+      "denominator": 100,
+      "numerator": 62
+    },
+    {
+      "denominator": 100,
+      "numerator": 63
+    },
+    {
+      "denominator": 100,
+      "numerator": 64
+    },
+    {
+      "denominator": 100,
+      "numerator": 65
+    },
+    {
+      "denominator": 100,
+      "numerator": 66
+    },
+    {
+      "denominator": 100,
+      "numerator": 67
+    },
+    {
+      "denominator": 100,
+      "numerator": 68
+    },
+    {
+      "denominator": 100,
+      "numerator": 69
+    },
+    {
+      "denominator": 100,
+      "numerator": 70
+    },
+    {
+      "denominator": 100,
+      "numerator": 71
+    },
+    {
+      "denominator": 100,
+      "numerator": 72
+    },
+    {
+      "denominator": 100,
+      "numerator": 73
+    },
+    {
+      "denominator": 100,
+      "numerator": 74
+    },
+    {
+      "denominator": 100,
+      "numerator": 75
+    },
+    {
+      "denominator": 100,
+      "numerator": 76
+    },
+    {
+      "denominator": 100,
+      "numerator": 77
+    },
+    {
+      "denominator": 100,
+      "numerator": 78
+    },
+    {
+      "denominator": 100,
+      "numerator": 79
+    },
+    {
+      "denominator": 100,
+      "numerator": 80
+    },
+    {
+      "denominator": 100,
+      "numerator": 81
+    },
+    {
+      "denominator": 100,
+      "numerator": 82
+    },
+    {
+      "denominator": 100,
+      "numerator": 83
+    },
+    {
+      "denominator": 100,
+      "numerator": 84
+    },
+    {
+      "denominator": 100,
+      "numerator": 85
+    },
+    {
+      "denominator": 100,
+      "numerator": 86
+    },
+    {
+      "denominator": 100,
+      "numerator": 87
+    },
+    {
+      "denominator": 100,
+      "numerator": 88
+    },
+    {
+      "denominator": 100,
+      "numerator": 89
+    },
+    {
+      "denominator": 100,
+      "numerator": 90
+    },
+    {
+      "denominator": 100,
+      "numerator": 91
+    },
+    {
+      "denominator": 100,
+      "numerator": 92
+    },
+    {
+      "denominator": 100,
+      "numerator": 93
+    },
+    {
+      "denominator": 100,
+      "numerator": 94
+    },
+    {
+      "denominator": 100,
+      "numerator": 95
+    },
+    {
+      "denominator": 100,
+      "numerator": 96
+    },
+    {
+      "denominator": 100,
+      "numerator": 97
+    },
+    {
+      "denominator": 100,
+      "numerator": 98
+    },
+    {
+      "denominator": 100,
+      "numerator": 99
+    },
+    {
+      "denominator": 200,
+      "numerator": 199
+    }
+  ],
+  "heldout_sample": "First1024 original calibration/test rows in stable record-ID order, independent of role and labels",
+  "learner_or_task_labels_used": false,
+  "memory_accounting": "Full memmapped FP32 vectors and gathered FP64 blocks, score workspace, witnesses and temporary copies count.",
+  "prospective_full_guard_output": "For each training row and each of the original51 thresholds, store the canonical stable-ID first heldout witness and its exact reference FP64 score. Threshold selection remains unchanged.",
+  "reference_thresholds": [
+    0.5,
+    0.99,
+    0.995
+  ],
+  "schema": "third-exact-guard-resource-pilot-v1",
+  "scope": "Throughput and exact software parity only. No chosen threshold or semantic validation.",
+  "train_sample": "First256 development_train rows in original immutable source order"
+}

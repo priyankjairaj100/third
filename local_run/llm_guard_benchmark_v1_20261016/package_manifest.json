@@ -1,0 +1,50 @@
+{
+  "created_utc": "2026-10-16T08:29:02.235126+00:00",
+  "files": {
+    "PLAN.json": {
+      "bytes": 4403,
+      "sha256": "f8aab7d785b4eea4282a83c6c4a1bf8f43830edb3c567add775f533f1df4ca8e"
+    },
+    "README.txt": {
+      "bytes": 2236,
+      "sha256": "8f3ed96c994dacdf721f68138dd3d9814338d6ad041c49d11ebf7a8de11bc80a"
+    },
+    "SOFTWARE_VALIDATION.json": {
+      "bytes": 150,
+      "sha256": "8e84e360237e43ccec50b7ce31f6fa737b1ff60ed2b776d2ad8972ffe6b326a6"
+    },
+    "benchmark.py": {
+      "bytes": 5693,
+      "sha256": "60cdcfd5cfd1a72ab279bf02f9b75c3b04b57f1d79ddfa2816191b0d06beff44"
+    },
+    "benchmark.sbatch": {
+      "bytes": 595,
+      "sha256": "8b80d8a03e183258e80ad4f95cb8b867d7d2a9b34428c3403fdda2e5fc346d5f"
+    },
+    "expectations.json": {
+      "bytes": 4496,
+      "sha256": "a3897558b35c65784fd6ac75298fc2c8163de029212f2128abc32ef5b92d36b0"
+    },
+    "guard_core.py": {
+      "bytes": 2314,
+      "sha256": "1c6a97725f49adbb774b5a63d7aaf55e57e6ebd979e7c4b3f92e2c930866a2ec"
+    },
+    "intake.py": {
+      "bytes": 13636,
+      "sha256": "ec53a0faafdc7dd9007231568a3ac9383a29404084464ca34adef98859ee5d7f"
+    },
+    "launch.py": {
+      "bytes": 4061,
+      "sha256": "7fd4b74bfa9737bde1b2a8316b7f1ba15ee552015e89659617f773fc91328550"
+    },
+    "runner.py": {
+      "bytes": 2660,
+      "sha256": "eae207765ce53b9728773ccf24a233d57fdba7acb65fd5657c50ca88c6283b73"
+    },
+    "test_guard.py": {
+      "bytes": 3056,
+      "sha256": "e2be7353bcc9cfda1560e88bf6eea16871f58a5a3ec0ae414c0a9cc4edb609e6"
+    }
+  },
+  "schema": "third-llm-guard-resource-pilot-package-v1"
+}

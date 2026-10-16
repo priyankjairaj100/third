@@ -33,9 +33,10 @@
     {
       "depends_on": [],
       "done_when": "Actual Slurm result, exact payload bindings, source-disjoint membership inventory and independent arithmetic/count review.",
+      "evidence": "local_run/local_llm_execution_20261014/llm_development_intake_completed_20261016.json",
       "id": "02-input-intake",
-      "next_action": "Finish and run source/cache/task binding and prospective whole-source development reservation in llm_development_intake_v1_20261016.",
-      "state": "in_progress"
+      "next_action": "Consume exact intake and independent-review bindings in the guard stage; no repeat needed.",
+      "state": "complete"
     },
     {
       "depends_on": [
@@ -92,5 +93,5 @@
       "state": "waiting"
     }
   ],
-  "updated_utc": "2026-10-16T08:17:08.003515+00:00"
+  "updated_utc": "2026-10-16T08:25:57.860158+00:00"
 }
