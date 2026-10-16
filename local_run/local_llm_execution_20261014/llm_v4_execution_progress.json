@@ -13,6 +13,7 @@
     "total_requests": 792
   },
   "all792_prompt_sequences_replayed": true,
+  "audit_failure_cause": "Path.read_text applied universal-newline translation to CR/CRLF bytes before hashing and replay",
   "automatic_retries": false,
   "context_overflow_requests": 0,
   "controller_code_sha256": "19cf0cf7296b723faaa12b776782906759dc9a25f3793c569910a6240c4e3e34",
@@ -25,11 +26,12 @@
     "utc": "2026-10-14T15:14:45.662904+00:00"
   },
   "current_stage": {
-    "exit": "1:0",
-    "job_id": "14187",
-    "observed_utc": "2026-10-14T15:14:45.601993+00:00",
-    "stage": "qwen_audit",
-    "state": "FAILED"
+    "blockers": [
+      "fresh_storage_gate",
+      "cluster_connection_timeout"
+    ],
+    "stage": "corrected_qwen_audit_prelaunch",
+    "submitted": false
   },
   "execution_version": "node-pool-v2",
   "finite_controller_active": false,
@@ -46,6 +48,7 @@
     "stage": "qwen_selection",
     "state": "COMPLETED"
   },
+  "latest_repair_report": "local_run/local_llm_execution_20261014/llm_v4_raw_byte_audit_repair_20261016.json",
   "latest_stop_report": "local_run/local_llm_execution_20261014/llm_v4_qwen_audit_stop_20261015.json",
   "node_pool_migration_report": "local_run/local_llm_execution_20261014/llm_node_pool_v2_execution.json",
   "portable_controller_source": "local_run/llm_node_pool_controller_v2_20261014/continue_pipeline.py",
@@ -80,7 +83,7 @@
     },
     "state": "COMPLETED"
   },
-  "queue_note": "Remote state not refreshed on 15 October: existing authenticated master refused a command session. The local controller previously stopped after audit 14187 failed.",
+  "queue_note": "No current remote refresh after SSH timeout. Correction launch was rejected before submission. Cache inspection 15153 completed; cleanup did not reach the server.",
   "qwen_job": "13663",
   "qwen_last_observed_state": "COMPLETED",
   "qwen_launch": {
@@ -132,6 +135,18 @@
     "Close all registered-family outcomes and model-only interpretation scope",
     "Produce the bound figures, tables, claim ledger and reproducibility release"
   ],
+  "repair_continuation": {
+    "adopts_existing_corrected_qwen_audit": true,
+    "local_software_scenarios_passed": 8,
+    "path": "local_run/llm_v4_audit_repair_controller_v1_20261015",
+    "prepared": true,
+    "scope": "Mistral, complete selection review, and conditional fresh validation only",
+    "source": {
+      "bytes": 7070,
+      "sha256": "155c44a0983e3ff0a22d15f1a1da9708a115aee86ccfb3a806a434b30a1645ef"
+    },
+    "started": false
+  },
   "request_preparation_package_sha256": "2995c12d996b362e13eb273a54807a95c3516e8a223bc34efc77dc53220050db",
   "requests": {
     "accounting": "13639|COMPLETED|0:0|25||csis.cn1\n13639.batch|COMPLETED|0:0|25|3220K|csis.cn1\n",
@@ -211,7 +226,7 @@
   },
   "sampling_job": "13636",
   "schema": "third-v4-execution-progress-v2",
-  "updated_utc": "2026-10-15T11:16:07.512481+00:00",
+  "updated_utc": "2026-10-16T07:28:31.357743+00:00",
   "validation_continuation": {
     "controller_active": false,
     "controller_backup": "local_run/llm_node_pool_controller_v2_20261014/continue_pipeline.py",
@@ -237,7 +252,7 @@
     "requires_positive_selection": true,
     "running_controller_sha256": "19cf0cf7296b723faaa12b776782906759dc9a25f3793c569910a6240c4e3e34",
     "same_finite_controller_as_selection": true,
-    "status": "not_launched_parent_stopped_at_Qwen_audit",
+    "status": "not_launched_waiting_for_repaired_audit_and_storage_access",
     "validation_jobs_submitted": 0
   }
 }

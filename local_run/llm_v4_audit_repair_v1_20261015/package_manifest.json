@@ -1,0 +1,49 @@
+{
+  "files": {
+    "DERIVATION.json": {
+      "bytes": 1929,
+      "sha256": "499e22f578984ef26f9a55e9c52184a6308d09465f02be10d85df366c6e73199"
+    },
+    "README.txt": {
+      "bytes": 1209,
+      "sha256": "2cebdde1b2d6145ac05922d0d58e61ef7d39d35e54d6ff68b616b32fb66bc901"
+    },
+    "audit.py": {
+      "bytes": 10329,
+      "sha256": "b9c9710194ea6d2c6ce693c81e3c55dc641152bf5a02e2db1453f64f0c338931"
+    },
+    "audit.sbatch": {
+      "bytes": 563,
+      "sha256": "248494b53b6acfc7a42019a76c33e3c608d93ca756682e465695e521f5dbdc48"
+    },
+    "audit_launch.py": {
+      "bytes": 3566,
+      "sha256": "0aee8277fb0e5307221e3e03d34274cc7d604e08d8e9b53de89cf77698c707cf"
+    },
+    "audit_worker.py": {
+      "bytes": 1895,
+      "sha256": "9125dd52d4dcec7cfb140449fa909b48dd3c290fdef32dd501d9bff21f7b1bd4"
+    },
+    "continue_launch.py": {
+      "bytes": 5866,
+      "sha256": "6268f56de89e57e5b81f1d6c817146decf5fe03d8cb56e6f7b00dbaebf0fa6a6"
+    },
+    "derive_sources.py": {
+      "bytes": 2126,
+      "sha256": "ee3d0b7e39ef3ae9c879d009a4d01fb2b99462c839ad86dad3966834e716bf11"
+    },
+    "publish_bridge.py": {
+      "bytes": 2037,
+      "sha256": "1aaa88b0fc3e9a04b77eb2f4f6065370df66d92b3ac821de1c3722b6ddef93a0"
+    },
+    "repair_common.py": {
+      "bytes": 3696,
+      "sha256": "1167a537998c705a8bceb3732d108a89571868ee32f4adce28cb8ae5ba0a2b55"
+    },
+    "test_repair.py": {
+      "bytes": 2692,
+      "sha256": "de9e0ce86f1a3fb38f90097f71f1905cd6ff8a91204a357ef73510f772d09053"
+    }
+  },
+  "schema": "third-package-manifest-v1"
+}

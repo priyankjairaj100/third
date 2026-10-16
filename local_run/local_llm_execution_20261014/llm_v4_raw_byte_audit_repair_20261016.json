@@ -1,0 +1,113 @@
+{
+  "access": {
+    "current_remote_state_unverified": true,
+    "dedicated_socket_later_disappeared": true,
+    "fresh_session_successfully_used_for_diagnosis_and_staging": true,
+    "further_attempts_stopped": true,
+    "last_observed_project_queue": [],
+    "last_successful_project_queue_observation_utc": "2026-10-15T11:21:58.408048+00:00",
+    "latest_error": "ssh: connect to host 172.24.16.132 port 22: Operation timed out",
+    "subsequent_fresh_connection_timed_out": true
+  },
+  "byte_diagnostic": {
+    "actual_byte_binding_failures": [],
+    "affected_request_indices": [
+      110,
+      117,
+      163,
+      193,
+      273,
+      395
+    ],
+    "generated_calls_checked": 396,
+    "private_diagnostic_binding": {
+      "bytes": 3607,
+      "sha256": "4fca6ab037e61a349238ab1d22b750363f03efe7986eb74560c8438264b9ef06"
+    },
+    "token_count_failures": []
+  },
+  "cache_cleanup": {
+    "apply_remote_command_attempted": false,
+    "files_removed_this_continuation": 0,
+    "inspection_elapsed_seconds": 13,
+    "inspection_job": "15153",
+    "inspection_state": "COMPLETED",
+    "min_age_seconds": 604800,
+    "models_data_results_or_installed_environments_deleted": false,
+    "plan_binding": {
+      "bytes": 4170,
+      "sha256": "36752a81f79ed97dbddae43a0c2ea9a03f393197b153f45a92afde9feabe7ca4"
+    },
+    "scope": "Old account-owned regular singly-linked pip HTTP download-cache pairs; exact metadata recheck required",
+    "script_binding": {
+      "bytes": 6824,
+      "sha256": "733825d6500a36611539dd9a1a6ef8c299c6d7927401406efa07e913646d3215"
+    },
+    "selected_allocated_bytes": 2376056832,
+    "selected_download_cache_pairs": 4
+  },
+  "controller": {
+    "adopts_existing_corrected_qwen_audit": true,
+    "local_software_scenarios_passed": 8,
+    "path": "local_run/llm_v4_audit_repair_controller_v1_20261015",
+    "prepared": true,
+    "scope": "Mistral, complete selection review, and conditional fresh validation only",
+    "source": {
+      "bytes": 7070,
+      "sha256": "155c44a0983e3ff0a22d15f1a1da9708a115aee86ccfb3a806a434b30a1645ef"
+    },
+    "started": false
+  },
+  "corrected_audit_launch": {
+    "allowance_bytes": 67108864,
+    "prelaunch_failure_record": {
+      "bytes": 868,
+      "sha256": "5e177e7bb504b33602f2a314b67c05beeae2f62f77a00a0c73fe194ff5e36f75"
+    },
+    "reason": "fresh_storage_gate rejected before sbatch or stage-root creation",
+    "reserve_bytes": 8589934592,
+    "submitted": false
+  },
+  "failed_audit_error": "ValueError: raw_token_binding",
+  "failed_audit_exit_code": "1:0",
+  "failed_audit_job": "14187",
+  "failure_cause": "Path.read_text applied universal-newline translation to CR/CRLF bytes before hashing and replay",
+  "human_annotation_calls": 0,
+  "model_calls_repeated": 0,
+  "next_actions": [
+    "Restore cluster network/VPN access; make one bounded authorized preflight",
+    "Reconcile cache inspection 15153 and apply intents/jobs before using the reviewed cleanup plan",
+    "Verify fresh quota then submit the corrected audit once; preserve all original model and failed audit files",
+    "Start the tested finite controller only after saving the actual corrected-audit launch receipt; do not restart old controllers"
+  ],
+  "original_qwen_result_still_matches_saved_binding": true,
+  "project_complete": false,
+  "qwen_elapsed_seconds": 11836,
+  "qwen_exit_code": "0:0",
+  "qwen_job": "13663",
+  "qwen_response_counts": {
+    "invalid_json": 5,
+    "valid": 391
+  },
+  "qwen_result_binding": {
+    "bytes": 434458,
+    "sha256": "ba716a2588a174cf0968c60e3a8aa659b47b9e806b1d94534988539fb7b25011"
+  },
+  "qwen_scheduler_state": "COMPLETED",
+  "repair_package": {
+    "local_and_cluster_regression_tests_passed": 8,
+    "manifest": {
+      "bytes": 1549,
+      "sha256": "d498d2d0dc5fe30b81912d8804e0e402b1b65f9263ac0d6b8b69e7bf38ee1f0e"
+    },
+    "old_execution_sources_modified": false,
+    "path": "local_run/llm_v4_audit_repair_v1_20261015",
+    "post_audit_compatibility_view": "Explicit sealed accepted-audit provenance with an exact copy of the corrected result for frozen downstream readers; original failed job is not relabelled",
+    "scope": "Read exact UTF-8 bytes, rerun full CPU audits in fresh repair roots, preserve original model calls and failed audit files",
+    "staged_on_cluster": true
+  },
+  "schema": "third-v4-byte-audit-repair-checkpoint-v1",
+  "semantic_validity_established": false,
+  "status": "Audit bug diagnosed and versioned fix staged; corrected audit launch blocked by storage reserve, then SSH timeout before cache cleanup",
+  "updated_utc": "2026-10-16T07:28:31.357743+00:00"
+}

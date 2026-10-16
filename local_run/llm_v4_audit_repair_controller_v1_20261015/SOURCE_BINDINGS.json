@@ -1,0 +1,29 @@
+{
+  "files": {
+    "README.txt": {
+      "bytes": 2344,
+      "sha256": "4bc8d71a944f03d160aa2a85f9b0182c81150fc7558dc6d757d2b7b71feff208"
+    },
+    "continue_pipeline.py": {
+      "bytes": 7070,
+      "sha256": "155c44a0983e3ff0a22d15f1a1da9708a115aee86ccfb3a806a434b30a1645ef"
+    },
+    "pip_cache_cleanup.py": {
+      "bytes": 6824,
+      "sha256": "733825d6500a36611539dd9a1a6ef8c299c6d7927401406efa07e913646d3215"
+    },
+    "remote_fresh_session.py": {
+      "bytes": 1391,
+      "sha256": "e8bad57221fd7da5319b4a441f73ef1a420ed024a292d28c9219cf1b0e8ebdf6"
+    },
+    "test_controller.py": {
+      "bytes": 3990,
+      "sha256": "6e546a7eacb06b56d69c05004a6e752b6d8a6aa777dd164abadb0590cd2058fa"
+    }
+  },
+  "prior_portable_controller_sha256": "e5c632d822e2a410938ff5c171533b77c21ddef8f06996f9c585ee3757913225",
+  "repair_package_sha256": "d498d2d0dc5fe30b81912d8804e0e402b1b65f9263ac0d6b8b69e7bf38ee1f0e",
+  "schema": "third-audit-repair-controller-v1",
+  "software_fixture_tests_passed": 8,
+  "started": false
+}

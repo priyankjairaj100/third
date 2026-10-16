@@ -1,3 +1,29 @@
+Latest continuation — 16 October 2026, 2026-10-16T07:28:31.357743+00:00
+
+The Qwen audit failure is now diagnosed: Path.read_text converted CR/CRLF line
+endings in six generated responses before hashing. A live metadata audit checked
+all 396 outputs: zero actual raw-byte hash or token-count mismatches. All original
+Qwen responses remain preserved (391 valid, 5 invalid JSON). This does not by
+itself establish a passed full audit or semantic validity.
+The exact-byte repair package d498d2d0dc5fe30b81912d8804e0e402b1b65f9263ac0d6b8b69e7bf38ee1f0e
+is sealed and staged, with 8 regression tests passing locally and on the cluster.
+The corrected CPU audit launch was rejected by fresh_storage_gate BEFORE sbatch
+or stage-root creation. No corrected audit job exists from that launch attempt.
+Cache inspection 15153 completed and identified 4 old pip download-cache pairs,
+2376056832 allocated bytes, with a seven-day age requirement. The cleanup command
+never reached the server because the dedicated SSH socket disappeared. No cache
+files were removed this continuation. A subsequent fresh SSH attempt timed out;
+stop remote attempts until access is restored. Current remote state is unverified.
+The finite repair controller is prepared with 8 passing local scenarios but is
+NOT STARTED. After access restoration, reconcile cache/apply receipts, clear the
+unchanged storage reserve using only the reviewed safe cache plan, launch the
+corrected Qwen audit once, save its actual launch receipt, then start that controller.
+It adopts that audit and continues Mistral/selection/conditional validation only
+on complete verified predecessors. No model-call retry, human annotation, or
+threshold change. Preserve failed job 14187 and all original stage/source files.
+Read local_run/local_llm_execution_20261014/llm_v4_raw_byte_audit_repair_20261016.json
+and local_run/llm_v4_audit_repair_controller_v1_20261015/README.txt before acting.
+
 Latest continuation — 15 October 2026, 2026-10-15T11:16:07.512481+00:00
 
 The v2 local controller is STOPPED, superseding the older running descriptions.

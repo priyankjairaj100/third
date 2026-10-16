@@ -1,0 +1,49 @@
+{
+  "actual_byte_binding_failures_across_396_calls": 0,
+  "audit_time_limit_minutes": 60,
+  "changes": [
+    "Read raw response bytes and decode UTF-8 without newline translation",
+    "Write corrected audits into new repair-stage roots and bind the auditor implementation separately from original execution package",
+    "Publish exact accepted-result copies with explicit recovery provenance for frozen downstream readers; preserve all original failure files",
+    "Route Mistral and statistics predecessor checks to successful corrected audit jobs; retain original model/statistics workers and all other launch checks",
+    "Use repair-specific job names and intent schema for either scope"
+  ],
+  "model_calls_repeated": 0,
+  "model_numeric_kernel_changed": false,
+  "newline_translation_affected_calls": 6,
+  "parents": {
+    "selection": {
+      "audit.py": {
+        "bytes": 10252,
+        "sha256": "569d121087553a5d18473319261c0007a732fc14195b4358ab085b271b774177"
+      },
+      "launch.py": {
+        "bytes": 5525,
+        "sha256": "e87e890a09df67f09acea85ac49f6102518adc8436ea90db38a8cb67f9773685"
+      },
+      "package_manifest.json": {
+        "bytes": 3179,
+        "sha256": "adcd4704a99bb6d3eabfbd8e5409453a96faa891b00aef93e399e2a23d1034fe"
+      }
+    },
+    "validation": {
+      "audit.py": {
+        "bytes": 10252,
+        "sha256": "569d121087553a5d18473319261c0007a732fc14195b4358ab085b271b774177"
+      },
+      "launch.py": {
+        "bytes": 5540,
+        "sha256": "3579d2b0064bbcdf8ed972af346dc37adc40b218d0cc3c99394c5933d9654676"
+      },
+      "package_manifest.json": {
+        "bytes": 3329,
+        "sha256": "3b5d8a811909d33cefd9fd6b7c5dbb0e8d17fd1facca447fa0717f1f2ce438c7"
+      }
+    }
+  },
+  "prior_failure_job": "14187",
+  "schema": "third-exact-byte-audit-repair-v1",
+  "software_tests": 8,
+  "threshold_or_label_rules_changed": false,
+  "token_count_failures_across_396_calls": 0
+}
