@@ -84,6 +84,11 @@
       "evidence": "manuscript/RELEASE_BUILD_STATUS.json",
       "limit": "No private source text, pair labels or model weights; not full empirical replay or submission readiness.",
       "work": "Bounded public manuscript/evidence package with51 payload files and manifest; clean-extraction evidence check reproduced all claims and source bindings"
+    },
+    {
+      "evidence": "manuscript/attribution_review_20261016.json",
+      "limit": "Bounded documentary/code review, not full record-level attribution clearance, raw corpus/model redistribution approval, full inference replay or submission readiness.",
+      "work": "Pinned model/license declarations and source metadata/replay review; existing manuscript compiled; new public package with56 payload files passed clean-extraction replay"
     }
   ],
   "continuous_execution": {
@@ -108,7 +113,7 @@
   },
   "fully_llm_annotation": true,
   "human_review_required": false,
-  "observed_utc": "2026-10-16T10:24:26.593375+00:00",
+  "observed_utc": "2026-10-16T10:52:22.578367+00:00",
   "original_registry": {
     "core": 16912,
     "extensions": 4420,
@@ -124,8 +129,8 @@
     {
       "limit": "No renewed inference, cut selection, validation, guard or effect experiment.",
       "order": 1,
-      "state": "public_source_check_package_verified_remaining_documentation_review",
-      "work": "Extend historical compute coverage, review attribution/replay boundaries and finish remaining manuscript review"
+      "state": "attribution_replay_documented_historical_compute_inventory_next",
+      "work": "Extend historical compute coverage from local receipts and finish available manuscript review; preserve record-level attribution/replay limits"
     },
     {
       "limit": "Do not claim submission readiness or exhaustive novelty.",

@@ -1,0 +1,211 @@
+{
+  "adapter_review": {
+    "ambiguous_legacy_notice_coverage_review_completed": false,
+    "full_author_history_available_from_adapter_alone": false,
+    "full_record_metadata_coverage_verified_in_this_review": false,
+    "function": "empirical_execution/phase4/adapters.py:adapt_stack",
+    "observations": [
+      "Copies available Posts.xml attributes to original_fields; converts OwnerUserId to integer or missing while preserving its raw lexeme, and adds declared site context.",
+      "ContentLicense, LastEditDate, LastEditor and attribution fields are preserved when supplied, but neither presence nor complete author history is required by the adapter.",
+      "Input scope is Posts.xml and PostLinks.xml, not a complete Users or PostHistory export.",
+      "The recorded creation-date filter is 2018-05-02 through 2023-12-31 inclusive; the parser does not invent a timezone.",
+      "Text conversion joins title and rendered body, preserves author link destinations, removes explicitly marked platform notices and normalizes whitespace. Earlier tag transport and JSONL escaping are separately source-bound.",
+      "Native owner account grouping is a contributor proxy, never exclusive authorship. Unknown owners remain singleton units."
+    ],
+    "prior_replay": {
+      "all_output_bytes_equal": true,
+      "all_settings_counts_and_audit_metadata_equal": true,
+      "private_receipt": {
+        "bytes": 1014,
+        "path": "local_workspace/reports/source-replay-v1-20261011/a01/replay/frozen_adapter_replay.json",
+        "sha256": "5e7f6c6bb5cebb248dd72321ef04cb5e282404c6dc37ff52b6619afce7da21fa"
+      },
+      "rows": 141307
+    },
+    "reason_for_coverage_limits": "The local receipt subset includes full replay equality but not the record-level attribution census or the complete adapter audit counts. No remote access or raw-record inspection was performed by this review.",
+    "source_lines": [
+      313,
+      382
+    ],
+    "source_link_template": "https://{declared_site}/questions/{native_post_id}; derivable route only, no per-record URLs exported or individually checked"
+  },
+  "created_utc": "2026-10-16T10:50:12.843557+00:00",
+  "models": [
+    {
+      "card_url": "https://huggingface.co/intfloat/multilingual-e5-base/blob/d128750597153bb5987e10b1c3493a34e5a4502a/README.md",
+      "dedicated_LICENSE_retrieval": {
+        "observed_utc": "2026-10-16T10:48:29.658361+00:00",
+        "retrieval_error": "HTTP Error 404: Not Found",
+        "url": "https://huggingface.co/intfloat/multilingual-e5-base/resolve/d128750597153bb5987e10b1c3493a34e5a4502a/LICENSE"
+      },
+      "license_evidence_limit": "Pinned model card declares the license; repository file listing has no filename containing LICENSE or NOTICE. No substitute notice or asset redistribution approval is inferred.",
+      "model_id": "intfloat/multilingual-e5-base",
+      "publisher_declared_license": "mit",
+      "retrieved_card": {
+        "bytes": 179345,
+        "http_status": 200,
+        "observed_utc": "2026-10-16T10:48:29.657931+00:00",
+        "sha256": "9d129cb0b912b55c7b5378f976a9c35ae4796c80466b659ad63930d8ca090fca",
+        "url": "https://huggingface.co/intfloat/multilingual-e5-base/resolve/d128750597153bb5987e10b1c3493a34e5a4502a/README.md"
+      },
+      "revision": "d128750597153bb5987e10b1c3493a34e5a4502a",
+      "revision_repository_metadata": {
+        "bytes": 368900,
+        "card_license": "mit",
+        "license_or_notice_filenames": [],
+        "name": "e5",
+        "observed_utc": "2026-10-16T10:48:57.037939+00:00",
+        "repository_file_count": 23,
+        "revision": "d128750597153bb5987e10b1c3493a34e5a4502a",
+        "sha256": "3d458e05a7c53d5440bf5c2ddaa346063df44649423d027e48a3c76a2b5ba317",
+        "url": "https://huggingface.co/api/models/intfloat/multilingual-e5-base/revision/d128750597153bb5987e10b1c3493a34e5a4502a"
+      },
+      "role": "frozen feature encoder",
+      "weights_redistributed": false
+    },
+    {
+      "card_url": "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct/blob/a09a35458c702b33eeacc393d103063234e8bc28/README.md",
+      "dedicated_LICENSE_retrieval": {
+        "bytes": 11343,
+        "http_status": 200,
+        "observed_utc": "2026-10-16T10:48:29.658705+00:00",
+        "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+        "url": "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct/resolve/a09a35458c702b33eeacc393d103063234e8bc28/LICENSE"
+      },
+      "license_evidence_limit": "Pinned Apache 2.0 LICENSE retrieved. Model card and license inspection do not audit every transitive asset or training-data right.",
+      "model_id": "Qwen/Qwen2.5-7B-Instruct",
+      "publisher_declared_license": "apache-2.0",
+      "retrieved_card": {
+        "bytes": 6240,
+        "http_status": 200,
+        "observed_utc": "2026-10-16T10:48:29.658539+00:00",
+        "sha256": "f366f33bbf6bcadbb7d87f0a21a7b65584a56b8d58b0743c77c88bee625b93a6",
+        "url": "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct/resolve/a09a35458c702b33eeacc393d103063234e8bc28/README.md"
+      },
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "role": "frozen local LLM judge",
+      "weights_redistributed": false
+    },
+    {
+      "card_url": "https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407/blob/04d8a90549d23fc6bd7f642064003592df51e9b3/README.md",
+      "dedicated_LICENSE_retrieval": {
+        "observed_utc": "2026-10-16T10:48:30.179795+00:00",
+        "retrieval_error": "HTTP Error 404: Not Found",
+        "url": "https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407/resolve/04d8a90549d23fc6bd7f642064003592df51e9b3/LICENSE"
+      },
+      "license_evidence_limit": "Pinned model card declares the license; repository file listing has no filename containing LICENSE or NOTICE. No substitute notice or asset redistribution approval is inferred.",
+      "model_id": "mistralai/Mistral-Nemo-Instruct-2407",
+      "publisher_declared_license": "apache-2.0",
+      "retrieved_card": {
+        "bytes": 10518,
+        "http_status": 200,
+        "observed_utc": "2026-10-16T10:48:30.081531+00:00",
+        "sha256": "445377992e7404021555e689a5df79b90a3293c38829ec1dcaa9dfed5b7526b0",
+        "url": "https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407/resolve/04d8a90549d23fc6bd7f642064003592df51e9b3/README.md"
+      },
+      "revision": "04d8a90549d23fc6bd7f642064003592df51e9b3",
+      "revision_repository_metadata": {
+        "bytes": 8921,
+        "card_license": "apache-2.0",
+        "license_or_notice_filenames": [],
+        "name": "mistral",
+        "observed_utc": "2026-10-16T10:48:57.405258+00:00",
+        "repository_file_count": 18,
+        "revision": "04d8a90549d23fc6bd7f642064003592df51e9b3",
+        "sha256": "e0f72b90485bb3ad7ecbf3bf341c96fb1229aff15c5362b03e38c081e0599395",
+        "url": "https://huggingface.co/api/models/mistralai/Mistral-Nemo-Instruct-2407/revision/04d8a90549d23fc6bd7f642064003592df51e9b3"
+      },
+      "role": "frozen local LLM judge",
+      "weights_redistributed": false
+    }
+  ],
+  "no_cluster_access": true,
+  "no_frozen_protocol_edits": true,
+  "no_new_model_calls": true,
+  "preserved_gates": {
+    "archive_attribution_review_completed": false,
+    "confirmatory_study_ready": false,
+    "human_annotation_calls": 0,
+    "human_review_required": false,
+    "primary_input_acceptance": false,
+    "publisher_bytes_cryptographically_authenticated": false
+  },
+  "private_capture_receipts": [
+    {
+      "bytes": 4037,
+      "name": "retrieval_receipts.json",
+      "sha256": "2801ea504b5233880554eed537910830b1f52bdcd756c846022759b7a2c12705"
+    },
+    {
+      "bytes": 964,
+      "name": "model_metadata_receipts.json",
+      "sha256": "4be16e19b1c94a2bcbab90d0b314bcb494554ef4601496307f4a17914678310f"
+    }
+  ],
+  "replay_availability": {
+    "pinned_assets_and_seeds_guarantee_bitwise_inference_portability": false,
+    "private_negative_arithmetic_replay": "local_run/llm_v4_negative_analysis_v1_20261016/analyze.py",
+    "private_sample_and_model_observations_required": true,
+    "private_source_and_asset_bytes_required_for_inference": true,
+    "public_checker_checks_private_labels": false,
+    "public_checker_recreates_inference": false,
+    "public_source_claim_checker": "manuscript/build_evidence.py",
+    "semantics_verified_by_hashes": false,
+    "threshold_dependent_relaunch_authorized": false
+  },
+  "review_kind": "Bounded author AI documentary and code review; no independent legal or record-level attribution clearance",
+  "schema": "third-attribution-replay-review-v1",
+  "source_bindings": [
+    {
+      "bytes": 31889,
+      "path": "empirical_execution/phase4/adapters.py",
+      "sha256": "7171b59802dff219636a08b53f13d8b3bdbb7bc400f5712f041280e61e8d6f0d"
+    },
+    {
+      "bytes": 9605,
+      "path": "empirical_execution/phase4/ADAPTERS_README.txt",
+      "sha256": "c617e8c412ba0b49f36ace410d7c7a4bb42606be430c389e83928802a75b1d75"
+    },
+    {
+      "bytes": 27522,
+      "path": "empirical_execution/phase4/embeddings.py",
+      "sha256": "bb1af9a6583a90372f7641f406afdb418017797cc8d86ee67f117f215c65d2c1"
+    },
+    {
+      "bytes": 3008,
+      "path": "local_run/e5_sharded_cpu_v2_20261013/expectations.json",
+      "sha256": "68442e55534e49f02573c4b05d602bd6ebea67d35bbcb673dac083608131bcbe"
+    },
+    {
+      "bytes": 16694,
+      "path": "local_run/model_annotation_v4_20261014/PLAN.json",
+      "sha256": "10ebb3cb8f872c2efaf69306ca5bb23dcec2a015b2747988aafa31485dbbdcae"
+    },
+    {
+      "bytes": 7325,
+      "path": "local_run/source_acceptance_v2_20261011/qualification.json",
+      "sha256": "a8ee71c5b95318d0496ed26b3987627db36e309cd83f51432a7a42d3635f2e98"
+    }
+  ],
+  "source_policy": {
+    "current_package_contains_corpus_text": false,
+    "documentary_statement": "The publisher associates contributions from 2018-05-02 UTC onward with CC BY-SA 4.0 and points to per-revision timelines. This does not establish every included record or third-party fragment rights.",
+    "license_text": {
+      "bytes": 51645,
+      "http_status": 200,
+      "observed_utc": "2026-10-16T10:48:30.221517+00:00",
+      "sha256": "47c0a954c88d793bdefe92fb007ae3c038fb3807f1a27083433d01aa7542c0d8",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en"
+    },
+    "publisher_page": {
+      "bytes": 78913,
+      "http_status": 200,
+      "observed_utc": "2026-10-16T10:48:30.187424+00:00",
+      "sha256": "693b2361abbd882aeed3a829261e085db72bc06cb252a0d70aaaa377b91832a5",
+      "url": "https://stackoverflow.com/help/licensing"
+    },
+    "raw_text_release_authorized_by_this_review": false,
+    "sharing_conditions_summary": "When sharing covered material, retain supplied attribution and notices, source link where practicable, identify changes and link the applicable license; adapted-material sharing has additional ShareAlike conditions."
+  },
+  "submission_ready": false
+}

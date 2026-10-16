@@ -122,13 +122,14 @@
       "state": "blocked_by_negative_v4_selection"
     },
     {
+      "attribution_review": "manuscript/attribution_review_20261016.json",
       "author_claim_review": "manuscript/claims_review_20261016.json",
       "build_status": "manuscript/BUILD_STATUS.json",
       "depends_on": [],
       "done_when": "Compiled and visually reviewed complete manuscript, actual figures/tables, citations and defensible limits.",
       "evidence": "manuscript/evidence_20261016.json",
       "id": "07-manuscript",
-      "next_action": "Same .tex remains open.27 source bindings and15 references checked; bounded author claim review resolved four descriptions and reverified18 historical bindings. Native compilation passed. Final independent unified review, visual layout, two close-prior full-text gaps and final submission framing remain.",
+      "next_action": "Same .tex remains open.32 source bindings and15 references checked; native compilation passed. Pinned model attribution and replay limits documented without changing original gates. Final independent unified review, visual layout, two close-prior full-text gaps and final submission framing remain.",
       "state": "compiled_author_reviewed_bounded_evidence_draft"
     },
     {
@@ -142,6 +143,7 @@
       "state": "original_empirical_release_blocked"
     },
     {
+      "attribution_review": "manuscript/attribution_review_20261016.json",
       "completed_milestones": [
         "Bounded author claim review and four description corrections",
         "Six-job partial v4 compute ledger with failed audit retained",
@@ -160,9 +162,10 @@
         "manuscript/RELEASE_BUILD_STATUS.json"
       ],
       "id": "09-negative-branch-closure",
-      "next_action": "Continue independent local closure: inventory additional historical compute receipts without new remote jobs, review source/model attribution and exact replay availability, and complete available manuscript/layout review. Preserve partial-budget and literature gaps until supported. The compact package does not complete the original empirical program.",
-      "state": "public_source_check_package_verified_remaining_review_work"
+      "next_action": "Inventory additional historical compute receipts locally and extend accounting only where source-bound terminal/resource data support it. Continue available manuscript/layout/full-text review. Do not claim complete attribution coverage or rerun failed calibration.",
+      "public_package": "manuscript/release_20261016_v2.zip",
+      "state": "attribution_replay_review_and_v2_public_package_verified_remaining_review_work"
     }
   ],
-  "updated_utc": "2026-10-16T10:24:26.593375+00:00"
+  "updated_utc": "2026-10-16T10:52:22.578367+00:00"
 }

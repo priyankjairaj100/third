@@ -40,6 +40,31 @@ Private verification boundaries:
   This compact package does not supply the environment/assets for full inference
   replay. Do not launch a replacement experiment from the failed configuration.
 
+Attribution evidence, inspected 16 October 2026:
+The exact active encoder is intfloat/multilingual-e5-base. Its pinned model card
+declares MIT; the pinned Qwen/Qwen2.5-7B-Instruct and
+mistralai/Mistral-Nemo-Instruct-2407 cards declare Apache 2.0. Exact revisions,
+publisher URLs and retrieved-document hashes appear in
+attribution_review_20261016.json. Qwen's pinned LICENSE was retrieved. The pinned
+E5 and Mistral repository listings contain no filename with LICENSE or NOTICE;
+their card declarations are documented without inventing separate notices.
+No model weights or publisher card copies are redistributed in this package.
+
+The Stack Exchange publisher guidance links license applicability to contribution
+dates and revision timelines. The frozen parser copies supplied post attributes,
+including license/edit metadata when present; it does not reconstruct the full
+author history or require every attribution field. Raw owner lexemes are retained
+alongside typed owners, and the added site is explicitly declared route context.
+Title/body parsing, whitespace normalization and marked-notice removal are
+documented transformations. The separate source qualification binds the earlier
+tag transport and archive replay. No complete record-level attribution census or
+ambiguous-legacy-notice review was performed in this documentary pass. All original
+acceptance flags stay unchanged; the raw corpus remains outside the package.
+
+Public source checking, private arithmetic replay of saved observations, and
+fresh inference are distinct. Fixed revisions and seeds are identity controls,
+not a demonstrated guarantee of bitwise inference across hardware or runtimes.
+
 Scientific limits:
 The exact theorem concerns a constructed finite-format family and counts private
 information under its access model, not total deployment bytes or natural NLP

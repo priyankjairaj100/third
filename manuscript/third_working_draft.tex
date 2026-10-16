@@ -911,7 +911,7 @@ repository sources used for every empirical count and theorem scope.
 The theorem fragments, previous code, negative results, and frozen
 execution contracts are preserved separately rather than overwritten.
 
-The active representation is pinned to E5 revision
+The active representation is \texttt{intfloat/multilingual-e5-base}, pinned to revision
 \texttt{d128750597153bb5987e10b1c3493a34e5a4502a}; judges use Qwen revision
 \texttt{a09a35458c702b33eeacc393d103063234e8bc28} and Mistral revision
 \texttt{04d8a90549d23fc6bd7f642064003592df51e9b3}. Protocol manifests
@@ -919,6 +919,29 @@ bind tokenizer files, templates, prompt/schema, runtime, and sampling
 seeds. Source/cache/task intake and independent arithmetic reviews bind
 private outputs by exact bytes and hashes. Checksums support identity;
 they do not establish semantic correctness or source rights.
+
+\paragraph{Asset attribution and replay limits.}
+The pinned publisher cards declare MIT for
+\href{https://huggingface.co/intfloat/multilingual-e5-base/blob/d128750597153bb5987e10b1c3493a34e5a4502a/README.md}{multilingual E5}
+and Apache 2.0 for
+\href{https://huggingface.co/Qwen/Qwen2.5-7B-Instruct/blob/a09a35458c702b33eeacc393d103063234e8bc28/README.md}{Qwen2.5-7B-Instruct}
+and \href{https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407/blob/04d8a90549d23fc6bd7f642064003592df51e9b3/README.md}{Mistral-Nemo-Instruct-2407}.
+We distribute no model weights. Stack Exchange's
+\href{https://stackoverflow.com/help/licensing}{licensing guidance}
+associates contributions from 2 May 2018 UTC onward with CC BY-SA 4.0
+and identifies per-revision licenses through post timelines.
+Our adapter retains supplied post attributes, including license and edit
+metadata when present. This is not a complete author-history audit;
+owner accounts remain contributor proxies. The public package excludes
+corpus text, per-record identities and per-pair model observations.
+
+The public checker verifies source bindings, reported counts and the
+calibration table. Recomputing the selection from individual observations
+requires the private sample and audited model outputs; repeating inference
+also requires the pinned source, assets and runtime. These are separate
+verification levels. Fixed revisions and seeds alone do not establish
+bitwise inference portability. The attribution ledger records documentary
+sources and remaining gaps without changing the original acceptance gates.
 
 \paragraph{Observed compute scope.}
 The two completed v4 inference jobs each allocated one A100 80GB GPU.

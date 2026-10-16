@@ -5,22 +5,27 @@
     "Compiler then found extra alignment tabs in the finite-family display.",
     "Reformatted that display as four aligned rows; native compiler returned success.",
     "Primary-text comparison revision compiled successfully; then terminal v4 negative results and the checked table compiled successfully with the native compiler.",
-    "Bounded author claim review clarified stable handles, empirical retry rejection, private-state access and scorer range proof; partial v4 compute statement added. Native compilation succeeded without repair."
+    "Bounded author claim review clarified stable handles, empirical retry rejection, private-state access and scorer range proof; partial v4 compute statement added. Native compilation succeeded without repair.",
+    "Pinned model identity, publisher attribution metadata and public/private replay limits added. Native compilation succeeded without repair;32 source bindings checked. Record-level attribution clearance remains unverified."
   ],
+  "attribution_review_20261016.json": {
+    "bytes": 10937,
+    "sha256": "23cfad560cee0a0829844b53efc081a76df1f57e80f8282d3e8e8495cc69c709"
+  },
   "bibliography_entries_checked": 15,
   "claims_review_20261016.json": {
     "bytes": 8655,
-    "sha256": "6532f86051a343938495d60eb1d41974e4428d101af080571ac45c51c12ebc55"
+    "sha256": "9407f89e209b6b9466d36dd7d850de40f1945d2bd3dfc30159b5199c2ba45398"
   },
   "compile_verified": true,
   "compute_accounting_20261016.json": {
     "bytes": 4577,
-    "sha256": "6627d43e50fada0496ddbe8392d63b285fae609561a64acdd5be115432d53cc4"
+    "sha256": "ca0868c261039037e4a4a02990ed992f5b94baa62fe68557236abc3265e77ab3"
   },
   "current_revision_source_repairs": 0,
   "evidence_20261016.json": {
-    "bytes": 11607,
-    "sha256": "c8af1fcf65db2724074b404be86785dc5f0268581b6081d758a6d3365a4d881f"
+    "bytes": 13347,
+    "sha256": "198d55cfbc0a4f127bde12bd857e2d19aa6130d1881e75eae26b1317fc883a3f"
   },
   "latex_installed_by_agent": false,
   "literature_contract_review_20261016.json": {
@@ -32,7 +37,7 @@
     "message": "The current source compiled successfully with the desktop editor's compiler.",
     "path": "/Users/priyankjairaj/Downloads/ACL/Three/manuscript/third_working_draft.tex"
   },
-  "observed_utc": "2026-10-16T10:22:39.064437+00:00",
+  "observed_utc": "2026-10-16T10:51:23.177612+00:00",
   "open_in_codex_status": "already open as reported by user",
   "related_work_sources_20261016.json": {
     "bytes": 5744,
@@ -40,10 +45,10 @@
   },
   "schema": "third-manuscript-build-status-v1",
   "source_binding": {
-    "bytes": 52898,
-    "sha256": "af0f1a6f71dffeb37a9fc2761fa06d699721db30e6cfddf19266b8e83f2281c1"
+    "bytes": 54506,
+    "sha256": "c9f4475cf865df21e7c870ba9b73c2fc96c310c106cf36725fca1926bc7dd5b5"
   },
-  "source_bindings_checked": 27,
+  "source_bindings_checked": 32,
   "source_check_report": "evidence_20261016.json",
   "source_repairs": 2,
   "submission_ready": false,

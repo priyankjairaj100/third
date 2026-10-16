@@ -1,15 +1,15 @@
 {
   "schema": "third-working-manuscript-evidence-v1",
-  "created_utc": "2026-10-16T10:19:56.845981+00:00",
+  "created_utc": "2026-10-16T10:51:04.429564+00:00",
   "manuscript": {
     "path": "manuscript/third_working_draft.tex",
-    "bytes": 52898,
-    "sha256": "af0f1a6f71dffeb37a9fc2761fa06d699721db30e6cfddf19266b8e83f2281c1"
+    "bytes": 54506,
+    "sha256": "c9f4475cf865df21e7c870ba9b73c2fc96c310c106cf36725fca1926bc7dd5b5"
   },
   "checker": {
     "path": "manuscript/build_evidence.py",
-    "bytes": 14646,
-    "sha256": "856703eb7525af76aff00ad9100eb5fdb2701024e289bcff358aac737c27f5ea"
+    "bytes": 16978,
+    "sha256": "d5058a95a0109315a1972753d0ea3174da8e3ef7160dee03de3255cf60e696a7"
   },
   "source_claim_check_passed": true,
   "reviewer_kind": "author AI assistant source and arithmetic check; not independent manuscript review",
@@ -140,17 +140,42 @@
     {
       "path": "manuscript/claims_review_20261016.json",
       "bytes": 8655,
-      "sha256": "6532f86051a343938495d60eb1d41974e4428d101af080571ac45c51c12ebc55"
+      "sha256": "9407f89e209b6b9466d36dd7d850de40f1945d2bd3dfc30159b5199c2ba45398"
     },
     {
       "path": "manuscript/compute_accounting_20261016.json",
       "bytes": 4577,
-      "sha256": "6627d43e50fada0496ddbe8392d63b285fae609561a64acdd5be115432d53cc4"
+      "sha256": "ca0868c261039037e4a4a02990ed992f5b94baa62fe68557236abc3265e77ab3"
     },
     {
       "path": "manuscript/build_review.py",
       "bytes": 12513,
       "sha256": "ad91a8f43fa5183c60a5c0b738085a964d0896c8e3a3dcd20b908cfbc6d12d56"
+    },
+    {
+      "path": "manuscript/attribution_review_20261016.json",
+      "bytes": 10937,
+      "sha256": "23cfad560cee0a0829844b53efc081a76df1f57e80f8282d3e8e8495cc69c709"
+    },
+    {
+      "path": "empirical_execution/phase4/adapters.py",
+      "bytes": 31889,
+      "sha256": "7171b59802dff219636a08b53f13d8b3bdbb7bc400f5712f041280e61e8d6f0d"
+    },
+    {
+      "path": "empirical_execution/phase4/ADAPTERS_README.txt",
+      "bytes": 9605,
+      "sha256": "c617e8c412ba0b49f36ace410d7c7a4bb42606be430c389e83928802a75b1d75"
+    },
+    {
+      "path": "empirical_execution/phase4/embeddings.py",
+      "bytes": 27522,
+      "sha256": "bb1af9a6583a90372f7641f406afdb418017797cc8d86ee67f117f215c65d2c1"
+    },
+    {
+      "path": "local_run/e5_sharded_cpu_v2_20261013/expectations.json",
+      "bytes": 3008,
+      "sha256": "68442e55534e49f02573c4b05d602bd6ebea67d35bbcb673dac083608131bcbe"
     }
   ],
   "claims": [
@@ -266,6 +291,22 @@
         "manuscript/build_review.py"
       ],
       "limit": "No new independent proof review, visual layout verification, complete project compute/energy budget or empirical effect evidence."
+    },
+    {
+      "sections": [
+        "app:repro"
+      ],
+      "claim": "Pinned model identity and publisher license declarations, supplied metadata retention and public/private replay boundaries",
+      "sources": [
+        "manuscript/attribution_review_20261016.json",
+        "empirical_execution/phase4/adapters.py",
+        "empirical_execution/phase4/ADAPTERS_README.txt",
+        "empirical_execution/phase4/embeddings.py",
+        "local_run/e5_sharded_cpu_v2_20261013/expectations.json",
+        "local_run/model_annotation_v4_20261014/PLAN.json",
+        "local_run/source_acceptance_v2_20261011/qualification.json"
+      ],
+      "limit": "Documentary and code review only; no complete record-level attribution census, legal clearance, source/model redistribution, bitwise inference portability or changed acceptance gate."
     }
   ],
   "fixed_cutoff": "16 October 2026; terminal v4 negative at09:52:01UTC; downstream work blocked under this configuration",

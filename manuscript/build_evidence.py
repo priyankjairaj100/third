@@ -129,6 +129,27 @@ def main():
     assert compute["failed_audit_cost_retained"] and not compute["batch_step_times_added"]
     for saved in compute["source_bindings"]:
         assert saved == binding(saved["path"]), "compute source binding drift"
+    attribution = read_json("manuscript/attribution_review_20261016.json")
+    for saved in attribution["source_bindings"]:
+        assert saved == binding(saved["path"]), "attribution source binding drift"
+    models = {m["model_id"]: m for m in attribution["models"]}
+    e5 = models["intfloat/multilingual-e5-base"]
+    assert e5["revision"] == read_json("local_run/e5_sharded_cpu_v2_20261013/expectations.json")["revision"]
+    assert e5["publisher_declared_license"] == "mit"
+    for judge in plan["inherits_unchanged"]["models"]:
+        assert models[judge["model_id"]]["revision"] == judge["revision"]
+        assert models[judge["model_id"]]["publisher_declared_license"] == "apache-2.0"
+    assert len(models) == 3 and all(not m["weights_redistributed"] for m in models.values())
+    assert not attribution["source_policy"]["raw_text_release_authorized_by_this_review"]
+    qualification = read_json("local_run/source_acceptance_v2_20261011/qualification.json")
+    for gate in ["archive_attribution_review_completed", "primary_input_acceptance",
+                 "publisher_bytes_cryptographically_authenticated", "confirmatory_study_ready"]:
+        assert attribution["preserved_gates"][gate] is False
+        assert qualification["flags"][gate] is False
+    assert not attribution["adapter_review"]["full_record_metadata_coverage_verified_in_this_review"]
+    assert not attribution["replay_availability"]["public_checker_checks_private_labels"]
+    assert not attribution["replay_availability"]["threshold_dependent_relaunch_authorized"]
+    assert "intfloat/multilingual-e5-base" in tex
 
     sources = [
         "output/pdf/counterfactual_curation_theory.tex",
@@ -158,6 +179,11 @@ def main():
         "manuscript/claims_review_20261016.json",
         "manuscript/compute_accounting_20261016.json",
         "manuscript/build_review.py",
+        "manuscript/attribution_review_20261016.json",
+        "empirical_execution/phase4/adapters.py",
+        "empirical_execution/phase4/ADAPTERS_README.txt",
+        "empirical_execution/phase4/embeddings.py",
+        "local_run/e5_sharded_cpu_v2_20261013/expectations.json",
     ]
     claims = [
         {"sections": ["sec:setup", "sec:method", "app:work"],
@@ -184,6 +210,10 @@ def main():
          "claim": "Author claim comparison, four resolved descriptions, historical independent-review source checks, and partial v4 compute accounting",
          "sources": [sources[24], sources[25], sources[26]],
          "limit": "No new independent proof review, visual layout verification, complete project compute/energy budget or empirical effect evidence."},
+        {"sections": ["app:repro"],
+         "claim": "Pinned model identity and publisher license declarations, supplied metadata retention and public/private replay boundaries",
+         "sources": sources[27:] + [sources[11], sources[12]],
+         "limit": "Documentary and code review only; no complete record-level attribution census, legal clearance, source/model redistribution, bitwise inference portability or changed acceptance gate."},
     ]
     report = {
         "schema": "third-working-manuscript-evidence-v1",
