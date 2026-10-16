@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-10-16T07:49:18.478007+00:00",
+  "derivation": "Only output root and concurrent-stage admission changed; original frozen task selectors unchanged",
+  "derived_from_package_sha256": "987f8a7841c87c1fc40269bda72973a85b6d98e373c461953b417e8008759066",
+  "files": {
+    "README.txt": {
+      "bytes": 3213,
+      "sha256": "a03756ec3f60a269ece78fa26963c85aeed5e4b400e8c28184393af2ef0ea35a"
+    },
+    "expectations.json": {
+      "bytes": 932,
+      "sha256": "08da0b8fb89cf9aa9fdf4890f38b3f059d8ff65334b80dfcc957574ddad2b522"
+    },
+    "launch.py": {
+      "bytes": 4054,
+      "sha256": "ff50d77599fe597b6277b139609481fea4f087b7089e0eb62b9cc2614f1b8768"
+    },
+    "runner.py": {
+      "bytes": 2624,
+      "sha256": "c2b528f79f5889e89b27521578ed26f17b8a85dc210fd2c616ec515726441467"
+    },
+    "task.sbatch": {
+      "bytes": 595,
+      "sha256": "8b80d8a03e183258e80ad4f95cb8b867d7d2a9b34428c3403fdda2e5fc346d5f"
+    },
+    "task_lock.py": {
+      "bytes": 10617,
+      "sha256": "3b48af0445fbad3765478e3992ded6cf0e10b0e67d8d69b4f31520c15121fd8a"
+    },
+    "test_task_lock.py": {
+      "bytes": 4326,
+      "sha256": "5228f221f435db11723a01f22c611b7dc67615f2f1b6efa0d31d21675634735b"
+    }
+  },
+  "schema": "third-native-task-calibration-package-v2"
+}

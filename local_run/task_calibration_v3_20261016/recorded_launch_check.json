@@ -1,0 +1,8 @@
+{
+  "checked_utc": "2026-10-16T07:51:42.584169+00:00",
+  "known_job": "15242",
+  "actual_job_name": "third-v4-byte-repair-mistral",
+  "v2_prelaunch_failure": "only_known_Mistral_selection_active",
+  "v2_submitted": false,
+  "original_model_kernel_unchanged": true
+}

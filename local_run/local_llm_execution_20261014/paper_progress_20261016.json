@@ -22,13 +22,23 @@
     },
     {
       "evidence": "local_run/local_llm_execution_20261014/llm_v4_recovery_execution_20261016.json",
-      "limit": "Corrected full CPU audit currently running; invalid responses remain in denominator",
+      "limit": "Corrected full audit15241 passed; invalid responses remain in the denominator.",
       "work": "Qwen selection inference:396 recorded calls,391 valid,5 invalid JSON"
     },
     {
       "evidence": "local_run/local_llm_execution_20261014/llm_selection_v3_terminal_result.json",
       "limit": "Preserved negative result; v4 is a separately versioned follow-up",
       "work": "Earlier v3 two-model selection completed with zero qualifying thresholds"
+    },
+    {
+      "evidence": "local_run/local_llm_execution_20261014/llm_v4_qwen_audit_and_task_locks_20261016.json",
+      "limit": "Model execution integrity; no semantic threshold validation yet",
+      "work": "Corrected full Qwen output audit passed without repeating model calls"
+    },
+    {
+      "evidence": "local_run/local_llm_execution_20261014/llm_v4_qwen_audit_and_task_locks_20261016.json",
+      "limit": "Calibration-only configuration, not held-out utility. Other learner representations need separate locks.",
+      "work": "Native E5 task configuration:20 tags, five-source-fold six-lambda CV selected1e-5, all20 F1 thresholds independently checked"
     }
   ],
   "estimation": {
@@ -41,7 +51,7 @@
   },
   "fully_llm_annotation": true,
   "human_review_required": false,
-  "observed_utc": "2026-10-16T07:38:28.374972+00:00",
+  "observed_utc": "2026-10-16T07:58:37.821443+00:00",
   "original_registry": {
     "core": 16912,
     "extensions": 4420,
@@ -57,7 +67,7 @@
     {
       "limit": "Passing is not guaranteed; all LLM judgments are model-defined, not human ground truth",
       "order": 1,
-      "scale": "396 Mistral selection calls still ahead; at most440 additional validation calls across both models if selection passes",
+      "scale": "Mistral396-call selection job15242 is running; at most440 additional validation calls across both models if selection passes",
       "state": "active",
       "work": "Finish v4 two-model selection and conditional fresh validation"
     },
@@ -65,7 +75,7 @@
       "limit": "Native account metadata is only a contributor proxy; unknown owners remain singletons",
       "order": 2,
       "state": "incomplete",
-      "work": "Resolve study input/source acceptance, freeze source panels, task labels, learner settings and scope"
+      "work": "Bind separate-branch input/source/cache acceptance, freeze source panels, and complete any additional learner-representation locks; native E5 task settings are now fixed"
     },
     {
       "limit": "No practical speed, quality or memory benefit established yet",

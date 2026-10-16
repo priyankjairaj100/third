@@ -1,0 +1,28 @@
+{
+  "encoder_revision": "d128750597153bb5987e10b1c3493a34e5a4502a",
+  "frame_result": {
+    "bytes": 15372,
+    "sha256": "d4fc45ec0d38ddc94c2a9c82ee3948020d0acd1f47fd84582b87ad5e273aedb1"
+  },
+  "numpy": "2.5.3",
+  "python": "3.13.7",
+  "repository_files": {
+    "empirical_execution/phase3/panels.py": {
+      "bytes": 20216,
+      "sha256": "bd2409958ac9a9e27faf463b44b2f839260a3195c7cde32fb3bfb76aeb14a04b"
+    },
+    "empirical_execution/phase4/model_selection.py": {
+      "bytes": 20135,
+      "sha256": "b9a73b9cc0d7a2a0531c38e7a606290df52845e3002a6d47c21cc6c3fb459434"
+    },
+    "output/empirical_program/study_design.json": {
+      "bytes": 12554,
+      "sha256": "11bb7a38665769efd9b539370361ef2b1d39b91ee2a01b44a040ba8f2a5b6fb4"
+    }
+  },
+  "schema": "third-task-calibration-expectations-v1",
+  "source": {
+    "bytes": 570048810,
+    "sha256": "c003933aa4e04cddc5fda8bfa9e0d6752c80bef92eddaf85400b29c1512d086e"
+  }
+}

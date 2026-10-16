@@ -1,3 +1,30 @@
+Latest continuation — 16 October 2026, 2026-10-16T07:58:37.821443+00:00
+
+Qwen corrected audit 15241 COMPLETED 0:0 in 755 seconds on cn1. It verified all 396
+outputs (391 valid, 5 invalid JSON), full prompt/token/grammar identities and the
+unchanged model-result binding. Failed audit 14187 and all original outputs stay
+preserved. The explicit accepted-audit bridge is published; no model calls repeated.
+Mistral selection job 15242 is RUNNING on cn4, 396 planned calls. One finite local
+controller PID 59318 is ACTIVE and RESUMED at task/work/resume-20261016/
+repair_pipeline_a01. It continues corrected audit, selection and conditional fresh
+validation only after verified predecessors. Do not start another controller.
+
+Native task configuration 15243 COMPLETED 0:0 in 21 seconds. The unchanged Phase 4
+selectors used all 20,996 calibration rows: 20 native tags, five source folds, six
+lambda candidates, selected lambda 1e-5, and 20 OOF F1 thresholds. Independent local
+arithmetic review recomputed the selected loss and every decision threshold.
+Test labels and deletion outcomes were not used. Unknown singletons and all-zero
+target questions remain. No human annotation. This closes native E5 task settings,
+not held-out quality, semantic validation, original primary acceptance or the study.
+Private source/labels/OOF locks are not published. Task v1 was unlaunched; v2 had
+a prelaunch job-name rejection; v3 succeeded. All versions and limits are retained.
+Temporary controller pauses coordinated only CPU work; Mistral itself never paused.
+
+Read local_run/local_llm_execution_20261014/llm_v4_qwen_audit_and_task_locks_20261016.json,
+task_and_audit_independent_review_20261016.json and paper_progress_20261016.json.
+Main repair/utility/cost experiments, source/panel acceptance, analysis and the
+unified paper remain. Keep this Mac and SSH connection available for progression.
+
 Latest continuation — 16 October 2026, 2026-10-16T07:38:28.374972+00:00
 
 Access restored. Cache cleanup 15240 COMPLETED 0:0 and removed exactly eight old

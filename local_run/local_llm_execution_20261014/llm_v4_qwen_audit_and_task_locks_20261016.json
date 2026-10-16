@@ -1,0 +1,172 @@
+{
+  "Mistral": {
+    "completed_calls_not_inferred_from_elapsed": true,
+    "job_id": "15242",
+    "launch_receipt": {
+      "bytes": 3211,
+      "sha256": "0342b5c7f6d951f854d29ef3823924931ee62efb4058210b07e68f44cd114458"
+    },
+    "node": "csis.cn4",
+    "observed_utc": "2026-10-16T07:58:06.523896+00:00",
+    "original_v2_model_worker_unchanged": true,
+    "planned_calls": 396,
+    "state": "RUNNING"
+  },
+  "Qwen_audit": {
+    "accepted_audit_bridge": {
+      "bytes": 2015,
+      "sha256": "edc828382803f81c3b16202833707a3ac46cff7ce2e953788525427d491f1882"
+    },
+    "all_call_identities_denominators_and_tokens_verified": true,
+    "canonical_calls": 360,
+    "elapsed_seconds": 755,
+    "exit": "0:0",
+    "job_id": "15241",
+    "model_calls_repeated": 0,
+    "node": "csis.cn1",
+    "original_failed_audit14187_preserved": true,
+    "original_model_result": {
+      "bytes": 434458,
+      "sha256": "ba716a2588a174cf0968c60e3a8aa659b47b9e806b1d94534988539fb7b25011"
+    },
+    "repair_package_sha256": "d498d2d0dc5fe30b81912d8804e0e402b1b65f9263ac0d6b8b69e7bf38ee1f0e",
+    "result": {
+      "bytes": 118666,
+      "sha256": "c94f64e2a04aadbadb231740da0ce5b2679d589cc35d96fb9c075d73ab578d01"
+    },
+    "semantic_validity_established": false,
+    "state": "COMPLETED",
+    "status_counts": {
+      "invalid_json": 5,
+      "valid": 391
+    },
+    "swap_calls": 36,
+    "weight_payloads_independently_rehashed": false
+  },
+  "controller": {
+    "active_and_resumed_at_observation": true,
+    "automatic_retry": false,
+    "current_stage": "selection_mistral",
+    "model_job_was_not_paused": true,
+    "pid": 59318,
+    "private_root": "task/work/resume-20261016/repair_pipeline_a01",
+    "scope": "Mistral, corrected output audit, selection statistics and independent review, then conditional fresh validation",
+    "source_sha256": "09ccb84a17e14e416e2a3a6bfb7d8dc6ecadeb0ac10b8ef1380ee6410faedc89",
+    "temporary_transition_pause_receipts": [
+      {
+        "bytes": 454,
+        "sha256": "a089f9d78b71d5658fc6368272f0cfe02e2499e11e957dea5cfb2950ebebb1a7"
+      },
+      {
+        "bytes": 301,
+        "sha256": "aa39d5dbacef6dda960fbda8600ae4a0f668d6bfe62e4d35e17466b39271afb8"
+      },
+      {
+        "bytes": 402,
+        "sha256": "0534021358146296bbf5f547d08512c4931f41f6a0d8199ead67ccbaadbb2dc5"
+      },
+      {
+        "bytes": 178,
+        "sha256": "1fcffba0c8e597c850e0dfe23a482b90085afd069abfb56ede258a568f6c78a5"
+      }
+    ]
+  },
+  "created_utc": "2026-10-16T07:58:37.821443+00:00",
+  "human_annotation_calls": 0,
+  "human_review_required": false,
+  "limits": [
+    "The source dossier supports documentary qualification for separate development; it does not provide publisher-signed bytes or original all-six primary acceptance.",
+    "The current task locks use existing native tags; no new human annotation was collected or required.",
+    "The CPU task ran on cn1 while Mistral ran on cn4; task timings are lifecycle observations, not method-performance comparisons."
+  ],
+  "local_review": "local_run/local_llm_execution_20261014/task_and_audit_independent_review_20261016.json",
+  "native_task_configuration": {
+    "LLM_labels_used_for_task_settings": false,
+    "all_zero_target_questions_retained": 8032,
+    "calibration_rows": 20996,
+    "confirmatory_study_ready": false,
+    "deletion_outcomes_used": false,
+    "elapsed_seconds": 21,
+    "exit": "0:0",
+    "input_bindings": {
+      "frame": {
+        "bytes": 15372,
+        "sha256": "d4fc45ec0d38ddc94c2a9c82ee3948020d0acd1f47fd84582b87ad5e273aedb1"
+      },
+      "source": {
+        "bytes": 570048810,
+        "sha256": "c003933aa4e04cddc5fda8bfa9e0d6752c80bef92eddaf85400b29c1512d086e"
+      }
+    },
+    "job_id": "15243",
+    "native_tag_outputs": 20,
+    "node": "csis.cn1",
+    "original_task_routines_unchanged": true,
+    "output_bindings": {
+      "ridge.json": {
+        "bytes": 12347257,
+        "sha256": "37252c41502f6e878e31c9a00006a8e21c574ce4897bedce7077f95aa52dafb3"
+      },
+      "thresholds.json": {
+        "bytes": 8966,
+        "sha256": "903b194c88291d72510da1212167920d0933b99768096f91644948afb99c70c1"
+      },
+      "vocabulary.json": {
+        "bytes": 321357,
+        "sha256": "32c6946ba1256a1d960eb1340c72c2beb2759b55bd253cd558eb1e26c89e1f10"
+      }
+    },
+    "package": "local_run/task_calibration_v3_20261016",
+    "package_sha256": "2af55ef560e0f02d9c42775dcd1c86ab8201d331326ff19a8b3578d8b1fe8d4d",
+    "primary_input_acceptance": false,
+    "private_root": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/qualification/askubuntu-task-calibration-v3-20261016-a01",
+    "result": {
+      "bytes": 2428,
+      "sha256": "44d0269198c1c7ddf21e5d39cf5947d8ad253e06bc6217418a1ba066de95ab4f"
+    },
+    "scope": "Native E5 task configuration for the separate fully LLM development branch. Other representations need their own locks. This is not held-out task performance.",
+    "selected_OOF_loss_and_all20_thresholds_independently_recomputed": true,
+    "selected_ridge_lambda": 1e-05,
+    "software_tests_passed_local_and_cluster": 8,
+    "source_authenticity_verified": false,
+    "source_units": 13394,
+    "state": "COMPLETED",
+    "test_labels_used": false,
+    "unknown_singletons_retained": 247,
+    "vocabulary": [
+      "18.04",
+      "20.04",
+      "boot",
+      "networking",
+      "command-line",
+      "drivers",
+      "apt",
+      "server",
+      "dual-boot",
+      "22.04",
+      "nvidia",
+      "partitioning",
+      "grub2",
+      "bash",
+      "gnome",
+      "package-management",
+      "sound",
+      "upgrade",
+      "wireless",
+      "kernel"
+    ]
+  },
+  "preserved_task_attempts": {
+    "v1": "Staged but never launched: the Qwen audit finished before the local coordination precondition. No pause or sbatch.",
+    "v2": "Launch rejected at queue-name admission BEFORE root creation or sbatch. Expected old node-pool job name; actual Mistral uses the audit-repair launcher name. Controller immediately resumed.",
+    "v3": "Corrected scheduling identity bound to actual Mistral launch receipt; task job15243 completed; controller resumed. All task-selection numerics unchanged."
+  },
+  "project_complete": false,
+  "remaining": [
+    "Finish Mistral and corrected audit; preserve invalid responses and denominator",
+    "Original selection statistics plus independent exact review; fresh validation only if qualified",
+    "Bind source qualification, native task locks and the sharded cache to a separately versioned downstream development adapter; source panels and guards remain outstanding",
+    "Execute repair correctness, native task utility and complete lifecycle comparisons on genuine data, then analysis and manuscript synthesis"
+  ],
+  "schema": "third-Qwen-audit-and-native-task-milestone-v1"
+}

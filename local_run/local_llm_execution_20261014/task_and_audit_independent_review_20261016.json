@@ -1,0 +1,69 @@
+{
+  "audit_job": "15241",
+  "bindings": {
+    "audit_bridge.json": {
+      "bytes": 2015,
+      "sha256": "edc828382803f81c3b16202833707a3ac46cff7ce2e953788525427d491f1882"
+    },
+    "audit_process.json": {
+      "bytes": 1084,
+      "sha256": "72b211bbbce1dba0b31799cb48320a172153a17819257547e752a30ad32942fa"
+    },
+    "audit_result.json": {
+      "bytes": 118666,
+      "sha256": "c94f64e2a04aadbadb231740da0ce5b2679d589cc35d96fb9c075d73ab578d01"
+    },
+    "ridge.json": {
+      "bytes": 12347257,
+      "sha256": "37252c41502f6e878e31c9a00006a8e21c574ce4897bedce7077f95aa52dafb3"
+    },
+    "task_process.json": {
+      "bytes": 541,
+      "sha256": "8471e26dd86cad054851bbc950072523d2d14430f61626c2ca9fee4424131449"
+    },
+    "task_result.json": {
+      "bytes": 2428,
+      "sha256": "44d0269198c1c7ddf21e5d39cf5947d8ad253e06bc6217418a1ba066de95ab4f"
+    },
+    "task_tests.json": {
+      "bytes": 62,
+      "sha256": "ef70589e3033272c40b95fd0325f1b3a8fe7796ccc8b055b94934f1f7c323c80"
+    },
+    "thresholds.json": {
+      "bytes": 8966,
+      "sha256": "903b194c88291d72510da1212167920d0933b99768096f91644948afb99c70c1"
+    },
+    "vocabulary.json": {
+      "bytes": 321357,
+      "sha256": "32c6946ba1256a1d960eb1340c72c2beb2759b55bd253cd558eb1e26c89e1f10"
+    }
+  },
+  "created_utc": "2026-10-16T07:56:32.511559+00:00",
+  "human_review_claimed": false,
+  "limits": [
+    "Source bytes and feature payloads were rehashed by the executed cluster task, not independently reread by this local arithmetic reviewer.",
+    "All30 ridge solves were executed by the frozen selector; this review checks their ledgers, selected predictions and exact selection/threshold arithmetic, not a second fit.",
+    "Qwen raw-token and grammar replay was executed by the CPU audit; this local review verifies exported audit metadata, bindings, counts and source identity.",
+    "No semantic validation, held-out utility result, main effect study or confirmatory acceptance is established."
+  ],
+  "passed": true,
+  "reviewer_kind": "AI assistant local arithmetic and metadata review",
+  "schema": "third-task-lock-and-Qwen-audit-local-review-v1",
+  "source_sha256": "b91ee848f3c614eabcf5b89d54ca04d26a6431135bb7e08a39adbeb1c7ff470b",
+  "task_job": "15243",
+  "verified": {
+    "Qwen_audit_and_bridge_seals": true,
+    "Qwen_output_denominator": 396,
+    "all_zero_target_records_retained": 8032,
+    "lambda_candidates": 6,
+    "native_output_coordinates": 20,
+    "original_failed_audit_preserved": true,
+    "per_tag_F1_thresholds_independently_recomputed": 20,
+    "selected_OOF_MSE_recomputed_exactly": true,
+    "selected_lambda": 1e-05,
+    "source_group_folds": 5,
+    "task_lock_seals": 3,
+    "unknown_singletons_retained": 247,
+    "zero_model_retries": true
+  }
+}

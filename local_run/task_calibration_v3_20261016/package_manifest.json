@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-10-16T07:51:42.584330+00:00",
+  "derivation": "Actual source-bound Mistral queue name and fresh root only; frozen task selectors unchanged",
+  "derived_from_package_sha256": "f08af0a5a6c0a0feb415a9f1a9e2110dd9cfc400a47a0ba239a1a772f6740404",
+  "files": {
+    "README.txt": {
+      "bytes": 3485,
+      "sha256": "0952402d84993b81958b5851289e21f6d538e41408f2d8b63397acbb9548f660"
+    },
+    "expectations.json": {
+      "bytes": 932,
+      "sha256": "08da0b8fb89cf9aa9fdf4890f38b3f059d8ff65334b80dfcc957574ddad2b522"
+    },
+    "launch.py": {
+      "bytes": 4061,
+      "sha256": "b818f39540b8390a937e12d17774a82f90472327142d5676451d2deb54ae53a3"
+    },
+    "recorded_launch_check.json": {
+      "bytes": 266,
+      "sha256": "0942056cc58d4c121103c49ba1033946663955aecfcbfcdb3c7b5f4339934088"
+    },
+    "runner.py": {
+      "bytes": 2624,
+      "sha256": "c2b528f79f5889e89b27521578ed26f17b8a85dc210fd2c616ec515726441467"
+    },
+    "task.sbatch": {
+      "bytes": 595,
+      "sha256": "8b80d8a03e183258e80ad4f95cb8b867d7d2a9b34428c3403fdda2e5fc346d5f"
+    },
+    "task_lock.py": {
+      "bytes": 10617,
+      "sha256": "9ba09279cc73d3dd4c8c10c70de2d5db97bed741752816467c66a2ed8ca668ea"
+    },
+    "test_task_lock.py": {
+      "bytes": 4326,
+      "sha256": "5228f221f435db11723a01f22c611b7dc67615f2f1b6efa0d31d21675634735b"
+    }
+  },
+  "schema": "third-native-task-calibration-package-v3"
+}
