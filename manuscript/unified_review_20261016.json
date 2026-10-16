@@ -1,0 +1,117 @@
+{
+  "schema": "third-unified-author-manuscript-review-v1",
+  "observed_utc": "2026-10-16T11:51:57.057445+00:00",
+  "reviewer_kind": "author AI assistant; available whole-document consistency and bounded literature review",
+  "review_passed_in_stated_scope": true,
+  "new_independent_review": false,
+  "new_theorem_validation": false,
+  "novelty_clearance": false,
+  "manuscript": {
+    "path": "manuscript/third_working_draft.tex",
+    "bytes": 55930,
+    "sha256": "c452d0682179394f18b5bc0dd05a6519ae4deff39b0fb8f02e54fa5200b93cc2"
+  },
+  "scope": [
+    "Abstract, introduction and conclusion checked against completed versus unexecuted evidence",
+    "Main theory and appendices checked for consistent target, remaining budget, scorer, private-information and numerical-certificate qualifications",
+    "Study and evidence checked for model-defined labels, preserved failures, skipped validation and absent downstream effects",
+    "Related work checked for stated contract scope and available missing antecedents",
+    "Responsible-use and reproducibility limits checked for private data, unchanged human gates and partial compute accounting"
+  ],
+  "resolved_findings": [
+    {
+      "id": "U1",
+      "finding": "Introduction described the third contribution as only a protocol and preparation after both calibration versions had finished.",
+      "resolution": "Report both negative calibrations; retain unexecuted target/utility/cost comparison."
+    },
+    {
+      "id": "U2",
+      "finding": "Prior explicit unlearning-as-view-maintenance work with preprocessing was missing from the bibliography.",
+      "resolution": "Credit Schelter (2021) in the introduction and related work; retain only the stated curator, remaining-horizon contract and shared-feature construction as the scoped contribution."
+    },
+    {
+      "id": "U3",
+      "finding": "Conclusion left the calibration failure implicit.",
+      "resolution": "State that both frozen selection criteria failed and downstream natural-text practical value remains unresolved."
+    }
+  ],
+  "primary_artifact": {
+    "key": "ivmunlearning",
+    "title": "Towards Efficient Machine Unlearning via Incremental View Maintenance",
+    "author": "Sebastian Schelter",
+    "year": 2021,
+    "venue": "Workshop on Challenges in Deploying and Monitoring ML Systems at ICML 2021",
+    "url": "https://ssc.io/pdf/ivm-unlearning.pdf",
+    "observed_utc": "2026-10-16T11:49:41.968386+00:00",
+    "bytes": 370881,
+    "sha256": "0a8d8813a84b851fb2c903506ab95bc9efce174de1b00ec21fb21952a7f3a9a0",
+    "private_copy_retained": true,
+    "pdf_redistributed": false,
+    "locators": [
+      "Section 2, physical pages 2-3: maintained model-training dataflow, including tokenization on page 3",
+      "Section 3, physical page 3: sparse-dependency qualification for efficient recomputation"
+    ],
+    "bounded_comparison": "Direct antecedent to unlearning as incremental view maintenance with preprocessing. This does not establish equivalence or dominance between its system and our horizon-conditioned state and feature construction."
+  },
+  "source_bindings": [
+    {
+      "path": "manuscript/related_work_sources_20261016.json",
+      "bytes": 6165,
+      "sha256": "da0ffd0e0d4b6d8830a5d879a50814b8e29be000434be67d2577b33ef7d1cceb"
+    },
+    {
+      "path": "output/pdf/counterfactual_curation_theory.tex",
+      "bytes": 109926,
+      "sha256": "8e7662935d0caf6cddede9cd12460d1362c67fddc227d8051424e4dce51d61aa"
+    },
+    {
+      "path": "empirical_execution/canonical_theory_addendum.tex",
+      "bytes": 13650,
+      "sha256": "54c933dcf5b3382824dcc2cfeee373a15435771cd79ede33d175da8339e774c2"
+    },
+    {
+      "path": "empirical_execution/phase10/finite_word_theory.tex",
+      "bytes": 16444,
+      "sha256": "c0afedb46c232444bf6b5165ebc492b630fe5255e25d16dde66f5c105d59f6cd"
+    },
+    {
+      "path": "local_run/local_llm_execution_20261014/llm_selection_v3_terminal_result.json",
+      "bytes": 37823,
+      "sha256": "48979e72e212d2a7e6bdd4966f32ed1f36b422ca3ae1f48a70c80e6f4b0929eb"
+    },
+    {
+      "path": "local_run/local_llm_execution_20261014/llm_selection_v4_terminal_result.json",
+      "bytes": 85149,
+      "sha256": "961f1ab1b07b98d3c814d06e25d7825f2afee5422fca67c309d4a379c7793f86"
+    }
+  ],
+  "remaining_gaps": [
+    {
+      "name": "Predictive State Is Not Explanatory State full paper and approximate-success comparison",
+      "gap_closed": false,
+      "followup": "Fresh official repository tree at unchanged HEAD 4143f408843394e21a0622c9eb5d5de10a687a8c is untruncated and contains README and three figure PDFs, not the full paper. Earlier direct PDF 403 retained; no identical failed-route retry.",
+      "tree_sha256": "3b3e6895fb511308564f08ae78fbf5933200c9d6436e49de6f87cf4dcd44ef4b",
+      "tree_observed_utc": "2026-10-16T11:45:58.167010+00:00"
+    },
+    {
+      "name": "Dominici 2025 thesis full-text comparison",
+      "gap_closed": false,
+      "followup": "Targeted author and UvA/VU institutional searches did not locate the full text. Search absence does not establish novelty or lack of overlap."
+    },
+    {
+      "name": "New independent unified manuscript/proof review",
+      "gap_closed": false,
+      "followup": "This read-through is by the author assistant. Historical source-bound reviews remain distinct."
+    },
+    {
+      "name": "Visual layout review",
+      "gap_closed": false,
+      "followup": "Native computer-use service previously failed to start. Compilation does not verify rendered layout."
+    }
+  ],
+  "scientific_scope_unchanged": true,
+  "human_review_planned": false,
+  "empirical_jobs_launched": 0,
+  "frozen_sources_edited": false,
+  "submission_ready": false
+}

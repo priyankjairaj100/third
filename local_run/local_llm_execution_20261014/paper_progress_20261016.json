@@ -99,6 +99,11 @@
       "evidence": "manuscript/RELEASE_BUILD_STATUS.json",
       "limit": "Not full inference replay, visual review, independent unified scientific review or submission readiness.",
       "work": "Existing manuscript compiled with expanded compute; immutable85-file v3 package plus manifest passed clean-extraction replay"
+    },
+    {
+      "evidence": "manuscript/unified_review_20261016.json",
+      "limit": "Author consistency review only. No new independent scientific review, exhaustive novelty clearance, rendered layout verification or empirical effect result.",
+      "work": "Available unified author read-through, corrected negative-calibration framing and Schelter (2021) prior-work credit; existing manuscript compiled and86-file v4 package passed clean-extraction replay"
     }
   ],
   "continuous_execution": {
@@ -123,7 +128,7 @@
   },
   "fully_llm_annotation": true,
   "human_review_required": false,
-  "observed_utc": "2026-10-16T11:23:51.360856+00:00",
+  "observed_utc": "2026-10-16T11:53:22.159322+00:00",
   "original_registry": {
     "core": 16912,
     "extensions": 4420,
@@ -137,20 +142,14 @@
   "primary_semantic_study_started": false,
   "remaining": [
     {
-      "limit": "No renewed inference, cut selection, validation, guard or effect experiment.",
+      "limit": "Available author review and bounded package are complete; no repeat of unchanged checks as new progress. Submission readiness remains false.",
       "order": 1,
-      "state": "compute_attribution_and_replay_subset_documented_remaining_manuscript_review",
-      "work": "Final available unified manuscript review, visual layout and close-prior comparisons; preserve remaining source/compute coverage gaps"
+      "state": "awaiting_accessible_full_texts_or_review_capability",
+      "work": "Visual layout, independent unified manuscript review and the two unresolved close-prior full-text comparisons"
     },
     {
-      "limit": "Do not claim submission readiness or exhaustive novelty.",
+      "limit": "No threshold, prompt, judge or representation retuning. Preserve unexecuted scope and all original unmet gates.",
       "order": 2,
-      "state": "in_progress_with_two_full_text_gaps_and_unavailable_visual_service",
-      "work": "Final claim review, available layout review and close-prior comparisons"
-    },
-    {
-      "limit": "Preserved unexecuted scope; not counted as completion and not bypassed with a weaker gate.",
-      "order": 3,
       "state": "blocked_by_negative_calibration",
       "work": "Original development, held-out study, main effects and uncertainty analysis"
     }

@@ -165,6 +165,14 @@ def main():
                    history["groups"]["other_stage"]["elapsed_seconds_sum"]]:
         assert f"{number:,}" in tex, "historical compute manuscript count differs"
     assert "266.39 requested-CPU hours" in tex
+    unified = read_json("manuscript/unified_review_20261016.json")
+    assert unified["manuscript"] == binding("manuscript/third_working_draft.tex")
+    assert unified["review_passed_in_stated_scope"] and not unified["new_independent_review"]
+    assert unified["novelty_clearance"] is False
+    for saved in unified["source_bindings"]:
+        assert saved == binding(saved["path"]), "unified review source binding drift"
+    assert unified["primary_artifact"]["key"] == "ivmunlearning"
+    assert all(not gap["gap_closed"] for gap in unified["remaining_gaps"])
 
     sources = [
         "output/pdf/counterfactual_curation_theory.tex",
@@ -202,6 +210,7 @@ def main():
         "manuscript/compute_history_20261016.json",
         "manuscript/compute_receipts_extract_20261016.json",
         "manuscript/build_compute_history.py",
+        "manuscript/unified_review_20261016.json",
     ]
     claims = [
         {"sections": ["sec:setup", "sec:method", "app:work"],
@@ -236,6 +245,10 @@ def main():
          "claim": "Expanded72-job historical accounting with six model jobs,32 CPU embedding tasks,34 other stages and four preserved failures",
          "sources": sources[32:35],
          "limit": "Explicit saved subset, not complete project cost. Array and model launch excerpts require private originals for extraction replay; public arithmetic is reproducible. Requested CPU times elapsed is not utilization or billed core time."},
+        {"sections": ["sec:related", "sec:evidence", "sec:limits"],
+         "claim": "Unified author read-through, completed negative-calibration framing and explicit credit for preprocessing-aware unlearning as view maintenance",
+         "sources": [sources[35], sources[20], sources[13], sources[21]],
+         "limit": "Bounded author consistency review, not independent proof review or exhaustive novelty clearance. Two close-prior full texts and visual layout remain unverified."},
     ]
     report = {
         "schema": "third-working-manuscript-evidence-v1",

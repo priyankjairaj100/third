@@ -92,15 +92,15 @@ provenance to the ordered curator and derive a summary that repairs both
 training statistics and its own designated algebraic state. Second, we give
 a finite-format construction linking excluded feature bits to exact ridge
 heads, including a sharp change in required private information when the
-deletion horizon increases by one. Third, we define a fully LLM development
-study that separates target changes, downstream utility, and complete system
-cost. The third contribution is currently a protocol and audited preparation,
-not a completed empirical finding.
+deletion horizon increases by one. Third, we report two completed, negative
+calibrations for a fully LLM natural-text study. Neither admitted a threshold
+under its frozen model-agreement criterion. The downstream comparison of
+target changes, utility, and complete system cost remains unexecuted.
 
 Neither deletion-induced additions nor provenance maintenance is a new
 general principle. Nonmonotone database queries already exhibit the former,
 and provenance and incremental view maintenance address the latter
-\cite{green,aggregate,dbsp,priu}. Our claim concerns the stated curator,
+\cite{green,aggregate,dbsp,priu,ivmunlearning}. Our claim concerns the stated curator,
 remaining-horizon repair contract, and shared-feature learner construction.
 The main unresolved practical question is whether these effects are large
 and useful enough in natural NLP pipelines to justify their full cost.
@@ -618,7 +618,11 @@ Equation~\eqref{eq:target}.
 Polynomial provenance \cite{green}, provenance for aggregation and
 difference \cite{aggregate}, DBSP's incremental query framework
 \cite{dbsp}, and PrIU's provenance-based regression updates \cite{priu}
-are direct antecedents. Our Boolean expansion is a specialization.
+are direct antecedents. Schelter explicitly frames unlearning as view
+maintenance and includes tokenization in the maintained dataflow
+\cite{ivmunlearning}. His Section~3 links efficient repair to sparse
+computational dependencies. Thus preprocessing-aware incremental unlearning
+also precedes this work. Our Boolean expansion is a specialization.
 The scoped claims add the cumulative-horizon state contract and the
 learner-level finite-feature obstruction. We do not claim that negative
 dependencies, moment updates, or deletion-induced additions originate here.
@@ -684,8 +688,10 @@ change the learner's training target. A cumulative deletion horizon gives
 both an exact repair rule and a precise boundary on which excluded
 payloads can still matter. The finite-format family shows that this
 boundary can change required private information sharply, even when all
-lower-budget heads are identical. Whether the effect has practical NLP
-value remains the question for the fully LLM natural-text study.
+lower-budget heads are identical. Both fully LLM calibration versions
+failed their frozen selection criteria. Consequently, the downstream
+natural-text study remains unexecuted, and the practical NLP value of
+these effects remains unresolved.
 
 \begin{thebibliography}{99}\small
 \bibitem{semdedup} A. Abbas, K. Tirumala, D. Simig, S. Ganguli, and A. S.
@@ -708,6 +714,10 @@ languages. PVLDB, 16(7):1601--1614.
 PrIU: A provenance-based approach for incrementally updating regression
 models. SIGMOD, 447--462.
 \href{https://arxiv.org/abs/2002.11791}{arXiv:2002.11791}.
+\bibitem{ivmunlearning} S. Schelter. 2021. Towards efficient machine
+unlearning via incremental view maintenance. Workshop on Challenges in
+Deploying and Monitoring ML Systems at ICML.
+\url{https://ssc.io/pdf/ivm-unlearning.pdf}.
 \bibitem{arcane} H. Yan, X. Li, Z. Guo, H. Li, F. Li, and X. Lin. 2022.
 ARCANE: An efficient architecture for exact machine unlearning. IJCAI.
 \url{https://www.ijcai.org/proceedings/2022/0556.pdf}.

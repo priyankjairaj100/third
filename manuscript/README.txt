@@ -20,7 +20,7 @@ It does not rerun empirical work or perform an independent manuscript review.
 BUILD_STATUS.json separately records native compiler and visual-review outcomes.
 related_work_sources_20261016.json records the bounded literature pass and gaps.
 literature_contract_review_20261016.json records primary-text contract locators.
-Current checks bind35 direct evidence sources and15 cited references. Native compilation
+Current checks bind36 direct evidence sources and16 cited references. Native compilation
 passed for the current source; visual review remains unverified because the
 computer-use service failed to start. The user has this same source open in the editor.
 
@@ -37,6 +37,10 @@ publisher license declarations, supplied metadata retention and replay limits.
 This documentary/code review is not complete per-record attribution clearance.
 See REPRODUCIBILITY.txt for public/private verification boundaries and the versioned
 release manifest/archive. RELEASE_BUILD_STATUS.json records clean-extraction checks.
+unified_review_20261016.json records the final available author read-through,
+updated introduction/conclusion and explicit credit to Schelter (2021) for
+preprocessing-aware unlearning as view maintenance. It does not establish
+independent review or close the two outstanding full-text comparisons.
 
 V4 selection is complete and NEGATIVE: all792 calls and both output audits
 completed; all51 frozen cuts failed independent arithmetic replay. The maximum
@@ -52,8 +56,9 @@ Next substantive edits:
 2. Complete visual layout review when the native UI service becomes available.
 3. Resolve the remaining SSRN and Dominici full-text comparisons where accessible;
    preserve unresolved scope if unavailable. No author contact is authorized.
-4. Finish the permitted reproducibility package, compute statement, attribution
-   and release limits for a bounded theory-plus-negative-evidence manuscript.
+4. The bounded reproducibility package, saved compute subset, attribution and
+   release limits are documented and checked; revise only if new evidence or
+   manuscript changes justify it. Do not repeat unchanged packaging as progress.
 5. Do not silently convert that manuscript into completion of the original
    empirical program. No new threshold, prompt, judge or representation follows
    from this failure. Submission readiness remains false.

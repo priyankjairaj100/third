@@ -130,8 +130,9 @@
       "evidence": "manuscript/evidence_20261016.json",
       "historical_compute": "manuscript/compute_history_20261016.json",
       "id": "07-manuscript",
-      "next_action": "Same .tex remains open and compiles.35 direct source bindings,15 references and72-job historical compute arithmetic checked. Continue final available unified manuscript review, visual layout and two close-prior full-text gaps; preserve all unresolved limits and no submission-readiness claim.",
-      "state": "compiled_author_reviewed_bounded_evidence_draft"
+      "next_action": "Available unified author read-through is complete. Same .tex compiles;36 direct bindings and16 references checked. Remaining work requires visual service availability, an independent manuscript review, or accessible full texts for two close priors. Preserve all gaps; do not repackage an unchanged manuscript as new progress.",
+      "state": "compiled_unified_author_review_complete_pending_external_reviews",
+      "unified_author_review": "manuscript/unified_review_20261016.json"
     },
     {
       "depends_on": [
@@ -151,7 +152,9 @@
         "Public51-file source-check closure plus manifest; clean-extraction replay passed",
         "Pinned model attribution and public/private replay limits documented; original gates unchanged",
         "Expanded72-job historical accounting with four failures; no duplicate batch/array aliases",
-        "Public85-file source-check closure plus manifest; clean-extraction replay including compute passed"
+        "Public85-file source-check closure plus manifest; clean-extraction replay including compute passed",
+        "Available unified author review completed; negative-result framing corrected and Schelter (2021) preprocessing/view-maintenance antecedent credited",
+        "Public86-file v4 package plus manifest; native compilation and clean-extraction source replay passed"
       ],
       "coordinates_with": [
         "07-manuscript"
@@ -165,13 +168,14 @@
         "manuscript/compute_accounting_20261016.json",
         "manuscript/RELEASE_BUILD_STATUS.json",
         "manuscript/attribution_review_20261016.json",
-        "manuscript/compute_history_20261016.json"
+        "manuscript/compute_history_20261016.json",
+        "manuscript/unified_review_20261016.json"
       ],
       "id": "09-negative-branch-closure",
-      "next_action": "Continue available final unified manuscript review, visual layout and unresolved close-prior full-text comparisons. Historical compute subset is reconciled; do not repeat unchanged accounting or remote jobs. Missing original receipts remain explicit. No retuning or downstream experimental launch.",
-      "public_package": "manuscript/release_20261016_v3.zip",
-      "state": "historical_compute_accounting_and_v3_package_verified_remaining_manuscript_review"
+      "next_action": "Bounded manuscript/package is prepared. Continue only actionable new literature routes, restored visual review or independent review; no repeated unchanged accounting/packaging, failed retrieval route, controller restart or downstream launch. Original empirical scope remains incomplete and blocked.",
+      "public_package": "manuscript/release_20261016_v4.zip",
+      "state": "bounded_v4_package_verified_pending_external_review_gaps"
     }
   ],
-  "updated_utc": "2026-10-16T11:23:51.360856+00:00"
+  "updated_utc": "2026-10-16T11:53:22.159322+00:00"
 }

@@ -36,6 +36,11 @@
       "scope": "Primary abstract/metadata; provenance-based regression updates after deletion. No claim that its full scope excludes every possible preparation mechanism."
     },
     {
+      "key": "ivmunlearning",
+      "url": "https://ssc.io/pdf/ivm-unlearning.pdf",
+      "scope": "Author-hosted primary paper, Section 2 (physical pages 2-3) and Section 3 (page 3): maintained training dataflow includes tokenization; sparse dependencies govern efficient repair. Cited as a direct antecedent, without a theorem-dominance claim."
+    },
+    {
       "key": "arcane",
       "url": "https://www.ijcai.org/proceedings/2022/0556.pdf",
       "scope": "Primary PDF Section3.2, page4008 visually checked: unselected-request retraining assumption is compared explicitly with the fixed raw-neighbor target."
@@ -98,5 +103,6 @@
     "Metadata and abstracts support only the bounded claims above; this pass is not a new full-paper review of every citation.",
     "The working manuscript retains explicit empirical and numerical limits."
   ],
-  "followup_contract_review": "literature_contract_review_20261016.json"
+  "followup_contract_review": "literature_contract_review_20261016.json",
+  "unified_author_followup": "unified_review_20261016.json"
 }

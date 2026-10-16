@@ -7,25 +7,26 @@
     "Primary-text comparison revision compiled successfully; then terminal v4 negative results and the checked table compiled successfully with the native compiler.",
     "Bounded author claim review clarified stable handles, empirical retry rejection, private-state access and scorer range proof; partial v4 compute statement added. Native compilation succeeded without repair.",
     "Pinned model identity, publisher attribution metadata and public/private replay limits added. Native compilation succeeded without repair;32 source bindings checked. Record-level attribution clearance remains unverified.",
-    "Expanded historical compute ledger covers72 unique jobs and includes four failures; separate same-author arithmetic crosscheck matched all source rows and original32 array parent rows. Existing manuscript compiled successfully without repair.35 direct evidence bindings checked."
+    "Expanded historical compute ledger covers72 unique jobs and includes four failures; separate same-author arithmetic crosscheck matched all source rows and original32 array parent rows. Existing manuscript compiled successfully without repair.35 direct evidence bindings checked.",
+    "Available whole-document author review corrected introduction/conclusion status and added Schelter (2021) as a preprocessing-aware view-maintenance antecedent. Native compilation succeeded without repair;36 direct bindings and16 references checked. Independent review, two full-text comparisons and visual layout remain unresolved."
   ],
   "attribution_review_20261016.json": {
     "bytes": 10937,
     "sha256": "23cfad560cee0a0829844b53efc081a76df1f57e80f8282d3e8e8495cc69c709"
   },
-  "bibliography_entries_checked": 15,
+  "bibliography_entries_checked": 16,
   "claims_review_20261016.json": {
     "bytes": 8655,
-    "sha256": "635bac29974987df2e89264f19953356a4c43fcaa1e3fd5b76bc1cf3fc27299a"
+    "sha256": "396b49b2d25b314a891440e58a843633952c0476a5634b364f632d813d258257"
   },
   "compile_verified": true,
   "compute_accounting_20261016.json": {
     "bytes": 4577,
-    "sha256": "ee5e42741d440edf0dcd818959d2379a3f7008b337bf09d62812d433abec0f5d"
+    "sha256": "877c866472a550850018d596857b503d307c663d69e883788a6594d619060c7b"
   },
   "compute_history_20261016.json": {
     "bytes": 36673,
-    "sha256": "bc3bfee70c06ab954b15b75fe27503f634fcc4119055d8babd5181431d780ee7"
+    "sha256": "027c8b8e994283d17e2c8a3adb8201a789778c6a1682dad686d761c9bbd11ba3"
   },
   "compute_receipts_extract_20261016.json": {
     "bytes": 8264,
@@ -33,8 +34,8 @@
   },
   "current_revision_source_repairs": 0,
   "evidence_20261016.json": {
-    "bytes": 14520,
-    "sha256": "adbdbfb8f33b4b225cb3d2316f3307d0fd06d6389d45aee473ff2be949227428"
+    "bytes": 15454,
+    "sha256": "688166d248014f923327529a2fd095a2094e7c0e29985b43ef41c858f52e735f"
   },
   "historical_compute_nested_source_bindings": 33,
   "latex_installed_by_agent": false,
@@ -47,22 +48,26 @@
     "message": "The current source compiled successfully with the desktop editor's compiler.",
     "path": "/Users/priyankjairaj/Downloads/ACL/Three/manuscript/third_working_draft.tex"
   },
-  "observed_utc": "2026-10-16T11:22:49.316336+00:00",
+  "observed_utc": "2026-10-16T11:52:23.908144+00:00",
   "open_in_codex_status": "already open as reported by user",
   "related_work_sources_20261016.json": {
-    "bytes": 5744,
-    "sha256": "813b96494c66b84b627f235907e052efad56640e4210c01e392669f2f93497ad"
+    "bytes": 6165,
+    "sha256": "da0ffd0e0d4b6d8830a5d879a50814b8e29be000434be67d2577b33ef7d1cceb"
   },
   "schema": "third-manuscript-build-status-v1",
   "source_binding": {
-    "bytes": 55267,
-    "sha256": "0d4eeb29878d3f84b8fbf9aef94d0402918d35c151023a3b985fb707d875c390"
+    "bytes": 55930,
+    "sha256": "c452d0682179394f18b5bc0dd05a6519ae4deff39b0fb8f02e54fa5200b93cc2"
   },
-  "source_bindings_checked": 35,
+  "source_bindings_checked": 36,
   "source_check_report": "evidence_20261016.json",
   "source_repairs": 2,
   "submission_ready": false,
   "third_party_plugins_installed": false,
+  "unified_review_20261016.json": {
+    "bytes": 5703,
+    "sha256": "f3406f6723cfd09082e3bb6f847221581799fa521028590d4620edff885c1abc"
+  },
   "visual_review_limitation": "Computer-use service failed to start (Sky Computer Use service startup request failed); native open_in_codex returned queued for this chat.",
   "visual_review_verified": false
 }

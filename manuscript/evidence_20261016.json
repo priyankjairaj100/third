@@ -1,20 +1,20 @@
 {
   "schema": "third-working-manuscript-evidence-v1",
-  "created_utc": "2026-10-16T11:21:46.422210+00:00",
+  "created_utc": "2026-10-16T11:51:57.240033+00:00",
   "manuscript": {
     "path": "manuscript/third_working_draft.tex",
-    "bytes": 55267,
-    "sha256": "0d4eeb29878d3f84b8fbf9aef94d0402918d35c151023a3b985fb707d875c390"
+    "bytes": 55930,
+    "sha256": "c452d0682179394f18b5bc0dd05a6519ae4deff39b0fb8f02e54fa5200b93cc2"
   },
   "checker": {
     "path": "manuscript/build_evidence.py",
-    "bytes": 18647,
-    "sha256": "d2693e5b8ea78eb28f2ef25caa95d256a48f9372075b669a42b9c09c9e0009b7"
+    "bytes": 19750,
+    "sha256": "1eef21c6d74128331ff8f05865257307582f4e53949c283deee17b8c8166beb9"
   },
   "source_claim_check_passed": true,
   "reviewer_kind": "author AI assistant source and arithmetic check; not independent manuscript review",
   "standalone_source": true,
-  "bibliography_entries": 15,
+  "bibliography_entries": 16,
   "references_checked": 16,
   "source_bindings": [
     {
@@ -119,8 +119,8 @@
     },
     {
       "path": "manuscript/related_work_sources_20261016.json",
-      "bytes": 5744,
-      "sha256": "813b96494c66b84b627f235907e052efad56640e4210c01e392669f2f93497ad"
+      "bytes": 6165,
+      "sha256": "da0ffd0e0d4b6d8830a5d879a50814b8e29be000434be67d2577b33ef7d1cceb"
     },
     {
       "path": "local_run/local_llm_execution_20261014/llm_selection_v4_terminal_result.json",
@@ -140,12 +140,12 @@
     {
       "path": "manuscript/claims_review_20261016.json",
       "bytes": 8655,
-      "sha256": "635bac29974987df2e89264f19953356a4c43fcaa1e3fd5b76bc1cf3fc27299a"
+      "sha256": "396b49b2d25b314a891440e58a843633952c0476a5634b364f632d813d258257"
     },
     {
       "path": "manuscript/compute_accounting_20261016.json",
       "bytes": 4577,
-      "sha256": "ee5e42741d440edf0dcd818959d2379a3f7008b337bf09d62812d433abec0f5d"
+      "sha256": "877c866472a550850018d596857b503d307c663d69e883788a6594d619060c7b"
     },
     {
       "path": "manuscript/build_review.py",
@@ -180,7 +180,7 @@
     {
       "path": "manuscript/compute_history_20261016.json",
       "bytes": 36673,
-      "sha256": "bc3bfee70c06ab954b15b75fe27503f634fcc4119055d8babd5181431d780ee7"
+      "sha256": "027c8b8e994283d17e2c8a3adb8201a789778c6a1682dad686d761c9bbd11ba3"
     },
     {
       "path": "manuscript/compute_receipts_extract_20261016.json",
@@ -191,6 +191,11 @@
       "path": "manuscript/build_compute_history.py",
       "bytes": 17087,
       "sha256": "778f91048e6e7f662c772677a174932aca3ee941c4e3178f3c638be98da2b28f"
+    },
+    {
+      "path": "manuscript/unified_review_20261016.json",
+      "bytes": 5703,
+      "sha256": "f3406f6723cfd09082e3bb6f847221581799fa521028590d4620edff885c1abc"
     }
   ],
   "claims": [
@@ -334,6 +339,21 @@
         "manuscript/build_compute_history.py"
       ],
       "limit": "Explicit saved subset, not complete project cost. Array and model launch excerpts require private originals for extraction replay; public arithmetic is reproducible. Requested CPU times elapsed is not utilization or billed core time."
+    },
+    {
+      "sections": [
+        "sec:related",
+        "sec:evidence",
+        "sec:limits"
+      ],
+      "claim": "Unified author read-through, completed negative-calibration framing and explicit credit for preprocessing-aware unlearning as view maintenance",
+      "sources": [
+        "manuscript/unified_review_20261016.json",
+        "manuscript/related_work_sources_20261016.json",
+        "local_run/local_llm_execution_20261014/llm_selection_v3_terminal_result.json",
+        "local_run/local_llm_execution_20261014/llm_selection_v4_terminal_result.json"
+      ],
+      "limit": "Bounded author consistency review, not independent proof review or exhaustive novelty clearance. Two close-prior full texts and visual layout remain unverified."
     }
   ],
   "fixed_cutoff": "16 October 2026; terminal v4 negative at09:52:01UTC; downstream work blocked under this configuration",

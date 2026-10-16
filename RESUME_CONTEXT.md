@@ -1,3 +1,39 @@
+Latest continuation — 16 October 2026, 2026-10-16T11:53:22.159322+00:00
+
+UNIFIED AUTHOR REVIEW AND PRIOR-WORK CORRECTION.
+Completed the available whole-document consistency review. Introduction and
+conclusion now explicitly report both failed fully LLM calibrations; the
+natural-text effect study remains unexecuted. Added Schelter (2021), Towards
+Efficient Machine Unlearning via Incremental View Maintenance, as a direct
+antecedent including preprocessing in the maintained dataflow. The claim stays
+limited to the specified curator, remaining-horizon state contract and joint
+stored-feature/ridge construction. No general pipeline or IVM novelty claim.
+
+See manuscript/unified_review_20261016.json. This is an AUTHOR review, not a
+new independent proof/manuscript review. The official counterfactual-auditing
+repository tree still lacks its full paper; Dominici thesis full text was not
+located. Both gaps remain, with no inference from search absence. Visual layout
+is still unverified after the previously unavailable native UI service.
+
+The SAME open .tex compiled successfully. 36 direct source bindings and
+16 references passed. New immutable manuscript/release_20261016_v4.zip:
+SHA256 e76a88eff67c140b636bacc4b1218f42fe1a7e19b4432dd49741a80340b09262.
+86 payload files plus manifest passed CRC, exact member hashes and public
+source-check replay in a clean temporary extraction. Previous versions remain.
+The new primary PDF is private; no source text, pair labels or model weights
+were added to the public package. Protected local locks remain unchanged.
+
+Calibration controller remains terminal NEGATIVE; no restart, remote attempt,
+new job or model call. Fully LLM, zero human annotation/review. Original human
+and primary gates remain unmet. No retuning, downstream guard, effect or
+held-out launch. No original empirical-completion or submission-ready claim.
+
+Scheduler remains ACTIVE at its existing cadence. Available author review,
+compute subset, attribution and bounded packaging are now done. Advance only
+new actionable literature routes or restored review capabilities; do not repeat
+unchanged rebuilds as research progress. Remaining: visual layout, independent
+unified review and two full-text comparisons; original effects remain blocked.
+
 Latest continuation — 16 October 2026, 2026-10-16T11:23:51.360856+00:00
 
 HISTORICAL COMPUTE MILESTONE.
