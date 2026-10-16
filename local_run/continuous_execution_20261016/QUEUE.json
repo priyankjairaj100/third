@@ -27,6 +27,15 @@
       "done_when": "Terminal controller receipt plus independently checked selection and, if selected, fresh validation result.",
       "failure_branch": "Preserve negative calibration; do not authorize threshold-dependent work. Continue metadata, methods, theory, and negative-result reporting.",
       "id": "01-calibration",
+      "latest_call_count": {
+        "call_completions": 118,
+        "call_intents": 119,
+        "latest_completion_utc": "2026-10-16T08:30:32.746510+00:00",
+        "model_result_present": false,
+        "note": "Count only; completions remain unaudited until terminal CPU replay.",
+        "observed_utc": "2026-10-16T08:30:37.143850+00:00",
+        "planned_calls": 396
+      },
       "next_action": "Existing finite controller continues Mistral15242, exact-byte audit, 51-cut review and conditional fresh validation. Inspect completion/stopped receipts.",
       "state": "running"
     },
@@ -44,9 +53,10 @@
         "02-input-intake"
       ],
       "done_when": "Exhaustive intended-pair replay, bounded resource receipt and immutable disjoint panel memberships. Unavailable sizes recorded.",
+      "evidence": "local_run/local_llm_execution_20261014/llm_guard_benchmark_completed_20261016.json",
       "id": "03-guard-panels",
-      "next_action": "Implement and resource-qualify strict frozen E5 semantic leakage guard, bind passed model-defined threshold, freeze post-guard development and later evaluation panels.",
-      "state": "waiting"
+      "next_action": "Bind actual successful v4 fresh validation and independent-review bytes. Prepare full reserved-source guard and post-guard panels using the exact-parity-qualified routine; see FULL_GUARD_HANDOFF.txt. No full guard launched yet.",
+      "state": "software_and_resource_pilot_complete_waiting_for_validation"
     },
     {
       "depends_on": [
@@ -93,5 +103,5 @@
       "state": "waiting"
     }
   ],
-  "updated_utc": "2026-10-16T08:25:57.860158+00:00"
+  "updated_utc": "2026-10-16T08:33:13.088513+00:00"
 }

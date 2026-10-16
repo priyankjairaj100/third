@@ -1,0 +1,59 @@
+Next executable stage after actual positive fresh v4 validation
+
+The queue has an active heartbeat; do not create another automation/controller.
+Read task/work/resume-20261016/repair_pipeline_a01 first. A running or stopped
+controller is not a passed validation. Keep SSH refusal/transport-stop boundaries.
+
+Required predecessors:
+1. selection_completion.json passed, all51 exact cuts independently recomputed.
+2. completion.json has selection_passed and validation_run true, and the embedded
+   independent_validation_review has passed and model_validation_passed true.
+3. Bind exported actual selection/validation statistics and CPU audits through
+   independent_validation_review.bindings. Recheck exact locked_tau equality,
+   fresh sample identity, finite-population lower proportion >=0.90 and no overlap
+   status/category changes. A metadata passed field alone is insufficient.
+4. Bind the complete actual intake result0020c3a1679a7001ef0ddc3af05f429e3b4a49002f049dc46370156440f1ebe9
+   and independent reviewa447e187c5a5e74567dc225a2f3190ec5c1427e260b2390e98b7de5486ac8411.
+   Full source/cache/task pins and private allocation are inside that result.
+5. Bind guard benchmark packageae83810b1dc246b9d5c1c1b400ce5da18582ec96bd5437c80edc11f0e6d95108
+   and terminal result/process receipt in llm_guard_benchmark_completed_20261016.json.
+
+Write and test a NEW versioned full-stage package. The current benchmark is sealed
+and must not be modified or relabeled as full execution. The full guard scope is
+all10314 development_train rows against all42063 original calibration/test rows.
+This is433837782 ordered-reference cross-pairs. Never use later evaluation labels.
+Use only the locked validated threshold, FP32 source values, ordered FP64
+normalization/dots and strict >. Native E5 task locks already exist; do not refit.
+
+The tested guard_core.scan accepts indexed full-cache views and produces exact
+canonical stable-ID witnesses and scores. Its heldout order is lexical stable ID.
+The original panels.semantic_guard can provide an independent implementation
+comparison on the same entire intended scope. Account for the gathered FP32
+subset, metadata, memmap/page usage, temporary score blocks and outputs. Run
+comparison as a separate process if used for peak-RSS/resource qualification.
+Keep immutable private outputs and canonical source bindings before/after.
+
+The real pilot took0.7783seconds for262144pairs; linear full projection1288seconds.
+This projection excludes queue, input checking, complete publication and scaling.
+A full original-implementation replay would add another full scan. Choose a
+bounded Slurm budget with explicit margin and fresh quota, not an ETA guarantee.
+No memory/time family approval follows from the small pilot alone.
+
+After successful guard and independent review, retain only unremoved development
+training rows, keep original calibration/test unchanged, and select whole reserved
+sources in the previously frozen PLAN order for targets1000/2500/5000. Include
+the whole boundary source; report shortfalls without borrowing evaluation rows.
+Development utility may use ONLY the2138 reserved development_test rows. The
+18929 evaluation_test labels stay uninspected by development. Unknown singleton
+rows stay in populations and remain ineligible for genuine source withdrawals.
+
+This full stage accepts only scoped fully LLM development inputs, never the
+historical human-gated primary route. It must not automatically launch effects
+until exact request/baseline/resource scope is frozen. Next work is the smallest
+natural pilot comparing exact repair, fresh recuration and optimized B-E, with
+native task utility and complete retained-state, workspace and lifecycle costs.
+
+If selection or validation fails: preserve the negative result. Do not run this
+threshold-dependent guard, change the grid, replay invalid calls, or substitute
+a favorable cutoff. Continue the theorem/methods/limitations manuscript and
+reporting of completed negative evidence; explain any new decision needed.

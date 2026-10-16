@@ -7,7 +7,7 @@
     },
     {
       "evidence": "local_run/local_llm_execution_20261011/source_replay_result.json",
-      "limit": "External archive authenticity and primary input acceptance remain unresolved",
+      "limit": "Documentary corrected-release identity supports separate development; no publisher cryptographic attestation or original primary acceptance.",
       "work": "Local archive transformation and preparation replay for 140250 rows"
     },
     {
@@ -39,8 +39,26 @@
       "evidence": "local_run/local_llm_execution_20261014/llm_v4_qwen_audit_and_task_locks_20261016.json",
       "limit": "Calibration-only configuration, not held-out utility. Other learner representations need separate locks.",
       "work": "Native E5 task configuration:20 tags, five-source-fold six-lambda CV selected1e-5, all20 F1 thresholds independently checked"
+    },
+    {
+      "evidence": "local_run/local_llm_execution_20261014/llm_development_intake_completed_20261016.json",
+      "limit": "10314 training and2138 test rows reserved; counts precede semantic guard. Original human/primary route unchanged.",
+      "work": "Actual full source/cache/task bindings and whole-source development reservation, with independent arithmetic review"
+    },
+    {
+      "evidence": "local_run/local_llm_execution_20261014/llm_guard_benchmark_completed_20261016.json",
+      "limit": "A pilot, not the full development guard or empirical effect study.",
+      "work": "Exact guard implementation and real-cache resource pilot:262144 pairs, exact original-guard parity at three cuts"
     }
   ],
+  "continuous_execution": {
+    "automation_id": "continue-third-research",
+    "cadence_minutes": 30,
+    "latest_controller_pid": 59318,
+    "no_new_continue_prompt_required_for_routine_progress": true,
+    "queue": "local_run/continuous_execution_20261016/QUEUE.json",
+    "single_calibration_controller_active": true
+  },
   "estimation": {
     "audit_walltime_limit_is_not_an_ETA": true,
     "current_CPU_audit_walltime_limit_seconds": 3600,
@@ -51,7 +69,7 @@
   },
   "fully_llm_annotation": true,
   "human_review_required": false,
-  "observed_utc": "2026-10-16T07:58:37.821443+00:00",
+  "observed_utc": "2026-10-16T08:33:13.088513+00:00",
   "original_registry": {
     "core": 16912,
     "extensions": 4420,
@@ -67,15 +85,15 @@
     {
       "limit": "Passing is not guaranteed; all LLM judgments are model-defined, not human ground truth",
       "order": 1,
-      "scale": "Mistral396-call selection job15242 is running; at most440 additional validation calls across both models if selection passes",
+      "scale": "Mistral15242 has118/396 call completions at08:30:37UTC, still unaudited; controller advances audit and conditional fresh validation.",
       "state": "active",
       "work": "Finish v4 two-model selection and conditional fresh validation"
     },
     {
       "limit": "Native account metadata is only a contributor proxy; unknown owners remain singletons",
       "order": 2,
-      "state": "incomplete",
-      "work": "Bind separate-branch input/source/cache acceptance, freeze source panels, and complete any additional learner-representation locks; native E5 task settings are now fixed"
+      "state": "intake_and_reservation_complete_guard_pending",
+      "work": "Bind passed model validation, run full development leakage guard and freeze post-guard panels; other learner representations still need their own locks. Source/cache/task intake and pre-effect reservation are complete."
     },
     {
       "limit": "No practical speed, quality or memory benefit established yet",
