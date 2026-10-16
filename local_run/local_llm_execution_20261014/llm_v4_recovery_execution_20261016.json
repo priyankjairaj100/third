@@ -1,0 +1,111 @@
+{
+  "access": {
+    "active_project_jobs_before_cleanup": [],
+    "execution_checkout_clean": true,
+    "execution_commit": "de9de39a1a72db40485878452561affe2fbd24aa",
+    "fresh_authenticated_command_access_verified": true
+  },
+  "cleanup": {
+    "deleted_files": 8,
+    "elapsed_seconds": 1,
+    "exit": "0:0",
+    "installed_environments_touched": false,
+    "job_id": "15240",
+    "node": "csis.cn1",
+    "plan_sha256": "36752a81f79ed97dbddae43a0c2ea9a03f393197b153f45a92afde9feabe7ca4",
+    "removed_allocated_bytes": 2376056832,
+    "result_sha256": "5801219560c6296020a010a9b0e7a33201f74f9710e7ce217a370a82a0cca795",
+    "scientific_artifacts_touched": false,
+    "scope": "Old pip HTTP download-cache files only; seven-day minimum age and exact metadata revalidation",
+    "selected_pairs": 4,
+    "source_sha256": "733825d6500a36611539dd9a1a6ef8c299c6d7927401406efa07e913646d3215",
+    "state": "COMPLETED"
+  },
+  "controller": {
+    "active_at_observation": true,
+    "adoption_reconciliation": {
+      "adopted_job": "15241",
+      "original_Qwen_result_unchanged": true,
+      "original_failure_preserved": true,
+      "passed": true
+    },
+    "does_not_launch_main_effect_study": true,
+    "no_automatic_retry": true,
+    "pid": 59318,
+    "private_state": "task/work/resume-20261016/repair_pipeline_a01",
+    "requires_local_Mac_and_working_SSH_for_progression": true,
+    "scope": "Corrected Qwen audit; original Mistral inference; corrected audit; selection statistics and independent review; conditional fresh validation",
+    "software_tests_passed": 8,
+    "source": "local_run/llm_v4_audit_repair_controller_v2_20261016/continue_pipeline.py",
+    "source_sha256": "09ccb84a17e14e416e2a3a6bfb7d8dc6ecadeb0ac10b8ef1380ee6410faedc89",
+    "started_utc": "2026-10-16T07:36:31.513646+00:00"
+  },
+  "corrected_qwen_audit": {
+    "full_audit_remains_in_progress": true,
+    "job_id": "15241",
+    "launch_receipt": {
+      "bytes": 2617,
+      "sha256": "2a31cc10dffae57fea6d3b14c78e46420feddc8703995aef8a67c8c69811540f"
+    },
+    "model_calls_repeated": 0,
+    "observed_state": "RUNNING",
+    "observed_utc": "2026-10-16T07:36:38.863533+00:00",
+    "passed": null,
+    "repair_package_sha256": "d498d2d0dc5fe30b81912d8804e0e402b1b65f9263ac0d6b8b69e7bf38ee1f0e",
+    "root": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/qualification/llm-v4-audit-repair-v1-20261015-a01/selection/audit_qwen",
+    "submitted_once": true
+  },
+  "fully_llm": true,
+  "human_annotation_calls": 0,
+  "next_actions": [
+    "Let the single active controller finish the corrected Qwen audit before publishing its explicitly bound accepted-audit view",
+    "Continue original Mistral inference, corrected audit, selection statistics and independent exact review",
+    "Run fresh validation only if the frozen selection rule qualifies; preserve negative outcomes without retuning",
+    "Before the main empirical study, resolve source/input acceptance and freeze task/source panels under the LLM-only protocol"
+  ],
+  "observed_utc": "2026-10-16T07:38:28.374972+00:00",
+  "preserved_evidence": {
+    "invalid_json": 5,
+    "new_model_outputs_this_continuation": 0,
+    "original_failed_audit": "14187",
+    "original_failure_preserved": true,
+    "original_qwen_result": {
+      "bytes": 434458,
+      "sha256": "ba716a2588a174cf0968c60e3a8aa659b47b9e806b1d94534988539fb7b25011"
+    },
+    "qwen_job": "13663",
+    "recorded_calls": 396,
+    "valid": 391
+  },
+  "private_evidence": {
+    "cache_apply_launch.json": {
+      "bytes": 1031,
+      "sha256": "bedf7f85ec02063373a3da880d69cec60dd958a609dd843c319fb1103594ec1d"
+    },
+    "cache_apply_status.json": {
+      "bytes": 1658,
+      "sha256": "708f49f7fc8415b1bdeda2228760ec3dd923e06b72006946fb8676af8bb684a5"
+    },
+    "controller_start.json": {
+      "bytes": 403,
+      "sha256": "84f1627e749f3c0e811ebaa53bae78f4a5f78ac7527b19291b06bcfd7c59a877"
+    },
+    "preflight.json": {
+      "bytes": 14496,
+      "sha256": "580419ca8af66aa7067ba890811054cfe8ac371265776917a1a5404139acd42c"
+    },
+    "qwen_audit_repair_launch_receipt.json": {
+      "bytes": 2617,
+      "sha256": "2a31cc10dffae57fea6d3b14c78e46420feddc8703995aef8a67c8c69811540f"
+    }
+  },
+  "project_complete": false,
+  "schema": "third-calibration-recovery-executed-20261016-v1",
+  "storage": {
+    "audit_allowance_bytes": 67108864,
+    "fresh_launch_quota_available_soft_bytes": 10951184384,
+    "passed_at_audit_launch": true,
+    "space_is_not_reserved": true,
+    "unchanged_reserve_bytes": 8589934592
+  }
+}

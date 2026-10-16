@@ -1,0 +1,92 @@
+{
+  "completed": [
+    {
+      "evidence": "empirical_execution/phase10/CHECKPOINT.md",
+      "limit": "Constructed-family private-information result, not natural semantic usefulness or total-byte optimality",
+      "work": "Scoped finite-format theory and canonical sequential codec"
+    },
+    {
+      "evidence": "local_run/local_llm_execution_20261011/source_replay_result.json",
+      "limit": "External archive authenticity and primary input acceptance remain unresolved",
+      "work": "Local archive transformation and preparation replay for 140250 rows"
+    },
+    {
+      "evidence": "local_run/local_llm_execution_20261014/e5_calibration_frame_result.json",
+      "limit": "Calibration adapter acceptance; historical full-population original route acceptance remains false",
+      "work": "32-shard CPU E5 encoding/replay, assembled 140250 by 768 cache and verified 20996-row calibration adapter"
+    },
+    {
+      "evidence": "local_run/local_llm_execution_20261014/llm_v4_execution_progress.json",
+      "limit": "Preparation, not validated semantic labels",
+      "work": "Full 220405510-pair census, v4 stratified sample and all792 prompt token replays"
+    },
+    {
+      "evidence": "local_run/local_llm_execution_20261014/llm_v4_recovery_execution_20261016.json",
+      "limit": "Corrected full CPU audit currently running; invalid responses remain in denominator",
+      "work": "Qwen selection inference:396 recorded calls,391 valid,5 invalid JSON"
+    },
+    {
+      "evidence": "local_run/local_llm_execution_20261014/llm_selection_v3_terminal_result.json",
+      "limit": "Preserved negative result; v4 is a separately versioned follow-up",
+      "work": "Earlier v3 two-model selection completed with zero qualifying thresholds"
+    }
+  ],
+  "estimation": {
+    "audit_walltime_limit_is_not_an_ETA": true,
+    "current_CPU_audit_walltime_limit_seconds": 3600,
+    "next_calibration_stage_requires_hours_and_queue_time": true,
+    "observed_Qwen396_calls_seconds": 11836,
+    "paper_completion_ETA": null,
+    "reason": "Main empirical throughput and source/input readiness are not yet measured. Calibration may fail."
+  },
+  "fully_llm_annotation": true,
+  "human_review_required": false,
+  "observed_utc": "2026-10-16T07:38:28.374972+00:00",
+  "original_registry": {
+    "core": 16912,
+    "extensions": 4420,
+    "full_matrix_not_activated_by_this_status_report": true,
+    "prospective_jobs": 21332,
+    "registered_is_not_executed": true,
+    "scope_changes_require_explicit_versioned_protocol": true
+  },
+  "percentage_complete": null,
+  "percentage_note": "No meaningful weighted completion measure exists. Theory and engineering are developed; most primary empirical evidence and final synthesis remain.",
+  "primary_semantic_study_started": false,
+  "remaining": [
+    {
+      "limit": "Passing is not guaranteed; all LLM judgments are model-defined, not human ground truth",
+      "order": 1,
+      "scale": "396 Mistral selection calls still ahead; at most440 additional validation calls across both models if selection passes",
+      "state": "active",
+      "work": "Finish v4 two-model selection and conditional fresh validation"
+    },
+    {
+      "limit": "Native account metadata is only a contributor proxy; unknown owners remain singletons",
+      "order": 2,
+      "state": "incomplete",
+      "work": "Resolve study input/source acceptance, freeze source panels, task labels, learner settings and scope"
+    },
+    {
+      "limit": "No practical speed, quality or memory benefit established yet",
+      "order": 3,
+      "state": "main_study_unstarted",
+      "work": "Run source-disjoint development, exact repair versus fresh recuration, downstream task quality and strong compact-payload baselines with full lifecycle time/memory accounting"
+    },
+    {
+      "limit": "Keep unavailable and failed families visible; no post-outcome tuning of tests",
+      "order": 4,
+      "state": "awaiting_real_main_results",
+      "work": "Complete frozen statistical analysis, robustness/limitations and claim decisions"
+    },
+    {
+      "limit": "Existing theory/protocol sources are not a finished submission manuscript",
+      "order": 5,
+      "state": "incomplete",
+      "work": "Assemble unified manuscript, six planned figures, three planned tables, current related-work review and permitted reproducibility release"
+    }
+  ],
+  "schema": "third-overall-paper-progress-20261016-v1",
+  "submission_ready": false,
+  "title": "Unlearning What Was Never Trained: Counterfactual Repair of Semantic Data Curation"
+}

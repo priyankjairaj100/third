@@ -16,25 +16,25 @@
   "audit_failure_cause": "Path.read_text applied universal-newline translation to CR/CRLF bytes before hashing and replay",
   "automatic_retries": false,
   "context_overflow_requests": 0,
-  "controller_code_sha256": "19cf0cf7296b723faaa12b776782906759dc9a25f3793c569910a6240c4e3e34",
-  "controller_location": "task/work/resume-20261014/node_pool_v2_pipeline_a01",
-  "controller_stop": {
+  "controller_code_sha256": "09ccb84a17e14e416e2a3a6bfb7d8dc6ecadeb0ac10b8ef1380ee6410faedc89",
+  "controller_location": "task/work/resume-20261016/repair_pipeline_a01",
+  "current_stage": {
+    "blockers": [],
+    "job_id": "15241",
+    "observed_state": "RUNNING",
+    "observed_utc": "2026-10-16T07:36:38.863533+00:00",
+    "stage": "corrected_qwen_audit",
+    "submitted": true
+  },
+  "execution_version": "node-pool-v2",
+  "finite_controller_active": true,
+  "historical_controller_stop": {
     "automatic_retry": false,
     "error": "stage_failed:selection_audit_qwen",
     "error_type": "RuntimeError",
     "reconcile_before_resume": true,
     "utc": "2026-10-14T15:14:45.662904+00:00"
   },
-  "current_stage": {
-    "blockers": [
-      "fresh_storage_gate",
-      "cluster_connection_timeout"
-    ],
-    "stage": "corrected_qwen_audit_prelaunch",
-    "submitted": false
-  },
-  "execution_version": "node-pool-v2",
-  "finite_controller_active": false,
   "human_annotation_calls": 0,
   "inference_activated_at_this_observation": true,
   "inference_package": {
@@ -48,10 +48,11 @@
     "stage": "qwen_selection",
     "state": "COMPLETED"
   },
+  "latest_recovery_report": "local_run/local_llm_execution_20261014/llm_v4_recovery_execution_20261016.json",
   "latest_repair_report": "local_run/local_llm_execution_20261014/llm_v4_raw_byte_audit_repair_20261016.json",
   "latest_stop_report": "local_run/local_llm_execution_20261014/llm_v4_qwen_audit_stop_20261015.json",
   "node_pool_migration_report": "local_run/local_llm_execution_20261014/llm_node_pool_v2_execution.json",
-  "portable_controller_source": "local_run/llm_node_pool_controller_v2_20261014/continue_pipeline.py",
+  "portable_controller_source": "local_run/llm_v4_audit_repair_controller_v2_20261016/continue_pipeline.py",
   "previous_execution_snapshot": "local_run/local_llm_execution_20261014/llm_v4_execution_v1_superseded_snapshot.json",
   "project_complete": false,
   "qualification": {
@@ -136,16 +137,23 @@
     "Produce the bound figures, tables, claim ledger and reproducibility release"
   ],
   "repair_continuation": {
-    "adopts_existing_corrected_qwen_audit": true,
-    "local_software_scenarios_passed": 8,
-    "path": "local_run/llm_v4_audit_repair_controller_v1_20261015",
-    "prepared": true,
-    "scope": "Mistral, complete selection review, and conditional fresh validation only",
-    "source": {
-      "bytes": 7070,
-      "sha256": "155c44a0983e3ff0a22d15f1a1da9708a115aee86ccfb3a806a434b30a1645ef"
+    "active_at_observation": true,
+    "adoption_reconciliation": {
+      "adopted_job": "15241",
+      "original_Qwen_result_unchanged": true,
+      "original_failure_preserved": true,
+      "passed": true
     },
-    "started": false
+    "does_not_launch_main_effect_study": true,
+    "no_automatic_retry": true,
+    "pid": 59318,
+    "private_state": "task/work/resume-20261016/repair_pipeline_a01",
+    "requires_local_Mac_and_working_SSH_for_progression": true,
+    "scope": "Corrected Qwen audit; original Mistral inference; corrected audit; selection statistics and independent review; conditional fresh validation",
+    "software_tests_passed": 8,
+    "source": "local_run/llm_v4_audit_repair_controller_v2_20261016/continue_pipeline.py",
+    "source_sha256": "09ccb84a17e14e416e2a3a6bfb7d8dc6ecadeb0ac10b8ef1380ee6410faedc89",
+    "started_utc": "2026-10-16T07:36:31.513646+00:00"
   },
   "request_preparation_package_sha256": "2995c12d996b362e13eb273a54807a95c3516e8a223bc34efc77dc53220050db",
   "requests": {
@@ -226,7 +234,7 @@
   },
   "sampling_job": "13636",
   "schema": "third-v4-execution-progress-v2",
-  "updated_utc": "2026-10-16T07:28:31.357743+00:00",
+  "updated_utc": "2026-10-16T07:38:28.374972+00:00",
   "validation_continuation": {
     "controller_active": false,
     "controller_backup": "local_run/llm_node_pool_controller_v2_20261014/continue_pipeline.py",

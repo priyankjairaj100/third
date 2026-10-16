@@ -1,3 +1,23 @@
+Latest continuation — 16 October 2026, 2026-10-16T07:38:28.374972+00:00
+
+Access restored. Cache cleanup 15240 COMPLETED 0:0 and removed exactly eight old
+pip HTTP-cache files (2376056832 allocated bytes) under the reviewed plan. Models,
+data, installed environments and scientific results were untouched. Fresh launch
+quota passed the unchanged 8 GiB reserve and 64 MiB audit allowance.
+Corrected Qwen CPU audit 15241 was submitted ONCE and is RUNNING in the latest
+observation. All original Qwen 13663 outputs and failed audit 14187 are preserved.
+No model calls were repeated. One finite controller PID 59318 is ACTIVE at
+task/work/resume-20261016/repair_pipeline_a01, using the source-backed v2 controller
+and the new explicit authenticated session. It adopted audit 15241 and will
+advance Mistral, corrected audit, selection statistics and conditional fresh
+validation only on verified success. Do not start another controller or submit
+occupied stages. Inspect its events/stopped/completion files first on resume.
+The Mac and its SSH connection must remain available for progression.
+Fully LLM, zero human reviews. Main repair/quality/cost experiments remain
+unstarted; input/source acceptance, panels, analysis and final manuscript remain.
+Read local_run/local_llm_execution_20261014/llm_v4_recovery_execution_20261016.json and
+local_run/local_llm_execution_20261014/paper_progress_20261016.json.
+
 Latest continuation — 16 October 2026, 2026-10-16T07:28:31.357743+00:00
 
 The Qwen audit failure is now diagnosed: Path.read_text converted CR/CRLF line

@@ -1,0 +1,24 @@
+{
+  "derivation": "Only private WORK date changes in controller; transport selects restored 16 October session. Scientific workers unchanged.",
+  "files": {
+    "README.txt": {
+      "bytes": 1347,
+      "sha256": "f10d0824779ff336714e0281a5d88516aaf9441298f56785290dc4090268b112"
+    },
+    "continue_pipeline.py": {
+      "bytes": 7070,
+      "sha256": "09ccb84a17e14e416e2a3a6bfb7d8dc6ecadeb0ac10b8ef1380ee6410faedc89"
+    },
+    "remote_fresh_session.py": {
+      "bytes": 1385,
+      "sha256": "edab1774121e66704514cc44d65fcf837d824c507e0f0453b9d208a5e00ab848"
+    },
+    "test_controller.py": {
+      "bytes": 3990,
+      "sha256": "6e546a7eacb06b56d69c05004a6e752b6d8a6aa777dd164abadb0590cd2058fa"
+    }
+  },
+  "prior_controller_source_sha256": "155c44a0983e3ff0a22d15f1a1da9708a115aee86ccfb3a806a434b30a1645ef",
+  "repair_package_sha256": "d498d2d0dc5fe30b81912d8804e0e402b1b65f9263ac0d6b8b69e7bf38ee1f0e",
+  "schema": "third-audit-repair-controller-v2"
+}
