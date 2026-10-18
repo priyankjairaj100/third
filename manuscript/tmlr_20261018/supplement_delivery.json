@@ -1,0 +1,136 @@
+{
+  "archive": {
+    "bytes": 42793,
+    "name": "tmlr_anonymous_supplement_v1.zip",
+    "sha256": "c6ab12aa23da1563d5f659f2406ce2a6985085a0c55b7de531119e9d421dff26"
+  },
+  "archive_members": 13,
+  "clean_extract_replay": {
+    "calibration_table": [
+      {
+        "canonical_pairs": 90,
+        "failed_cuts": 51,
+        "fresh_validation": false,
+        "joint_positives": 0,
+        "model_calls": 198,
+        "threshold_selected": false,
+        "version": "v3"
+      },
+      {
+        "canonical_pairs": 360,
+        "failed_cuts": 51,
+        "fresh_validation": false,
+        "joint_positives": 27,
+        "model_calls": 792,
+        "threshold_selected": false,
+        "version": "v4"
+      }
+    ],
+    "compute_records_summed": 72,
+    "cut_quotients_and_decisions_checked": 102,
+    "new_independent_scientific_verification": false,
+    "not_replayed": [
+      "private pair scores or individual labels",
+      "fresh model inference",
+      "within-bin sample selection",
+      "natural effect experiments",
+      "universal theorem proofs"
+    ],
+    "passed": true,
+    "payload_files": 12,
+    "scope": "aggregate arithmetic and manifest replay only",
+    "v4_bin_boundary_cuts_reconstructed": 12
+  },
+  "compute_rows_preserved_with_identity_fields_removed": 72,
+  "content_and_member_screening": {
+    "categories": [
+      "personal_name_or_account",
+      "local_absolute_path",
+      "cluster_hostname",
+      "original_repository_url",
+      "ipv4_address",
+      "private_key",
+      "email",
+      "token_assignment"
+    ],
+    "findings": [],
+    "limitations": "Bounded automated screening plus explicit field allowlist, not a guarantee against external source matching.",
+    "passed": true
+  },
+  "cut_records_preserved_exactly": 102,
+  "import_scan": {
+    "code/algorithm_round2.py": [
+      "__future__",
+      "argparse",
+      "dataclasses",
+      "itertools",
+      "json",
+      "math",
+      "pathlib",
+      "random",
+      "time"
+    ],
+    "code/empirical_execution/ccu/__init__.py": [
+      "core"
+    ],
+    "code/empirical_execution/ccu/core.py": [
+      "__future__",
+      "dataclasses",
+      "hashlib",
+      "math",
+      "numpy",
+      "scipy.linalg",
+      "sys",
+      "typing"
+    ],
+    "code/empirical_execution/phase10/finite_word_codec.py": [
+      "__future__",
+      "collections.abc",
+      "dataclasses",
+      "fractions",
+      "hashlib",
+      "json",
+      "math",
+      "numpy",
+      "pathlib",
+      "phase3.reference_graph",
+      "struct",
+      "sys"
+    ],
+    "code/empirical_execution/phase3/panels.py": [
+      "__future__",
+      "collections",
+      "hashlib",
+      "json",
+      "math",
+      "numpy",
+      "pathlib",
+      "typing",
+      "unicodedata"
+    ],
+    "code/empirical_execution/phase3/reference_graph.py": [
+      "ccu.core",
+      "hashlib",
+      "math",
+      "numpy",
+      "phase3.panels"
+    ]
+  },
+  "limitations": [
+    "No private data or fresh-model replay.",
+    "No manuscript or PDF included.",
+    "Numerical modules require external NumPy/SciPy and were not executed by this aggregate replay.",
+    "Full historical service and theorem-check suites are not included.",
+    "Exact public source bytes and hashes can be linkable despite metadata removal."
+  ],
+  "manifest": {
+    "bytes": 2185,
+    "sha256": "636101a2cd539e9caa77f81f8fdb5fef5e4b595ff63a44c2ebb3689277462286"
+  },
+  "new_independent_scientific_verification": false,
+  "original_aggregate_source_bindings_rechecked": 4,
+  "payload_files": 12,
+  "schema": "anonymous-supplement-delivery-v1",
+  "source_files_copied_exactly": 6,
+  "zip_crc_and_metadata_check_passed": true
+}

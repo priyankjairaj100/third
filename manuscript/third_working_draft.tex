@@ -1,5 +1,214 @@
-\documentclass[10pt,twocolumn]{article}
-\usepackage[letterpaper,margin=0.75in,columnsep=0.25in]{geometry}
+% Official TMLR style embedded verbatim for the single-file editor.
+\begin{filecontents*}[overwrite]{tmlr.sty}
+%%%% TMLR Macros (LaTex)
+%%%% Adapted by Hugo Larochelle and Fabian Pedregosa from the 
+%%%% ICLR stylefile Macros and borrowing from the JMLR Macros
+%%%% Style File
+
+%%%% Last edited, January 2021 by Chris J. Maddison
+%%%%      Change font choice
+
+% Change the overall width of the page.  If these parameters are
+%       changed, they will require corresponding changes in the
+%       maketitle section.
+%
+\usepackage{eso-pic} % used by \AddToShipoutPicture
+\RequirePackage{fancyhdr}
+\RequirePackage{natbib}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% modification to natbib citations
+\setcitestyle{authoryear,round,citesep={;},aysep={,},yysep={;}}
+
+\renewcommand{\topfraction}{0.95}   % let figure take up nearly whole page
+\renewcommand{\textfraction}{0.05}  % let figure take up nearly whole page
+
+
+%%%%%%%% Options
+\newif\if@accepted\@acceptedfalse
+\DeclareOption{accepted}{%
+    \@acceptedtrue
+}
+% declare preprint option, which creates a preprint version ready for
+% upload to, e.g., arXiv
+\newif\if@preprint\@preprintfalse
+\DeclareOption{preprint}{
+  \@preprinttrue
+  \@acceptedtrue
+}
+
+\DeclareOption*{\PackageWarning{tmlr}{Unknown ‘\CurrentOption’}}
+\ProcessOptions\relax
+
+% Specify the dimensions of each page
+
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+
+
+\oddsidemargin 0in    %   Note \oddsidemargin = \evensidemargin
+\evensidemargin 0in
+\marginparwidth 0.07 true in
+%\marginparwidth 0.75 true in
+%\topmargin 0 true pt           % Nominal distance from top of page to top of
+%\topmargin 0.125in
+\topmargin -0.625in
+\addtolength{\headsep}{0.25in}
+\textheight 9.0 true in       % Height of text (including footnotes & figures)
+\textwidth 6.5 true in        % Width of text line.
+\widowpenalty=10000
+\clubpenalty=10000
+
+
+% \thispagestyle{empty}        \pagestyle{empty}
+\flushbottom \sloppy
+
+% We're never going to need a table of contents, so just flush it to
+% save space --- suggested by drstrip@sandia-2
+\def\addcontentsline#1#2#3{}
+
+% Title stuff, taken from deproc.
+\def\maketitle{\par
+\begingroup
+   \def\thefootnote{\fnsymbol{footnote}}
+   \def\@makefnmark{\hbox to 0pt{$^{\@thefnmark}$\hss}} % for perfect author
+                                                        % name centering
+%   The footnote-mark was overlapping the footnote-text,
+%   added the following to fix this problem               (MK)
+   \long\def\@makefntext##1{\parindent 1em\noindent
+                            \hbox to1.8em{\hss $\m@th ^{\@thefnmark}$}##1}
+   \@maketitle \@thanks
+\endgroup
+\setcounter{footnote}{0}
+\let\maketitle\relax \let\@maketitle\relax
+\gdef\@thanks{}\gdef\@author{}\gdef\@title{}\let\thanks\relax}
+
+\newlength\aftertitskip     \newlength\beforetitskip
+\newlength\interauthorskip  \newlength\aftermaketitskip
+
+%% Changeable parameters.
+\setlength\aftertitskip{0.3in plus 0.2in minus 0.2in}
+\setlength\beforetitskip{0.05in plus 0.08in minus 0.08in}
+\setlength\interauthorskip{0.08in plus 0.1in minus 0.1in}
+\setlength\aftermaketitskip{0.3in plus 0.1in minus 0.1in}
+
+\def\@startauthor{\noindent \normalsize\bf}
+\def\@endauthor{}
+
+\def\addr{\small\it}%
+\def\email{\hfill\small\it}%
+\def\name{\normalsize\bf}%
+\def\name{\normalsize\bf}%
+\def\AND{\@endauthor\rm\hss \vskip \interauthorskip \@startauthor}
+
+% The toptitlebar has been raised to top-justify the first page
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+
+\if@accepted
+    \if@preprint
+        \lhead{}
+    \else
+        \lhead{Published in Transactions on Machine Learning Research (\month/\year)}
+    \fi
+\else
+       \lhead{Under review as submission to TMLR}
+\fi
+
+% Title (includes both anonymized and non-anonymized versions)
+\def\@maketitle{\vbox{\hsize\textwidth
+%\linewidth\hsize \vskip 0.1in \toptitlebar \centering
+{\LARGE\bf\sffamily \@title\par}\vskip \aftertitskip
+%\bottomtitlebar % \vskip 0.1in %  minus
+\if@accepted
+    \if@preprint
+        \@startauthor \@author \@endauthor
+    \else
+        \@startauthor \@author \\ \\ {\bf Reviewed on OpenReview:} \openreview \@endauthor
+    \fi
+\else
+    \@startauthor Anonymous authors\\Paper under double-blind review \@endauthor
+\fi
+\vskip 0.3in minus 0.1in}}
+
+\renewenvironment{abstract}{\vskip.075in\centerline{\large\bf\sffamily
+Abstract}\vspace{0.5ex}\begin{quote}}{\par\end{quote}\vskip 1ex}
+
+% sections with less space
+\def\section{\@startsection {section}{1}{\z@}{-2.0ex plus
+    -0.5ex minus -.2ex}{1.5ex plus 0.3ex
+minus0.2ex}{\large\bf\raggedright\sffamily}}
+
+\def\subsection{\@startsection{subsection}{2}{\z@}{-1.8ex plus
+-0.5ex minus -.2ex}{0.8ex plus .2ex}{\normalsize\bf\raggedright\sffamily}}
+\def\subsubsection{\@startsection{subsubsection}{3}{\z@}{-1.5ex
+plus      -0.5ex minus -.2ex}{0.5ex plus
+.2ex}{\normalsize\bf\raggedright\sffamily}}
+\def\paragraph{\@startsection{paragraph}{4}{\z@}{1.5ex plus
+0.5ex minus .2ex}{-1em}{\normalsize\bf}}
+\def\subparagraph{\@startsection{subparagraph}{5}{\z@}{1.5ex plus
+  0.5ex minus .2ex}{-1em}{\normalsize\bf}}
+\def\subsubsubsection{\vskip
+5pt{\noindent\normalsize\rm\raggedright\sffamily}}
+
+
+% Footnotes
+\footnotesep 6.65pt %
+\skip\footins 9pt plus 4pt minus 2pt
+\def\footnoterule{\kern-3pt \hrule width 12pc \kern 2.6pt }
+\setcounter{footnote}{0}
+
+% Lists and paragraphs
+\parindent 0pt
+\topsep 4pt plus 1pt minus 2pt
+\partopsep 1pt plus 0.5pt minus 0.5pt
+\itemsep 2pt plus 1pt minus 0.5pt
+\parsep 2pt plus 1pt minus 0.5pt
+\parskip .5pc
+
+
+%\leftmargin2em
+\leftmargin3pc
+\leftmargini\leftmargin \leftmarginii 2em
+\leftmarginiii 1.5em \leftmarginiv 1.0em \leftmarginv .5em
+
+%\labelsep \labelsep 5pt
+
+\def\@listi{\leftmargin\leftmargini}
+\def\@listii{\leftmargin\leftmarginii
+   \labelwidth\leftmarginii\advance\labelwidth-\labelsep
+   \topsep 2pt plus 1pt minus 0.5pt
+   \parsep 1pt plus 0.5pt minus 0.5pt
+   \itemsep \parsep}
+\def\@listiii{\leftmargin\leftmarginiii
+    \labelwidth\leftmarginiii\advance\labelwidth-\labelsep
+    \topsep 1pt plus 0.5pt minus 0.5pt
+    \parsep \z@ \partopsep 0.5pt plus 0pt minus 0.5pt
+    \itemsep \topsep}
+\def\@listiv{\leftmargin\leftmarginiv
+     \labelwidth\leftmarginiv\advance\labelwidth-\labelsep}
+\def\@listv{\leftmargin\leftmarginv
+     \labelwidth\leftmarginv\advance\labelwidth-\labelsep}
+\def\@listvi{\leftmargin\leftmarginvi
+     \labelwidth\leftmarginvi\advance\labelwidth-\labelsep}
+
+\abovedisplayskip 7pt plus2pt minus5pt%
+\belowdisplayskip \abovedisplayskip
+\abovedisplayshortskip  0pt plus3pt%
+\belowdisplayshortskip  4pt plus3pt minus3pt%
+
+
+\def\toptitlebar{\hrule height4pt\vskip .25in\vskip-\parskip}
+
+\def\bottomtitlebar{\vskip .29in\vskip-\parskip\hrule height1pt\vskip
+.09in} %
+\end{filecontents*}
+\documentclass[10pt]{article}
+\usepackage{tmlr}
 \usepackage{amsmath,amssymb,amsthm,microtype}
 \usepackage[hidelinks]{hyperref}
 \usepackage{url}
@@ -13,9 +222,10 @@
 \newcommand{\cur}{\mathcal C}
 \newcommand{\bits}{\mathsf B}
 \setlength{\emergencystretch}{1em}
-\title{Unlearning What Was Never Trained:\\Counterfactual Repair of Semantic Data Curation}
-\author{Working research manuscript}
-\date{16 October 2026}
+\title{Unlearning What Was Never Trained:\\Exact Repair After Data Curation}
+\author{Anonymous authors}
+\date{}
+\hypersetup{pdfauthor={},pdftitle={Unlearning What Was Never Trained: Exact Repair After Data Curation}}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -34,19 +244,16 @@ algebraic and information results. An AskUbuntu calibration study uses two
 local LLMs and no human annotation. Both completed calibration versions failed
 their frozen selection criteria. In the follow-up, the largest weighted
 joint-positive proportion over 51 cuts was 40\%, below the required 95\%.
-The downstream effect study therefore remains unexecuted. No natural-text
-utility, runtime, or total-memory advantage is claimed at this checkpoint.
+The downstream effect study therefore remains unexecuted. The results identify what exact counterfactual repair must remember,
+while providing no evidence of a natural-text utility, runtime, or
+total-memory advantage.
 \end{abstract}
 
-\noindent\textbf{Draft status.} This is an integrated working paper, not a
-submission-ready result. Sections~\ref{sec:study}--\ref{sec:evidence} separate
-executed preparation and negative evidence from prospective experiments.
-The fixed protocols and earlier failures remain authoritative.
 
 \section{Introduction}
 Data curation determines what a learner sees. Semantic deduplication removes
 examples judged too similar to earlier examples, often before training begins
-\cite{semdedup}. A later deletion request acts on the raw data collection.
+\citep{semdedup}. A later deletion request acts on the raw data collection.
 Repeating the same curator after that deletion can produce a different
 training set, including documents that were never used by the original model.
 An unlearning procedure must specify whether it promises to reproduce that
@@ -68,7 +275,7 @@ algebraic illustration; it is not a fabricated natural-language observation.
 \begin{figure}[t]
 \centering
 \setlength{\fboxsep}{7pt}
-\fbox{\begin{minipage}{0.88\columnwidth}\centering
+\fbox{\begin{minipage}{0.65\linewidth}\centering
 Priority: $a\prec b\prec c$\\[4pt]
 Similarity edges: $a\;---\;b\;---\;c$\\[5pt]
 Before deletion: $\cur(D)=\{a\}$\\
@@ -100,10 +307,16 @@ target changes, utility, and complete system cost remains unexecuted.
 Neither deletion-induced additions nor provenance maintenance is a new
 general principle. Nonmonotone database queries already exhibit the former,
 and provenance and incremental view maintenance address the latter
-\cite{green,aggregate,dbsp,priu,ivmunlearning}. Our claim concerns the stated curator,
+\citep{green,aggregate,dbsp,priu,ivmunlearning}. Our claim concerns the stated curator,
 remaining-horizon repair contract, and shared-feature learner construction.
-The main unresolved practical question is whether these effects are large
-and useful enough in natural NLP pipelines to justify their full cost.
+The results are useful when specifying an unlearning service: its target,
+remaining deletion budget, and access to excluded data determine what it must
+retain. They do not establish that a polynomial summary is the cheapest
+implementation. In particular, a compact eligible-payload baseline can use
+less total memory. The negative calibration also shows why a theoretical
+repair guarantee should not be presented as validated semantic deduplication.
+Whether natural-text target changes justify the complete repair cost remains
+an open empirical question.
 
 \section{Target, curator, and access contract}\label{sec:setup}
 Each record $v$ has a stable identifier, a fixed feature row $z_v$, and, when
@@ -122,7 +335,7 @@ All earlier raw neighbors matter, including neighbors that the curator
 rejects. This is not greedy selection against only previously retained
 records. For nonnegative thresholds, the upper-triangle column-maximum
 test in the released SemDeDup code has this suppression form
-\cite{semcode}. We analyze its fixed graph and order; we do not identify
+\citep{semcode}. We analyze its fixed graph and order; we do not identify
 our target with every stage or configuration of that pipeline.
 
 \paragraph{Restriction consistency.}
@@ -170,7 +383,7 @@ $x_J=\prod_{u\in J}x_u$, including $x_\varnothing=1$. Then
 \end{align}
 Each record contributes to at most two keys. This is a signed Boolean
 provenance representation, building on established provenance ideas
-\cite{green,aggregate}, rather than a new polynomial formalism.
+\citep{green,aggregate}, rather than a new polynomial formalism.
 
 \begin{theorem}[Finite-horizon state repair]\label{thm:repair}
 Keep only coefficients with $|J|\le K$. For every $|F|\le K$,
@@ -385,12 +598,13 @@ coding theorem. Parameter fidelity does not establish constant NLP test
 loss: averaging prediction error over hidden basis directions introduces
 a factor of $1/D$.
 
-\section{Fully LLM natural-text study}\label{sec:study}
+\section{A fully LLM calibration study}\label{sec:study}
 The empirical objective is to measure whether the target difference in
 Equation~\eqref{eq:target} matters in a real text pipeline and whether a
-repair method has useful total cost. The active branch uses existing
-AskUbuntu records, native tag labels, and two local model raters. It has
-zero human annotation and zero human review. Earlier human-gated protocol
+repair method has useful total cost. The calibration uses existing
+AskUbuntu records, native tag labels, and two local model raters. Pair
+annotation and adjudication are entirely model-based; no human pair
+annotations or pair reviews were collected. Earlier human-gated protocol
 requirements remain unmet; this branch does not relabel model judgments
 as human evidence or inherit acceptance of the historical primary study.
 
@@ -412,7 +626,7 @@ public return reports contain bindings and aggregate counts.
 
 The assembled E5 cache contains 140,250 rows of 768 FP32 coordinates,
 produced and replayed in 32 CPU shards. E5 provides fixed pretrained text
-representations \cite{e5}. The native prediction task uses 20 tags and
+representations \citep{e5}. The native prediction task uses 20 tags and
 retains questions with all-zero target vectors. Five source-grouped
 calibration folds selected $\lambda=10^{-5}$ from the six frozen values
 $10^{-6},10^{-5},\ldots,10^{-1}$; exact ties select larger $\lambda$.
@@ -450,7 +664,7 @@ mass while remaining in the full denominator. The models are not assumed
 independent. Thus the target is a conservative two-model label function,
 not semantic truth. Known LLM-judge biases motivate retaining order
 diagnostics, but agreement cannot replace human validity
-\cite{judge}.
+\citep{judge}.
 
 Version 4 enumerates all 220,405,510 unordered calibration pairs,
 including pairs within the same source. Thirteen right-closed cosine
@@ -473,48 +687,11 @@ The confidence bound concerns the fixed/potential model-label function
 under the sampling model; observed replay stability does not establish
 stability everywhere or accuracy against human judgments.
 
-\subsection{Guard, requests, and baselines}\label{sec:design}
-The full development guard is conditional on passed fresh model
-validation. It compares every reserved training row against all original
-calibration and test rows, removing training leakage using the locked
-threshold and the original scorer. This uses features and IDs, not later
-evaluation labels. The intended scope is
-$10{,}314\times42{,}063=433{,}837{,}782$ pairs. The 18,929 evaluation-test
-labels stay uninspected during development. Development utility may use
-only the 2,138 reserved test rows.
+The frozen downstream design is retained in Appendix~\ref{sec:design}
+to distinguish planned comparisons from executed evidence. It was not
+activated because neither calibration selected a threshold.
 
-The planned requests include uniform record deletion, uniform genuine
-source withdrawal, deletion among initially excluded records, and a
-label-blind graph search for high-amplification stress requests. Uniform
-record controls match source requests by removed-record volume. Stress
-search does not estimate ordinary user behavior and is not an optimal
-adversarial audit. Request streams, feasible panels, and resource bounds
-must be sealed before their effect outcomes; the historical registry is
-not authorization to mark every planned family as executed.
-
-O-G recomputes the fixed curator and learner from surviving input; O-T
-uses correct selected IDs but rebuilds moments. P-I uses indexed
-coefficient repair, P-S scans coefficients, and P-R uses rank-coordinate
-summaries with its reconstruction work charged. The essential B-E
-baseline retains compact eligible feature/label rows, blocker incidences,
-and buckets, then makes batched signed moment updates. It is not forced
-to store an outer product for every row. B-A retains all payloads.
-B-F deletes from the initial selected set and is a target-mismatch
-diagnostic, not a correctness oracle. The smallest natural pilot must
-compare at least P-I, O-G, and optimized B-E under identical requests.
-
-Primary task quality is native multilabel mean squared error, with
-micro/macro F1 and mean average precision secondary. Report selected-set
-admissions, parameter and prediction deviations from the fresh oracle,
-and the quality difference of the frozen-selection target. A large
-admission count alone does not establish useful model change.
-Costs include feature/cache access, graph/index state, moments, gathered
-rows, peak workspace, serialization, initialization, updates, and solves.
-Incremental timing and complete lifecycle timing are separate. A speedup
-over fresh graph reconstruction alone is insufficient evidence of an
-advantage over a strong incremental baseline.
-
-\section{Evidence available at this checkpoint}\label{sec:evidence}
+\section{Calibration results and their implications}\label{sec:evidence}
 \paragraph{Completed negative calibration.}
 The earlier version 3 attempted all 198 model calls: 90 canonical pairs
 and nine swapped diagnostics per model. It produced zero joint positives
@@ -546,6 +723,12 @@ ledger contains every cut and its exact rational arithmetic.
 \begin{table}[t]
 \centering
 \small
+\caption{Completed v4 selection. Pairs are sampled canonical pairs with
+score strictly above the cut. Joint proportions and sensitivity values
+use the frozen inclusion weights. Every one of the 51 cuts failed the
+95\% selection requirement. Sensitivity is favorable imputation, not a
+statistical confidence limit.}
+\label{tab:calibration}
 \begin{tabular}{rrrr}
 \hline
 $\tau$ & Pairs & Joint (\%) & Sensitivity (\%) \\
@@ -557,12 +740,6 @@ $\tau$ & Pairs & Joint (\%) & Sensitivity (\%) \\
 .995 & 30 & 40.00 & 53.33 \\
 \hline
 \end{tabular}
-\caption{Completed v4 selection. Pairs are sampled canonical pairs with
-score strictly above the cut. Joint proportions and sensitivity values
-use the frozen inclusion weights. Every one of the 51 cuts failed the
-95\% selection requirement. Sensitivity is favorable imputation, not a
-statistical confidence limit.}
-\label{tab:calibration}
 \end{table}
 
 The raw stratified sample contained 27 joint positives among 360 pairs;
@@ -589,11 +766,11 @@ The first stable-ID witness is not the maximum-scoring witness.
 The inherited theory has separate algebraic, scorer, and codec reviews.
 Finite tests exercise reconstruction, graph margins, and sequential
 serialization; they are checks of implementations, not natural-text
-experiments or substitutes for proofs. Earlier lexical development
-favored B-E in total bytes. The new private-information theorem does not
+experiments or substitutes for proofs. Earlier lexical development favored the compact eligible-payload
+baseline B-E (Appendix~\ref{sec:design}) in total bytes. The new private-information theorem does not
 reverse that observation or establish a storage win on natural data.
 
-\paragraph{What is still missing.}
+\paragraph{Consequences for empirical claims.}
 No completed natural-text repair/utility/cost experiment supports a
 practical benefit yet. The failed selection blocks the full guard,
 post-guard panels, development runs, and dependent held-out evaluation
@@ -607,57 +784,63 @@ evaluation reservation and human gates remain unchanged.
 
 \section{Related work}\label{sec:related}
 \paragraph{Curation and whole-pipeline targets.}
-SemDeDup studies embedding-based redundancy removal \cite{semdedup}.
+SemDeDup studies embedding-based redundancy removal \citep{semdedup}.
 The released suppression computation motivates our fixed ordered rule
-\cite{semcode}; a full curation pipeline may have additional data-dependent
+\citep{semcode}; a full curation pipeline may have additional data-dependent
 steps. ARCANE combines exact-unlearning architecture with representative
-data selection \cite{arcane}. Its Section~3.2 assigns no retraining cost
+data selection \citep{arcane}. Its Section~3.2 assigns no retraining cost
 to a request outside the selected subset. Under our raw-neighbor rule,
 such a request can instead admit surviving records and change the head,
 as Figure~\ref{fig:chain} shows. This comparison concerns that specific
 selection contract. GRACE studies gradient-guided
-forget/retain coresets for behavioral LLM unlearning \cite{grace}; its
+forget/retain coresets for behavioral LLM unlearning \citep{grace}; its
 target differs from rerunning the original fixed curator in
 Equation~\eqref{eq:target}.
 
 \paragraph{Provenance and incremental computation.}
-Polynomial provenance \cite{green}, provenance for aggregation and
-difference \cite{aggregate}, DBSP's incremental query framework
-\cite{dbsp}, and PrIU's provenance-based regression updates \cite{priu}
+Polynomial provenance \citep{green}, provenance for aggregation and
+difference \citep{aggregate}, DBSP's incremental query framework
+\citep{dbsp}, and PrIU's provenance-based regression updates \citep{priu}
 are direct antecedents. Schelter explicitly frames unlearning as view
 maintenance and includes tokenization in the maintained dataflow
-\cite{ivmunlearning}. His Section~3 links efficient repair to sparse
+\citep{ivmunlearning}. His Section~3 links efficient repair to sparse
 computational dependencies. Thus preprocessing-aware incremental unlearning
-also precedes this work. Our Boolean expansion is a specialization.
+also precedes this work. Dominici's thesis explicitly studies end-to-end
+unlearning through data preparation pipelines and feature stores
+\citep{dominici}. Its bibliographic scope is directly relevant, although its
+full text was not available for a technical comparison. Our claims do not
+depend on excluding preprocessing-aware unlearning from prior work.
+Our Boolean expansion is a specialization.
 The scoped claims add the cumulative-horizon state contract and the
 learner-level finite-feature obstruction. We do not claim that negative
 dependencies, moment updates, or deletion-induced additions originate here.
 
 \paragraph{Information needed for unlearning.}
 Learning-unlearning space complexity already studies memory under a
-bounded number of deletions \cite{space}. In the full version,
+bounded number of deletions \citep{space}. In the full version,
 Theorems~5.4 and~6.3 give budget-dependent upper and lower bounds for
 realizability testing; Appendix~G connects this task to empirical risk
 minimization. Horizon-dependent memory and reconstruction arguments
 therefore precede our construction. Our theorem specifies the joint
 curator, stored feature values, ridge outputs, and sequential state.
 Ticketed schemes separately measure central auxiliary bits and
-per-record tickets supplied with forgotten examples \cite{ticketed}.
+per-record tickets supplied with forgotten examples \citep{ticketed}.
 Their Definitions~1--2 and Remark~3 require exact predictor recovery
 after one deletion request. Our contract additionally specifies the
 state for subsequent requests at the remaining horizon and charges
 all usable private information, including tickets. These different
 targets and access rules must accompany any comparison of bounds.
 Recent work on predictive versus counterfactual auditing state also
-overlaps with the broad memory-separation principle \cite{counterfactual}.
+overlaps with the broad memory-separation principle \citep{counterfactual}.
 Its public code was inspected in the earlier literature audit, but its
-full-paper proof and approximate-success semantics remain unresolved in
-our comparison. We claim the stated fixed-scorer, shared-feature ridge
+full-paper proof and approximate-success semantics could not be checked.
+We therefore make no theorem-level superiority or quantitative comparison
+with that work. We claim the stated fixed-scorer, shared-feature ridge
 construction, not a new general separation between prediction and
 counterfactual information. Information-distortion arguments are classical
-\cite{shannon}.
+\citep{shannon}.
 
-\section{Limitations and responsible use}\label{sec:limits}
+\section{Limitations and broader impact}\label{sec:limits}
 The theory assumes restriction consistency, fixed features, and a fixed
 cumulative budget. It does not cover arbitrary reclustering, encoder
 refitting, overlapping ownership, or nonconvex language-model fine-tuning.
@@ -671,8 +854,9 @@ The LLM-only study can establish properties of its model-defined labels.
 Shared training data and correlated biases can make both judges wrong;
 agreement is not human validation. Invalid responses remain part of the
 criterion, and order sensitivity is reported separately. Existing native
-tags are dataset labels, not newly obtained human annotations. No human
-review is planned, and no human-ground-truth claim is available.
+tags are dataset labels, not newly obtained human annotations. No human pair review was used, and no human-ground-truth claim is
+available. This annotation boundary is separate from the authors' responsibility
+for the paper and its conclusions.
 
 Native account identifiers are contributor proxies. Export filters and
 unknown ownership limit the scope of source withdrawal. Source text may
@@ -680,13 +864,17 @@ contain personal information, so bodies and account-level manifests stay
 private. Redistribution and attribution requirements must be resolved
 before any raw-data release. Canonical state equality does not imply
 physical erasure, privacy of prior answers, or compliance with every
-possible deletion obligation.
+possible deletion obligation. A useful application is making deletion-service
+contracts explicit. A corresponding risk is retaining excluded personal data
+in the name of future repair or mistaking model agreement for permission to
+remove legitimate content. Data minimization, access controls, and a clearly
+limited deletion horizon remain necessary operational safeguards.
 
-Finally, the main empirical study is unfinished. The working paper
-cannot yet claim natural semantic value or competitive efficiency. Its
-completed negative calibration and earlier unfavorable memory comparison
-are part of the evidence. The manuscript's eventual conclusions must
-follow the audited results rather than the desired outcome.
+The natural-text effect study was not executed. Accordingly, this paper
+makes no claim of natural semantic value or competitive efficiency. Both
+failed calibrations and the earlier unfavorable memory comparison remain
+part of the evidence. The theoretical results identify an exact target and
+its information requirements; they do not validate a deployment.
 
 \section{Conclusion}
 Under ordered raw-neighbor suppression, deleting an excluded record can
@@ -699,64 +887,64 @@ failed their frozen selection criteria. Consequently, the downstream
 natural-text study remains unexecuted, and the practical NLP value of
 these effects remains unresolved.
 
-\begin{thebibliography}{99}\small
-\bibitem{semdedup} A. Abbas, K. Tirumala, D. Simig, S. Ganguli, and A. S.
+\begin{thebibliography}{99}
+\bibitem[Abbas et~al.(2023)]{semdedup} A. Abbas, K. Tirumala, D. Simig, S. Ganguli, and A. S.
 Morcos. 2023. SemDeDup: Data-efficient learning at web-scale through
 semantic deduplication. \href{https://arxiv.org/abs/2303.09540}{arXiv:2303.09540}.
-\bibitem{semcode} Meta/Facebook Research. SemDeDup official implementation,
-\texttt{semdedup.py}. Archived repository; inspected 16 October 2026.
-\url{https://github.com/facebookresearch/SemDeDup/blob/main/semdedup.py}.
-\bibitem{green} T. J. Green, G. Karvounarakis, and V. Tannen. 2007.
-Provenance semirings. PODS.
-\url{https://www.cs.ucdavis.edu/~green/papers/pods07.pdf}.
-\bibitem{aggregate} Y. Amsterdamer, D. Deutch, and V. Tannen. 2011.
+\bibitem[Amsterdamer et~al.(2011)]{aggregate} Y. Amsterdamer, D. Deutch, and V. Tannen. 2011.
 Provenance for aggregate queries. PODS.
 \href{https://arxiv.org/abs/1101.1110}{arXiv:1101.1110}.
-\bibitem{dbsp} M. Budiu, T. Chajed, F. McSherry, L. Ryzhyk, and V. Tannen.
+\bibitem[Budiu et~al.(2023)]{dbsp} M. Budiu, T. Chajed, F. McSherry, L. Ryzhyk, and V. Tannen.
 2023. DBSP: Automatic incremental view maintenance for rich query
 languages. PVLDB, 16(7):1601--1614.
 \url{https://www.vldb.org/pvldb/vol16/p1601-budiu.pdf}.
-\bibitem{priu} Y. Wu, V. Tannen, and S. B. Davidson. 2020.
-PrIU: A provenance-based approach for incrementally updating regression
-models. SIGMOD, 447--462.
-\href{https://arxiv.org/abs/2002.11791}{arXiv:2002.11791}.
-\bibitem{ivmunlearning} S. Schelter. 2021. Towards efficient machine
-unlearning via incremental view maintenance. Workshop on Challenges in
-Deploying and Monitoring ML Systems at ICML.
-\url{https://ssc.io/pdf/ivm-unlearning.pdf}.
-\bibitem{arcane} H. Yan, X. Li, Z. Guo, H. Li, F. Li, and X. Lin. 2022.
-ARCANE: An efficient architecture for exact machine unlearning. IJCAI.
-\url{https://www.ijcai.org/proceedings/2022/0556.pdf}.
-\bibitem{space} Y. Cherapanamjeri, S. Garg, N. Rajaraman, A. Sekhari,
+\bibitem[Bushipaka et~al.(2026)]{grace} P. Bushipaka, A. D'Angelo, L. Passaro, and T. Cucinotta.
+2026. GRACE: Gradient-guided coreset selection for LLM unlearning.
+Author manuscript. \url{https://retis.santannapisa.it/~tommaso/publications/EMNLP-2026.pdf}.
+\bibitem[Cherapanamjeri et~al.(2025)]{space} Y. Cherapanamjeri, S. Garg, N. Rajaraman, A. Sekhari,
 and A. Shetty. 2025. The space complexity of learning-unlearning
 algorithms (extended abstract). COLT, PMLR 291:1185--1193.
 \url{https://proceedings.mlr.press/v291/cherapanamjeri25b.html}.
 Full version: \href{https://arxiv.org/abs/2506.13048v1}{arXiv:2506.13048v1}.
-\bibitem{ticketed} B. Ghazi, P. Kamath, R. Kumar, P. Manurangsi,
-A. Sekhari, and C. Zhang. 2023. Ticketed learning--unlearning schemes.
-COLT, PMLR 195:5110--5139.
-\url{https://proceedings.mlr.press/v195/ghazi23a.html}.
-\bibitem{counterfactual} S. P. Tadakamalla, S. M. R. Prakash, and S. M.
-Asad. 2026. Predictive state is not explanatory state: An exponential
-memory separation between forecasting and counterfactual auditing.
-SSRN manuscript. \url{https://doi.org/10.2139/ssrn.7520178}.
-\bibitem{grace} P. Bushipaka, A. D'Angelo, L. Passaro, and T. Cucinotta.
-2026. GRACE: Gradient-guided coreset selection for LLM unlearning.
-Author manuscript. \url{https://retis.santannapisa.it/~tommaso/publications/EMNLP-2026.pdf}.
-\bibitem{dominici} L. Dominici. 2025. End-to-end machine unlearning through
+\bibitem[Dominici(2025)]{dominici} L. Dominici. 2025. End-to-end machine unlearning through
 data preparation pipelines and feature stores. Master's thesis, University
 of Amsterdam and Vrije Universiteit Amsterdam. Bibliographic identification
 from the author's page and DEEM thesis list; full text not inspected.
 \url{https://leodom01.github.io/}; \url{https://deem.berlin/}.
-\bibitem{e5} L. Wang, N. Yang, X. Huang, L. Yang, R. Majumder, and F. Wei.
-2024. Multilingual E5 text embeddings: A technical report.
-\href{https://arxiv.org/abs/2402.05672}{arXiv:2402.05672}.
-\bibitem{judge} L. Zheng et al. 2023. Judging LLM-as-a-judge with MT-Bench
-and Chatbot Arena. NeurIPS Datasets and Benchmarks.
-\href{https://arxiv.org/abs/2306.05685}{arXiv:2306.05685}.
-\bibitem{shannon} C. E. Shannon. 1959. Coding theorems for a discrete
+\bibitem[Ghazi et~al.(2023)]{ticketed} B. Ghazi, P. Kamath, R. Kumar, P. Manurangsi,
+A. Sekhari, and C. Zhang. 2023. Ticketed learning--unlearning schemes.
+COLT, PMLR 195:5110--5139.
+\url{https://proceedings.mlr.press/v195/ghazi23a.html}.
+\bibitem[Green et~al.(2007)]{green} T. J. Green, G. Karvounarakis, and V. Tannen. 2007.
+Provenance semirings. PODS.
+\url{https://www.cs.ucdavis.edu/~green/papers/pods07.pdf}.
+\bibitem[Meta/Facebook Research(2026)]{semcode} Meta/Facebook Research. SemDeDup official implementation,
+\texttt{semdedup.py}. Archived repository; inspected 16 October 2026.
+\url{https://github.com/facebookresearch/SemDeDup/blob/main/semdedup.py}.
+\bibitem[Schelter(2021)]{ivmunlearning} S. Schelter. 2021. Towards efficient machine
+unlearning via incremental view maintenance. Workshop on Challenges in
+Deploying and Monitoring ML Systems at ICML.
+\url{https://ssc.io/pdf/ivm-unlearning.pdf}.
+\bibitem[Shannon(1959)]{shannon} C. E. Shannon. 1959. Coding theorems for a discrete
 source with a fidelity criterion. IRE National Convention Record, Part 4,
 142--163. \href{https://gwern.net/doc/cs/algorithm/information/1959-shannon.pdf}{Original-paper scan}.
+\bibitem[Tadakamalla et~al.(2026)]{counterfactual} S. P. Tadakamalla, S. M. R. Prakash, and S. M.
+Asad. 2026. Predictive state is not explanatory state: An exponential
+memory separation between forecasting and counterfactual auditing.
+SSRN manuscript. \url{https://doi.org/10.2139/ssrn.7520178}.
+\bibitem[Wang et~al.(2024)]{e5} L. Wang, N. Yang, X. Huang, L. Yang, R. Majumder, and F. Wei.
+2024. Multilingual E5 text embeddings: A technical report.
+\href{https://arxiv.org/abs/2402.05672}{arXiv:2402.05672}.
+\bibitem[Wu et~al.(2020)]{priu} Y. Wu, V. Tannen, and S. B. Davidson. 2020.
+PrIU: A provenance-based approach for incrementally updating regression
+models. SIGMOD, 447--462.
+\href{https://arxiv.org/abs/2002.11791}{arXiv:2002.11791}.
+\bibitem[Yan et~al.(2022)]{arcane} H. Yan, X. Li, Z. Guo, H. Li, F. Li, and X. Lin. 2022.
+ARCANE: An efficient architecture for exact machine unlearning. IJCAI.
+\url{https://www.ijcai.org/proceedings/2022/0556.pdf}.
+\bibitem[Zheng et~al.(2023)]{judge} L. Zheng et al. 2023. Judging LLM-as-a-judge with MT-Bench
+and Chatbot Arena. NeurIPS Datasets and Benchmarks.
+\href{https://arxiv.org/abs/2306.05685}{arXiv:2306.05685}.
 \end{thebibliography}
 
 \appendix
@@ -941,12 +1129,14 @@ $\norm e^2/d$. Consequently a constant parameter-error obstruction does
 not establish constant task risk. Native tag prediction, natural source
 requests, and matched-cost baselines are needed to assess practical value.
 
-\section{Reproducibility and completion boundary}\label{app:repro}
-This standalone source uses an embedded bibliography and no external
-figures or style files. Its companion evidence ledger binds the exact
-repository sources used for every empirical count and theorem scope.
-The theorem fragments, previous code, negative results, and frozen
-execution contracts are preserved separately rather than overwritten.
+\section{Reproducibility, compute, and assistance disclosure}\label{app:repro}
+This standalone source embeds the unmodified official TMLR style and its
+bibliography. The anonymous supplement contains an explicit subset of source
+code and aggregate evidence, with hashes and replay instructions. The full
+development archive retains historical proofs, reviews, code, negative results,
+and frozen protocols. It is separate from the anonymous submission materials;
+identifying infrastructure receipts and private observations are not included
+in the supplement.
 
 The active representation is \texttt{intfloat/multilingual-e5-base}, pinned to revision
 \texttt{d128750597153bb5987e10b1c3493a34e5a4502a}; judges use Qwen revision
@@ -972,8 +1162,9 @@ metadata when present. This is not a complete author-history audit;
 owner accounts remain contributor proxies. The public package excludes
 corpus text, per-record identities and per-pair model observations.
 
-The public checker verifies source bindings, reported counts and the
-calibration table. Recomputing the selection from individual observations
+The anonymous supplement checks its file hashes and the supplied aggregate
+calibration and compute arithmetic. This verifies an extract of the evidence,
+not the authenticity of the private observations. Recomputing the selection from individual observations
 requires the private sample and audited model outputs; repeating inference
 also requires the pinned source, assets and runtime. These are separate
 verification levels. Fixed revisions and seeds alone do not establish
@@ -1006,23 +1197,64 @@ Earlier setup, transfers and failed annotation attempts outside the saved
 subset, local work, queue waits and energy remain unaccounted. A complete
 project compute budget remains unavailable.
 
-The remaining empirical displays must be generated from audited outputs:
-admission curves and blocker structure; matched request-arm target
-differences; native task effects; total retained bytes and peak workspace;
-incremental and lifecycle time; and robustness/failure coverage. Planned
-tables must distinguish feasible populations, baseline coverage, and
-claim-supporting outcomes. Empty placeholders are not results. Full
-curator refitting and additional corpus/representation families remain
-separate unexecuted scope until resource-qualified and admitted.
 
 Literature coverage is also bounded. Primary publication pages and
 official code were refreshed for the citations used here. The full
 ARCANE selection description and the central, ticketed, and bounded-deletion
-contracts in \cite{ticketed,space} were checked against their primary PDFs.
+contracts in \citep{ticketed,space} were checked against their primary PDFs.
 This is a contract comparison, not an independent audit of those proofs. The
 counterfactual-auditing full manuscript and the thesis titled
 \emph{End-to-end Machine Unlearning Through Data Preparation Pipelines
-and Feature Stores} \cite{dominici} remain unresolved full-text comparisons. Their
-absence from the completed comparison cannot support a novelty claim.
-The final review must revisit these gaps and the resulting claim wording.
+and Feature Stores} \citep{dominici} were not available in full text.
+We acknowledge their related scope and make no technical comparison that
+depends on their absence. This limits the literature comparison; it is not
+evidence that either work lacks the relevant result.
+\paragraph{AI assistance.}
+AI tools assisted manuscript drafting, code preparation, source checking, and
+internal review. Those internal checks are not external peer review, formal
+verification, or authentication of private observations. The two annotation
+models and their distinct empirical role are specified in
+Section~\ref{sec:judges}. No AI system is listed as an author.
+
+\section{Preserved downstream design: not executed}\label{sec:design}
+The full development guard is conditional on passed fresh model
+validation. It compares every reserved training row against all original
+calibration and test rows, removing training leakage using the locked
+threshold and the original scorer. This uses features and IDs, not later
+evaluation labels. The intended scope is
+$10{,}314\times42{,}063=433{,}837{,}782$ pairs. The 18,929 evaluation-test
+labels stay uninspected during development. Development utility may use
+only the 2,138 reserved test rows.
+
+The planned requests include uniform record deletion, uniform genuine
+source withdrawal, deletion among initially excluded records, and a
+label-blind graph search for high-amplification stress requests. Uniform
+record controls match source requests by removed-record volume. Stress
+search does not estimate ordinary user behavior and is not an optimal
+adversarial audit. Request streams, feasible panels, and resource bounds
+must be sealed before their effect outcomes; the historical registry is
+not authorization to mark every planned family as executed.
+
+O-G recomputes the fixed curator and learner from surviving input; O-T
+uses correct selected IDs but rebuilds moments. P-I uses indexed
+coefficient repair, P-S scans coefficients, and P-R uses rank-coordinate
+summaries with its reconstruction work charged. The essential B-E
+baseline retains compact eligible feature/label rows, blocker incidences,
+and buckets, then makes batched signed moment updates. It is not forced
+to store an outer product for every row. B-A retains all payloads.
+B-F deletes from the initial selected set and is a target-mismatch
+diagnostic, not a correctness oracle. The smallest natural pilot must
+compare at least P-I, O-G, and optimized B-E under identical requests.
+
+Primary task quality is native multilabel mean squared error, with
+micro/macro F1 and mean average precision secondary. Report selected-set
+admissions, parameter and prediction deviations from the fresh oracle,
+and the quality difference of the frozen-selection target. A large
+admission count alone does not establish useful model change.
+Costs include feature/cache access, graph/index state, moments, gathered
+rows, peak workspace, serialization, initialization, updates, and solves.
+Incremental timing and complete lifecycle timing are separate. A speedup
+over fresh graph reconstruction alone is insufficient evidence of an
+advantage over a strong incremental baseline.
+
 \end{document}

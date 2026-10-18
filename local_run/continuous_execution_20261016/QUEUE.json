@@ -1,5 +1,5 @@
 {
-  "active_branch": "negative_calibration_reporting_methods_theory",
+  "active_branch": "tmlr_theory_and_negative_calibration_manuscript",
   "authorization": "User requests autonomous sustained work, existing GitHub backup and cluster execution; fully LLM with zero human reviews.",
   "automation": {
     "cadence_minutes": 30,
@@ -140,9 +140,10 @@
       "historical_compute": "manuscript/compute_history_20261016.json",
       "id": "07-manuscript",
       "independent_ai_review": "manuscript/independent_review_20261018.json",
-      "next_action": "Independent AI manuscript review and scoped F1/F2 follow-up are complete; do not spawn a duplicate. Same source compiled; new package verified. Advance only restored native layout review or a genuinely new accessible SSRN/Dominici full-text route. No unchanged rebuilds, controller restart or blocked empirical launch.",
-      "state": "independent_ai_review_complete_pending_layout_and_literature",
-      "unified_author_review": "manuscript/unified_review_20261016.json"
+      "next_action": "Finish visual inspection of the existing native PDF only when accessible or supplied by the user. New TMLR source/delta review complete; do not duplicate review, recompile unchanged source, or repeat unavailable literature routes. Two full-text gaps are disclosed without novelty/exclusion claims.",
+      "state": "tmlr_source_compiled_delta_reviewed_visual_check_unavailable",
+      "unified_author_review": "manuscript/unified_review_20261016.json",
+      "tmlr_revision": "manuscript/tmlr_20261018/adaptation_report.json"
     },
     {
       "depends_on": [
@@ -166,7 +167,8 @@
         "Available unified author review completed; negative-result framing corrected and Schelter (2021) preprocessing/view-maintenance antecedent credited",
         "Public86-file v4 package plus manifest; native compilation and clean-extraction source replay passed",
         "Independent AI manuscript review completed; two implementation-description findings corrected and independently rechecked",
-        "97-file 18 October package plus manifest passed native compilation,49-source check,20 archived review-input checks and clean-extraction replay"
+        "97-file 18 October package plus manifest passed native compilation,49-source check,20 archived review-input checks and clean-extraction replay",
+        "TMLR adaptation, source delta review, native compilation, and anonymous13-member aggregate/code supplement verified"
       ],
       "coordinates_with": [
         "07-manuscript"
@@ -185,10 +187,12 @@
         "manuscript/independent_review_20261018.json"
       ],
       "id": "09-negative-branch-closure",
-      "next_action": "Independent AI review is complete. Preserve both original and corrected review evidence. Remaining gaps are rendered layout and two unavailable full texts; continue only on new accessible evidence/capability. Original natural effect study remains incomplete and blocked by failed calibration.",
-      "public_package": "manuscript/release_20261018_v1.zip",
-      "state": "bounded_20261018_package_verified_pending_layout_and_literature"
+      "next_action": "Use the dedicated anonymous supplement and current TMLR checklist. Original empirical study remains blocked; no retuning. Existing completion-scope question was superseded by the explicit TMLR adaptation request, not by an empirical-completion claim.",
+      "public_package": "manuscript/tmlr_20261018/tmlr_anonymous_supplement_v1.zip",
+      "state": "tmlr_anonymous_supplement_verified_pending_pdf_and_author_items"
     }
   ],
-  "updated_utc": "2026-10-18T03:30:15.717320+00:00"
+  "updated_utc": "2026-10-18T11:29:13.298263+00:00",
+  "target_venue": "TMLR",
+  "venue_change_authorization": "Explicit user request on 18 October 2026; no relaxation of calibration, held-out or human gates."
 }

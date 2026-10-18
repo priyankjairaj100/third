@@ -1,0 +1,20 @@
+[
+  {
+    "file": "tmlr.sty",
+    "url": "https://raw.githubusercontent.com/JmlrOrg/tmlr-style-file/main/tmlr.sty",
+    "bytes": 6560,
+    "sha256": "816214ff5919aa457b6b443bee52b15d9561421417b7f8a50cc84651519f0002"
+  },
+  {
+    "file": "main.tex",
+    "url": "https://raw.githubusercontent.com/JmlrOrg/tmlr-style-file/main/main.tex",
+    "bytes": 16787,
+    "sha256": "85a994256fae53477e935bbacdf45b7e0e031abff660991485a61bff9bd4704c"
+  },
+  {
+    "file": "LICENSE",
+    "url": "https://raw.githubusercontent.com/JmlrOrg/tmlr-style-file/main/LICENSE",
+    "bytes": 11357,
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  }
+]

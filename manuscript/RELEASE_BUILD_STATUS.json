@@ -1,33 +1,21 @@
 {
+  "schema": "third-tmlr-backup-build-status-v1",
+  "observed_utc": "2026-10-18T11:29:36.963648+00:00",
   "archive": {
-    "bytes": 801568,
-    "path": "manuscript/release_20261018_v1.zip",
-    "sha256": "d9567681911dc8f7bcef27daf915e4c943ae8d42869ab4e348ffb3e2ab5f2443"
+    "path": "manuscript/release_20261018_tmlr_v1.zip",
+    "bytes": 1673952,
+    "sha256": "5059b6aa4a8f66e7aae56a8b9b9c18a608470a7aa5f3744106408330f1721dc9"
   },
-  "archive_crc_and_exact_member_hashes_passed": true,
-  "archive_members": 98,
-  "builder": {
-    "bytes": 6493,
-    "sha256": "3d8b76db5c8b002c91f19463df4700e2352b0713562d9d0749344493cc316350"
-  },
-  "full_empirical_replay_tested": false,
   "manifest": {
-    "bytes": 17761,
-    "path": "manuscript/release_manifest_20261018_v1.json",
-    "sha256": "c44f251ec2cc7422d25b179085f032c956119f5b48a438cc404b409fe8116a5c"
+    "path": "manuscript/release_manifest_20261018_tmlr_v1.json",
+    "bytes": 20768,
+    "sha256": "fd3148611c0b8803ab54f570d7962108622945dc44ae8bcb4523faee2408c109"
   },
-  "native_compile_previously_verified_for_packaged_source": true,
-  "observed_utc": "2026-10-18T03:29:26.901043+00:00",
-  "payload_members": 97,
-  "public_source_check_in_clean_extraction_passed": true,
-  "reproduced_evidence_equal_except_creation_time": true,
-  "schema": "third-public-package-build-status-v1",
-  "source_check_summary": {
-    "bibliography_entries": 16,
-    "manuscript_sha256": "f957a3ef723f0749692f6b77a6551c6792d4a4331d267ddc48c0d8c286dc9087",
-    "source_bindings": 49,
-    "source_claim_check_passed": true
-  },
-  "submission_ready": false,
-  "visual_review_verified": false
+  "archive_members": 115,
+  "exact_member_and_crc_checks_passed": true,
+  "clean_extraction_tmlr_and_historical_replay_passed": true,
+  "anonymous_submission_package": false,
+  "compiled_pdf_included": false,
+  "visual_review_verified": false,
+  "submission_ready": false
 }

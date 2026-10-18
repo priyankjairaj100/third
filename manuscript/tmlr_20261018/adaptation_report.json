@@ -1,0 +1,44 @@
+{
+  "schema": "third-tmlr-adaptation-v1",
+  "created_utc": "2026-10-18T11:29:13.298263+00:00",
+  "target_venue": "TMLR",
+  "authorization": "User asked to complete all items and adapt the paper for TMLR on 18 October 2026.",
+  "manuscript": {
+    "path": "manuscript/third_working_draft.tex",
+    "bytes": 66111,
+    "sha256": "ecd1f6690fc1d384060073284f9477b401944059082972776cc1b3fc8928404c"
+  },
+  "scope": "Exact counterfactual repair theory, finite-format state bounds and completed negative LLM calibration; original empirical program remains unexecuted.",
+  "completed": [
+    "Official anonymous TMLR format and author-year references",
+    "Claims and reader-interest framing aligned with proved results",
+    "Unexecuted protocol moved to appendix without changing it",
+    "Broader-impact and AI-assistance disclosures",
+    "Available-source literature review and conservative treatment of two access gaps",
+    "Source-level independent delta review, one finding corrected",
+    "Native compiler check",
+    "Anonymous code/aggregate supplement with clean-extraction replay",
+    "Author submission checklist"
+  ],
+  "unresolved": [
+    "Visual PDF inspection/export and PDF-metadata check",
+    "Two unavailable full-text technical comparisons; no exclusion or superiority claim relies on them",
+    "Responsible author identity, contributions, consent, quota, conflicts, ethics and originality attestations"
+  ],
+  "original_empirical_program_complete": false,
+  "fully_llm_pair_annotation": true,
+  "human_pair_annotations": 0,
+  "new_human_pair_reviews": 0,
+  "new_model_calls": 0,
+  "new_cluster_jobs": 0,
+  "negative_calibrations_preserved": true,
+  "no_retuning": true,
+  "held_out_boundaries_preserved": true,
+  "protected_files_unchanged": {
+    "local_run/TODO.json": "80a0385769ab9270db5791e025b1ec81523156e29f03fafa59d08d6ccdd22b4e",
+    "local_run/ANALYSIS_LOCK.json": "c70d7c360e02a13de98ca24e0ae3ac8dd116fbb8bd7b705fa4c934cc84d2b2ff",
+    "local_run/ANALYSIS_LOCK_EXECUTION.json": "09b6ff50df8b4124aa44398c33d67884acff65b552f46c4fd0b8fac5b2656d7c"
+  },
+  "submission_ready": false,
+  "submitted": false
+}

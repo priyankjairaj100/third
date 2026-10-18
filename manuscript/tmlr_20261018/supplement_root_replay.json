@@ -1,0 +1,40 @@
+{
+  "archive_sha256": "c6ab12aa23da1563d5f659f2406ce2a6985085a0c55b7de531119e9d421dff26",
+  "root_clean_extract_replay": {
+    "calibration_table": [
+      {
+        "canonical_pairs": 90,
+        "failed_cuts": 51,
+        "fresh_validation": false,
+        "joint_positives": 0,
+        "model_calls": 198,
+        "threshold_selected": false,
+        "version": "v3"
+      },
+      {
+        "canonical_pairs": 360,
+        "failed_cuts": 51,
+        "fresh_validation": false,
+        "joint_positives": 27,
+        "model_calls": 792,
+        "threshold_selected": false,
+        "version": "v4"
+      }
+    ],
+    "compute_records_summed": 72,
+    "cut_quotients_and_decisions_checked": 102,
+    "new_independent_scientific_verification": false,
+    "not_replayed": [
+      "private pair scores or individual labels",
+      "fresh model inference",
+      "within-bin sample selection",
+      "natural effect experiments",
+      "universal theorem proofs"
+    ],
+    "passed": true,
+    "payload_files": 12,
+    "scope": "aggregate arithmetic and manifest replay only",
+    "v4_bin_boundary_cuts_reconstructed": 12
+  },
+  "review_scope": "Separate root replay of supplement arithmetic and hashes, not independent scientific validation."
+}

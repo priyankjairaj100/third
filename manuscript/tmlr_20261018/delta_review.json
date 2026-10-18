@@ -1,0 +1,165 @@
+{
+  "schema": "third-tmlr-venue-delta-review-v1",
+  "reviewed_at_utc": "2026-10-18T11:26:39.739245+00:00",
+  "review_kind": "Independent AI source-level venue-adaptation delta review; not human peer review",
+  "status": "no_unresolved_confirmed_defect_within_reviewed_delta",
+  "reviewed_manuscript": {
+    "path": "manuscript/third_working_draft.tex",
+    "size_bytes": 66111,
+    "sha256": "ecd1f6690fc1d384060073284f9477b401944059082972776cc1b3fc8928404c"
+  },
+  "initial_delta_source_sha256": "5cc76b14ff2dd25c8be89c60f75edbf75803ab1f3220ed1ae32a4e5bf3111dcd",
+  "comparison_inputs": [
+    {
+      "path": "work/tmlr-adaptation-20261018/before_source.txt",
+      "size_bytes": 57520,
+      "sha256": "f957a3ef723f0749692f6b77a6551c6792d4a4331d267ddc48c0d8c286dc9087"
+    },
+    {
+      "path": "work/tmlr-adaptation-20261018/requirements/tmlr_requirements_20261018.json",
+      "size_bytes": 6724,
+      "sha256": "1c08d4e510021563226dcf628929904f5c76635012c31c2892b80b1161678120"
+    },
+    {
+      "path": "work/tmlr-adaptation-20261018/literature/literature_audit.json",
+      "size_bytes": 4811,
+      "sha256": "53708ef1df558b02f7d983a79b04e8a72b3ff7159fb9dc81ccb7c0d15017b997"
+    },
+    {
+      "path": "work/tmlr-adaptation-20261018/template/tmlr.sty",
+      "size_bytes": 6560,
+      "sha256": "816214ff5919aa457b6b443bee52b15d9561421417b7f8a50cc84651519f0002"
+    }
+  ],
+  "scope": "Changes from the previously checked f957a3ef source to the current TMLR source, including one resulting B-E first-use correction. The old proof review and its follow-up are preserved, not replaced or rebound.",
+  "findings": [
+    {
+      "id": "T1",
+      "priority": "low",
+      "classification": "confirmed presentation regression, corrected during this review",
+      "status": "resolved",
+      "location": {
+        "path": "manuscript/third_working_draft.tex",
+        "start_line": 769,
+        "end_line": 770
+      },
+      "affected_claim": "Main-paper report that earlier lexical development favored B-E in total bytes.",
+      "evidence": "In the initial 5cc76b14 delta, the former main baseline definitions moved verbatim to the last appendix, leaving B-E at line 770 without a local expansion. Its retained technical definition is at lines 1241-1244.",
+      "smallest_defensible_correction": "Expand the main occurrence to the compact eligible-payload baseline B-E and point to Appendix sec:design.",
+      "verification": "Current ecd1f669 source lines 769-770 contain the expansion and appendix reference. The unfavorable memory conclusion is unchanged."
+    }
+  ],
+  "preserved_prior_findings": [
+    {
+      "id": "F1",
+      "status": "correction_retained",
+      "locations": [
+        "manuscript/third_working_draft.tex:417-429"
+      ],
+      "evidence": "The complete indexed-implementation paragraph is byte-identical to the previously checked source. Strict integer-ID kernel rejection remains separate from the Phase 5/6 retry-normalizing service, including retries after budget exhaustion."
+    },
+    {
+      "id": "F2",
+      "status": "correction_retained",
+      "locations": [
+        "manuscript/third_working_draft.tex:431-448",
+        "manuscript/third_working_draft.tex:951-1002"
+      ],
+      "evidence": "The complete update-accounting appendix is byte-identical. The abstract core excludes per-call overhead; service bound retains B(N+1), Q, one fresh-ID sorting term, Phi_0 and sM_0. Direct kernel calls retain their distinct q_b sorting term. No double sorting charge is made, O(N) temporary lookup workspace is explicit, and unit-ID/expected-hash and string-byte qualifications remain."
+    }
+  ],
+  "checks": [
+    {
+      "name": "exact binding",
+      "result": "pass",
+      "evidence": "Current manuscript SHA and bytes verified before report creation; baseline exact SHA f957a3ef723f0749692f6b77a6551c6792d4a4331d267ddc48c0d8c286dc9087."
+    },
+    {
+      "name": "scientific and mathematical delta",
+      "result": "pass",
+      "evidence": "The complete Target/curator, Exact repair, and Finite-format obstruction sections equal the baseline after the mechanical cite-to-citep conversion. All technical appendices preceding Reproducibility also equal the baseline. Two theorem blocks, one corollary, three proof blocks, nine numbered equation blocks, two align blocks and fifteen correctly delimited unnumbered display blocks are exactly unchanged; the multiset of inline dollar-math fragments is unchanged. This is preservation evidence, not a new proof verification."
+    },
+    {
+      "name": "negative evidence and scientific scope",
+      "result": "pass",
+      "locations": [
+        "manuscript/third_working_draft.tex:231-249",
+        "manuscript/third_working_draft.tex:695-754",
+        "manuscript/third_working_draft.tex:769-783",
+        "manuscript/third_working_draft.tex:873-888"
+      ],
+      "evidence": "Both failed calibrations, all 51 failed v4 cuts, maximum 2/5 versus 19/20, favorable-imputation maximum 8/15 and its non-confidence interpretation, invalid responses, order diagnostics, no fresh validation, unexecuted effect/cost study and earlier unfavorable memory comparison remain. No retuning, validation, practical-utility or total-memory victory is introduced. Observed-compute paragraph is unchanged."
+    },
+    {
+      "name": "human annotation and authorship distinction",
+      "result": "pass_for_wording",
+      "locations": [
+        "manuscript/third_working_draft.tex:601-609",
+        "manuscript/third_working_draft.tex:853-859",
+        "manuscript/third_working_draft.tex:1212-1217"
+      ],
+      "evidence": "Zero human pair annotation/review is explicitly limited to pair judgments. Original human-gated protocol requirements remain unmet. Author responsibility is explicitly separate; AI drafting/code/checking/internal-review assistance is disclosed and no AI is listed as an author. Wording does not establish actual human author eligibility, contributions or consent."
+    },
+    {
+      "name": "main and appendix division",
+      "result": "pass_after_T1",
+      "evidence": "Main retains setup, method, theorem statements, calibration protocol, both negative results, related work and limitations. Prospective downstream design body moved verbatim to a clearly not-executed appendix and has a main forward reference at lines 690-692. References precede all appendices. First-use B-E issue corrected."
+    },
+    {
+      "name": "citation integrity",
+      "result": "pass_for_source_structure",
+      "evidence": "All 16 bibliography entries are preserved, ignoring author-year labels and reorder. Entries are alphabetized by first author/institution. Every cited key exists, every bibliography key is cited, and there are no duplicate citation keys, duplicate labels or unresolved ref/eqref labels. Existing scientific URLs remain; they were not refetched in this delta pass."
+    },
+    {
+      "name": "narrow novelty wording",
+      "result": "pass_with_literature_limits",
+      "locations": [
+        "manuscript/third_working_draft.tex:297-319",
+        "manuscript/third_working_draft.tex:800-841",
+        "manuscript/third_working_draft.tex:1201-1211"
+      ],
+      "evidence": "Claims remain confined to the ordered fixed curator, remaining-horizon state and shared-feature finite ridge construction. The revision acknowledges Dominici in main related work and explicitly disclaims technical comparison based on inaccessible full text, general prediction/counterfactual separation novelty, and superiority over the counterfactual-auditing manuscript."
+    },
+    {
+      "name": "TMLR source format and source anonymity",
+      "result": "pass_for_inspected_source",
+      "locations": [
+        "manuscript/third_working_draft.tex:1-228",
+        "manuscript/third_working_draft.tex:723-743",
+        "manuscript/third_working_draft.tex:890-951"
+      ],
+      "evidence": "Embedded style bytes exactly match template/tmlr.sty (SHA 816214ff5919aa457b6b443bee52b15d9561421417b7f8a50cc84651519f0002). Uses 10pt article and default review style, with no accepted/preprint activation. Anonymous author line and empty PDF-author metadata are set. Table caption precedes tabular, figure caption follows figure, references precede appendices. Source and URLs were inspected for identifying author, account, private machine and directory details; none found. Official-style comments and cited third-party names are not manuscript-author identification."
+    },
+    {
+      "name": "historical review preservation",
+      "result": "pass",
+      "evidence": "Original review.txt, review.json, review_checks.json and followup.txt hashes match their preserved values. No repository file was written by this reviewer."
+    }
+  ],
+  "unresolved_literature": [
+    {
+      "work": "Tadakamalla et al. counterfactual-auditing manuscript",
+      "status": "full text and proof/approximate-success comparison remain unavailable; not novelty-cleared"
+    },
+    {
+      "work": "Dominici end-to-end machine-unlearning thesis",
+      "status": "bibliographic/topical overlap acknowledged; technical full-text comparison unavailable"
+    }
+  ],
+  "limitations": [
+    "This is a bounded source delta review, not a rerun or certification of all proofs, experimental authenticity, numerical equality, novelty or submission readiness.",
+    "No PDF was rendered or visually inspected by this reviewer. Parent-reported native compiler success is not our visual layout or PDF metadata verification; final exported PDF still needs checking.",
+    "Anonymous supplement assembly and its execution, completeness and anonymity are outside this review. Manuscript statements about that artifact are conditional on the separately assembled artifact satisfying them.",
+    "No fresh external literature search or primary-source refetch was performed in this delta pass; supplied requirements and literature-access audits were used for venue and literature-gap scope.",
+    "No private pair-level observations, raw data, fresh inference, cluster state or new experiment were audited. No remote launch, human pair review, author contact or subagent was used.",
+    "Human author contributions/eligibility, consent, accounts, submission quota, concurrent-submission status, funding/conflicts, ethics attestations and license acceptance require the responsible authors. Zero human pair annotation does not resolve these requirements.",
+    "Original unmet human and empirical gates remain unmet; no target, threshold, rubric, held-out reservation, protected source or frozen protocol was changed by this review."
+  ],
+  "historical_review_sha256": {
+    "review.txt": "5ecd469a00edabe6a14b13d80936f1c01dcfcd7fafc48cc4a0b529e1ad89e527",
+    "review.json": "4aec01a32bc1d929dc861ae0a6a91f90b60991e1278a64c7a67c64e41bbf396c",
+    "review_checks.json": "e4562f2e3fbf7ce89ea6b6f064432063d0f2ee76b3660032b47ecc1ecd6f2eda",
+    "followup.txt": "329602cb847b9925213f5ced0b7b9ac705a103ee08114a8a1ee62c2074d14627"
+  },
+  "conclusion": "The exact reviewed TMLR source preserves the previously checked scientific contracts and negative empirical scope. One minor presentation regression was identified and corrected. No confirmed unresolved defect was found within this source delta; no general correctness, novelty or submission certificate is issued."
+}

@@ -1,0 +1,57 @@
+TMLR preparation checklist — 18 October 2026
+
+Current paper scope
+The paper establishes finite-horizon exact repair and finite-format private-state
+bounds, and reports two failed model-calibration studies. It does not claim an
+executed natural-text effect study, useful semantic deduplication, or a practical
+speed/memory/utility advantage. Fully LLM pair annotation remains unchanged.
+
+Prepared
+- Official TMLR anonymous single-column style, embedded unchanged in the same
+  standalone manuscript. Author-year references alphabetized; captions follow
+  the template; technical appendices follow references.
+- Executed findings foregrounded; unexecuted downstream protocol placed in an
+  explicitly labeled appendix. Broader-impact and AI-assistance disclosures added.
+- Both failed calibrations, the earlier unfavorable memory result, private-data
+  replay limits, and original unmet human/empirical gates retained.
+- Separate anonymous code/aggregate supplement, including exact source copies,
+  explicit extract transformations, 102 calibration-cut records and 72 deidentified
+  compute records. Clean extraction and aggregate arithmetic checked.
+- Existing editor source compiled successfully. The native template's default
+  "Under review" header is formatting only: no submission has occurred.
+
+Cannot honestly be marked complete
+- Rendered PDF visual inspection and final PDF export: native computer-use runtime
+  failed before returning a screenshot. No alternate PDF was compiled. The PDF
+  already generated in the open editor can be exported and checked when accessible.
+- Full-text comparisons for Tadakamalla et al. and Dominici remain unavailable.
+  The paper acknowledges their related scope and makes no result/novelty claim
+  that depends on excluding them. This closes the wording action, not the access
+  gap or a comprehensive novelty assessment.
+- The original natural-text repair/utility/cost program remains unexecuted and
+  blocked by failed calibration; TMLR targeting does not waive that gate.
+
+Author-supplied information required before an actual submission
+- Final legal author list and affiliations; every author meets TMLR contribution
+  and responsibility criteria and consents. OpenReview profiles must be complete.
+- Current annual submission quota and no conflicting concurrent archival
+  submission or overlapping prior archival publication.
+- Accurate funding, competing interests, conflicts and applicable human-subjects/
+  IRB declarations. Zero new human pair annotation does not determine every IRB
+  or personal-data declaration for a study of existing online records.
+- Appropriate action-editor suggestions and license/rights attestations. TMLR
+  submissions use CC BY 4.0; private corpus/model rights are separate. No raw
+  corpus, model weights or pair observations are included in the supplement.
+
+These are not invented or auto-approved by an AI assistant. AI systems are not
+authors. Fully LLM annotation is separate from human author accountability.
+No external submission, author contact, consent, or legal acceptance was made.
+Do not upload the full public development/history archive as anonymous material.
+Use only the reviewed anonymous manuscript PDF and the dedicated supplement ZIP.
+
+Current official sources
+https://jmlr.org/tmlr/author-guide.html
+https://jmlr.org/tmlr/editorial-policies.html
+https://jmlr.org/tmlr/acceptance-criteria.html
+https://jmlr.org/tmlr/ethics.html
+https://github.com/JmlrOrg/tmlr-style-file

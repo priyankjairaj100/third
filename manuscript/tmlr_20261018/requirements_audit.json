@@ -1,0 +1,98 @@
+{
+  "scope": "Current official TMLR venue audit and source-only adaptation needs; no proof verification, author certification, submission or experiment.",
+  "retrieved_utc": "2026-10-18T11:17:49.969204+00:00",
+  "manuscript_examined": {
+    "path": "manuscript/third_working_draft.tex",
+    "bytes": 57520,
+    "sha256": "f957a3ef723f0749692f6b77a6551c6792d4a4331d267ddc48c0d8c286dc9087"
+  },
+  "official_sources": {
+    "author_guide": "https://jmlr.org/tmlr/author-guide.html",
+    "editorial_policy": "https://jmlr.org/tmlr/editorial-policies.html",
+    "acceptance_criteria": "https://jmlr.org/tmlr/acceptance-criteria.html",
+    "ethics": "https://jmlr.org/tmlr/ethics.html",
+    "template_zip_linked_by_author_guide": "https://github.com/JmlrOrg/tmlr-style-file/archive/refs/heads/main.zip",
+    "template_repository": "https://github.com/JmlrOrg/tmlr-style-file",
+    "template_source": "https://raw.githubusercontent.com/JmlrOrg/tmlr-style-file/main/main.tex",
+    "style_source": "https://raw.githubusercontent.com/JmlrOrg/tmlr-style-file/main/tmlr.sty"
+  },
+  "author_guide_requirements": [
+    "Anonymous double-blind manuscript and supplement. Complete active OpenReview profiles for every author.",
+    "PDF generated with official TMLR style. No fixed page limit; length must be justified. Appendices follow references.",
+    "Supplement is author-created supporting PDF or ZIP, at most 100 MB, anonymized. Code/data improving reproducibility are encouraged.",
+    "Authors supply action-editor suggestions, IRB/human-subjects information, funding, competing interests and conflicts.",
+    "Submissions use CC BY 4.0 from submission onward, with author copyright retained. An identified preprint is permitted, but the anonymous submission must not link to it.",
+    "Broader-impact statement required where significant harm risk exists."
+  ],
+  "template_changes": [
+    {
+      "location": "lines 1-2",
+      "action": "Use documentclass[10pt]{article} and unmodified official tmlr style; remove twocolumn and geometry overrides. Default review mode; do not use accepted/preprint."
+    },
+    {
+      "location": "lines 17-18",
+      "action": "Anonymous author presentation; do not invent author names, affiliations or acceptance/publication metadata."
+    },
+    {
+      "location": "citations and lines 703-760 bibliography",
+      "action": "Use natbib author-year citations and alphabetized references. Embedded bibitems need compatible author-year labels. Template says consistent reference formatting is acceptable; official tmlr.bst is supplied for BibTeX."
+    },
+    {
+      "location": "table calibration near lines 548-571",
+      "action": "Move table caption and label before tabular. Keep figure captions below figures."
+    },
+    {
+      "location": "appendices near line 762",
+      "action": "Already after references; preserve."
+    },
+    {
+      "location": "Appendix reproducibility near line 945",
+      "action": "Revise no-style-files claim after adopting official style. Disclose actual compilation/package mechanism."
+    }
+  ],
+  "editorial_policy_and_author_only_checks": [
+    "No overlap in text, figures or results with another archival peer-reviewed paper already published, accepted or concurrently submitted. Non-archival work and preprints may overlap.",
+    "Every author must meet intellectual contribution, drafting/revision and responsibility criteria; final author list is fixed at submission.",
+    "All authors need sufficient annual quota. Current ordinary parameters N1=2,N9=9; reviewers/action editors receive doubled quotas. Existing submissions, including desk rejections, consume budget.",
+    "LLMs may assist but cannot be authors; humans retain full responsibility for correctness, originality and integrity.",
+    "No explicit blanket AI-tool disclosure clause was located in the current author LLM policy. Voluntary accurate disclosure is recommended, not represented as mandatory.",
+    "Formal TMLR certifications are editor-assigned after acceptance; internal AI checks are not journal certifications."
+  ],
+  "acceptance_and_positioning": [
+    "Evidence must support claims; reducing unsupported claims is an expressly allowed remedy.",
+    "Reader interest and understandable findings matter. A new benchmark best result or a novel method is not mandatory.",
+    "The policy warns that fully AI-generated work with little or no human involvement is unlikely to communicate appropriately. This does not prohibit fully LLM annotation; annotation and author accountability are separate.",
+    "Inference: position this paper as a finite-horizon curation theory and negative model-calibration study, not an unfinished promise of empirical benefit."
+  ],
+  "specific_scientific_scope_preservation": [
+    "Retain no natural-text utility, runtime or total-memory advantage claim; retain v3/v4 failures and no-retuning outcome.",
+    "Revise draft/checkpoint language into a completed bounded study; explicitly call downstream study unexecuted, not part of claimed evidence.",
+    "Preserve limitations and responsible-use discussion; a separate Broader impact heading can make risks of privacy assurances, retained metadata and LLM-label misuse easier to find.",
+    "A concise reproducibility statement should distinguish public aggregate/source replay from private observation/inference replay. Do not claim all observations are public.",
+    "Two uninspected full texts are an unresolved novelty-comparison limitation; no policy waives this. Narrow claims honestly rather than mark comparisons complete."
+  ],
+  "submission_blockers_not_certifiable_by_agent": [
+    "Final legal author list, complete OpenReview profiles, author consent and intellectual accountability.",
+    "Annual quota, prior archival publication and concurrent-submission status.",
+    "Accurate funding, conflicts, IRB/human-subjects and license attestations.",
+    "A rendered anonymous official-style PDF and a separate anonymous supplement. Existing public history package should not be uploaded unchanged because receipts/review reports can identify repository/user.",
+    "Actual external submission requires an explicit request; this audit does not submit."
+  ],
+  "boundary": "Fully LLM annotation remains zero human annotation/review. This does not fabricate or waive TMLR human author responsibilities. No original empirical or human gate is marked passed.",
+  "actions_taken": {
+    "manuscript_edited": false,
+    "experiments_launched": false,
+    "external_communication": false,
+    "external_submission": false
+  },
+  "public_transformation": {
+    "original_report": {
+      "bytes": 6724,
+      "sha256": "1c08d4e510021563226dcf628929904f5c76635012c31c2892b80b1161678120"
+    },
+    "changes": [
+      "Replaced absolute source path with repository-relative path.",
+      "Removed internal memory lookup pointer."
+    ]
+  }
+}

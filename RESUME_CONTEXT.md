@@ -1,3 +1,30 @@
+Latest continuation — TMLR adaptation, 18 October 2026, 2026-10-18T11:29:13.298263+00:00
+
+The user explicitly changed the writing target to TMLR. The SAME source is now
+official single-column anonymous TMLR format with author-year references.
+Theorems, proofs, F1/F2 corrections and both calibration failures are preserved.
+Prospective downstream design moved unchanged to an explicitly unexecuted appendix.
+Broader-impact/AI-assistance disclosures and narrow literature treatment are added.
+Independent source delta review found one abbreviation issue, now resolved.
+Current source SHA256: ecd1f6690fc1d384060073284f9477b401944059082972776cc1b3fc8928404c.
+Native compilation PASSED. Visual inspection failed at native UI sandbox startup;
+no screenshot or separate PDF/export exists. Do not call this submission-ready.
+
+Current reports/scripts live in manuscript/tmlr_20261018/. The dedicated anonymous
+supplement has13members,102cut records,72deidentifiedcompute rows and passed clean
+extraction/arithmetic. Historical release archives and reviews are retained with
+their original bindings. They are development backups, not anonymous submissions.
+README.txt gives the new checker; old build_evidence.py applies only to its old
+archive. Two full texts remain unavailable; no novelty/exclusion claim depends
+on excluding them. Author identity, contributions, consent, quota and submission
+attestations cannot be invented; see the prepared submission checklist.
+
+The original effect study remains UNEXECUTED and BLOCKED by failed calibration.
+No SSH, model, new experiment, changed threshold or human pair annotation/review.
+Protected locks and frozen protocols are unchanged. The old scope question is
+superseded by this explicit venue-adaptation instruction, not permission to mark
+the original study complete. Advance only actual remaining accessible work.
+
 Latest continuation — 18 October 2026, 2026-10-18T03:30:15.717320+00:00
 
 INDEPENDENT AI MANUSCRIPT REVIEW COMPLETED AND CORRECTED.

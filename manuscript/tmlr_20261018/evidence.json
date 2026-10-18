@@ -1,0 +1,296 @@
+{
+  "schema": "third-tmlr-source-check-v1",
+  "created_utc": "2026-10-18T11:29:13.476744+00:00",
+  "scope": "Author source/arithmetic/version checks, not a new scientific or visual review.",
+  "manuscript": {
+    "path": "manuscript/third_working_draft.tex",
+    "bytes": 66111,
+    "sha256": "ecd1f6690fc1d384060073284f9477b401944059082972776cc1b3fc8928404c"
+  },
+  "historical_archive": {
+    "path": "manuscript/release_20261018_v1.zip",
+    "bytes": 801568,
+    "sha256": "d9567681911dc8f7bcef27daf915e4c943ae8d42869ab4e348ffb3e2ab5f2443"
+  },
+  "official_style_embedded_sha256": "816214ff5919aa457b6b443bee52b15d9561421417b7f8a50cc84651519f0002",
+  "official_style_unmodified": true,
+  "delta_review": {
+    "path": "manuscript/tmlr_20261018/delta_review.json",
+    "bytes": 11334,
+    "sha256": "6364d39e973c5e9ccd3393cb9a42b6805376078152da7acdd1dfa374dca3d06b"
+  },
+  "delta_review_findings_resolved": true,
+  "anonymous_supplement": {
+    "path": "manuscript/tmlr_20261018/tmlr_anonymous_supplement_v1.zip",
+    "bytes": 42793,
+    "sha256": "c6ab12aa23da1563d5f659f2406ce2a6985085a0c55b7de531119e9d421dff26"
+  },
+  "historical_review_rebound": false,
+  "historical_sources_verified": [
+    {
+      "path": "output/pdf/counterfactual_curation_theory.tex",
+      "bytes": 109926,
+      "sha256": "8e7662935d0caf6cddede9cd12460d1362c67fddc227d8051424e4dce51d61aa"
+    },
+    {
+      "path": "empirical_execution/canonical_theory_addendum.tex",
+      "bytes": 13650,
+      "sha256": "54c933dcf5b3382824dcc2cfeee373a15435771cd79ede33d175da8339e774c2"
+    },
+    {
+      "path": "empirical_execution/phase10/finite_word_theory.tex",
+      "bytes": 16444,
+      "sha256": "c0afedb46c232444bf6b5165ebc492b630fe5255e25d16dde66f5c105d59f6cd"
+    },
+    {
+      "path": "empirical_execution/phase10/FINITE_WORD_THEORY.md",
+      "bytes": 25507,
+      "sha256": "5a17e0e3d7d37e5c27c5ac37f1898c2df40a18e75ce12df8b2255c9ac4900bfb"
+    },
+    {
+      "path": "empirical_execution/phase10/SCORER_TRANSFER.md",
+      "bytes": 12002,
+      "sha256": "ee9025a29a8071507c0ea331f9f7a06a38e879b1bf1bb7d6058c5701103f7b0a"
+    },
+    {
+      "path": "empirical_execution/phase10/FINITE_WORD_REVIEW.md",
+      "bytes": 14399,
+      "sha256": "014da1fa3672fe311fe45795d7470d0662e303bceb8c515522c5360d96c3efa1"
+    },
+    {
+      "path": "empirical_execution/phase10/CODEC.md",
+      "bytes": 11472,
+      "sha256": "29aacce59369e1b9eea8edd6bc7dece217214ddd1ef521e1747ea93499744d15"
+    },
+    {
+      "path": "empirical_execution/phase10/CODEC_REVIEW.md",
+      "bytes": 8239,
+      "sha256": "5605287126afd7ff1dce67abd60dc67d89047d78b64ccda74b378b8acce53912"
+    },
+    {
+      "path": "empirical_execution/phase10/CONTRIBUTION_POSITION.md",
+      "bytes": 4336,
+      "sha256": "433510bcf5c39529958c35c4247913638a95025b585424f44aca7b89c8392d50"
+    },
+    {
+      "path": "empirical_execution/phase10/LITERATURE_FOLLOWUP.md",
+      "bytes": 11654,
+      "sha256": "101d81a6fbeda49be185adbbf8bb75deb4ab6cd90f7bd179f5610436a85589ce"
+    },
+    {
+      "path": "local_run/EMPIRICAL_PROGRAM.md",
+      "bytes": 36402,
+      "sha256": "35c2bac50f542a4657ff4f53050bbcfe34362f12aa4d063c6b7f20071504f834"
+    },
+    {
+      "path": "local_run/model_annotation_v4_20261014/PLAN.json",
+      "bytes": 16694,
+      "sha256": "10ebb3cb8f872c2efaf69306ca5bb23dcec2a015b2747988aafa31485dbbdcae"
+    },
+    {
+      "path": "local_run/source_acceptance_v2_20261011/qualification.json",
+      "bytes": 7325,
+      "sha256": "a8ee71c5b95318d0496ed26b3987627db36e309cd83f51432a7a42d3635f2e98"
+    },
+    {
+      "path": "local_run/local_llm_execution_20261014/llm_selection_v3_terminal_result.json",
+      "bytes": 37823,
+      "sha256": "48979e72e212d2a7e6bdd4966f32ed1f36b422ca3ae1f48a70c80e6f4b0929eb"
+    },
+    {
+      "path": "local_run/local_llm_execution_20261014/llm_v4_qwen_audit_and_task_locks_20261016.json",
+      "bytes": 6769,
+      "sha256": "d42704863228caaeb9d9c92df60d24fe9176a881bf0e84fae7a41d01a339e086"
+    },
+    {
+      "path": "local_run/local_llm_execution_20261014/task_and_audit_independent_review_20261016.json",
+      "bytes": 2767,
+      "sha256": "9da18a313b1324cf1471897421c04e37eec5e971f942b97c45fdbb5c7c85d183"
+    },
+    {
+      "path": "local_run/local_llm_execution_20261014/llm_development_intake_completed_20261016.json",
+      "bytes": 10867,
+      "sha256": "acfd9cd73c228199becd758389da0b387271a68f4de7798c88c06a2ccf37796f"
+    },
+    {
+      "path": "local_run/local_llm_execution_20261014/llm_guard_benchmark_completed_20261016.json",
+      "bytes": 4429,
+      "sha256": "f6c83af86a0c7f6b89d03c093dfe4bc7477f73199a16e9d197f099a3fda69a76"
+    },
+    {
+      "path": "local_run/local_llm_execution_20261014/e5_calibration_frame_result.json",
+      "bytes": 5960,
+      "sha256": "2344e6b255fce4e57bb90ea561e341258c6a95c06cc9675b5010e9ea489e211d"
+    },
+    {
+      "path": "manuscript/literature_contract_review_20261016.json",
+      "bytes": 4170,
+      "sha256": "d92b8abbf65753bd5f74fe58c5d7d3892eea3685093cf3d6c006a0e3f12f6a1a"
+    },
+    {
+      "path": "manuscript/related_work_sources_20261016.json",
+      "bytes": 6165,
+      "sha256": "da0ffd0e0d4b6d8830a5d879a50814b8e29be000434be67d2577b33ef7d1cceb"
+    },
+    {
+      "path": "local_run/local_llm_execution_20261014/llm_selection_v4_terminal_result.json",
+      "bytes": 85149,
+      "sha256": "961f1ab1b07b98d3c814d06e25d7825f2afee5422fca67c309d4a379c7793f86"
+    },
+    {
+      "path": "local_run/local_llm_execution_20261014/llm_v4_negative_diagnostics_20261016.json",
+      "bytes": 39226,
+      "sha256": "db31edff00875ba4a29a4f50d288bc3257beefd32f31555a09d9b3ad683a1651"
+    },
+    {
+      "path": "local_run/llm_v4_negative_analysis_v1_20261016/analyze.py",
+      "bytes": 11035,
+      "sha256": "2bf5df9d0a727365a4be0fc69f50329ef29a41c7a2a0a36f71f9492e25b0412c"
+    },
+    {
+      "path": "manuscript/claims_review_20261016.json",
+      "bytes": 9741,
+      "sha256": "3fea76740ac10f6f0bb0d8f387262e0b2945617490c3872f72b4806499dcdfb4"
+    },
+    {
+      "path": "manuscript/compute_accounting_20261016.json",
+      "bytes": 4577,
+      "sha256": "e922a85142a1c2d628c7c664e014b2da8e90588fa246e8707562b7fd9e2ab18f"
+    },
+    {
+      "path": "manuscript/build_review.py",
+      "bytes": 13852,
+      "sha256": "3ed6c71a78567aeaa65fc2fa5562f020470e4656f0f9c53f8be8733da3e44770"
+    },
+    {
+      "path": "manuscript/attribution_review_20261016.json",
+      "bytes": 10937,
+      "sha256": "23cfad560cee0a0829844b53efc081a76df1f57e80f8282d3e8e8495cc69c709"
+    },
+    {
+      "path": "empirical_execution/phase4/adapters.py",
+      "bytes": 31889,
+      "sha256": "7171b59802dff219636a08b53f13d8b3bdbb7bc400f5712f041280e61e8d6f0d"
+    },
+    {
+      "path": "empirical_execution/phase4/ADAPTERS_README.txt",
+      "bytes": 9605,
+      "sha256": "c617e8c412ba0b49f36ace410d7c7a4bb42606be430c389e83928802a75b1d75"
+    },
+    {
+      "path": "empirical_execution/phase4/embeddings.py",
+      "bytes": 27522,
+      "sha256": "bb1af9a6583a90372f7641f406afdb418017797cc8d86ee67f117f215c65d2c1"
+    },
+    {
+      "path": "local_run/e5_sharded_cpu_v2_20261013/expectations.json",
+      "bytes": 3008,
+      "sha256": "68442e55534e49f02573c4b05d602bd6ebea67d35bbcb673dac083608131bcbe"
+    },
+    {
+      "path": "manuscript/compute_history_20261016.json",
+      "bytes": 36673,
+      "sha256": "bad69b6c456fd7b82f1afd2e240535b2d534a6e9415cf793eff67e8be44d4c9a"
+    },
+    {
+      "path": "manuscript/compute_receipts_extract_20261016.json",
+      "bytes": 8264,
+      "sha256": "dc9ad7bf2a5aa14d59c3b32b71e0f7de8a59b5a2f904c0ed57de8af8f9d7c3fe"
+    },
+    {
+      "path": "manuscript/build_compute_history.py",
+      "bytes": 17087,
+      "sha256": "778f91048e6e7f662c772677a174932aca3ee941c4e3178f3c638be98da2b28f"
+    },
+    {
+      "path": "manuscript/unified_review_20261016.json",
+      "bytes": 5703,
+      "sha256": "f3406f6723cfd09082e3bb6f847221581799fa521028590d4620edff885c1abc"
+    },
+    {
+      "path": "manuscript/independent_review_20261018.json",
+      "bytes": 10519,
+      "sha256": "eb7156baa7f8bcca55ac947bf2778e6031e9b3092bae5a30e72010b9cfef1b93"
+    },
+    {
+      "path": "manuscript/independent_review_report_20261018.txt",
+      "bytes": 18640,
+      "sha256": "9218c155f6220fea78929a04f4f21335da1a76fe78101f908f7fea14b657db5b"
+    },
+    {
+      "path": "manuscript/independent_review_checks_20261018.json",
+      "bytes": 15845,
+      "sha256": "e4562f2e3fbf7ce89ea6b6f064432063d0f2ee76b3660032b47ecc1ecd6f2eda"
+    },
+    {
+      "path": "manuscript/independent_review_followup_20261018.txt",
+      "bytes": 4032,
+      "sha256": "329602cb847b9925213f5ced0b7b9ac705a103ee08114a8a1ee62c2074d14627"
+    },
+    {
+      "path": "manuscript/independent_review_followup_20261018.json",
+      "bytes": 3039,
+      "sha256": "422e31d1b96e6d62c8dd5d5dade62d05dd48f148a2a1c9f60bdcc0f74f02029e"
+    },
+    {
+      "path": "manuscript/release_20261016_v4.zip",
+      "bytes": 378563,
+      "sha256": "e76a88eff67c140b636bacc4b1218f42fe1a7e19b4432dd49741a80340b09262"
+    },
+    {
+      "path": "empirical_execution/ccu/summary.py",
+      "bytes": 24421,
+      "sha256": "4ba0f4ad3cf386f2493461d4924c6fda6467a6399f266a13f61f4966cef3e498"
+    },
+    {
+      "path": "empirical_execution/phase5/methods.py",
+      "bytes": 24795,
+      "sha256": "75294db32fe8ed7976a24fe95de76eccbb5e611aeb870ea49760cbbf11d10691"
+    },
+    {
+      "path": "empirical_execution/phase6/methods.py",
+      "bytes": 18563,
+      "sha256": "1bd87879b3ed3d692466362f914d63c0b8f74b3048abc34a76e80c2629f15606"
+    },
+    {
+      "path": "empirical_execution/phase6/check_state_audit_semantics.py",
+      "bytes": 15044,
+      "sha256": "872facf85b291c60b368f437c63477017194a84b0b83f9e7abb32e28d312bb3d"
+    },
+    {
+      "path": "empirical_execution/phase3/panels.py",
+      "bytes": 20216,
+      "sha256": "bd2409958ac9a9e27faf463b44b2f839260a3195c7cde32fb3bfb76aeb14a04b"
+    },
+    {
+      "path": "empirical_execution/phase10/finite_word_codec.py",
+      "bytes": 16833,
+      "sha256": "d3884acc201f80fd3a967db13292f1f1ffbee579bd0c65bf22284ae8877d8456"
+    },
+    {
+      "path": "algorithm_round2.py",
+      "bytes": 17649,
+      "sha256": "6e8864f6df77c666606fba2fa540078df24628f69c7cb50380175dc71456ba7c"
+    }
+  ],
+  "historical_checker_replay": {
+    "source_claim_check_passed": true,
+    "source_bindings": 49,
+    "bibliography_entries": 16,
+    "manuscript_sha256": "f957a3ef723f0749692f6b77a6551c6792d4a4331d267ddc48c0d8c286dc9087"
+  },
+  "bibliography_entries": 16,
+  "references_checked": 18,
+  "theorem_proof_display_blocks_preserved": 16,
+  "anonymity_source_scan_passed": true,
+  "calibration_table_exact_arithmetic_passed": true,
+  "both_negative_calibrations_preserved": true,
+  "frozen_experiments_launched": false,
+  "annotation_mode": "fully LLM; zero human pair annotation or pair review",
+  "original_human_and_empirical_gates_unmet": true,
+  "visual_review_verified": false,
+  "full_text_comparison_gaps_closed": false,
+  "submission_ready": false,
+  "author_attestations_supplied": false,
+  "source_check_passed": true
+}

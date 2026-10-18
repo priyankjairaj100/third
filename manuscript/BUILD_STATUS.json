@@ -1,96 +1,31 @@
 {
-  "attempt_history": [
-    "Initial native compilation timed out downloading Latin Modern font assets.",
-    "Removed optional font packages and used standard fonts; two bounded follow-ups returned busy.",
-    "Compiler then found extra alignment tabs in the finite-family display.",
-    "Reformatted that display as four aligned rows; native compiler returned success.",
-    "Primary-text comparison revision compiled successfully; then terminal v4 negative results and the checked table compiled successfully with the native compiler.",
-    "Bounded author claim review clarified stable handles, empirical retry rejection, private-state access and scorer range proof; partial v4 compute statement added. Native compilation succeeded without repair.",
-    "Pinned model identity, publisher attribution metadata and public/private replay limits added. Native compilation succeeded without repair;32 source bindings checked. Record-level attribution clearance remains unverified.",
-    "Expanded historical compute ledger covers72 unique jobs and includes four failures; separate same-author arithmetic crosscheck matched all source rows and original32 array parent rows. Existing manuscript compiled successfully without repair.35 direct evidence bindings checked.",
-    "Available whole-document author review corrected introduction/conclusion status and added Schelter (2021) as a preprocessing-aware view-maintenance antecedent. Native compilation succeeded without repair;36 direct bindings and16 references checked. Independent review, two full-text comparisons and visual layout remain unresolved.",
-    "Independent AI review found two implementation-description defects: strict kernel versus retry-normalizing service, and missing service request/lookup costs. Corrected in the same manuscript; independent scoped follow-up resolved both. Native compilation succeeded without repair;49 direct sources,20 historical review inputs and16 references checked. Prior source/reports preserved in immutable v4 archive. No new experiments or changed gates."
-  ],
-  "attribution_review_20261016.json": {
-    "bytes": 10937,
-    "sha256": "23cfad560cee0a0829844b53efc081a76df1f57e80f8282d3e8e8495cc69c709"
-  },
-  "bibliography_entries_checked": 16,
-  "claims_review_20261016.json": {
-    "bytes": 9741,
-    "sha256": "3fea76740ac10f6f0bb0d8f387262e0b2945617490c3872f72b4806499dcdfb4"
+  "schema": "third-tmlr-manuscript-build-status-v1",
+  "observed_utc": "2026-10-18T11:29:13.298263+00:00",
+  "source_binding": {
+    "bytes": 66111,
+    "sha256": "ecd1f6690fc1d384060073284f9477b401944059082972776cc1b3fc8928404c"
   },
   "compile_verified": true,
-  "compute_accounting_20261016.json": {
-    "bytes": 4577,
-    "sha256": "e922a85142a1c2d628c7c664e014b2da8e90588fa246e8707562b7fd9e2ab18f"
-  },
-  "compute_history_20261016.json": {
-    "bytes": 36673,
-    "sha256": "bad69b6c456fd7b82f1afd2e240535b2d534a6e9415cf793eff67e8be44d4c9a"
-  },
-  "compute_receipts_extract_20261016.json": {
-    "bytes": 8264,
-    "sha256": "dc9ad7bf2a5aa14d59c3b32b71e0f7de8a59b5a2f904c0ed57de8af8f9d7c3fe"
-  },
-  "current_revision_source_repairs": 0,
-  "evidence_20261016.json": {
-    "bytes": 19010,
-    "sha256": "7222c410d752169e356e256efd40ac47fbe92cb27d64847e687eb1873eae549c"
-  },
-  "historical_compute_nested_source_bindings": 33,
-  "independent_ai_followup_findings_resolved": 2,
-  "independent_ai_review_completed": true,
-  "independent_review_20261018.json": {
-    "bytes": 10519,
-    "sha256": "eb7156baa7f8bcca55ac947bf2778e6031e9b3092bae5a30e72010b9cfef1b93"
-  },
-  "independent_review_checks_20261018.json": {
-    "bytes": 15845,
-    "sha256": "e4562f2e3fbf7ce89ea6b6f064432063d0f2ee76b3660032b47ecc1ecd6f2eda"
-  },
-  "independent_review_followup_20261018.json": {
-    "bytes": 3039,
-    "sha256": "422e31d1b96e6d62c8dd5d5dade62d05dd48f148a2a1c9f60bdcc0f74f02029e"
-  },
-  "independent_review_followup_20261018.txt": {
-    "bytes": 4032,
-    "sha256": "329602cb847b9925213f5ced0b7b9ac705a103ee08114a8a1ee62c2074d14627"
-  },
-  "independent_review_report_20261018.txt": {
-    "bytes": 18640,
-    "sha256": "9218c155f6220fea78929a04f4f21335da1a76fe78101f908f7fea14b657db5b"
-  },
-  "latex_installed_by_agent": false,
-  "literature_contract_review_20261016.json": {
-    "bytes": 4170,
-    "sha256": "d92b8abbf65753bd5f74fe58c5d7d3892eea3685093cf3d6c006a0e3f12f6a1a"
-  },
   "native_compiler_result": {
     "kind": "success",
-    "message": "The current source compiled successfully with the desktop editor's compiler.",
-    "path": "/Users/priyankjairaj/Downloads/ACL/Three/manuscript/third_working_draft.tex"
+    "message": "The current source compiled successfully with the desktop editor compiler."
   },
-  "observed_utc": "2026-10-18T03:29:26.705405+00:00",
-  "open_in_codex_status": "already open as reported by user",
-  "related_work_sources_20261016.json": {
-    "bytes": 6165,
-    "sha256": "da0ffd0e0d4b6d8830a5d879a50814b8e29be000434be67d2577b33ef7d1cceb"
-  },
-  "schema": "third-manuscript-build-status-v1",
-  "source_binding": {
-    "bytes": 57520,
-    "sha256": "f957a3ef723f0749692f6b77a6551c6792d4a4331d267ddc48c0d8c286dc9087"
-  },
-  "source_bindings_checked": 49,
-  "source_check_report": "evidence_20261016.json",
-  "source_repairs": 2,
+  "source_path": "manuscript/third_working_draft.tex",
+  "editor_kept_open": true,
+  "new_tab_opened": false,
+  "separate_pdf_compiled": false,
+  "official_style_unmodified": true,
+  "style_sha256": "816214ff5919aa457b6b443bee52b15d9561421417b7f8a50cc84651519f0002",
+  "review_report": "manuscript/tmlr_20261018/delta_review.json",
+  "independent_ai_delta_review_completed": true,
+  "delta_findings_resolved": 1,
+  "historical_review_rebound": false,
+  "visual_review_verified": false,
+  "visual_review_limitation": "Computer-use kernel exited at sandbox startup before a screenshot or PDF inspection. Native compilation does not establish visual layout.",
+  "source_anonymity_checked": true,
+  "exported_pdf_metadata_checked": false,
+  "author_attestations_supplied": false,
   "submission_ready": false,
-  "third_party_plugins_installed": false,
-  "unified_review_20261016.json": {
-    "bytes": 5703,
-    "sha256": "f3406f6723cfd09082e3bb6f847221581799fa521028590d4620edff885c1abc"
-  },
-  "visual_review_limitation": "Native UI service failed to start again after user return on18 October; no rendered layout review performed. Compilation confirms source compilation only.",
-  "visual_review_verified": false
+  "submitted": false,
+  "historical_build_status_preserved_in": "manuscript/release_20261018_v1.zip"
 }

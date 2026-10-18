@@ -1,0 +1,62 @@
+{
+  "schema": "third-tmlr-literature-access-audit-v1",
+  "observed_utc": "2026-10-18T11:18:44.679122+00:00",
+  "status": "available-source_audit_complete_with_two_unavailable_full_text_comparisons",
+  "scientific_comparisons_completed": 0,
+  "full_texts_obtained": 0,
+  "novelty_clearance": false,
+  "third_party_papers_published": false,
+  "contacts_or_login_attempts": 0,
+  "task_scope": "New public routes for two unresolved sources; conservative manuscript treatment for TMLR. No manuscript or repository files edited.",
+  "new_route_receipts": "new_route_network_receipts.json",
+  "prior_receipts_read": [
+    "work/review-gaps-20261018T0702/checkpoint.json",
+    "work/review-gaps-20261018T0113/counterfactual_new_routes.json",
+    "work/review-gaps-20261018T0332/metadata_routes.json",
+    "work/review-gaps-20261016T1214/dominici_additional_routes.json",
+    "work/review-gaps-20261016T1214/author_public_repositories.json"
+  ],
+  "sources": [
+    {
+      "key": "counterfactual",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7520178",
+      "evidence": "Public primary abstract and metadata retrieved via web search, not full paper. Six-page preprint; date written 2026-09-24 and posted 2026-09-26. General prediction/auditing memory separation and approximate-success claim are acknowledged.",
+      "full_text_status": "Unavailable; no repeat request of previously denied delivery URL. Search engine surfaced the same URL but returned abstract/metadata, not paper text.",
+      "new_routes": [
+        {
+          "provider": "Semantic Scholar",
+          "result": "HTTP 404 for exact DOI lookup; no matching record obtained."
+        },
+        {
+          "provider": "OpenAIRE",
+          "result": "20-second request timed out; no metadata obtained."
+        }
+      ],
+      "inference_limit": "Do not infer absence, exact approximate-success semantics, theorem dominance, or independence from this work. Existing official-code inspection is not a substitute for full proof comparison."
+    },
+    {
+      "key": "dominici",
+      "urls": [
+        "https://leodom01.github.io/",
+        "https://deem.berlin/",
+        "https://de.linkedin.com/in/leonardo-dominici"
+      ],
+      "evidence": "DEEM primary thesis listing corroborates exact title/author. New search-indexed public author profile describes a Feast feature-store extension for unlearning across preparation/featurization; direct profile opening returned HTTP 999. This is author-description evidence only, not a thesis review.",
+      "full_text_status": "Unavailable. New OpenAIRE exact-title request timed out after 20 seconds. No author/library contact or restricted access attempted.",
+      "inference_limit": "Do not repeat author-profile speedup number or assert exactness/coverage without the thesis. Recognize topical overlap explicitly in Related Work; do not claim first preparation-aware or end-to-end pipeline unlearning.",
+      "institutional_policy_correction": {
+        "url": "https://vu.nl/nl/student/afstuderen-en-diploma/je-scriptie-uploaden",
+        "page_modified": "2026-08-26",
+        "finding": "Faculty of Science is listed among faculties NOT using SURFsharekit. The restricted archive policy cannot be used to explain this target thesis access gap or establish that it is stored there."
+      }
+    }
+  ],
+  "recommended_manuscript_changes": [
+    "Add Dominici citation to the main Related Work paragraph on preparation/provenance; do not consign the source solely to an unfinished-task list.",
+    "Preserve acknowledgment of the general prediction/counterfactual separation and the bounded fixed-scorer/shared-feature ridge construction.",
+    "Replace future workflow wording such as final review must revisit these gaps with a precise durable limitation. Complete the scoped manuscript while truthfully leaving full-text comparisons unavailable.",
+    "Do not mark literature comparison, exhaustive novelty clearance, experimental gates, or original empirical study complete merely because the venue changes."
+  ],
+  "recommended_latex_related_work": "Dominici's thesis also addresses unlearning through data preparation pipelines and feature stores \\cite{dominici}. We acknowledge this overlap, but have not obtained the thesis text and make no technical exclusion claim about its methods. Our contribution is restricted to the specified curator, remaining-horizon state contract, and shared-feature ridge construction.",
+  "recommended_latex_limitation": "Full-text technical comparisons with the counterfactual-auditing preprint \\cite{counterfactual} and Dominici's thesis \\cite{dominici} remain unavailable. We therefore make no claim that either work excludes the mechanisms studied here; neither search absence nor repository inspection establishes novelty."
+}
