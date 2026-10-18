@@ -1,0 +1,14 @@
+Independent stage1 review: no unresolved algorithm or success-output privacy defect found.
+
+Six author software tests and 2,560 independent exact expectation checks passed.
+The latter exhaust all 64 ordered four-node DAGs, four source partitions and
+two eligible source frames. These are algebraic tests, not empirical results.
+
+Before launch root must freeze protocol with SciPy pin, bind script and wrapper,
+verify Slurm and scratch/NFS allocation, and cap final outputs plus logs.
+The reviewed worker does not itself establish those external conditions.
+
+Scope: new natural development structural characterization; original semantic
+calibration/effect remains blocked and v4 is unchanged.
+
+Exact file bindings and full review: review.json.

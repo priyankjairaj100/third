@@ -1,0 +1,13 @@
+{
+  "schema": "third-tmlr-layout-delta-check-v1",
+  "passed": true,
+  "source_sha256": "5c40003b70b626e995b7075ac4ff1d6ae178fe13b06ea8e085262ab7c90b75c9",
+  "prior_source_sha256": "ecd1f6690fc1d384060073284f9477b401944059082972776cc1b3fc8928404c",
+  "change_scope": "Only revision-attribution paragraph reformatted into three model revision lines; all other source bytes identical",
+  "model_revision_hashes_preserved": true,
+  "historical_tmlr_archive_replay_passed": true,
+  "historical_bibliography_entries": 16,
+  "historical_theorem_proof_blocks_preserved": 16,
+  "native_pdf_equivalence_claim": false,
+  "scientific_review_rebound": false
+}

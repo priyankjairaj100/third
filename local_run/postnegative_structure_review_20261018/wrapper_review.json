@@ -1,0 +1,64 @@
+{
+  "bindings": {
+    "PLAN.json": {
+      "bytes": 7698,
+      "sha256": "933b0f4d269d22f9391d3a6d1ac7dfbc14f90025b8009f27f72306e8a392fb86"
+    },
+    "job_runner.py": {
+      "bytes": 8622,
+      "sha256": "c860b3959b98e5636b56dbb8048942f3d5f2fa47c5bbcb5afa81fbbd07f22b57"
+    },
+    "launch.py": {
+      "bytes": 3056,
+      "sha256": "2aff467bcadd8119e3ab0adb302db10dd6a0060fbb3414b20b1c64ae50e5fb66"
+    },
+    "structure.sbatch": {
+      "bytes": 645,
+      "sha256": "0a4cf56a387c1a61e97ab3e275c47f583891fa079ff18bfa08b4f7a1e7c4d306"
+    }
+  },
+  "created_utc": "2026-10-18T11:50:19.273856+00:00",
+  "fixes": [
+    "Exclusive execution_intent.json prevents duplicate worker computation and duplicate attempt does not contaminate active/terminal slot.",
+    "Child stdout/stderr use bounded scratch files, never memory capture or raw export; receipts contain hashes/sizes only.",
+    "Fixed JSON aggregate export inventory; original failure bytes renamed to private scratch file, new sanitized failure report returned.",
+    "Combined tool+run+archive NFS budget checked before and after copy with 32KiB reserved for final receipts.",
+    "Final scratch allowance and 8GiB reserve verified.",
+    "Exact run/package roots and CPU2/memory8192MiB/noGPU allocation checks.",
+    "Scheduler stdout/stderr go to /dev/null; wrapper emits only bounded fixed status objects."
+  ],
+  "launch_review": {
+    "blocking_findings": [],
+    "exclusive_runroot_before_sbatch": true,
+    "fresh_queue_empty_required": true,
+    "fresh_quota_margin_required": true,
+    "frozen_checkout_clean_required": true,
+    "package_max_bytes": 131072,
+    "unknown_submission_never_retried": true
+  },
+  "remaining_limits": [
+    "Wrapper corrections were authored by this reviewer; root should review final diff before sealing package.",
+    "No live scratch/quota/Slurm test performed by this reviewer.",
+    "Launcher captures only bounded expected scheduler output but no independent hard cap applies to sbatch output; ordinary sbatch command is fixed and no model/private dataset output occurs there.",
+    "All failure evidence and scratch paths must remain private unless separately sanitized for public publication."
+  ],
+  "reviewer_modified_wrappers": true,
+  "schema": "third-stage1-wrapper-review-and-repair-v1",
+  "untouched": [
+    "structure_stage1.py",
+    "PLAN.json",
+    "frozen repository sources"
+  ],
+  "validation": {
+    "bash_syntax": true,
+    "bounded_runner_checks": [
+      "ordinary success without raw-log export",
+      "oversized-log failure",
+      "timeout receipt",
+      "no-clobber receipt writes"
+    ],
+    "bounded_runner_checks_passed": true,
+    "live_cluster_execution": false,
+    "python_syntax": true
+  }
+}

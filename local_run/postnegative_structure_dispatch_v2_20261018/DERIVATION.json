@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-18T11:52:07.018754+00:00",
+  "reason": "Original preflight correctly refused to launch while unrelated Second jobs occupied account. No job submitted and original run directory absent. New dispatcher distinguishes Third stages from unrelated projects; Slurm mediates resources.",
+  "previous_dispatch_sha256": "2aff467bcadd8119e3ab0adb302db10dd6a0060fbb3414b20b1c64ae50e5fb66",
+  "new_dispatch_sha256": "93e1e10ab5d6a99d143038930f6ce4a73ea1a2ecb3c5f32e7396699eb3f7f9b5",
+  "experiment_package_manifest_sha256": "720c7b880a0565574b540c636eb18bdb4ef34468cd52ac9bee9ff2a73de873ad",
+  "scientific_protocol_changed": false,
+  "original_attempt_retained": true,
+  "automatic_retry": false
+}

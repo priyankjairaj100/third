@@ -1,0 +1,1220 @@
+{
+  "conclusion": "No confirmed implementation defect explaining or reversing v4 calibration failure was found in this bounded review. Preserve terminal negative v4. New experimental continuation requires explicit versioning and disclosed exposure; the app UI runtime is separate.",
+  "created_utc": "2026-10-18T11:39:02.521891+00:00",
+  "current_exact_51_cut_replay_passed": true,
+  "cut_diagnostics": [
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 2,
+        "numerator": 1
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 100,
+        "numerator": 51
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 25,
+        "numerator": 13
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 100,
+        "numerator": 53
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 50,
+        "numerator": 27
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 20,
+        "numerator": 11
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 25,
+        "numerator": 14
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 100,
+        "numerator": 57
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 50,
+        "numerator": 29
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 100,
+        "numerator": 59
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 5,
+        "numerator": 3
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 100,
+        "numerator": 61
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 50,
+        "numerator": 31
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 100,
+        "numerator": 63
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 25,
+        "numerator": 16
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 20,
+        "numerator": 13
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 50,
+        "numerator": 33
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 100,
+        "numerator": 67
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 25,
+        "numerator": 17
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 100,
+        "numerator": 69
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 10,
+        "numerator": 7
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 100,
+        "numerator": 71
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 25,
+        "numerator": 18
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 100,
+        "numerator": 73
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 50,
+        "numerator": 37
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 4,
+        "numerator": 3
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 25,
+        "numerator": 19
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 100,
+        "numerator": 77
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 50,
+        "numerator": 39
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6612165300,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3306082650,
+          "numerator": 230753791
+        },
+        "qwen": {
+          "denominator": 42385675,
+          "numerator": 14381
+        }
+      },
+      "tau": {
+        "denominator": 100,
+        "numerator": 79
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 6400535729,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 6400535729,
+          "numerator": 461507582
+        },
+        "qwen": {
+          "denominator": 6400535729,
+          "numerator": 2243436
+        }
+      },
+      "tau": {
+        "denominator": 5,
+        "numerator": 4
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 5554017445,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 5554017445,
+          "numerator": 249878011
+        },
+        "qwen": {
+          "denominator": 5554017445,
+          "numerator": 2243436
+        }
+      },
+      "tau": {
+        "denominator": 100,
+        "numerator": 81
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 5130758303,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 5130758303,
+          "numerator": 249878011
+        },
+        "qwen": {
+          "denominator": 5130758303,
+          "numerator": 2243436
+        }
+      },
+      "tau": {
+        "denominator": 50,
+        "numerator": 41
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 4495869590,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 4495869590,
+          "numerator": 249878011
+        },
+        "qwen": {
+          "denominator": 2247934795,
+          "numerator": 1121718
+        }
+      },
+      "tau": {
+        "denominator": 100,
+        "numerator": 83
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 3860980877,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 3860980877,
+          "numerator": 249878011
+        },
+        "qwen": {
+          "denominator": 4068473,
+          "numerator": 2364
+        }
+      },
+      "tau": {
+        "denominator": 25,
+        "numerator": 21
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 3437721735,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 229181449,
+          "numerator": 2549896
+        },
+        "qwen": {
+          "denominator": 1145907245,
+          "numerator": 747812
+        }
+      },
+      "tau": {
+        "denominator": 20,
+        "numerator": 17
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 2167944309,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 722648103,
+          "numerator": 12749480
+        },
+        "qwen": {
+          "denominator": 722648103,
+          "numerator": 747812
+        }
+      },
+      "tau": {
+        "denominator": 50,
+        "numerator": 43
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 898166883,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 299388961,
+          "numerator": 12749480
+        },
+        "qwen": {
+          "denominator": 299388961,
+          "numerator": 747812
+        }
+      },
+      "tau": {
+        "denominator": 100,
+        "numerator": 87
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 474907741,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 474907741,
+          "numerator": 38248440
+        },
+        "qwen": {
+          "denominator": 474907741,
+          "numerator": 2243436
+        }
+      },
+      "tau": {
+        "denominator": 25,
+        "numerator": 22
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 263278170,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 8775939,
+          "numerator": 1274948
+        },
+        "qwen": {
+          "denominator": 43879695,
+          "numerator": 373906
+        }
+      },
+      "tau": {
+        "denominator": 100,
+        "numerator": 89
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 263278170,
+        "numerator": 3756317
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 8775939,
+          "numerator": 1274948
+        },
+        "qwen": {
+          "denominator": 43879695,
+          "numerator": 373906
+        }
+      },
+      "tau": {
+        "denominator": 10,
+        "numerator": 9
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 79033800,
+        "numerator": 124649
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 39516900,
+          "numerator": 6055091
+        },
+        "qwen": {
+          "denominator": 13172300,
+          "numerator": 186953
+        }
+      },
+      "tau": {
+        "denominator": 100,
+        "numerator": 91
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 45847920,
+        "numerator": 124649
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 4584792,
+          "numerator": 989779
+        },
+        "qwen": {
+          "denominator": 7641320,
+          "numerator": 2587
+        }
+      },
+      "tau": {
+        "denominator": 25,
+        "numerator": 23
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 24751095,
+        "numerator": 124649
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 9900438,
+          "numerator": 3115243
+        },
+        "qwen": {
+          "denominator": 8250365,
+          "numerator": 5174
+        }
+      },
+      "tau": {
+        "denominator": 100,
+        "numerator": 93
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 11926890,
+        "numerator": 124649
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 7951260,
+          "numerator": 2912213
+        },
+        "qwen": {
+          "denominator": 1987815,
+          "numerator": 2587
+        }
+      },
+      "tau": {
+        "denominator": 50,
+        "numerator": 47
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 4874550,
+        "numerator": 124649
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 9749100,
+          "numerator": 4975391
+        },
+        "qwen": {
+          "denominator": 812425,
+          "numerator": 2587
+        }
+      },
+      "tau": {
+        "denominator": 20,
+        "numerator": 19
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 1063950,
+        "numerator": 10241
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 1063950,
+          "numerator": 638447
+        },
+        "qwen": {
+          "denominator": 531975,
+          "numerator": 5174
+        }
+      },
+      "tau": {
+        "denominator": 25,
+        "numerator": 24
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 22460,
+        "numerator": 931
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 741180,
+          "numerator": 608317
+        },
+        "qwen": {
+          "denominator": 61765,
+          "numerator": 2587
+        }
+      },
+      "tau": {
+        "denominator": 100,
+        "numerator": 97
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 47235,
+        "numerator": 4583
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 47235,
+          "numerator": 34696
+        },
+        "qwen": {
+          "denominator": 94470,
+          "numerator": 9487
+        }
+      },
+      "tau": {
+        "denominator": 50,
+        "numerator": 49
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 4245,
+        "numerator": 1717
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 849,
+          "numerator": 634
+        },
+        "qwen": {
+          "denominator": 1698,
+          "numerator": 751
+        }
+      },
+      "tau": {
+        "denominator": 100,
+        "numerator": 99
+      }
+    },
+    {
+      "joint_format_only_favorable_imputation": {
+        "denominator": 30,
+        "numerator": 13
+      },
+      "single_model_positive_rates": {
+        "mistral": {
+          "denominator": 6,
+          "numerator": 5
+        },
+        "qwen": {
+          "denominator": 2,
+          "numerator": 1
+        }
+      },
+      "tau": {
+        "denominator": 200,
+        "numerator": 199
+      }
+    }
+  ],
+  "findings": [
+    {
+      "evidence": [
+        "local_run/llm_v4_audit_repair_v1_20261015/DERIVATION.json",
+        "local_run/llm_v4_audit_repair_v1_20261015/audit.py"
+      ],
+      "finding": "The original CPU auditor normalized CR/CRLF in six stored outputs; the separate exact-byte repair retained all labels and model outputs and passed. It was not a generator or scoring fault.",
+      "id": "F1",
+      "kind": "verified_existing_defect_already_repaired"
+    },
+    {
+      "evidence": [
+        "local_run/model_annotation_runtime_v5_20261011/run_pilot.py:553",
+        "local_run/model_annotation_runtime_mistral_v1_20261011/run_pilot.py:571",
+        "local_run/llm_v4_audit_repair_v1_20261015/audit.py:77"
+      ],
+      "finding": "Both renderers supply the same fixed system/task rubric and complete A/B original texts using pinned native chat templates; no score, expected label, metadata or opposite-model answer is supplied. CPU audits independently reconstructed every prompt/token sequence and pair envelope.",
+      "id": "F2",
+      "kind": "source_and_receipt_check"
+    },
+    {
+      "evidence": [
+        "local_run/llm_v4_negative_analysis_v1_20261016/analyze.py",
+        "private audit bindings retained below"
+      ],
+      "finding": "Only five Qwen calls failed strict JSON parsing and no Mistral call failed. Favorable unavailable-only and unavailable-plus-uncertain imputation remain below the gate; formatting fixes cannot admit this result.",
+      "id": "F3",
+      "kind": "formatting_not_sufficient_explanation"
+    },
+    {
+      "evidence": [
+        "local_run/llm_v4_inference_v2_20261014/statistics_core.py:122",
+        "local_run/model_annotation_v4_20261014/sampling.py:11"
+      ],
+      "finding": "The implementation uses strict score > float(tau), exact Fraction inverse-inclusion weights, full denominators and the two-valid-positive intersection required by the frozen plan. All 51 terminal cuts independently reproduce.",
+      "id": "F4",
+      "kind": "scoring_source_review"
+    },
+    {
+      "evidence": [
+        "cut_diagnostics in this report"
+      ],
+      "finding": "Substantial model disagreement remains, with model-specific maximum positive rates 1/2 and 5/6. Neither alone reaches 19/20 on the existing grid. These descriptive rates do not authorize selecting a single rater or changing the target.",
+      "id": "F5",
+      "kind": "rater_limitation_not_bug_proof"
+    },
+    {
+      "evidence": [
+        "local_run/model_annotation_runtime_v5_20261011/bounded_reason.py:245",
+        "local_run/llm_v4_inference_v2_20261014/kernel.py:140"
+      ],
+      "finding": "The custom grammar/word/standalone-token filter is intentionally narrower than unconstrained native greedy decoding; code verifies prefix consistency and records rejections. No independent full-logit replay or matched unconstrained comparison is available. This is a disclosed behavior and possible future engineering diagnostic, not a confirmed bug or evidence that valid labels are wrong.",
+      "id": "F6",
+      "kind": "remaining_uncertainty"
+    }
+  ],
+  "human_annotation_calls": 0,
+  "joint_format_only_favorable_max": {
+    "denominator": 30,
+    "numerator": 13
+  },
+  "joint_max": {
+    "denominator": 5,
+    "numerator": 2
+  },
+  "joint_missing_and_uncertain_favorable_max": {
+    "denominator": 15,
+    "numerator": 8
+  },
+  "limits": [
+    "No semantic source-text rereview or new label judgments were performed.",
+    "Saved independent audits were authenticated by fixed file hashes and seals but model weights were not rehashed locally.",
+    "No full calibration pair census or raw model logit replay was rerun.",
+    "The native-app PDF runtime failure cannot explain these independent completed Slurm results."
+  ],
+  "new_model_calls": 0,
+  "private_input_bindings": {
+    "mistral": {
+      "bytes": 127301,
+      "sha256": "327df2e39f6d2fdca54b38a24676063aaea21f4c8698080ef34dcc9f6c8854b6"
+    },
+    "qwen": {
+      "bytes": 118666,
+      "sha256": "c94f64e2a04aadbadb231740da0ce5b2679d589cc35d96fb9c075d73ab578d01"
+    },
+    "sample": {
+      "bytes": 291785,
+      "sha256": "324a0bd35384f9dc4898cc1ba91c615746ce2fb2a7c74903563b976cd031840a"
+    },
+    "statistics": {
+      "bytes": 22645,
+      "sha256": "bffdc4d15aa54bc88d2ffb97c875631a14146a383bfdeb4ca836be3e3fb02f2f"
+    }
+  },
+  "publication_policy": "Aggregate diagnostics only. No private source text, pair/record IDs, reasons or per-pair labels.",
+  "raw_replay_failure_counts": {
+    "mistral": {
+      "{}": 396
+    },
+    "qwen": {
+      "{\"strict_json_schema_words\": \"JSONDecodeError\"}": 5,
+      "{}": 391
+    }
+  },
+  "remote_attempts": 0,
+  "repo_mutations": 0,
+  "safe_follow_on": [
+    "Preserve v3/v4 outcomes and original unmet gates. Do not restart the completed selection controller, promote failed artifacts, or run blocked validation/guard/effect stages unchanged.",
+    "If remote access is restored, retrieve only already-existing private raw responses, request mappings, output tokens and guard-rejection ledgers into a new private diagnostic root. Reconcile scheduler first; this audit made no remote attempt.",
+    "A new, prospectively frozen engineering study can test exact algorithm/oracle agreement and resource costs on natural development data using an explicitly fixed graph; it cannot be called the gated semantic effect study or semantic-quality evidence.",
+    "A substantively different model/representation/prompt/label definition requires a new protocol and evaluation with v3/v4 exposure disclosed; retain an untouched fresh validation stage and do not inspect held-out effect outcomes for tuning.",
+    "A narrowly scoped decoder diagnostic may compare current versus alternative decoding on already exposed engineering pairs with fixed decisions and no relabeling of v4. Qualify the runtime and record all calls, including failures, before any substantive new evaluation."
+  ],
+  "schema": "third-v4-calibration-forensic-review-20261018",
+  "scope": "Independent AI source inspection and read-only replay of existing private label aggregates. No inference or semantic reannotation.",
+  "selected_tau": null,
+  "selection_passed": false,
+  "selection_requirement": {
+    "denominator": 20,
+    "numerator": 19
+  },
+  "single_model_maxima_descriptive_not_alternate_gates": {
+    "mistral": {
+      "denominator": 6,
+      "numerator": 5
+    },
+    "qwen": {
+      "denominator": 2,
+      "numerator": 1
+    }
+  },
+  "source_bindings": {
+    "local_run/llm_v4_audit_repair_v1_20261015/DERIVATION.json": {
+      "bytes": 1929,
+      "sha256": "499e22f578984ef26f9a55e9c52184a6308d09465f02be10d85df366c6e73199"
+    },
+    "local_run/llm_v4_audit_repair_v1_20261015/audit.py": {
+      "bytes": 10329,
+      "sha256": "b9c9710194ea6d2c6ce693c81e3c55dc641152bf5a02e2db1453f64f0c338931"
+    },
+    "local_run/llm_v4_inference_v2_20261014/kernel.py": {
+      "bytes": 13794,
+      "sha256": "af32d8e15277271d1b8d8752d2689156091bd919717215015070e3a64c196303"
+    },
+    "local_run/llm_v4_inference_v2_20261014/statistics_core.py": {
+      "bytes": 10417,
+      "sha256": "860af8d78a4307b270f588d7049f2155c4238c930f27051f0fb091427b962312"
+    },
+    "local_run/llm_v4_negative_analysis_v1_20261016/analyze.py": {
+      "bytes": 11035,
+      "sha256": "2bf5df9d0a727365a4be0fc69f50329ef29a41c7a2a0a36f71f9492e25b0412c"
+    },
+    "local_run/local_llm_execution_20261014/llm_v4_negative_diagnostics_20261016.json": {
+      "bytes": 39226,
+      "sha256": "db31edff00875ba4a29a4f50d288bc3257beefd32f31555a09d9b3ad683a1651"
+    },
+    "local_run/model_annotation_runtime_mistral_v1_20261011/run_pilot.py": {
+      "bytes": 50864,
+      "sha256": "fe3de36730663f160057d633f5cb4db3a60877b10a533d824a5b0e44069f36df"
+    },
+    "local_run/model_annotation_runtime_v5_20261011/bounded_reason.py": {
+      "bytes": 16317,
+      "sha256": "6f5ce5b653813d705b0918a299d8e61625e4dd02bb7c3cc260b50246f905ccc7"
+    },
+    "local_run/model_annotation_runtime_v5_20261011/run_pilot.py": {
+      "bytes": 49253,
+      "sha256": "66dfd4a718033b78b791ad3403250ee9b5d8b5011192df75f804e6cc3500a6f6"
+    },
+    "local_run/model_annotation_v2_20261011/judge_system_prompt.txt": {
+      "bytes": 1967,
+      "sha256": "52978c91ca9ddd8f3d055197a188ddb64bc61d7249bec476c0bb8c6106b84982"
+    },
+    "local_run/model_annotation_v2_20261011/judge_task_definition.txt": {
+      "bytes": 140,
+      "sha256": "aef7daf9b52723b13ccf9d2a0e334e91fb12ab03cc072870e9e57acdae799a47"
+    },
+    "local_run/model_annotation_v2_20261011/model_judgment.schema.json": {
+      "bytes": 918,
+      "sha256": "b30e7324c4a77bbc3ed798f22982a0d49bdcd9eda56439911896db24260e5c8b"
+    },
+    "local_run/model_annotation_v4_20261014/PLAN.json": {
+      "bytes": 16694,
+      "sha256": "10ebb3cb8f872c2efaf69306ca5bb23dcec2a015b2747988aafa31485dbbdcae"
+    },
+    "local_run/model_annotation_v4_20261014/sampling.py": {
+      "bytes": 2139,
+      "sha256": "7defdb2363ae151be676f8f357799a6cb39dffd965320ca03c057154642614bd"
+    },
+    "local_run/model_annotation_v4_20261014/select_worker.py": {
+      "bytes": 9483,
+      "sha256": "d5fe8de0ac2e92d65c6c61c7fa885b0e2cd5fb338d7ba7785e32fd692df90efb"
+    }
+  }
+}

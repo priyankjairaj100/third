@@ -1,0 +1,55 @@
+V4 calibration forensic review — 18 October 2026
+
+Conclusion
+No confirmed implementation defect that explains or reverses the v4 negative
+calibration was found in this bounded source-and-receipt review. The native
+Codex preview runtime is a different process from the completed Slurm inference.
+Fixing the preview does not make the 19/20 model-agreement gate pass.
+
+What was checked
+- Inspected the frozen v4 plan, sampler, both native prompt renderers, generation
+  wrapper, exact schema/word guard, repaired independent auditor and statistic core.
+- Replayed all 51 saved cut decisions from fixed private label/sample inputs.
+  Their hashes and seals agree, and every terminal cut reproduces exactly.
+- Traced the prior newline bug. Six raw responses were changed by text-mode
+  newline conversion in the old auditor. The exact-byte replacement already
+  repaired the audit without a new model call, altered label or changed threshold.
+- Both family audits attest complete pair identities, prompt/token reconstruction,
+  grammar replay and full denominators. Five Qwen calls had independently verified
+  JSONDecodeError; all remaining 787 calls were valid.
+
+New descriptive sensitivity checks (not new acceptance rules)
+- Maximum existing joint positive rate: 2/5 = 0.40.
+- Even favorable treatment of every unavailable-format output: 13/30 = 0.4333.
+- Favorable unavailable-plus-uncertain treatment: 8/15 = 0.5333.
+- Qwen alone reaches at most 1/2; Mistral alone at most 5/6 on the frozen grid.
+  Neither single model reaches 19/20, and selecting one would change the protocol.
+Thus JSON repairs or removing the intersection rule cannot establish the
+original required 0.95 agreement for these recorded outputs.
+
+Limitations
+The decoder intentionally constrains schema, words, token eligibility and
+prefix stability. This can change output from unconstrained native decoding.
+Its implementation asserts ranked finite-token selection, but there is no
+independent full-logit replay or matched unconstrained control. This is an open
+engineering diagnostic, not proof of a decoding bug or of semantic correctness.
+Raw v4 source texts/reasons were not available in the local review bundle and
+were not reannotated. No GPU inference, remote access, held-out inspection,
+repository mutation or human pair annotation occurred in this review.
+
+Concrete continuation
+1. Retain terminal v4 and do not restart its completed controller or override
+   validation/guard/effect admission. Original human gates remain unmet.
+2. When access is restored and reconciled, fetch existing raw output and guard
+   ledgers privately to investigate formatting and constraint behavior without
+   new inference. Keep any such review diagnostic and expose no source text.
+3. Resume useful original algorithm measurements through a NEW versioned
+   engineering study with a fixed natural-development graph, exact fresh-refit
+   oracle, matched methods, and complete resource accounting. Report engineering
+   results without semantic quality/effect or held-out confirmation claims.
+4. A substantive model/prompt/representation change needs a new disclosed
+   post-v4 protocol, prospective decisions and fresh validation. Never call it
+   a repair that made the already failed v4 configuration pass.
+
+Machine-readable evidence and exact source/input bindings: diagnostic.json.
+Replay program: replay.py (read-only, standard-library, no inference).

@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-18T11:49:08.197991+00:00",
+  "review_type": "independent_alternate_render_visual_review",
+  "status": "passed_layout_review",
+  "finding_closure": {
+    "V1": "Resolved: E5, Qwen, and Mistral revision hashes now fit fully inside the text area on page 13. The first attempted linebreak repair was retained as a failed intermediate; the final three-line repair passes."
+  },
+  "limits": [
+    "This is an authorized temporary alternate rendering, not a repair of the native CUA runtime.",
+    "Native compiler success was reported independently by root; byte or pixel equivalence to the native editor preview is not claimed.",
+    "This review checks layout; it does not establish scientific validity, rights clearance, full citation coverage, or submission readiness."
+  ],
+  "source": {
+    "path": "manuscript/third_working_draft.tex",
+    "sha256": "5c40003b70b626e995b7075ac4ff1d6ae178fe13b06ea8e085262ab7c90b75c9",
+    "bytes": 66104
+  },
+  "review_pdf": {
+    "file": "third_tmlr_layout_review_20261018.pdf",
+    "sha256": "180891ac8350b88e3632a062bcc3ccf8e97b62033b5d3b89b2269fa091ba9bcd",
+    "bytes": 134812,
+    "pages": 15
+  },
+  "toolchain": {
+    "compiler": "Tectonic 0.17.0",
+    "renderer": "Poppler pdftoppm at 100 dpi",
+    "offline_cached": true,
+    "untrusted_mode": true
+  },
+  "checks": {
+    "initial_review_full_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "current_contact_sheets_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "current_full_page_reinspection": [
+      13,
+      14,
+      15
+    ],
+    "pages1_to12_pixel_identical_to_initial_review": true,
+    "observed_clipping_or_overlap": false,
+    "page_boundary_character_violations": [],
+    "overfull_hbox_warnings": 0,
+    "all_three_model_revision_hashes_preserved_in_pdf_text": true
+  }
+}

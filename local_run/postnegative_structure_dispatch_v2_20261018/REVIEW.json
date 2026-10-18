@@ -1,0 +1,25 @@
+{
+  "schema": "third-dispatch-v2-delta-review",
+  "created_utc": "2026-10-18T11:52:58.776250+00:00",
+  "reviewed_sha256": "93e1e10ab5d6a99d143038930f6ce4a73ea1a2ecb3c5f32e7396699eb3f7f9b5",
+  "scientific_package_sha256": "720c7b880a0565574b540c636eb18bdb4ef34468cd52ac9bee9ff2a73de873ad",
+  "status": "no_blocking_delta_finding",
+  "exact_diff": [
+    "HERE points to existing immutable scientific package",
+    "queue guard refuses third- prefixed jobs and allows unrelated projects"
+  ],
+  "source_syntax_passed": true,
+  "derivation_hash_verified": true,
+  "live_remote_check_performed_by_reviewer": false,
+  "prerequisite_from_root": "Previous refusal submitted no job and did not create run directory; latest remote connection healthy.",
+  "preserved": [
+    "exclusive run root",
+    "worker exclusive execution intent",
+    "frozen clean checkout",
+    "fresh quota margin",
+    "all resource bounds",
+    "unknown submission outcome never retried",
+    "all scientific protocol gates"
+  ],
+  "provenance_requirement": "Retain separate dispatch v2 source/DERIVATION hash and execution transport alongside scientific package receipts; package contains original dispatcher."
+}

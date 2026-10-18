@@ -1,3 +1,26 @@
+Latest continuation —18October2026,2026-10-18T11:55:01.965217+00:00
+
+User explicitly requested runtime repair/alternatives and experimental resumption.
+Native computer-use failure was reproduced as a macOS13 sandbox-profile incompatibility.
+No security controls or app binaries changed. User authorized temporary PDF rendering;
+all15pages now passed visual review. Revisionhash overflow fixed in SAMEsource;
+native compilation passed. Current source5c40003b70b626e995b7075ac4ff1d6ae178fe13b06ea8e085262ab7c90b75c9.
+See manuscript/tmlr_layout_20261018; prior reviews/releases remain immutable.
+
+SSH restored; frozenremotecheckout verifiedclean atde9de39a1a72db40485878452561affe2fbd24aa.
+Oldcontroller terminalnegative and oldjobs reconciled. New separate naturaldevelopment
+structural study job15414submitted.1001reservedtrainingrows,all51originalcutoffs,
+no tasklabels, no newannotations, noheldoutfeature slices. Inputs staycluster.
+Node scratch8GiBreserve; smallNFSaggregate budget2MiB under separate executionpolicy.
+Originalfullpipeline8GiBstorage gate and all scientificgates remainunchanged.
+Never duplicate15414; reconcile scheduler/receipts first.
+
+Independent forensicreplay found no fault reversingv4failure. Even favorable
+invalid-format imputation reaches13/30, below19/20. Preservev3/v4negativeoutcomes.
+This separate postnegative engineering route does NOT complete or pass the original
+semantic-effect study. Stage2curationrepair prospectively drafted before Stage1
+outcomes; requires review/freeze. FullyLLM only; zero humanpairreviews.
+
 Latest continuation — TMLR adaptation, 18 October 2026, 2026-10-18T11:29:13.298263+00:00
 
 The user explicitly changed the writing target to TMLR. The SAME source is now

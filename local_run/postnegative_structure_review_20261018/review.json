@@ -1,0 +1,65 @@
+{
+  "acceptance_scope": "Source/math/privacy approval subject to launcher/runtime/storage checks above; no empirical acceptance.",
+  "bindings": {
+    "PLAN.draft.json": {
+      "bytes": 6846,
+      "sha256": "a1129f32cb2d459234653a760311be9f7d6008dc2befbf6a92070f51d5bdbc33"
+    },
+    "structure_stage1.py": {
+      "bytes": 13460,
+      "sha256": "8ec48a4146239500499a21cae123cb275b494756a7bc25dfda7418df6264d5c2"
+    },
+    "test_structure_stage1.py": {
+      "bytes": 2645,
+      "sha256": "eeab2824172651aab878d457eb4b2bc89a12f6431a1bd3d327299679fdf79a74"
+    }
+  },
+  "created_utc": "2026-10-18T11:45:27.776204+00:00",
+  "human_annotation_calls": 0,
+  "model_calls": 0,
+  "remote_attempts": 0,
+  "required_root_launch_checks": [
+    "Freeze the separate protocol before any scientific execution and add observed runtime.scipy; the code currently treats this key as optional so the launch package must require it.",
+    "Pin and verify the reviewed stage script, protocol and wrapper together. The worker verifies the protocol SHA, but only a launcher/package binding ties that to the script.",
+    "Admission and Slurm wrapper remain outside this review: verify fresh no-duplicate state, approved compute node, allocation, original input locations, scratch reserve and separate small NFS write budget.",
+    "Enforce the complete output-plus-log cap at export. In-script cumulative output checks occur after threshold files; final completion/failure receipt is written afterwards.",
+    "Reconcile final Slurm terminal state and independently check all51 aggregate files before promoting any result."
+  ],
+  "reviewer": "independent AI subagent calibration_failure_audit",
+  "schema": "third-stage1-independent-source-review-v1",
+  "scientific_limits": [
+    "This is a new postnegative natural development structural characterization. It is not completion of the original semantic/effect experiment and cannot admit failed v4.",
+    "The panel is pre-guard and developer-reserved. No semantic-quality, task-utility, population prevalence or held-out claim follows.",
+    "Graph array/UTF8 accounting is narrow logical storage; peak RSS is the measured process bound, not a proof of total-byte optimality.",
+    "Threshold monotonicity applies to edges decreasing and initial/eligible counts increasing. Singleton and source-admission totals can be nonmonotone."
+  ],
+  "scope": "Read-only review of stage source and prospective draft; local algebraic software tests only. No Slurm run or natural feature access.",
+  "source_edits": 0,
+  "status": "no_unresolved_algorithm_or_privacy_defect_found_in_reviewed_stage_source",
+  "tests": {
+    "all_passed": true,
+    "author_focused_tests_replayed": 6,
+    "independent_exhaustive_formula_replay": {
+      "expectation_checks": 2560,
+      "genuine_source_frames_per_pattern": 2,
+      "numpy": "1.26.3",
+      "ordered_DAGs": 64,
+      "passed": true,
+      "python": "3.9.6",
+      "scope": "exhaustive algebraic software fixtures only",
+      "source_patterns": 4,
+      "stage_sha256": "8ec48a4146239500499a21cae123cb275b494756a7bc25dfda7418df6264d5c2"
+    }
+  },
+  "verified": [
+    "The conditional record-admission formula chooses all b blockers and excludes the surviving target: C(N-b-1,k-b)/C(N,k), summing only b>0.",
+    "Singleton record, excluded-blocker, and genuine single-source admission counts match direct deletion-set enumeration on all ordered 4-node DAGs and four source partitions.",
+    "Uniform expected admissions match exhaustive deletion subsets at every k=0..4 for all 64 ordered 4-node DAGs; 2560 exact expectation comparisons.",
+    "Row isolation reconstructs frozen partition/reserve hashes, whole-source groups and the original 1000-target prefix rule; all 1001 chosen rows must be development_train.",
+    "Only development-training feature indices are decoded. The complete cache is hashed as opaque bytes; intake states this distinction.",
+    "All 51 original rational cuts are run using strict > and stable hash priorities. No successful cutoff is selected.",
+    "Full graph equality across two tilings is described accurately as alternate-tiling replay; independent scalar normalization/dot checks cover first16 rows only.",
+    "Success outputs contain aggregates, source/code file hashes and resource metadata, without record/source IDs, pair lists, labels, raw text or private vectors.",
+    "Executed ccu/__init__.py now has a source binding and all frozen source files are rehashed at completion."
+  ]
+}

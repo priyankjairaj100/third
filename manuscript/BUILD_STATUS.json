@@ -1,9 +1,9 @@
 {
-  "schema": "third-tmlr-manuscript-build-status-v1",
-  "observed_utc": "2026-10-18T11:29:13.298263+00:00",
+  "schema": "third-tmlr-layout-build-status-v2",
+  "observed_utc": "2026-10-18T11:53:04.420195+00:00",
   "source_binding": {
-    "bytes": 66111,
-    "sha256": "ecd1f6690fc1d384060073284f9477b401944059082972776cc1b3fc8928404c"
+    "bytes": 66104,
+    "sha256": "5c40003b70b626e995b7075ac4ff1d6ae178fe13b06ea8e085262ab7c90b75c9"
   },
   "compile_verified": true,
   "native_compiler_result": {
@@ -13,19 +13,23 @@
   "source_path": "manuscript/third_working_draft.tex",
   "editor_kept_open": true,
   "new_tab_opened": false,
-  "separate_pdf_compiled": false,
+  "separate_pdf_compiled": true,
   "official_style_unmodified": true,
   "style_sha256": "816214ff5919aa457b6b443bee52b15d9561421417b7f8a50cc84651519f0002",
   "review_report": "manuscript/tmlr_20261018/delta_review.json",
   "independent_ai_delta_review_completed": true,
   "delta_findings_resolved": 1,
   "historical_review_rebound": false,
-  "visual_review_verified": false,
-  "visual_review_limitation": "Computer-use kernel exited at sandbox startup before a screenshot or PDF inspection. Native compilation does not establish visual layout.",
+  "visual_review_verified": true,
+  "visual_review_limitation": "Authorized alternate Tectonic rendering visually reviewed across15pages. Native CUA remains unavailable; pixel equivalence to native preview not claimed.",
   "source_anonymity_checked": true,
   "exported_pdf_metadata_checked": false,
   "author_attestations_supplied": false,
   "submission_ready": false,
   "submitted": false,
-  "historical_build_status_preserved_in": "manuscript/release_20261018_v1.zip"
+  "historical_build_status_preserved_in": "manuscript/release_20261018_tmlr_v1.zip",
+  "separate_pdf_authorized": true,
+  "source_delta_check": "manuscript/tmlr_layout_20261018/source_check.json",
+  "visual_review_report": "manuscript/tmlr_layout_20261018/visual_review.json",
+  "review_report_scope": "Prior substantive review remains bound to originalsource. Currentonlyrevisionparagraph formatting delta separately checked; no historical review rebound."
 }

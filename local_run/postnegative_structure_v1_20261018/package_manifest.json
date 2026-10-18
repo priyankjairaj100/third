@@ -1,0 +1,29 @@
+{
+  "files": {
+    "PLAN.json": {
+      "bytes": 7698,
+      "sha256": "933b0f4d269d22f9391d3a6d1ac7dfbc14f90025b8009f27f72306e8a392fb86"
+    },
+    "job_runner.py": {
+      "bytes": 8622,
+      "sha256": "c860b3959b98e5636b56dbb8048942f3d5f2fa47c5bbcb5afa81fbbd07f22b57"
+    },
+    "launch.py": {
+      "bytes": 3056,
+      "sha256": "2aff467bcadd8119e3ab0adb302db10dd6a0060fbb3414b20b1c64ae50e5fb66"
+    },
+    "structure.sbatch": {
+      "bytes": 645,
+      "sha256": "0a4cf56a387c1a61e97ab3e275c47f583891fa079ff18bfa08b4f7a1e7c4d306"
+    },
+    "structure_stage1.py": {
+      "bytes": 13460,
+      "sha256": "8ec48a4146239500499a21cae123cb275b494756a7bc25dfda7418df6264d5c2"
+    },
+    "test_structure_stage1.py": {
+      "bytes": 2645,
+      "sha256": "eeab2824172651aab878d457eb4b2bc89a12f6431a1bd3d327299679fdf79a74"
+    }
+  },
+  "schema": "third-postnegative-structure-package-v1"
+}

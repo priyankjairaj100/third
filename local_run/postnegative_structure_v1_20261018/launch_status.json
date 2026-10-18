@@ -1,0 +1,21 @@
+{
+  "schema": "third-postnegative-structure-launch-v1",
+  "observed_utc": "2026-10-18T11:55:01.965217+00:00",
+  "job_id": "15414",
+  "state": "running",
+  "scientific_package_manifest_sha256": "720c7b880a0565574b540c636eb18bdb4ef34468cd52ac9bee9ff2a73de873ad",
+  "dispatcher_sha256": "93e1e10ab5d6a99d143038930f6ce4a73ea1a2ecb3c5f32e7396699eb3f7f9b5",
+  "prefix_rows": 1001,
+  "thresholds": 51,
+  "private_features_remain_on_cluster": true,
+  "prior_preflight_failure_retained": "An overbroad all-account queue check refused before submission when another project had jobs. Separately versioned dispatcher scopes duplicate prevention to Third; Slurm allocates resources.",
+  "original_v4_gate_changed": false,
+  "new_model_calls": 0,
+  "human_annotation_calls": 0,
+  "original_primary_study_complete": false,
+  "latest_scheduler_observation": {
+    "utc": "2026-10-18T11:55:34.878349+00:00",
+    "node": "csis.cn1",
+    "elapsed_seconds": 125
+  }
+}

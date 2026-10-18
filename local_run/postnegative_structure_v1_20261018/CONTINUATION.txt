@@ -1,0 +1,102 @@
+THIRD: POSTNEGATIVE EXPERIMENTAL CONTINUATION, VERSION 1
+Prepared 18 October 2026; this is not the original semantic study admission.
+
+What is executable now
+The original fixed-curator mechanism can be characterized on genuine stored E5
+features without asserting that its edges satisfy the failed semantic-agreement
+gate. Stage 1 uses the already reserved, whole-source, pre-guard 1,001-record
+AskUbuntu development-training prefix. It calls the original Phase 3 graph
+builder at every one of the original 51 cutoffs. It reads no raw text, task
+labels, held-out feature slice, LLM output or evaluation outcome. All original
+source/cache/partition hashes remain binding. Unknown-source singleton units
+remain excluded from genuine source-withdrawal request counts.
+
+This is a new, explicitly postnegative structural characterization. Selection
+cutoffs are not tuned and none is promoted as qualified. Failed v3/v4 results,
+original human-completion fields and the blocked 21,332-job registry remain
+unchanged. The original guard and positive-calibration adapters are not used.
+The existing reservation is reused as a data-boundary input, not as admission to
+the old threshold-dependent development branch. Root must freeze and review this
+separate protocol before execution, under the user's request to resume work.
+
+Stage 1 executable
+structure_stage1.py accepts --repo, --protocol, --protocol-sha256, --allocation,
+--prefixes, --vectors and --out. The output directory must not exist. Protocol
+status must be frozen_for_stage1. PLAN.draft.json has exact original input hashes
+and frozen scorer dependencies. Root replaces draft status, adds the measured
+SciPy runtime pin, binds script/package bytes and supplies the execution wrapper.
+
+Private input layout on the cluster (do not transfer these files):
+  qualification/llm-development-intake-v1-20261016-a01/run/allocation.private.json
+  qualification/llm-development-intake-v1-20261016-a01/run/development_prefixes.private.json
+  qualification/e5-full-sharded-v2-20261013-a01/assembly-run/cache/vectors.npy
+They are relative to the existing local_workspace. No frozen checkout writes.
+
+Outputs are aggregate-only per-cut reports: edge and selected counts, full
+blocker-count histograms, eligibility counts at horizons 1/8/32/128, exact
+uniform-record expected admissions as reduced rational numbers, singleton
+admission totals, admissions caused by already excluded blockers, genuine
+singleton-source admission totals, and graph-array/UTF8 accounting. No record
+IDs, source IDs, pair scores, source text, embeddings or labels appear in these
+reports. Graph states are transient and not exported. All 51 cuts are retained.
+
+Correctness and numerical checks
+The main graph is constructed with original source and block size256. Every
+cut is completely rebuilt with block size37 and all CSR arrays/priority arrays
+are compared exactly. This is a full alternate-tiling replay, not a second
+independent scorer. A separately written scalar ordered-FP64 scorer compares
+all51 cut blocker sets on the first16 original-order panel rows. It is a
+bounded implementation diagnostic, not a full cross-platform numeric proof.
+Inputs and imported frozen code are rehashed before and after execution.
+
+The six local software tests verify exact mean admissions against exhaustive
+small-subset enumeration, singleton/excluded-blocker accounting, exclusion of
+unknown source units, scalar scorer parity on the fixed grid, strict cutoff
+boundary behavior and exact grid identity. Their algebraic fixtures are not
+empirical results. Local tests use Python3.9.6/NumPy1.26.3/SciPy1.13.1; actual
+scientific stage execution requires the separately pinned cluster runtime.
+
+Resource boundary
+The proposed job is CPU-only, 2allocated CPUs and one numeric thread, 8GiB RAM,
+1,200seconds. Output is bounded at2MiB; scratch stage allowance256MiB. A fresh
+compute-node scratch guard must establish8GiB free reserve and execution checks
+that reserve after each cut. All data inputs remain read-only on NFS. Root's
+new small-output NFS policy must separately charge scheduler logs, completion
+receipts and aggregate publication, inspect current quota, and preserve the
+old8GiB gate for old campaigns. A distinct scratch policy cannot silently
+claim the old NFS storage gate passed. A timeout, OOM, hash mismatch or partial
+51-cut set is a failed attempt and must be preserved; there is no auto retry.
+
+After Stage 1
+1. Independently verify source/receipt bindings, all51cut completeness, monotone
+   graph/eligibility counts, exact histogram arithmetic, scalar/replay status,
+   terminal resource receipts and public output privacy. Commit the separate
+   protocol, script, failure history and accepted aggregate result.
+2. Prepare a separate mechanism-repair development stage. It can reuse frozen
+   Phase6 run_isolated.py services (O-G,O-T,B-E,B-A,P-I,P-S,P-R,B-F), original
+   native20-tag task settings and lambda only after that stage binds the
+   original task/source receipts and records complete training-only label
+   access. Native d768 stays fixed across comparators. Include all51cut outcomes
+   and infeasible cells, not an outcome-selected favorable cutoff. Compare
+   repaired moments/head with a freshly constructed oracle, charge graph,
+   inputs, compact eligible payload, index, workspace, serialization and all
+   construction/repair/solve costs. A numerical residual gate is not an exact
+   rational-target certificate. Do not label this stage accepted or executed
+   until its independent source/resource qualification exists.
+3. Natural task utility on held-out data remains a separate study. Stage1
+   cannot unlock the old guard, semantic effect claims, data-dependent cutoff
+   selection, full-refit semantics or the original confirmatory program.
+   Fresh LLM validation under a substantively different explicitly versioned
+   protocol is a possible future program, not a retry that rescues v4. No human
+   annotation is introduced. Future program design must disclose all previous
+   exposure and keep the original test/evaluation reservations untouched.
+
+Alternatives assessed
+Exact-text curation needs no LLM semantic judgments but changes the curator and
+cannot substitute for semantic experiments. It is useful as a control:
+deleting a selected representative can admit its duplicate; deleting an
+already excluded duplicate cannot release another record while the earlier
+representative survives. A new lexical-hash study would also change the
+representation and repeat already completed lexical engineering; it is not
+preferred over the actual native E5 cache. More constructed family tests are
+not new natural evidence. Existing theory/software checks need no rescue.

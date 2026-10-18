@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-10-18T11:53:10.589641+00:00",
+  "files": {
+    "PLAN.prospective.json": {
+      "bytes": 8977,
+      "sha256": "6648cf6cf850cb4a400fae74ab3cf993f7e505a8ae7d6dad5e51c0a1341b818f"
+    },
+    "README.txt": {
+      "bytes": 3626,
+      "sha256": "a86d30d85493224df690820c57bc68fc1dc552b09ddf0545f0b0d48051b2c767"
+    },
+    "curation_repair.py": {
+      "bytes": 12928,
+      "sha256": "07e1a5e807b61c9400813d9b694c12172046b2df4788a3cf3f8e7552dcc8e200"
+    },
+    "stage1_common.py": {
+      "bytes": 13460,
+      "sha256": "8ec48a4146239500499a21cae123cb275b494756a7bc25dfda7418df6264d5c2"
+    },
+    "test_curation_repair.py": {
+      "bytes": 3330,
+      "sha256": "2104bebc19941940a4aaedbd209526590c64b5dae5b8302104b2e87832ebaab9"
+    }
+  },
+  "schema": "third-stage2-prospective-preparation-v1",
+  "stage1_results_read_for_design": false,
+  "stage2_executed": false,
+  "tests": {
+    "count": 6,
+    "passed": true,
+    "scope": "tiny algebraic software fixtures; not scientific runtime qualification"
+  }
+}

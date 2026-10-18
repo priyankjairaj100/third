@@ -1,0 +1,44 @@
+{
+  "schema": "third-tmlr-layout-release-v2",
+  "created_utc": "2026-10-18T11:53:04.420195+00:00",
+  "files": {
+    "manuscript/third_working_draft.tex": {
+      "bytes": 66104,
+      "sha256": "5c40003b70b626e995b7075ac4ff1d6ae178fe13b06ea8e085262ab7c90b75c9"
+    },
+    "manuscript/BUILD_STATUS.json": {
+      "bytes": 1712,
+      "sha256": "c932209dca07b4113bc7584b66ce2ce8b66e7e8263ca81c9ed4e497bf7592939"
+    },
+    "manuscript/README.txt": {
+      "bytes": 3313,
+      "sha256": "8881fe452c8bb545abf6b83d552e0d2c1dc94ce61b7522baad152a9f4154cc3a"
+    },
+    "manuscript/release_20261018_tmlr_v1.zip": {
+      "bytes": 1673952,
+      "sha256": "5059b6aa4a8f66e7aae56a8b9b9c18a608470a7aa5f3744106408330f1721dc9"
+    },
+    "manuscript/tmlr_layout_20261018/build_status.json": {
+      "bytes": 1712,
+      "sha256": "c932209dca07b4113bc7584b66ce2ce8b66e7e8263ca81c9ed4e497bf7592939"
+    },
+    "manuscript/tmlr_layout_20261018/check_layout.py": {
+      "bytes": 2563,
+      "sha256": "b27c9355fac1e264cccfc6bd8a5724c522e74a193d49d368c2448ece6a1be486"
+    },
+    "manuscript/tmlr_layout_20261018/previous_build_status.json": {
+      "bytes": 1323,
+      "sha256": "71e2ebd4baa304aa01832c8e3bb26d629605a729e11c52421fc7d05caa05c81f"
+    },
+    "manuscript/tmlr_layout_20261018/source_check.json": {
+      "bytes": 647,
+      "sha256": "ec607e02b0ed37d5a94e4a1f5e7a117fae40f3a2b17311443fa5b284bb867b8a"
+    },
+    "manuscript/tmlr_layout_20261018/visual_review.json": {
+      "bytes": 2058,
+      "sha256": "5baa772010e1bfe6a0ad10ce8c15ccc27736b7beb5930de94755573895796f81"
+    }
+  },
+  "scope": "Layout correction plus unchanged historical TMLR scientific source/evidence package. No new experimental result or submission-readiness claim.",
+  "review_pdf_not_bundled": true
+}

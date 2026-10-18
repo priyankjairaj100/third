@@ -1,3 +1,9 @@
+Current layout checkpoint,18October2026:
+Native compilation and authorized alternate15-page visual review PASS. Native computer-use runtime remains incompatible with this host; no security controls changed.
+Run: python3 -B manuscript/tmlr_layout_20261018/check_layout.py --root . --output /tmp/third-layout-check.json
+The old TMLR checker remains bound to its historicalsource/archive and is replayed inside that archive by this new checker.
+Current manuscript differs only in the revision-attribution paragraph formatting.
+
 Third TMLR manuscript — current source and artifact guide
 
 The existing third_working_draft.tex is now the TMLR-targeted source. It embeds
