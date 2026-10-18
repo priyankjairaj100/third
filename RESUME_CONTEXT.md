@@ -1,3 +1,21 @@
+Latest continuation — 18 October 2026: resumed natural-data engineering
+
+Stage 1 job15414 COMPLETED0:0 in250seconds. All51cuts on the fixed1001-row
+pre-guard development-training panel passed independent aggregate audit.
+Public-safe replay: local_run/postnegative_structure_results_v1_20261018.
+All204exact expectations and50050blocker-CDF comparisons verified. Private
+vectors/source-linked metadata remain oncluster; only aggregates returned.
+
+Stage 2 job15416 is RUNNING since12:05UTC. Reviewed and sealed package:
+local_run/postnegative_curation_repair_v1_20261018; manifest0280f2af5429c32fbd140473a21a9cc946fdf20d456a3937bdf36a926b0e33cf.
+Reconcile the existing job and terminal receipts, never duplicate it.
+Root private reconciliation script: work/resume-experiments-20261018/check_stage2.py.
+It tests exact membership and canonical logical state versus fresh retained
+recuration; it does not test raw graph-byte equality or train a learner.
+Requests/cutoffs were prospectively fixed before Stage1results; no retuning.
+Original v3/v4negative calibrations, original unmet human/semantic gates,
+protected locks and frozen remote checkout remain unchanged. Zero human review.
+
 Latest continuation —18October2026,2026-10-18T11:55:01.965217+00:00
 
 User explicitly requested runtime repair/alternatives and experimental resumption.

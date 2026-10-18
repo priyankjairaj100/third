@@ -1,0 +1,2591 @@
+{
+  "bindings": {
+    "archive": {
+      "bytes": 125061,
+      "sha256": "b1ffbafe7eaee7e5a081ad1beb20394281c3629485c4e98b1e495db6365fb0f6"
+    },
+    "completion": {
+      "bytes": 7763,
+      "sha256": "fb590934e389d59b248e0746f7b38eaa88acb5ca19ab6c7f024d54f7b30f5492"
+    },
+    "intake": {
+      "bytes": 1347,
+      "sha256": "3bd7e6804fa2098f16fae5f1a32d4516c47e1d6061c38d3a9418cfc0ed4efc03"
+    },
+    "package_manifest": {
+      "bytes": 891,
+      "sha256": "720c7b880a0565574b540c636eb18bdb4ef34468cd52ac9bee9ff2a73de873ad"
+    },
+    "protocol": {
+      "bytes": 7698,
+      "sha256": "933b0f4d269d22f9391d3a6d1ac7dfbc14f90025b8009f27f72306e8a392fb86"
+    },
+    "subset_oracle": {
+      "bytes": 220,
+      "sha256": "2bbb776e586b74372387864d9cfc6f9c91a62feccfc7ced37d95c17653aa534d"
+    }
+  },
+  "checks": {
+    "all51_alternate_tiling_equality_receipts": true,
+    "all51cut_and_count_checks": true,
+    "completion_output_bindings": 53,
+    "exact_expectation_checks": 204,
+    "full_blocker_cdf_monotonicity_checks": 50050,
+    "process_and_child_zero_exit_receipts": true,
+    "runtime_and_input_pins": true,
+    "scalar_subset_comparisons_in_bound_receipt": 816,
+    "source_admission_aggregate_bounds": true,
+    "zip_crc_and_exact_extracted_members": 57
+  },
+  "created_utc": "2026-10-18T12:01:20.825691+00:00",
+  "full51cut_summary": [
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 5.0050467271357775,
+      "index": 0,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        1,
+        2
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 4.985458238050342,
+      "index": 1,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        51,
+        100
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 4.995281878858805,
+      "index": 2,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        13,
+        25
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 4.99598834477365,
+      "index": 3,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        53,
+        100
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 5.005174435675144,
+      "index": 4,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        27,
+        50
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 5.000912521034479,
+      "index": 5,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        11,
+        20
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 4.9985075779259205,
+      "index": 6,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        14,
+        25
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 5.014157148078084,
+      "index": 7,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        57,
+        100
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 5.00795504078269,
+      "index": 8,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        29,
+        50
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 5.014783399179578,
+      "index": 9,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        59,
+        100
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 5.005333963781595,
+      "index": 10,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        3,
+        5
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 4.999866608530283,
+      "index": 11,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        61,
+        100
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 5.004741096869111,
+      "index": 12,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        31,
+        50
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 4.9680644776672125,
+      "index": 13,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        63,
+        100
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 5.001727966591716,
+      "index": 14,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        16,
+        25
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 4.999885067343712,
+      "index": 15,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        13,
+        20
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 5.023233160376549,
+      "index": 16,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        33,
+        50
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 4.997210789471865,
+      "index": 17,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        67,
+        100
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 4.977447163313627,
+      "index": 18,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        17,
+        25
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 4.978272022679448,
+      "index": 19,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        69,
+        100
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 5.004849072545767,
+      "index": 20,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        7,
+        10
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 5.010947875678539,
+      "index": 21,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        71,
+        100
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 5.003682361915708,
+      "index": 22,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        18,
+        25
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 4.997466254979372,
+      "index": 23,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        73,
+        100
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500500,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 4.991939552128315,
+      "index": 24,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        37,
+        50
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500489,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 4.9909029845148325,
+      "index": 25,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        3,
+        4
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1001",
+          "float_display": 0.12787212787212787,
+          "numerator": "128"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 500342,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 5.012434754520655,
+      "index": 26,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        19,
+        25
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "11238292992857563187159992953495515781237283305644150835038061197883672072393106047572809392323588510653441189232398391449695567771625355794632005036925",
+          "float_display": 0.12787212787212787,
+          "numerator": "1437064438647120966989489608438987032965406856266185121763108724605510848363401563345753663679506361340650346327200011784353765231899236885232007790003"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 499670,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 4.981436848640442,
+      "index": 27,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        77,
+        100
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "150716831620511013959420674929448080961867702830004452974319240535011857797827052991593418268061613041977077738245053573445962258889003527685146329578753468957545",
+          "float_display": 0.12787212787212787,
+          "numerator": "19272481965459949836968877513455898465251821136186868204072221250171216828678071634958072629639699154016155849100577197439226688739649895768374392928920267570514"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1001",
+          "float_display": 0.03196803196803197,
+          "numerator": "32"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 497277,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 129,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 4.991802567616105,
+      "index": 28,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        39,
+        50
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "202211749090852277062222738863676175290505834630255974407211647717807575878751296097054502842982664164652579298812113544373332697342746399644237992184827570851372875",
+          "float_display": 0.12787212787212787,
+          "numerator": "25857246636992099364608533591702088111963560494170351178111246944505968591793055673187135104124929600880974145010763977298558147423630661113826130432941441388629353"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1885885391102604566046572757766227876877733272956598999875",
+          "float_display": 0.03196803196803197,
+          "numerator": "60288044470812533579910417830688603456646568151510402119"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1001",
+          "float_display": 0.007992007992007992,
+          "numerator": "8"
+        }
+      }
+    },
+    {
+      "edge_count": 490456,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 130,
+        "32": 33,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 4.990676647052169,
+      "index": 29,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        79,
+        100
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1381857055290562257828401404535372496290472674010860872942220827228753365914017968772582023983936201580769334616028110781594528683435624598935567144771031235886375",
+          "float_display": 0.14027495026874914,
+          "numerator": "193839929709403772294497297894172778454704730747642043833846657194974606297273146843257173918396241575746749528543174189988454254936209758680035572846819660868274"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "115100986311426569758711013384793250701457899288430924875",
+          "float_display": 0.0329003862943174,
+          "numerator": "3786866912502873773904636230609977295928647058359618866"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "24309361133156224125",
+          "float_display": 0.008047281730668725,
+          "numerator": "195624277731076456"
+        }
+      }
+    },
+    {
+      "edge_count": 474391,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 134,
+        "32": 35,
+        "8": 9
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 4.963191758841276,
+      "index": 30,
+      "initially_excluded": 1000,
+      "initially_selected": 1,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        4,
+        5
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "637891952967988255716790974333363328992131970442447868792465765671317274065461501883452690356412189793856717030953039572155623650923490219697911647270749434862375",
+          "float_display": 0.14049613662834837,
+          "numerator": "89621354978314451051063718150559074300301750198760488282088589085404929785309780523499066201889349795198604300039340625750487943860327045943678036917170979326413"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "2378101478180384357784728247543213352742821657198271338842375",
+          "float_display": 0.032901226137137106,
+          "numerator": "78242454510672842702364746087921647744337960433786579595231"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "4861872226631244825",
+          "float_display": 0.008047283407263106,
+          "numerator": "39124863697602944"
+        }
+      }
+    },
+    {
+      "edge_count": 443575,
+      "eligible_record_count_by_horizon": {
+        "1": 2,
+        "128": 147,
+        "32": 39,
+        "8": 10
+      },
+      "genuine_single_source_admission_total": 0,
+      "genuine_single_source_requests_with_admission": 0,
+      "graph_and_replay_seconds": 4.934929879382253,
+      "index": 31,
+      "initially_excluded": 999,
+      "initially_selected": 2,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 0,
+      "singleton_record_requests_with_admission": 0,
+      "threshold_fraction": [
+        81,
+        100
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1",
+          "float_display": 0.0,
+          "numerator": "0"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1266461894097195889742522372841395669877907106243774369982536415769149744543327532966938431166906038609515110430973571259123169294422211271258275525165934681741375",
+          "float_display": 0.028867232487019966,
+          "numerator": "36559249932855413189356230141318737290719397255792155528225322817655505831047495814787939922619753833166018333101582393943118022111775072371706208061780402526919"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "2378101478180384357784728247543213352742821657198271338842375",
+          "float_display": 0.001924203801287874,
+          "numerator": "4575951904163007527962844609029958751522710597849805417707"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "24309361133156224125",
+          "float_display": 0.00011121947121947085,
+          "numerator": "2703674290912792"
+        }
+      }
+    },
+    {
+      "edge_count": 393310,
+      "eligible_record_count_by_horizon": {
+        "1": 3,
+        "128": 175,
+        "32": 54,
+        "8": 13
+      },
+      "genuine_single_source_admission_total": 0,
+      "genuine_single_source_requests_with_admission": 0,
+      "graph_and_replay_seconds": 4.892733881250024,
+      "index": 32,
+      "initially_excluded": 998,
+      "initially_selected": 3,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 0,
+      "singleton_record_requests_with_admission": 0,
+      "threshold_fraction": [
+        41,
+        50
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1",
+          "float_display": 0.0,
+          "numerator": "0"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1758363035572628496193241207510227611221789866350051951367057806241805007641315618235256546460718818823065906946192291690202893020371707822993373845085457137838025",
+          "float_display": 0.01492875409177183,
+          "numerator": "26250169362125212774053961536932760089159049295368992603729890684036321972500384305690834478909788611275375695690723168505647339532140248642257153549827937784633"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "211404931905748747140063858592600463305769931127271925",
+          "float_display": 0.0009638189688365655,
+          "numerator": "203756083476363114646586172359260792645488748841657"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "48912195438946125",
+          "float_display": 5.561309895953035e-05,
+          "numerator": "2720158765274"
+        }
+      }
+    },
+    {
+      "edge_count": 324643,
+      "eligible_record_count_by_horizon": {
+        "1": 4,
+        "128": 230,
+        "32": 72,
+        "8": 20
+      },
+      "genuine_single_source_admission_total": 1,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 4.7968103270977736,
+      "index": 33,
+      "initially_excluded": 998,
+      "initially_selected": 3,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        83,
+        100
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "46664249790196679322051401276232963528578269530059071017048841781032517510481068330089500656072922499535210607418180048701538314771403015302516459734960208658009125",
+          "float_display": 0.12105847206585255,
+          "numerator": "5649102779700490133001270928877261087427050733412657172552640136725578708393532528789522617300374994342293291828198029087818795977237025852556050440233246880874716"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "6144965059897633999443742241713729593650701956584680462125",
+          "float_display": 0.0311231834819956,
+          "numerator": "191250875049646130021776419311164392255032838596544017752"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "31125942552056625",
+          "float_display": 0.007937738874232807,
+          "numerator": "247069604192597"
+        }
+      }
+    },
+    {
+      "edge_count": 245841,
+      "eligible_record_count_by_horizon": {
+        "1": 10,
+        "128": 358,
+        "32": 96,
+        "8": 40
+      },
+      "genuine_single_source_admission_total": 2,
+      "genuine_single_source_requests_with_admission": 2,
+      "graph_and_replay_seconds": 4.702672932296991,
+      "index": 34,
+      "initially_excluded": 994,
+      "initially_selected": 7,
+      "singleton_excluded_blocker_admission_total": 1,
+      "singleton_excluded_record_requests_with_admission": 1,
+      "singleton_record_admission_total": 3,
+      "singleton_record_requests_with_admission": 3,
+      "threshold_fraction": [
+        21,
+        25
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.002997002997002997,
+          "numerator": "3"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "606635247272556831186668216591028525871517503890767923221634943153422727636253888291163508528947992493957737896436340633119998092028239198932713976554482712554118625",
+          "float_display": 0.3766577286398429,
+          "numerator": "228493854350550731232966369852091393534156691294404598652196612496569147087418618046959794688183550801446238716693963609256937685079282632922882277245630820975302946"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "4843383865947829649256065677277420270351978935230695191125",
+          "float_display": 0.09505847714398304,
+          "numerator": "460404694520737984189126467924552874107274378745667459902"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "623316952132210875",
+          "float_display": 0.023921753201813903,
+          "numerator": "14910834295413599"
+        }
+      }
+    },
+    {
+      "edge_count": 170690,
+      "eligible_record_count_by_horizon": {
+        "1": 22,
+        "128": 536,
+        "32": 205,
+        "8": 66
+      },
+      "genuine_single_source_admission_total": 10,
+      "genuine_single_source_requests_with_admission": 9,
+      "graph_and_replay_seconds": 4.602025602012873,
+      "index": 35,
+      "initially_excluded": 992,
+      "initially_selected": 9,
+      "singleton_excluded_blocker_admission_total": 9,
+      "singleton_excluded_record_requests_with_admission": 8,
+      "singleton_record_admission_total": 13,
+      "singleton_record_requests_with_admission": 12,
+      "threshold_fraction": [
+        17,
+        20
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "77",
+          "float_display": 0.012987012987012988,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "41728187215955229425086828353723895405462326326883581698034586100411247606237422911458324246936172204957396035642326750768910199708486405107678673695420416125",
+          "float_display": 1.672370745237524,
+          "numerator": "69784999551757974271729815625939804267082301956593699355533437801877417683568663819223261719550970918993071461237381465523315662350197245870575598171493140453"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "339728782597197765397818321077601907534688808171181619834625",
+          "float_display": 0.4172391441404973,
+          "numerator": "141748146490747859503717649904358617682999795199416152243904"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "38042818674735875",
+          "float_display": 0.10400429602449622,
+          "numerator": "3956616575053463"
+        }
+      }
+    },
+    {
+      "edge_count": 110758,
+      "eligible_record_count_by_horizon": {
+        "1": 48,
+        "128": 685,
+        "32": 375,
+        "8": 161
+      },
+      "genuine_single_source_admission_total": 15,
+      "genuine_single_source_requests_with_admission": 9,
+      "graph_and_replay_seconds": 4.53720610588789,
+      "index": 36,
+      "initially_excluded": 975,
+      "initially_selected": 26,
+      "singleton_excluded_blocker_admission_total": 19,
+      "singleton_excluded_record_requests_with_admission": 15,
+      "singleton_record_admission_total": 22,
+      "singleton_record_requests_with_admission": 18,
+      "threshold_fraction": [
+        43,
+        50
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "91",
+          "float_display": 0.02197802197802198,
+          "numerator": "2"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "606635247272556831186668216591028525871517503890767923221634943153422727636253888291163508528947992493957737896436340633119998092028239198932713976554482712554118625",
+          "float_display": 2.764628296458968,
+          "numerator": "1677120970239093663896957892178007472396083641088226086153000779516110787082878109549808719685462085314132975213724367584549752191743362176174208101234136894489178856"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "792700492726794785928242749181071117580940552399423779614125",
+          "float_display": 0.7010768459778827,
+          "numerator": "555743961246014803812574938014582119912896977031785001649589"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "24309361133156224125",
+          "float_display": 0.17570959977707606,
+          "numerator": "4271388115543288583"
+        }
+      }
+    },
+    {
+      "edge_count": 69090,
+      "eligible_record_count_by_horizon": {
+        "1": 125,
+        "128": 808,
+        "32": 543,
+        "8": 332
+      },
+      "genuine_single_source_admission_total": 35,
+      "genuine_single_source_requests_with_admission": 24,
+      "graph_and_replay_seconds": 4.47147174179554,
+      "index": 37,
+      "initially_excluded": 918,
+      "initially_selected": 83,
+      "singleton_excluded_blocker_admission_total": 34,
+      "singleton_excluded_record_requests_with_admission": 30,
+      "singleton_record_admission_total": 42,
+      "singleton_record_requests_with_admission": 38,
+      "threshold_fraction": [
+        87,
+        100
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "143",
+          "float_display": 0.04195804195804196,
+          "numerator": "6"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "55148658842959711926060746962820775079228863990069811201966813013947520694204898935560318957177090226723430717857849148465454372002567199902973997868589337504919875",
+          "float_display": 5.508652828637084,
+          "numerator": "303794815530811548198686110865201049650654113901484192472805782855301561190233750364153763841629670663048316351971660742350982365083039795976290038789378377829720887"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "339728782597197765397818321077601907534688808171181619834625",
+          "float_display": 1.3529876910200846,
+          "numerator": "459648861139246949575553296083223389319253580146298349170733"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "4861872226631244825",
+          "float_display": 0.3362733261393573,
+          "numerator": "1634917944913851869"
+        }
+      }
+    },
+    {
+      "edge_count": 42889,
+      "eligible_record_count_by_horizon": {
+        "1": 289,
+        "128": 871,
+        "32": 687,
+        "8": 503
+      },
+      "genuine_single_source_admission_total": 75,
+      "genuine_single_source_requests_with_admission": 45,
+      "graph_and_replay_seconds": 4.433144096285105,
+      "index": 38,
+      "initially_excluded": 813,
+      "initially_selected": 188,
+      "singleton_excluded_blocker_admission_total": 76,
+      "singleton_excluded_record_requests_with_admission": 53,
+      "singleton_record_admission_total": 101,
+      "singleton_record_requests_with_admission": 77,
+      "threshold_fraction": [
+        22,
+        25
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.1008991008991009,
+          "numerator": "101"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "202211749090852277062222738863676175290505834630255974407211647717807575878751296097054502842982664164652579298812113544373332697342746399644237992184827570851372875",
+          "float_display": 12.11996979340465,
+          "numerator": "2450800290852649766395063492290563788941404702002093852852196077542157867972315926028843829599724758184780066575458681249566264363009957603614355535031038468696904397"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "182930882936952642906517557503324104057140127476790102987875",
+          "float_display": 3.181013055256505,
+          "numerator": "581905526832045718851336510858334173454305837326008135678139"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "694553175233034975",
+          "float_display": 0.8045054546415615,
+          "numerator": "558771818013592961"
+        }
+      }
+    },
+    {
+      "edge_count": 26172,
+      "eligible_record_count_by_horizon": {
+        "1": 456,
+        "128": 937,
+        "32": 777,
+        "8": 648
+      },
+      "genuine_single_source_admission_total": 72,
+      "genuine_single_source_requests_with_admission": 45,
+      "graph_and_replay_seconds": 4.432996541261673,
+      "index": 39,
+      "initially_excluded": 649,
+      "initially_selected": 352,
+      "singleton_excluded_blocker_admission_total": 70,
+      "singleton_excluded_record_requests_with_admission": 52,
+      "singleton_record_admission_total": 104,
+      "singleton_record_requests_with_admission": 83,
+      "threshold_fraction": [
+        89,
+        100
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "77",
+          "float_display": 0.1038961038961039,
+          "numerator": "8"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "606635247272556831186668216591028525871517503890767923221634943153422727636253888291163508528947992493957737896436340633119998092028239198932713976554482712554118625",
+          "float_display": 12.509511127297342,
+          "numerator": "7588710375966824878397661866635969020871585466757711583993637794506358561595787589084698380705508477578238375561339859034917947511157350549050734166246883247461676357"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "2378101478180384357784728247543213352742821657198271338842375",
+          "float_display": 3.2785136225288323,
+          "numerator": "7796638091970343185250647005762342641388783278450775902210294"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "8103120377718741375",
+          "float_display": 0.8285890019775578,
+          "numerator": "6714156426677983328"
+        }
+      }
+    },
+    {
+      "edge_count": 15678,
+      "eligible_record_count_by_horizon": {
+        "1": 607,
+        "128": 979,
+        "32": 843,
+        "8": 743
+      },
+      "genuine_single_source_admission_total": 71,
+      "genuine_single_source_requests_with_admission": 45,
+      "graph_and_replay_seconds": 4.406074045225978,
+      "index": 40,
+      "initially_excluded": 497,
+      "initially_selected": 504,
+      "singleton_excluded_blocker_admission_total": 68,
+      "singleton_excluded_record_requests_with_admission": 50,
+      "singleton_record_admission_total": 103,
+      "singleton_record_requests_with_admission": 82,
+      "threshold_fraction": [
+        9,
+        10
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.1028971028971029,
+          "numerator": "103"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "606635247272556831186668216591028525871517503890767923221634943153422727636253888291163508528947992493957737896436340633119998092028239198932713976554482712554118625",
+          "float_display": 12.080772403636376,
+          "numerator": "7328622354323433712738812362926408262553579290607198022602248526109329200039586865977252392806185431476847220884020362921874948247387437385135653131743871499752717941"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "816375378709366411872546600598425455799114884036481750375",
+          "float_display": 3.227035035950004,
+          "numerator": "2634471949582078571256299270386150624267379391892889787274"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "24309361133156224125",
+          "float_display": 0.819481496416641,
+          "numerator": "19921071638331395383"
+        }
+      }
+    },
+    {
+      "edge_count": 9084,
+      "eligible_record_count_by_horizon": {
+        "1": 707,
+        "128": 997,
+        "32": 900,
+        "8": 816
+      },
+      "genuine_single_source_admission_total": 63,
+      "genuine_single_source_requests_with_admission": 41,
+      "graph_and_replay_seconds": 4.40440628118813,
+      "index": 41,
+      "initially_excluded": 382,
+      "initially_selected": 619,
+      "singleton_excluded_blocker_admission_total": 62,
+      "singleton_excluded_record_requests_with_admission": 39,
+      "singleton_record_admission_total": 88,
+      "singleton_record_requests_with_admission": 63,
+      "threshold_fraction": [
+        91,
+        100
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "91",
+          "float_display": 0.08791208791208792,
+          "numerator": "8"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "428482807842034808628961675824921704276115557832825076881308783636822749120625726751188224491143008242099018485590111870261869359204844836879245626285591080895",
+          "float_display": 10.392103344337976,
+          "numerator": "4452837620366536213738677396958376789834526542772160942440989922728808567070224621818303788352222305998946969049386925936626297888505764242699935001783801192628"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "2409423990051047981544810787784410691735381618235330637125",
+          "float_display": 2.76221581802819,
+          "numerator": "6655349057655600382409106644210140383160845249596659725154"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "24309361133156224125",
+          "float_display": 0.7004388272086685,
+          "numerator": "17027220402299932757"
+        }
+      }
+    },
+    {
+      "edge_count": 5026,
+      "eligible_record_count_by_horizon": {
+        "1": 780,
+        "128": 1001,
+        "32": 944,
+        "8": 871
+      },
+      "genuine_single_source_admission_total": 38,
+      "genuine_single_source_requests_with_admission": 27,
+      "graph_and_replay_seconds": 4.387928660959005,
+      "index": 42,
+      "initially_excluded": 273,
+      "initially_selected": 728,
+      "singleton_excluded_blocker_admission_total": 27,
+      "singleton_excluded_record_requests_with_admission": 20,
+      "singleton_record_admission_total": 52,
+      "singleton_record_requests_with_admission": 42,
+      "threshold_fraction": [
+        23,
+        25
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "77",
+          "float_display": 0.05194805194805195,
+          "numerator": "4"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "5377691771477236848503864028141906734058758621000310836828237854105305341721187140354302886367721956175331410665541116284551074612239307128068333890244166375",
+          "float_display": 6.317724959242891,
+          "numerator": "33974777527776855303252649013443036063324325091707573281890777763825310414215305868054761526197273383772096693098811466356887127916926442746600771285287512927"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "475620295636076871556945649508642670548564331439654267768475",
+          "float_display": 1.6446633022851953,
+          "numerator": "782235246054691025351343346306781652760169938498000439066972"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "24309361133156224125",
+          "float_display": 0.414623970414169,
+          "numerator": "10079243831261115487"
+        }
+      }
+    },
+    {
+      "edge_count": 2707,
+      "eligible_record_count_by_horizon": {
+        "1": 846,
+        "128": 1001,
+        "32": 976,
+        "8": 919
+      },
+      "genuine_single_source_admission_total": 28,
+      "genuine_single_source_requests_with_admission": 20,
+      "graph_and_replay_seconds": 4.391682771965861,
+      "index": 43,
+      "initially_excluded": 201,
+      "initially_selected": 800,
+      "singleton_excluded_blocker_admission_total": 21,
+      "singleton_excluded_record_requests_with_admission": 15,
+      "singleton_record_admission_total": 46,
+      "singleton_record_requests_with_admission": 36,
+      "threshold_fraction": [
+        93,
+        100
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.04595404595404595,
+          "numerator": "46"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1170719301617037938014444620277074934468359503321681138763283729856196914220216346763885275284611331063201321194989018078954875",
+          "float_display": 5.471748981180421,
+          "numerator": "6405882145871282031647219781524510691182134927829997900240565322509476987316942600580204837474947076891482284261021592012984358"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "216191043470944032525884386140292122976620150654388303531125",
+          "float_display": 1.4464475566263297,
+          "numerator": "312709006593043645501006695732076600424007930515679619484342"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "38042818674735875",
+          "float_display": 0.36628635025931494,
+          "numerator": "13934565205945913"
+        }
+      }
+    },
+    {
+      "edge_count": 1317,
+      "eligible_record_count_by_horizon": {
+        "1": 904,
+        "128": 1001,
+        "32": 989,
+        "8": 955
+      },
+      "genuine_single_source_admission_total": 29,
+      "genuine_single_source_requests_with_admission": 22,
+      "graph_and_replay_seconds": 4.389188818633556,
+      "index": 44,
+      "initially_excluded": 140,
+      "initially_selected": 861,
+      "singleton_excluded_blocker_admission_total": 25,
+      "singleton_excluded_record_requests_with_admission": 21,
+      "singleton_record_admission_total": 43,
+      "singleton_record_requests_with_admission": 38,
+      "threshold_fraction": [
+        47,
+        50
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.04295704295704296,
+          "numerator": "43"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "14824713917211005134890899204050746044286709996035449934568641540510590626889978886926097178834796603925",
+          "float_display": 5.027369379487805,
+          "numerator": "74529312807053313809823036177674524756825517169859204219453811622101248080030375890593609459018980731204"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "53661156625682793460404094310156674701419808588087445875",
+          "float_display": 1.3466390183190502,
+          "numerator": "72262207280274267204210799844273264629494343181784390467"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "8103120377718741375",
+          "float_display": 0.34208722208046827,
+          "numerator": "2771973940197439018"
+        }
+      }
+    },
+    {
+      "edge_count": 544,
+      "eligible_record_count_by_horizon": {
+        "1": 941,
+        "128": 1001,
+        "32": 1000,
+        "8": 983
+      },
+      "genuine_single_source_admission_total": 16,
+      "genuine_single_source_requests_with_admission": 14,
+      "graph_and_replay_seconds": 4.388433136045933,
+      "index": 45,
+      "initially_excluded": 88,
+      "initially_selected": 913,
+      "singleton_excluded_blocker_admission_total": 13,
+      "singleton_excluded_record_requests_with_admission": 11,
+      "singleton_record_admission_total": 28,
+      "singleton_record_requests_with_admission": 25,
+      "threshold_fraction": [
+        19,
+        20
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "143",
+          "float_display": 0.027972027972027972,
+          "numerator": "4"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "5794005466861402937586781429371186163576767453867543923538028361565729165375",
+          "float_display": 3.27179244266076,
+          "numerator": "18956783299212267414293283229446399413800747916406911954032161952717631633116"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "23977894637100667074119499532952255875675239640393625",
+          "float_display": 0.8755454692738167,
+          "numerator": "20993737012238437579340538458886794242903937667154918"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "24309361133156224125",
+          "float_display": 0.222660353146204,
+          "numerator": "5412730934667170822"
+        }
+      }
+    },
+    {
+      "edge_count": 197,
+      "eligible_record_count_by_horizon": {
+        "1": 972,
+        "128": 1001,
+        "32": 1001,
+        "8": 994
+      },
+      "genuine_single_source_admission_total": 16,
+      "genuine_single_source_requests_with_admission": 11,
+      "graph_and_replay_seconds": 4.378870949149132,
+      "index": 46,
+      "initially_excluded": 49,
+      "initially_selected": 952,
+      "singleton_excluded_blocker_admission_total": 9,
+      "singleton_excluded_record_requests_with_admission": 7,
+      "singleton_record_admission_total": 20,
+      "singleton_record_requests_with_admission": 16,
+      "threshold_fraction": [
+        24,
+        25
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.01998001998001998,
+          "numerator": "20"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "3163552895226360883148802051548810481388946625",
+          "float_display": 2.4121567027330686,
+          "numerator": "7630985320670871348333600784023530628832755064"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1120086141103965816926250686367992034568628014125",
+          "float_display": 0.6312207874855315,
+          "numerator": "707021656039275375962022325220306332958718427784"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "24382508659133625",
+          "float_display": 0.15939024865676138,
+          "numerator": "3886334118054946"
+        }
+      }
+    },
+    {
+      "edge_count": 42,
+      "eligible_record_count_by_horizon": {
+        "1": 992,
+        "128": 1001,
+        "32": 1001,
+        "8": 1000
+      },
+      "genuine_single_source_admission_total": 4,
+      "genuine_single_source_requests_with_admission": 4,
+      "graph_and_replay_seconds": 4.38323325291276,
+      "index": 47,
+      "initially_excluded": 16,
+      "initially_selected": 985,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 7,
+      "singleton_record_requests_with_admission": 7,
+      "threshold_fraction": [
+        97,
+        100
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "143",
+          "float_display": 0.006993006993006993,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "2657993649419679264568875",
+          "float_display": 0.8418074325515267,
+          "numerator": "2237518809756242834303668"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "2657993649419679264568875",
+          "float_display": 0.22074197147209632,
+          "numerator": "586730758333212029988817"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "9782439087789225",
+          "float_display": 0.055775548415568636,
+          "numerator": "545620904963339"
+        }
+      }
+    },
+    {
+      "edge_count": 9,
+      "eligible_record_count_by_horizon": {
+        "1": 999,
+        "128": 1001,
+        "32": 1001,
+        "8": 1001
+      },
+      "genuine_single_source_admission_total": 2,
+      "genuine_single_source_requests_with_admission": 1,
+      "graph_and_replay_seconds": 4.391335621476173,
+      "index": 48,
+      "initially_excluded": 6,
+      "initially_selected": 995,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 4,
+      "singleton_record_requests_with_admission": 3,
+      "threshold_fraction": [
+        49,
+        50
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.003996003996003996,
+          "numerator": "4"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "990078375",
+          "float_display": 0.46251268542250507,
+          "numerator": "457923808"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "2970235125",
+          "float_display": 0.12489823612869705,
+          "numerator": "370977128"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "20791645875",
+          "float_display": 0.03180019811683139,
+          "numerator": "661178458"
+        }
+      }
+    },
+    {
+      "edge_count": 1,
+      "eligible_record_count_by_horizon": {
+        "1": 1001,
+        "128": 1001,
+        "32": 1001,
+        "8": 1001
+      },
+      "genuine_single_source_admission_total": 0,
+      "genuine_single_source_requests_with_admission": 0,
+      "graph_and_replay_seconds": 4.404524445533752,
+      "index": 49,
+      "initially_excluded": 1,
+      "initially_selected": 1000,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 1,
+      "singleton_record_requests_with_admission": 1,
+      "threshold_fraction": [
+        99,
+        100
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1001",
+          "float_display": 0.000999000999000999,
+          "numerator": "1"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "125125",
+          "float_display": 0.11163236763236763,
+          "numerator": "13968"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "125125",
+          "float_display": 0.030977022977022976,
+          "numerator": "3876"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "125125",
+          "float_display": 0.007936063936063937,
+          "numerator": "993"
+        }
+      }
+    },
+    {
+      "edge_count": 0,
+      "eligible_record_count_by_horizon": {
+        "1": 1001,
+        "128": 1001,
+        "32": 1001,
+        "8": 1001
+      },
+      "genuine_single_source_admission_total": 0,
+      "genuine_single_source_requests_with_admission": 0,
+      "graph_and_replay_seconds": 4.38888187520206,
+      "index": 50,
+      "initially_excluded": 0,
+      "initially_selected": 1001,
+      "singleton_excluded_blocker_admission_total": 0,
+      "singleton_excluded_record_requests_with_admission": 0,
+      "singleton_record_admission_total": 0,
+      "singleton_record_requests_with_admission": 0,
+      "threshold_fraction": [
+        199,
+        200
+      ],
+      "uniform_record_expected_admissions": {
+        "1": {
+          "deletion_budget": 1,
+          "denominator": "1",
+          "float_display": 0.0,
+          "numerator": "0"
+        },
+        "128": {
+          "deletion_budget": 128,
+          "denominator": "1",
+          "float_display": 0.0,
+          "numerator": "0"
+        },
+        "32": {
+          "deletion_budget": 32,
+          "denominator": "1",
+          "float_display": 0.0,
+          "numerator": "0"
+        },
+        "8": {
+          "deletion_budget": 8,
+          "denominator": "1",
+          "float_display": 0.0,
+          "numerator": "0"
+        }
+      }
+    }
+  ],
+  "limits": [
+    "Graph/source-count truth was not independently recomputed from private vectors locally; this review checks the hash-bound aggregate outputs and source logic.",
+    "All51full-graph alternate-tiling checks share the frozen scorer. Independent scalar arithmetic was bounded to16rows.",
+    "The selected1001 rows form an original pre-guard reserved development-training panel, not the full dataset or a validated semantic graph.",
+    "No original semantic threshold/LLM agreement gate passed. No learner, head, task utility or deletion-effect performance was measured.",
+    "Singleton/source admission totals need not be monotone across thresholds and no such incorrect requirement was imposed.",
+    "Runtime receipts are observed scoped engineering measurements, not comparative speed results."
+  ],
+  "original_semantic_effect_study_complete": false,
+  "original_v4_failure_retained": true,
+  "passed": true,
+  "privacy_review": {
+    "keep_private_or_deidentify": [
+      "extracted/process.json: job ID, node, scratch path, mount",
+      "raw aggregate archive because it contains process.json",
+      "transport and scheduler receipts"
+    ],
+    "no_private_source_text_record_ids_labels_vectors_or_memberships_in_run_outputs": true,
+    "public_safe_subset": "extracted/run/*.json plus this aggregate review and approved protocol/source package",
+    "raw_logs_exported": false,
+    "source_hashes_remain_linkable": true
+  },
+  "runtime_summary": {
+    "cpus_requested": 2,
+    "gpus": 0,
+    "graph_and_replay_seconds_sum": 245.03692927211523,
+    "peak_rss_bytes": 260792320,
+    "runtime": {
+      "numpy": "2.5.3",
+      "platform": "Linux",
+      "python": "3.13.7",
+      "scipy": "1.17.1"
+    },
+    "stage_seconds": 248.5130052510649,
+    "wrapper_seconds": 249.6153087951243
+  },
+  "schema": "third-stage1-independent-aggregate-review-v1",
+  "scope": "Independent local arithmetic/schema/provenance review of cluster aggregate artifacts; no raw private data or graph was exported or recomputed locally.",
+  "summary": {
+    "complete_graph_cut_count": 25,
+    "cuts_with_any_genuine_source_admission": 47,
+    "cuts_with_any_singleton_record_admission": 48,
+    "cuts_with_excluded_record_deletion_admission": 13,
+    "empty_graph_cut_count": 1,
+    "human_or_model_annotations": 0,
+    "rows": 1001,
+    "threshold_selected": false,
+    "thresholds": 51
+  }
+}

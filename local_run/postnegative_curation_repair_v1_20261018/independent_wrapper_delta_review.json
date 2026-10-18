@@ -1,0 +1,58 @@
+{
+  "bindings": {
+    "PLAN.json": {
+      "bytes": 11004,
+      "sha256": "aab191844aea15078c1499036d274372f8eb27e65f0f76c26f9a0943ccd5cb99"
+    },
+    "curation_repair.py": {
+      "bytes": 12928,
+      "sha256": "07e1a5e807b61c9400813d9b694c12172046b2df4788a3cf3f8e7552dcc8e200"
+    },
+    "curation_repair.sbatch": {
+      "bytes": 645,
+      "sha256": "bd5e3428f47b12ea175c560d66bc18233601ccc7e47d2ab54d773e7f6cc00fc0"
+    },
+    "job_runner.py": {
+      "bytes": 9149,
+      "sha256": "00708a28687403b3ca7084c757c9755cb9b07eccfe9a555ccbc40a71d75ee226"
+    },
+    "launch.py": {
+      "bytes": 3206,
+      "sha256": "e79b53e72c8347640c04f373f8eabc970931d95290a5d69ce475e780f8e1901e"
+    },
+    "test_bundle.py": {
+      "bytes": 3334,
+      "sha256": "f45e65c9a88164d0183ead44552baf0a8f95cf48d6f70da200edc4dedfb3f885"
+    }
+  },
+  "checks": [
+    "Core stage source unchanged from independent source/formula review07e1a5e8.",
+    "All prospective scientific plan fields unchanged; only execution policy, status, freeze_scope and runtime-only resource qualification added.",
+    "Stage1 runtime receipt hash, elapsed time, peakRSS and459/102 projection independently checked; no scientific outcome used by execution-bundle author.",
+    "Wrapper exactdelta only new fixed roots/status, stage/test invocation, longer bounded timeout and stricter stage2completionvalidator.",
+    "Launcher retains fixed roots, exclusive intent, third-project queue guard, fresh quota, clean frozen checkout and unknown-outcome no-retry policy.",
+    "Node scratch/private log/no-private-input-export/combinedNFS-budget protections retained.",
+    "Completion validator requires all51indices, no labels/learner and retainedv4failure/narrowclaimflags.",
+    "Eleven core/wrapper tests replayed successfully; bashsyntax passed."
+  ],
+  "created_utc": "2026-10-18T12:02:16.397729+00:00",
+  "remaining_launch_conditions": [
+    "Root must seal exact reviewed files and reconcile current Slurm/runroot/quota state before one launch.",
+    "Original failed semantic/effect gates remain unchanged; stage2 is exact generic curation membership/state repair only.",
+    "Runtime rawprocess metadata remain private or deidentified before public publication."
+  ],
+  "resource_limits": {
+    "core_wall_seconds": 3600,
+    "cpus": 2,
+    "gpu": 0,
+    "memory_gib": 8,
+    "nfs_small_stage_budget_bytes": 2097152,
+    "scratch_reserve_bytes": 8589934592,
+    "slurm_wall_seconds": 3900,
+    "wrapper_child_timeout_seconds": 3660
+  },
+  "runtime_assessment": "1123.27s linear projection under3600s cap is reasonable planning evidence with margin; not a worst-case guarantee. Stage2 uses more small-tile graph builds and state checks; failure/timeout remains terminal.",
+  "schema": "third-stage2-wrapper-independent-delta-review-v1",
+  "source_edits_by_reviewer": 0,
+  "status": "ready_for_root_package_seal"
+}

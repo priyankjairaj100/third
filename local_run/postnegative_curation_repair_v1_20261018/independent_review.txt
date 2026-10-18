@@ -1,0 +1,14 @@
+Independent Stage2 review: no unresolved semantic, algorithmic or aggregate-output privacy defect found.
+
+Six supplied tests and17,344 independent exact membership checks passed. A bounded
+1001-coordinate algebraic stress fixture completed128 repairs with full invariants
+and batch/reverse snapshots in1.05s at125MB peakRSS on localmacOS. These are software
+tests, not natural results or qualified Linux runtime measurements.
+
+Fresh score recomputation dominates prospective work: up to408 retained checkpoint
+graphs plus51 initial graphs. Qualify the3600s cap using runtime-only receipts.
+
+Freeze and source-bind a separate stage2 package/runner; preserve all v4 failures.
+This stage measures exact generic membership repair, not original learner effects.
+
+Full source bindings and test evidence: review.json.

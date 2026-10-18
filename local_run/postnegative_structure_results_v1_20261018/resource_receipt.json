@@ -1,0 +1,35 @@
+{
+  "cpus_requested": 2,
+  "gpus": 0,
+  "graph_and_replay_seconds_sum": 245.03692927211523,
+  "interpretation": "One observed engineering run; no comparative speed, whole-system memory or semantic-quality claim.",
+  "memory_requested_bytes": 8589934592,
+  "original_private_receipt_binding": {
+    "bytes": 465,
+    "sha256": "28f67448125bea36e416ae37e172ca815a87cdf15a4a993bc5bc149464e57742"
+  },
+  "package_manifest_binding": {
+    "bytes": 891,
+    "sha256": "720c7b880a0565574b540c636eb18bdb4ef34468cd52ac9bee9ff2a73de873ad"
+  },
+  "peak_rss_bytes": 260792320,
+  "private_feature_or_label_output": false,
+  "process_returncode": 0,
+  "protocol_binding": {
+    "bytes": 7698,
+    "sha256": "933b0f4d269d22f9391d3a6d1ac7dfbc14f90025b8009f27f72306e8a392fb86"
+  },
+  "runtime": {
+    "numpy": "2.5.3",
+    "platform": "Linux",
+    "python": "3.13.7",
+    "scipy": "1.17.1"
+  },
+  "schema": "third-stage1-deidentified-resource-receipt-v1",
+  "scratch_free_bytes_at_exit": 167352377344,
+  "scratch_reserve_bytes": 8589934592,
+  "stage_seconds": 248.5130052510649,
+  "stage_wall_limit_seconds": 1200,
+  "transformation": "Removed execution timestamp, scheduler job identity, node, mount and scratch location; retained timing, resource quantities and source bindings.",
+  "wrapper_seconds": 249.6153087951243
+}

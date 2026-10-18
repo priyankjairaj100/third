@@ -1,0 +1,34 @@
+{
+  "actual_job_node_user_or_private_path_values_included": false,
+  "all_thresholds_included": 51,
+  "artifact_source_bindings_verified_against_actual_bytes": true,
+  "checks": [
+    "Exact source, protocol and package byte bindings checked at packaging.",
+    "All54 run records compared byte-for-byte with reviewed extraction.",
+    "Inspected all text content for actual operational/private path markers.",
+    "Recursively inspected aggregate JSON field inventory; vector input fields contain only sizes and SHA-256 bindings, not features.",
+    "Retained generic descriptions of excluded receipt categories without their private values."
+  ],
+  "completion_bound_outputs": 53,
+  "limits": [
+    "Inspection verifies this bundle, not unshared private artifacts.",
+    "SHA-256 input/source bindings remain linkable artifact identifiers.",
+    "Aggregate replay does not recompute the private graph or validate semantics."
+  ],
+  "passed": true,
+  "per_record_or_source_identity_outputs_included": false,
+  "private_inputs_included": false,
+  "public_protocol_scientific_fields_equal_original": true,
+  "raw_archive_or_process_receipts_included": false,
+  "raw_logs_included": false,
+  "sanitized_views": [
+    "study_protocol.json",
+    "resource_receipt.json"
+  ],
+  "schema": "third-stage1-public-privacy-inventory-v1",
+  "unchanged_reviews": [
+    "independent_review.json",
+    "independent_review.txt"
+  ],
+  "unchanged_run_json_files": 54
+}

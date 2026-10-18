@@ -1,0 +1,88 @@
+{
+  "bindings": {
+    "PLAN.prospective.json": {
+      "bytes": 8977,
+      "sha256": "6648cf6cf850cb4a400fae74ab3cf993f7e505a8ae7d6dad5e51c0a1341b818f"
+    },
+    "curation_repair.py": {
+      "bytes": 12928,
+      "sha256": "07e1a5e807b61c9400813d9b694c12172046b2df4788a3cf3f8e7552dcc8e200"
+    },
+    "stage1_common.py": {
+      "bytes": 13460,
+      "sha256": "8ec48a4146239500499a21cae123cb275b494756a7bc25dfda7418df6264d5c2"
+    },
+    "test_curation_repair.py": {
+      "bytes": 3330,
+      "sha256": "2104bebc19941940a4aaedbd209526590c64b5dae5b8302104b2e87832ebaab9"
+    }
+  },
+  "conditions_before_launch": [
+    "Freeze the new protocol and keep v4 negative. Bind stage2 source, helper, exact runtime, dispatcher and reviewed wrapper together.",
+    "Reuse no modified Stage1 outputs as study inputs; only its fixed input/scorer/runtime admission and timing receipts may inform resource feasibility.",
+    "Adapt wrapper success-completion schema/all51cuts check and exact run root for stage2. Enforce separate2MiBNFS cap,8GiB scratch reserve and CPU2/mem8GiB/noGPU; no private payload export.",
+    "Keep original human/semantic/effect gates unmet and do not auto-launch later native-label/learner work.",
+    "Independently audit terminal all-cut output completeness and every formula/state-check assertion; process exit alone is not result acceptance."
+  ],
+  "created_utc": "2026-10-18T11:57:50.238417+00:00",
+  "human_annotation_calls": 0,
+  "interpretation_notes": [
+    "This is generic exact curation membership repair on natural fixed development graphs, not the original ridge learner or task utility/effect result.",
+    "fresh_oracle_seconds includes fresh graph, polynomial/state construction, comparisons and retry test; it is not pure scorer time or a matched comparative latency.",
+    "Logical snapshot equality is not serialized-byte equality, physical erasure or a kernel-enforced no-reaccess test.",
+    "One R and one S trajectory per cutoff is correctness evidence only, with source contributors serving as proxies."
+  ],
+  "model_calls": 0,
+  "natural_feature_reads_by_reviewer": 0,
+  "resource_review": {
+    "basis_coefficients_upper_bound": 2002,
+    "checkpoint_graph_rebuilds_maximum": 408,
+    "dense_coordinate_slots_upper_bound_per_map": 2004002,
+    "estimated_64bit_tuple_reference_payload_bytes_upper_bound": 16032016,
+    "initial_full_graph_builds": 51,
+    "local_state_probe_limit_seconds": 30,
+    "payload_bound_excludes": "Tuple/list/object overhead, inverse indices, graph, snapshots, runtime and source caches. This is not total-byte accounting.",
+    "remaining_qualification": "Linux scorer wall time remains unqualified. The native runtime-only Stage1 receipt can inform a conservative3600s resource assessment without using graph outcome counts. No original data is read by this reviewer."
+  },
+  "review_scope": "Independent AI source/formula/privacy review and bounded local algebraic software tests. No natural data or Stage1 outcomes inspected. No remote attempts.",
+  "schema": "third-stage2-independent-review-v1",
+  "source_edits": 0,
+  "status": "no_unresolved_source_semantics_or_privacy_defect_found",
+  "test_evidence": {
+    "author_tests_passed": true,
+    "author_tests_replayed": 6,
+    "bounded_state_probe": {
+      "completed_singletons": 128,
+      "dense_membership_dimension": 1001,
+      "elapsed_seconds": 1.047719167,
+      "feature_scoring_included": false,
+      "horizon": 128,
+      "initial_incidences": 230871,
+      "initial_keys": 1875,
+      "n": 1001,
+      "peak_rss_native_units": 124715008,
+      "platform": "darwin",
+      "scope": "software stress fixture only; not natural-data result or qualified runtime estimate",
+      "stage_sha256": "07e1a5e807b61c9400813d9b694c12172046b2df4788a3cf3f8e7552dcc8e200",
+      "status": "completed"
+    },
+    "independent_membership": {
+      "membership_comparisons": 17344,
+      "ordered_DAGs": 64,
+      "passed": true,
+      "scope": "exhaustive tiny algebraic software fixtures only",
+      "source_patterns": 4,
+      "stage_sha256": "07e1a5e807b61c9400813d9b694c12172046b2df4788a3cf3f8e7552dcc8e200"
+    }
+  },
+  "verified": [
+    "Exact membership basis e_v labels original panel coordinates; no annotation or supervised target generated.",
+    "Record/source Boolean terms correct, including identically zero source owner-blocker terms.",
+    "Fresh recuration recomputes retained-feature scores and stable priorities, then constructs logical state in original coordinate/universe basis at the decremented horizon.",
+    "Every singleton compares selected membership to original raw-blocker predicate. Registered checkpoints compare sequence/batch/reverse and fresh retained logical coefficient/inverse/degree/alive/horizon snapshots.",
+    "Genuine-source frame excludes unknown units from requests; all original source units remain in state universe.",
+    "R/S fixed seeded request frames are graph independent and their digests checked equal over all51cuts. No threshold/outcome-based request selection.",
+    "Aggregate results contain no raw request IDs, record IDs, membership coordinates, state payloads, embeddings, source text or task labels.",
+    "Frozen generic IndexedState idempotent retry contract is correctly described; no strict service retry claim."
+  ]
+}

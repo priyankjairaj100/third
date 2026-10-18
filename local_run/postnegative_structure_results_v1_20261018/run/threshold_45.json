@@ -1,0 +1,85 @@
+{
+  "array_and_utf8_accounting": {
+    "array_bytes": 20376,
+    "edges": 544,
+    "id_utf8_bytes": 39173,
+    "records": 1001
+  },
+  "blocker_histogram": {
+    "0": 913,
+    "1": 28,
+    "10": 2,
+    "11": 2,
+    "12": 1,
+    "14": 1,
+    "16": 1,
+    "19": 1,
+    "2": 8,
+    "20": 1,
+    "21": 3,
+    "24": 2,
+    "27": 2,
+    "28": 1,
+    "3": 17,
+    "4": 9,
+    "49": 1,
+    "5": 2,
+    "6": 5,
+    "8": 1
+  },
+  "edge_count": 544,
+  "eligible_record_count_by_horizon": {
+    "1": 941,
+    "128": 1001,
+    "32": 1000,
+    "8": 983
+  },
+  "full_graph_alternate_tiling_equal": true,
+  "genuine_single_source_admission_total": 16,
+  "genuine_single_source_request_count": 457,
+  "genuine_single_source_requests_with_admission": 14,
+  "graph_and_replay_seconds": 4.388433136045933,
+  "index": 45,
+  "initially_excluded": 88,
+  "initially_selected": 913,
+  "primary_study_result": false,
+  "rows": 1001,
+  "semantic_validity_claim": false,
+  "singleton_excluded_blocker_admission_total": 13,
+  "singleton_excluded_record_requests_with_admission": 11,
+  "singleton_record_admission_total": 28,
+  "singleton_record_requests_with_admission": 25,
+  "source_interpretation": "Native accounts are contributor proxies; unknown singleton units excluded from source-request frame.",
+  "threshold": 0.95,
+  "threshold_float_hex": "0x1.e666666666666p-1",
+  "threshold_fraction": [
+    19,
+    20
+  ],
+  "uniform_record_expected_admissions": {
+    "1": {
+      "deletion_budget": 1,
+      "denominator": "143",
+      "float_display": 0.027972027972027972,
+      "numerator": "4"
+    },
+    "128": {
+      "deletion_budget": 128,
+      "denominator": "5794005466861402937586781429371186163576767453867543923538028361565729165375",
+      "float_display": 3.27179244266076,
+      "numerator": "18956783299212267414293283229446399413800747916406911954032161952717631633116"
+    },
+    "32": {
+      "deletion_budget": 32,
+      "denominator": "23977894637100667074119499532952255875675239640393625",
+      "float_display": 0.8755454692738167,
+      "numerator": "20993737012238437579340538458886794242903937667154918"
+    },
+    "8": {
+      "deletion_budget": 8,
+      "denominator": "24309361133156224125",
+      "float_display": 0.222660353146204,
+      "numerator": "5412730934667170822"
+    }
+  }
+}

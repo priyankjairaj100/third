@@ -1,3 +1,8 @@
+Execution checkpoint: Stage 2 is frozen, reviewed and RUNNING as job 15416.
+The earlier prospective plan remains unchanged in PLAN.prospective.json.
+PLAN.json adds only reviewed runtime policy; package_manifest.json seals the eight runtime files.
+Do not resubmit. Exact curation membership/state repair only; no labels, learner or semantic validation.
+
 POSTNEGATIVE CURATION REPAIR CORRECTNESS, STAGE 2 VERSION 1
 
 Prepared prospectively before inspecting Stage 1 outcomes. This stage does not

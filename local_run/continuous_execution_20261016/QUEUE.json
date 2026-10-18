@@ -14,6 +14,7 @@
   "controller_state": "work/resume-20261016/repair_pipeline_a01",
   "controller_terminal_utc": "2026-10-16T09:52:01.158277+00:00",
   "documentation_task_dependency_note": "Negative-branch documentation can proceed alongside task07; only completed negative calibration is its scientific predecessor. No blocked experimental dependency was changed.",
+  "new_user_authorization": "18October2026: fix runtime or alternatives; resume experiments. Separate postnegative development engineering begins; original failed semantic gates retained.",
   "private_task_root": "/Users/priyankjairaj/Documents/Codex/2026-10-11/see-i-am-working-on-a",
   "repository": "/Users/priyankjairaj/Downloads/ACL/Three",
   "rules": [
@@ -25,6 +26,7 @@
     "Review executed outputs before promoting claims. Back up substantive completed milestones."
   ],
   "schema": "third-continuous-work-queue-v1",
+  "target_venue": "TMLR",
   "tasks": [
     {
       "depends_on": [],
@@ -142,8 +144,8 @@
       "independent_ai_review": "manuscript/independent_review_20261018.json",
       "next_action": "Layout blocker resolved through explicitly authorized temporary render. Original native CUA incompatibility persists; do not repeat unchanged probes. Author attestations and two disclosed literature gaps remain.",
       "state": "tmlr_compiled_and_alternate_visual_review_passed",
-      "unified_author_review": "manuscript/unified_review_20261016.json",
-      "tmlr_revision": "manuscript/tmlr_20261018/adaptation_report.json"
+      "tmlr_revision": "manuscript/tmlr_20261018/adaptation_report.json",
+      "unified_author_review": "manuscript/unified_review_20261016.json"
     },
     {
       "depends_on": [
@@ -192,34 +194,43 @@
       "state": "tmlr_source_and_visual_review_complete_author_items_pending"
     },
     {
-      "id": "10-postnegative-structure",
       "depends_on": [],
-      "state": "running",
-      "job_id": "15414",
-      "package": "local_run/postnegative_structure_v1_20261018",
       "dispatcher": "local_run/postnegative_structure_dispatch_v2_20261018",
       "done_when": "Terminal scheduler and aggregate archive verified; all51cuts complete, source identities and independent arithmetic review pass.",
-      "next_action": "Read only reconcile15414and exclusive run receipt. Never resubmit active/unknownjob. Privateinputs staycluster; retrieve aggregate archive only. Preserve failedattempts.",
       "failure_branch": "Diagnose engineering failure and version repair; do not change scientific cutoffs or relabelv4.",
+      "id": "10-postnegative-structure",
+      "job_id": "15414",
       "latest_scheduler_observation": {
-        "utc": "2026-10-18T11:55:34.878349+00:00",
+        "elapsed_seconds": 125,
         "node": "csis.cn1",
-        "elapsed_seconds": 125
+        "utc": "2026-10-18T11:55:34.878349+00:00"
+      },
+      "next_action": "Complete. Never repeat job15414. Preserve all51cutoffs and failed semantic gates. Stage2 uses only runtime receipts for resource qualification.",
+      "package": "local_run/postnegative_structure_v1_20261018",
+      "state": "completed_and_independently_audited",
+      "evidence": "local_run/postnegative_structure_results_v1_20261018/independent_review.json",
+      "public_aggregate_manifest_sha256": "cc3a8df216b560d00cda91da728ed5c1c274987ced543a3dc3ef54d9be9bd9d8",
+      "terminal_scheduler_observation": {
+        "state": "COMPLETED",
+        "exit": "0:0",
+        "elapsed_seconds": 250,
+        "job_id": "15414"
       }
     },
     {
-      "id": "11-postnegative-curation-repair",
       "depends_on": [
         "10-postnegative-structure:resource_qualification_not_outcome_selection"
       ],
-      "state": "prospectively_prepared_pending_independent_review",
-      "package": "local_run/postnegative_curation_repair_v1_20261018",
       "done_when": "Fixed request/allcut exact membership repair and fresh recuration comparisons terminal and independently audited. No labels/heads in this stage.",
-      "next_action": "Complete pending independent code review, freeze before any run, resource qualify, then single submission. Do not pickcutoffs from stage1outcomes."
+      "evidence": "local_run/postnegative_curation_repair_v1_20261018/EXECUTION_CHECKPOINT.json",
+      "id": "11-postnegative-curation-repair",
+      "job_id": "15416",
+      "next_action": "Read-only reconcile this job and its exclusive run receipts. Never resubmit active or unknown state. Retrieve aggregate archive only; independently audit before accepting results.",
+      "package": "local_run/postnegative_curation_repair_v1_20261018",
+      "package_manifest_sha256": "0280f2af5429c32fbd140473a21a9cc946fdf20d456a3937bdf36a926b0e33cf",
+      "state": "running"
     }
   ],
-  "updated_utc": "2026-10-18T11:55:01.965217+00:00",
-  "target_venue": "TMLR",
-  "venue_change_authorization": "Explicit user request on 18 October 2026; no relaxation of calibration, held-out or human gates.",
-  "new_user_authorization": "18October2026: fix runtime or alternatives; resume experiments. Separate postnegative development engineering begins; original failed semantic gates retained."
+  "updated_utc": "2026-10-18T12:11:36.507982+00:00",
+  "venue_change_authorization": "Explicit user request on 18 October 2026; no relaxation of calibration, held-out or human gates."
 }

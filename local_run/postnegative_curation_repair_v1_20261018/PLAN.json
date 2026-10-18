@@ -1,0 +1,374 @@
+{
+  "annotation": "No task labels, human reviews, LLM labels or learner head. The membership basis e_v is a deterministic original-panel index coordinate, not a supervised target.",
+  "checks": {
+    "each_checkpoint": "Apply the same cumulative prefix as one batch and as the reversed singleton sequence; require full snapshot equality. Recompute the retained-feature graph with block size 37; require its direct selection and independently assembled polynomial state to equal the repaired state at the remaining horizon.",
+    "every_singleton": "Exact selected membership against an independent original raw-blocker predicate; state invariants and operation-count bounds.",
+    "full_fresh_recuration": "Recompute the retained score graph at every registered checkpoint; no cached selected-ID oracle.",
+    "record_and_source_priorities": "Stable ID-derived original seed 0; never reorder relative priorities after deletion.",
+    "scope": "Exact curation membership and generic polynomial state only; no supervised utility, native ridge certification or service performance claim."
+  },
+  "created_utc": "2026-10-18T11:52:19.673373+00:00",
+  "data_scope": "Same original pre-guard whole-source development-training prefix as Stage 1; other held-out feature slices and all labels stay unread.",
+  "execution_policy": {
+    "core_stage_alarm_seconds": 3600,
+    "input_location": "existing cluster only; no private payload export",
+    "new_run_directory": "local_workspace/qualification/postnegative-curation-repair-v1-20261018-a01",
+    "new_tool_directory": "local_workspace/tools/postnegative-curation-repair-v1-20261018",
+    "nfs_policy_scope": "New aggregate-only study. Existing inputs read only. Original8GiBNFSguard/full-pipeline gates remain unchanged and originaleffectstage remainsblocked.",
+    "nfs_small_artifact_budget_bytes": 2097152,
+    "nfs_small_artifact_margin_bytes": 1073741824,
+    "no_automatic_retry": true,
+    "scheduler_selected_nodes": [
+      "csis.cn1",
+      "csis.cn3",
+      "csis.cn4"
+    ],
+    "scratch_allowance_bytes": 268435456,
+    "scratch_reserve_bytes": 8589934592,
+    "slurm_wall_seconds": 3900,
+    "stage_launch_count": 1,
+    "wrapper_child_timeout_seconds": 3660
+  },
+  "failure_policy": "Any mismatch, source change, timeout, cap refusal or missing cut is an explicit failure; preserve partial outputs. No automatic retry or cutoff selection. An empty request frame remains unavailable.",
+  "freeze_scope": "Prospective request/threshold/data/state decisions retained from the earlier plan; only Stage 1 runtime-only resource evidence added. Root independent wrapper review and package seal required before launch.",
+  "frozen_sources": {
+    "algorithm_round2.py": {
+      "bytes": 17649,
+      "sha256": "6e8864f6df77c666606fba2fa540078df24628f69c7cb50380175dc71456ba7c"
+    },
+    "empirical_execution/ccu/__init__.py": {
+      "bytes": 663,
+      "sha256": "bb59999fa070a4faf576ffee6fbbcc09c4db10bb37f46821df9cb7d258613ede"
+    },
+    "empirical_execution/ccu/core.py": {
+      "bytes": 27026,
+      "sha256": "d89f6affd566103c65aa92f10e02ac86e394f7a1f88ff2e6b098720b8cef7df3"
+    },
+    "empirical_execution/ccu/structure.py": {
+      "bytes": 26683,
+      "sha256": "91b32e4e368231acfdd39ce7462c1a16a679a6332c3479644aaa7a2d7d1cb5da"
+    },
+    "empirical_execution/phase3/panels.py": {
+      "bytes": 20216,
+      "sha256": "bd2409958ac9a9e27faf463b44b2f839260a3195c7cde32fb3bfb76aeb14a04b"
+    },
+    "empirical_execution/phase3/reference_graph.py": {
+      "bytes": 2932,
+      "sha256": "efc41498648f6f7f7969768fbcd050619d7ed5d6e82eafadb1b9a3a2158e9d1c"
+    }
+  },
+  "helper_binding": {
+    "bytes": 13460,
+    "sha256": "8ec48a4146239500499a21cae123cb275b494756a7bc25dfda7418df6264d5c2"
+  },
+  "input_rows": 1001,
+  "inputs": {
+    "allocation": {
+      "bytes": 46993868,
+      "sha256": "488aa851efdb22425f443b09c0b97e28a8c64de26065d58a125c9d754eab6874"
+    },
+    "prefixes": {
+      "bytes": 264588,
+      "sha256": "9954cef258a7ec254da2b306805209fb8e80a80285ddb3c26a3b93e1c9c81b05"
+    },
+    "vectors": {
+      "bytes": 430848128,
+      "sha256": "cbc1f9a06079048144f406ec11925350aa057215869819b0967ac2749e25284e"
+    }
+  },
+  "limits": [
+    "Only one R and one S trajectory per cutoff: correctness cases, not deployment prevalence estimates",
+    "Membership-basis storage is not a compact-payload or native-learner benchmark",
+    "Harness oracles have private inputs; no kernel-enforced no-reaccess claim",
+    "No original 21,332-job semantic registry completion",
+    "No new semantic threshold selected or validated"
+  ],
+  "next": "Separately versioned original native-label development is required for learner, head and utility comparisons. No automatic downstream launch.",
+  "prefix_target": 1000,
+  "prior_exposure": [
+    "v3 90 canonical pairs no joint positives",
+    "v4 all51 cuts failed19/20 joint-positive gate; maximum2/5",
+    "v4 invalid outputs and swaps already inspected",
+    "All prior calibration and historical lexical engineering evidence retained; design chosen after those results"
+  ],
+  "publication": "Aggregate counts, check booleans, operation meters, timing receipts and input/source bindings only. No request IDs, record/source IDs, memberships, states, embeddings, labels or raw text exported.",
+  "relation_to_original": "Run original exact generic IndexedState implementation on real fixed E5 graphs with deterministic membership statistics. Separate postnegative development; original failed semantic and human gates retained.",
+  "request_protocol": {
+    "arms": [
+      "R",
+      "S"
+    ],
+    "checkpoints": [
+      1,
+      8,
+      32,
+      128
+    ],
+    "derive_seed_parts": [
+      "arm"
+    ],
+    "frame_shortfall": "Use the original generator clipped horizon and checkpoints; an empty frame is explicitly unavailable. No replacement.",
+    "frozen_generator": "ccu.structure.generate_request_trajectory",
+    "initial_horizon": 128,
+    "master_seed": 20261018,
+    "namespace": "third-postnegative-curation-repair-v1",
+    "same_requests_across_all_cuts": true,
+    "selection_or_stress_based_requests": false,
+    "source_frame": "Only original native contributor proxy source units, excluding unknown singleton units.",
+    "trajectories_per_arm": 1
+  },
+  "resource_limits": {
+    "cpus": 2,
+    "gpu": 0,
+    "memory_gib": 8,
+    "nfs_scope": "Existing private inputs read only; scheduler logs and sanitized aggregates only. Root wrapper must prospectively bind fresh quota check and explicit separate small-output policy. Original remote8GiBstagegate remains unchanged.",
+    "nfs_write_budget_bytes": 2097152,
+    "numeric_threads": 1,
+    "output_cap_bytes": 2097152,
+    "platform": "approved_CSIS_CPU_compute_node",
+    "stage_allowance_bytes": 268435456,
+    "storage_reserve_bytes": 8589934592,
+    "temporary_output_filesystem": "fresh compute-node scratch; must have8GiBreserve before/through execution",
+    "wall_seconds": 3600
+  },
+  "resource_qualification": {
+    "basis": "Stage 1 runtime-only terminal receipt; no threshold counts or scientific outcomes read for Stage 2 preparation",
+    "limits": "Linear extrapolation is only planning evidence. More Stage 2 builds use smaller tiles and Stage 2 adds integer state construction/comparison, all singleton verification and composition checks. A timeout remains a failed attempt; no claimed worst-case runtime or automatic cap raise.",
+    "linear_graph_build_projection_seconds": 1123.2688895780593,
+    "rounded_planning_seconds": 1125,
+    "stage1_child_peak_rss_kib_linux": 254680,
+    "stage1_elapsed_seconds": 249.6153087951243,
+    "stage1_full_graph_builds": 102,
+    "stage1_process_receipt_sha256": "28f67448125bea36e416ae37e172ca815a87cdf15a4a993bc5bc149464e57742",
+    "stage1_returncode": 0,
+    "stage2_cap_seconds": 3600,
+    "stage2_maximum_full_graph_builds": 459
+  },
+  "runtime": {
+    "numpy": "2.5.3",
+    "platform": "Linux",
+    "python": "3.13.7",
+    "scipy": "1.17.1"
+  },
+  "schema": "third-postnegative-curation-repair-stage2-v1",
+  "score_rule": "Strict score > original floating cut; unchanged Phase 3 ordered FP64 graph source; all 51 cuts regardless of Stage 1 outcomes.",
+  "stage1_dependency": "Only prior input, scorer and runtime admission can be reused; no Stage 1 count, activation or favorable finding is a launch gate.",
+  "stage1_outcomes_used_for_design": false,
+  "state_contract": {
+    "comparison": "All logical coefficient, index, alive-unit and horizon snapshots exactly equal; no physical byte canonicality claim",
+    "horizon": "128 or the original generator frame clipping; decrement for newly deleted units, never replenish",
+    "implementation": "algorithm_round2.IndexedState",
+    "record_term": "e_v*(1-x_v)*product_{u in B(v)}x_u",
+    "retry": "Frozen IndexedState idempotent retry contract; do not conflate it with the strict service API",
+    "source_term": "e_v*(1-x_owner(v))*product over distinct blocker-source deletion variables; an own-source blocker makes the term identically zero",
+    "source_universe": "All original-panel source units including unknown units; requests sample only genuine sources",
+    "statistics": "Exact integer original-panel membership basis e_v, dimension 1001"
+  },
+  "status": "frozen_for_stage2",
+  "thresholds": [
+    [
+      50,
+      100
+    ],
+    [
+      51,
+      100
+    ],
+    [
+      52,
+      100
+    ],
+    [
+      53,
+      100
+    ],
+    [
+      54,
+      100
+    ],
+    [
+      55,
+      100
+    ],
+    [
+      56,
+      100
+    ],
+    [
+      57,
+      100
+    ],
+    [
+      58,
+      100
+    ],
+    [
+      59,
+      100
+    ],
+    [
+      60,
+      100
+    ],
+    [
+      61,
+      100
+    ],
+    [
+      62,
+      100
+    ],
+    [
+      63,
+      100
+    ],
+    [
+      64,
+      100
+    ],
+    [
+      65,
+      100
+    ],
+    [
+      66,
+      100
+    ],
+    [
+      67,
+      100
+    ],
+    [
+      68,
+      100
+    ],
+    [
+      69,
+      100
+    ],
+    [
+      70,
+      100
+    ],
+    [
+      71,
+      100
+    ],
+    [
+      72,
+      100
+    ],
+    [
+      73,
+      100
+    ],
+    [
+      74,
+      100
+    ],
+    [
+      75,
+      100
+    ],
+    [
+      76,
+      100
+    ],
+    [
+      77,
+      100
+    ],
+    [
+      78,
+      100
+    ],
+    [
+      79,
+      100
+    ],
+    [
+      80,
+      100
+    ],
+    [
+      81,
+      100
+    ],
+    [
+      82,
+      100
+    ],
+    [
+      83,
+      100
+    ],
+    [
+      84,
+      100
+    ],
+    [
+      85,
+      100
+    ],
+    [
+      86,
+      100
+    ],
+    [
+      87,
+      100
+    ],
+    [
+      88,
+      100
+    ],
+    [
+      89,
+      100
+    ],
+    [
+      90,
+      100
+    ],
+    [
+      91,
+      100
+    ],
+    [
+      92,
+      100
+    ],
+    [
+      93,
+      100
+    ],
+    [
+      94,
+      100
+    ],
+    [
+      95,
+      100
+    ],
+    [
+      96,
+      100
+    ],
+    [
+      97,
+      100
+    ],
+    [
+      98,
+      100
+    ],
+    [
+      99,
+      100
+    ],
+    [
+      199,
+      200
+    ]
+  ]
+}

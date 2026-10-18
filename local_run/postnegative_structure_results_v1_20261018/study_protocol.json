@@ -1,0 +1,314 @@
+{
+  "annotation": "No labels are generated or collected in stage1; later annotation remains fully LLM zero human review.",
+  "authority": "User requests original experiments be resumed and blockers removed; this is an explicitly separate follow-up, not a bypass of failed v4 admission.",
+  "claims": [
+    "Conditional structural facts on a fixed natural AskUbuntu development-training subset under each frozen E5 score cutoff",
+    "Engineering evidence only; no threshold selected, semantic validation, task utility, or population prevalence claim"
+  ],
+  "created_date": "2026-10-18",
+  "data": {
+    "actual_rows": 1001,
+    "all_development_sources_excluded_from_future_confirmation": true,
+    "heldout_feature_slices": "none",
+    "labels": "none",
+    "order": "Original full-source row order, filtered to exact existing whole-source pre-guard development prefix",
+    "prefix_target": 1000,
+    "raw_text": "none"
+  },
+  "excluded_claims": [
+    "Original21332-job semantic registry completion",
+    "Human semantic validity",
+    "Test utility",
+    "Confirmatory effects",
+    "Supremacy over compact eligible payload"
+  ],
+  "failure_policy": "Any input mismatch, scorer diagnostic failure, runtime refusal, timeout, OOM or incomplete51-cut set remains a terminal failed attempt. No automatic retry or gate relaxation.",
+  "frozen_sources": {
+    "empirical_execution/ccu/__init__.py": {
+      "bytes": 663,
+      "sha256": "bb59999fa070a4faf576ffee6fbbcc09c4db10bb37f46821df9cb7d258613ede"
+    },
+    "empirical_execution/ccu/core.py": {
+      "bytes": 27026,
+      "sha256": "d89f6affd566103c65aa92f10e02ac86e394f7a1f88ff2e6b098720b8cef7df3"
+    },
+    "empirical_execution/phase3/panels.py": {
+      "bytes": 20216,
+      "sha256": "bd2409958ac9a9e27faf463b44b2f839260a3195c7cde32fb3bfb76aeb14a04b"
+    },
+    "empirical_execution/phase3/reference_graph.py": {
+      "bytes": 2932,
+      "sha256": "efc41498648f6f7f7969768fbcd050619d7ed5d6e82eafadb1b9a3a2158e9d1c"
+    }
+  },
+  "frozen_utc": "2026-10-18T11:46:25.245410+00:00",
+  "horizons": [
+    1,
+    8,
+    32,
+    128
+  ],
+  "independent_oracle_strategy": {
+    "aggregate_review": "Root independently recomputes exact expected admissions from all51 reported histograms and checks all counts/monotonicity/completeness and no IDs/text in public outputs.",
+    "all1001rows_all51cuts": "Run frozen graph builder twice with block sizes256and37, compare all priority/CSR arrays exactly. This is a full alternate-tiling replay, not an independent scorer.",
+    "scalar_first16_rows_all51cuts": "Separately written scalar ordered FP64 arithmetic and hash priority; compares blocker sets to frozen source. Limited subset diagnostic."
+  },
+  "inputs": {
+    "allocation": {
+      "bytes": 46993868,
+      "sha256": "488aa851efdb22425f443b09c0b97e28a8c64de26065d58a125c9d754eab6874"
+    },
+    "prefixes": {
+      "bytes": 264588,
+      "sha256": "9954cef258a7ec254da2b306805209fb8e80a80285ddb3c26a3b93e1c9c81b05"
+    },
+    "vectors": {
+      "bytes": 430848128,
+      "sha256": "cbc1f9a06079048144f406ec11925350aa057215869819b0967ac2749e25284e"
+    }
+  },
+  "post_stage": "Independently verify all51 aggregate files, exact combinatorial expectations, completeness and terminal resource receipts. Stage1 cannot auto-launch task effects or original guard.",
+  "prior_exposure": [
+    "v3 90 canonical pairs no joint positives",
+    "v4 all51 cuts failed19/20 joint-positive gate; maximum2/5",
+    "v4 invalid outputs and swaps already inspected",
+    "All prior calibration and historical lexical engineering evidence retained; design chosen after those results"
+  ],
+  "priority_seed": 0,
+  "public_transformation": {
+    "executed_document": false,
+    "original_protocol_binding": {
+      "bytes": 7698,
+      "sha256": "933b0f4d269d22f9391d3a6d1ac7dfbc14f90025b8009f27f72306e8a392fb86"
+    },
+    "removed": "Operational dispatch locations, node names and storage policy strings; scientific selection, scoring, horizons, input/source bindings and runtime retained.",
+    "scope": "Deidentified view of the bound executed protocol, not a replacement protocol or activation."
+  },
+  "resource_limits": {
+    "cpus": 2,
+    "gpu": 0,
+    "memory_gib": 8,
+    "nfs_write_budget_bytes": 2097152,
+    "numeric_threads": 1,
+    "output_cap_bytes": 2097152,
+    "stage_allowance_bytes": 268435456,
+    "storage_reserve_bytes": 8589934592,
+    "wall_seconds": 1200
+  },
+  "runtime": {
+    "numpy": "2.5.3",
+    "platform": "Linux",
+    "python": "3.13.7",
+    "scipy": "1.17.1"
+  },
+  "schema": "third-stage1-public-scientific-plan-view-v1",
+  "scorer": "Unchanged phase3.reference_graph.build_reference_graph with ordered FP64 normalization/dot and block_size256",
+  "status": "public_view_of_executed_frozen_stage1",
+  "threshold_rule": "strict score > float(Fraction), exact original51-grid; publish all cuts, never select favorable result",
+  "thresholds": [
+    [
+      50,
+      100
+    ],
+    [
+      51,
+      100
+    ],
+    [
+      52,
+      100
+    ],
+    [
+      53,
+      100
+    ],
+    [
+      54,
+      100
+    ],
+    [
+      55,
+      100
+    ],
+    [
+      56,
+      100
+    ],
+    [
+      57,
+      100
+    ],
+    [
+      58,
+      100
+    ],
+    [
+      59,
+      100
+    ],
+    [
+      60,
+      100
+    ],
+    [
+      61,
+      100
+    ],
+    [
+      62,
+      100
+    ],
+    [
+      63,
+      100
+    ],
+    [
+      64,
+      100
+    ],
+    [
+      65,
+      100
+    ],
+    [
+      66,
+      100
+    ],
+    [
+      67,
+      100
+    ],
+    [
+      68,
+      100
+    ],
+    [
+      69,
+      100
+    ],
+    [
+      70,
+      100
+    ],
+    [
+      71,
+      100
+    ],
+    [
+      72,
+      100
+    ],
+    [
+      73,
+      100
+    ],
+    [
+      74,
+      100
+    ],
+    [
+      75,
+      100
+    ],
+    [
+      76,
+      100
+    ],
+    [
+      77,
+      100
+    ],
+    [
+      78,
+      100
+    ],
+    [
+      79,
+      100
+    ],
+    [
+      80,
+      100
+    ],
+    [
+      81,
+      100
+    ],
+    [
+      82,
+      100
+    ],
+    [
+      83,
+      100
+    ],
+    [
+      84,
+      100
+    ],
+    [
+      85,
+      100
+    ],
+    [
+      86,
+      100
+    ],
+    [
+      87,
+      100
+    ],
+    [
+      88,
+      100
+    ],
+    [
+      89,
+      100
+    ],
+    [
+      90,
+      100
+    ],
+    [
+      91,
+      100
+    ],
+    [
+      92,
+      100
+    ],
+    [
+      93,
+      100
+    ],
+    [
+      94,
+      100
+    ],
+    [
+      95,
+      100
+    ],
+    [
+      96,
+      100
+    ],
+    [
+      97,
+      100
+    ],
+    [
+      98,
+      100
+    ],
+    [
+      99,
+      100
+    ],
+    [
+      199,
+      200
+    ]
+  ]
+}

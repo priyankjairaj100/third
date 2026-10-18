@@ -1,0 +1,17 @@
+Independent Stage1 aggregate audit PASSED.
+
+All51 original cuts and53 source-bound outputs are present. Archive CRC, exact
+extracted members, runtime/input pins, counts and204 exact expectations passed.
+The full blocker-count CDF obeys threshold monotonicity (50,050 comparisons).
+All51 alternate-tiling equality receipts and the816 scalar-subset comparisons
+are present; this review did not export or re-score private graphs.
+
+Observed stage time248.513s, wrapper249.615s, peakRSS260,792,320bytes.
+No model/human annotation, learner or effect study was run.
+
+Full51-cut structural summary is retained in independent_review.json without
+selecting a threshold. The1001-row panel is reserved pre-guard development only.
+
+Privacy: run/*.json contain aggregates and bindings only. Keep process.json, raw
+archive and scheduler/transport receipts private or deidentify job/node/scratch
+metadata before public release. v4 failure and original semantic gates remain.

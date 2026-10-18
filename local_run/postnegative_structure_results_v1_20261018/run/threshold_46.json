@@ -1,0 +1,77 @@
+{
+  "array_and_utf8_accounting": {
+    "array_bytes": 17600,
+    "edges": 197,
+    "id_utf8_bytes": 39173,
+    "records": 1001
+  },
+  "blocker_histogram": {
+    "0": 952,
+    "1": 20,
+    "11": 2,
+    "13": 2,
+    "15": 1,
+    "17": 1,
+    "2": 12,
+    "25": 1,
+    "3": 5,
+    "4": 1,
+    "5": 1,
+    "8": 3
+  },
+  "edge_count": 197,
+  "eligible_record_count_by_horizon": {
+    "1": 972,
+    "128": 1001,
+    "32": 1001,
+    "8": 994
+  },
+  "full_graph_alternate_tiling_equal": true,
+  "genuine_single_source_admission_total": 16,
+  "genuine_single_source_request_count": 457,
+  "genuine_single_source_requests_with_admission": 11,
+  "graph_and_replay_seconds": 4.378870949149132,
+  "index": 46,
+  "initially_excluded": 49,
+  "initially_selected": 952,
+  "primary_study_result": false,
+  "rows": 1001,
+  "semantic_validity_claim": false,
+  "singleton_excluded_blocker_admission_total": 9,
+  "singleton_excluded_record_requests_with_admission": 7,
+  "singleton_record_admission_total": 20,
+  "singleton_record_requests_with_admission": 16,
+  "source_interpretation": "Native accounts are contributor proxies; unknown singleton units excluded from source-request frame.",
+  "threshold": 0.96,
+  "threshold_float_hex": "0x1.eb851eb851eb8p-1",
+  "threshold_fraction": [
+    24,
+    25
+  ],
+  "uniform_record_expected_admissions": {
+    "1": {
+      "deletion_budget": 1,
+      "denominator": "1001",
+      "float_display": 0.01998001998001998,
+      "numerator": "20"
+    },
+    "128": {
+      "deletion_budget": 128,
+      "denominator": "3163552895226360883148802051548810481388946625",
+      "float_display": 2.4121567027330686,
+      "numerator": "7630985320670871348333600784023530628832755064"
+    },
+    "32": {
+      "deletion_budget": 32,
+      "denominator": "1120086141103965816926250686367992034568628014125",
+      "float_display": 0.6312207874855315,
+      "numerator": "707021656039275375962022325220306332958718427784"
+    },
+    "8": {
+      "deletion_budget": 8,
+      "denominator": "24382508659133625",
+      "float_display": 0.15939024865676138,
+      "numerator": "3886334118054946"
+    }
+  }
+}
