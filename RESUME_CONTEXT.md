@@ -1,3 +1,37 @@
+Latest continuation — 18 October 2026: audited natural development repair complete
+
+Both new engineering jobs are terminal and audited:15414COMPLETED0:0(250s)
+and15416COMPLETED0:0(1195s). No stage is active; never duplicate either job.
+Old calibration controller remains terminal NEGATIVE. All51cuts and original
+negative outcomes are retained. Original semantic-effect study is incomplete;
+do not start a learner/guard/held-out stage or retune the failed calibration.
+
+Stage1:1001reservedtrainingrows,51cuts,204exactexpectations and50050CDFchecks.
+Excluded-blocker admissions appear at13cuts. Public bundle:
+local_run/postnegative_structure_results_v1_20261018.
+Stage2:102fixed trajectories,13056singleton membership checks,408checkpoints.
+All passed. Equality concerns membership and canonical logical state, not raw
+graph edges/bytes, erasure or enforced no-reaccess. No task utility or comparative
+speed/memory result. Public bundle:local_run/postnegative_curation_repair_results_v1_20261018.
+Private corpus/identity/features/state remain oncluster; only aggregates returned.
+
+Same TMLR source updated, independently reviewed, natively compiled and alternate
+PDF visually checked. Source SHA256:
+d42068febcb1b91ef9e35326cbc6bd2c19b3e6fbce8d0ee6091be53450b74703.
+The native computer-use runtime remains incompatible; the user-approved temporary
+PDF workaround resolved visual-review access. No native-preview equality claimed.
+Current checker:manuscript/natural_repair_20261018/check_repair.py(Python3.10+).
+AnonymousV4 includes both public bundles and exact generating code; prior ZIPs
+remain immutable. New release_20261018_tmlr_v4.zip passed clean-extraction replay.
+
+Protected TODO/analysis locks and frozen remote checkout remain unchanged.
+FullyLLM futureannotation, zero human pairreview. No paidcompute or privateinput
+publication. Remaining author attestations and two unavailable fulltext comparisons
+are explicit. No submission-ready or original empirical-completion claim.
+Do not repeat unchanged audits/builds as progress. Existing heartbeat remains;
+only new actionable evidence/protocol or author work can advance the open scope.
+Private handoff:work/resume-experiments-20261018/manuscript_repair_integrated_v1.
+
 Latest continuation — 18 October 2026: resumed natural-data engineering
 
 Stage 1 job15414 COMPLETED0:0 in250seconds. All51cuts on the fixed1001-row

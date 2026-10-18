@@ -1,0 +1,31 @@
+{
+  "schema": "third-natural-repair-manuscript-delta-v1",
+  "created_utc": "2026-10-18T12:35:14.377824+00:00",
+  "prior_source_sha256": "e7fe051d30c0e28302d8acca1f30f385bd7f046fde7fe739ad40d562260459c5",
+  "new_source_sha256": "d42068febcb1b91ef9e35326cbc6bd2c19b3e6fbce8d0ee6091be53450b74703",
+  "changes": [
+    {
+      "old": "admissions at 13 of the 51 fixed score cutoffs, without semantic qualification.\nThe results identify what exact counterfactual repair must remember,",
+      "new": "admissions at 13 of the 51 fixed score cutoffs, without semantic qualification.\nOn the same panel, indexed repair matches exact membership after 13,056\ndeletion steps and reconstructed logical state at 408 checkpoints.\nThe results identify what exact counterfactual repair must remember,"
+    },
+    {
+      "old": "No completed natural-text repair/utility/cost experiment supports a\npractical benefit yet.",
+      "new": "The completed development diagnostics establish graph structure and exact\nrepair for the fixed cases, but no natural-text utility or cost benefit."
+    },
+    {
+      "old": "The separate development\ndiagnostic exhibits structural admissions under some fixed score graphs;\nthe practical NLP value of these effects remains unresolved.",
+      "new": "Separate development\ndiagnostics exhibit structural admissions and verify exact indexed repair\non fixed score graphs; their practical NLP value remains unresolved."
+    },
+    {
+      "old": "\\paragraph{Theory and software evidence.}",
+      "new": "\\paragraph{Exact repair on natural score graphs.}\nA second, prospectively fixed diagnostic applied the unchanged indexed\nrepair algorithm to the same 1,001 records at all 51 cutoffs. It maintained\nexact integer membership coordinates rather than a task learner. One\nfixed record-deletion sequence and one contributor-proxy source-deletion\nsequence were reused across cuts, each with a horizon of 128 requests.\nAll 13,056 singleton updates matched a direct raw-blocker membership\noracle. At 408 checkpoints, after $1,8,32,128$ requests per sequence,\nsequential, batch and reverse-order updates had exactly equal logical\ncoefficient and index states; recomputing the retained-data graph and\nreconstructing the state at the remaining horizon agreed as well.\nAn independent aggregate audit checked the bound execution receipts;\nprivate-state equality was tested within the cluster run.\nThis checks exact repair for these development cases. It does not certify\nphysical byte equality or erasure, enforce a no-reaccess boundary, or\nestablish learner accuracy, semantic usefulness, speedup or memory savings.\nThe failed calibration gates and original evaluation reservations remain\nunchanged.\n\n\\paragraph{Theory and software evidence.}"
+    },
+    {
+      "old": "\n\nLiterature coverage is also bounded.",
+      "new": "\n\nThe separate repair diagnostic completed in 1,193.413 seconds, with\n281,616,384 bytes of process peak RSS, reusing the existing embedding\ncache. It requested two CPUs and no GPU, with one numerical thread.\nThese figures cover this diagnostic and its checks; they are not a\ncomparative service benchmark or the cost of the complete pipeline.\n\nLiterature coverage is also bounded."
+    }
+  ],
+  "stage2_independent_review_sha256": "3d612cb8e9853196f8be7f57680d0e3e4af4b6b1add0bd7af93c2adc6fea1ccb",
+  "stage2_results_included": true,
+  "original_failed_gates_changed": false
+}

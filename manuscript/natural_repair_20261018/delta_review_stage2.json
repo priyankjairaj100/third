@@ -1,0 +1,132 @@
+{
+  "bindings": {
+    "current_manuscript": {
+      "bytes": 69681,
+      "sha256": "d42068febcb1b91ef9e35326cbc6bd2c19b3e6fbce8d0ee6091be53450b74703"
+    },
+    "delta": {
+      "bytes": 3449,
+      "sha256": "1983e9409d264fafdd66866e4d2f546d5c632d355bcd6c4b53c4bceb29820d7d"
+    },
+    "preserved_stage1_public_manifest": {
+      "bytes": 9012,
+      "sha256": "cc3a8df216b560d00cda91da728ed5c1c274987ced543a3dc3ef54d9be9bd9d8"
+    },
+    "source_after": {
+      "bytes": 69681,
+      "sha256": "d42068febcb1b91ef9e35326cbc6bd2c19b3e6fbce8d0ee6091be53450b74703"
+    },
+    "source_before": {
+      "bytes": 67952,
+      "sha256": "e7fe051d30c0e28302d8acca1f30f385bd7f046fde7fe739ad40d562260459c5"
+    },
+    "stage2_executed_protocol": {
+      "bytes": 11004,
+      "sha256": "aab191844aea15078c1499036d274372f8eb27e65f0f76c26f9a0943ccd5cb99"
+    },
+    "stage2_field_interpretation": {
+      "bytes": 1651,
+      "sha256": "f721948194fdf03031c2d7c1f9698083ec040d883248fc37326baa5c63ef6c86"
+    },
+    "stage2_independent_review": {
+      "bytes": 386496,
+      "sha256": "3d612cb8e9853196f8be7f57680d0e3e4af4b6b1add0bd7af93c2adc6fea1ccb"
+    },
+    "stage2_public_manifest": {
+      "bytes": 9709,
+      "sha256": "611bb4baec6b62be1b7879f5d8f6afc3a41ffe99fc157101e252562c1ad9f475"
+    },
+    "stage2_resource_receipt": {
+      "bytes": 1438,
+      "sha256": "2aeab367583844668065a99a4da3df16f58c5beecc306ac1009fd53f5ca74c25"
+    },
+    "stage2_scientific_source": {
+      "bytes": 12928,
+      "sha256": "07e1a5e807b61c9400813d9b694c12172046b2df4788a3cf3f8e7552dcc8e200"
+    }
+  },
+  "claim_boundary_assessment": {
+    "no_comparative_speed_or_memory_savings_claim": true,
+    "no_direct_graph_CSR_or_byte_identity_claim": true,
+    "no_full_pipeline_cost_claim": true,
+    "no_kernel_no_reaccess_claim": true,
+    "no_native_learner_or_task_effect_claim": true,
+    "no_new_selected_threshold": true,
+    "no_original_full_study_completion_claim": true,
+    "no_physical_erasure_claim": true,
+    "no_semantic_validity_or_utility_claim": true,
+    "prospective_scope": "The second diagnostic fixes requests/data/state/thresholds before its outcomes; the paper still identifies the original calibration as negative and the new work as separate development diagnostics."
+  },
+  "created_utc": "2026-10-18T12:37:00.267633+00:00",
+  "exact_delta_reconstruction": {
+    "each_original_occurs_once": true,
+    "no_other_source_change": true,
+    "prior_source_is_reviewed_stage1_source": true,
+    "reconstructed_after_equals_current": true,
+    "replacements": 5
+  },
+  "findings": [],
+  "interpretation": "The fresh retained-data graph is rescored as an oracle. The objects compared are selected membership and canonical logical state at the remaining horizon. The new prose describes reconstruction agreement and expressly excludes physical byte equality; it does not promote the misleading raw field name into a direct graph-equality claim.",
+  "limits": [
+    "The 13,056 singleton steps include reused requests across 51 cutoffs, not 13,056 independent sampled deletion cases; the paragraph explicitly states sequence reuse.",
+    "The audit is aggregate/source-bound and does not authenticate private graphs by local recomputation.",
+    "The timing is the stage-internal elapsed timer and includes correctness checks; numeric threading is configured by source before numerical imports.",
+    "No native compile or rendered-layout check was performed by this reviewer for the new source; those remain separate parent checks."
+  ],
+  "passed": true,
+  "preservation": {
+    "bibliography_unchanged": true,
+    "completed_negative_calibration_section_unchanged": true,
+    "fully_llm_zero_human_annotation_preserved": true,
+    "heldout_evaluation_reservations_preserved": true,
+    "math_environment_counts_unchanged": {
+      "align": 2,
+      "align*": 0,
+      "corollary": 1,
+      "definition": 0,
+      "equation": 9,
+      "equation*": 0,
+      "lemma": 0,
+      "proof": 3,
+      "proposition": 0,
+      "theorem": 2
+    },
+    "original_effect_study_remains_unexecuted": true,
+    "original_unmet_semantic_human_gates_preserved": true,
+    "preamble_style_unchanged": true,
+    "public_stage2_bundle_unchanged": true,
+    "stage1_structural_results_paragraph_unchanged": true,
+    "unfavorable_historical_memory_comparison_preserved": true
+  },
+  "review_scope": "Independent review of the exact five Stage2 prose changes against completed aggregate/source-bound evidence. No source edit, remote work, full-proof re-review or private-data replay.",
+  "schema": "third-manuscript-stage2-independent-delta-review-v1",
+  "verified_claims": {
+    "basis": "Exact integer original-panel record membership coordinates; not task labels or learner heads.",
+    "checkpoint_count": 408,
+    "checkpoints_per_trajectory": [
+      1,
+      8,
+      32,
+      128
+    ],
+    "cluster_harness_performed_private_state_comparisons": true,
+    "cpus_requested": 2,
+    "fresh_oracle_scope": "A graph is freshly rebuilt by rescoring retained inputs. Its selected-membership set equals the repaired state membership; the derived canonical logical state equals the repaired state at the remaining horizon.",
+    "gpus": 0,
+    "independent_audit_limited_to_bound_receipts": true,
+    "membership_and_logical_state_flags_passed": true,
+    "natural_development_panel_rows": 1001,
+    "numeric_threads_configured": 1,
+    "process_peak_rss_bytes": 281616384,
+    "record_trajectories": 51,
+    "requests_per_trajectory": 128,
+    "same_request_sequences_across_cuts": true,
+    "singleton_membership_comparisons": 13056,
+    "source_trajectories": 51,
+    "stage_elapsed_display_seconds": "1,193.413",
+    "stage_elapsed_seconds": 1193.412525959313,
+    "thresholds": 51,
+    "trajectories_per_arm_per_cut": 1,
+    "unchanged_original_indexed_implementation": true
+  }
+}

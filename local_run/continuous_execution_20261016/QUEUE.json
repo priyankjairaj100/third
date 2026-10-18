@@ -138,12 +138,12 @@
       },
       "depends_on": [],
       "done_when": "Compiled and visually reviewed complete manuscript, actual figures/tables, citations and defensible limits.",
-      "evidence": "manuscript/natural_development_20261018/source_check.json",
+      "evidence": "manuscript/natural_repair_20261018/source_check.json",
       "historical_compute": "manuscript/compute_history_20261016.json",
       "id": "07-manuscript",
-      "independent_ai_review": "manuscript/natural_development_20261018/delta_review_stage1.json",
-      "next_action": "Stage1 is integrated and independently reviewed. Await Stage2 terminal/audit before any repair result or further source change; preserve source-bound historical reviews. Author attestations and two full-text comparison gaps remain.",
-      "state": "tmlr_stage1_result_reviewed_compiled_and_visually_verified",
+      "independent_ai_review": "manuscript/natural_repair_20261018/delta_review_stage2.json",
+      "next_action": "Bounded manuscript work complete. Preserve all source-bound reviews and negative results. Author attestations and two full-text comparison gaps remain; do not repeat unchanged builds or experiments.",
+      "state": "tmlr_stage1_and_stage2_results_reviewed_compiled_and_visually_verified",
       "tmlr_revision": "manuscript/tmlr_20261018/adaptation_report.json",
       "unified_author_review": "manuscript/unified_review_20261016.json"
     },
@@ -171,7 +171,8 @@
         "Independent AI manuscript review completed; two implementation-description findings corrected and independently rechecked",
         "97-file 18 October package plus manifest passed native compilation,49-source check,20 archived review-input checks and clean-extraction replay",
         "TMLR adaptation, source delta review, native compilation, and anonymous13-member aggregate/code supplement verified",
-        "Audited all51 natural development structural cuts integrated into same TMLR source; native compilation and all15page alternate visual review passed. Original failed gates retained."
+        "Audited all51 natural development structural cuts integrated into same TMLR source; native compilation and all15page alternate visual review passed. Original failed gates retained.",
+        "Audited Stage2 exact membership/logical-state repair:13056singleton checks and408checkpoints. Same TMLR source compiled and visually reviewed; anonymousV4 and new immutable release passed clean extraction replay."
       ],
       "coordinates_with": [
         "07-manuscript"
@@ -190,9 +191,9 @@
         "manuscript/independent_review_20261018.json"
       ],
       "id": "09-negative-branch-closure",
-      "next_action": "Current source/native compile and alternate rendered layout pass. Preserve original negative evidence; new engineering branch is separate. No author attestation or original empirical-completion claim.",
-      "public_package": "manuscript/tmlr_20261018/tmlr_anonymous_supplement_v1.zip",
-      "state": "tmlr_negative_and_structure_source_reviewed_author_items_pending"
+      "next_action": "Preserve completed negative-branch package. Original semantic effect remains blocked by failed calibration; no automatic next learner/held-out stage. Advance only newly actionable author/literature work or separately authorized prospective protocol, never outcome-dependent retuning.",
+      "public_package": "manuscript/natural_repair_20261018/tmlr_anonymous_supplement_v4.zip",
+      "state": "tmlr_negative_structure_and_repair_package_complete_author_items_pending"
     },
     {
       "depends_on": [],
@@ -223,15 +224,23 @@
         "10-postnegative-structure:resource_qualification_not_outcome_selection"
       ],
       "done_when": "Fixed request/allcut exact membership repair and fresh recuration comparisons terminal and independently audited. No labels/heads in this stage.",
-      "evidence": "local_run/postnegative_curation_repair_v1_20261018/EXECUTION_CHECKPOINT.json",
+      "evidence": "local_run/postnegative_curation_repair_results_v1_20261018/independent_review.json",
       "id": "11-postnegative-curation-repair",
       "job_id": "15416",
-      "next_action": "Read-only reconcile this job and its exclusive run receipts. Never resubmit active or unknown state. Retrieve aggregate archive only; independently audit before accepting results.",
+      "next_action": "Complete and integrated. Never rerun15416. Preserve all fixed cuts/requests and failed semantic gates; no automatic learner/held-out continuation.",
       "package": "local_run/postnegative_curation_repair_v1_20261018",
       "package_manifest_sha256": "0280f2af5429c32fbd140473a21a9cc946fdf20d456a3937bdf36a926b0e33cf",
-      "state": "running"
+      "state": "completed_and_independently_audited",
+      "public_aggregate_manifest_sha256": "611bb4baec6b62be1b7879f5d8f6afc3a41ffe99fc157101e252562c1ad9f475",
+      "terminal_scheduler_observation": {
+        "state": "COMPLETED",
+        "exit": "0:0",
+        "elapsed_seconds": 1195,
+        "job_id": "15416",
+        "observed_utc": "2026-10-18T12:27:04.469678+00:00"
+      }
     }
   ],
-  "updated_utc": "2026-10-18T12:25:58.704729+00:00",
+  "updated_utc": "2026-10-18T12:42:46.690116+00:00",
   "venue_change_authorization": "Explicit user request on 18 October 2026; no relaxation of calibration, held-out or human gates."
 }

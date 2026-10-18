@@ -1,0 +1,7 @@
+{
+  "blocker_set_comparisons": 816,
+  "passed": true,
+  "rows": 16,
+  "scope": "First16 original-order panel rows, scalar IEEE FP64 normalization and dot; not full-population or full-graph replay.",
+  "thresholds": 51
+}

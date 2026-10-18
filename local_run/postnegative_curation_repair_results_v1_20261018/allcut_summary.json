@@ -1,0 +1,103 @@
+{
+  "all_thresholds": 51,
+  "complete_correctness_check_summary": {
+    "checkpoint_count": 408,
+    "checkpoints": [
+      1,
+      8,
+      32,
+      128
+    ],
+    "horizon": 128,
+    "human_or_model_annotations": 0,
+    "no_selected_cutoff": true,
+    "record_arms_completed": 51,
+    "request_frame_sizes": {
+      "R": 1001,
+      "S": 457
+    },
+    "singleton_membership_checks": 13056,
+    "source_arms_completed": 51,
+    "task_learner_trained": false,
+    "thresholds_completed": 51,
+    "unavailable_arms": []
+  },
+  "limits": [
+    "One fixed R and S trajectory per cutoff, not replicated estimates.",
+    "S removes261records at128source requests while R removes128records, so these are not matched-volume arm comparisons.",
+    "No semantic validity, task learner/effect, predictive utility or comparative efficiency is measured.",
+    "Fresh retained recuration checks selected membership and canonical logical state; not direct CSR or serialized-byte equality."
+  ],
+  "observed_surviving_admission_ranges_by_checkpoint": {
+    "R": {
+      "1": {
+        "cuts_with_positive_surviving_admissions": 0,
+        "deleted_record_counts": [
+          1
+        ],
+        "maximum_surviving_admissions": 0,
+        "minimum_surviving_admissions": 0
+      },
+      "128": {
+        "cuts_with_positive_surviving_admissions": 12,
+        "deleted_record_counts": [
+          128
+        ],
+        "maximum_surviving_admissions": 16,
+        "minimum_surviving_admissions": 0
+      },
+      "32": {
+        "cuts_with_positive_surviving_admissions": 10,
+        "deleted_record_counts": [
+          32
+        ],
+        "maximum_surviving_admissions": 6,
+        "minimum_surviving_admissions": 0
+      },
+      "8": {
+        "cuts_with_positive_surviving_admissions": 9,
+        "deleted_record_counts": [
+          8
+        ],
+        "maximum_surviving_admissions": 5,
+        "minimum_surviving_admissions": 0
+      }
+    },
+    "S": {
+      "1": {
+        "cuts_with_positive_surviving_admissions": 0,
+        "deleted_record_counts": [
+          1
+        ],
+        "maximum_surviving_admissions": 0,
+        "minimum_surviving_admissions": 0
+      },
+      "128": {
+        "cuts_with_positive_surviving_admissions": 44,
+        "deleted_record_counts": [
+          261
+        ],
+        "maximum_surviving_admissions": 24,
+        "minimum_surviving_admissions": 0
+      },
+      "32": {
+        "cuts_with_positive_surviving_admissions": 11,
+        "deleted_record_counts": [
+          75
+        ],
+        "maximum_surviving_admissions": 12,
+        "minimum_surviving_admissions": 0
+      },
+      "8": {
+        "cuts_with_positive_surviving_admissions": 9,
+        "deleted_record_counts": [
+          10
+        ],
+        "maximum_surviving_admissions": 4,
+        "minimum_surviving_admissions": 0
+      }
+    }
+  },
+  "schema": "third-stage2-allcut-summary-v1",
+  "threshold_selected": false
+}

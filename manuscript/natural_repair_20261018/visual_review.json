@@ -1,0 +1,43 @@
+{
+  "compiler": "Tectonic 0.17.0, offline existing task cache, --only-cached --untrusted",
+  "contact_sheets_inspected": 5,
+  "findings": [],
+  "layout_passed": true,
+  "manuscript_source_sha256": "d42068febcb1b91ef9e35326cbc6bd2c19b3e6fbce8d0ee6091be53450b74703",
+  "native_preview_equivalence_claim": false,
+  "no_source_edits": true,
+  "nonblocking_warnings": [
+    "Underfull bibliography hbox retained; no clipped or unreadable text.",
+    "Underfull vbox produces expanded spacing on page 14; page 15 continuation remains clean."
+  ],
+  "out_of_page_text": [],
+  "overfull_warnings": [],
+  "pages": 15,
+  "passed": true,
+  "pdf": {
+    "bytes": 138202,
+    "sha256": "bd84aab6bf70ab7504fe141dfea8527e0c4b013af13ef762c286215e2c530aa7"
+  },
+  "previous_reviews_preserved": true,
+  "rendering": "Poppler pdftoppm PNG at 100 dpi",
+  "schema": "third-temporary-pdf-visual-review-v1",
+  "scope": "Temporary rendering of exact unchanged source; visual layout check only, not a scientific review or native-preview pixel equivalence claim.",
+  "source_bytes": 69681,
+  "visually_inspected_full_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ]
+}

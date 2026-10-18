@@ -1,21 +1,21 @@
 {
-  "schema": "third-tmlr-backup-build-status-v3",
-  "created_utc": "2026-10-18T12:29:17.722714+00:00",
+  "schema": "third-tmlr-backup-build-status-v4",
+  "created_utc": "2026-10-18T12:42:46.687651+00:00",
   "source": {
-    "bytes": 67952,
-    "sha256": "e7fe051d30c0e28302d8acca1f30f385bd7f046fde7fe739ad40d562260459c5"
+    "bytes": 69681,
+    "sha256": "d42068febcb1b91ef9e35326cbc6bd2c19b3e6fbce8d0ee6091be53450b74703"
   },
   "archive": {
-    "path": "manuscript/release_20261018_tmlr_v3.zip",
-    "bytes": 2076081,
-    "sha256": "71242f643f753b32ce9891ff8d971e21526155d89d53f7cda78ed0433fb77172"
+    "path": "manuscript/release_20261018_tmlr_v4.zip",
+    "bytes": 2697619,
+    "sha256": "c3c04fa54b91cba1f80ebde9bdb6a728dcc1868ddd4e38a8d4536fcc45867427"
   },
   "manifest": {
-    "path": "manuscript/release_manifest_20261018_tmlr_v3.json",
-    "bytes": 15472,
-    "sha256": "3cf1006905b3fbc5aba549470808fbb16db5735f2da3891a9a52888781a4b75c"
+    "path": "manuscript/release_manifest_20261018_tmlr_v4.json",
+    "bytes": 28921,
+    "sha256": "61dd6b8121197b28cb7d589fef276696c1f59381d6998732a95cfa445c5738cc"
   },
-  "archive_members": 80,
+  "archive_members": 147,
   "exact_member_and_crc_checks_passed": true,
   "clean_extraction_aggregate_and_historical_replays_passed": true,
   "anonymous_supplement_replay_passed": true,
@@ -26,9 +26,7 @@
   "compiled_pdf_included": false,
   "anonymous_submission_package": false,
   "native_app_runtime_repaired": false,
-  "stage2_results_included": false,
+  "stage2_results_included": true,
   "submission_ready": false,
-  "original_effect_study_complete": false,
-  "initial_replay_failure": "System Python3.9 was below documented3.10minimum. Archive unchanged; replay succeeded with existingPython3.12.",
-  "archived_source_check_scope": "Earlier source/structure review receipt is retained; the later combined-check result is in this release verification."
+  "original_effect_study_complete": false
 }

@@ -1,0 +1,39 @@
+{
+  "actual_job_node_user_or_private_path_values_included": false,
+  "all_arms_included": 102,
+  "all_thresholds_included": 51,
+  "artifact_source_bindings_verified_against_actual_bytes": true,
+  "checks": [
+    "All54 run records compared byte-for-byte with reviewed extraction.",
+    "Actual executed source/package/protocol bindings verified.",
+    "All public text checked for actual operational/private location markers.",
+    "Aggregate schema and recursively inspected field inventory exclude raw identities, requests, membership/coefficients/index payloads, labels, text and features.",
+    "Vector input references contain only byte size and SHA-256, and request order references are digests only."
+  ],
+  "completion_bound_outputs": 53,
+  "limits": [
+    "Inspection verifies this bundle, not unshared private artifacts.",
+    "Input/source/request hashes remain linkable identifiers.",
+    "Portable aggregate replay does not regenerate private graphs, requests or states."
+  ],
+  "passed": true,
+  "per_record_or_source_identity_or_state_outputs_included": false,
+  "private_inputs_included": false,
+  "public_protocol_scientific_fields_equal_original": true,
+  "raw_archive_or_process_receipts_included": false,
+  "raw_logs_included": false,
+  "sanitized_views": [
+    "study_protocol.json",
+    "resource_receipt.json"
+  ],
+  "schema": "third-stage2-public-privacy-inventory-v1",
+  "stage1_reference_fields_and_bindings_checked": true,
+  "unchanged_reviews": [
+    "independent_review.json",
+    "independent_review.txt",
+    "initial_audit_receipt.json",
+    "audit_receipt_adapter.json",
+    "output_field_interpretation.json"
+  ],
+  "unchanged_run_json_files": 54
+}

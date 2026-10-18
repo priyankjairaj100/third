@@ -1,0 +1,11 @@
+{
+  "automatic_retry": false,
+  "complete_study_claim": false,
+  "created_utc": "2026-10-18T12:29:45.101461+00:00",
+  "error_type": "KeyError",
+  "passed": false,
+  "private_inputs_read_by_auditor": false,
+  "reason_code": "audit_input_or_execution_error",
+  "schema": "third-stage2-independent-aggregate-review-v1",
+  "status": "audit_did_not_pass"
+}

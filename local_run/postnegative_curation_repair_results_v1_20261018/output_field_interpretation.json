@@ -1,0 +1,34 @@
+{
+  "action": "Preserve frozen code and raw output. Publish this interpretation with the independent audit; do not infer graph/serialized-byte equality and do not rerun for the field name.",
+  "active_code_changed": false,
+  "field": "checkpoints[].fresh_retained_graph_equal",
+  "frozen_protocol_binding": {
+    "bytes": 11004,
+    "sha256": "aab191844aea15078c1499036d274372f8eb27e65f0f76c26f9a0943ccd5cb99"
+  },
+  "precise_interpretation": "A graph is freshly rebuilt by rescoring retained inputs. Its selected-membership set equals the repaired state membership; the derived canonical logical state equals the repaired state at the remaining horizon.",
+  "raw_output_preserved": true,
+  "recommended_report_wording": "Fresh retained-data recuration selected membership and canonical logical state equality.",
+  "schema": "third-stage2-output-field-interpretation-v1",
+  "scientific_scope_unchanged": true,
+  "source_binding": {
+    "bytes": 12928,
+    "sha256": "07e1a5e807b61c9400813d9b694c12172046b2df4788a3cf3f8e7552dcc8e200"
+  },
+  "source_evidence": {
+    "canonical_logical_state_comparison_line": 123,
+    "fresh_polynomial_and_state_lines": [
+      120,
+      121
+    ],
+    "fresh_retained_scoring_line": 116,
+    "membership_crosscheck_line": 124,
+    "output_flag_line": 132,
+    "selected_membership_comparison_line": 118
+  },
+  "what_is_not_directly_tested": [
+    "No direct original-versus-retained CSR or full edge-array equality comparison.",
+    "No serialized-byte identity comparison.",
+    "Source-unit polynomial aggregation can merge distinct graph-edge descriptions, so state equality does not imply graph equality."
+  ]
+}

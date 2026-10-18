@@ -1,0 +1,28 @@
+{
+  "coordinate_definition": "e_v is the deterministic original-panel record membership coordinate, not an annotation or supervised target.",
+  "heldout_feature_slices_read": false,
+  "input_bindings": {
+    "allocation": {
+      "bytes": 46993868,
+      "sha256": "488aa851efdb22425f443b09c0b97e28a8c64de26065d58a125c9d754eab6874"
+    },
+    "prefixes": {
+      "bytes": 264588,
+      "sha256": "9954cef258a7ec254da2b306805209fb8e80a80285ddb3c26a3b93e1c9c81b05"
+    },
+    "vectors": {
+      "bytes": 430848128,
+      "sha256": "cbc1f9a06079048144f406ec11925350aa057215869819b0967ac2749e25284e"
+    }
+  },
+  "labels_read": false,
+  "protocol_sha256": "aab191844aea15078c1499036d274372f8eb27e65f0f76c26f9a0943ccd5cb99",
+  "rows": 1001,
+  "runtime": {
+    "numpy": "2.5.3",
+    "platform": "Linux",
+    "python": "3.13.7",
+    "scipy": "1.17.1"
+  },
+  "text_read": false
+}

@@ -1,0 +1,37 @@
+{
+  "all_children_peak_rss_bytes": 281616384,
+  "cpus_requested": 2,
+  "gpus": 0,
+  "interpretation": "One observed engineering run, including correctness oracles. No comparative speed, whole-system memory or semantic-quality claim.",
+  "memory_requested_bytes": 8589934592,
+  "original_private_receipt_binding": {
+    "bytes": 472,
+    "sha256": "dba15d9ef42ef55082164206cdbcddc249deef0ee95df709ec8d2faea5936ab0"
+  },
+  "package_manifest_binding": {
+    "bytes": 1228,
+    "sha256": "0280f2af5429c32fbd140473a21a9cc946fdf20d456a3937bdf36a926b0e33cf"
+  },
+  "private_feature_or_label_output": false,
+  "process_returncode": 0,
+  "protocol_binding": {
+    "bytes": 11004,
+    "sha256": "aab191844aea15078c1499036d274372f8eb27e65f0f76c26f9a0943ccd5cb99"
+  },
+  "reported_disjoint_component_seconds": 1031.752937881276,
+  "runtime": {
+    "numpy": "2.5.3",
+    "platform": "Linux",
+    "python": "3.13.7",
+    "scipy": "1.17.1"
+  },
+  "schema": "third-stage2-deidentified-resource-receipt-v1",
+  "scratch_free_bytes_at_exit": 167423787008,
+  "scratch_reserve_bytes": 8589934592,
+  "stage_peak_rss_bytes": 281616384,
+  "stage_seconds": 1193.412525959313,
+  "stage_wall_limit_seconds": 3600,
+  "transformation": "Removed execution timestamp, scheduler job identity, node, mount and scratch location; retained timing, resource quantities and source bindings.",
+  "wrapper_child_timeout_seconds": 3660,
+  "wrapper_seconds": 1193.9940535295755
+}

@@ -1,0 +1,21 @@
+{
+  "adapted_auditor": {
+    "bytes": 27903,
+    "sha256": "cb38754c2100d226b189c32ddbf5691e0522de4b16c93cb78694a75c8733006c"
+  },
+  "created_utc": "2026-10-18T12:30:19.683593+00:00",
+  "experiment_rerun": false,
+  "only_change": "Normalize the observed retrieval schema after checking terminal success, archive byte identity, receipt counts and no retry. All scientific checks remain byte-identical.",
+  "original_prepared_auditor": {
+    "bytes": 27133,
+    "sha256": "11ff215afccbfb73a4d51aad104f07615cf6cd26b7dbc850aef71ec8f29611e8"
+  },
+  "preserved_first_attempt_review": {
+    "bytes": 352,
+    "sha256": "81c4559e3aa5977dc4857de26d6b08c37e8ce0b7b2936eb5545ba8ac6e5971a4"
+  },
+  "protocol_changed": false,
+  "reason": "Actual retrieval receipt nests archive byte/hash under terminal and names the privacy flag private_inputs_exported. Prepared auditor expected Stage1 top-level retrieval schema and stopped with KeyError before scientific checks.",
+  "schema": "third-stage2-auditor-receipt-schema-adapter-v1",
+  "scientific_source_changed": false
+}

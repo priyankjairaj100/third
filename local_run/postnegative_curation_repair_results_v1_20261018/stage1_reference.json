@@ -1,0 +1,709 @@
+{
+  "intake_binding": {
+    "bytes": 1347,
+    "sha256": "3bd7e6804fa2098f16fae5f1a32d4516c47e1d6061c38d3a9418cfc0ed4efc03"
+  },
+  "original_inputs": {
+    "allocation": {
+      "bytes": 46993868,
+      "sha256": "488aa851efdb22425f443b09c0b97e28a8c64de26065d58a125c9d754eab6874"
+    },
+    "prefixes": {
+      "bytes": 264588,
+      "sha256": "9954cef258a7ec254da2b306805209fb8e80a80285ddb3c26a3b93e1c9c81b05"
+    },
+    "vectors": {
+      "bytes": 430848128,
+      "sha256": "cbc1f9a06079048144f406ec11925350aa057215869819b0967ac2749e25284e"
+    }
+  },
+  "rows": 1001,
+  "runtime": {
+    "numpy": "2.5.3",
+    "platform": "Linux",
+    "python": "3.13.7",
+    "scipy": "1.17.1"
+  },
+  "schema": "third-stage2-prior-aggregate-reference-v1",
+  "scope": "Minimal shareable Stage1 reference fields used only to audit shared-input and arithmetic bounds after Stage2 completion; no Stage1 outcomes selected Stage2 requests or cutoffs.",
+  "stage1_independent_review_binding": {
+    "bytes": 84636,
+    "sha256": "15ecffe58d18200414cd504b0cc5f6b7ff22c613fafb0f223321d319085778db"
+  },
+  "stage1_public_manifest_binding": {
+    "bytes": 9012,
+    "sha256": "cc3a8df216b560d00cda91da728ed5c1c274987ced543a3dc3ef54d9be9bd9d8"
+  },
+  "subset_oracle": {
+    "blocker_set_comparisons": 816,
+    "passed": true,
+    "rows": 16,
+    "scope": "First16 original-order panel rows, scalar IEEE FP64 normalization and dot; not full-population or full-graph replay.",
+    "thresholds": 51
+  },
+  "thresholds": [
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 0,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15659,
+        "sha256": "dad445f8ac826d84d66eff65ad15deb526463e2d8f8098e5cf340e0e2008ac59"
+      },
+      "threshold_fraction": [
+        1,
+        2
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 1,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15662,
+        "sha256": "375fe137ed1c5b5d15f1f7950c182e8d2f9153103622fa3be540991e9f7e9a4e"
+      },
+      "threshold_fraction": [
+        51,
+        100
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 2,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15661,
+        "sha256": "d0963462b3a01634d9bc6f11f6d0be89dd20644d9d062a9a1248bcd608d0e255"
+      },
+      "threshold_fraction": [
+        13,
+        25
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 3,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15661,
+        "sha256": "f9c6e8181bcbe55f8902ebaa52ddf8a8a91825ffab113d13ff9af5dd2e032977"
+      },
+      "threshold_fraction": [
+        53,
+        100
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 4,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15661,
+        "sha256": "800a302121e11443993e460d1b3e8fc2d005af05994e86d31fc71b95e38e40ef"
+      },
+      "threshold_fraction": [
+        27,
+        50
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 5,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15661,
+        "sha256": "b8610a626801ef1d05cd45f6f0fae136a15bd4a29945c4ff2859518ecc2257ef"
+      },
+      "threshold_fraction": [
+        11,
+        20
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 6,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15662,
+        "sha256": "505e5faaed57df81ebfa80e28bff90bdaad0666c1796e5c47a8d69883b95dc85"
+      },
+      "threshold_fraction": [
+        14,
+        25
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 7,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15662,
+        "sha256": "edc373d642af119dabb329103835541d45c16e3d6b0748ea355be593c5a62c4c"
+      },
+      "threshold_fraction": [
+        57,
+        100
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 8,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15660,
+        "sha256": "221e7c0ecbcdc38682b70f4452bd59629d2caacb41120f092b193bd9a3f1ead2"
+      },
+      "threshold_fraction": [
+        29,
+        50
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 9,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15662,
+        "sha256": "76814364758a0e38367b59cf37a68e69cd96b2df9673b43e73cd0a4c466a2592"
+      },
+      "threshold_fraction": [
+        59,
+        100
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 10,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15659,
+        "sha256": "65d35e47591bb32c05e71f757e04dd6ac95498f03470c65b1275c69e5b8cc745"
+      },
+      "threshold_fraction": [
+        3,
+        5
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 11,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15663,
+        "sha256": "c5373c96bbf01a20c1009bd37a550885c4ef540c3bbde22f813ae0d36b150e45"
+      },
+      "threshold_fraction": [
+        61,
+        100
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 12,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15662,
+        "sha256": "5df296b146ca41676a5dd8efeebe1b8547dfb7560b06ad7e824933665e70a9fe"
+      },
+      "threshold_fraction": [
+        31,
+        50
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 13,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15664,
+        "sha256": "fac8622bf56ea06f712d5e46b3f448f733f52390704cdc460f24599ab4959d80"
+      },
+      "threshold_fraction": [
+        63,
+        100
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 14,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15662,
+        "sha256": "6d1d9a2a33e82835377deeacfca5604e7349f607bbdee5e73659ce931fce1814"
+      },
+      "threshold_fraction": [
+        16,
+        25
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 15,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15662,
+        "sha256": "a261dae77dfd5dab49b594c32238d08d8314a4179ef9e4ffe4feaa0589f7d995"
+      },
+      "threshold_fraction": [
+        13,
+        20
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 16,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15662,
+        "sha256": "cb4d826bd92c56f612e153e4a344fdb0bc9b3d14c5ec6f1ff97046dccc7f9320"
+      },
+      "threshold_fraction": [
+        33,
+        50
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 17,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15663,
+        "sha256": "938b1059e99790c767b2c0c82b9a36b76c5122517feebe2275313420a5f0e99e"
+      },
+      "threshold_fraction": [
+        67,
+        100
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 18,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15662,
+        "sha256": "5de7940fbea68b1a5237c6805dd2728d6e69ef06d3e25e12618427e6a2dbcaf0"
+      },
+      "threshold_fraction": [
+        17,
+        25
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 19,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15663,
+        "sha256": "e2993bb9785e80fa9a9adb634efb3a1805c07f53d87cd7cf5d757e9936ba10d7"
+      },
+      "threshold_fraction": [
+        69,
+        100
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 20,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15660,
+        "sha256": "92f38c4250fa4f29153f10a06bdbaa3e2b427044842a1eb5c936c53d49845382"
+      },
+      "threshold_fraction": [
+        7,
+        10
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 21,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15663,
+        "sha256": "bd6177812a6979d2ec7904de337181194431611d397ab58ba4fcb236b02c63fc"
+      },
+      "threshold_fraction": [
+        71,
+        100
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 22,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15662,
+        "sha256": "520c5eafb56d807cfcbb40c6ce3d5cc0bbe6dcabaa5a1a5b8dee3bbd038687be"
+      },
+      "threshold_fraction": [
+        18,
+        25
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 23,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15663,
+        "sha256": "b0792ba8b5e004f0739725059fbd175eb632238ee23a946794571ba76c8376a7"
+      },
+      "threshold_fraction": [
+        73,
+        100
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 24,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15662,
+        "sha256": "04822cd55fb3a27dba893456259b3cf4a5278d2a466448597ea83040f6ae685b"
+      },
+      "threshold_fraction": [
+        37,
+        50
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 25,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15605,
+        "sha256": "38dbc4f4a91c5406a839c80275e3a8d5c1abb5a329aad22622648ea2d9087e56"
+      },
+      "threshold_fraction": [
+        3,
+        4
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 26,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 15064,
+        "sha256": "bcbabd44eb8b049b24402fe853aa6c8a0dc29c3fb007407034812bdb8aa27a70"
+      },
+      "threshold_fraction": [
+        19,
+        25
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 27,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 13425,
+        "sha256": "c2b4d36a816046b450609cad89cf58c76e7136651800ff7c2c7f7c8f161bbeb1"
+      },
+      "threshold_fraction": [
+        77,
+        100
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 28,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 12156,
+        "sha256": "8fedd1ccf5f7ac1726ea250ab6462768e147f204710534764cf7cdb27045a106"
+      },
+      "threshold_fraction": [
+        39,
+        50
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 29,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 11303,
+        "sha256": "68c757cc70ffcd02db102c906fa2411021e2e63f096858c7dc3d111b394590c2"
+      },
+      "threshold_fraction": [
+        79,
+        100
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 30,
+      "initially_selected": 1,
+      "original_output_binding": {
+        "bytes": 11097,
+        "sha256": "8312dc19ab4437808dc7098e7fdba5b88bd1face21dcf17be19734ef5c63852d"
+      },
+      "threshold_fraction": [
+        4,
+        5
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 31,
+      "initially_selected": 2,
+      "original_output_binding": {
+        "bytes": 10582,
+        "sha256": "543122db3c7a4e3145e5830c0f9bd0d97d1a0865c8e1f8dd713eb3868edca6d4"
+      },
+      "threshold_fraction": [
+        81,
+        100
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 32,
+      "initially_selected": 3,
+      "original_output_binding": {
+        "bytes": 10467,
+        "sha256": "02128722dbd358884e2cc971c19f4d0f99f66aa5b1f3e704576942546e24bb66"
+      },
+      "threshold_fraction": [
+        41,
+        50
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 33,
+      "initially_selected": 3,
+      "original_output_binding": {
+        "bytes": 9979,
+        "sha256": "9b5a316e2f2525d62ac0a7df0c6462cab66cb1e1c439cd6ca877dc7c783e2c1d"
+      },
+      "threshold_fraction": [
+        83,
+        100
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 34,
+      "initially_selected": 7,
+      "original_output_binding": {
+        "bytes": 9062,
+        "sha256": "6a99d0b961c47be4c68119e827ad2336a63bd3d193c4459cb95812282802c497"
+      },
+      "threshold_fraction": [
+        21,
+        25
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 35,
+      "initially_selected": 9,
+      "original_output_binding": {
+        "bytes": 7956,
+        "sha256": "e7015457c99cd1c643d4e24815371eb8091268813e7c362bcd4e4128283b0f76"
+      },
+      "threshold_fraction": [
+        17,
+        20
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 36,
+      "initially_selected": 26,
+      "original_output_binding": {
+        "bytes": 6803,
+        "sha256": "85f77b714b30664b07b60cc613d98e7dec63eb3ac7da6ef155175c047aea99cc"
+      },
+      "threshold_fraction": [
+        43,
+        50
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 37,
+      "initially_selected": 83,
+      "original_output_binding": {
+        "bytes": 5806,
+        "sha256": "ac81587e98b59f1f0ec9fcb0093929aaf74c95b8c346822682023c47af49eef6"
+      },
+      "threshold_fraction": [
+        87,
+        100
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 38,
+      "initially_selected": 188,
+      "original_output_binding": {
+        "bytes": 5082,
+        "sha256": "b713fee19c269940ffe5dffe99d87d2781c76e4c41138b1a29285af69c49d3ec"
+      },
+      "threshold_fraction": [
+        22,
+        25
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 39,
+      "initially_selected": 352,
+      "original_output_binding": {
+        "bytes": 4378,
+        "sha256": "09b1984646b8c8712a03f83833dc96dfe49bc3bd161c712f3b45336759314635"
+      },
+      "threshold_fraction": [
+        89,
+        100
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 40,
+      "initially_selected": 504,
+      "original_output_binding": {
+        "bytes": 3918,
+        "sha256": "5a7c67bc7e78e94f889ceb842b245673d3f20ee91115aaf4985b90650d593543"
+      },
+      "threshold_fraction": [
+        9,
+        10
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 41,
+      "initially_selected": 619,
+      "original_output_binding": {
+        "bytes": 3324,
+        "sha256": "b83589b8bddc1403c0493b20f2d6927773dbc71235b49645a28327cf0872c9a0"
+      },
+      "threshold_fraction": [
+        91,
+        100
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 42,
+      "initially_selected": 728,
+      "original_output_binding": {
+        "bytes": 3095,
+        "sha256": "50e3a943a0bfd784fa698f1510e074c87f919a89709e8333e7b80538e8f0ed26"
+      },
+      "threshold_fraction": [
+        23,
+        25
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 43,
+      "initially_selected": 800,
+      "original_output_binding": {
+        "bytes": 2784,
+        "sha256": "a5b6b0bdb0091b38c76eb322853dbb9a90528327d413a24375f19897e40dae43"
+      },
+      "threshold_fraction": [
+        93,
+        100
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 44,
+      "initially_selected": 861,
+      "original_output_binding": {
+        "bytes": 2549,
+        "sha256": "b284ff7cf69d3c80e84a7e35e57241967d80ab0dbf5879096519f8369ac25a48"
+      },
+      "threshold_fraction": [
+        47,
+        50
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 45,
+      "initially_selected": 913,
+      "original_output_binding": {
+        "bytes": 2290,
+        "sha256": "f274ceacdc15571e7b418b672d13cf9c9129363f165e1c2b579396e8eb082b44"
+      },
+      "threshold_fraction": [
+        19,
+        20
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 46,
+      "initially_selected": 952,
+      "original_output_binding": {
+        "bytes": 2114,
+        "sha256": "ea405c2bfb67d3b4e614467cef8d0603e06cf5a41ef02b65452edd3b652ff12a"
+      },
+      "threshold_fraction": [
+        24,
+        25
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 47,
+      "initially_selected": 985,
+      "original_output_binding": {
+        "bytes": 1952,
+        "sha256": "5971061d81ab0ebf4ac07fdfd5a71057ebe316e8a62bad5d4a67942e78398282"
+      },
+      "threshold_fraction": [
+        97,
+        100
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 48,
+      "initially_selected": 995,
+      "original_output_binding": {
+        "bytes": 1840,
+        "sha256": "e04dbaeea23921f4753cbe8eb276d1f4b09dc3a0e9ec4eb186a504ac23f45223"
+      },
+      "threshold_fraction": [
+        49,
+        50
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 49,
+      "initially_selected": 1000,
+      "original_output_binding": {
+        "bytes": 1795,
+        "sha256": "4e89fd36961c4b9126f5c3b0a7afb59324dc8b07cbe6ecaa8cea2961f3435c7a"
+      },
+      "threshold_fraction": [
+        99,
+        100
+      ]
+    },
+    {
+      "genuine_single_source_request_count": 457,
+      "index": 50,
+      "initially_selected": 1001,
+      "original_output_binding": {
+        "bytes": 1690,
+        "sha256": "ee1af39fb74fa672d15f1382e2891588a6b965efdd6feb9d39fd6dea79cfdd23"
+      },
+      "threshold_fraction": [
+        199,
+        200
+      ]
+    }
+  ]
+}

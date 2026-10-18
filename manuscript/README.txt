@@ -1,48 +1,52 @@
-Current TMLR manuscript checkpoint: natural development structure
+Current TMLR manuscript: audited natural structure and exact repair
 
-The same standalone source remains open in the editor. It includes the audited
-51-cut structural diagnostic on 1,001 reserved development-training rows.
-Original negative calibrations, theory, prior memory failures and held-out
-boundaries remain unchanged. The original semantic-effect study is incomplete.
-Stage 2 curation repair is running separately and is not a manuscript result.
+The same standalone source includes both completed development diagnostics on
+the fixed 1,001-record panel at all 51 original score cutoffs. Stage1 found
+excluded-blocker admissions at 13 cuts. Stage2 passed 13,056 singleton membership
+checks and 408 logical-state checkpoints. The two fixed request sequences are
+reused across cuts; these are correctness cases, not independent effect samples.
+Original negative calibrations, theory, prior memory failures, held-out boundaries
+and unmet historical human gates remain unchanged. No human pair review is planned.
 
 Current verification, from repository root, with Python 3.10 or newer:
-  python3 -B manuscript/natural_development_20261018/check_natural.py --root . --output /tmp/third-natural-check.json
+  python3 -B manuscript/natural_repair_20261018/check_repair.py --root . --output /tmp/third-repair-check.json
 
-The checker reconstructs the six exact changes from the immutable TMLR v2
-source and binds the independent delta review. It replays the old layout,
-TMLR, theory and evidence checks only inside their historical archives, then
-replays all 51 public structural aggregates. These checks do not authenticate
-private source observations or establish semantic validity.
+The checker reconstructs the five exact changes from immutable TMLR v3 and
+checks their independent AI review. It replays Stage1 and earlier evidence only
+inside the historical archives, then checks the current Stage2 aggregates and
+combined anonymous supplement. It verifies the current visual-review binding.
+It does not regenerate private graphs/states or authenticate private observations.
+Historical reviews are never rebound to this source.
 
-Native compilation and the authorized alternate 15-page visual review passed.
-BUILD_STATUS.json and natural_development_20261018/visual_review.json bind the
-exact source. The native computer-use runtime remains incompatible with this
-host; equivalence to its preview is not claimed. The temporary review PDF is
-not part of the public source backup.
+The desktop editor's compiler and authorized alternate PDF visual review passed.
+BUILD_STATUS.json and natural_repair_20261018/visual_review.json bind the source.
+The native computer-use runtime remains incompatible with this host. The temporary
+PDF solves the review-access problem; native-preview equality is not claimed.
+No compiled PDF is included in the public development backup.
 
-Public structural results and portable replay:
+Public results and portable standard-library aggregate replays:
   local_run/postnegative_structure_results_v1_20261018/
-The public bundle excludes corpus text, record/contributor identities, pair
-labels, feature vectors, private state and operational transport receipts.
+  local_run/postnegative_curation_repair_results_v1_20261018/
 
-The earlier anonymous calibration/compute supplement remains unchanged at
-tmlr_20261018/tmlr_anonymous_supplement_v1.zip. It covers 102 calibration cuts
-and 72 historical compute rows, not the new structural stage. The current combined
-supplement is natural_development_20261018/tmlr_anonymous_supplement_v3.zip.
-Its 74 members include the exact Stage1 generator and four frozen dependencies,
-the complete structural bundle, and the unchanged historical anonymous ZIP.
-Extract it into an empty directory and run check_all.py with Python 3.10+;
-no network, NumPy/SciPy or private data is needed for aggregate replay.
-Its generating code is inspectable but private-input graph replay is unavailable.
+The current anonymous supplement is:
+  natural_repair_20261018/tmlr_anonymous_supplement_v4.zip
+It preserves both complete aggregate bundles, the unchanged historical calibration
+supplement and exact generating source/dependencies. Extract into an empty directory
+and run check_all.py with Python 3.10+. No network, numerical libraries or private
+inputs are required for aggregate replay. Generating code is provided for inspection;
+its private-data execution is not reproduced by this checker.
 
-Historical checkers must not run against the revised current source or have
-their reviews rebound to it. Original sources and all immutable archives stay
-available. Development backup archives retain project history and are not
-anonymous submission supplements. Hashes can link public artifacts externally.
+The Stage2 field fresh_retained_graph_equal denotes freshly rescored membership
+and derived canonical logical-state equality. It does not compare raw CSR/edge
+arrays or physical bytes. Neither new stage demonstrates learner utility,
+semantic validation, enforced no-reaccess, erasure, speedup or memory savings.
+The original semantic-effect study remains incomplete after failed calibration.
 
-The author-owned submission items in tmlr_20261018/SUBMISSION_CHECKLIST.txt
-remain open. Its old PDF-inspection item is superseded by the current bound
-visual review. Two full-text literature comparisons remain unavailable.
-No human pair annotation or review is required or planned. No submission was
-made and this checkpoint is not submission-ready.
+All older archives remain immutable. Development backups retain project history
+and are not anonymous submission packages. Source/input hashes are externally
+linkable; deidentification does not guarantee unlinkability.
+
+Author-owned identity, contributions, consent and submission attestations remain
+open in tmlr_20261018/SUBMISSION_CHECKLIST.txt. Its historical PDF-inspection item
+is superseded by the current bound visual review. Two close-prior full texts remain
+unavailable. No submission was made and submission readiness is not claimed.

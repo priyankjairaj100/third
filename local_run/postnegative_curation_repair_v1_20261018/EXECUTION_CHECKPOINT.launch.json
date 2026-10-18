@@ -1,0 +1,20 @@
+{
+  "independent_source_and_wrapper_reviews_passed": true,
+  "job_id": "15416",
+  "labels_or_head_result": false,
+  "next_action": "Read-only reconcile this job and its exclusive run receipts. Never resubmit active or unknown state. Retrieve aggregate archive only; independently audit before accepting results.",
+  "observed_utc": "2026-10-18T12:06:19.195970+00:00",
+  "original_v4_gate_changed": false,
+  "package_manifest": {
+    "bytes": 1228,
+    "sha256": "0280f2af5429c32fbd140473a21a9cc946fdf20d456a3937bdf36a926b0e33cf"
+  },
+  "private_inputs_remain_on_cluster": true,
+  "resource_estimate_is_not_completion_guarantee": true,
+  "schema": "third-stage2-execution-checkpoint-v1",
+  "single_submission": true,
+  "state": "running",
+  "submitted_utc": "2026-10-18T12:05:22.188145+00:00",
+  "tests_passed": 11,
+  "wall_limit_seconds": 3900
+}

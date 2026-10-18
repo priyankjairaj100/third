@@ -1,27 +1,24 @@
 {
-  "schema": "third-natural-development-manuscript-build-v1",
-  "created_utc": "2026-10-18T12:17:21.319817+00:00",
+  "schema": "third-natural-repair-manuscript-build-v1",
+  "created_utc": "2026-10-18T12:42:38.120848+00:00",
   "source": {
-    "path": "manuscript/third_working_draft.tex",
-    "sha256": "e7fe051d30c0e28302d8acca1f30f385bd7f046fde7fe739ad40d562260459c5",
-    "bytes": 67952,
-    "temporary_copy_exact": true,
-    "reviewer_modified_source": false
+    "bytes": 69681,
+    "sha256": "d42068febcb1b91ef9e35326cbc6bd2c19b3e6fbce8d0ee6091be53450b74703"
   },
   "native_compile_verified": true,
   "native_compiler_result": "success",
   "visual_review_verified": true,
+  "visual_review": "manuscript/natural_repair_20261018/visual_review.json",
   "review_pdf": {
-    "sha256": "3d61cffda7f7de4eacf8dd92496942d04e1657e3b1c31cf6feddfec8e95a9a9b",
-    "bytes": 136462,
+    "bytes": 138202,
+    "sha256": "bd84aab6bf70ab7504fe141dfea8527e0c4b013af13ef762c286215e2c530aa7",
     "pages": 15,
-    "file": "third_tmlr_stage1_review_20261018.pdf"
+    "file": "third_tmlr_stage2_review_20261018.pdf"
   },
-  "visual_review": "manuscript/natural_development_20261018/visual_review.json",
   "independent_delta_review_passed": true,
-  "delta_review": "manuscript/natural_development_20261018/delta_review_stage1.json",
-  "stage1_independent_result_audit_passed": true,
-  "stage2_results_included": false,
+  "delta_review": "manuscript/natural_repair_20261018/delta_review_stage2.json",
+  "stage1_and_stage2_independent_result_audits_passed": true,
+  "stage2_results_included": true,
   "native_app_runtime_repaired": false,
   "native_preview_equivalence_claim": false,
   "editor_kept_open": true,

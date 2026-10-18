@@ -1,0 +1,55 @@
+{
+  "anonymous_supplement_replay_passed": true,
+  "anonymous_supplement_sha256": "99c9d2d4f962abc12480dae2cc89b3852a850bb825ed586182606232b9289a9c",
+  "archived_stage1_checker_replay_passed": true,
+  "changes": 5,
+  "current_source_compiled_by_this_checker": false,
+  "delta_review_sha256": "eda9db1c8f16d8385502e4794c0356a565b27c980e6ac7d35ded94130402ebc3",
+  "exact_author_delta_reproduced": true,
+  "historical_release_members": 80,
+  "historical_reviews_rebound": false,
+  "historical_v3_release_sha256": "71242f643f753b32ce9891ff8d971e21526155d89d53f7cda78ed0433fb77172",
+  "native_runtime_repaired_claim": false,
+  "original_effect_study_complete": false,
+  "original_semantic_gate_passed": false,
+  "passed": true,
+  "private_graphs_or_states_recomputed": false,
+  "private_observations_authenticated": false,
+  "schema": "third-natural-repair-source-check-v1",
+  "scientific_scope": "Exact source delta, public aggregate arithmetic and saved review receipts only; no new private-data, graph/state, inference, proof, utility or efficiency verification.",
+  "source_bound_layout_receipt_passed": true,
+  "source_sha256": "d42068febcb1b91ef9e35326cbc6bd2c19b3e6fbce8d0ee6091be53450b74703",
+  "stage2_aggregate_replay": {
+    "completion_output_hashes": 53,
+    "fixed_retained_selection_monotonicity_checks": 400,
+    "meter_checks": 102,
+    "passed": true,
+    "public_files_verified": 67,
+    "scope": "Portable aggregate arithmetic/metadata replay; private states/graphs and original raw receipts are not recomputed.",
+    "summary": {
+      "checkpoint_count": 408,
+      "checkpoints": [
+        1,
+        8,
+        32,
+        128
+      ],
+      "horizon": 128,
+      "human_or_model_annotations": 0,
+      "no_selected_cutoff": true,
+      "record_arms_completed": 51,
+      "request_frame_sizes": {
+        "R": 1001,
+        "S": 457
+      },
+      "singleton_membership_checks": 13056,
+      "source_arms_completed": 51,
+      "task_learner_trained": false,
+      "thresholds_completed": 51,
+      "unavailable_arms": []
+    }
+  },
+  "stage2_public_manifest_sha256": "611bb4baec6b62be1b7879f5d8f6afc3a41ffe99fc157101e252562c1ad9f475",
+  "supplement_delivery_sha256": "07cf7344a4c2a5b61183955cad814ea390dc9565ba1c9fd6ff6e4a23d8223cbd",
+  "visual_review_sha256": "128b43bc95b008a25fe442d5a90d129ca3f0cea0fad79a1eade5458b489d9d03"
+}

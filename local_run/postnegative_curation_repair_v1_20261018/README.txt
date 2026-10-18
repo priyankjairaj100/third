@@ -1,4 +1,6 @@
-Execution checkpoint: Stage 2 is frozen, reviewed and RUNNING as job 15416.
+Execution checkpoint: Stage 2 COMPLETED0:0 as job15416 and passed independent aggregate audit.
+Audited results: ../postnegative_curation_repair_results_v1_20261018/.
+The original launch checkpoint is preserved in EXECUTION_CHECKPOINT.launch.json.
 The earlier prospective plan remains unchanged in PLAN.prospective.json.
 PLAN.json adds only reviewed runtime policy; package_manifest.json seals the eight runtime files.
 Do not resubmit. Exact curation membership/state repair only; no labels, learner or semantic validation.

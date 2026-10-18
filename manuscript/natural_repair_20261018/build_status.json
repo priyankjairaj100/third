@@ -1,0 +1,31 @@
+{
+  "schema": "third-natural-repair-manuscript-build-v1",
+  "created_utc": "2026-10-18T12:42:38.120848+00:00",
+  "source": {
+    "bytes": 69681,
+    "sha256": "d42068febcb1b91ef9e35326cbc6bd2c19b3e6fbce8d0ee6091be53450b74703"
+  },
+  "native_compile_verified": true,
+  "native_compiler_result": "success",
+  "visual_review_verified": true,
+  "visual_review": "manuscript/natural_repair_20261018/visual_review.json",
+  "review_pdf": {
+    "bytes": 138202,
+    "sha256": "bd84aab6bf70ab7504fe141dfea8527e0c4b013af13ef762c286215e2c530aa7",
+    "pages": 15,
+    "file": "third_tmlr_stage2_review_20261018.pdf"
+  },
+  "independent_delta_review_passed": true,
+  "delta_review": "manuscript/natural_repair_20261018/delta_review_stage2.json",
+  "stage1_and_stage2_independent_result_audits_passed": true,
+  "stage2_results_included": true,
+  "native_app_runtime_repaired": false,
+  "native_preview_equivalence_claim": false,
+  "editor_kept_open": true,
+  "new_tab_opened": false,
+  "separate_pdf_authorized": true,
+  "submission_ready": false,
+  "original_effect_study_complete": false,
+  "author_attestations_supplied": false,
+  "historical_reviews_rebound": false
+}

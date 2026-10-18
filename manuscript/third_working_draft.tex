@@ -247,6 +247,8 @@ joint-positive proportion over 51 cuts was 40\%, below the required 95\%.
 The downstream effect study therefore remains unexecuted. A separate
 diagnostic on 1,001 natural development records exhibits excluded-blocker
 admissions at 13 of the 51 fixed score cutoffs, without semantic qualification.
+On the same panel, indexed repair matches exact membership after 13,056
+deletion steps and reconstructed logical state at 408 checkpoints.
 The results identify what exact counterfactual repair must remember,
 while providing no evidence of a natural-text utility, runtime, or
 total-memory advantage.
@@ -782,6 +784,25 @@ exact expectations for budgets $1,8,32,128$. No task labels, held-out
 feature rows, model judgments or learner heads were used. No cutoff was
 selected, and the failed calibration gates remain unchanged.
 
+\paragraph{Exact repair on natural score graphs.}
+A second, prospectively fixed diagnostic applied the unchanged indexed
+repair algorithm to the same 1,001 records at all 51 cutoffs. It maintained
+exact integer membership coordinates rather than a task learner. One
+fixed record-deletion sequence and one contributor-proxy source-deletion
+sequence were reused across cuts, each with a horizon of 128 requests.
+All 13,056 singleton updates matched a direct raw-blocker membership
+oracle. At 408 checkpoints, after $1,8,32,128$ requests per sequence,
+sequential, batch and reverse-order updates had exactly equal logical
+coefficient and index states; recomputing the retained-data graph and
+reconstructing the state at the remaining horizon agreed as well.
+An independent aggregate audit checked the bound execution receipts;
+private-state equality was tested within the cluster run.
+This checks exact repair for these development cases. It does not certify
+physical byte equality or erasure, enforce a no-reaccess boundary, or
+establish learner accuracy, semantic usefulness, speedup or memory savings.
+The failed calibration gates and original evaluation reservations remain
+unchanged.
+
 \paragraph{Theory and software evidence.}
 The inherited theory has separate algebraic, scorer, and codec reviews.
 Finite tests exercise reconstruction, graph margins, and sequential
@@ -791,8 +812,8 @@ baseline B-E (Appendix~\ref{sec:design}) in total bytes. The new private-informa
 reverse that observation or establish a storage win on natural data.
 
 \paragraph{Consequences for empirical claims.}
-No completed natural-text repair/utility/cost experiment supports a
-practical benefit yet. The failed selection blocks the full guard,
+The completed development diagnostics establish graph structure and exact
+repair for the fixed cases, but no natural-text utility or cost benefit. The failed selection blocks the full guard,
 post-guard panels, the original threshold-qualified development runs,
 and dependent held-out evaluation under this configuration. Their effects, uncertainty analysis, and
 cross-representation robustness remain unmeasured. The prepared guard
@@ -904,9 +925,9 @@ payloads can still matter. The finite-format family shows that this
 boundary can change required private information sharply, even when all
 lower-budget heads are identical. Both fully LLM calibration versions
 failed their frozen selection criteria. Consequently, the downstream
-natural-text effect study remains unexecuted. The separate development
-diagnostic exhibits structural admissions under some fixed score graphs;
-the practical NLP value of these effects remains unresolved.
+natural-text effect study remains unexecuted. Separate development
+diagnostics exhibit structural admissions and verify exact indexed repair
+on fixed score graphs; their practical NLP value remains unresolved.
 
 \begin{thebibliography}{99}
 \bibitem[Abbas et~al.(2023)]{semdedup} A. Abbas, K. Tirumala, D. Simig, S. Ganguli, and A. S.
@@ -1227,6 +1248,12 @@ seconds in the child process, with a reported peak resident set of
 260,792,320 bytes. It requested two CPUs, used one numeric thread, and
 allocated no GPU. These measurements reuse the existing feature cache;
 they are neither full-pipeline cost nor a comparative efficiency result.
+
+The separate repair diagnostic completed in 1,193.413 seconds, with
+281,616,384 bytes of process peak RSS, reusing the existing embedding
+cache. It requested two CPUs and no GPU, with one numerical thread.
+These figures cover this diagnostic and its checks; they are not a
+comparative service benchmark or the cost of the complete pipeline.
 
 Literature coverage is also bounded. Primary publication pages and
 official code were refreshed for the citations used here. The full

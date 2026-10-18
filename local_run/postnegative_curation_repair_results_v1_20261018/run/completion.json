@@ -1,0 +1,278 @@
+{
+  "all51cuts_completed": true,
+  "elapsed_seconds": 1193.412525959313,
+  "kernel_no_reaccess_isolation_claim": false,
+  "model_or_human_annotation_calls": 0,
+  "outputs": {
+    "intake.json": {
+      "bytes": 872,
+      "sha256": "8ba5a4829505d3026e5e11e2aa1f4f62016540e7f00752367dc6c92a00dccec6"
+    },
+    "subset_oracle.json": {
+      "bytes": 220,
+      "sha256": "2bbb776e586b74372387864d9cfc6f9c91a62feccfc7ced37d95c17653aa534d"
+    },
+    "threshold_00.json": {
+      "bytes": 7283,
+      "sha256": "456e7d8eee3737f32e67661bc1b456c1b35e02ea592605a3b8b6be339089a4db"
+    },
+    "threshold_01.json": {
+      "bytes": 7287,
+      "sha256": "2bf488da62cf50133798aa0902d50f4e3521f98e84936b73ab5f1419335d74dc"
+    },
+    "threshold_02.json": {
+      "bytes": 7290,
+      "sha256": "aefaf0ba58685c22df15264456889273bbdd03abf767c99063e97ab4bda056e7"
+    },
+    "threshold_03.json": {
+      "bytes": 7291,
+      "sha256": "2d6fc84f7f32bb32a8b87141f8b6940884f118541e7d33a08d54592b909763b8"
+    },
+    "threshold_04.json": {
+      "bytes": 7288,
+      "sha256": "7bfdabbfcc31c501da15fd97bf76e52ed3363d39883263a9c94ee9b8dcecd32b"
+    },
+    "threshold_05.json": {
+      "bytes": 7288,
+      "sha256": "7f365a204ba0fad7424a2e3786f30e06aa9d909ea5dea84a859a90645e7a788d"
+    },
+    "threshold_06.json": {
+      "bytes": 7287,
+      "sha256": "a3cf98ff55ee30017942d227e9e81448d8ec473c87957fa6384a92ca251054f8"
+    },
+    "threshold_07.json": {
+      "bytes": 7289,
+      "sha256": "cf97bf5c08d022bfddd02627371ba22b4e3dc30f8a5e24361e151d14b908da0a"
+    },
+    "threshold_08.json": {
+      "bytes": 7287,
+      "sha256": "ce97eff12fbeac3b05933f666780eaf866b2eab41a74bfea43943ac8b7fc789e"
+    },
+    "threshold_09.json": {
+      "bytes": 7291,
+      "sha256": "9dd05ef49351aefbf66e2bc679832c60da264263d7c4f48043fa8661d6c3dfe0"
+    },
+    "threshold_10.json": {
+      "bytes": 7286,
+      "sha256": "2662ff4f06b4809afab8abf45c0f273fa8ed51b4de3508f70e539f7abb55f8fd"
+    },
+    "threshold_11.json": {
+      "bytes": 7293,
+      "sha256": "d71a6f96ca123a4e080772fb2dd6525a61ede39e260bd563342c9cd2c56469e6"
+    },
+    "threshold_12.json": {
+      "bytes": 7289,
+      "sha256": "6fd13d3ae68a2f4c1d74b7c9d47368685ec516fe44b345826de9614f94a81fba"
+    },
+    "threshold_13.json": {
+      "bytes": 7291,
+      "sha256": "dd7ab43495cfbb550e3225d2898f80ef02d14ba1c03f98064235b7f6d9e9a8fe"
+    },
+    "threshold_14.json": {
+      "bytes": 7290,
+      "sha256": "6767f2da1483bae07d846866eef44f616a608c6ec7136fabd96dbbc48864a7dd"
+    },
+    "threshold_15.json": {
+      "bytes": 7289,
+      "sha256": "b4c60beb41a82cb968053e2672ebb63b4a60f30b85e68bafd8c45bd56e93d026"
+    },
+    "threshold_16.json": {
+      "bytes": 7288,
+      "sha256": "d2628d92192d4e3c0bd541f808074cbfaa1ac5d423356bffada2f935ba0f6357"
+    },
+    "threshold_17.json": {
+      "bytes": 7288,
+      "sha256": "61ade67550c7624f15d5dc151f587d2e38d6a46f2c4bef9dc2ff8a4ee9fa0b8f"
+    },
+    "threshold_18.json": {
+      "bytes": 7291,
+      "sha256": "a9150601961e35670ffb0a6a8e12f777e58c63011fa4fd94afc3209838c87c15"
+    },
+    "threshold_19.json": {
+      "bytes": 7294,
+      "sha256": "720c04e7267455d45a88f3220533d74a212c69f26cb04dd505010dcd1dad5920"
+    },
+    "threshold_20.json": {
+      "bytes": 7289,
+      "sha256": "c31b1fbb4b7beaaad86149fac9c9de25841dfd0da8fe9c5706141193d8584786"
+    },
+    "threshold_21.json": {
+      "bytes": 7287,
+      "sha256": "85e2e55bf1a6bd42d00b55d4ed3830049bd1751424248057712fdc6834a4c887"
+    },
+    "threshold_22.json": {
+      "bytes": 7290,
+      "sha256": "76b872846d2c2860df5509226cac7c95c36f48f4ae1136998b3b6561ec043cef"
+    },
+    "threshold_23.json": {
+      "bytes": 7287,
+      "sha256": "7c4e80678cca3861f68e0b9efc66d88822b55bf00715f3581a8ce7133dd4bb1b"
+    },
+    "threshold_24.json": {
+      "bytes": 7290,
+      "sha256": "ae156be4634531db72f347c1980d170fc61c2d6ab637f4ea8ea9de64eab191eb"
+    },
+    "threshold_25.json": {
+      "bytes": 7285,
+      "sha256": "1a75fa1ed61d46fa91150c140a94fdac341e2bc3601345901b11bdc0d2f74cd2"
+    },
+    "threshold_26.json": {
+      "bytes": 7290,
+      "sha256": "db0b161104fd157c57742e3c89c944e3fbd76e456d0ae3c29bcce1ebbc3a0b12"
+    },
+    "threshold_27.json": {
+      "bytes": 7295,
+      "sha256": "384d444f51d353ca4209217bf3fbd8cdb0085264cf9334fab184a82ac6d46872"
+    },
+    "threshold_28.json": {
+      "bytes": 7297,
+      "sha256": "827a8adde5d6d8f56908c8e990faa6ba89ed26227ad7ae3fb0c8974273bc9fa3"
+    },
+    "threshold_29.json": {
+      "bytes": 7303,
+      "sha256": "8eeb55aa0a31ee2405a05d233add9b1f31c511bc9981123290cd92afd4dab39c"
+    },
+    "threshold_30.json": {
+      "bytes": 7296,
+      "sha256": "d0d60ef3ab06da13c5dfccc6ae0fd6b399c85c306c38e7d2e64dda0b51a64cdc"
+    },
+    "threshold_31.json": {
+      "bytes": 7304,
+      "sha256": "c166893a2c0746c5413b607a42e8e8a24acfaa4175130be3a42289c47ecc3188"
+    },
+    "threshold_32.json": {
+      "bytes": 7310,
+      "sha256": "7c2eda4149e9c35af0fdf59459dcaef02e280fe0cf9ad3280f929cb95e2bd7ac"
+    },
+    "threshold_33.json": {
+      "bytes": 7305,
+      "sha256": "cd31087afe82d9c1249f842d0454b9049078a68f566bdfa299cf3f053c3edc49"
+    },
+    "threshold_34.json": {
+      "bytes": 7305,
+      "sha256": "9410d33df627029006072aa5d3bdec5d4ced8f067e74abb3b83f1790a95a8d6f"
+    },
+    "threshold_35.json": {
+      "bytes": 7312,
+      "sha256": "efe54167268e38c4db2b6927a15e1139444e1fcc2dd68b548aa740435d7f158f"
+    },
+    "threshold_36.json": {
+      "bytes": 7325,
+      "sha256": "82643dc383de8163ae7190a8abc4df2964214d25ce5088d2eb3df75e85dd0c60"
+    },
+    "threshold_37.json": {
+      "bytes": 7329,
+      "sha256": "5f0ef051af52556195f744dd264b835150f32ba252c417ceb6071cb2d5b191ed"
+    },
+    "threshold_38.json": {
+      "bytes": 7341,
+      "sha256": "f4322c86e58eaf2e25f0fde133f7867d035d2bd993ee73164b663cfddfcd0a09"
+    },
+    "threshold_39.json": {
+      "bytes": 7337,
+      "sha256": "a197c1671c091239a276bfedaa26316da6e02a6783646f6353e1ef2c331064eb"
+    },
+    "threshold_40.json": {
+      "bytes": 7335,
+      "sha256": "1acb915cfea1d2fe778ed0838e3e2aeccf9a423cb994e2107ead7d95d878c011"
+    },
+    "threshold_41.json": {
+      "bytes": 7331,
+      "sha256": "2c541479ac0eaff60fadba12605bdcdd4627a45dc71a713a6250dcf0a2f97476"
+    },
+    "threshold_42.json": {
+      "bytes": 7332,
+      "sha256": "4f2756d6bffe57a33f9a998c1def9e8755503af8acfec0e00d6f4735a47f932a"
+    },
+    "threshold_43.json": {
+      "bytes": 7324,
+      "sha256": "47416332d723b5a058961d1f48e367f2e890cf328203be6b72d117aa215fc077"
+    },
+    "threshold_44.json": {
+      "bytes": 7323,
+      "sha256": "9484cf213e069414c8f15b14da619e283d6bc4a1f1b65c98e3fd81e7092fcd19"
+    },
+    "threshold_45.json": {
+      "bytes": 7320,
+      "sha256": "40484dc202178945170441c105fcd8f39b6bd0643757851a16c9d969663d5232"
+    },
+    "threshold_46.json": {
+      "bytes": 7312,
+      "sha256": "499311c2f74387f33d8efbf08b2d036b6495059aa016ead292720ab2b3117ef5"
+    },
+    "threshold_47.json": {
+      "bytes": 7310,
+      "sha256": "bb1595adb3d6682e9ac73545cb9c7b336120f53492e32150e3dfd16b100f41e9"
+    },
+    "threshold_48.json": {
+      "bytes": 7309,
+      "sha256": "84cfddbe216ea01294dd5220a0377b0355023718802eb87c198c6c02ad396e6c"
+    },
+    "threshold_49.json": {
+      "bytes": 7312,
+      "sha256": "5c64f8b9ac1817eba311eb5c7e1829e0f0a7f4cbc835cce04d33aa17b6d4e460"
+    },
+    "threshold_50.json": {
+      "bytes": 7314,
+      "sha256": "34230412ce86ff188d857709a6c24c2105d4f2572ca98e1b51bdfff5a82373c6"
+    }
+  },
+  "peak_rss_bytes": 281616384,
+  "status": "completed",
+  "supervised_prediction_effect_claim": false,
+  "task_learner_trained": false,
+  "threshold_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50
+  ],
+  "v4_failure_retained": true
+}
