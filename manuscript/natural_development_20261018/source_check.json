@@ -1,0 +1,33 @@
+{
+  "schema": "third-natural-development-source-check-v1",
+  "passed": true,
+  "source_sha256": "e7fe051d30c0e28302d8acca1f30f385bd7f046fde7fe739ad40d562260459c5",
+  "exact_author_delta_reproduced": true,
+  "changes": 6,
+  "historical_layout_tmlr_and_theory_replay_passed": true,
+  "stage1_aggregate_replay": {
+    "all51cuts": true,
+    "blocker_cdf_comparisons": 50050,
+    "bundle_files_checked": 62,
+    "completion_output_hashes_checked": 53,
+    "exact_expectations_replayed": 204,
+    "passed": true,
+    "scope": "Portable aggregate replay only; private graphs and original execution metadata were not re-created.",
+    "summary": {
+      "complete_graph_cut_count": 25,
+      "cuts_with_any_genuine_source_admission": 47,
+      "cuts_with_any_singleton_record_admission": 48,
+      "cuts_with_excluded_record_deletion_admission": 13,
+      "empty_graph_cut_count": 1,
+      "human_or_model_annotations": 0,
+      "rows": 1001,
+      "threshold_selected": false,
+      "thresholds": 51
+    }
+  },
+  "review_report_sha256": "10a5c80b0003ae460d1a924fdf375fa8049d15b6046234c4044dc3d40a2027c1",
+  "scientific_scope": "Natural development structure only; no semantic validation, learner outcome, comparative efficiency or original empirical completion claim.",
+  "private_observations_authenticated": false,
+  "stage2_results_included": false,
+  "historical_reviews_rebound": false
+}

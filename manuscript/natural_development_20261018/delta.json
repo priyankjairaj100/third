@@ -1,0 +1,35 @@
+{
+  "schema": "third-natural-structure-manuscript-delta-v1",
+  "created_utc": "2026-10-18T12:12:57.660891+00:00",
+  "prior_source_sha256": "5c40003b70b626e995b7075ac4ff1d6ae178fe13b06ea8e085262ab7c90b75c9",
+  "new_source_sha256": "e7fe051d30c0e28302d8acca1f30f385bd7f046fde7fe739ad40d562260459c5",
+  "changes": [
+    {
+      "old": "The downstream effect study therefore remains unexecuted. The results identify what exact counterfactual repair must remember,",
+      "new": "The downstream effect study therefore remains unexecuted. A separate\ndiagnostic on 1,001 natural development records exhibits excluded-blocker\nadmissions at 13 of the 51 fixed score cutoffs, without semantic qualification.\nThe results identify what exact counterfactual repair must remember,"
+    },
+    {
+      "old": "target changes, utility, and complete system cost remains unexecuted.",
+      "new": "target changes, utility, and complete system cost remains unexecuted.\nA separately declared structural follow-up characterizes all 51 score graphs\non a fixed natural development panel without selecting a cutoff."
+    },
+    {
+      "old": "\\paragraph{Theory and software evidence.}",
+      "new": "\\paragraph{Post-failure structural characterization.}\nA separately versioned diagnostic used the original pre-guard whole-source\nprefix of 1,001 development-training records and its stored E5 rows.\nAll 51 original cutoffs were retained. The first 25, $.50$ through $.74$,\nproduced complete graphs; $.995$ produced an empty graph. Deleting an\noriginally excluded record could admit another record at 13 cuts,\n$.84$ through $.96$. The exact expected admissions under uniform deletion\nof 128 records ranged from zero to 12.51 across the full grid. These are\nconditional structural properties of this panel, without established\nsemantic usefulness or task benefit. The execution matched every graph\nunder two tile sizes, and a separate aggregate audit verified all 204\nexact expectations for budgets $1,8,32,128$. No task labels, held-out\nfeature rows, model judgments or learner heads were used. No cutoff was\nselected, and the failed calibration gates remain unchanged.\n\n\\paragraph{Theory and software evidence.}"
+    },
+    {
+      "old": "post-guard panels, development runs, and dependent held-out evaluation\nunder this configuration.",
+      "new": "post-guard panels, the original threshold-qualified development runs,\nand dependent held-out evaluation under this configuration."
+    },
+    {
+      "old": "natural-text study remains unexecuted, and the practical NLP value of\nthese effects remains unresolved.",
+      "new": "natural-text effect study remains unexecuted. The separate development\ndiagnostic exhibits structural admissions under some fixed score graphs;\nthe practical NLP value of these effects remains unresolved."
+    },
+    {
+      "old": "\n\nLiterature coverage is also bounded.",
+      "new": "\n\nThe subsequent structural diagnostic is separate from that historical ledger.\nIts 51 graph constructions, alternate-tiling replays and checks took 248.513\nseconds in the child process, with a reported peak resident set of\n260,792,320 bytes. It requested two CPUs, used one numeric thread, and\nallocated no GPU. These measurements reuse the existing feature cache;\nthey are neither full-pipeline cost nor a comparative efficiency result.\n\nLiterature coverage is also bounded."
+    }
+  ],
+  "stage1_public_manifest_sha256": "cc3a8df216b560d00cda91da728ed5c1c274987ced543a3dc3ef54d9be9bd9d8",
+  "stage2_results_included": false,
+  "original_failed_gates_changed": false
+}

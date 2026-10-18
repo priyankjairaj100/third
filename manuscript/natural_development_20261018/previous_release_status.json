@@ -1,0 +1,45 @@
+{
+  "schema": "third-tmlr-backup-build-status-v2",
+  "observed_utc": "2026-10-18T12:07:49.555962+00:00",
+  "checkpoint": "Immutable TMLR layout revision v2; later scientific revisions require new bindings.",
+  "source_binding": {
+    "path": "manuscript/third_working_draft.tex",
+    "bytes": 66104,
+    "sha256": "5c40003b70b626e995b7075ac4ff1d6ae178fe13b06ea8e085262ab7c90b75c9"
+  },
+  "archive": {
+    "path": "manuscript/release_20261018_tmlr_v2.zip",
+    "bytes": 1697120,
+    "sha256": "17b17e3388a24a09805ad675cc7b9297247e7b8ed0dda9abbe140a0295b5e676"
+  },
+  "manifest": {
+    "path": "manuscript/release_manifest_20261018_tmlr_v2.json",
+    "bytes": 1775,
+    "sha256": "15c6be4b7f30170bab10fe8f248fe4461068b190c84cd89ee37db02332b5155d"
+  },
+  "archive_members": 10,
+  "archive_layout": "Nine payload members plus the exact release manifest; the earlier TMLR v1 backup is nested unchanged.",
+  "exact_member_and_crc_checks_passed": true,
+  "all_manifest_bytes_and_hashes_passed": true,
+  "clean_extraction_layout_tmlr_and_historical_replay_passed": true,
+  "native_compile_verified": true,
+  "visual_review_verified": true,
+  "visual_review_scope": "Authorized alternate Tectonic rendering: all 15 pages reviewed; pages 1-12 unchanged after correction and pages 13-15 reinspected. No native-preview equivalence claim.",
+  "visual_review_report": "manuscript/tmlr_layout_20261018/visual_review.json",
+  "review_pdf_binding": {
+    "sha256": "180891ac8350b88e3632a062bcc3ccf8e97b62033b5d3b89b2269fa091ba9bcd",
+    "bytes": 134812,
+    "pages": 15
+  },
+  "compiled_pdf_included": false,
+  "anonymous_submission_package": false,
+  "native_computer_use_runtime_repaired": false,
+  "submission_ready": false,
+  "submitted": false,
+  "remaining_limits": [
+    "Author attestations remain unsupplied.",
+    "Two external full texts remain unavailable.",
+    "This layout checkpoint does not add or validate experimental results."
+  ],
+  "preservation": "Do not mutate v1 or v2 archives or rebind their reviews when the current manuscript changes. Preserve this source-bound status as historical at the next substantive revision."
+}

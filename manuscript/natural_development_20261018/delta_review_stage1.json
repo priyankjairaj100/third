@@ -1,0 +1,163 @@
+{
+  "bindings": {
+    "current_manuscript": {
+      "bytes": 67952,
+      "sha256": "e7fe051d30c0e28302d8acca1f30f385bd7f046fde7fe739ad40d562260459c5"
+    },
+    "delta": {
+      "bytes": 3608,
+      "sha256": "bbe7f20b275dfe55736f36982a24d93069a6d1a72843f7f5177b6c70a8b0cdb0"
+    },
+    "source_after": {
+      "bytes": 67952,
+      "sha256": "e7fe051d30c0e28302d8acca1f30f385bd7f046fde7fe739ad40d562260459c5"
+    },
+    "source_before": {
+      "bytes": 66104,
+      "sha256": "5c40003b70b626e995b7075ac4ff1d6ae178fe13b06ea8e085262ab7c90b75c9"
+    },
+    "stage1_executed_protocol": {
+      "bytes": 7698,
+      "sha256": "933b0f4d269d22f9391d3a6d1ac7dfbc14f90025b8009f27f72306e8a392fb86"
+    },
+    "stage1_independent_review": {
+      "bytes": 84636,
+      "sha256": "15ecffe58d18200414cd504b0cc5f6b7ff22c613fafb0f223321d319085778db"
+    },
+    "stage1_portable_replay": {
+      "bytes": 10016,
+      "sha256": "b09999b49abe7da0c9eb0f0b7caa2bed3fc0abd3b103e313ae4d82b740ba1022"
+    },
+    "stage1_public_manifest": {
+      "bytes": 9012,
+      "sha256": "cc3a8df216b560d00cda91da728ed5c1c274987ced543a3dc3ef54d9be9bd9d8"
+    },
+    "stage1_scientific_source": {
+      "bytes": 13460,
+      "sha256": "8ec48a4146239500499a21cae123cb275b494756a7bc25dfda7418df6264d5c2"
+    }
+  },
+  "claim_boundary_assessment": {
+    "comparative_speed_or_memory_win_claim": false,
+    "full_pipeline_cost_claim": false,
+    "natural_semantic_qualification_claim": false,
+    "original_registered_study_completion_claim": false,
+    "semantic_gates_bypassed": false,
+    "source_sentence_qualification": "The manuscript explicitly calls the new results conditional structural properties of one development panel and retains the original effect study as unexecuted.",
+    "task_utility_claim": false
+  },
+  "compiler_and_layout_scope": {
+    "compile_not_repeated_by_reviewer": true,
+    "native_compile_reported_passed_by_parent": true,
+    "rendered_layout_not_reaudited_for_this_delta": true
+  },
+  "created_utc": "2026-10-18T12:15:06.770558+00:00",
+  "exact_delta_reconstruction": {
+    "each_original_occurs_once": true,
+    "no_other_source_changes": true,
+    "reconstructed_after_equals_current": true,
+    "replacements": 6
+  },
+  "findings": [],
+  "limits": [
+    "This audit checks the displayed aggregate results and source-bound records; no private natural vectors or graph edge lists were independently rescored locally.",
+    "The 248.513 second value is the stage-internal elapsed timer within the child process, not full pipeline or project time. Numeric thread count is configured by the executed source before NumPy import.",
+    "No new Stage2 outcome or result is established by this review."
+  ],
+  "passed": true,
+  "preservation": {
+    "bibliography_unchanged": true,
+    "fully_llm_zero_human_annotation_preserved": true,
+    "heldout_boundary_preserved": true,
+    "math_environment_counts_unchanged": {
+      "align": 2,
+      "align*": 0,
+      "corollary": 1,
+      "definition": 0,
+      "equation": 9,
+      "equation*": 0,
+      "lemma": 0,
+      "proof": 3,
+      "proposition": 0,
+      "theorem": 2
+    },
+    "negative_v3_v4_results_preserved": true,
+    "original_unmet_semantic_and_human_gates_preserved": true,
+    "preamble_style_unchanged": true,
+    "prior_unfavorable_memory_comparison_preserved": true,
+    "stage2_results_not_claimed": true
+  },
+  "public_replay_verification": {
+    "all51cuts": true,
+    "blocker_cdf_comparisons": 50050,
+    "completion_output_hashes": 53,
+    "exact_expectations": 204,
+    "passed": true
+  },
+  "review_scope": "Independent review of exactly six Stage1 insertions/replacements against the complete public aggregate bundle, executed source bindings and current project boundaries. Not a new universal proof review, private-data authentication or external peer review.",
+  "schema": "third-manuscript-stage1-independent-delta-review-v1",
+  "verified_new_claims": {
+    "complete_graph_cutoffs": [
+      0.5,
+      0.51,
+      0.52,
+      0.53,
+      0.54,
+      0.55,
+      0.56,
+      0.57,
+      0.58,
+      0.59,
+      0.6,
+      0.61,
+      0.62,
+      0.63,
+      0.64,
+      0.65,
+      0.66,
+      0.67,
+      0.68,
+      0.69,
+      0.7,
+      0.71,
+      0.72,
+      0.73,
+      0.74
+    ],
+    "empty_graph_cutoffs": [
+      0.995
+    ],
+    "exact_expectation_checks": 204,
+    "excluded_blocker_admission_cutoffs": [
+      0.84,
+      0.85,
+      0.86,
+      0.87,
+      0.88,
+      0.89,
+      0.9,
+      0.91,
+      0.92,
+      0.93,
+      0.94,
+      0.95,
+      0.96
+    ],
+    "full_alternate_tiling_checks": 51,
+    "full_alternate_tiling_scope": "Same frozen scorer, two tile sizes; no independent full scoring claim.",
+    "gpu_allocation": 0,
+    "no_cutoff_selected": true,
+    "no_learner_heads": true,
+    "no_task_labels_heldout_feature_slices_or_model_judgments": true,
+    "numeric_threads_configured": 1,
+    "panel_rows": 1001,
+    "panel_scope": "Original pre-guard whole-source reserved development-training prefix; stored E5 rows.",
+    "resource_cpus_requested": 2,
+    "resource_peak_rss_bytes": 260792320,
+    "resource_stage_seconds": 248.5130052510649,
+    "rounded_max_display": "12.51",
+    "thresholds": 51,
+    "uniform_128_record_deletion_expected_admissions_max": 12.509511127297342,
+    "uniform_128_record_deletion_expected_admissions_min": 0.0
+  }
+}

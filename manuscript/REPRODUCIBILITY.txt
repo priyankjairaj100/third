@@ -1,28 +1,37 @@
 Current TMLR reproducibility scope
 
-Use README.txt and tmlr_20261018/SUBMISSION_CHECKLIST.txt for current entrypoints.
-The standalone source and anonymous supplement are the manuscript artifacts.
-All frozen theory/protocol/code/results and old archives remain unchanged.
+Use README.txt for the current source-bound checker. Frozen theory, protocols,
+code and negative results remain unchanged. Historical reviews and archives
+retain their original source bindings; the current six-change structural
+addition has a separate independent AI delta review.
 
-The supplement's13 members contain six exact source copies, three anonymous
-aggregate extracts, a checker, README, transformation ledger and manifest.
-It preserves102 calibration cuts and72 deidentified compute records. Root and
-builder clean-extraction replays passed. It contains no corpus, per-pair labels,
-account IDs, model weights, credentials or historical infrastructure receipts.
+The historical anonymous calibration supplement has 13 members: six exact
+source copies, three deidentified aggregate extracts, a checker, README,
+transformation ledger and manifest. It preserves 102 calibration cuts and 72
+historical compute records. Only 12 v4 bin-boundary cuts reconstruct directly
+from included bin counts; within-bin cuts retain reported exact fractions
+with arithmetic, nesting and decision checks. This is not original-observation
+authentication or full inference replay. Numerical code needs NumPy/SciPy and
+is not executed by that aggregate checker.
 
-Public arithmetic verifies the supplied aggregates, not the unavailable original
-observations. Only12 v4 bin-boundary cuts reconstruct directly from included bin
-counts; within-bin cuts retain their reported exact numerators/denominators and
-receive arithmetic/nesting/decision checks. Source hashes establish identity,
-not semantic validity. Original source/report hashes can be externally linkable.
-Numerical code requires NumPy/SciPy and is not executed by the aggregate checker.
+The new structural bundle preserves all 54 execution JSON files and verifies
+53 completion-bound outputs, all 51 score cutoffs, 204 exact graph-conditional
+expectations and 50,050 blocker-CDF comparisons. Its standard-library checker
+needs no private inputs. Full graph reconstruction still requires the pinned
+private development allocation, original feature cache and frozen scorer.
+Input hashes identify those artifacts; they do not supply or authenticate them.
+No semantic validation, native-label learner or original effect result follows.
 
-The complete exact reviewer-input basis from the earlier revision is preserved
-in release_20261018_v1.zip and its nested historical archive. Its build checker
-must run inside that archive's extracted tree, not against the changed TMLR
-manuscript. The new independent AI delta report is bound to the exact revised
-source. No old reviewer finding is silently rebound to a new document.
+Native compilation and authorized alternate 15-page visual review passed for
+source e7fe051d30c0e28302d8acca1f30f385bd7f046fde7fe739ad40d562260459c5.
+The native app runtime remains incompatible. The alternate PDF is a review
+artifact, not evidence of native-preview pixel or byte equality. No corpus,
+private labels, vectors, identities, model weights or credentials are bundled.
+Source hashes remain externally linkable. Author attestations and two full-text
+literature comparisons remain unresolved. No submission-ready claim is made.
 
-Two external full texts, visual PDF inspection and actual author attestations
-remain unresolved. Native compilation passed; no separate PDF was compiled or
-exported. No fresh model inference or original downstream experiment was run.
+The combined anonymous supplement v3 has 74 members and preserves the complete
+structural bundle plus the unchanged historical anonymous ZIP. It also provides
+the exact Stage1 generating source and four scorer/graph dependencies. Its
+portable checker verifies hashes, syntax and aggregate arithmetic only; it does
+not import or run the NumPy/SciPy generating code. Private inputs remain omitted.

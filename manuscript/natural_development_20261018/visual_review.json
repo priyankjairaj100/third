@@ -1,0 +1,84 @@
+{
+  "schema": "third-manuscript-alternate-visual-review-v1",
+  "created_utc": "2026-10-18T12:14:45.948471+00:00",
+  "status": "passed_layout_review",
+  "source": {
+    "path": "manuscript/third_working_draft.tex",
+    "sha256": "e7fe051d30c0e28302d8acca1f30f385bd7f046fde7fe739ad40d562260459c5",
+    "bytes": 67952,
+    "temporary_copy_exact": true,
+    "reviewer_modified_source": false
+  },
+  "review_pdf": {
+    "sha256": "3d61cffda7f7de4eacf8dd92496942d04e1657e3b1c31cf6feddfec8e95a9a9b",
+    "bytes": 136462,
+    "pages": 15,
+    "file": "third_tmlr_stage1_review_20261018.pdf"
+  },
+  "toolchain": {
+    "compiler": "Tectonic 0.17.0",
+    "offline_cached": true,
+    "untrusted_mode": true,
+    "exit_code": 0,
+    "renderer": "Poppler pdftoppm at 100 dpi"
+  },
+  "visual_checks": {
+    "contact_sheet_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "full_resolution_current_pages": [
+      1,
+      2,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "pages_pixel_identical_to_previously_full_reviewed_version": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "observed_clipping": false,
+    "observed_overlap": false,
+    "page_boundary_character_violations": [],
+    "overfull_hbox_warnings": 0,
+    "model_revision_hashes_visible": true
+  },
+  "warnings": {
+    "bibliography_underfull_hbox": "Existing badness 2790 warning; reference text remains legible.",
+    "underfull_vbox": "Final pass reports badness 10000 near Appendix F transition. Page 14 has expanded paragraph spacing and Appendix F starts cleanly on page 15; no clipping, overlap, or orphan heading observed."
+  },
+  "pdf_metadata": {
+    "Creator": "LaTeX with hyperref",
+    "Title": "Unlearning What Was Never Trained: Exact Repair After Data Curation",
+    "Producer": "xdvipdfmx (0.1)",
+    "CreationDate": "D:20261018121342-00'00'"
+  },
+  "native_runtime_repaired": false,
+  "native_preview_equivalence_claim": false,
+  "scientific_audit_claim": false,
+  "new_tab_opened": false,
+  "prior_reviews_preserved": true,
+  "source_bound_validity": "This report applies only to the exact e7fe source. Later Stage 2 additions require a fresh source-bound layout review."
+}

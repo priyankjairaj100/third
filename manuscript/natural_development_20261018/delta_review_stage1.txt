@@ -1,0 +1,23 @@
+Independent Stage1 manuscript delta review: PASSED.
+
+The six declared replacements exactly reconstruct the current manuscript
+SHA-256 e7fe051d30c0e28302d8acca1f30f385bd7f046fde7fe739ad40d562260459c5.
+No other source change occurred. Preamble/style, bibliography, theorem/proof
+and displayed mathematics are unchanged. No concrete finding within scope.
+
+All new numerical claims match all51 complete aggregate records: 25 complete
+graphs at0.50--0.74, one empty graph at0.995, and excluded-blocker admissions
+at13 cuts0.84--0.96. Expected admissions for uniform128-record deletion range
+from0 to12.509511127297342 (12.51 displayed). The204 exact expectations,
+51 alternate-tiling checks and scoped resource figures are supported.
+
+Portable public replay passed53 output bindings,204 exact expectations and
+50,050 CDF comparisons. No semantic/task benefit, comparative speed/memory
+win, full-pipeline cost or original study-completion claim was introduced.
+Original v3/v4 failures, unmet gates, held-out boundaries and unfavorable
+historical memory comparison remain. No Stage2 result is claimed.
+
+This is a bounded independent AI delta review, not external peer review or
+private-data reauthentication. The stage timer excludes full-pipeline costs;
+numeric threads were configured to one before NumPy import. Parent reported
+native compilation passed; this reviewer did not repeat rendering/layout.

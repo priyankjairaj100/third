@@ -138,12 +138,12 @@
       },
       "depends_on": [],
       "done_when": "Compiled and visually reviewed complete manuscript, actual figures/tables, citations and defensible limits.",
-      "evidence": "manuscript/evidence_20261016.json",
+      "evidence": "manuscript/natural_development_20261018/source_check.json",
       "historical_compute": "manuscript/compute_history_20261016.json",
       "id": "07-manuscript",
-      "independent_ai_review": "manuscript/independent_review_20261018.json",
-      "next_action": "Layout blocker resolved through explicitly authorized temporary render. Original native CUA incompatibility persists; do not repeat unchanged probes. Author attestations and two disclosed literature gaps remain.",
-      "state": "tmlr_compiled_and_alternate_visual_review_passed",
+      "independent_ai_review": "manuscript/natural_development_20261018/delta_review_stage1.json",
+      "next_action": "Stage1 is integrated and independently reviewed. Await Stage2 terminal/audit before any repair result or further source change; preserve source-bound historical reviews. Author attestations and two full-text comparison gaps remain.",
+      "state": "tmlr_stage1_result_reviewed_compiled_and_visually_verified",
       "tmlr_revision": "manuscript/tmlr_20261018/adaptation_report.json",
       "unified_author_review": "manuscript/unified_review_20261016.json"
     },
@@ -170,7 +170,8 @@
         "Public86-file v4 package plus manifest; native compilation and clean-extraction source replay passed",
         "Independent AI manuscript review completed; two implementation-description findings corrected and independently rechecked",
         "97-file 18 October package plus manifest passed native compilation,49-source check,20 archived review-input checks and clean-extraction replay",
-        "TMLR adaptation, source delta review, native compilation, and anonymous13-member aggregate/code supplement verified"
+        "TMLR adaptation, source delta review, native compilation, and anonymous13-member aggregate/code supplement verified",
+        "Audited all51 natural development structural cuts integrated into same TMLR source; native compilation and all15page alternate visual review passed. Original failed gates retained."
       ],
       "coordinates_with": [
         "07-manuscript"
@@ -191,7 +192,7 @@
       "id": "09-negative-branch-closure",
       "next_action": "Current source/native compile and alternate rendered layout pass. Preserve original negative evidence; new engineering branch is separate. No author attestation or original empirical-completion claim.",
       "public_package": "manuscript/tmlr_20261018/tmlr_anonymous_supplement_v1.zip",
-      "state": "tmlr_source_and_visual_review_complete_author_items_pending"
+      "state": "tmlr_negative_and_structure_source_reviewed_author_items_pending"
     },
     {
       "depends_on": [],
@@ -231,6 +232,6 @@
       "state": "running"
     }
   ],
-  "updated_utc": "2026-10-18T12:11:36.507982+00:00",
+  "updated_utc": "2026-10-18T12:25:58.704729+00:00",
   "venue_change_authorization": "Explicit user request on 18 October 2026; no relaxation of calibration, held-out or human gates."
 }

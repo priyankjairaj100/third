@@ -1,21 +1,34 @@
 {
-  "schema": "third-tmlr-backup-build-status-v1",
-  "observed_utc": "2026-10-18T11:29:36.963648+00:00",
+  "schema": "third-tmlr-backup-build-status-v3",
+  "created_utc": "2026-10-18T12:29:17.722714+00:00",
+  "source": {
+    "bytes": 67952,
+    "sha256": "e7fe051d30c0e28302d8acca1f30f385bd7f046fde7fe739ad40d562260459c5"
+  },
   "archive": {
-    "path": "manuscript/release_20261018_tmlr_v1.zip",
-    "bytes": 1673952,
-    "sha256": "5059b6aa4a8f66e7aae56a8b9b9c18a608470a7aa5f3744106408330f1721dc9"
+    "path": "manuscript/release_20261018_tmlr_v3.zip",
+    "bytes": 2076081,
+    "sha256": "71242f643f753b32ce9891ff8d971e21526155d89d53f7cda78ed0433fb77172"
   },
   "manifest": {
-    "path": "manuscript/release_manifest_20261018_tmlr_v1.json",
-    "bytes": 20768,
-    "sha256": "fd3148611c0b8803ab54f570d7962108622945dc44ae8bcb4523faee2408c109"
+    "path": "manuscript/release_manifest_20261018_tmlr_v3.json",
+    "bytes": 15472,
+    "sha256": "3cf1006905b3fbc5aba549470808fbb16db5735f2da3891a9a52888781a4b75c"
   },
-  "archive_members": 115,
+  "archive_members": 80,
   "exact_member_and_crc_checks_passed": true,
-  "clean_extraction_tmlr_and_historical_replay_passed": true,
-  "anonymous_submission_package": false,
+  "clean_extraction_aggregate_and_historical_replays_passed": true,
+  "anonymous_supplement_replay_passed": true,
+  "verification_python": "3.12.7",
+  "native_compile_verified": true,
+  "visual_review_verified": true,
+  "independent_delta_review_passed": true,
   "compiled_pdf_included": false,
-  "visual_review_verified": false,
-  "submission_ready": false
+  "anonymous_submission_package": false,
+  "native_app_runtime_repaired": false,
+  "stage2_results_included": false,
+  "submission_ready": false,
+  "original_effect_study_complete": false,
+  "initial_replay_failure": "System Python3.9 was below documented3.10minimum. Archive unchanged; replay succeeded with existingPython3.12.",
+  "archived_source_check_scope": "Earlier source/structure review receipt is retained; the later combined-check result is in this release verification."
 }

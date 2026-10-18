@@ -1,0 +1,145 @@
+{
+  "archive": {
+    "bytes": 225315,
+    "file": "tmlr_anonymous_supplement_v3.zip",
+    "sha256": "7b02faf9828ba43e73da1a54840fdb0d380b02b51d7409cb9c9d4dc471f8627b"
+  },
+  "archive_members": 74,
+  "clean_extraction_replay": {
+    "generating_code_executed": false,
+    "generating_source_files_syntax_checked": 5,
+    "historical_calibration": {
+      "calibration_table": [
+        {
+          "canonical_pairs": 90,
+          "failed_cuts": 51,
+          "fresh_validation": false,
+          "joint_positives": 0,
+          "model_calls": 198,
+          "threshold_selected": false,
+          "version": "v3"
+        },
+        {
+          "canonical_pairs": 360,
+          "failed_cuts": 51,
+          "fresh_validation": false,
+          "joint_positives": 27,
+          "model_calls": 792,
+          "threshold_selected": false,
+          "version": "v4"
+        }
+      ],
+      "compute_records_summed": 72,
+      "cut_quotients_and_decisions_checked": 102,
+      "new_independent_scientific_verification": false,
+      "not_replayed": [
+        "private pair scores or individual labels",
+        "fresh model inference",
+        "within-bin sample selection",
+        "natural effect experiments",
+        "universal theorem proofs"
+      ],
+      "passed": true,
+      "payload_files": 12,
+      "scope": "aggregate arithmetic and manifest replay only",
+      "v4_bin_boundary_cuts_reconstructed": 12
+    },
+    "manuscript_source_sha256": "e7fe051d30c0e28302d8acca1f30f385bd7f046fde7fe739ad40d562260459c5",
+    "original_semantic_gate_passed": false,
+    "passed": true,
+    "payload_files_checked": 73,
+    "scope": "Inventory, byte identity and aggregate arithmetic only; no private-data, model or graph replay.",
+    "stage2_outputs_included": false,
+    "structure_stage1": {
+      "all51cuts": true,
+      "blocker_cdf_comparisons": 50050,
+      "bundle_files_checked": 62,
+      "completion_output_hashes_checked": 53,
+      "exact_expectations_replayed": 204,
+      "passed": true,
+      "scope": "Portable aggregate replay only; private graphs and original execution metadata were not re-created.",
+      "summary": {
+        "complete_graph_cut_count": 25,
+        "cuts_with_any_genuine_source_admission": 47,
+        "cuts_with_any_singleton_record_admission": 48,
+        "cuts_with_excluded_record_deletion_admission": 13,
+        "empty_graph_cut_count": 1,
+        "human_or_model_annotations": 0,
+        "rows": 1001,
+        "threshold_selected": false,
+        "thresholds": 51
+      }
+    }
+  },
+  "exact_generating_source_files": {
+    "code/empirical_execution/ccu/__init__.py": {
+      "binding": {
+        "bytes": 663,
+        "sha256": "bb59999fa070a4faf576ffee6fbbcc09c4db10bb37f46821df9cb7d258613ede"
+      },
+      "original_source": "empirical_execution/ccu/__init__.py"
+    },
+    "code/empirical_execution/ccu/core.py": {
+      "binding": {
+        "bytes": 27026,
+        "sha256": "d89f6affd566103c65aa92f10e02ac86e394f7a1f88ff2e6b098720b8cef7df3"
+      },
+      "original_source": "empirical_execution/ccu/core.py"
+    },
+    "code/empirical_execution/phase3/panels.py": {
+      "binding": {
+        "bytes": 20216,
+        "sha256": "bd2409958ac9a9e27faf463b44b2f839260a3195c7cde32fb3bfb76aeb14a04b"
+      },
+      "original_source": "empirical_execution/phase3/panels.py"
+    },
+    "code/empirical_execution/phase3/reference_graph.py": {
+      "binding": {
+        "bytes": 2932,
+        "sha256": "efc41498648f6f7f7969768fbcd050619d7ed5d6e82eafadb1b9a3a2158e9d1c"
+      },
+      "original_source": "empirical_execution/phase3/reference_graph.py"
+    },
+    "code/stage1/structure_stage1.py": {
+      "binding": {
+        "bytes": 13460,
+        "sha256": "8ec48a4146239500499a21cae123cb275b494756a7bc25dfda7418df6264d5c2"
+      },
+      "original_source": "local_run/postnegative_structure_v1_20261018/structure_stage1.py"
+    }
+  },
+  "generating_code_executed": false,
+  "historical_bytes_preserved": true,
+  "manifest": {
+    "bytes": 11152,
+    "sha256": "538d4570551a1728655f8cdd99bf49e0ce9809d58e852c82f1f3d921b5f17867"
+  },
+  "manuscript_source_sha256": "e7fe051d30c0e28302d8acca1f30f385bd7f046fde7fe739ad40d562260459c5",
+  "new_independent_scientific_verification": false,
+  "operational_wrapper_files_included": false,
+  "privacy_screening": {
+    "categories": [
+      "account_or_cluster",
+      "email",
+      "ipv4",
+      "original_repository",
+      "private_key",
+      "private_path"
+    ],
+    "findings": [],
+    "generating_source_files_copied_without_modification": 5,
+    "historical_zip_copied_without_modification": true,
+    "limits": "Bounded content screening plus inspected exact public-source copies; not an unlinkability guarantee.",
+    "passed": true,
+    "private_data_or_operational_wrappers_included": false,
+    "schema": "anonymous-supplement-privacy-v3",
+    "source_hash_linkability_disclosed": true,
+    "stage1_bundle_copied_without_modification": true,
+    "text_files_screened": 83
+  },
+  "private_inputs_included": false,
+  "schema": "anonymous-supplement-delivery-v3",
+  "stage1_bundle_bytes_preserved": true,
+  "stage1_generator_source_included": true,
+  "stage2_outputs_included": false
+}

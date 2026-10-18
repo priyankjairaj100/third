@@ -1,0 +1,71 @@
+{
+  "status": {
+    "schema": "third-tmlr-backup-build-status-v3",
+    "created_utc": "2026-10-18T12:29:17.722714+00:00",
+    "source": {
+      "bytes": 67952,
+      "sha256": "e7fe051d30c0e28302d8acca1f30f385bd7f046fde7fe739ad40d562260459c5"
+    },
+    "archive": {
+      "path": "manuscript/release_20261018_tmlr_v3.zip",
+      "bytes": 2076081,
+      "sha256": "71242f643f753b32ce9891ff8d971e21526155d89d53f7cda78ed0433fb77172"
+    },
+    "manifest": {
+      "path": "manuscript/release_manifest_20261018_tmlr_v3.json",
+      "bytes": 15472,
+      "sha256": "3cf1006905b3fbc5aba549470808fbb16db5735f2da3891a9a52888781a4b75c"
+    },
+    "archive_members": 80,
+    "exact_member_and_crc_checks_passed": true,
+    "clean_extraction_aggregate_and_historical_replays_passed": true,
+    "anonymous_supplement_replay_passed": true,
+    "verification_python": "3.12.7",
+    "native_compile_verified": true,
+    "visual_review_verified": true,
+    "independent_delta_review_passed": true,
+    "compiled_pdf_included": false,
+    "anonymous_submission_package": false,
+    "native_app_runtime_repaired": false,
+    "stage2_results_included": false,
+    "submission_ready": false,
+    "original_effect_study_complete": false,
+    "initial_replay_failure": "System Python3.9 was below documented3.10minimum. Archive unchanged; replay succeeded with existingPython3.12.",
+    "archived_source_check_scope": "Earlier source/structure review receipt is retained; the later combined-check result is in this release verification."
+  },
+  "combined_replay": {
+    "schema": "third-natural-development-source-check-v1",
+    "passed": true,
+    "source_sha256": "e7fe051d30c0e28302d8acca1f30f385bd7f046fde7fe739ad40d562260459c5",
+    "exact_author_delta_reproduced": true,
+    "changes": 6,
+    "historical_layout_tmlr_and_theory_replay_passed": true,
+    "stage1_aggregate_replay": {
+      "all51cuts": true,
+      "blocker_cdf_comparisons": 50050,
+      "bundle_files_checked": 62,
+      "completion_output_hashes_checked": 53,
+      "exact_expectations_replayed": 204,
+      "passed": true,
+      "scope": "Portable aggregate replay only; private graphs and original execution metadata were not re-created.",
+      "summary": {
+        "complete_graph_cut_count": 25,
+        "cuts_with_any_genuine_source_admission": 47,
+        "cuts_with_any_singleton_record_admission": 48,
+        "cuts_with_excluded_record_deletion_admission": 13,
+        "empty_graph_cut_count": 1,
+        "human_or_model_annotations": 0,
+        "rows": 1001,
+        "threshold_selected": false,
+        "thresholds": 51
+      }
+    },
+    "review_report_sha256": "10a5c80b0003ae460d1a924fdf375fa8049d15b6046234c4044dc3d40a2027c1",
+    "scientific_scope": "Natural development structure only; no semantic validation, learner outcome, comparative efficiency or original empirical completion claim.",
+    "private_observations_authenticated": false,
+    "stage2_results_included": false,
+    "historical_reviews_rebound": false,
+    "anonymous_supplement_replay_passed": true,
+    "anonymous_supplement_sha256": "7b02faf9828ba43e73da1a54840fdb0d380b02b51d7409cb9c9d4dc471f8627b"
+  }
+}

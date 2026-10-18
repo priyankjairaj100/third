@@ -1,35 +1,34 @@
 {
-  "schema": "third-tmlr-layout-build-status-v2",
-  "observed_utc": "2026-10-18T11:53:04.420195+00:00",
-  "source_binding": {
-    "bytes": 66104,
-    "sha256": "5c40003b70b626e995b7075ac4ff1d6ae178fe13b06ea8e085262ab7c90b75c9"
+  "schema": "third-natural-development-manuscript-build-v1",
+  "created_utc": "2026-10-18T12:17:21.319817+00:00",
+  "source": {
+    "path": "manuscript/third_working_draft.tex",
+    "sha256": "e7fe051d30c0e28302d8acca1f30f385bd7f046fde7fe739ad40d562260459c5",
+    "bytes": 67952,
+    "temporary_copy_exact": true,
+    "reviewer_modified_source": false
   },
-  "compile_verified": true,
-  "native_compiler_result": {
-    "kind": "success",
-    "message": "The current source compiled successfully with the desktop editor compiler."
+  "native_compile_verified": true,
+  "native_compiler_result": "success",
+  "visual_review_verified": true,
+  "review_pdf": {
+    "sha256": "3d61cffda7f7de4eacf8dd92496942d04e1657e3b1c31cf6feddfec8e95a9a9b",
+    "bytes": 136462,
+    "pages": 15,
+    "file": "third_tmlr_stage1_review_20261018.pdf"
   },
-  "source_path": "manuscript/third_working_draft.tex",
+  "visual_review": "manuscript/natural_development_20261018/visual_review.json",
+  "independent_delta_review_passed": true,
+  "delta_review": "manuscript/natural_development_20261018/delta_review_stage1.json",
+  "stage1_independent_result_audit_passed": true,
+  "stage2_results_included": false,
+  "native_app_runtime_repaired": false,
+  "native_preview_equivalence_claim": false,
   "editor_kept_open": true,
   "new_tab_opened": false,
-  "separate_pdf_compiled": true,
-  "official_style_unmodified": true,
-  "style_sha256": "816214ff5919aa457b6b443bee52b15d9561421417b7f8a50cc84651519f0002",
-  "review_report": "manuscript/tmlr_20261018/delta_review.json",
-  "independent_ai_delta_review_completed": true,
-  "delta_findings_resolved": 1,
-  "historical_review_rebound": false,
-  "visual_review_verified": true,
-  "visual_review_limitation": "Authorized alternate Tectonic rendering visually reviewed across15pages. Native CUA remains unavailable; pixel equivalence to native preview not claimed.",
-  "source_anonymity_checked": true,
-  "exported_pdf_metadata_checked": false,
-  "author_attestations_supplied": false,
-  "submission_ready": false,
-  "submitted": false,
-  "historical_build_status_preserved_in": "manuscript/release_20261018_tmlr_v1.zip",
   "separate_pdf_authorized": true,
-  "source_delta_check": "manuscript/tmlr_layout_20261018/source_check.json",
-  "visual_review_report": "manuscript/tmlr_layout_20261018/visual_review.json",
-  "review_report_scope": "Prior substantive review remains bound to originalsource. Currentonlyrevisionparagraph formatting delta separately checked; no historical review rebound."
+  "submission_ready": false,
+  "original_effect_study_complete": false,
+  "author_attestations_supplied": false,
+  "historical_reviews_rebound": false
 }
