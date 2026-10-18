@@ -125,13 +125,23 @@
       "attribution_review": "manuscript/attribution_review_20261016.json",
       "author_claim_review": "manuscript/claims_review_20261016.json",
       "build_status": "manuscript/BUILD_STATUS.json",
+      "completed_ai_reviewer": {
+        "agent_name": "/root/independent_manuscript_review",
+        "authorization": "User resumed the pending independent AI review: yeah we back, you may resume",
+        "completed_utc": "2026-10-18T03:30:15.717320+00:00",
+        "findings_resolved": 2,
+        "output": "work/independent-manuscript-review-20261018/a01/review.txt",
+        "review_request": "work/independent-manuscript-review-20261018/a01/request.json",
+        "started_utc": "2026-10-18T03:18:13.689365+00:00"
+      },
       "depends_on": [],
       "done_when": "Compiled and visually reviewed complete manuscript, actual figures/tables, citations and defensible limits.",
       "evidence": "manuscript/evidence_20261016.json",
       "historical_compute": "manuscript/compute_history_20261016.json",
       "id": "07-manuscript",
-      "next_action": "Available unified author read-through is complete. Same .tex compiles;36 direct bindings and16 references checked. Remaining work requires visual service availability, an independent manuscript review, or accessible full texts for two close priors. Preserve all gaps; do not repackage an unchanged manuscript as new progress.",
-      "state": "compiled_unified_author_review_complete_pending_external_reviews",
+      "independent_ai_review": "manuscript/independent_review_20261018.json",
+      "next_action": "Independent AI manuscript review and scoped F1/F2 follow-up are complete; do not spawn a duplicate. Same source compiled; new package verified. Advance only restored native layout review or a genuinely new accessible SSRN/Dominici full-text route. No unchanged rebuilds, controller restart or blocked empirical launch.",
+      "state": "independent_ai_review_complete_pending_layout_and_literature",
       "unified_author_review": "manuscript/unified_review_20261016.json"
     },
     {
@@ -154,7 +164,9 @@
         "Expanded72-job historical accounting with four failures; no duplicate batch/array aliases",
         "Public85-file source-check closure plus manifest; clean-extraction replay including compute passed",
         "Available unified author review completed; negative-result framing corrected and Schelter (2021) preprocessing/view-maintenance antecedent credited",
-        "Public86-file v4 package plus manifest; native compilation and clean-extraction source replay passed"
+        "Public86-file v4 package plus manifest; native compilation and clean-extraction source replay passed",
+        "Independent AI manuscript review completed; two implementation-description findings corrected and independently rechecked",
+        "97-file 18 October package plus manifest passed native compilation,49-source check,20 archived review-input checks and clean-extraction replay"
       ],
       "coordinates_with": [
         "07-manuscript"
@@ -169,13 +181,14 @@
         "manuscript/RELEASE_BUILD_STATUS.json",
         "manuscript/attribution_review_20261016.json",
         "manuscript/compute_history_20261016.json",
-        "manuscript/unified_review_20261016.json"
+        "manuscript/unified_review_20261016.json",
+        "manuscript/independent_review_20261018.json"
       ],
       "id": "09-negative-branch-closure",
-      "next_action": "Bounded manuscript/package is prepared. Continue only actionable new literature routes, restored visual review or independent review; no repeated unchanged accounting/packaging, failed retrieval route, controller restart or downstream launch. Original empirical scope remains incomplete and blocked.",
-      "public_package": "manuscript/release_20261016_v4.zip",
-      "state": "bounded_v4_package_verified_pending_external_review_gaps"
+      "next_action": "Independent AI review is complete. Preserve both original and corrected review evidence. Remaining gaps are rendered layout and two unavailable full texts; continue only on new accessible evidence/capability. Original natural effect study remains incomplete and blocked by failed calibration.",
+      "public_package": "manuscript/release_20261018_v1.zip",
+      "state": "bounded_20261018_package_verified_pending_layout_and_literature"
     }
   ],
-  "updated_utc": "2026-10-16T11:53:22.159322+00:00"
+  "updated_utc": "2026-10-18T03:30:15.717320+00:00"
 }

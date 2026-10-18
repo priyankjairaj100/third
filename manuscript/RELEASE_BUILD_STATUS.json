@@ -1,31 +1,31 @@
 {
   "archive": {
-    "bytes": 378563,
-    "path": "manuscript/release_20261016_v4.zip",
-    "sha256": "e76a88eff67c140b636bacc4b1218f42fe1a7e19b4432dd49741a80340b09262"
+    "bytes": 801568,
+    "path": "manuscript/release_20261018_v1.zip",
+    "sha256": "d9567681911dc8f7bcef27daf915e4c943ae8d42869ab4e348ffb3e2ab5f2443"
   },
   "archive_crc_and_exact_member_hashes_passed": true,
-  "archive_members": 87,
+  "archive_members": 98,
   "builder": {
-    "bytes": 6234,
-    "sha256": "9491ed4192ae5229383d2636e7ee4298deb301c5682f73f32c8cc20f6782b2d1"
+    "bytes": 6493,
+    "sha256": "3d8b76db5c8b002c91f19463df4700e2352b0713562d9d0749344493cc316350"
   },
   "full_empirical_replay_tested": false,
   "manifest": {
-    "bytes": 15901,
-    "path": "manuscript/release_manifest_20261016_v4.json",
-    "sha256": "1d356ccd4a0d596b4bc62b181f3e6639bc6bed5d46dda45dbd41feb743eef551"
+    "bytes": 17761,
+    "path": "manuscript/release_manifest_20261018_v1.json",
+    "sha256": "c44f251ec2cc7422d25b179085f032c956119f5b48a438cc404b409fe8116a5c"
   },
   "native_compile_previously_verified_for_packaged_source": true,
-  "observed_utc": "2026-10-16T11:52:24.087093+00:00",
-  "payload_members": 86,
+  "observed_utc": "2026-10-18T03:29:26.901043+00:00",
+  "payload_members": 97,
   "public_source_check_in_clean_extraction_passed": true,
   "reproduced_evidence_equal_except_creation_time": true,
   "schema": "third-public-package-build-status-v1",
   "source_check_summary": {
     "bibliography_entries": 16,
-    "manuscript_sha256": "c452d0682179394f18b5bc0dd05a6519ae4deff39b0fb8f02e54fa5200b93cc2",
-    "source_bindings": 36,
+    "manuscript_sha256": "f957a3ef723f0749692f6b77a6551c6792d4a4331d267ddc48c0d8c286dc9087",
+    "source_bindings": 49,
     "source_claim_check_passed": true
   },
   "submission_ready": false,

@@ -9,6 +9,7 @@ import json
 import re
 import subprocess
 import sys
+import zipfile
 from fractions import Fraction
 from datetime import datetime, timezone
 from pathlib import Path
@@ -166,7 +167,40 @@ def main():
         assert f"{number:,}" in tex, "historical compute manuscript count differs"
     assert "266.39 requested-CPU hours" in tex
     unified = read_json("manuscript/unified_review_20261016.json")
-    assert unified["manuscript"] == binding("manuscript/third_working_draft.tex")
+    independent = read_json("manuscript/independent_review_20261018.json")
+    assert independent["reviewer_kind"] == "independent AI scientific manuscript review"
+    assert independent["human_review"] is False and independent["followup_completed"]
+    assert independent["current_manuscript"] == binding("manuscript/third_working_draft.tex")
+    assert {f["id"] for f in independent["findings"]} == {"F1", "F2"}
+    assert all(f["independent_followup_resolved"] for f in independent["findings"])
+    assert independent["submission_ready"] is False and independent["novelty_clearance"] is False
+    # The author review and first independent report remain bound to their OLD
+    # manuscript. Verify that basis from the immutable prior public package,
+    # rather than rebinding a historical review to a revised document.
+    assert unified["manuscript"] == independent["reviewed_manuscript"]
+    archive = independent["historical_input_archive"]
+    assert archive == binding(archive["path"])
+    assert len(independent["historical_input_bindings"]) == 20
+    with zipfile.ZipFile(ROOT / archive["path"]) as prior:
+        for saved in independent["historical_input_bindings"]:
+            raw = prior.read(saved["path"])
+            assert len(raw) == saved["bytes"] and hashlib.sha256(raw).hexdigest() == saved["sha256"]
+    for saved in independent["source_bindings"] + independent["review_artifacts"]:
+        assert saved == binding(saved["path"]), "independent review source/artifact drift"
+    followup = read_json("manuscript/independent_review_followup_20261018.json")
+    assert followup["manuscript"] == independent["current_manuscript"]
+    assert {f["id"] for f in followup["findings"]} == {"F1", "F2"}
+    assert all(f["status"] == "resolved" for f in followup["findings"])
+    assert followup["regressions_found"] == [] and not followup["scientific_claim_scope_changed"]
+    assert not followup["author_checker_and_packaging_reviewed"]
+    assert {k: followup["report"][k] for k in ["bytes", "sha256"]} == {
+        k: binding("manuscript/independent_review_followup_20261018.txt")[k]
+        for k in ["bytes", "sha256"]}
+    for saved in followup["frozen_implementation_sources"]:
+        assert saved == binding(saved["path"]), "follow-up implementation binding drift"
+    arithmetic_review = read_json("manuscript/independent_review_checks_20261018.json")
+    assert [{k: saved[k] for k in ["path", "bytes", "sha256"]}
+            for saved in arithmetic_review["pinned_sources"]] == independent["historical_input_bindings"]
     assert unified["review_passed_in_stated_scope"] and not unified["new_independent_review"]
     assert unified["novelty_clearance"] is False
     for saved in unified["source_bindings"]:
@@ -211,7 +245,12 @@ def main():
         "manuscript/compute_receipts_extract_20261016.json",
         "manuscript/build_compute_history.py",
         "manuscript/unified_review_20261016.json",
+        "manuscript/independent_review_20261018.json",
     ]
+    sources += [entry["path"] for entry in independent["review_artifacts"]]
+    sources += [archive["path"]]
+    sources += [entry["path"] for entry in independent["source_bindings"]
+                if entry["path"] not in sources]
     claims = [
         {"sections": ["sec:setup", "sec:method", "app:work"],
          "claim": "Fixed ordered curator, finite-horizon polynomial repair, indexed work, ridge and partition-source extension",
@@ -234,7 +273,7 @@ def main():
          "sources": [sources[19], sources[20]],
          "limit": "Primary-text contract comparison only; two full-text gaps remain. No independent audit of prior proofs or exhaustive novelty clearance."},
         {"sections": ["sec:method", "sec:memory", "app:work", "app:scorer", "app:repro"],
-         "claim": "Author claim comparison, four resolved descriptions, historical independent-review source checks, and partial v4 compute accounting",
+         "claim": "Author claim comparison, including corrected kernel/service distinction, historical review source checks, and partial v4 compute accounting",
          "sources": [sources[24], sources[25], sources[26]],
          "limit": "No new independent proof review, visual layout verification, complete project compute/energy budget or empirical effect evidence."},
         {"sections": ["app:repro"],
@@ -249,6 +288,10 @@ def main():
          "claim": "Unified author read-through, completed negative-calibration framing and explicit credit for preprocessing-aware unlearning as view maintenance",
          "sources": [sources[35], sources[20], sources[13], sources[21]],
          "limit": "Bounded author consistency review, not independent proof review or exhaustive novelty clearance. Two close-prior full texts and visual layout remain unverified."},
+        {"sections": ["sec:method", "app:work"],
+         "claim": "Independent AI manuscript review and verified correction of retry semantics and service request overhead",
+         "sources": sources[36:],
+         "limit": "Manual AI review of specified claims and public aggregates, not formal proof, private-evidence authentication, complete literature clearance or rendered-layout review. Original report and old manuscript basis are preserved."},
     ]
     report = {
         "schema": "third-working-manuscript-evidence-v1",
@@ -267,7 +310,7 @@ def main():
         "primary_semantic_study_started": False,
         "submission_ready": False,
         "not_verified_here": ["Native compilation and visual layout are tracked separately in BUILD_STATUS.json",
-                              "No new independent proof or scientific audit", "No native solver certificate",
+                              "The checker binds the separate independent AI review; it does not perform or reproduce that reasoning", "No native solver certificate",
                               "No model agreement validation, effect experiment, or held-out utility",
                               "No full literature novelty clearance", "No permission for source text redistribution"],
     }

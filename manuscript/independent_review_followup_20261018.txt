@@ -1,0 +1,28 @@
+Independent AI review: scoped follow-up on F1 and F2
+18 October 2026. Status: both findings resolved in the checked manuscript.
+
+Current manuscript binding:
+  path: manuscript/third_working_draft.tex
+  bytes: 57520
+  SHA256: f957a3ef723f0749692f6b77a6551c6792d4a4331d267ddc48c0d8c286dc9087
+Comparison baseline: 3510d0e932c25422e8b695b5aad005cff05e255b.
+Original review.txt SHA256: 5ecd469a00edabe6a14b13d80936f1c01dcfcd7fafc48cc4a0b529e1ad89e527.
+
+F1: resolved.
+The revised manuscript:208-214 now distinguishes the strict low-level integer-ID kernel from the frozen Phase 5/6 service. It correctly says the service deduplicates supplied IDs, removes already-deleted IDs, permits retry no-ops after exhaustion, and rejects invalid IDs and excess fresh deletions. It also preserves the earlier mathematical reference's retry behavior. This agrees with empirical_execution/ccu/summary.py:336-352; empirical_execution/phase5/methods.py:97-105; the Phase 6 forwarding path; and empirical_execution/phase6/check_state_audit_semantics.py:190-194. The interfaces still apply the same substitution to valid fresh deletions. No frozen implementation change was needed or made by this reviewer.
+
+F2: resolved.
+The revised manuscript:218-235 assigns O(Q+Phi0+sM0) to the abstract substitution core and explicitly excludes per-call overhead and the Python service's extra processing. Appendix lines 782-804 correctly supply:
+
+  Service: O(B(N+1)+Q+sum_b f_b log(f_b+1)+Phi0+sM0).
+  Direct unsorted kernel calls: O(B+Q+sum_b q_b log(q_b+1)+Phi0+sM0).
+
+The definitions of B, N, q_b, f_b and Q are sufficient for these bounds under the stated unit-identifier and expected-hashing assumptions. B(N+1) handles empty calls even when N=0. The explicit O(B) core-call term can be absorbed into Q only for nonempty calls. The service's fresh list is already sorted when passed to the kernel; the text correctly avoids charging a second arbitrary-order comparison sort. Its extra O(N) temporary lookup workspace is now explicit, separate from request containers and core state. String decoding, hashing/comparison and bit costs remain separately qualified. The frozen reference algorithm_round2.py:157-175 does not sort requests, while empirical_execution/ccu/summary.py:350 and empirical_execution/phase5/methods.py:100-103 account for the implementation overhead described here.
+
+Scope and regression check:
+The complete manuscript diff against the baseline contains only the two implementation descriptions and their accounting explanation. No change to the finite-horizon substitution theorem, ridge/count normalization, finite-feature/private-information arguments, scorer assumptions, approximation/release qualifications, calibration results, negative decisions, compute totals, or literature limitations was present. No new natural-data, runtime, memory, human-validity or submission-readiness claim was introduced. The zero-human boundary and original unmet human gates remain unchanged. No regression was found within this two-finding follow-up.
+
+Preservation and limitations:
+The original review.txt, review.json and review_checks.json remain byte-identical to their recorded pre-follow-up bindings. The inspected frozen implementation sources have no diff against the baseline and match the original review's source bindings where recorded. This reviewer made no repository edits and wrote only followup.txt and followup.json in the assigned review directory.
+
+This was a read-only source/diff follow-up, not a repeat of the complete scientific review. I did not audit the concurrent author-checker/evidence/package changes, run experiments, inference, frozen test suites or cluster commands, contact authors, add subagents, perform human work, or use paid compute. No external searches were repeated. No compilation or rendered-layout review was performed. Closing F1/F2 does not close the original report's private-evidence, empirical, layout, literature, rights or global-novelty limitations, and is not a submission-readiness certificate.

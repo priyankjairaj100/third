@@ -8,7 +8,8 @@
     "Bounded author claim review clarified stable handles, empirical retry rejection, private-state access and scorer range proof; partial v4 compute statement added. Native compilation succeeded without repair.",
     "Pinned model identity, publisher attribution metadata and public/private replay limits added. Native compilation succeeded without repair;32 source bindings checked. Record-level attribution clearance remains unverified.",
     "Expanded historical compute ledger covers72 unique jobs and includes four failures; separate same-author arithmetic crosscheck matched all source rows and original32 array parent rows. Existing manuscript compiled successfully without repair.35 direct evidence bindings checked.",
-    "Available whole-document author review corrected introduction/conclusion status and added Schelter (2021) as a preprocessing-aware view-maintenance antecedent. Native compilation succeeded without repair;36 direct bindings and16 references checked. Independent review, two full-text comparisons and visual layout remain unresolved."
+    "Available whole-document author review corrected introduction/conclusion status and added Schelter (2021) as a preprocessing-aware view-maintenance antecedent. Native compilation succeeded without repair;36 direct bindings and16 references checked. Independent review, two full-text comparisons and visual layout remain unresolved.",
+    "Independent AI review found two implementation-description defects: strict kernel versus retry-normalizing service, and missing service request/lookup costs. Corrected in the same manuscript; independent scoped follow-up resolved both. Native compilation succeeded without repair;49 direct sources,20 historical review inputs and16 references checked. Prior source/reports preserved in immutable v4 archive. No new experiments or changed gates."
   ],
   "attribution_review_20261016.json": {
     "bytes": 10937,
@@ -16,17 +17,17 @@
   },
   "bibliography_entries_checked": 16,
   "claims_review_20261016.json": {
-    "bytes": 8655,
-    "sha256": "396b49b2d25b314a891440e58a843633952c0476a5634b364f632d813d258257"
+    "bytes": 9741,
+    "sha256": "3fea76740ac10f6f0bb0d8f387262e0b2945617490c3872f72b4806499dcdfb4"
   },
   "compile_verified": true,
   "compute_accounting_20261016.json": {
     "bytes": 4577,
-    "sha256": "877c866472a550850018d596857b503d307c663d69e883788a6594d619060c7b"
+    "sha256": "e922a85142a1c2d628c7c664e014b2da8e90588fa246e8707562b7fd9e2ab18f"
   },
   "compute_history_20261016.json": {
     "bytes": 36673,
-    "sha256": "027c8b8e994283d17e2c8a3adb8201a789778c6a1682dad686d761c9bbd11ba3"
+    "sha256": "bad69b6c456fd7b82f1afd2e240535b2d534a6e9415cf793eff67e8be44d4c9a"
   },
   "compute_receipts_extract_20261016.json": {
     "bytes": 8264,
@@ -34,10 +35,32 @@
   },
   "current_revision_source_repairs": 0,
   "evidence_20261016.json": {
-    "bytes": 15454,
-    "sha256": "688166d248014f923327529a2fd095a2094e7c0e29985b43ef41c858f52e735f"
+    "bytes": 19010,
+    "sha256": "7222c410d752169e356e256efd40ac47fbe92cb27d64847e687eb1873eae549c"
   },
   "historical_compute_nested_source_bindings": 33,
+  "independent_ai_followup_findings_resolved": 2,
+  "independent_ai_review_completed": true,
+  "independent_review_20261018.json": {
+    "bytes": 10519,
+    "sha256": "eb7156baa7f8bcca55ac947bf2778e6031e9b3092bae5a30e72010b9cfef1b93"
+  },
+  "independent_review_checks_20261018.json": {
+    "bytes": 15845,
+    "sha256": "e4562f2e3fbf7ce89ea6b6f064432063d0f2ee76b3660032b47ecc1ecd6f2eda"
+  },
+  "independent_review_followup_20261018.json": {
+    "bytes": 3039,
+    "sha256": "422e31d1b96e6d62c8dd5d5dade62d05dd48f148a2a1c9f60bdcc0f74f02029e"
+  },
+  "independent_review_followup_20261018.txt": {
+    "bytes": 4032,
+    "sha256": "329602cb847b9925213f5ced0b7b9ac705a103ee08114a8a1ee62c2074d14627"
+  },
+  "independent_review_report_20261018.txt": {
+    "bytes": 18640,
+    "sha256": "9218c155f6220fea78929a04f4f21335da1a76fe78101f908f7fea14b657db5b"
+  },
   "latex_installed_by_agent": false,
   "literature_contract_review_20261016.json": {
     "bytes": 4170,
@@ -48,7 +71,7 @@
     "message": "The current source compiled successfully with the desktop editor's compiler.",
     "path": "/Users/priyankjairaj/Downloads/ACL/Three/manuscript/third_working_draft.tex"
   },
-  "observed_utc": "2026-10-16T11:52:23.908144+00:00",
+  "observed_utc": "2026-10-18T03:29:26.705405+00:00",
   "open_in_codex_status": "already open as reported by user",
   "related_work_sources_20261016.json": {
     "bytes": 6165,
@@ -56,10 +79,10 @@
   },
   "schema": "third-manuscript-build-status-v1",
   "source_binding": {
-    "bytes": 55930,
-    "sha256": "c452d0682179394f18b5bc0dd05a6519ae4deff39b0fb8f02e54fa5200b93cc2"
+    "bytes": 57520,
+    "sha256": "f957a3ef723f0749692f6b77a6551c6792d4a4331d267ddc48c0d8c286dc9087"
   },
-  "source_bindings_checked": 36,
+  "source_bindings_checked": 49,
   "source_check_report": "evidence_20261016.json",
   "source_repairs": 2,
   "submission_ready": false,
@@ -68,6 +91,6 @@
     "bytes": 5703,
     "sha256": "f3406f6723cfd09082e3bb6f847221581799fa521028590d4620edff885c1abc"
   },
-  "visual_review_limitation": "Computer-use service failed to start (Sky Computer Use service startup request failed); native open_in_codex returned queued for this chat.",
+  "visual_review_limitation": "Native UI service failed to start again after user return on18 October; no rendered layout review performed. Compilation confirms source compilation only.",
   "visual_review_verified": false
 }

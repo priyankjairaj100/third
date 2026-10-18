@@ -1,3 +1,44 @@
+Latest continuation — 18 October 2026, 2026-10-18T03:30:15.717320+00:00
+
+INDEPENDENT AI MANUSCRIPT REVIEW COMPLETED AND CORRECTED.
+A fresh-context AI reviewer checked the unified manuscript and20 pinned inputs.
+Two supported implementation-description findings were corrected: distinguish
+strict integer-ID kernel rejection from the Phase5/6 service's retry no-ops;
+separate the abstract indexed core bound from full-ID lookup, request sorting,
+empty-call overhead and temporary lookup workspace. The same reviewer verified
+both corrections, with no regression found within that scoped follow-up.
+No additional defect was found in its bounded direct core-proof checks; this is
+manual AI review, not formal verification, private-evidence authentication or
+exhaustive novelty clearance. No human review occurred or is planned.
+
+See manuscript/independent_review_20261018.json and its narrative/follow-up.
+The original review and exact input basis remain preserved. The old unified
+AUTHOR review still refers to its old source; the earlier mistaken author retry
+claim remains visible in immutable release_20261016_v4.zip and is explicitly
+corrected in the current author report. Frozen Phase3–10 code remains unchanged.
+
+The SAME open manuscript compiled successfully.49 direct source bindings,
+20 archived review inputs and16 references passed. New immutable package
+manuscript/release_20261018_v1.zip, SHA256
+d9567681911dc8f7bcef27daf915e4c943ae8d42869ab4e348ffb3e2ab5f2443.
+97 payload files plus manifest passed CRC, exact hashes and public evidence
+replay from clean extraction. The original v4 archive is included solely as the
+historical review basis. No private text, pair labels, weights or third-party
+PDFs were added. Author checker/packaging changes were verified by the author,
+not represented as independently audited by the scientific reviewer.
+
+Controller remains terminal NEGATIVE; no restart, SSH attempt, Slurm job or
+model inference. Original human gates remain unmet. No retuning, selected
+threshold, fresh validation, downstream guard, effect or held-out study.
+Protected TODO/analysis locks remain unchanged. No empirical-completion claim.
+
+Existing scheduler continues at its recorded cadence. Do not duplicate the
+completed reviewer or rebuild unchanged artifacts. Remaining actionable work:
+rendered layout when native UI access works and the SSRN/Dominici full-text
+comparisons if new sources become accessible. Native UI startup failed again
+on user return; compilation does not verify layout. Submission readiness and
+original empirical-project completion remain false.
+
 Latest continuation — 16 October 2026, 2026-10-16T11:53:22.159322+00:00
 
 UNIFIED AUTHOR REVIEW AND PRIOR-WORK CORRECTION.

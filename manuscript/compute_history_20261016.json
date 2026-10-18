@@ -5,7 +5,7 @@
     "path": "manuscript/build_compute_history.py",
     "sha256": "778f91048e6e7f662c772677a174932aca3ee941c4e3178f3c638be98da2b28f"
   },
-  "created_utc": "2026-10-16T11:51:57.155860+00:00",
+  "created_utc": "2026-10-18T03:27:42.741849+00:00",
   "embedding_array_elapsed_hours_display": "133.20",
   "embedding_array_elapsed_seconds": 479503,
   "embedding_requested_cpu_times_elapsed_hours_display": "266.39",
@@ -1148,7 +1148,7 @@
     {
       "bytes": 4577,
       "path": "manuscript/compute_accounting_20261016.json",
-      "sha256": "877c866472a550850018d596857b503d307c663d69e883788a6594d619060c7b"
+      "sha256": "e922a85142a1c2d628c7c664e014b2da8e90588fa246e8707562b7fd9e2ab18f"
     },
     {
       "bytes": 8264,

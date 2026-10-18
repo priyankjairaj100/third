@@ -205,17 +205,20 @@ also does not imply bitwise equality of floating-point additions.
 The P-I method stores nonzero coefficient keys, inverse incidences from
 identifiers to keys, and degree buckets. Deleting $u$ touches only incident
 keys, removes $u$ from each key, combines collisions, removes zero values,
-and drops keys above the new horizon. The frozen empirical P-I interface
+and drops keys above the new horizon. The low-level integer-ID kernel
 rejects repeated, already deleted, invalid, and over-budget IDs before
-mutation. The earlier mathematical reference instead treats retries as
-no-ops; both apply the same substitution to valid fresh deletions.
+mutation. The frozen Phase 5/6 empirical service first deduplicates IDs and
+removes already deleted IDs, so retries are no-ops, including after budget
+exhaustion. It rejects invalid IDs and requests with too many fresh IDs.
+The earlier mathematical reference also treats retries as no-ops.
+These interfaces apply the same substitution to valid fresh deletions.
 The reference P-S method scans all keys. Both implement
 Equation~\eqref{eq:update} under the same numerical contract.
 
 For initial key count $M_0$, total key length $L_0$, statistic dimension
-$s$, and $Q$ supplied request IDs, define
-$\Phi_0=\sum_{J}|J|(|J|+1)/2$. The indexed algorithm has sequence-wide
-update cost
+$s$, and $Q$ supplied integer request IDs, define
+$\Phi_0=\sum_{J}|J|(|J|+1)/2$. The abstract indexed substitution core,
+with streamed IDs and excluding per-call overhead, has sequence-wide cost
 \begin{equation}\label{eq:work}
               O(Q+\Phi_0+sM_0)
               \subseteq O(Q+KL_0+sM_0),
@@ -224,8 +227,11 @@ under expected constant-time dictionary operations apart from tuple
 processing. Each key shrink consumes its triangular-length potential;
 merges and pruning delete entries and incidences. There are at most
 $L_0$ incidence touches and $M_0$ merges. Appendix~\ref{app:work}
-gives the accounting. Construction, model solves, bit complexity, and
-canonical serialization are additional costs. A single request can touch
+gives the accounting and the frozen service's additional full-ID lookup,
+request sorting, empty-call, and workspace costs. Construction, model
+solves, bit complexity, and canonical serialization are additional costs.
+Equation~\eqref{eq:work} is not an end-to-end bound for that Python service.
+A single request can touch
 all keys; there is no uniform sublinear per-request promise.
 
 \paragraph{Ridge target.}
@@ -773,8 +779,29 @@ identifier touches and incidence removals occur over the whole sequence.
 Each merge decreases key count, giving at most $M_0$ vector additions.
 A tuple shrink from size $j$ costs $O(j)$, and decreases its potential
 $j(j+1)/2$ by $j$. This charges tuple copying, hashing, and comparisons
-under the stated dictionary model. Input handling costs $O(Q)$, including
-repeated IDs. The resulting bound is Equation~\eqref{eq:work}.
+under the stated dictionary model. Streaming word-sized input IDs costs
+$O(Q)$, including retries, for the abstract reference algorithm, which
+does not sort requests. Per-call overhead adds $O(B)$ for $B$ calls; this
+is absorbed into $O(Q)$ only for nonempty calls. The resulting core bound
+is Equation~\eqref{eq:work}.
+
+The frozen empirical service has additional work. Let $N$ be its fixed
+public unit-ID count, and let call $b$ supply $q_b$ IDs with $f_b$ fresh
+unique IDs, so $Q=\sum_b q_b$. It reconstructs the $N$-entry lookup on
+every call and sorts the fresh IDs before invoking the kernel. Under
+unit-cost identifiers and expected constant-time hashing, its update cost is
+\[
+ O\!\left(B(N+1)+Q+\sum_b f_b\log(f_b+1)+\Phi_0+sM_0\right).
+\]
+Direct low-level calls on arbitrary unsorted lists instead have the bound
+\[
+ O\!\left(B+Q+\sum_b q_b\log(q_b+1)+\Phi_0+sM_0\right).
+\]
+The service supplies a sorted list to the kernel, so a second arbitrary-order
+sort is not charged. Its temporary lookup requires $O(N)$ words in addition
+to request containers and the core state. String decoding, hashing and
+comparison costs require separate byte accounting. Empty calls still cost
+work. These API costs must be included in complete lifecycle measurements.
 
 The coefficient values and incidence metadata occupy
 $O(sM_0+M_0+L_0)$ words, plus membership storage. Rational arithmetic

@@ -118,7 +118,13 @@ def main():
             verified.append({'path': name, **actual})
     tex = (HERE / 'third_working_draft.tex').read_text()
     need('all surviving inverse references remain attached to that handle' in tex, 'stable handle description')
-    need('rejects repeated, already deleted, invalid, and over-budget IDs' in tex, 'empirical retry semantics')
+    need('The low-level integer-ID kernel' in tex and
+         'rejects repeated, already deleted, invalid, and over-budget IDs' in tex,
+         'strict low-level retry semantics')
+    need('empirical service first deduplicates IDs' in tex and 'retries are no-ops' in tex,
+         'wrapper retry semantics')
+    need('B(N+1)+Q+' in tex and 'temporary lookup requires $O(N)$ words' in tex,
+         'service request overhead and workspace are separate from abstract core')
     need('earlier output, or external store counts toward the private state' in tex, 'private side information')
     need('magnitude at least $2^{-89}$' in tex, 'cancellation range argument')
     need('19,045 GPU-allocation seconds (5.29 hours)' in tex and '1,469 seconds, not CPU-core time' in tex,
@@ -127,6 +133,11 @@ def main():
     need('Surviving inverse references already point to this entry.' in implementation, 'source handle semantics')
     need('duplicate unit IDs within request' in implementation and 'request contains already deleted units' in implementation,
          'source retry semantics')
+    wrapper = (ROOT / 'empirical_execution/phase5/methods.py').read_text()
+    need('lookup={s:i for i,s in enumerate(self.unit_ids)}' in wrapper and
+         'fresh=sorted({lookup[i] for i in ids}&alive)' in wrapper and
+         "if self.method=='P-I':meter=self.state.delete(fresh)" in wrapper,
+         'service normalizes retries before strict kernel; static source check only')
     review = {'schema': 'third-unified-manuscript-author-claim-review-v1', 'created_utc': now,
               'reviewer_kind': 'Author AI assistant source comparison and receipt arithmetic; not a new independent manuscript review.',
               'review_passed_in_stated_scope': True, 'new_independent_proof_review': False,
@@ -136,15 +147,17 @@ def main():
               'builder': source('manuscript/build_review.py'),
               'additional_sources': [source(n) for n in [
                   'output/pdf/counterfactual_curation_theory.tex', 'empirical_execution/ccu/summary.py',
+                  'empirical_execution/phase5/methods.py', 'empirical_execution/phase6/methods.py',
+                  'empirical_execution/phase6/check_state_audit_semantics.py', 'algorithm_round2.py',
                   'manuscript/compute_accounting_20261016.json', terminal_name,
                   'manuscript/literature_contract_review_20261016.json']],
               'resolved_findings': [
                   {'id': 'R1', 'issue': 'Appendix description could imply rebuilding surviving inverse incidences, contradicting its token accounting.',
                    'resolution': 'Specify stable-handle moves; remove only the deleted incidence unless an entry is retired by merge/pruning.',
                    'source_locator': 'counterfactual_curation_theory.tex indexed algorithm; ccu/summary.py _delete_one'},
-                  {'id': 'R2', 'issue': 'Draft conflated mathematical reference retry no-ops with the frozen empirical P-I interface.',
-                   'resolution': 'State atomic rejection of duplicate/already-deleted IDs in empirical P-I and preserve the distinct earlier reference policy.',
-                   'source_locator': 'ccu/summary.py IndexedSummary.delete; counterfactual_curation_theory.tex algorithm semantics'},
+                  {'id': 'R2', 'issue': 'The earlier author review wrongly extended the strict integer-ID kernel policy to the retry-normalizing empirical service.',
+                   'resolution': 'Following independent findings F1/F2 on 18 October, distinguish strict kernel from Phase5/6 wrapper retry no-ops and disclose lookup, sorting, empty-call and workspace overhead. Original author report is retained in release_20261016_v4.zip.',
+                   'source_locator': 'ccu/summary.py IndexedRidgeSummary.delete; phase5/methods.py SummaryService.delete; phase6 dispatch and retry audit; algorithm_round2.py'},
                   {'id': 'R3', 'issue': 'The private-state access model was less explicit than the frozen proof.',
                    'resolution': 'Charge all usable sign-dependent auxiliary stores/outputs and forbid uncharged retained-candidate rereads; fix public contract independently.',
                    'source_locator': 'FINITE_WORD_THEORY.md Section2 and FINITE_WORD_REVIEW.md exact finite-state identification'},
@@ -154,7 +167,7 @@ def main():
               'checked_claim_boundaries': [
                   'Earlier raw-neighbor suppression; fixed representation, graph eligibility, order and threshold.',
                   'Truncated substitution uses remaining cumulative budget and exact arithmetic.',
-                  'Indexed work excludes construction, decoding, output serialization and arbitrary-precision bit costs.',
+                  'Abstract indexed core work is distinct from service lookup/sorting/empty-call overhead and O(N) temporary lookup; construction, decoding, output serialization and arbitrary-precision bit costs remain additional.',
                   'Ridge uses stored raw features, selected-count regularization, no intercept and prescribed empty head.',
                   'Finite family has public binary labels/blocker payloads and bounded FP32 dimension regime.',
                   'Exact mD and fixed-F e(F)D count private information; metadata, padding, outputs and workspace remain additional.',
@@ -164,7 +177,7 @@ def main():
                   'Completed v4 failure blocks downstream experiments; no effect, speed or total-byte advantage is claimed.',
                   'Partial compute record counts each saved parent job once and includes the failed audit.'],
               'remaining_review_limits': [
-                  'No proof assistant or new independent unified manuscript review.',
+                  'This author checker performs no proof-assistant or independent review; the separate 18 October AI review and follow-up have their own exact source bindings.',
                   'Visual layout remains unverified; native computer-use service was unavailable at the earlier attempt.',
                   'Two close-prior full-text comparisons remain unresolved; no exhaustive novelty clearance.',
                   'No complete project compute/energy budget or raw-data redistribution clearance.',

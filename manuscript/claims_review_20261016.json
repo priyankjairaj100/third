@@ -11,9 +11,29 @@
       "sha256": "4ba0f4ad3cf386f2493461d4924c6fda6467a6399f266a13f61f4966cef3e498"
     },
     {
+      "bytes": 24795,
+      "path": "empirical_execution/phase5/methods.py",
+      "sha256": "75294db32fe8ed7976a24fe95de76eccbb5e611aeb870ea49760cbbf11d10691"
+    },
+    {
+      "bytes": 18563,
+      "path": "empirical_execution/phase6/methods.py",
+      "sha256": "1bd87879b3ed3d692466362f914d63c0b8f74b3048abc34a76e80c2629f15606"
+    },
+    {
+      "bytes": 15044,
+      "path": "empirical_execution/phase6/check_state_audit_semantics.py",
+      "sha256": "872facf85b291c60b368f437c63477017194a84b0b83f9e7abb32e28d312bb3d"
+    },
+    {
+      "bytes": 17649,
+      "path": "algorithm_round2.py",
+      "sha256": "6e8864f6df77c666606fba2fa540078df24628f69c7cb50380175dc71456ba7c"
+    },
+    {
       "bytes": 4577,
       "path": "manuscript/compute_accounting_20261016.json",
-      "sha256": "877c866472a550850018d596857b503d307c663d69e883788a6594d619060c7b"
+      "sha256": "e922a85142a1c2d628c7c664e014b2da8e90588fa246e8707562b7fd9e2ab18f"
     },
     {
       "bytes": 85149,
@@ -27,14 +47,14 @@
     }
   ],
   "builder": {
-    "bytes": 12513,
+    "bytes": 13852,
     "path": "manuscript/build_review.py",
-    "sha256": "ad91a8f43fa5183c60a5c0b738085a964d0896c8e3a3dcd20b908cfbc6d12d56"
+    "sha256": "3ed6c71a78567aeaa65fc2fa5562f020470e4656f0f9c53f8be8733da3e44770"
   },
   "checked_claim_boundaries": [
     "Earlier raw-neighbor suppression; fixed representation, graph eligibility, order and threshold.",
     "Truncated substitution uses remaining cumulative budget and exact arithmetic.",
-    "Indexed work excludes construction, decoding, output serialization and arbitrary-precision bit costs.",
+    "Abstract indexed core work is distinct from service lookup/sorting/empty-call overhead and O(N) temporary lookup; construction, decoding, output serialization and arbitrary-precision bit costs remain additional.",
     "Ridge uses stored raw features, selected-count regularization, no intercept and prescribed empty head.",
     "Finite family has public binary labels/blocker payloads and bounded FP32 dimension regime.",
     "Exact mD and fixed-F e(F)D count private information; metadata, padding, outputs and workspace remain additional.",
@@ -44,7 +64,7 @@
     "Completed v4 failure blocks downstream experiments; no effect, speed or total-byte advantage is claimed.",
     "Partial compute record counts each saved parent job once and includes the failed audit."
   ],
-  "created_utc": "2026-10-16T11:51:57.098879+00:00",
+  "created_utc": "2026-10-18T03:27:36.085133+00:00",
   "frozen_sources_changed": false,
   "historical_independent_review": {
     "bytes": 6971,
@@ -145,14 +165,14 @@
   ],
   "human_annotation_calls": 0,
   "manuscript": {
-    "bytes": 55930,
+    "bytes": 57520,
     "path": "manuscript/third_working_draft.tex",
-    "sha256": "c452d0682179394f18b5bc0dd05a6519ae4deff39b0fb8f02e54fa5200b93cc2"
+    "sha256": "f957a3ef723f0749692f6b77a6551c6792d4a4331d267ddc48c0d8c286dc9087"
   },
   "new_empirical_experiments": 0,
   "new_independent_proof_review": false,
   "remaining_review_limits": [
-    "No proof assistant or new independent unified manuscript review.",
+    "This author checker performs no proof-assistant or independent review; the separate 18 October AI review and follow-up have their own exact source bindings.",
     "Visual layout remains unverified; native computer-use service was unavailable at the earlier attempt.",
     "Two close-prior full-text comparisons remain unresolved; no exhaustive novelty clearance.",
     "No complete project compute/energy budget or raw-data redistribution clearance.",
@@ -167,9 +187,9 @@
     },
     {
       "id": "R2",
-      "issue": "Draft conflated mathematical reference retry no-ops with the frozen empirical P-I interface.",
-      "resolution": "State atomic rejection of duplicate/already-deleted IDs in empirical P-I and preserve the distinct earlier reference policy.",
-      "source_locator": "ccu/summary.py IndexedSummary.delete; counterfactual_curation_theory.tex algorithm semantics"
+      "issue": "The earlier author review wrongly extended the strict integer-ID kernel policy to the retry-normalizing empirical service.",
+      "resolution": "Following independent findings F1/F2 on 18 October, distinguish strict kernel from Phase5/6 wrapper retry no-ops and disclose lookup, sorting, empty-call and workspace overhead. Original author report is retained in release_20261016_v4.zip.",
+      "source_locator": "ccu/summary.py IndexedRidgeSummary.delete; phase5/methods.py SummaryService.delete; phase6 dispatch and retry audit; algorithm_round2.py"
     },
     {
       "id": "R3",

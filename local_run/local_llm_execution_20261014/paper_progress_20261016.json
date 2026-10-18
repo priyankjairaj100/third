@@ -104,6 +104,11 @@
       "evidence": "manuscript/unified_review_20261016.json",
       "limit": "Author consistency review only. No new independent scientific review, exhaustive novelty clearance, rendered layout verification or empirical effect result.",
       "work": "Available unified author read-through, corrected negative-calibration framing and Schelter (2021) prior-work credit; existing manuscript compiled and86-file v4 package passed clean-extraction replay"
+    },
+    {
+      "evidence": "manuscript/independent_review_20261018.json",
+      "limit": "Manual AI reasoning and public aggregate arithmetic only. No formal verification, private-data replay, rendered layout review, exhaustive novelty clearance or completed natural effect study.",
+      "work": "Independent AI unified manuscript review and scoped follow-up resolved two source-description defects; same manuscript compiled and97-file package plus manifest passed clean-extraction replay"
     }
   ],
   "continuous_execution": {
@@ -128,7 +133,7 @@
   },
   "fully_llm_annotation": true,
   "human_review_required": false,
-  "observed_utc": "2026-10-16T11:53:22.159322+00:00",
+  "observed_utc": "2026-10-18T03:30:15.717320+00:00",
   "original_registry": {
     "core": 16912,
     "extensions": 4420,
@@ -142,10 +147,10 @@
   "primary_semantic_study_started": false,
   "remaining": [
     {
-      "limit": "Available author review and bounded package are complete; no repeat of unchanged checks as new progress. Submission readiness remains false.",
+      "limit": "Independent AI manuscript review is complete; no duplicate review or repeated unchanged rebuild as progress. Submission readiness remains false.",
       "order": 1,
-      "state": "awaiting_accessible_full_texts_or_review_capability",
-      "work": "Visual layout, independent unified manuscript review and the two unresolved close-prior full-text comparisons"
+      "state": "awaiting_accessible_full_texts_or_native_layout_capability",
+      "work": "Rendered visual layout and two unresolved close-prior full-text comparisons"
     },
     {
       "limit": "No threshold, prompt, judge or representation retuning. Preserve unexecuted scope and all original unmet gates.",

@@ -1,6 +1,6 @@
 Third: bounded public manuscript and evidence package
 
-This package contains the current standalone manuscript, author evidence checker,
+This package contains the current standalone manuscript, independent AI review, author evidence checker,
 aggregate reports, frozen source documents, and historical review bindings needed
 for the public source/claim check. It is not a full empirical replay archive or
 a submission-ready release. Both completed LLM calibration versions failed their
@@ -13,7 +13,8 @@ The expanded historical compute arithmetic can also be checked separately:
   python3 -B manuscript/build_compute_history.py --check
 
 This standard-library Python check verifies citations/references, source hashes,
-reported counts, the displayed calibration table, the bounded author review and
+reported counts, the displayed calibration table, source bindings for the separate
+independent review and its historical input archive, the bounded author review and
 partial compute ledger. It regenerates evidence_20261016.json with a new creation
 time. It does not execute inference, rejudge labels, prove theorems, or establish
 raw source authenticity. The package build verifies this command in a fresh
@@ -71,8 +72,17 @@ not a demonstrated guarantee of bitwise inference across hardware or runtimes.
 Scientific limits:
 The exact theorem concerns a constructed finite-format family and counts private
 information under its access model, not total deployment bytes or natural NLP
-utility. The historical proof-review receipt is source-bound; this manuscript's
-new reconciliation is an author review, not a new independent proof review.
+utility. The historical proof-review receipt remains source-bound. The separate
+18 October independent AI review checks specified arguments and public aggregate
+arithmetic, with a follow-up on two manuscript corrections. It is manual review,
+not formal verification, exhaustive novelty clearance or private-data authentication.
+The author checker verifies review provenance; it does not reproduce the reviewer's
+reasoning. The old author reports and pre-correction manuscript are preserved in
+the included immutable release_20261016_v4.zip. Its20 original review inputs are
+hash-checked, rather than falsely rebinding old reviews to the corrected source.
+The public narrative review copy replaces only the local repository-path header
+with the GitHub URL. The original report's hash and that transformation are recorded.
+The follow-up and arithmetic report are copied without changes.
 The original compute_accounting_20261016.json covers six saved v4 jobs.
 compute_history_20261016.json expands the included subset to72 unique jobs:
 six successful model jobs,32 E5 encoding/replay tasks and34 other stages.

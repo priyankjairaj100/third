@@ -1,21 +1,21 @@
 {
   "schema": "third-working-manuscript-evidence-v1",
-  "created_utc": "2026-10-16T11:51:57.240033+00:00",
+  "created_utc": "2026-10-18T03:29:07.568190+00:00",
   "manuscript": {
     "path": "manuscript/third_working_draft.tex",
-    "bytes": 55930,
-    "sha256": "c452d0682179394f18b5bc0dd05a6519ae4deff39b0fb8f02e54fa5200b93cc2"
+    "bytes": 57520,
+    "sha256": "f957a3ef723f0749692f6b77a6551c6792d4a4331d267ddc48c0d8c286dc9087"
   },
   "checker": {
     "path": "manuscript/build_evidence.py",
-    "bytes": 19750,
-    "sha256": "1eef21c6d74128331ff8f05865257307582f4e53949c283deee17b8c8166beb9"
+    "bytes": 23036,
+    "sha256": "9dbdaa610aac4b6adf9613c2d8367e6027c90b8ee5039949ea02c09677110730"
   },
   "source_claim_check_passed": true,
   "reviewer_kind": "author AI assistant source and arithmetic check; not independent manuscript review",
   "standalone_source": true,
   "bibliography_entries": 16,
-  "references_checked": 16,
+  "references_checked": 17,
   "source_bindings": [
     {
       "path": "output/pdf/counterfactual_curation_theory.tex",
@@ -139,18 +139,18 @@
     },
     {
       "path": "manuscript/claims_review_20261016.json",
-      "bytes": 8655,
-      "sha256": "396b49b2d25b314a891440e58a843633952c0476a5634b364f632d813d258257"
+      "bytes": 9741,
+      "sha256": "3fea76740ac10f6f0bb0d8f387262e0b2945617490c3872f72b4806499dcdfb4"
     },
     {
       "path": "manuscript/compute_accounting_20261016.json",
       "bytes": 4577,
-      "sha256": "877c866472a550850018d596857b503d307c663d69e883788a6594d619060c7b"
+      "sha256": "e922a85142a1c2d628c7c664e014b2da8e90588fa246e8707562b7fd9e2ab18f"
     },
     {
       "path": "manuscript/build_review.py",
-      "bytes": 12513,
-      "sha256": "ad91a8f43fa5183c60a5c0b738085a964d0896c8e3a3dcd20b908cfbc6d12d56"
+      "bytes": 13852,
+      "sha256": "3ed6c71a78567aeaa65fc2fa5562f020470e4656f0f9c53f8be8733da3e44770"
     },
     {
       "path": "manuscript/attribution_review_20261016.json",
@@ -180,7 +180,7 @@
     {
       "path": "manuscript/compute_history_20261016.json",
       "bytes": 36673,
-      "sha256": "027c8b8e994283d17e2c8a3adb8201a789778c6a1682dad686d761c9bbd11ba3"
+      "sha256": "bad69b6c456fd7b82f1afd2e240535b2d534a6e9415cf793eff67e8be44d4c9a"
     },
     {
       "path": "manuscript/compute_receipts_extract_20261016.json",
@@ -196,6 +196,71 @@
       "path": "manuscript/unified_review_20261016.json",
       "bytes": 5703,
       "sha256": "f3406f6723cfd09082e3bb6f847221581799fa521028590d4620edff885c1abc"
+    },
+    {
+      "path": "manuscript/independent_review_20261018.json",
+      "bytes": 10519,
+      "sha256": "eb7156baa7f8bcca55ac947bf2778e6031e9b3092bae5a30e72010b9cfef1b93"
+    },
+    {
+      "path": "manuscript/independent_review_report_20261018.txt",
+      "bytes": 18640,
+      "sha256": "9218c155f6220fea78929a04f4f21335da1a76fe78101f908f7fea14b657db5b"
+    },
+    {
+      "path": "manuscript/independent_review_checks_20261018.json",
+      "bytes": 15845,
+      "sha256": "e4562f2e3fbf7ce89ea6b6f064432063d0f2ee76b3660032b47ecc1ecd6f2eda"
+    },
+    {
+      "path": "manuscript/independent_review_followup_20261018.txt",
+      "bytes": 4032,
+      "sha256": "329602cb847b9925213f5ced0b7b9ac705a103ee08114a8a1ee62c2074d14627"
+    },
+    {
+      "path": "manuscript/independent_review_followup_20261018.json",
+      "bytes": 3039,
+      "sha256": "422e31d1b96e6d62c8dd5d5dade62d05dd48f148a2a1c9f60bdcc0f74f02029e"
+    },
+    {
+      "path": "manuscript/release_20261016_v4.zip",
+      "bytes": 378563,
+      "sha256": "e76a88eff67c140b636bacc4b1218f42fe1a7e19b4432dd49741a80340b09262"
+    },
+    {
+      "path": "empirical_execution/ccu/summary.py",
+      "bytes": 24421,
+      "sha256": "4ba0f4ad3cf386f2493461d4924c6fda6467a6399f266a13f61f4966cef3e498"
+    },
+    {
+      "path": "empirical_execution/phase5/methods.py",
+      "bytes": 24795,
+      "sha256": "75294db32fe8ed7976a24fe95de76eccbb5e611aeb870ea49760cbbf11d10691"
+    },
+    {
+      "path": "empirical_execution/phase6/methods.py",
+      "bytes": 18563,
+      "sha256": "1bd87879b3ed3d692466362f914d63c0b8f74b3048abc34a76e80c2629f15606"
+    },
+    {
+      "path": "empirical_execution/phase6/check_state_audit_semantics.py",
+      "bytes": 15044,
+      "sha256": "872facf85b291c60b368f437c63477017194a84b0b83f9e7abb32e28d312bb3d"
+    },
+    {
+      "path": "empirical_execution/phase3/panels.py",
+      "bytes": 20216,
+      "sha256": "bd2409958ac9a9e27faf463b44b2f839260a3195c7cde32fb3bfb76aeb14a04b"
+    },
+    {
+      "path": "empirical_execution/phase10/finite_word_codec.py",
+      "bytes": 16833,
+      "sha256": "d3884acc201f80fd3a967db13292f1f1ffbee579bd0c65bf22284ae8877d8456"
+    },
+    {
+      "path": "algorithm_round2.py",
+      "bytes": 17649,
+      "sha256": "6e8864f6df77c666606fba2fa540078df24628f69c7cb50380175dc71456ba7c"
     }
   ],
   "claims": [
@@ -304,7 +369,7 @@
         "app:scorer",
         "app:repro"
       ],
-      "claim": "Author claim comparison, four resolved descriptions, historical independent-review source checks, and partial v4 compute accounting",
+      "claim": "Author claim comparison, including corrected kernel/service distinction, historical review source checks, and partial v4 compute accounting",
       "sources": [
         "manuscript/claims_review_20261016.json",
         "manuscript/compute_accounting_20261016.json",
@@ -354,6 +419,29 @@
         "local_run/local_llm_execution_20261014/llm_selection_v4_terminal_result.json"
       ],
       "limit": "Bounded author consistency review, not independent proof review or exhaustive novelty clearance. Two close-prior full texts and visual layout remain unverified."
+    },
+    {
+      "sections": [
+        "sec:method",
+        "app:work"
+      ],
+      "claim": "Independent AI manuscript review and verified correction of retry semantics and service request overhead",
+      "sources": [
+        "manuscript/independent_review_20261018.json",
+        "manuscript/independent_review_report_20261018.txt",
+        "manuscript/independent_review_checks_20261018.json",
+        "manuscript/independent_review_followup_20261018.txt",
+        "manuscript/independent_review_followup_20261018.json",
+        "manuscript/release_20261016_v4.zip",
+        "empirical_execution/ccu/summary.py",
+        "empirical_execution/phase5/methods.py",
+        "empirical_execution/phase6/methods.py",
+        "empirical_execution/phase6/check_state_audit_semantics.py",
+        "empirical_execution/phase3/panels.py",
+        "empirical_execution/phase10/finite_word_codec.py",
+        "algorithm_round2.py"
+      ],
+      "limit": "Manual AI review of specified claims and public aggregates, not formal proof, private-evidence authentication, complete literature clearance or rendered-layout review. Original report and old manuscript basis are preserved."
     }
   ],
   "fixed_cutoff": "16 October 2026; terminal v4 negative at09:52:01UTC; downstream work blocked under this configuration",
@@ -364,7 +452,7 @@
   "submission_ready": false,
   "not_verified_here": [
     "Native compilation and visual layout are tracked separately in BUILD_STATUS.json",
-    "No new independent proof or scientific audit",
+    "The checker binds the separate independent AI review; it does not perform or reproduce that reasoning",
     "No native solver certificate",
     "No model agreement validation, effect experiment, or held-out utility",
     "No full literature novelty clearance",

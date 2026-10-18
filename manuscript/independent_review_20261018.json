@@ -1,0 +1,261 @@
+{
+  "additional_defects_found_in_scoped_core_review": false,
+  "completed_utc": "2026-10-18T03:28:51.786542+00:00",
+  "current_manuscript": {
+    "bytes": 57520,
+    "path": "manuscript/third_working_draft.tex",
+    "sha256": "f957a3ef723f0749692f6b77a6551c6792d4a4331d267ddc48c0d8c286dc9087"
+  },
+  "findings": [
+    {
+      "author_accepted": true,
+      "evidence": [
+        "empirical_execution/ccu/summary.py:336-352",
+        "empirical_execution/phase5/methods.py:97-105",
+        "empirical_execution/phase6/methods.py:96-105,233-255,276-288",
+        "empirical_execution/phase6/check_state_audit_semantics.py:82-84,190-194",
+        "manuscript/build_review.py:126-129"
+      ],
+      "id": "F1",
+      "independent_followup_resolved": true,
+      "kind": "confirmed_source_description_defect",
+      "manuscript_lines": [
+        208,
+        211
+      ],
+      "resolution": "Strict integer-ID kernel distinguished from retry-normalizing Phase 5/6 service and earlier reference.",
+      "severity": "medium",
+      "title": "Distinguish strict low-level kernel from retry-normalizing empirical service"
+    },
+    {
+      "assumptions": "B API calls, N fixed public IDs, q_b supplied IDs, f_b fresh IDs, Q=sum q_b; expected hashing and unit-cost word identifiers; string/bit costs additional. No second arbitrary-order sort for kernel fed sorted wrapper list.",
+      "author_accepted": true,
+      "evidence": [
+        "empirical_execution/ccu/summary.py:299-350",
+        "empirical_execution/phase5/methods.py:97-105",
+        "algorithm_round2.py:157-175"
+      ],
+      "id": "F2",
+      "independent_followup_resolved": true,
+      "kind": "missing_implementation_cost_qualification",
+      "manuscript_lines": [
+        215,
+        229,
+        770,
+        777
+      ],
+      "resolution": "Abstract core separated from B(N+1), lookup/sorting, empty-call, string/bit and workspace costs; no duplicate arbitrary-order sort charge.",
+      "safe_direct_kernel_bound": "O(B + Q + sum_b q_b log(q_b+1) + Phi0 + s M0)",
+      "safe_wrapper_bound": "O(B(N+1) + sum_b[q_b + f_b log(f_b+1)] + Phi0 + s M0)",
+      "severity": "medium",
+      "title": "Separate abstract indexed update work from request sorting and full-ID lookup overhead"
+    }
+  ],
+  "followup_completed": true,
+  "followup_scope": "F1/F2 manuscript corrections only; concurrent author checker and packaging not reviewed by the independent agent.",
+  "frozen_sources_edited": false,
+  "historical_author_review_preserved": "unified_review_20261016.json remains unchanged and bound to pre-correction manuscript. Earlier claims_review_20261016.json is retained exactly in the immutable prior archive; current author report explicitly corrects its earlier R2 claim.",
+  "historical_base_commit": "3510d0e932c25422e8b695b5aad005cff05e255b",
+  "historical_input_archive": {
+    "bytes": 378563,
+    "path": "manuscript/release_20261016_v4.zip",
+    "sha256": "e76a88eff67c140b636bacc4b1218f42fe1a7e19b4432dd49741a80340b09262"
+  },
+  "historical_input_bindings": [
+    {
+      "bytes": 55930,
+      "path": "manuscript/third_working_draft.tex",
+      "sha256": "c452d0682179394f18b5bc0dd05a6519ae4deff39b0fb8f02e54fa5200b93cc2"
+    },
+    {
+      "bytes": 15454,
+      "path": "manuscript/evidence_20261016.json",
+      "sha256": "688166d248014f923327529a2fd095a2094e7c0e29985b43ef41c858f52e735f"
+    },
+    {
+      "bytes": 8655,
+      "path": "manuscript/claims_review_20261016.json",
+      "sha256": "396b49b2d25b314a891440e58a843633952c0476a5634b364f632d813d258257"
+    },
+    {
+      "bytes": 5703,
+      "path": "manuscript/unified_review_20261016.json",
+      "sha256": "f3406f6723cfd09082e3bb6f847221581799fa521028590d4620edff885c1abc"
+    },
+    {
+      "bytes": 10937,
+      "path": "manuscript/attribution_review_20261016.json",
+      "sha256": "23cfad560cee0a0829844b53efc081a76df1f57e80f8282d3e8e8495cc69c709"
+    },
+    {
+      "bytes": 4170,
+      "path": "manuscript/literature_contract_review_20261016.json",
+      "sha256": "d92b8abbf65753bd5f74fe58c5d7d3892eea3685093cf3d6c006a0e3f12f6a1a"
+    },
+    {
+      "bytes": 6165,
+      "path": "manuscript/related_work_sources_20261016.json",
+      "sha256": "da0ffd0e0d4b6d8830a5d879a50814b8e29be000434be67d2577b33ef7d1cceb"
+    },
+    {
+      "bytes": 36673,
+      "path": "manuscript/compute_history_20261016.json",
+      "sha256": "027c8b8e994283d17e2c8a3adb8201a789778c6a1682dad686d761c9bbd11ba3"
+    },
+    {
+      "bytes": 6847,
+      "path": "manuscript/REPRODUCIBILITY.txt",
+      "sha256": "ecea04b2df12f21170077a0a25e298905f6e13cecb17f7bd2d29d8980d2c4ea5"
+    },
+    {
+      "bytes": 109926,
+      "path": "output/pdf/counterfactual_curation_theory.tex",
+      "sha256": "8e7662935d0caf6cddede9cd12460d1362c67fddc227d8051424e4dce51d61aa"
+    },
+    {
+      "bytes": 13650,
+      "path": "empirical_execution/canonical_theory_addendum.tex",
+      "sha256": "54c933dcf5b3382824dcc2cfeee373a15435771cd79ede33d175da8339e774c2"
+    },
+    {
+      "bytes": 16444,
+      "path": "empirical_execution/phase10/finite_word_theory.tex",
+      "sha256": "c0afedb46c232444bf6b5165ebc492b630fe5255e25d16dde66f5c105d59f6cd"
+    },
+    {
+      "bytes": 12002,
+      "path": "empirical_execution/phase10/SCORER_TRANSFER.md",
+      "sha256": "ee9025a29a8071507c0ea331f9f7a06a38e879b1bf1bb7d6058c5701103f7b0a"
+    },
+    {
+      "bytes": 14399,
+      "path": "empirical_execution/phase10/FINITE_WORD_REVIEW.md",
+      "sha256": "014da1fa3672fe311fe45795d7470d0662e303bceb8c515522c5360d96c3efa1"
+    },
+    {
+      "bytes": 11472,
+      "path": "empirical_execution/phase10/CODEC.md",
+      "sha256": "29aacce59369e1b9eea8edd6bc7dece217214ddd1ef521e1747ea93499744d15"
+    },
+    {
+      "bytes": 8239,
+      "path": "empirical_execution/phase10/CODEC_REVIEW.md",
+      "sha256": "5605287126afd7ff1dce67abd60dc67d89047d78b64ccda74b378b8acce53912"
+    },
+    {
+      "bytes": 16694,
+      "path": "local_run/model_annotation_v4_20261014/PLAN.json",
+      "sha256": "10ebb3cb8f872c2efaf69306ca5bb23dcec2a015b2747988aafa31485dbbdcae"
+    },
+    {
+      "bytes": 37823,
+      "path": "local_run/local_llm_execution_20261014/llm_selection_v3_terminal_result.json",
+      "sha256": "48979e72e212d2a7e6bdd4966f32ed1f36b422ca3ae1f48a70c80e6f4b0929eb"
+    },
+    {
+      "bytes": 85149,
+      "path": "local_run/local_llm_execution_20261014/llm_selection_v4_terminal_result.json",
+      "sha256": "961f1ab1b07b98d3c814d06e25d7825f2afee5422fca67c309d4a379c7793f86"
+    },
+    {
+      "bytes": 39226,
+      "path": "local_run/local_llm_execution_20261014/llm_v4_negative_diagnostics_20261016.json",
+      "sha256": "db31edff00875ba4a29a4f50d288bc3257beefd32f31555a09d9b3ad683a1651"
+    }
+  ],
+  "human_annotation_calls": 0,
+  "human_gates_satisfied": false,
+  "human_review": false,
+  "new_experiments": 0,
+  "novelty_clearance": false,
+  "original_private_review": {
+    "bytes": 18639,
+    "sha256": "5ecd469a00edabe6a14b13d80936f1c01dcfcd7fafc48cc4a0b529e1ad89e527"
+  },
+  "private_observations_replayed_by_this_reviewer": false,
+  "proof_assistant_verified": false,
+  "public_report_transformation": "Only Repository header local absolute path replaced with existing GitHub repository URL. All findings, reasoning and limitations unchanged.",
+  "remaining_gaps": [
+    "Rendered layout review; native UI service unavailable",
+    "SSRN counterfactual-auditing full-text comparison",
+    "Dominici thesis full-text comparison"
+  ],
+  "review_artifacts": [
+    {
+      "bytes": 18640,
+      "path": "manuscript/independent_review_report_20261018.txt",
+      "sha256": "9218c155f6220fea78929a04f4f21335da1a76fe78101f908f7fea14b657db5b"
+    },
+    {
+      "bytes": 15845,
+      "path": "manuscript/independent_review_checks_20261018.json",
+      "sha256": "e4562f2e3fbf7ce89ea6b6f064432063d0f2ee76b3660032b47ecc1ecd6f2eda"
+    },
+    {
+      "bytes": 4032,
+      "path": "manuscript/independent_review_followup_20261018.txt",
+      "sha256": "329602cb847b9925213f5ced0b7b9ac705a103ee08114a8a1ee62c2074d14627"
+    },
+    {
+      "bytes": 3039,
+      "path": "manuscript/independent_review_followup_20261018.json",
+      "sha256": "422e31d1b96e6d62c8dd5d5dade62d05dd48f148a2a1c9f60bdcc0f74f02029e"
+    }
+  ],
+  "review_limits": [
+    "No private-observation or scheduler-original replay",
+    "No rendered layout review",
+    "SSRN and Dominici full texts remain unresolved",
+    "No exhaustive novelty or legal/attribution clearance",
+    "Manual bounded AI reasoning, not formal verification.",
+    "ARCANE detailed full-text comparison not independently refreshed in this review; prior author source-bound comparison remains.",
+    "Original natural-text effect study remains unexecuted and blocked by negative calibration."
+  ],
+  "reviewed_manuscript": {
+    "bytes": 55930,
+    "path": "manuscript/third_working_draft.tex",
+    "sha256": "c452d0682179394f18b5bc0dd05a6519ae4deff39b0fb8f02e54fa5200b93cc2"
+  },
+  "reviewer_context": "Separate fresh-context agent; author assessed and corrected findings; same reviewer performed scoped follow-up.",
+  "reviewer_kind": "independent AI scientific manuscript review",
+  "schema": "third-independent-ai-manuscript-review-resolution-v1",
+  "scientific_gates_changed": false,
+  "source_bindings": [
+    {
+      "bytes": 24421,
+      "path": "empirical_execution/ccu/summary.py",
+      "sha256": "4ba0f4ad3cf386f2493461d4924c6fda6467a6399f266a13f61f4966cef3e498"
+    },
+    {
+      "bytes": 24795,
+      "path": "empirical_execution/phase5/methods.py",
+      "sha256": "75294db32fe8ed7976a24fe95de76eccbb5e611aeb870ea49760cbbf11d10691"
+    },
+    {
+      "bytes": 18563,
+      "path": "empirical_execution/phase6/methods.py",
+      "sha256": "1bd87879b3ed3d692466362f914d63c0b8f74b3048abc34a76e80c2629f15606"
+    },
+    {
+      "bytes": 15044,
+      "path": "empirical_execution/phase6/check_state_audit_semantics.py",
+      "sha256": "872facf85b291c60b368f437c63477017194a84b0b83f9e7abb32e28d312bb3d"
+    },
+    {
+      "bytes": 20216,
+      "path": "empirical_execution/phase3/panels.py",
+      "sha256": "bd2409958ac9a9e27faf463b44b2f839260a3195c7cde32fb3bfb76aeb14a04b"
+    },
+    {
+      "bytes": 16833,
+      "path": "empirical_execution/phase10/finite_word_codec.py",
+      "sha256": "d3884acc201f80fd3a967db13292f1f1ffbee579bd0c65bf22284ae8877d8456"
+    },
+    {
+      "bytes": 17649,
+      "path": "algorithm_round2.py",
+      "sha256": "6e8864f6df77c666606fba2fa540078df24628f69c7cb50380175dc71456ba7c"
+    }
+  ],
+  "submission_ready": false
+}

@@ -36,6 +36,7 @@ def main():
     author = read('manuscript/claims_review_20261016.json')
     compute = read('manuscript/compute_accounting_20261016.json')
     history = read('manuscript/compute_history_20261016.json')
+    independent = read('manuscript/independent_review_20261018.json')
     build = read('manuscript/BUILD_STATUS.json')
     assert build['compile_verified'] and build['source_binding'] == binding(ROOT / 'manuscript/third_working_draft.tex')
     bound = evidence['source_bindings'] + [evidence['manuscript'], evidence['checker']]
@@ -57,12 +58,13 @@ def main():
     allowed_roots = ('manuscript/', 'empirical_execution/', 'local_run/', 'output/pdf/')
     for name in included:
         path = ROOT / name
-        assert name.startswith(allowed_roots) and path.is_file() and not path.is_symlink()
-        assert path.suffix in {'.py', '.json', '.md', '.tex', '.txt', '.sbatch'}
+        assert (name.startswith(allowed_roots) or name == 'algorithm_round2.py') and path.is_file() and not path.is_symlink()
+        assert path.suffix in {'.py', '.json', '.md', '.tex', '.txt', '.sbatch'} or (
+            name == independent['historical_input_archive']['path'] and path.suffix == '.zip')
         assert path.name not in {'TODO.json', 'ANALYSIS_LOCK.json', 'ANALYSIS_LOCK_EXECUTION.json'}
     manifest = {'schema': 'third-public-source-check-package-v1',
                 'created_utc': datetime.now(timezone.utc).isoformat(),
-                'scope': 'Public manuscript and author source-check closure; not full empirical replay.',
+                'scope': 'Public manuscript, independent AI review, immutable prior review basis, and author source-check closure; not full empirical replay.',
                 'version': args.version,
                 'historical_base_commit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
                 'files': {name: binding(ROOT / name) for name in sorted(included)},

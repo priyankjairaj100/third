@@ -1,0 +1,95 @@
+Independent AI scientific manuscript review
+18 October 2026. Review a01. Completed with two scoped findings.
+
+Review target: manuscript/third_working_draft.tex, 55,930 bytes,
+SHA256 c452d0682179394f18b5bc0dd05a6519ae4deff39b0fb8f02e54fa5200b93cc2.
+Repository: https://github.com/priyankjairaj100/third
+HEAD at review start: 3510d0e932c25422e8b695b5aad005cff05e255b.
+All 20 source bindings in request.json matched before review and were checked again in the independent arithmetic pass. All file/line references below refer to this pinned version unless another file is explicitly named. Paths are relative to the repository above.
+
+Assessment
+
+The central finite-horizon substitution argument and the constructed finite-format ridge information argument survived this bounded direct review. I found two material inaccuracies in how the manuscript connects the abstract indexed algorithm to the shipped empirical service: its retry semantics and its request-processing cost. Neither finding refutes the exact coefficient identity, the constructed mD-bit obstruction, or the conditional e(F)D-bit result.
+
+The empirical text preserves the negative result and does not establish natural NLP utility, practical efficiency, human validity, or empirical completion. The public aggregate arithmetic supports the reported negative calibration and compute totals. It does not independently authenticate private observations, source texts, or original scheduler receipts.
+
+Recommendation: correct the two implementation descriptions, preserve the failed calibrations and all existing scope limits, and keep the unfinished empirical/literature questions open. This is not an exhaustive correctness, novelty, legal-compliance, or submission-readiness certificate. Confidence is high for the two source-trace findings and aggregate arithmetic, moderate for the manually checked universal proofs, and deliberately limited for literature coverage and inaccessible private evidence.
+
+Ranked findings
+
+F1. Medium severity / confirmed source-description defect: the empirical service does not reject retries as the manuscript says.
+
+Location: manuscript/third_working_draft.tex:208-211.
+Affected claim: the frozen empirical P-I interface rejects repeated and already-deleted identifiers before mutation, while only the earlier reference treats retries as no-ops.
+
+Evidence: empirical_execution/ccu/summary.py:336-352 does implement the strict low-level integer-ID kernel. However, the public empirical wrapper, empirical_execution/phase5/methods.py:97-105, first computes fresh = sorted({lookup[i] for i in ids} & alive), then passes that filtered list to the strict kernel. Duplicate input IDs have already been collapsed and already-deleted IDs discarded. phase6/methods.py:96-105, 233-255 and 276-288 forward ordinary P-I to that wrapper. The worker uses this service path. The frozen phase6/check_state_audit_semantics.py:82-84 and 190-194 explicitly exercise duplicates and expect an exhausted retry to have zero fresh deletions.
+
+Concrete counterexample by direct code evaluation: with a live ID u and available budget, wrapper.delete([u,u]) passes [lookup[u]] to the kernel and consumes one deletion. Calling wrapper.delete([u]) again passes [] and consumes none, including after exhaustion. Neither call is rejected for duplication/repetition. Unknown IDs are still rejected; fresh over-budget requests are still rejected. This is a policy mismatch in the prose, not evidence of wrong fresh-deletion statistics.
+
+The previous author assertion in manuscript/claims_review_20261016.json:168-172 inspected only the low-level kernel. manuscript/build_review.py:126-129 checks for exception text in that file and therefore cannot establish the wrapper's public behavior. I did not accept that assertion as proof.
+
+Smallest defensible correction: name all relevant layers. State that IndexedRidgeSummary.delete is strict, while the frozen Phase 5/6 empirical SummaryService normalizes repeated/already-deleted IDs to fresh deletions; the earlier mathematical reference also treats retries as no-ops. Do not rewrite frozen code or historical results to match the incorrect sentence. A later evidence/checker version should trace the wrapper as well as the kernel and preserve the old review as historical.
+
+F2. Medium severity / missing implementation-cost qualification: the stated update bound is valid for the abstract indexed algorithm, but does not cover the shipped API overhead.
+
+Locations: manuscript/third_working_draft.tex:204-229 and 770-777, especially the O(Q) input-handling statement at 776-777.
+Affected claim: presenting O(Q + Phi0 + s M0) as the sequence-wide update cost of the empirical P-I implementation without identifying its additional request costs.
+
+Evidence: the stable-handle mutation logic in empirical_execution/ccu/summary.py:299-334 supports the incidence/potential/vector-merge argument. But its public delete method sorts the entire validated request at line 350. The empirical string-ID wrapper rebuilds lookup for all public IDs on every call at empirical_execution/phase5/methods.py:100, then sorts fresh indices at line 103. These operations happen even when the coefficient map has no incident key. The exact mathematical reference algorithm_round2.py:157-175 does not sort requests, so this finding does not refute the abstract bound.
+
+Counterexample: use N identical feature/label rows with a complete ordered similarity graph and K<N. Their identical record statistic t gives the telescoping polynomial t(1 - x_all). Truncation leaves only the constant coefficient: M0=1, L0=Phi0=0, with fixed statistic dimension. A single fresh singleton request has Q=1 and no coefficient touches, but the empirical wrapper still reconstructs an N-entry lookup. Its update cannot be O(1+s) uniformly in N. For direct low-level calls, a sufficiently disordered batch of q fresh IDs can additionally require comparison-sort work of order q log q despite the same constant coefficient map.
+
+Let B be the number of API calls, N the fixed public unit-ID count, q_b the supplied IDs in call b, f_b the fresh unique IDs forwarded by the wrapper, and Q=sum_b q_b. Under unit-cost word-sized identifiers and expected constant-time dictionary/set operations, a safe shipped-wrapper bound is
+
+  O(B(N+1) + sum_b [q_b + f_b log(f_b+1)] + Phi0 + s M0).
+
+For direct low-level calls on arbitrary unsorted request lists, a safe bound is
+
+  O(B + Q + sum_b q_b log(q_b+1) + Phi0 + s M0).
+
+The kernel receives an already sorted list from the wrapper; do not double-charge a second arbitrary-order sort. String decoding, first-time hashing, comparison, and arbitrary-precision identifier costs require additional byte/bit accounting. The B term covers empty requests, which are legal; it can be absorbed into Q only when calls are nonempty. The wrapper also allocates a temporary O(N) lookup, plus request containers, relevant to peak workspace.
+
+Smallest defensible correction: explicitly assign Equation (7)'s core bound to the abstract/reference indexed update under its input model, and separately disclose the frozen API's lookup and sorting costs (and the nonempty-call convention or B term). Preserve the current frozen implementation and include these operations in future complete-cost timings. Construction, solving, serialization and exact-arithmetic bit costs should remain separate as already stated.
+
+Claims checked without a further defect found
+
+1. Curator and restriction consistency (manuscript:108-159).
+The three-record chain is correct for all-earlier-raw-neighbor suppression. It would not give the same selected set for greedy suppression against selected neighbors, and the manuscript makes that distinction. Fixed eligibility, features, threshold and relative order are necessary. The SemDeDup official code's upper triangle, column maximum and strict M > 1-eps support the stated equivalence at nonnegative thresholds, not arbitrary reclustering or random reordering. Primary source checked: https://raw.githubusercontent.com/facebookresearch/SemDeDup/main/semdedup.py, lines 53-73 and 115-137. Existing selected survivors remain selected under the fixed raw-neighbor rule. Eligibility cannot increase when the remaining budget falls by the number of fresh deletions.
+
+2. Polynomial/state/ridge/source identities (manuscript:161-252).
+Substitution x_u=1 removes the terms of deleted records and removes their variables from surviving blockers. A discarded original degree above K remains above K-|F|, so it cannot reenter the retained map. This establishes the remaining-horizon identity and composition for valid fresh requests; it does not replenish the budget. The average-loss ridge normal equation uses lambda times the current count n, and the empty target is explicitly defined. Fixed record-local statistics exclude refitted features. Source-variable idempotence correctly cancels a record blocked by its own withdrawn source. Exact algebra and floating accumulation/serialization are distinguished.
+The token and triangular-potential proof is sound for the stable-handle core; F2 identifies the extra shipped API work. No total-byte or uniform sublinear per-request result follows.
+
+3. FP32 construction, scorer, head and information counts (manuscript:260-364, 789-855).
+The candidate squared norm is 16641/16384=(129/128)^2. Required common-blocker edges exceed .43; the candidate-candidate nonedge upper bound is 18563/49923<.372 for all private signs. The manuscript may ignore additional edges among public zero-label blockers because the anchor suppresses them on the hard probe. Candidate activation needs all b+1 designated blockers, so no other budget-b+1 query can activate a candidate. At F_i the selected set is exactly {a,w_i}, and the stated head w_i/(16641/16384+2 lambda) solves the exact normal equations.
+The frozen scorer source, empirical_execution/phase3/panels.py:185-205, uses coordinate-ordered norm-square and dot accumulation with no clipping. Exact dyadic input/norm sums, the absolute dot error bound, and the cancellation grid address the needed rounding/range premises. I recomputed the conservative rational error bound at d=2^20 and verified it is below 2^-32. This is conditional on the specified IEEE operation contract, not a live machine or arbitrary-kernel certificate.
+For fixed public data and no uncharged private access, different sign assignments are distinguished by some hard probe. Finite input/query sets justify freezing common almost-surely-correct randomness. For fixed F, I(F)={i:F subseteq S union {p_i}} follows from the exhausted original horizon; every still-eligible word remains independently probeable. The codec's transition (phase10/finite_word_codec.py:217-233) copies only those current payload bits and never calls fresh initialization. Its state/header/padding and transient exact rational head are separate from the private-bit minimum. The fixed-F qualification correctly excludes inference from a sign-revealing adaptive request policy.
+
+4. Approximation and finite-output limits (manuscript:366-380, 857-915).
+The affine soft-bit rescaling yields normalized distortion t^2 epsilon/(4 alpha^2), with no extra factor D. Posterior means minimize squared error; entropy subadditivity and the concavity/increase of g yield the displayed lower bound under the state-alphabet and independent-coin contract. The public-component estimator reaches error alpha^2/t^2 with zero private information. No efficient sequential lossy-code claim is made. A certified deterministic radius below alpha/(t sqrt(D)) recovers all signs. The sufficient 2^-20 radius for lambda<=1 follows from the loose dimension bound, but must be an actual certificate covering accumulation, solve and output rounding. Basis-direction prediction risk divides by D (or d), so the parameter obstruction does not prove constant natural NLP risk.
+
+5. Failed LLM calibrations, sampling and downstream gates (manuscript:382-600).
+The v4 plan specifies all unordered calibration pairs, including same-source pairs, stratified sampling without replacement, exact inverse inclusion weights, strict stored-float cuts, a fixed 95% selection rule and fresh above-threshold validation only after selection. The weighted ratio is a development selection statistic; it is not an unbiasedness claim or a confidence limit. The exact validation bound needs a fixed/potential model-label function and the sampling assumptions stated in the manuscript. The manuscript retains invalid/uncertain outputs in the denominator, makes no judge-independence assumption, treats swaps only as diagnostics and discloses order instability.
+I independently checked internal fraction arithmetic for all 51 cuts in each public terminal ledger (102 total), all failed decisions, and agreement between the v4 terminal and diagnostic grids. I reconstructed the five displayed table rows and v4 cross-category counts: 360 total, 355 both-valid, 27 joint-positive, 32 Qwen-positive, 151 Mistral-positive, and 308 valid six-way disagreements. The maximum v4 ratio is 2/5 and the favorable-imputation maximum is 8/15. The 27/360 raw stratified ratio is correctly not called population prevalence. Version 3 has zero joint positives among 90 pairs and one invalid canonical Mistral judgment; it remains a failed development result, not absence of semantic duplicates. Version 4 is correctly identified as a post-v3 follow-up, not independent confirmation.
+The negative branch correctly skips fresh validation and blocks the full guard, effect experiments and dependent held-out evaluation. Original human gates remain unmet. Zero human annotations and zero human review remain the active boundary. This AI review does not satisfy any human gate. No new human work is recommended as a dependency of these corrections.
+Limitation: I checked public aggregates and frozen protocols, not the private pair texts, per-pair observations, raw sampling stream or inference logs. Claims that earlier independent replays recomputed original observations remain historical source-bound evidence, not a replay performed by this reviewer.
+
+6. Compute, attribution and reproducibility (manuscript:917-980).
+Independent arithmetic from all 72 listed job rows reproduced 6 model jobs / 25,759 seconds; 32 embedding tasks / 479,503 seconds; and 34 other stages / 8,396 seconds. There are 68 completed and 4 failed jobs; the failures total 611 seconds. All 33 compute-ledger source bindings match. I matched all 32 embedding rows to the published minimal receipt extract, checked unique raw/display aliases, and reconciled the six v4 rows as an included subset. The text correctly treats the 19,045 GPU-allocation seconds and 1,469 CPU-job seconds as overlapping parts of the broader ledger. The stated 133.20 elapsed-task hours and 266.39 requested-CPU hours have the right units and rounding. Neither is measured busy time or project wall-clock time. Missing earlier work and energy remain explicit.
+The Stack adapter's actual code preserves supplied post fields but does not require complete license/editor history (phase4/adapters.py:330-356, 379-380). The manuscript's contributor-proxy and incomplete-attribution qualifications are appropriate. It separates the public source checker, private saved-observation replay and fresh inference. I did not perform a record-level rights or attribution census, authenticate publisher provenance, or refresh every model-license document. I did not inspect private original scheduler receipts or measure resource utilization.
+
+7. Related work and unresolved premises (manuscript:602-652, 991-1000).
+The narrowed prior-work positioning is appropriate in the checked scope. Direct primary-source checks confirmed that Schelter's maintained dataflow includes tokenization and identifies sparse dependencies as an efficiency condition; the ticketed paper's Definitions 1-2 and Remark 3 concern exact one-request predictor recovery with separate central/ticket accounting; and the 2025 learning-unlearning paper already studies bounded-deletion memory and relates it to ERM. Relevant primary sources:
+https://ssc.io/pdf/ivm-unlearning.pdf (Sections 2-3)
+https://proceedings.mlr.press/v195/ghazi23a/ghazi23a.pdf (Definitions 1-2 and Remark 3)
+https://arxiv.org/html/2506.13048v1 (Theorems 5.4, 6.3 and Appendix G)
+The ARCANE publisher page/abstract confirms representative data selection. Its detailed Section 3.2 comparison was not independently refreshed in this pass because subsequent full-PDF retrieval failed; the existing author comparison remains historical evidence. This is a review limitation, not evidence that its statement is false. Primary page: https://www.ijcai.org/proceedings/2022/0556 .
+The SSRN full paper and Dominici thesis remain unresolved full-text comparisons as requested. I did not infer novelty from their unavailability, attempt author contact or exhaust alternate retrieval routes. The manuscript appropriately avoids a broad new prediction-versus-counterfactual or preprocessing-aware-unlearning claim. This pass does not establish priority of the narrower construction.
+
+Execution and preservation boundary
+
+I read the request, AGENTS.md, current resume context, theory/results handoff, current-status supplement and Phase 10 handoff/proof/scorer/codec materials. Old October 4/5 input/human-status notes were treated as historical and not used to authorize new work. I read the current manuscript in full and inspected relevant source code rather than taking the author review as conclusive. review_checks.json records the independent aggregate/rational arithmetic and source hashes.
+
+No SSH, cluster job, model inference, empirical experiment, author contact, human annotation/review, paid cloud compute, or new subagent was used. No frozen checker or benchmark suite was rerun. I made no changes to the repository, manuscript, frozen sources, protected locks, queue or public files. Outputs are confined to this assigned private review directory. A concurrent queue modification became visible during review; it was not made by this reviewer and does not alter the pinned manuscript findings.
+
+I did not compile the manuscript or inspect its rendered layout. Successful native compilation does not establish layout quality. I did not audit all historical experiments, all frozen implementation paths, every citation, all asset rights, private raw evidence or global novelty. Manual proof review and finite arithmetic checks are not formal verification. The two corrections above can be checked in a separate, hash-bound follow-up without replacing this original report.

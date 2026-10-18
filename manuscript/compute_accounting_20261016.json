@@ -1,13 +1,13 @@
 {
   "batch_step_times_added": false,
   "builder": {
-    "bytes": 12513,
+    "bytes": 13852,
     "path": "manuscript/build_review.py",
-    "sha256": "ad91a8f43fa5183c60a5c0b738085a964d0896c8e3a3dcd20b908cfbc6d12d56"
+    "sha256": "3ed6c71a78567aeaa65fc2fa5562f020470e4656f0f9c53f8be8733da3e44770"
   },
   "cpu_core_seconds_computed": false,
   "cpu_job_elapsed_seconds_sum": 1469,
-  "created_utc": "2026-10-16T11:51:57.098879+00:00",
+  "created_utc": "2026-10-18T03:27:36.085133+00:00",
   "energy_measured": false,
   "excluded_scope": [
     "Earlier pilot and v3 inference",
