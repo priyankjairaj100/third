@@ -1,0 +1,161 @@
+{
+  "audit": "citation_provenance_audit",
+  "date_utc": "2026-10-22",
+  "scope": "Read-only metadata and in-text claim support audit of eight assigned references; no manuscript edits; no Dominici search.",
+  "source_path": "REPOSITORY_ROOT/manuscript/third_working_draft.tex",
+  "source_sha256_at_report_time": "397b727c33bf21c64b8ab7ce65854ee33717b07f8f2a520e0b61b787d3f72f5c",
+  "keys": [
+    "semdedup",
+    "semcode",
+    "green",
+    "aggregate",
+    "dbsp",
+    "ivmunlearning",
+    "priu",
+    "shannon"
+  ],
+  "summary": {
+    "verified_real_sources": 8,
+    "unsupported_intext_claims_found": 0,
+    "actionable_citation_corrections": 2,
+    "metadata_completion_recommendations": 2
+  },
+  "references": [
+    {
+      "key": "semdedup",
+      "status": "verified",
+      "metadata": "Amro Abbas; Kushal Tirumala; Daniel Simig; Surya Ganguli; Ari S. Morcos. 2023. SemDeDup: Data-efficient learning at web-scale through semantic deduplication. arXiv:2303.09540v3.",
+      "sources": [
+        "https://arxiv.org/abs/2303.09540",
+        "https://arxiv.org/html/2303.09540v3"
+      ],
+      "claim_locations": [
+        "Introduction, semantic deduplication before training",
+        "Related work, embedding-based redundancy removal"
+      ],
+      "support": "Abstract and Section 3 directly describe pretrained embeddings, pairwise cosine similarity within clusters, and duplicate removal before training.",
+      "correction": null,
+      "limitation": "The exact raw-neighbor suppression claim is supported separately by the implementation, not inferred solely from the paper prose."
+    },
+    {
+      "key": "semcode",
+      "status": "correction_required",
+      "metadata": "Facebook Research. 2023. SemDeDup official implementation, semdedup.py. File commit 6b4194511202c29b0e1ac8c730996777449ea2a4, 1 October 2023. Repository archived 1 November 2024.",
+      "sources": [
+        "https://github.com/facebookresearch/SemDeDup/blob/6b4194511202c29b0e1ac8c730996777449ea2a4/semdedup.py",
+        "https://api.github.com/repos/facebookresearch/SemDeDup/commits?path=semdedup.py&per_page=1"
+      ],
+      "claim_locations": [
+        "Setup, nonnegative-threshold upper-triangle column maximum rule",
+        "Related work, fixed ordered suppression motivation"
+      ],
+      "support": "Pinned file lines 64-79 compute pairwise similarities, clear the diagonal, take torch.triu(diagonal=1), and take column maxima. Lines 149-152 remove columns with M > 1-eps. All earlier raw rows contribute regardless of whether they are removed. Nonnegative threshold qualification correctly accounts for zero padding.",
+      "correction": "Replace bibliographic label [Meta/Facebook Research(2026)] and mutable main URL with [Facebook Research(2023)], explicit year 2023, and the immutable commit URL. Keep actual access date as a separate note; do not use it as publication year.",
+      "limitation": "The fixed graph/order restriction is necessary: code lines 131-137 show random/easy ordering options. No general claim about refitted clusters is warranted. Downloaded main and pinned file are byte-identical (SHA256 9280d5feb84e6c65d2e24229db3ce8efc71a0ad585c41921539ccc3cc96cc293)."
+    },
+    {
+      "key": "green",
+      "status": "verified_metadata_completion_recommended",
+      "metadata": "Todd J. Green; Grigoris Karvounarakis; Val Tannen. 2007. Provenance semirings. Proceedings of PODS, pages 31-40. DOI 10.1145/1265530.1265535.",
+      "sources": [
+        "https://www.cs.ucdavis.edu/~green/papers/pods07.pdf",
+        "https://api.crossref.org/works/10.1145/1265530.1265535"
+      ],
+      "claim_locations": [
+        "Introduction, provenance antecedent",
+        "Method, signed Boolean representation builds on provenance ideas",
+        "Related work, polynomial provenance"
+      ],
+      "support": "Abstract and Section 4 give polynomial-semiring provenance and evaluation under valuations; Theorem 4.3 is the positive-relational-algebra evaluation result.",
+      "correction": "Optional completeness: expand PODS and add pages 31--40 and DOI. Do not use 61--70 (not the publisher record).",
+      "limitation": "Green concerns positive relational algebra and N[X]; it does not itself establish this paper's signed negative-dependency formula. The current wording says building on established ideas, and the aggregate/difference source supplies the necessary nonmonotone antecedent."
+    },
+    {
+      "key": "aggregate",
+      "status": "verified_metadata_completion_recommended",
+      "metadata": "Yael Amsterdamer; Daniel Deutch; Val Tannen. 2011. Provenance for aggregate queries. Proceedings of PODS, pages 153-164. DOI 10.1145/1989284.1989302.",
+      "sources": [
+        "https://arxiv.org/abs/1101.1110",
+        "https://arxiv.org/pdf/1101.1110",
+        "https://api.crossref.org/works/10.1145/1989284.1989302"
+      ],
+      "claim_locations": [
+        "Introduction, deletion-induced additions/nonmonotone queries and provenance",
+        "Method, established provenance ideas",
+        "Related work, aggregation and difference"
+      ],
+      "support": "Sections 3-4 develop aggregation provenance. Section 5 studies difference; Example 5.3 on PDF pages 10-11 explicitly changes an annotation to zero and obtains a newly returned tuple. This directly supports deletion-induced additions as prior art.",
+      "correction": "Optional completeness: expand PODS and add pages 153--164 and DOI.",
+      "limitation": "Its difference semantics is explicitly distinct from signed-multiplicity semantics; do not identify the present Boolean expansion with the exact same semiring construction."
+    },
+    {
+      "key": "dbsp",
+      "status": "verified",
+      "metadata": "Mihai Budiu; Tej Chajed; Frank McSherry; Leonid Ryzhyk; Val Tannen. 2023. DBSP: Automatic incremental view maintenance for rich query languages. PVLDB 16(7):1601-1614. DOI 10.14778/3587136.3587137.",
+      "sources": [
+        "https://www.vldb.org/pvldb/vol16/p1601-budiu.pdf"
+      ],
+      "claim_locations": [
+        "Introduction, incremental-view-maintenance antecedent",
+        "Related work, incremental query framework"
+      ],
+      "support": "Publisher PDF page 1 reference format verifies all metadata. Abstract and introduction directly state incremental maintenance for full relational algebra, aggregation and nonmonotonic operations.",
+      "correction": "No correction needed. Optional DOI may replace long PDF URL.",
+      "limitation": null
+    },
+    {
+      "key": "ivmunlearning",
+      "status": "verified",
+      "metadata": "Sebastian Schelter. 2021. Towards efficient machine unlearning via incremental view maintenance. Workshop on Challenges in Deploying and Monitoring ML Systems at ICML 2021.",
+      "sources": [
+        "https://ssc.io/pdf/ivm-unlearning.pdf"
+      ],
+      "claim_locations": [
+        "Introduction, view-maintenance antecedent",
+        "Related work, preprocessing/tokenization and sparse computational dependencies"
+      ],
+      "support": "PDF p.3 Section 2 explicitly includes tokenise/explode preprocessing and tokenize(e.text) Rust code in the maintained dataflow. Section 3 on that page explains sparse computational dependencies and the recomputation boundary. Abstract frames ML models as views.",
+      "correction": "No correction needed. Section 2 locator can be added to tokenization clause if desired.",
+      "limitation": "Web text search missed the tokenization paragraph; direct PDF extraction verified it. Do not remove this supported comparison."
+    },
+    {
+      "key": "priu",
+      "status": "verified",
+      "metadata": "Yinjun Wu; Val Tannen; Susan B. Davidson. 2020. PrIU: A provenance-based approach for incrementally updating regression models. SIGMOD, pages 447-462. DOI 10.1145/3318464.3380571.",
+      "sources": [
+        "https://arxiv.org/abs/2002.11791",
+        "https://arxiv.org/pdf/2002.11791",
+        "https://api.crossref.org/works/10.1145/3318464.3380571"
+      ],
+      "claim_locations": [
+        "Introduction, provenance/incremental-learning antecedent",
+        "Related work, provenance-based regression updates"
+      ],
+      "support": "Author PDF abstract and introduction support provenance-based incremental parameter updates after training-sample removals. Publisher-deposited Crossref metadata confirms page range 447-462, author order, title and year.",
+      "correction": "No substantive correction needed. Optionally expand venue and add DOI.",
+      "limitation": "Do not strengthen the present brief antecedent statement to universal exact retraining parity; source describes highly similar models in abstract."
+    },
+    {
+      "key": "shannon",
+      "status": "link_description_correction",
+      "metadata": "Claude E. Shannon. 1959. Coding theorems for a discrete source with a fidelity criterion. IRE National Convention Record, volume 7, part 4, pages 142-163.",
+      "sources": [
+        "https://gwern.net/doc/cs/algorithm/information/1959-shannon.pdf",
+        "https://ieeexplore.ieee.org/document/5311476",
+        "https://api.crossref.org/works/10.1109/9780470544242.ch21"
+      ],
+      "claim_locations": [
+        "Related work, information-distortion arguments are classical"
+      ],
+      "support": "Reprinted primary text abstract and introduction define R(d), discuss allowable distortion, and give the source-rate/capacity tradeoff. Its first-page footnote identifies IRE International Convention Record vol.7, 1959.",
+      "correction": "Change hyperlink label Original-paper scan to Reprinted text (or Author text, reprint); the supplied PDF is a collected-papers reprint with printed pp.325-350, not the original proceedings pagination. Add volume 7 if desired. Keep original 1959 citation; do not replace with Crossref reprint digitization year 2009.",
+      "limitation": "IEEE page is bot-gated. Crossref DOI concerns the collected-papers digital chapter and does not independently supply original 142-163 pagination; original page range was not changed because no contradictory primary evidence was found."
+    }
+  ],
+  "retrieval_limits": [
+    "SemDeDup PDF exceeded web fetch size; official arXiv full HTML was read instead.",
+    "Some ACM DOI landing pages were inaccessible; exact author full texts and publisher-deposited Crossref metadata were used.",
+    "Shannon reprint primary text was readable; IEEE landing page was bot-gated."
+  ],
+  "scientific_change_recommended": false
+}

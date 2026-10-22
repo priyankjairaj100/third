@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "date": "2026-10-22",
+  "scope": "One-word Shannon venue correction only; earlier source review preserved.",
+  "previous_reviewed_sha256": "115b14b76ccd524a58247bdb136cc0cca6455c7982c46477f26f22668538e1df",
+  "new_reviewed_sha256": "f8b898047380c45055b341ed88fcc3d6d6fa379f0e4c17fa60fbb22910e1400e",
+  "old": "IRE National Convention Record, 7(4):",
+  "new": "IRE International Convention Record, 7(4):",
+  "occurrences": 1,
+  "inverse_restores_previous_hash": true,
+  "evidence": {
+    "url": "https://neilsloane.com/doc/shannonbib.html",
+    "locator": "Item 118",
+    "finding": "The collected-papers editors bibliography identifies Institute of Radio Engineers, International Convention Record, volume 7 part 4 (1959), pages 142--163."
+  },
+  "issues": [],
+  "prior_scope_limits_remain": true
+}

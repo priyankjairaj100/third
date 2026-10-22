@@ -1,3 +1,16 @@
+CURRENT TMLR CITATION / SUBMISSION PREPARATION V8 — 22 OCTOBER 2026
+Read tmlr_submission_audit_20261022/SUBMISSION_CHECKLIST.txt and CITATION_AUDIT.json.
+Current source: f8b898047380c45055b341ed88fcc3d6d6fa379f0e4c17fa60fbb22910e1400e.
+All 20 references reviewed; exact source/delta, native compile, 16-page visual
+review and final flat supplement audits pass. Current anonymous supplement:
+tmlr_submission_audit_20261022/third_tmlr_supplement_v8.zip.
+Extract into an empty directory; python3 -B check_all.py with Python 3.10+.
+This is public aggregate replay, not private scientific replication. Theorems,
+results and frozen gates unchanged. Author facts/profile IDs remain pending.
+Scheduler PAUSED. Dominici search closed/nonblocking. No actual submission.
+
+HISTORICAL PREPARATION NOTES FOLLOW
+
 CURRENT FULL-TEXT COMPARISON / SUBMISSION PREPARATION V7 — 22 OCTOBER 2026
 Tadakamalla full-paper comparison is complete for the supplied six-page version,
 with an explicit joint-success qualification. Dominici thesis remains unavailable;

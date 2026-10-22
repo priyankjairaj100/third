@@ -1,0 +1,6 @@
+PASS: Final source provenance verification.
+All 16 current delta replacements have exactly one match. Applying them to source_before.tex and alphabetizing bibliography blocks reproduces source_candidate.tex byte for byte.
+Final source SHA256: f8b898047380c45055b341ed88fcc3d6d6fa379f0e4c17fa60fbb22910e1400e
+Current source_delta.json SHA256: 7223e0842a16d31d318835d45a7533965b36ce9d59838571063906c341c7f988
+History is preserved: source_review.json binds 115b14b7..., source_review_addendum.json binds the one-word venue change to f8b89804..., and this review independently binds the current final delta file to f8b89804....
+No repository files were edited.

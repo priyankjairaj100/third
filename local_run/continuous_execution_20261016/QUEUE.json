@@ -127,7 +127,7 @@
     {
       "attribution_review": "manuscript/attribution_review_20261016.json",
       "author_claim_review": "manuscript/claims_review_20261016.json",
-      "build_status": "manuscript/BUILD_STATUS.json",
+      "build_status": "manuscript/RELEASE_BUILD_STATUS.json",
       "completed_ai_reviewer": {
         "agent_name": "/root/independent_manuscript_review",
         "authorization": "User resumed the pending independent AI review: yeah we back, you may resume",
@@ -139,15 +139,17 @@
       },
       "depends_on": [],
       "done_when": "Compiled and visually reviewed complete manuscript, actual figures/tables, citations and defensible limits.",
-      "evidence": "manuscript/counterfactual_fulltext_20261022/package_receipt.json",
+      "evidence": "manuscript/tmlr_submission_audit_20261022/package_receipt.json",
       "historical_compute": "manuscript/compute_history_20261016.json",
       "id": "07-manuscript",
       "independent_ai_review": "manuscript/natural_repair_20261018/delta_review_stage2.json",
-      "next_action": "V7 reviewed/compiled. Await factual author declarations/profile IDs. Dominici search closed by user and nonblocking; retain bounded acknowledgment. Do not restart search automatically.",
+      "next_action": "V8 source, PDF and flat supplement reviewed. Await author declarations/profile IDs; Dominici search stays closed and scheduler stays paused.",
       "state": "tmlr_submission_revision_reviewed_compiled_and_visually_verified",
       "tmlr_revision": "manuscript/tmlr_20261018/adaptation_report.json",
       "unified_author_review": "manuscript/unified_review_20261016.json",
-      "independent_literature_delta_review": "manuscript/counterfactual_fulltext_20261022/independent_delta_review.json"
+      "independent_literature_delta_review": "manuscript/counterfactual_fulltext_20261022/independent_delta_review.json",
+      "independent_submission_audit": "manuscript/tmlr_submission_audit_20261022/final_source_delta_review.json",
+      "citation_audit": "manuscript/tmlr_submission_audit_20261022/CITATION_AUDIT.json"
     },
     {
       "depends_on": [
@@ -177,7 +179,8 @@
         "Audited Stage2 exact membership/logical-state repair:13056singleton checks and408checkpoints. Same TMLR source compiled and visually reviewed; anonymousV4 and new immutable release passed clean extraction replay.",
         "22 October: live TMLR/form verification, first-page AI disclosure, current-source native compile and 15-page review, V5 clean replay and independent submission audit; user-supplied author details transcribed privately.",
         "22 October: explicit pinned-code and primary-description comparisons; four source deltas independently checked; native compile, 16-page visual review and V6 clean replay pass. Both full texts remain unavailable. Scheduler paused by user.",
-        "22 October: user-supplied Tadakamalla full text compared, joint-tuple approximation event clarified, two manuscript changes independently reviewed; V7 and16page PDF verified. Dominici alone remains missing."
+        "22 October: user-supplied Tadakamalla full text compared, joint-tuple approximation event clarified, two manuscript changes independently reviewed; V7 and16page PDF verified. Dominici alone remains missing.",
+        "22 October: all20 citations audited and corrected, prior-work and fixed-encoder limits clarified, same source natively compiled and16page PDF reviewed. Flat156-member anonymousV8 includes exact public prompts/schemas;150 unchanged-source bindings and aggregate replay independently pass. Author attestations remain pending; no submission or experiment."
       ],
       "coordinates_with": [
         "07-manuscript"
@@ -193,11 +196,12 @@
         "manuscript/attribution_review_20261016.json",
         "manuscript/compute_history_20261016.json",
         "manuscript/unified_review_20261016.json",
-        "manuscript/independent_review_20261018.json"
+        "manuscript/independent_review_20261018.json",
+        "manuscript/tmlr_submission_audit_20261022/package_receipt.json"
       ],
       "id": "09-negative-branch-closure",
-      "next_action": "Await author declarations/profile IDs. Unavailable Dominici full text is a disclosed nonblocking limitation; search closed by user. Scheduler remains paused. No original-study completion or submission claimed.",
-      "public_package": "manuscript/counterfactual_fulltext_20261022/third_tmlr_supplement_v7.zip",
+      "next_action": "Await factual author declarations/profile IDs listed in current submission checklist. TechnicalV8 files prepared. No submission, scheduler restart or original-study completion claimed. Dominici unavailable/nonblocking.",
+      "public_package": "manuscript/tmlr_submission_audit_20261022/third_tmlr_supplement_v8.zip",
       "state": "submission_files_prepared_author_declarations_pending"
     },
     {
@@ -246,7 +250,7 @@
       }
     }
   ],
-  "updated_utc": "2026-10-22T09:45:40.551337+00:00",
+  "updated_utc": "2026-10-22T10:13:16.164126+00:00",
   "venue_change_authorization": "Explicit user request on 18 October 2026; no relaxation of calibration, held-out or human gates.",
   "submission_preparation_authorization": "22 October 2026: complete remaining submission work; reuse supplied PDF for author details.",
   "literature_comparison_authorization": "22 October 2026: complete the 2 unresolved comparisons; scheduler remains paused.",
@@ -256,5 +260,6 @@
     "open_count": 0,
     "unresolved_evidence_count": 1,
     "submission_preparation_blocking_count": 0
-  }
+  },
+  "submission_audit_authorization": "22 October 2026: make TMLR submission ready, audit desk rejection risks and double-check each citation. Does not restart scheduler or submit."
 }

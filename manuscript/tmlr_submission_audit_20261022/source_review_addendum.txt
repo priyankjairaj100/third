@@ -1,0 +1,5 @@
+PASS: Shannon venue correction only.
+National -> International is supported by the collected-papers editors bibliography, item 118: https://neilsloane.com/doc/shannonbib.html
+The phrase occurs once. Reversing it reproduces the exact previously reviewed source hash, so no additional source changes occurred.
+Final reviewed source SHA256: f8b898047380c45055b341ed88fcc3d6d6fa379f0e4c17fa60fbb22910e1400e
+The previous source review and its limits remain unchanged.

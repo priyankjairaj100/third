@@ -1,0 +1,64 @@
+{
+  "audit_date": "2026-10-22",
+  "entries": [
+    {
+      "key": "counterfactual",
+      "status": "supplied_full_text_checked",
+      "sources": [
+        "https://doi.org/10.2139/ssrn.7520178"
+      ],
+      "evidence": "Previously supplied six-page PDF; preserved extraction reread at pages 1 and 3. Receipt SHA256 062d9cf8b580c3908879e16f0c07ca16a75df2478097588a2236617d7c502634. Original supplied path no longer present; extraction and prior receipt retained.",
+      "locator": "Section III, Theorem 8 and proof, manuscript pp.2-3",
+      "finding": "Title and author strings match. Exact counts t+1 and 2^t for t>=3 supported; approximate counting proof requires complete answer-tuple success, correctly qualified. No new publisher-version authentication."
+    },
+    {
+      "key": "counterfactualcode",
+      "status": "pinned_primary_copy_checked",
+      "sources": [
+        "https://github.com/PranayTadakamalla/predictive-state-not-explanatory-state/tree/4143f408843394e21a0622c9eb5d5de10a687a8c"
+      ],
+      "locator": "CITATION.cff, queries.py, decoder.py",
+      "finding": "Author identities, version 1.0.0 and 2026-09-24 release confirmed from previously retrieved pinned primary copy. Web refresh was unavailable; immutable local copy and retrieval receipt used."
+    },
+    {
+      "key": "dominici",
+      "status": "metadata_and_scope_only",
+      "sources": [
+        "https://leodom01.github.io/",
+        "https://deem.berlin/"
+      ],
+      "locator": "Author page About Me/research and 2025 graduation; lab completed-thesis list",
+      "finding": "Name, 2025 joint UvA/VU MSc and title confirmed. Full text remains unavailable; technical guarantees explicitly not attributed. User closed full-text search as nonblocking. No renewed search."
+    },
+    {
+      "key": "qwen",
+      "status": "verified",
+      "sources": [
+        "https://qwenlm.github.io/blog/qwen2.5/"
+      ],
+      "locator": "Publisher release 19 September 2024 and supplied BibTeX",
+      "finding": "Qwen Team, title, release date and 7B Instruct attribution verified."
+    },
+    {
+      "key": "mistral",
+      "status": "verified",
+      "sources": [
+        "https://mistral.ai/news/mistral-nemo/"
+      ],
+      "locator": "Publisher release 18 July 2024",
+      "finding": "Mistral AI release, model identity and NVIDIA collaboration verified."
+    },
+    {
+      "key": "askubuntu",
+      "status": "documentary_release_identity",
+      "sources": [
+        "https://archive.org/details/stackexchange_20240402_bis",
+        "https://meta.stackexchange.com/questions/224873/all-stack-exchange-data-dump-releases",
+        "https://meta.stackexchange.com/a/398606"
+      ],
+      "locator": "Release index corrected April 2024 XML row and original acquisition receipts",
+      "finding": "Current index links the community mirror; acquisition and checksum receipts identify askubuntu.com.7z. Archive landing fetch unavailable in web tool; identity corroborated by index and existing receipt, not claimed publisher-signed bytes."
+    }
+  ],
+  "external_asset_links": "Pinned model cards checked by citation audit B; Stack Exchange licensing attribution retained."
+}

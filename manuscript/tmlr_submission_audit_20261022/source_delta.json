@@ -1,0 +1,88 @@
+{
+  "before_sha256": "397b727c33bf21c64b8ab7ce65854ee33717b07f8f2a520e0b61b787d3f72f5c",
+  "after_sha256": "f8b898047380c45055b341ed88fcc3d6d6fa379f0e4c17fa60fbb22910e1400e",
+  "replacements": [
+    {
+      "old": "The corrected April 2024 release is supported by a documentary provenance\nchain and checksummed acquisition.",
+      "new": "The corrected April 2024 export \\citep{askubuntu} is supported by a\ndocumentary provenance chain and checksummed acquisition.",
+      "reason": "Identify the actual acquired dataset release and community mirror."
+    },
+    {
+      "old": "The raters are pinned Qwen2.5-7B-Instruct and Mistral-Nemo-Instruct-2407.",
+      "new": "The raters are pinned Qwen2.5-7B-Instruct \\citep{qwen} and\nMistral-Nemo-Instruct-2407 \\citep{mistral}.",
+      "reason": "Add verified model publisher release citations at first use."
+    },
+    {
+      "old": "Source text is\nuntrusted input; the judges have no tools or retrieval.",
+      "new": "Source text is\nuntrusted input; the judges have no tools or retrieval. The supplement\nprovides the exact system prompt, pair template, and response schema.",
+      "reason": "Make the newly supplied public annotation specification discoverable."
+    },
+    {
+      "old": "Their Definitions~1--2 and Remark~3 require exact predictor recovery\nafter one deletion request. Our contract additionally specifies the\nstate for subsequent requests at the remaining horizon and charges\nall usable private information, including tickets.",
+      "new": "Their main Definitions~1--2 and Remark~3 require exact predictor recovery\nafter one deletion request; their threshold construction also supports\nmultiple requests (Appendix~B.1). Our distinction is the designated\ncanonical state for subsequent requests at the remaining horizon, with\nall usable private information charged, including tickets.",
+      "reason": "Avoid implying ticketed unlearning excludes multi-shot schemes."
+    },
+    {
+      "old": "The finite-family lower bound measures private information and exact\nrational heads.",
+      "new": "The pinned E5 model card lists Stack Exchange among its pretraining\nsources; overlap with the present corpus is unknown. Our target holds\nthat encoder fixed and does not remove influence from encoder pretraining.\nThe finite-family lower bound measures private information and exact\nrational heads.",
+      "reason": "Disclose potential encoder pretraining overlap and fixed-encoder scope."
+    },
+    {
+      "old": "Native account identifiers are contributor proxies.",
+      "new": "The study uses an existing public forum export and recruits no new\nparticipants. Native account identifiers are contributor proxies.",
+      "reason": "Clarify human-derived data source without inventing IRB or consent declarations."
+    },
+    {
+      "old": "Provenance for aggregate queries. PODS.\n\\href{https://arxiv.org/abs/1101.1110}{arXiv:1101.1110}.",
+      "new": "Provenance for aggregate queries. PODS, 153--164.\n\\href{https://doi.org/10.1145/1989284.1989302}{doi:10.1145/1989284.1989302}.",
+      "reason": "Complete verified primary publication metadata."
+    },
+    {
+      "old": "2026. GRACE: Gradient-guided coreset selection for LLM unlearning.\nAuthor manuscript. \\url{https://retis.santannapisa.it/~tommaso/publications/EMNLP-2026.pdf}.",
+      "new": "2026. GRACE: Gradient-guided coreset selection for LLM unlearning.\n\\href{https://arxiv.org/abs/2608.28361v1}{arXiv:2608.28361v1}.",
+      "reason": "Use stable verified full-text identifier, without inventing publication pagination."
+    },
+    {
+      "old": "Provenance semirings. PODS.\n\\url{https://www.cs.ucdavis.edu/~green/papers/pods07.pdf}.",
+      "new": "Provenance semirings. PODS, 31--40.\n\\href{https://doi.org/10.1145/1265530.1265535}{doi:10.1145/1265530.1265535}.",
+      "reason": "Complete verified primary publication metadata."
+    },
+    {
+      "old": "\\bibitem[Meta/Facebook Research(2026)]{semcode} Meta/Facebook Research. SemDeDup official implementation,\n\\texttt{semdedup.py}. Archived repository; inspected 16 October 2026.\n\\url{https://github.com/facebookresearch/SemDeDup/blob/main/semdedup.py}.",
+      "new": "\\bibitem[Facebook Research(2023)]{semcode} Facebook Research. 2023.\nSemDeDup official implementation, \\texttt{semdedup.py}.\nCommit \\href{https://github.com/facebookresearch/SemDeDup/blob/6b4194511202c29b0e1ac8c730996777449ea2a4/semdedup.py}{6b4194511202}. Inspected 22 October 2026.",
+      "reason": "Replace inspection-year publication label and mutable main URL with dated file revision."
+    },
+    {
+      "old": "source with a fidelity criterion. IRE National Convention Record, Part 4,\n142--163. \\href{https://gwern.net/doc/cs/algorithm/information/1959-shannon.pdf}{Original-paper scan}.",
+      "new": "source with a fidelity criterion. IRE International Convention Record, 7(4):\n142--163. \\href{https://gwern.net/doc/cs/algorithm/information/1959-shannon.pdf}{Reprinted text}.",
+      "reason": "Correct the linked collected-papers reprint description and complete volume metadata."
+    },
+    {
+      "old": "models. SIGMOD, 447--462.\n\\href{https://arxiv.org/abs/2002.11791}{arXiv:2002.11791}.",
+      "new": "models. SIGMOD, 447--462.\n\\href{https://doi.org/10.1145/3318464.3380571}{doi:10.1145/3318464.3380571}.",
+      "reason": "Use the verified primary publication DOI."
+    },
+    {
+      "old": "ARCANE: An efficient architecture for exact machine unlearning. IJCAI.\n\\url{https://www.ijcai.org/proceedings/2022/0556.pdf}.",
+      "new": "ARCANE: An efficient architecture for exact machine unlearning. IJCAI,\n4006--4013. \\href{https://doi.org/10.24963/ijcai.2022/556}{doi:10.24963/ijcai.2022/556}.",
+      "reason": "Complete verified primary publication metadata."
+    },
+    {
+      "old": "\\bibitem[Zheng et~al.(2023)]{judge} L. Zheng et al. 2023. Judging LLM-as-a-judge with MT-Bench\nand Chatbot Arena. NeurIPS Datasets and Benchmarks.\n\\href{https://arxiv.org/abs/2306.05685}{arXiv:2306.05685}.",
+      "new": "\\bibitem[Zheng et~al.(2023)]{judge} L. Zheng, W.-L. Chiang, Y. Sheng, S. Zhuang,\nZ. Wu, Y. Zhuang, Z. Lin, Z. Li, D. Li, E. P. Xing, H. Zhang,\nJ. E. Gonzalez, and I. Stoica. 2023. Judging LLM-as-a-judge with MT-Bench\nand Chatbot Arena. Advances in Neural Information Processing Systems, 36.\n\\href{https://proceedings.nips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html}{Datasets and Benchmarks Track}.",
+      "reason": "Expand all thirteen authors and cite official proceedings."
+    },
+    {
+      "old": "\\end{thebibliography}",
+      "new": "\\bibitem[Mistral AI(2024)]{mistral} Mistral AI. 2024. Mistral NeMo.\nModel release, 18 July 2024. \\url{https://mistral.ai/news/mistral-nemo/}.\n\\bibitem[Qwen Team(2024)]{qwen} Qwen Team. 2024. Qwen2.5: A party of foundation models.\nModel release, 19 September 2024. \\url{https://qwenlm.github.io/blog/qwen2.5/}.\n\\bibitem[Stack Exchange(2024)]{askubuntu} Stack Exchange. 2024.\nStack Exchange Data Dump, corrected April 2024 release, Ask Ubuntu component.\n\\href{https://archive.org/details/stackexchange_20240402_bis}{Community mirror}.\nRelease identified by the \\href{https://meta.stackexchange.com/questions/224873/all-stack-exchange-data-dump-releases}{release index}\nand \\href{https://meta.stackexchange.com/a/398606}{staff correction announcement}.\n\\end{thebibliography}",
+      "reason": "Add primary model-release and actual dataset-source references."
+    },
+    {
+      "old": "code and aggregate evidence, with hashes and replay instructions.",
+      "new": "code, exact annotation prompts and schemas, and aggregate evidence.\nA top-level \\texttt{README.txt} maps claims to files, and\n\\texttt{python3 -B check\\_all.py} runs the public checks with Python 3.10\nor later, without model downloads or private data.",
+      "reason": "Describe directly accessible current supplement and its replay scope."
+    }
+  ],
+  "bibliography_sorted_alphabetically": true,
+  "scientific_results_protocols_and_theorems_unchanged": true
+}

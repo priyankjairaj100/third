@@ -1,0 +1,24 @@
+{
+  "checked_date": "2026-10-22",
+  "sources": [
+    "https://jmlr.org/tmlr/author-guide.html",
+    "https://jmlr.org/tmlr/editorial-policies.html",
+    "https://jmlr.org/tmlr/acceptance-criteria.html",
+    "https://jmlr.org/tmlr/ethics.html",
+    "https://jmlr.org/tmlr/faq.html"
+  ],
+  "checks": {
+    "scope": "Theoretical study with explicitly negative calibration and scoped engineering checks; no claim of successful utility/cost study.",
+    "format": "Official embedded review style; anonymous author block and PDF metadata; 16 pages total, references start p10, appendices p12. No hard length limit; within 12 main pages.",
+    "claims": "Existing negative gates preserved; ticketed multi-shot caveat and pretrained-encoder overlap added.",
+    "supplement": "Anonymous 405593-byte ZIP; 156 direct members, one current source, no nested archives, exact public prompts/schemas, 150 unchanged source copies; clean extraction replay passed.",
+    "AI_disclosure": "First-page footnote and detailed appendix present. Author responsibility and intellectual provenance cannot be certified by agent.",
+    "author_owned": "Active profiles/COIs, authorship consent, quota, prior submission/archival overlap, interests/funding, human-subject reporting and licensing authority pending."
+  },
+  "actual_submission": false,
+  "guarantee_against_desk_rejection": false,
+  "current_source": {
+    "sha256": "f8b898047380c45055b341ed88fcc3d6d6fa379f0e4c17fa60fbb22910e1400e",
+    "bytes": 73501
+  }
+}

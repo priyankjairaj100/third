@@ -1,0 +1,74 @@
+All six in-text literature claims are supported. Metadata completeness, stable GRACE source, optional multi-shot caveat, model-source citations, and fixed-encoder pretraining caveat improve submission defensibility. No scientific gate changes are warranted.
+
+space: verified / supported
+Bounded deletion size, memory bounds for realizability testing, and an ERM connection are all supported. The manuscript correctly names the full version separately; the theorem numbering is not being attributed to the nine-page extended abstract.
+Correction: None
+Sources: https://proceedings.mlr.press/v291/cherapanamjeri25b.html ; https://arxiv.org/pdf/2506.13048v1
+Locations: PMLR metadata and BibTeX ; Full version PDF pp.14--15: Theorems 5.4 and 6.3 ; Full version PDF pp.48--52: Appendix G
+
+ticketed: verified / supported_with_optional_precision
+Their main definition is explicitly one-shot and charges central bits and each ticket separately. The current comparison is accurate. However, Appendix B.1 explicitly notes that its threshold scheme supports multi-shot unlearning; adding this caveat would prevent a reader from interpreting the current contrast as claiming that the entire paper cannot handle sequential requests.
+Correction: None
+Sources: https://proceedings.mlr.press/v195/ghazi23a.html ; https://proceedings.mlr.press/v195/ghazi23a/ghazi23a.pdf
+Locations: Definitions 1--2 and Remark 3, PDF pp.4--5 ; Appendix B.1 immediately following proof of Theorem 22, PDF p.21
+Suggested precision: Their threshold construction also supports multiple requests (Appendix B.1); our distinction is the stated canonical remaining-horizon state contract.
+
+arcane: correct_but_incomplete / supported
+Section 3.2 explicitly gives zero retraining when the requested point lies outside the selected representative subset. Manuscript restricts the comparison to this specific selection contract, correctly.
+Correction: Complete the venue with page range 4006--4013 and optionally DOI.
+Sources: https://www.ijcai.org/proceedings/2022/556 ; https://www.ijcai.org/proceedings/2022/0556.pdf
+Locations: IJCAI proceedings landing page metadata ; PDF p.3 / proceedings p.4008, Section 3.2
+
+grace: verified_with_stable_source_update / supported
+Gradient-guided forget and retain coreset claim and behavioral-unlearning distinction are supported. The existing author PDF URL was not retrievable by web tool in this audit; the stable arXiv primary full text was successfully inspected. Current bibliography is not fabricated, but stable arXiv identification is preferable to the fragile PDF filename.
+Correction: Use arXiv:2608.28361v1; optional accepted-to-Findings status rather than assuming published pagination.
+Sources: https://arxiv.org/abs/2608.28361 ; https://arxiv.org/pdf/2608.28361 ; https://retis.santannapisa.it/~tommaso/papers/emnlp26.php
+Locations: arXiv metadata and comments; first submitted 28 August 2026 ; PDF p.1 abstract and introduction ; Author publication-details page
+
+e5: verified / supported
+Six author names, year, title, representation claim, model dimension 768, and MIT label all match primary sources. The pinned card reports Stack Exchange among pretraining data. Exact AskUbuntu row overlap is unknown; this study cannot imply the fixed encoder has never seen the source corpus.
+Correction: None
+Sources: https://arxiv.org/abs/2402.05672 ; https://huggingface.co/intfloat/multilingual-e5-base/blob/d128750597153bb5987e10b1c3493a34e5a4502a/README.md
+Locations: arXiv title/authors/abstract ; Pinned model card: model size and Training Details
+Suggested precision: The pretrained E5 card lists Stack Exchange data, so overlap with this corpus is unknown; our repair target keeps the encoder fixed.
+
+judge: correct_but_incomplete / supported
+Position/order bias and the value of order-swapping diagnostics are directly supported. The paper studies answer preference judgments, not semantic-duplicate truth, and manuscript correctly makes no transfer-validity claim.
+Correction: Expand all 13 authors in bibliography and identify NeurIPS 36; use official proceedings URL.
+Sources: https://proceedings.nips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html ; https://arxiv.org/html/2306.05685v4
+Locations: Official NeurIPS metadata ; Sections 3.3--3.4 and Appendix D.1
+
+Model and dataset attribution:
+[
+  {
+    "asset": "Qwen2.5-7B-Instruct",
+    "status": "pinned_card_and_license_verified",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct/blob/a09a35458c702b33eeacc393d103063234e8bc28/README.md",
+    "license_label": "Apache-2.0",
+    "optional_formal_citation": {
+      "author": "Qwen Team",
+      "year": 2024,
+      "title": "Qwen2.5: A Party of Foundation Models",
+      "url": "https://qwenlm.github.io/blog/qwen2.5/"
+    },
+    "note": "Pinned card explicitly supplies this citation. Adding it at first use improves attribution; card is already linked in appendix."
+  },
+  {
+    "asset": "Mistral-Nemo-Instruct-2407",
+    "status": "pinned_card_and_license_verified",
+    "url": "https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407/blob/04d8a90549d23fc6bd7f642064003592df51e9b3/README.md",
+    "license_label": "Apache-2.0",
+    "optional_formal_citation": {
+      "author": "Mistral AI",
+      "year": 2024,
+      "title": "Mistral NeMo",
+      "url": "https://mistral.ai/news/mistral-nemo/"
+    },
+    "note": "Official release dated 18 July 2024 credits Mistral AI and NVIDIA. Card is already linked in appendix."
+  },
+  {
+    "asset": "AskUbuntu April 2024 export",
+    "status": "citation_gap_not_scientific_validation",
+    "note": "Manuscript gives release month and licensing page but no direct dataset acquisition citation in the Data subsection. Add the actual already-verified archival landing URL from acquisition receipt if it can be shared anonymously; do not invent a dataset paper or assert a rights audit."
+  }
+]

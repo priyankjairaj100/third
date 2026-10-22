@@ -1,0 +1,59 @@
+{
+  "status": "pass",
+  "review_date": "2026-10-22",
+  "scope": "Independent reconstruction from the current final delta file; no repository edits.",
+  "source_before_sha256": "397b727c33bf21c64b8ab7ce65854ee33717b07f8f2a520e0b61b787d3f72f5c",
+  "source_delta_sha256": "7223e0842a16d31d318835d45a7533965b36ce9d59838571063906c341c7f988",
+  "reconstructed_sha256": "f8b898047380c45055b341ed88fcc3d6d6fa379f0e4c17fa60fbb22910e1400e",
+  "candidate_sha256": "f8b898047380c45055b341ed88fcc3d6d6fa379f0e4c17fa60fbb22910e1400e",
+  "replacement_count": 16,
+  "unique_match_counts": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "checks": {
+    "before_hash_matches_delta": true,
+    "all_16_replacements_unique": true,
+    "reconstruction_byte_exact": true,
+    "reconstructed_hash_matches_final_delta": true,
+    "final_expected_hash": true,
+    "prior_review_link_matches_addendum": true,
+    "addendum_final_link_matches_current": true
+  },
+  "method": "Apply all 16 replacements sequentially; alphabetize complete bibitem blocks by case-insensitive optional author-year label; compare resulting UTF-8 bytes to source_candidate.tex.",
+  "history_chain": [
+    {
+      "file": "source_review.json",
+      "reviewed_source_sha256": "115b14b76ccd524a58247bdb136cc0cca6455c7982c46477f26f22668538e1df",
+      "scope": "Initial 16 replacements and alphabetic bibliography; initially retained National in Shannon venue."
+    },
+    {
+      "file": "source_review_addendum.json",
+      "before_sha256": "115b14b76ccd524a58247bdb136cc0cca6455c7982c46477f26f22668538e1df",
+      "after_sha256": "f8b898047380c45055b341ed88fcc3d6d6fa379f0e4c17fa60fbb22910e1400e",
+      "scope": "National -> International venue correction only, inverse restores initial reviewed hash."
+    },
+    {
+      "file": "final_source_delta_review.json",
+      "source_delta_sha256": "7223e0842a16d31d318835d45a7533965b36ce9d59838571063906c341c7f988",
+      "reviewed_source_sha256": "f8b898047380c45055b341ed88fcc3d6d6fa379f0e4c17fa60fbb22910e1400e",
+      "scope": "Current final delta reconstructs final source exactly; does not reinterpret historical review as binding this later delta."
+    }
+  ],
+  "issues": [],
+  "limits": "This is source provenance verification; prior PDF, package, and author-declaration scope limits remain."
+}

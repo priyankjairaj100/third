@@ -1,3 +1,30 @@
+Latest continuation — 22 October 2026: TMLR desk-rejection and citation audit
+
+Current source SHA256: f8b898047380c45055b341ed88fcc3d6d6fa379f0e4c17fa60fbb22910e1400e.
+All 20 references checked for metadata/claim support; citation corrections and
+dataset/model citations installed. Prior multi-shot unlearning and fixed E5
+pretraining boundaries clarified. All theorems/proofs/equations, negative results,
+unmet gates and protected locks remain unchanged. No new experimental execution.
+
+Native editor compile and 16-page visual review passed; references start p10,
+appendices p12. New flat supplement has 156 direct members and 150 unchanged
+copied files; independent original-source comparison and clean replay passed.
+Exact public model prompts/schemas and reproduction limits are now directly
+accessible. Package checks do not replicate private inference/graph/state results.
+Read manuscript/tmlr_submission_audit_20261022/SUBMISSION_CHECKLIST.txt,
+CITATION_AUDIT.json, final_source_delta_review.json and final_package_review.json.
+Current supplement: manuscript/tmlr_submission_audit_20261022/third_tmlr_supplement_v8.zip.
+Private upload packet: outputs/tmlr_submission_20261022_v8.
+
+Technical artifacts are prepared. Actual author declarations/profile IDs remain
+unconfirmed, including consent, quota, overlap, AI/intellectual provenance,
+funding/interests, human-data reporting and licensing authority. No submission.
+Scheduler remains PAUSED by explicit user request. Dominici search remains closed
+and nonblocking; only its primary metadata/scope were checked. Original effect
+study is still unexecuted after failed calibration; do not relabel completion.
+
+HISTORICAL CHECKPOINTS FOLLOW (superseded source/package pointers)
+
 Latest continuation — 22 October 2026: supplied full-paper comparison complete
 
 The user supplied the six-page Tadakamalla et al. manuscript. Source receipt:

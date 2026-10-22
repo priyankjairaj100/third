@@ -1,0 +1,45 @@
+TMLR SUBMISSION PREPARATION V8 — 22 OCTOBER 2026
+
+TECHNICAL ARTIFACTS COMPLETE; AUTHOR DECLARATIONS STILL REQUIRED
+
+Completed this revision
+- All 20 references checked for identity, metadata and the claims attributed to
+  them. Fixed SemDeDup code year/pin; Shannon venue/reprint labeling; GRACE source;
+  incomplete proceedings/author details. Added actual dataset and model citations.
+- Clarified prior ticketed multi-shot unlearning and fixed E5 pretraining scope.
+  Theorems, proofs, equations, empirical outcomes and failed gates are unchanged.
+- Checked current official TMLR scope, review format, anonymity, AI disclosure,
+  ethics, submission eligibility and licensing rules. No acceptance guarantee.
+- Native editor compile passes. Authorized alternate 16-page PDF visually
+  checked; references begin p10, appendices p12. PDF has no author metadata.
+- Rebuilt one flat anonymous supplement: direct code/evidence, exact public
+  judge prompts/schemas, clear entrypoint and style license. No private records,
+  IDs, individual model observations, weights or author forms.
+- Independent source/delta and final package audits passed. All 150 copied-file
+  mappings match original evidence/code. Clean extraction checks pass.
+
+Reproduction boundary
+python3 -B check_all.py checks hashes, Python syntax and saved aggregate
+arithmetic. It does not repeat private inference, regenerate private graphs or
+states, establish provenance of unavailable observations, or verify proofs.
+Negative calibrations, incomplete original effect study and prior failures remain
+explicit. No new scientific result is claimed by this submission preparation.
+
+Author-owned facts still needed before pressing Submit
+1. Verified OpenReview profile IDs/conflicts and final authorship contributions,
+   consent and responsibility from all authors.
+2. Actual intellectual provenance and AI use. The existing first-page/appendix
+   disclosure is not evidence of human-sourced ideas, claims or results.
+3. TMLR quota, prior submission/rejection history and absence of conflicting
+   archival publication or concurrent submission; report any applicable overlap.
+4. Actual funding, interests and applicable human-data/IRB determination. Existing
+   public data and zero human pair review do not establish an exemption.
+5. Authority to license the paper and permitted supplement under CC BY 4.0.
+
+Dominici thesis remains unavailable; metadata-only acknowledgment is explicit.
+The user closed that search. It is not a new submission-preparation blocker.
+
+Only the anonymous PDF and third_tmlr_supplement_v8.zip in the private upload
+directory are intended as upload files. The development audit directory, old
+releases, private author forms and third-party reference papers are not uploads.
+Scheduler stays PAUSED. No cluster launch, experiment rerun or submission occurred.

@@ -1,0 +1,27 @@
+{
+  "source": {
+    "sha256": "f8b898047380c45055b341ed88fcc3d6d6fa379f0e4c17fa60fbb22910e1400e",
+    "bytes": 73501
+  },
+  "pdf": {
+    "sha256": "6edf6b9f9ac2a855731c5a5b7bfc534b89ecbf83bfc7c6a6f50136e79eb1002a",
+    "bytes": 146428,
+    "pages": 16
+  },
+  "reviewed_all_pages": true,
+  "review_method": "Authorized temporary Tectonic PDF, Poppler-rendered pages; all 16 pages reviewed at preceding source 115b14b76ccd524a58247bdb136cc0cca6455c7982c46477f26f22668538e1df; final source differs by one Shannon venue word. Final text extraction differs only on page 11, which was rerendered and reinspected.",
+  "final_changed_pages_reviewed": [
+    11
+  ],
+  "references_start_on_page": 10,
+  "appendices_start_on_page": 12,
+  "no_clipping_or_overflow_found": true,
+  "pdf_author_metadata_absent": true,
+  "native_preview_pixel_equality_claimed": false,
+  "nonfatal_build_warnings": [
+    "Underfull vertical boxes on pages 7 and 15; normal whitespace.",
+    "Underfull Green bibliography line; readable without clipping.",
+    "Embedded style file regeneration."
+  ],
+  "no_overfull_or_undefined_reference_warnings": true
+}

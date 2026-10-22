@@ -1,0 +1,27 @@
+PASS: source delta review
+Source SHA256 115b14b76ccd524a58247bdb136cc0cca6455c7982c46477f26f22668538e1df
+All 16 replacements apply uniquely; applying them then sorting the bibliography reconstructs source_candidate.tex exactly.
+20 bibliography entries, all cited, no duplicate keys, unresolved citations, unresolved references or duplicate labels.
+All theorem/equation/proof/corollary blocks and calibration results remain unchanged.
+
+1. Dataset citation correctly identifies the corrected April 2024 Ask Ubuntu export and distinguishes community mirror from publisher attestation. Fresh archive and staff-release pages verify the documentary chain.
+2. Qwen Team 2024 and Mistral AI 2024 release metadata, model names, and first-use attribution match the verified publisher pages.
+3. Exact prompt/schema availability is a package obligation. Source wording is appropriate if package contains the complete exact system prompt, pair template and response schema; this review does not attest package contents.
+4. Ghazi Definitions 1--2 and Remark 3 are one-shot; Appendix B.1 explicitly allows multiple requests for the threshold construction. The added caveat is accurate and prevents an overbroad novelty contrast.
+5. Pinned E5 card lists Stack Exchange pretraining. Exact overlap is not established; the new unknown-overlap/fixed-encoder limitation is accurate.
+6. Existing public forum data and no newly recruited participants are consistent with the fully model-based protocol. No IRB waiver, consent, or rights conclusion is introduced.
+7. Aggregate queries title, pages 153--164, and DOI match the companion primary-source audit.
+8. GRACE arXiv:2608.28361v1 is a verified stable full text. Omitting future venue pagination is appropriate.
+9. Provenance semirings pages 31--40 and DOI match companion primary-source audit.
+10. Facebook Research 2023, immutable file commit, and separate inspection date match companion audit; this is a bibliography repair, not a new protocol pin.
+11. Shannon label Reprinted text accurately describes the linked document. Original year is preserved and volume 7 added.
+12. PrIU publisher DOI matches companion audit and leaves existing correct pages unchanged.
+13. ARCANE pages 4006--4013 and DOI match official IJCAI metadata.
+14. All thirteen Zheng authors are present in official order and match primary proceedings metadata.
+15. Three new entries are all cited and are alphabetized into the final bibliography. Model-release pages and archive/metadata sources are correctly identified.
+16. Readme and public-check command accurately state intended verification scope, without claiming private-inference replay. Final package checker must verify actual Python requirement, invocation, and absence of model download.
+
+Scope limits:
+Native LaTeX compile and final PDF layout were not run in this read-only source review.
+New supplement availability statements require final package inspection/checker execution.
+Author declarations, rights, ethics review applicability, and submission eligibility remain author-owned.

@@ -1,0 +1,244 @@
+{
+  "audit_date": "2026-10-22",
+  "auditor": "independent_citation_unlearning_audit",
+  "source_sha256": "397b727c33bf21c64b8ab7ce65854ee33717b07f8f2a520e0b61b787d3f72f5c",
+  "scope": [
+    "space",
+    "ticketed",
+    "arcane",
+    "grace",
+    "e5",
+    "judge"
+  ],
+  "summary": "All six in-text literature claims are supported. Metadata completeness, stable GRACE source, optional multi-shot caveat, model-source citations, and fixed-encoder pretraining caveat improve submission defensibility. No scientific gate changes are warranted.",
+  "entries": [
+    {
+      "key": "space",
+      "metadata_status": "verified",
+      "claim_status": "supported",
+      "metadata": {
+        "authors": [
+          "Yeshwanth Cherapanamjeri",
+          "Sumegha Garg",
+          "Nived Rajaraman",
+          "Ayush Sekhari",
+          "Abhishek Shetty"
+        ],
+        "year": 2025,
+        "title": "The Space Complexity of Learning-Unlearning Algorithms (extended abstract)",
+        "venue": "Proceedings of Thirty Eighth Conference on Learning Theory",
+        "series": "PMLR",
+        "volume": 291,
+        "pages": "1185--1193"
+      },
+      "sources": [
+        "https://proceedings.mlr.press/v291/cherapanamjeri25b.html",
+        "https://arxiv.org/pdf/2506.13048v1"
+      ],
+      "locators": [
+        "PMLR metadata and BibTeX",
+        "Full version PDF pp.14--15: Theorems 5.4 and 6.3",
+        "Full version PDF pp.48--52: Appendix G"
+      ],
+      "finding": "Bounded deletion size, memory bounds for realizability testing, and an ERM connection are all supported. The manuscript correctly names the full version separately; the theorem numbering is not being attributed to the nine-page extended abstract.",
+      "required_correction": null
+    },
+    {
+      "key": "ticketed",
+      "metadata_status": "verified",
+      "claim_status": "supported_with_optional_precision",
+      "metadata": {
+        "authors": [
+          "Badih Ghazi",
+          "Pritish Kamath",
+          "Ravi Kumar",
+          "Pasin Manurangsi",
+          "Ayush Sekhari",
+          "Chiyuan Zhang"
+        ],
+        "year": 2023,
+        "title": "Ticketed Learning--Unlearning Schemes",
+        "venue": "Proceedings of Thirty Sixth Conference on Learning Theory",
+        "series": "PMLR",
+        "volume": 195,
+        "pages": "5110--5139"
+      },
+      "sources": [
+        "https://proceedings.mlr.press/v195/ghazi23a.html",
+        "https://proceedings.mlr.press/v195/ghazi23a/ghazi23a.pdf"
+      ],
+      "locators": [
+        "Definitions 1--2 and Remark 3, PDF pp.4--5",
+        "Appendix B.1 immediately following proof of Theorem 22, PDF p.21"
+      ],
+      "finding": "Their main definition is explicitly one-shot and charges central bits and each ticket separately. The current comparison is accurate. However, Appendix B.1 explicitly notes that its threshold scheme supports multi-shot unlearning; adding this caveat would prevent a reader from interpreting the current contrast as claiming that the entire paper cannot handle sequential requests.",
+      "required_correction": null,
+      "recommended_insertion": "Their threshold construction also supports multiple requests (Appendix B.1); our distinction is the stated canonical remaining-horizon state contract."
+    },
+    {
+      "key": "arcane",
+      "metadata_status": "correct_but_incomplete",
+      "claim_status": "supported",
+      "metadata": {
+        "authors": [
+          "Haonan Yan",
+          "Xiaoguang Li",
+          "Ziyao Guo",
+          "Hui Li",
+          "Fenghua Li",
+          "Xiaodong Lin"
+        ],
+        "year": 2022,
+        "title": "ARCANE: An Efficient Architecture for Exact Machine Unlearning",
+        "venue": "Proceedings of the Thirty-First International Joint Conference on Artificial Intelligence",
+        "pages": "4006--4013",
+        "doi": "10.24963/ijcai.2022/556"
+      },
+      "sources": [
+        "https://www.ijcai.org/proceedings/2022/556",
+        "https://www.ijcai.org/proceedings/2022/0556.pdf"
+      ],
+      "locators": [
+        "IJCAI proceedings landing page metadata",
+        "PDF p.3 / proceedings p.4008, Section 3.2"
+      ],
+      "finding": "Section 3.2 explicitly gives zero retraining when the requested point lies outside the selected representative subset. Manuscript restricts the comparison to this specific selection contract, correctly.",
+      "required_correction": "Complete the venue with page range 4006--4013 and optionally DOI."
+    },
+    {
+      "key": "grace",
+      "metadata_status": "verified_with_stable_source_update",
+      "claim_status": "supported",
+      "metadata": {
+        "authors": [
+          "Praveen Bushipaka",
+          "Andrea D Angelo",
+          "Lucia Passaro",
+          "Tommaso Cucinotta"
+        ],
+        "year": 2026,
+        "title": "GRACE: Gradient-guided Coreset Selection for LLM Unlearning",
+        "arxiv": "2608.28361v1",
+        "status": "arXiv says accepted to EMNLP Findings; author page identifies EMNLP 2026 Findings"
+      },
+      "sources": [
+        "https://arxiv.org/abs/2608.28361",
+        "https://arxiv.org/pdf/2608.28361",
+        "https://retis.santannapisa.it/~tommaso/papers/emnlp26.php"
+      ],
+      "locators": [
+        "arXiv metadata and comments; first submitted 28 August 2026",
+        "PDF p.1 abstract and introduction",
+        "Author publication-details page"
+      ],
+      "finding": "Gradient-guided forget and retain coreset claim and behavioral-unlearning distinction are supported. The existing author PDF URL was not retrievable by web tool in this audit; the stable arXiv primary full text was successfully inspected. Current bibliography is not fabricated, but stable arXiv identification is preferable to the fragile PDF filename.",
+      "required_correction": "Use arXiv:2608.28361v1; optional accepted-to-Findings status rather than assuming published pagination.",
+      "proposed_tex": "2026. GRACE: Gradient-guided coreset selection for LLM unlearning. Accepted to Findings of EMNLP 2026. \\href{https://arxiv.org/abs/2608.28361v1}{arXiv:2608.28361v1}."
+    },
+    {
+      "key": "e5",
+      "metadata_status": "verified",
+      "claim_status": "supported",
+      "metadata": {
+        "authors": [
+          "Liang Wang",
+          "Nan Yang",
+          "Xiaolong Huang",
+          "Linjun Yang",
+          "Rangan Majumder",
+          "Furu Wei"
+        ],
+        "year": 2024,
+        "title": "Multilingual E5 Text Embeddings: A Technical Report",
+        "arxiv": "2402.05672"
+      },
+      "sources": [
+        "https://arxiv.org/abs/2402.05672",
+        "https://huggingface.co/intfloat/multilingual-e5-base/blob/d128750597153bb5987e10b1c3493a34e5a4502a/README.md"
+      ],
+      "locators": [
+        "arXiv title/authors/abstract",
+        "Pinned model card: model size and Training Details"
+      ],
+      "finding": "Six author names, year, title, representation claim, model dimension 768, and MIT label all match primary sources. The pinned card reports Stack Exchange among pretraining data. Exact AskUbuntu row overlap is unknown; this study cannot imply the fixed encoder has never seen the source corpus.",
+      "required_correction": null,
+      "recommended_insertion": "The pretrained E5 card lists Stack Exchange data, so overlap with this corpus is unknown; our repair target keeps the encoder fixed."
+    },
+    {
+      "key": "judge",
+      "metadata_status": "correct_but_incomplete",
+      "claim_status": "supported",
+      "metadata": {
+        "authors": [
+          "Lianmin Zheng",
+          "Wei-Lin Chiang",
+          "Ying Sheng",
+          "Siyuan Zhuang",
+          "Zhanghao Wu",
+          "Yonghao Zhuang",
+          "Zi Lin",
+          "Zhuohan Li",
+          "Dacheng Li",
+          "Eric P. Xing",
+          "Hao Zhang",
+          "Joseph E. Gonzalez",
+          "Ion Stoica"
+        ],
+        "year": 2023,
+        "title": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
+        "venue": "Advances in Neural Information Processing Systems",
+        "volume": 36,
+        "track": "Datasets and Benchmarks",
+        "doi": "10.52202/075280-2020"
+      },
+      "sources": [
+        "https://proceedings.nips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html",
+        "https://arxiv.org/html/2306.05685v4"
+      ],
+      "locators": [
+        "Official NeurIPS metadata",
+        "Sections 3.3--3.4 and Appendix D.1"
+      ],
+      "finding": "Position/order bias and the value of order-swapping diagnostics are directly supported. The paper studies answer preference judgments, not semantic-duplicate truth, and manuscript correctly makes no transfer-validity claim.",
+      "required_correction": "Expand all 13 authors in bibliography and identify NeurIPS 36; use official proceedings URL."
+    }
+  ],
+  "asset_checks": [
+    {
+      "asset": "Qwen2.5-7B-Instruct",
+      "status": "pinned_card_and_license_verified",
+      "url": "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct/blob/a09a35458c702b33eeacc393d103063234e8bc28/README.md",
+      "license_label": "Apache-2.0",
+      "optional_formal_citation": {
+        "author": "Qwen Team",
+        "year": 2024,
+        "title": "Qwen2.5: A Party of Foundation Models",
+        "url": "https://qwenlm.github.io/blog/qwen2.5/"
+      },
+      "note": "Pinned card explicitly supplies this citation. Adding it at first use improves attribution; card is already linked in appendix."
+    },
+    {
+      "asset": "Mistral-Nemo-Instruct-2407",
+      "status": "pinned_card_and_license_verified",
+      "url": "https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407/blob/04d8a90549d23fc6bd7f642064003592df51e9b3/README.md",
+      "license_label": "Apache-2.0",
+      "optional_formal_citation": {
+        "author": "Mistral AI",
+        "year": 2024,
+        "title": "Mistral NeMo",
+        "url": "https://mistral.ai/news/mistral-nemo/"
+      },
+      "note": "Official release dated 18 July 2024 credits Mistral AI and NVIDIA. Card is already linked in appendix."
+    },
+    {
+      "asset": "AskUbuntu April 2024 export",
+      "status": "citation_gap_not_scientific_validation",
+      "note": "Manuscript gives release month and licensing page but no direct dataset acquisition citation in the Data subsection. Add the actual already-verified archival landing URL from acquisition receipt if it can be shared anonymously; do not invent a dataset paper or assert a rights audit."
+    }
+  ],
+  "limits": [
+    "No independent correctness audit of cited papers proofs.",
+    "Documentary model license labels do not certify rights to redistribute private source records.",
+    "No full corpus/embedding/model-label data inspected or published."
+  ]
+}

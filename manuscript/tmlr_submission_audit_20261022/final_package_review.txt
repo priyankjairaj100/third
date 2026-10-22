@@ -1,0 +1,33 @@
+FINAL FLAT TMLR SUPPLEMENT PACKAGE AUDIT
+
+PASS for package integrity, scope preservation, and reviewer usability.
+
+Archive SHA256: 24879a8b0249cec57a215c49bcc39f5d2374963eb13df1ad385363028783b7b0
+Current source SHA256: f8b898047380c45055b341ed88fcc3d6d6fa379f0e4c17fa60fbb22910e1400e
+
+156 direct members; one current source; no nested archives or third-party PDFs.
+All 150 unchanged-copy mappings were compared with their actual prior archive
+or frozen local source, not merely with the new manifest. All structure and
+repair bundles, scientific modules and calibration aggregates are complete and
+byte-identical. Exact prompts/schemas match frozen v3 bindings; the public v3/v4
+settings view matches its admitted source plans. Human-completed=false remains
+part of the model-only schema.
+
+Fresh temporary extraction replay passed under isolated Python 3.12 with no
+private inputs. It checked 102 cut decisions, 12 v4 bin boundaries, 72 compute
+records, 51 structural cuts and saved repair aggregates covering 13,056 updates
+and 408 checkpoints. Unexpected-file, altered-evidence and optimized-Python
+negative checks were rejected.
+
+No known author names, private paths, cluster hosts, repository handles or key
+markers were found. The email regex matched internal TeX macros and one historical style-source
+comment, not author identifiers. Standard source hashes remain linkable.
+
+The README accurately distinguishes arithmetic replay from inference or graph/
+state regeneration. The new wrapper intentionally does not execute obsolete
+historical manuscript/source-delta wrappers; it executes unchanged scientific
+aggregate checks after validating the current file inventory. Author facts,
+rights, intellectual provenance and submission eligibility remain separate.
+
+This is an internal automated package audit, not external peer review or a
+new scientific experiment. No manuscript or repository files were edited.

@@ -1,19 +1,19 @@
 {
-  "schema": "third-tmlr-fulltext-comparison-v7",
-  "created_utc": "2026-10-22T05:34:39.657827+00:00",
+  "schema": "third-tmlr-citation-and-submission-audit-v8",
+  "created_utc": "2026-10-22T10:13:16.164126+00:00",
   "source": {
-    "sha256": "397b727c33bf21c64b8ab7ce65854ee33717b07f8f2a520e0b61b787d3f72f5c",
-    "bytes": 71693
+    "sha256": "f8b898047380c45055b341ed88fcc3d6d6fa379f0e4c17fa60fbb22910e1400e",
+    "bytes": 73501
   },
   "anonymous_supplement": {
-    "path": "manuscript/counterfactual_fulltext_20261022/third_tmlr_supplement_v7.zip",
-    "sha256": "b4554bb989e392fdd3b664bfe72b0e49244e134f4dc2f71ca4b96fc3982abfa6",
-    "bytes": 443199,
-    "members": 9
+    "path": "manuscript/tmlr_submission_audit_20261022/third_tmlr_supplement_v8.zip",
+    "sha256": "24879a8b0249cec57a215c49bcc39f5d2374963eb13df1ad385363028783b7b0",
+    "bytes": 405593,
+    "members": 156
   },
   "private_pdf": {
-    "sha256": "06b93028528a5100d01b25fa7291a00b1a173d3e4f158dd93f2ee3c5dd0b6fb3",
-    "bytes": 144671,
+    "sha256": "6edf6b9f9ac2a855731c5a5b7bfc534b89ecbf83bfc7c6a6f50136e79eb1002a",
+    "bytes": 146428,
     "pages": 16
   },
   "native_compile_verified": true,
@@ -29,11 +29,11 @@
   "original_effect_study_complete": false,
   "native_app_runtime_repaired": false,
   "previous_immutable_release": "manuscript/release_20261018_tmlr_v4.zip",
-  "previous_release_status_preserved": "manuscript/counterfactual_fulltext_20261022/previous_release_status.json",
+  "previous_release_status_preserved": "manuscript/tmlr_submission_audit_20261022/previous_release_status.json",
   "public_backup_excludes_private_author_metadata_and_pdf": true,
   "independent_source_delta_review_passed": true,
   "independent_package_review_passed": true,
-  "previous_submission_supplement": "manuscript/comparison_20261022/third_tmlr_supplement_v6.zip",
+  "previous_submission_supplement": "manuscript/counterfactual_fulltext_20261022/third_tmlr_supplement_v7.zip",
   "available_evidence_comparisons_complete": true,
   "scheduler_status": "PAUSED",
   "scheduler_pause_basis": "Explicit user stop request on 22 October 2026; confirmed tool update in preceding turn.",
@@ -42,8 +42,11 @@
   "counterfactual_comparison_caveat": "Theorem8(iii) counting proof supports joint complete-answer success, not separate per-query success.",
   "dominici_fulltext_comparison_complete": false,
   "unresolved_fulltext_comparison_count": 1,
-  "workflow_updated_utc": "2026-10-22T09:45:40.551337+00:00",
+  "workflow_updated_utc": "2026-10-22T10:13:16.164126+00:00",
   "dominici_search_status": "closed_by_user_nonblocking",
   "literature_submission_preparation_blockers": 0,
-  "literature_disposition": "manuscript/dominici_search_disposition_20261022.json"
+  "literature_disposition": "manuscript/dominici_search_disposition_20261022.json",
+  "citation_reference_count": 20,
+  "citation_audit": "manuscript/tmlr_submission_audit_20261022/CITATION_AUDIT.json",
+  "submission_checklist": "manuscript/tmlr_submission_audit_20261022/SUBMISSION_CHECKLIST.txt"
 }
