@@ -139,15 +139,15 @@
       },
       "depends_on": [],
       "done_when": "Compiled and visually reviewed complete manuscript, actual figures/tables, citations and defensible limits.",
-      "evidence": "manuscript/comparison_20261022/package_receipt.json",
+      "evidence": "manuscript/counterfactual_fulltext_20261022/package_receipt.json",
       "historical_compute": "manuscript/compute_history_20261016.json",
       "id": "07-manuscript",
       "independent_ai_review": "manuscript/natural_repair_20261018/delta_review_stage2.json",
-      "next_action": "Current V6 source/PDF reviewed. Await missing full texts and factual author declarations/profile IDs. No unchanged reruns.",
+      "next_action": "V7 reviewed/compiled. Await Dominici full thesis and factual author declarations/profile IDs. Tadakamalla comparison completed at stated scope; no repeated retrieval.",
       "state": "tmlr_submission_revision_reviewed_compiled_and_visually_verified",
       "tmlr_revision": "manuscript/tmlr_20261018/adaptation_report.json",
       "unified_author_review": "manuscript/unified_review_20261016.json",
-      "independent_literature_delta_review": "manuscript/comparison_20261022/independent_source_delta_review.json"
+      "independent_literature_delta_review": "manuscript/counterfactual_fulltext_20261022/independent_delta_review.json"
     },
     {
       "depends_on": [
@@ -176,7 +176,8 @@
         "Audited all51 natural development structural cuts integrated into same TMLR source; native compilation and all15page alternate visual review passed. Original failed gates retained.",
         "Audited Stage2 exact membership/logical-state repair:13056singleton checks and408checkpoints. Same TMLR source compiled and visually reviewed; anonymousV4 and new immutable release passed clean extraction replay.",
         "22 October: live TMLR/form verification, first-page AI disclosure, current-source native compile and 15-page review, V5 clean replay and independent submission audit; user-supplied author details transcribed privately.",
-        "22 October: explicit pinned-code and primary-description comparisons; four source deltas independently checked; native compile, 16-page visual review and V6 clean replay pass. Both full texts remain unavailable. Scheduler paused by user."
+        "22 October: explicit pinned-code and primary-description comparisons; four source deltas independently checked; native compile, 16-page visual review and V6 clean replay pass. Both full texts remain unavailable. Scheduler paused by user.",
+        "22 October: user-supplied Tadakamalla full text compared, joint-tuple approximation event clarified, two manuscript changes independently reviewed; V7 and16page PDF verified. Dominici alone remains missing."
       ],
       "coordinates_with": [
         "07-manuscript"
@@ -195,8 +196,8 @@
         "manuscript/independent_review_20261018.json"
       ],
       "id": "09-negative-branch-closure",
-      "next_action": "Await the two complete prior texts and author declarations/profile IDs. Current code/metadata comparisons do not close full-text review. Scheduler remains paused.",
-      "public_package": "manuscript/comparison_20261022/third_tmlr_supplement_v6.zip",
+      "next_action": "Await Dominici full thesis and author declarations/profile IDs. Scheduler remains paused. No original-study completion, automatic experiment or submission.",
+      "public_package": "manuscript/counterfactual_fulltext_20261022/third_tmlr_supplement_v7.zip",
       "state": "submission_files_prepared_author_declarations_pending"
     },
     {
@@ -245,8 +246,13 @@
       }
     }
   ],
-  "updated_utc": "2026-10-22T05:18:43.604570+00:00",
+  "updated_utc": "2026-10-22T05:34:39.660923+00:00",
   "venue_change_authorization": "Explicit user request on 18 October 2026; no relaxation of calibration, held-out or human gates.",
   "submission_preparation_authorization": "22 October 2026: complete remaining submission work; reuse supplied PDF for author details.",
-  "literature_comparison_authorization": "22 October 2026: complete the 2 unresolved comparisons; scheduler remains paused."
+  "literature_comparison_authorization": "22 October 2026: complete the 2 unresolved comparisons; scheduler remains paused.",
+  "literature_fulltext_status": {
+    "counterfactual": "supplied_and_scoped_comparison_complete_with_joint_success_caveat",
+    "dominici": "full_thesis_unavailable",
+    "open_count": 1
+  }
 }

@@ -1,0 +1,22 @@
+V7 final artifact audit: PASSED. No findings.
+
+The current manuscript, reviewed candidate, build source and supplement source
+match. The exact two reviewed replacements reconstruct the source; all other
+bytes, scientific results and prior negative gates are unchanged.
+
+The nine-member supplement passes CRC, safe inventory and all eight manifest
+hash checks. Its nested V6 is byte-identical to the previously audited archive.
+Saved clean replay and source-bound all-page layout receipts pass. The 16-page
+PDF has no author metadata, XMP or attachments; its anonymous author line and
+first-page AI disclosure remain present. References start on page 10 and
+appendices on page 11. No rerender or nested replay was needed.
+
+The supplied six-page paper, extracted full text and page images are excluded
+from the new public files. Its receipt contains hash metadata and provenance.
+The counterfactual comparison is complete at its stated supplied-paper scope,
+with the joint-success qualification retained. Dominici remains unavailable;
+no global novelty or publisher-version identity is inferred.
+
+Known-author/private-path screening passes. Author forms stay outside upload;
+profiles and declarations remain unresolved. No network, experiment, scheduler
+change, project/packet edit or submission was performed by this review.

@@ -1,0 +1,106 @@
+{
+  "schema": "third-v7-independent-final-artifact-review-v1",
+  "created_utc": "2026-10-22T05:34:16.106170+00:00",
+  "passed": true,
+  "findings": [],
+  "current_source_sha256": "397b727c33bf21c64b8ab7ce65854ee33717b07f8f2a520e0b61b787d3f72f5c",
+  "pdf_sha256": "06b93028528a5100d01b25fa7291a00b1a173d3e4f158dd93f2ee3c5dd0b6fb3",
+  "supplement_sha256": "b4554bb989e392fdd3b664bfe72b0e49244e134f4dc2f71ca4b96fc3982abfa6",
+  "bindings": {
+    "source": {
+      "bytes": 71693,
+      "sha256": "397b727c33bf21c64b8ab7ce65854ee33717b07f8f2a520e0b61b787d3f72f5c"
+    },
+    "source_delta": {
+      "bytes": 4159,
+      "sha256": "80b3cc9699d4fb9320188d2249c592cd48b603c07c90b10fb31973ad4336ac1d"
+    },
+    "pdf": {
+      "bytes": 144671,
+      "sha256": "06b93028528a5100d01b25fa7291a00b1a173d3e4f158dd93f2ee3c5dd0b6fb3"
+    },
+    "supplement": {
+      "bytes": 443199,
+      "sha256": "b4554bb989e392fdd3b664bfe72b0e49244e134f4dc2f71ca4b96fc3982abfa6"
+    },
+    "package_receipt": {
+      "bytes": 668,
+      "sha256": "1d3e853e5ea7a07028af717180b450c2820f391d9a5a347bff75a59f8fd5cd59"
+    },
+    "visual_review": {
+      "bytes": 759,
+      "sha256": "e8ca6d776695d9618eda5a46e574a51196afe97bd60e2515545bab36018115d6"
+    },
+    "independent_delta_review": {
+      "bytes": 6839,
+      "sha256": "72c0ad68695ab58ee02fb76527f282896bbbfa1c6e9cd45713b95f6c460af823"
+    },
+    "saved_clean_replay": {
+      "bytes": 274,
+      "sha256": "ea4140c51b9f40a625aed876496cb9e5314f2eb0c7a73bac26f7227f3aa2bc8e"
+    },
+    "supplied_paper_receipt": {
+      "bytes": 186,
+      "sha256": "4e42b901425b1f8acbf1a1f823003cb2b96b9ff264744ca82bb6ebb2bd8c09fb"
+    }
+  },
+  "source_checks": {
+    "exact_two_replacements": true,
+    "all_unlisted_bytes_unchanged": true,
+    "current_candidate_build_and_archive_source_identical": true,
+    "prior_negative_gates_unchanged": true
+  },
+  "comparison_status": {
+    "supplied_counterfactual_paper_access_and_scoped_fulltext_comparison_complete": true,
+    "dominici_fulltext_comparison_complete": false,
+    "both_fulltext_gaps_closed": false,
+    "joint_success_interpretation_preserved": true,
+    "publisher_revision_identity_or_global_novelty_clearance_claimed": false
+  },
+  "archive_checks": {
+    "members": 9,
+    "manifest_entries_verified": 8,
+    "crc_safe_names_and_inventory_passed": true,
+    "nested_v6_exact_prior_bytes": true,
+    "nested_v6_sha256": "e0c3e2fc981dc7813cee8a0c5563db929d093ada23709a8148c86f27a6e6bb00",
+    "prior_v6_audit_reused": true
+  },
+  "privacy_checks": {
+    "new_public_text_files_checked": 9,
+    "known_author_identities_and_private_paths_absent": true,
+    "supplied_third_party_pdf_not_redistributed": true,
+    "extracted_fulltext_and_page_images_not_redistributed": true,
+    "receipt_contains_only_hash_metadata_and_provenance": true,
+    "private_author_forms_excluded_from_upload": true
+  },
+  "pdf_checks": {
+    "pages": 16,
+    "references_start_on": 10,
+    "appendices_start_on": 11,
+    "author_metadata_absent": true,
+    "metadata_stream_absent": true,
+    "attachments_absent": true,
+    "anonymous_author_line_and_ai_disclosure_present": true,
+    "same_source_bound_build": true
+  },
+  "verification_scope": {
+    "saved_clean_replay_passed": true,
+    "wrapper_parsed_and_inspected": true,
+    "nested_replay_repeated": false,
+    "parent_layout_review_bound_to_all16pages": true,
+    "rendering_repeated": false,
+    "network_requests": 0,
+    "experiments": 0,
+    "scheduler_actions": 0,
+    "project_or_packet_edits": false
+  },
+  "author_declarations_verified": false,
+  "actual_submission": false,
+  "limitations": [
+    "Focused V7 artifact review, relying on the separately bound source-delta and technical literature reviews.",
+    "The supplied paper identity is file-bound; no publisher revision identity, global priority or novelty clearance is inferred.",
+    "Dominici remains missing, and author profiles/declarations remain unresolved.",
+    "No rendering or nested replay was repeated; saved source-bound receipts and unchanged V6 archive were checked.",
+    "Known-identity/path screening does not promise unlinkability of public hashes or sources."
+  ]
+}

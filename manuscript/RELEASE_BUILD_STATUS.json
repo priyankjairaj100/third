@@ -1,19 +1,19 @@
 {
-  "schema": "third-tmlr-literature-update-v6",
-  "created_utc": "2026-10-22T05:18:43.603620+00:00",
+  "schema": "third-tmlr-fulltext-comparison-v7",
+  "created_utc": "2026-10-22T05:34:39.657827+00:00",
   "source": {
-    "sha256": "94d39ea4a4644fdd7863e0b75369424e49521c61b0656150a0ab97ae05710500",
-    "bytes": 71460
+    "sha256": "397b727c33bf21c64b8ab7ce65854ee33717b07f8f2a520e0b61b787d3f72f5c",
+    "bytes": 71693
   },
   "anonymous_supplement": {
-    "path": "manuscript/comparison_20261022/third_tmlr_supplement_v6.zip",
-    "sha256": "e0c3e2fc981dc7813cee8a0c5563db929d093ada23709a8148c86f27a6e6bb00",
-    "bytes": 403128,
-    "members": 8
+    "path": "manuscript/counterfactual_fulltext_20261022/third_tmlr_supplement_v7.zip",
+    "sha256": "b4554bb989e392fdd3b664bfe72b0e49244e134f4dc2f71ca4b96fc3982abfa6",
+    "bytes": 443199,
+    "members": 9
   },
   "private_pdf": {
-    "sha256": "b32a530377c757b591494a7d643bdfbda1e22daf219aa9c07d313c28bd446c62",
-    "bytes": 143893,
+    "sha256": "06b93028528a5100d01b25fa7291a00b1a173d3e4f158dd93f2ee3c5dd0b6fb3",
+    "bytes": 144671,
     "pages": 16
   },
   "native_compile_verified": true,
@@ -29,13 +29,17 @@
   "original_effect_study_complete": false,
   "native_app_runtime_repaired": false,
   "previous_immutable_release": "manuscript/release_20261018_tmlr_v4.zip",
-  "previous_release_status_preserved": "manuscript/comparison_20261022/previous_release_status.json",
+  "previous_release_status_preserved": "manuscript/counterfactual_fulltext_20261022/previous_release_status.json",
   "public_backup_excludes_private_author_metadata_and_pdf": true,
   "independent_source_delta_review_passed": true,
   "independent_package_review_passed": true,
-  "previous_submission_supplement": "manuscript/submission_20261022/third_tmlr_supplement_v5.zip",
+  "previous_submission_supplement": "manuscript/comparison_20261022/third_tmlr_supplement_v6.zip",
   "available_evidence_comparisons_complete": true,
   "scheduler_status": "PAUSED",
   "scheduler_pause_basis": "Explicit user stop request on 22 October 2026; confirmed tool update in preceding turn.",
-  "historical_v5_independent_submission_review_passed": true
+  "historical_v5_independent_submission_review_passed": true,
+  "counterfactual_fulltext_comparison_complete": true,
+  "counterfactual_comparison_caveat": "Theorem8(iii) counting proof supports joint complete-answer success, not separate per-query success.",
+  "dominici_fulltext_comparison_complete": false,
+  "unresolved_fulltext_comparison_count": 1
 }

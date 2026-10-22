@@ -1,0 +1,21 @@
+Independent full-text literature delta review: PASSED. No findings.
+
+The two replacements exactly reconstruct the candidate; every unlisted source
+byte is unchanged. Theorem 8(i-ii) gives t+1 predictive states and 2^t
+counterfactual states for t>=3, matching the proposed account.
+
+Theorem 8(iii)'s proof counts histories with an entirely correct answer tuple.
+The proposed wording expressly uses that joint success event, which must not
+be replaced by separate per-query success probabilities. Third's expected
+squared ridge-head error for each fixed input and hard deletion probe is a
+different loss and quantifier contract, so no numerical equivalence is claimed.
+
+All six supplied pages were inspected, including theorem/proof, framework,
+validation and limitations; page 3 was also visually checked. This closes the
+previous full-text gap for this counterfactual manuscript and the stated scoped
+comparison. Dominici's thesis remains unavailable and its comparison incomplete.
+No global novelty clearance, benchmark validation or author eligibility is implied.
+
+Scientific outcomes, negative calibration gates, frozen protocols and bibliography
+entries are unchanged. No source edits, network, experiments or scheduler actions
+were performed. This public review includes locators and hashes, not paper text.

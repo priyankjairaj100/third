@@ -875,21 +875,23 @@ after one deletion request. Our contract additionally specifies the
 state for subsequent requests at the remaining horizon and charges
 all usable private information, including tickets. These different
 targets and access rules must accompany any comparison of bounds.
-Tadakamalla et~al. study predictive versus counterfactual auditing state
-\citep{counterfactual}. Their released threshold-family code uses a binary
-history of length $t$: predictive queries test its total count, while
-counterfactual queries test every threshold after flipping one event
-\citep{counterfactualcode}. The former distinguish $t+1$ counts; the latter
-jointly recover all $t$ history bits for $t\ge3$. Thus task-dependent
-information requirements and exact reconstruction already have a concrete
-antecedent. Our hard queries instead delete public blockers and return ridge
-heads on the same stored features used for curation. Our sequential contract
-also specifies fresh-state equality at the remaining budget. This compares
-our contract with the inspected code, not the full scope of their paper.
-The advertised approximate bound cannot be compared numerically with our
-expected squared head-error bound until its success event and quantifiers
-are available. We claim the stated fixed-scorer, shared-feature ridge
-construction, not a new general prediction--counterfactual separation. Information-distortion arguments are classical
+Tadakamalla et~al. formalize static summaries of binary histories through
+query sufficiency and partition refinement \citep{counterfactual}.
+Their Theorem~8(i--ii) requires $t+1$ states for all count-threshold
+predictions and $2^t$ states for all single-bit-flip threshold queries when
+$t\ge3$. Their exact reconstruction argument and released implementation
+\citep{counterfactualcode} are direct antecedents to task-dependent
+information bounds. The counting proof of Theorem~8(iii) requires at least
+$(1-\delta)2^t$ states when the \emph{entire answer tuple} is correct with
+probability at least $1-\delta$ under uniform histories. This joint success
+event differs from separate success probabilities for individual queries.
+Our approximation criterion instead bounds expected squared ridge-head
+error for each fixed input and hard deletion probe; the two bounds are
+not numerically interchangeable. Our construction uses the same stored
+features for curation and ridge learning, with public-blocker deletions
+exposing private signs. It also specifies canonical state after cumulative
+deletions at the remaining budget. These are the scoped objects of our
+results; we claim no new general prediction--counterfactual separation. Information-distortion arguments are classical
 \citep{shannon}.
 
 \section{Limitations and broader impact}\label{sec:limits}
@@ -1277,15 +1279,16 @@ Literature coverage is also bounded. Primary publication pages and
 official code were refreshed for the citations used here. The full
 ARCANE selection description and the central, ticketed, and bounded-deletion
 contracts in \citep{ticketed,space} were checked against their primary PDFs.
-This is a contract comparison, not an independent audit of those proofs. The
-counterfactual-auditing comparison uses the pinned author implementation
-\citep{counterfactualcode}: its query family and exact decoder were inspected,
-but the full-paper proof and approximate-success quantifiers remain
-unverified. For Dominici's thesis \citep{dominici}, the author and laboratory
-pages establish its pipeline-unlearning scope; they do not establish its
-operator-level guarantees or experimental results. Neither full text was
-obtained. These are comparisons at the stated evidence levels, not complete
-paper-to-paper comparisons or evidence that either work lacks our result.
+This is a contract comparison, not an independent audit of those proofs. The full six-page counterfactual-auditing manuscript \citep{counterfactual}
+was inspected, including its sufficiency framework, Theorem~8 and proof,
+validation scope, and limitations. Its approximation comparison above uses
+the joint answer-tuple event required by that proof; the previously inspected
+implementation remains separately cited \citep{counterfactualcode}.
+Dominici's thesis \citep{dominici} remains unavailable in full text. The author
+and laboratory pages establish its pipeline-unlearning scope, but do not
+establish its operator-level guarantees or experimental results. That
+comparison remains incomplete; absence of the text does not establish
+absence of a corresponding result.
 \paragraph{AI assistance.}
 AI tools assisted manuscript drafting, code preparation, source checking, and
 internal review. Those internal checks are not external peer review, formal

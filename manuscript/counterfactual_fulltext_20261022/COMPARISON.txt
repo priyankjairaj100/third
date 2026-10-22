@@ -1,0 +1,139 @@
+Independent full-text comparison: Tadakamalla et al. and THIRD
+22 October 2026. Read-only local audit; no network, repository edits, experiments,
+scientific model inference or scheduler actions.
+
+Source and scope
+The user supplied the complete six-page PDF 7520178.pdf: 261,690 bytes,
+SHA256 062d9cf8b580c3908879e16f0c07ca16a75df2478097588a2236617d7c502634.
+Title: Predictive State Is Not Explanatory State: An Exponential Memory Separation
+Between Forecasting and Counterfactual Auditing. The printed author strings are
+Tadakamalla Sai Pranay, Surisetty Maruthi Ram Prakash, and Syed Mohammed Asad.
+The supplied file is the review authority; no publisher-version identity or
+unseen revision is inferred. All six pages were read from the extracted text;
+complete pages 2 and 3 were also rendered and visually inspected for formulas,
+columns and the theorem/proof. No PDF, page image or extracted passage accompanies
+this public-safe report.
+
+Outcome
+The supplied-paper access gap is closed, and the scoped technical comparison is
+complete with one material probability-event caveat. The exact Theorem 8(i)-(ii)
+argument is supported. Part (iii)'s counting proof supports simultaneous exact
+recovery of the whole counterfactual answer tuple on a 1-delta fraction of uniform
+histories. Its wording alone can be read more weakly, so cite the proof-supported
+event explicitly. Do not call the theorem false without that qualification.
+Dominici's complete thesis remains missing; its technical comparison is not closed.
+No exhaustive novelty, priority or superiority clearance follows.
+
+Framework and exact theorem (PDF p.2, Section III-A; p.3, Section V)
+The state is a deterministic function f from a finite history set to a state
+alphabet. Its cost is log2|f(Histories)|, a log-cardinality measure, not a measured
+physical byte count; an integer fixed-width code would require a ceiling.
+Definition 1 defines exact sufficiency via a decoder q=g composed with f.
+Definition 2 defines the sufficiency closure. The common-refinement statement is
+LEMMA 3, not Definition 3. No randomized encoder or sequential state-update
+contract is specified by these definitions.
+
+Definition 7 takes uniform H in {0,1}^t and Y_k(H)=1[sum H>=k] for k=0,...,t.
+Outcome counterfactuals flip one recorded event: q_i,k(H)=1[s+1-2e_i>=k], where
+s=sum H. Theorem 8 concerns these outcome queries, not the pivotality family.
+The full predictive answer vector determines s and vice versa, hence exactly t+1
+classes. For the full counterfactual tuple, kstar_i=max{k:q_i,k=1}=s+1-2e_i.
+For a nonconstant history, max/min recover s and then each bit. Constant histories
+have kstar 1 and t-1, distinguishable precisely when t>=3. Thus the map from
+histories to complete answer tuples is injective and exactly 2^t states suffice
+and are necessary. The t=2 exception is explicitly acknowledged. This argument
+is finite and deterministic; no continuity premise or task-risk metric is used.
+
+Approximation quantifiers (PDF p.3, Theorem 8(iii), proof (iii), Remark 9)
+The justified event is
+  P_(H uniform)[ (g_i,k(f(H)))_(i,k) = (q_i,k(H))_(i,k) ] >= 1-delta,
+for 0<=delta<1, with fixed deterministic f and decoders. Each state supplies one
+complete tuple. Injectivity permits at most one fully correct history per state,
+so M states can succeed on at most M/2^t of the histories. Therefore
+  M >= (1-delta)*2^t, log2 M >= t+log2(1-delta).
+Integer state counts require M>=ceil((1-delta)*2^t). The probability here is over
+uniform histories. This is joint exact-tuple success, not expected squared
+parameter distortion, per-input random approximation, or separate accuracy for
+each query. The supplied framework does not establish a general randomized-state
+or adaptive-query theorem; extensions should be derived separately, not attributed.
+
+Why the distinction is material
+The weaker reading is: for every fixed (i,k),
+  P_H[g_i,k(f(H))=q_i,k(H)] >= 1-delta.
+Different queries may fail on different histories. The proof's one-successful-
+history-per-state argument does not follow from this weaker condition.
+An analytic witness (no experiment) separates the readings: set t=4, retain only
+s=sum H (five states), and answer each query by g_i,k(s)=1[s>=k]. Let r be the sum
+of the other three bits. Its answer differs from the actual flipped answer
+exactly when r=k-1, so each query's error probability is
+  binom(3,k-1)/8 <= 3/8
+(with out-of-range binomial coefficients zero). Every fixed query therefore has
+success at least 5/8, but the weaker reading of the claimed formula would require
+(5/8)*16=10 states, exceeding the actual five. This refutes only that separate-
+per-query interpretation, not the joint-success theorem supported by the proof.
+The paper's Section IX (p.5) likewise characterizes its definitions as exact and
+leaves a general divergence-based epsilon-sufficiency calculus to future work.
+
+Comparison to our current contract
+Current THIRD source: manuscript/third_working_draft.tex, 71,460 bytes,
+SHA256 94d39ea4a4644fdd7863e0b75369424e49521c61b0656150a0ab97ae05710500.
+The Phase 10 theorem, scorer and independent reviews still match their bound final
+review receipt. They were considered together with the current manuscript.
+
+Shared antecedent: task-relative exact sufficiency and reconstruction of all
+private bits from a possible query family already occur in the supplied paper
+(Section III/Lemma 3 and Theorem 8). It is not safe to claim those general ideas,
+or the need for more information under counterfactual queries, as originating here.
+
+Different concrete target: their interventions flip binary history coordinates
+and return Boolean threshold answers. Our hard requests delete fixed public
+blocker records; ordered raw-neighbor curation then admits a candidate, and exact
+rational ridge on the same stored raw feature rows returns its identifiable hidden
+signs. Our family uses normal FP32 inputs, a specified ordered FP64 scorer and
+strict-margin proof, fixed public labels, and a bounded dimension regime. Their
+threshold-count construction is already finite and exact, but is not the same
+scorer/curation/learner construction. This is a target/realization distinction,
+not an unconditional dominance or priority conclusion.
+
+Different sequential contract: our cumulative original budget K never resets.
+For fixed F, future-reachable candidate words require and attain e(F)D private
+bits, and the family codec's canonical state equals fresh retained initialization
+at K-|F|. It charges all usable private side information and disallows free
+candidate rereads. The supplied paper's exact sufficiency and post-compression
+irreversibility (p.5, Section VII/Corollary 10) concern a static state map and query
+closure; they do not state this deletion-transition/fresh-state equality result.
+That scoped observation does not exclude such a result in other work.
+
+Different approximation contract: our Phase 10 lower bound measures expected
+squared error of a ridge-head vector for every fixed private assignment and every
+fixed hard probe, with permitted independent public/random decoding coins. Its
+lower-bound proof already follows from uniform private signs and a uniform hard
+probe, without requiring simultaneous exact success on the complete tuple.
+Our bound B>=mD*R_sq(T^2*epsilon/(4*alpha^2)), T=16641/16384+2*lambda, alpha=1/128,
+is expressed in a scaled continuous output-loss metric. The supplied paper's
+log-cardinality bound concerns joint discrete exact recovery over uniform inputs.
+Neither formula numerically dominates the other without a reduction matching
+outputs, error event, distribution, randomness, access and state accounting.
+Our approximate covering-code upper is an initial-query existence result, not an
+efficient canonical sequential lossy codec. Neither result establishes natural
+NLP task loss, measured total-byte savings, or physical erasure.
+Pointers to our authority: current manuscript Sections 2-4 and the squared-error/
+finite-output appendices; Phase 10 FINITE_WORD_THEORY.md Sections 2,4-7;
+SCORER_TRANSFER.md; FINITE_WORD_REVIEW.md; CODEC_REVIEW.md.
+
+Recommended bounded related-work wording
+Tadakamalla et al. (2026a, Section III and Theorem 8) formalize query-relative
+sufficiency and give a binary-history threshold family with t+1 predictive states
+and 2^t counterfactual states for t>=3. Their proof of Theorem 8(iii) gives a
+(1-delta)2^t state lower bound when the complete counterfactual answer tuple is
+correct with probability at least 1-delta under uniform histories. We use that
+joint-success interpretation, rather than separate accuracy for each query.
+Our expected squared head-error guarantee uses a different output and loss
+contract. Our contribution is the fixed-scorer, shared-feature ridge construction
+and its canonical sequential state at a shrinking deletion horizon, not a new
+general separation between predictive and counterfactual information.
+
+Update the old access limitation: the user-supplied six-page paper has now been
+read; the probability-event qualification above remains. Keep the pinned code
+citation as corroborating implementation evidence, and retain Dominici's separate
+unresolved full-thesis disclosure. Do not mark both literature gaps closed.

@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-10-22T05:32:31.480578+00:00",
+  "source": {
+    "sha256": "397b727c33bf21c64b8ab7ce65854ee33717b07f8f2a520e0b61b787d3f72f5c",
+    "bytes": 71693
+  },
+  "pdf": {
+    "sha256": "06b93028528a5100d01b25fa7291a00b1a173d3e4f158dd93f2ee3c5dd0b6fb3",
+    "bytes": 144671,
+    "pages": 16
+  },
+  "supplement": {
+    "sha256": "b4554bb989e392fdd3b664bfe72b0e49244e134f4dc2f71ca4b96fc3982abfa6",
+    "bytes": 443199,
+    "members": 9
+  },
+  "clean_extraction_replay_passed": true,
+  "private_scientific_rerun": false,
+  "counterfactual_fulltext_comparison_complete": true,
+  "dominici_fulltext_comparison_complete": false,
+  "actual_submission": false
+}

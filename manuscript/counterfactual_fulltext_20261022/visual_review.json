@@ -1,0 +1,35 @@
+{
+  "source_sha256": "397b727c33bf21c64b8ab7ce65854ee33717b07f8f2a520e0b61b787d3f72f5c",
+  "pdf_sha256": "06b93028528a5100d01b25fa7291a00b1a173d3e4f158dd93f2ee3c5dd0b6fb3",
+  "pages": 16,
+  "main_content_last_page": 10,
+  "references_start_on": 10,
+  "appendix_starts_on": 11,
+  "contact_sheets_inspected": 6,
+  "all_pages_covered": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "layout_passed": true,
+  "native_compile": "success",
+  "temporary_compiler": "Tectonic 0.17.0 --only-cached --untrusted",
+  "native_preview_equivalence_claim": false,
+  "nonblocking_warnings": [
+    "Underfull bibliography line",
+    "Underfull final page with two final appendix paragraphs"
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "all_six_pages_read": true,
+  "approximation": {
+    "delta_range": "0<=delta<1",
+    "locator": "PDF p.3 Theorem 8(iii), proof (iii), Remark 9; p.5 Section IX",
+    "randomized_state_or_adaptive_query_extension_attributed": false,
+    "reason": "Injectivity allows each retained state with a fixed answer tuple to be fully correct for at most one input history.",
+    "separate_per_query_accuracy_does_not_imply_bound": true,
+    "state_bound": "M>=ceil((1-delta)*2^t); log2 M>=t+log2(1-delta)",
+    "statement_wording_has_quantifier_ambiguity": true,
+    "supported_event_name": "simultaneous complete-answer-tuple exact success",
+    "supported_probability_event": "P_H[(g_i,k(f(H)))_(i,k) = (q_i,k(H))_(i,k)] >= 1-delta, H uniform in {0,1}^t",
+    "unqualified_false_theorem_claim": false
+  },
+  "both_fulltext_gaps_closed": false,
+  "comparison_dimensions": [
+    {
+      "conclusion": "Query-relative sufficiency, partition joins, counterfactual/predictive state separation and exact reconstruction are direct antecedents.",
+      "dimension": "Prior overlap"
+    },
+    {
+      "dimension": "Concrete realization",
+      "ours": "fixed public blocker deletion, ordered raw-neighbor curation, normal FP32 raw rows and explicit ordered FP64 scorer, exact rational ridge revealing signs",
+      "theirs": "finite binary histories, single-bit flip interventions, Boolean threshold outcomes"
+    },
+    {
+      "dimension": "Sequential state",
+      "ours": "fixed cumulative K, conditional e(F)D private bits, canonical family state equal to retained initialization at K-|F|",
+      "qualification": "No deletion-transition/fresh-state equality result stated in the supplied six-page paper; no exclusion claim about other works.",
+      "theirs": "static state sufficiency/closure and post-compression irreversibility"
+    },
+    {
+      "conclusion": "Do not compare numerical bound strength without matching output, metric, distribution, quantifiers, randomness and state/access accounting.",
+      "dimension": "Approximation",
+      "ours": "expected squared ridge-head error per fixed input/probe; lower proof also uses uniform signs and uniform hard probe",
+      "theirs": "joint discrete exact-tuple success over uniform histories"
+    },
+    {
+      "conclusion": "No global priority, complete physical-memory optimum, natural utility, runtime advantage or physical erasure follows.",
+      "dimension": "Claims not established"
+    }
+  ],
+  "complete_pages_visually_reviewed": [
+    2,
+    3
+  ],
+  "counterfactual_fulltext_access_closed_for_supplied_file": true,
+  "definition_locator_correction": "Deterministic state map is introduced in Section III-A, followed by Definitions 1-2 and Lemma 3; there is no Definition 3.",
+  "dominici_fulltext_obtained": false,
+  "exact_theorem": {
+    "boundary": "At t=2 the two constant histories collide; the text explicitly excludes this case.",
+    "counterfactual_states": "2^t",
+    "locator": "PDF p.2 Section III-A/Lemma 3; p.3 Section V/Definition 7/Theorem 8(i)-(ii)",
+    "predictive_states": "t+1",
+    "queries": "outcome queries after each single-coordinate flip, for every threshold k=0,...,t",
+    "review_outcome": "supported by direct reconstruction argument",
+    "state_model": "deterministic finite state map f; log2 of image cardinality",
+    "t_range": "integer t>=3"
+  },
+  "external_requests": 0,
+  "input_bindings": {
+    "current_manuscript": {
+      "bytes": 71460,
+      "sha256": "94d39ea4a4644fdd7863e0b75369424e49521c61b0656150a0ab97ae05710500"
+    },
+    "phase10/CODEC_REVIEW.md": {
+      "bytes": 8239,
+      "sha256": "5605287126afd7ff1dce67abd60dc67d89047d78b64ccda74b378b8acce53912"
+    },
+    "phase10/FINITE_WORD_REVIEW.md": {
+      "bytes": 14399,
+      "sha256": "014da1fa3672fe311fe45795d7470d0662e303bceb8c515522c5360d96c3efa1"
+    },
+    "phase10/FINITE_WORD_THEORY.md": {
+      "bytes": 25507,
+      "sha256": "5a17e0e3d7d37e5c27c5ac37f1898c2df40a18e75ce12df8b2255c9ac4900bfb"
+    },
+    "phase10/SCORER_TRANSFER.md": {
+      "bytes": 12002,
+      "sha256": "ee9025a29a8071507c0ea331f9f7a06a38e879b1bf1bb7d6058c5701103f7b0a"
+    },
+    "private_extraction/page-02.txt": {
+      "bytes": 6764,
+      "sha256": "eff78e837679d75322b381eafc64eef0770091e0b5ac653a9a20fd4830531802"
+    },
+    "private_extraction/page-03.txt": {
+      "bytes": 6665,
+      "sha256": "b79c3111f5ea796bca827446b9a2401f6c1ea0d520fe91bfe008109dc9219aeb"
+    },
+    "private_extraction/paper.txt": {
+      "bytes": 35270,
+      "sha256": "d3190ca47029155b76c78d4dc58873c9c8666234b37583042fcb1f22f720ab6b"
+    },
+    "private_extraction/receipt.json": {
+      "bytes": 186,
+      "sha256": "4e42b901425b1f8acbf1a1f823003cb2b96b9ff264744ca82bb6ebb2bd8c09fb"
+    },
+    "user_supplied_pdf": {
+      "bytes": 261690,
+      "sha256": "062d9cf8b580c3908879e16f0c07ca16a75df2478097588a2236617d7c502634"
+    }
+  },
+  "model_calls": 0,
+  "narrative": {
+    "bytes": 9230,
+    "sha256": "5ceb050c46a4b452e1ad7b1a5ca7f552e81300a2ba94805943415059eea75696"
+  },
+  "new_experiments": 0,
+  "novelty_priority_or_superiority_clearance": false,
+  "our_contract_sources_checked_together": true,
+  "phase10_authority_hashes_match_final_review_receipt": true,
+  "printed_authors": [
+    "Tadakamalla Sai Pranay",
+    "Surisetty Maruthi Ram Prakash",
+    "Syed Mohammed Asad"
+  ],
+  "quantifier_witness": {
+    "decoder": "g_i,k(s)=1[s>=k]",
+    "delta": "3/8",
+    "incorrect_per_query_reading_would_require_states": 10,
+    "kind": "analytic interpretation-separating example; no experiment",
+    "per_query_error": "P[sum_(j!=i)e_j=k-1]=binom(3,k-1)/8<=3/8",
+    "per_query_success_lower_bound": "5/8",
+    "scope": "Refutes the separate-per-query interpretation only, not the joint-success claim supported by the proof.",
+    "state": "s=sum(H)",
+    "states": 5,
+    "t": 4
+  },
+  "recommended_wording_location": "technical_comparison_review.txt, Recommended bounded related-work wording",
+  "repo_edits": false,
+  "review_date": "2026-10-22",
+  "scheduler_actions": 0,
+  "schema": "third-counterfactual-fulltext-independent-technical-review-v1",
+  "scope_limits": [
+    "The supplied paper was reviewed, not an independently retrieved authoritative SSRN revision.",
+    "The approximation guarantee is qualified by the success event used in its proof.",
+    "This is a scoped manual AI technical review, not proof-assistant verification or exhaustive novelty review.",
+    "Dominici thesis full text remains unavailable.",
+    "No copied paper, raw extracted text, private model data or page renders are included in this report."
+  ],
+  "scoped_fulltext_technical_comparison_complete": true,
+  "source_provenance": "User-supplied complete six-page PDF; no publisher-version identity inferred.",
+  "source_title": "Predictive State Is Not Explanatory State: An Exponential Memory Separation Between Forecasting and Counterfactual Auditing",
+  "status": "scoped_fulltext_comparison_completed_with_joint_success_interpretation"
+}

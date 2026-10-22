@@ -1,3 +1,15 @@
+CURRENT FULL-TEXT COMPARISON / SUBMISSION PREPARATION V7 — 22 OCTOBER 2026
+Tadakamalla full-paper comparison is complete for the supplied six-page version,
+with an explicit joint-success qualification. Dominici thesis remains unavailable.
+Read counterfactual_fulltext_20261022/COMPARISON.txt and COMPARISON.json.
+Source:397b727c33bf21c64b8ab7ce65854ee33717b07f8f2a520e0b61b787d3f72f5c.
+Current supplement: counterfactual_fulltext_20261022/third_tmlr_supplement_v7.zip.
+Extract into an empty directory; run python3 -B check_all.py with Python3.10+.
+Native compile, 16-page visual review, two-change source audit and V7 replay pass.
+Supplied third-party full text is excluded. Scientific results remain unchanged.
+Scheduler PAUSED. Author facts/profile IDs pending. No actual submission.
+
+HISTORICAL PREPARATION NOTES FOLLOW (older source and access states)
 CURRENT LITERATURE UPDATE / SUBMISSION PREPARATION V6 — 22 OCTOBER 2026
 Read comparison_20261022/COMPARISON.txt and COMPARISON.json.
 Current source:94d39ea4a4644fdd7863e0b75369424e49521c61b0656150a0ab97ae05710500.

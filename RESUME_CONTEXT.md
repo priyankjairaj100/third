@@ -1,3 +1,36 @@
+Latest continuation — 22 October 2026: supplied full-paper comparison complete
+
+The user supplied the six-page Tadakamalla et al. manuscript. Source receipt:
+manuscript/counterfactual_fulltext_20261022/supplied_paper_receipt.json.
+Its full-text access gap and scoped technical comparison are now closed.
+Theorem8(i--ii) exact state counts and reconstruction were checked. Part(iii)'s
+proof supports joint exact answer-tuple success on uniform histories; do not read
+the same bound as separate accuracy for each query. Our per-fixed-probe expected
+squared ridge-head error has different quantifiers/metric and is not numerically
+interchangeable. The report gives the distinction and an analytic witness.
+No exhaustive priority/superiority clearance or new scientific result is claimed.
+
+Dominici's final thesis is still missing: ONE full-text comparison remains open.
+Do not repeat retrieval for the now-supplied counterfactual manuscript. Do not
+claim both comparisons complete. The supplied PDF and extracted text stay private.
+
+Current source SHA256: 397b727c33bf21c64b8ab7ce65854ee33717b07f8f2a520e0b61b787d3f72f5c.
+Exactly two literature/status replacements were independently reviewed; all other
+source bytes and scientific gates unchanged. Native compilation, all16page visual
+review and V7 clean replay passed; main ends p10, appendix starts p11. V7 nests
+unchanged V6 scientific evidence and preserves the earlier access history.
+Current public report/package: manuscript/counterfactual_fulltext_20261022.
+Extract V7 into an empty directory; python3 -B check_all.py with Python3.10+.
+Keep outputs outside extraction. This is integrity/aggregate replay, not a new
+private scientific execution. Private upload packet: outputs/tmlr_submission_20261022_v7.
+
+Scheduler remains PAUSED by user. No restart, cluster access, new experiment,
+retuning, human pair review, author contact or actual submission. Author factual
+declarations/profile IDs remain pending. Original semantic study remains blocked;
+prior negative results, protected local locks and frozen checkout are unchanged.
+
+HISTORICAL CHECKPOINTS FOLLOW
+
 Latest continuation — 22 October 2026: scoped literature comparisons and V6
 
 Scheduler continue-third-research is PAUSED at the user's explicit request.

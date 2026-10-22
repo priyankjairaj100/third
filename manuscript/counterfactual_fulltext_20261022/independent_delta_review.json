@@ -1,0 +1,132 @@
+{
+  "schema": "third-counterfactual-fulltext-independent-delta-review-v1",
+  "created_utc": "2026-10-22T05:30:30.096280+00:00",
+  "passed": true,
+  "findings": [],
+  "source_before_sha256": "94d39ea4a4644fdd7863e0b75369424e49521c61b0656150a0ab97ae05710500",
+  "source_candidate_sha256": "397b727c33bf21c64b8ab7ce65854ee33717b07f8f2a520e0b61b787d3f72f5c",
+  "current_source_sha256_at_review": "94d39ea4a4644fdd7863e0b75369424e49521c61b0656150a0ab97ae05710500",
+  "bindings": {
+    "source_before": {
+      "sha256": "94d39ea4a4644fdd7863e0b75369424e49521c61b0656150a0ab97ae05710500",
+      "bytes": 71460
+    },
+    "source_candidate": {
+      "sha256": "397b727c33bf21c64b8ab7ce65854ee33717b07f8f2a520e0b61b787d3f72f5c",
+      "bytes": 71693
+    },
+    "source_delta": {
+      "sha256": "80b3cc9699d4fb9320188d2249c592cd48b603c07c90b10fb31973ad4336ac1d",
+      "bytes": 4159
+    },
+    "supplied_six_page_paper": {
+      "sha256": "062d9cf8b580c3908879e16f0c07ca16a75df2478097588a2236617d7c502634",
+      "bytes": 261690
+    },
+    "extracted_paper_text": {
+      "sha256": "d3190ca47029155b76c78d4dc58873c9c8666234b37583042fcb1f22f720ab6b",
+      "bytes": 35270
+    },
+    "frozen_phase10_theory": {
+      "sha256": "5a17e0e3d7d37e5c27c5ac37f1898c2df40a18e75ce12df8b2255c9ac4900bfb",
+      "bytes": 25507
+    },
+    "frozen_theory_review": {
+      "sha256": "014da1fa3672fe311fe45795d7470d0662e303bceb8c515522c5360d96c3efa1",
+      "bytes": 14399
+    },
+    "frozen_codec_review": {
+      "sha256": "5605287126afd7ff1dce67abd60dc67d89047d78b64ccda74b378b8acce53912",
+      "bytes": 8239
+    }
+  },
+  "exact_reconstruction": {
+    "replacement_count": 2,
+    "old_occurrences_unique": true,
+    "new_occurrences_unique": true,
+    "reconstructs_candidate_exactly": true,
+    "all_unlisted_bytes_unchanged": true,
+    "candidate_replacement_lines": [
+      {
+        "start_line": 878,
+        "end_line": 894
+      },
+      {
+        "start_line": 1282,
+        "end_line": 1291
+      }
+    ]
+  },
+  "checks": [
+    {
+      "topic": "Exact predictive and counterfactual state counts",
+      "locators": [
+        "Supplied paper, page 2, Definitions 1-2 and Lemma 3",
+        "Supplied paper, page 3, Definition 7 and Theorem 8(i-ii)"
+      ],
+      "conclusion": "Correct. A binary history count has t+1 possible values, and all count thresholds recover the count. All coordinate-flip threshold answers recover the full history for t>=3, requiring 2^t states. The constant-history distinction fails at t=2 and the candidate preserves the t>=3 condition."
+    },
+    {
+      "topic": "Approximation success event",
+      "locators": [
+        "Supplied paper, page 3, Theorem 8(iii) statement and proof"
+      ],
+      "conclusion": "The candidate correctly attributes the bound to the counting proof under joint answer-tuple success. Each retained state can decode the full tuple correctly for at most one history; under uniform histories, m states yield joint success at most m/2^t, so m>=(1-delta)2^t. The wording does not silently promote separate per-query success to joint success.",
+      "qualification": "The theorem statement uses ambiguous wording about answering every query correctly with high probability; the proof establishes the joint interpretation. This review does not certify the bound under a marginal per-query interpretation."
+    },
+    {
+      "topic": "Third expected squared-error contract",
+      "locators": [
+        "empirical_execution/phase10/FINITE_WORD_THEORY.md:178-192",
+        "empirical_execution/phase10/FINITE_WORD_REVIEW.md, Exact targets, certified releases, and expected error",
+        "manuscript/third_working_draft.tex, Approximate heads and Appendix Squared-error information bound"
+      ],
+      "conclusion": "Correct. Third assumes expected squared parameter error for each fixed private input and fixed hard deletion probe, with public/fresh randomness allowed, and obtains a rate-distortion-style information bound. Its loss, averaging and quantifiers differ from the supplied paper joint exact-tuple success probability, so the two numerical bounds are not interchangeable."
+    },
+    {
+      "topic": "Scoped construction and sequential distinction",
+      "locators": [
+        "empirical_execution/phase10/FINITE_WORD_THEORY.md:38-144",
+        "empirical_execution/phase10/FINITE_WORD_REVIEW.md, Geometry and access model; Sequential state and canonicality",
+        "empirical_execution/phase10/CODEC_REVIEW.md, Canonical state and disposal"
+      ],
+      "conclusion": "The same stored features feed curation and ridge learning, public-blocker deletions expose private signs, and the exact construction maintains canonical state at the remaining cumulative deletion budget. The wording claims these scoped objects rather than a new general predictive-counterfactual separation; it does not claim the missing thesis lacks them."
+    },
+    {
+      "topic": "Evidence status and validation limits",
+      "locators": [
+        "Supplied paper, pages 1-2, framework and scope",
+        "Supplied paper, pages 3-5, Section VI Validation",
+        "Supplied paper, pages 5-6, Sections IX-XI",
+        "Candidate second replacement"
+      ],
+      "conclusion": "The six-page supplied manuscript was read, with page 3 also visually inspected. This resolves the prior missing-full-text status for this counterfactual manuscript and permits the stated paper-level comparison. Its validation concerns exact enumeration, algebraic recomputation and falsification checks rather than a benchmark. Dominici remains unavailable; the candidate explicitly leaves that comparison incomplete."
+    }
+  ],
+  "comparison_status": {
+    "counterfactual_full_text_obtained_and_inspected": true,
+    "counterfactual_scoped_full_paper_comparison_completed": true,
+    "dominici_full_text_obtained": false,
+    "dominici_full_paper_comparison_completed": false,
+    "global_novelty_clearance": false
+  },
+  "preservation": {
+    "scientific_results_unchanged": true,
+    "frozen_protocols_and_negative_gates_unchanged": true,
+    "bibliography_entries_unchanged": true,
+    "previous_code_attribution_retained": true
+  },
+  "actions": {
+    "new_experiments": 0,
+    "network_requests": 0,
+    "scheduler_actions": 0,
+    "project_source_edits": false,
+    "paper_or_private_inputs_published": false
+  },
+  "limitations": [
+    "This approves only the two listed replacements and their evidence status, not complete literature novelty or every argument in the supplied paper.",
+    "Theorem 8(iii) is used with its proof-supported joint success event; no per-query probability lower bound is asserted.",
+    "No new benchmark, numerical verification suite, inference or original experiment was run.",
+    "The supplied third-party full text and page images remain outside the public review."
+  ]
+}
