@@ -1,0 +1,100 @@
+{
+  "schema": "third-v6-independent-final-artifact-review-v1",
+  "created_utc": "2026-10-22T05:18:29.021749+00:00",
+  "passed": true,
+  "findings": [],
+  "current_source_sha256": "94d39ea4a4644fdd7863e0b75369424e49521c61b0656150a0ab97ae05710500",
+  "pdf_sha256": "b32a530377c757b591494a7d643bdfbda1e22daf219aa9c07d313c28bd446c62",
+  "supplement_sha256": "e0c3e2fc981dc7813cee8a0c5563db929d093ada23709a8148c86f27a6e6bb00",
+  "bindings": {
+    "source": {
+      "sha256": "94d39ea4a4644fdd7863e0b75369424e49521c61b0656150a0ab97ae05710500",
+      "bytes": 71460
+    },
+    "source_delta": {
+      "sha256": "cb94991a2cd76e916a8ae1b71ef33f0014ae456bcd666f080e4b89c02a783938",
+      "bytes": 5450
+    },
+    "pdf": {
+      "sha256": "b32a530377c757b591494a7d643bdfbda1e22daf219aa9c07d313c28bd446c62",
+      "bytes": 143893
+    },
+    "supplement": {
+      "sha256": "e0c3e2fc981dc7813cee8a0c5563db929d093ada23709a8148c86f27a6e6bb00",
+      "bytes": 403128
+    },
+    "package_receipt": {
+      "sha256": "5d66b5b92bfcef2f611d86605adc7b764b95ad1545d1177fe12f1a48f755f469",
+      "bytes": 606
+    },
+    "visual_review": {
+      "sha256": "33a77d775b6bb36d1e98289677b082863e36cc1e7fb9ba9effb3bed4e75468ec",
+      "bytes": 758
+    },
+    "source_delta_independent_review": {
+      "sha256": "1fd065c70e8abf58649aba0bd914f072c8aa46b7bbd26a56c0815e4c33108eca",
+      "bytes": 4799
+    },
+    "saved_clean_replay": {
+      "sha256": "786b82b759194944e84a7596272fae8ebc1669fcfdda5f271e1ab9bedaf0b01b",
+      "bytes": 213
+    }
+  },
+  "source": {
+    "exact_replacement_count": 4,
+    "exact_reconstruction": true,
+    "all_unlisted_source_bytes_unchanged": true,
+    "candidate_build_and_archive_source_identical": true,
+    "negative_calibrations_and_original_gates_preserved": true
+  },
+  "evidence_limits": {
+    "both_full_texts_unavailable_explicit": true,
+    "full_text_comparisons_completed": false,
+    "novelty_or_superiority_clearance": false,
+    "code_vs_paper_and_description_vs_theorem_distinctions_preserved": true,
+    "external_source_claims_review_basis": "The existing source-bound independent delta review; no new external retrieval or theorem audit."
+  },
+  "archive": {
+    "top_level_members": 8,
+    "manifest_entries_verified": 7,
+    "crc_and_safe_inventory_passed": true,
+    "nested_v5_sha256": "d10b3c3c4feff6c2fff40e84935882dc075f078d74cb2928a5a0284b97c6f8d4",
+    "nested_v5_exact_bytes_unchanged": true,
+    "prior_nested_archive_audit_reused": true,
+    "new_public_text_source_and_pdf_privacy_scan_passed": true,
+    "private_author_data_excluded_from_upload": true
+  },
+  "pdf": {
+    "pages": 16,
+    "references_start_on": 10,
+    "appendices_start_on": 11,
+    "metadata_author_absent": true,
+    "metadata_stream_absent": true,
+    "attachments_absent": true,
+    "anonymous_author_line_present": true,
+    "first_page_ai_disclosure_present": true,
+    "matches_source_bound_build": true
+  },
+  "replay": {
+    "saved_clean_extraction_replay_passed": true,
+    "wrapper_source_inspected": true,
+    "replayed_in_this_audit": false,
+    "private_scientific_inputs_recomputed": false
+  },
+  "boundaries": {
+    "scheduler_action_performed": false,
+    "network_requests": 0,
+    "experiments": 0,
+    "project_or_packet_edits": false,
+    "actual_submission": false,
+    "author_declarations_verified": false,
+    "null_profiles_and_declarations_preserved": true
+  },
+  "limitations": [
+    "Scoped artifact and delta audit only; no complete prior full text was obtained or independently reviewed.",
+    "The existing source-bound clean replay and prior V5 audit were checked rather than rerun.",
+    "Page rendering was not repeated; layout relies on the source/PDF-bound parent review of all 16 pages.",
+    "Identity/path screening does not make public source hashes or literature references unlinkable.",
+    "Technical checks do not establish author eligibility, rights, novelty or permission to submit."
+  ]
+}

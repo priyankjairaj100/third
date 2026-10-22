@@ -846,11 +846,15 @@ are direct antecedents. Schelter explicitly frames unlearning as view
 maintenance and includes tokenization in the maintained dataflow
 \citep{ivmunlearning}. His Section~3 links efficient repair to sparse
 computational dependencies. Thus preprocessing-aware incremental unlearning
-also precedes this work. Dominici's thesis explicitly studies end-to-end
-unlearning through data preparation pipelines and feature stores
-\citep{dominici}. Its bibliographic scope is directly relevant, although its
-full text was not available for a technical comparison. Our claims do not
-depend on excluding preprocessing-aware unlearning from prior work.
+also precedes this work. Dominici's thesis studies end-to-end unlearning through data preparation
+pipelines and feature stores \citep{dominici}. The author's research description
+emphasizes provenance tracking and deletion propagation. This is directly
+relevant to the whole-pipeline target in Equation~\eqref{eq:target}.
+Our analysis fixes one ordered suppression operator and its feature graph,
+then requires exact ridge-head and continuing-state recovery under a cumulative
+deletion budget. These assumptions delimit our result; they do not exclude
+corresponding guarantees from the thesis. Its operator semantics, retained-data
+access, and evaluation could not be checked without the full text.
 Our Boolean expansion is a specialization.
 The scoped claims add the cumulative-horizon state contract and the
 learner-level finite-feature obstruction. We do not claim that negative
@@ -871,14 +875,21 @@ after one deletion request. Our contract additionally specifies the
 state for subsequent requests at the remaining horizon and charges
 all usable private information, including tickets. These different
 targets and access rules must accompany any comparison of bounds.
-Recent work on predictive versus counterfactual auditing state also
-overlaps with the broad memory-separation principle \citep{counterfactual}.
-Its public code was inspected in the earlier literature audit, but its
-full-paper proof and approximate-success semantics could not be checked.
-We therefore make no theorem-level superiority or quantitative comparison
-with that work. We claim the stated fixed-scorer, shared-feature ridge
-construction, not a new general separation between prediction and
-counterfactual information. Information-distortion arguments are classical
+Tadakamalla et~al. study predictive versus counterfactual auditing state
+\citep{counterfactual}. Their released threshold-family code uses a binary
+history of length $t$: predictive queries test its total count, while
+counterfactual queries test every threshold after flipping one event
+\citep{counterfactualcode}. The former distinguish $t+1$ counts; the latter
+jointly recover all $t$ history bits for $t\ge3$. Thus task-dependent
+information requirements and exact reconstruction already have a concrete
+antecedent. Our hard queries instead delete public blockers and return ridge
+heads on the same stored features used for curation. Our sequential contract
+also specifies fresh-state equality at the remaining budget. This compares
+our contract with the inspected code, not the full scope of their paper.
+The advertised approximate bound cannot be compared numerically with our
+expected squared head-error bound until its success event and quantifiers
+are available. We claim the stated fixed-scorer, shared-feature ridge
+construction, not a new general prediction--counterfactual separation. Information-distortion arguments are classical
 \citep{shannon}.
 
 \section{Limitations and broader impact}\label{sec:limits}
@@ -970,10 +981,17 @@ Deploying and Monitoring ML Systems at ICML.
 \bibitem[Shannon(1959)]{shannon} C. E. Shannon. 1959. Coding theorems for a discrete
 source with a fidelity criterion. IRE National Convention Record, Part 4,
 142--163. \href{https://gwern.net/doc/cs/algorithm/information/1959-shannon.pdf}{Original-paper scan}.
-\bibitem[Tadakamalla et~al.(2026)]{counterfactual} S. P. Tadakamalla, S. M. R. Prakash, and S. M.
-Asad. 2026. Predictive state is not explanatory state: An exponential
-memory separation between forecasting and counterfactual auditing.
-SSRN manuscript. \url{https://doi.org/10.2139/ssrn.7520178}.
+\bibitem[Tadakamalla et~al.(2026a)]{counterfactual} Sai Pranay Tadakamalla,
+Surisetty Maruthi Ram Prakash, and Syed Mohammed Asad. 2026a.
+Predictive state is not explanatory state: An exponential memory separation
+between forecasting and counterfactual auditing. SSRN manuscript.
+\url{https://doi.org/10.2139/ssrn.7520178}.
+\bibitem[Tadakamalla et~al.(2026b)]{counterfactualcode} Sai Pranay Tadakamalla,
+Surisetty Maruthi Ram Prakash, and Syed Mohammed Asad. 2026b.
+Predictive state is not explanatory state. Reference implementation, version
+1.0.0. Inspected \texttt{queries.py}, \texttt{decoder.py}, and associated
+verification sources at commit
+\href{https://github.com/PranayTadakamalla/predictive-state-not-explanatory-state/tree/4143f408843394e21a0622c9eb5d5de10a687a8c}{4143f4088433}.
 \bibitem[Wang et~al.(2024)]{e5} L. Wang, N. Yang, X. Huang, L. Yang, R. Majumder, and F. Wei.
 2024. Multilingual E5 text embeddings: A technical report.
 \href{https://arxiv.org/abs/2402.05672}{arXiv:2402.05672}.
@@ -1260,12 +1278,14 @@ official code were refreshed for the citations used here. The full
 ARCANE selection description and the central, ticketed, and bounded-deletion
 contracts in \citep{ticketed,space} were checked against their primary PDFs.
 This is a contract comparison, not an independent audit of those proofs. The
-counterfactual-auditing full manuscript and the thesis titled
-\emph{End-to-end Machine Unlearning Through Data Preparation Pipelines
-and Feature Stores} \citep{dominici} were not available in full text.
-We acknowledge their related scope and make no technical comparison that
-depends on their absence. This limits the literature comparison; it is not
-evidence that either work lacks the relevant result.
+counterfactual-auditing comparison uses the pinned author implementation
+\citep{counterfactualcode}: its query family and exact decoder were inspected,
+but the full-paper proof and approximate-success quantifiers remain
+unverified. For Dominici's thesis \citep{dominici}, the author and laboratory
+pages establish its pipeline-unlearning scope; they do not establish its
+operator-level guarantees or experimental results. Neither full text was
+obtained. These are comparisons at the stated evidence levels, not complete
+paper-to-paper comparisons or evidence that either work lacks our result.
 \paragraph{AI assistance.}
 AI tools assisted manuscript drafting, code preparation, source checking, and
 internal review. Those internal checks are not external peer review, formal

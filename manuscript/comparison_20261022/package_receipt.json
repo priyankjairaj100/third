@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-10-22T05:16:14.207179+00:00",
+  "source": {
+    "sha256": "94d39ea4a4644fdd7863e0b75369424e49521c61b0656150a0ab97ae05710500",
+    "bytes": 71460
+  },
+  "pdf": {
+    "sha256": "b32a530377c757b591494a7d643bdfbda1e22daf219aa9c07d313c28bd446c62",
+    "bytes": 143893,
+    "pages": 16
+  },
+  "supplement": {
+    "sha256": "e0c3e2fc981dc7813cee8a0c5563db929d093ada23709a8148c86f27a6e6bb00",
+    "bytes": 403128,
+    "members": 8
+  },
+  "clean_extraction_replay_passed": true,
+  "private_scientific_rerun": false,
+  "full_text_comparisons_complete": false,
+  "actual_submission": false
+}

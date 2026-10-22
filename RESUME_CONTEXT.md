@@ -1,3 +1,37 @@
+Latest continuation — 22 October 2026: scoped literature comparisons and V6
+
+Scheduler continue-third-research is PAUSED at the user's explicit request.
+This literature task does not authorize restarting it or any experiment.
+
+Current source SHA256: 94d39ea4a4644fdd7863e0b75369424e49521c61b0656150a0ab97ae05710500.
+Exactly four source replacements strengthen related work, source attribution and
+evidence limits. Tadakamalla's pinned code supplies an exact threshold-query /
+history-recovery antecedent; approximation semantics remain unavailable.
+Dominici's primary descriptions establish pipeline-unlearning scope; operator,
+access, exactness, continuing-state and evaluation contracts remain unverified.
+Neither full text was obtained. Both full paper-to-paper comparisons remain open;
+no priority, exclusion, superiority or novelty clearance is claimed.
+
+Native compile and all16page temporary-PDF visual review passed. Main ends p10;
+references begin p10, appendix p11. Independent source-delta and package audits
+passed. V6 clean-extraction replay binds the exact source update to unchanged V5
+and historical scientific evidence. This is not a new scientific result or rerun.
+
+Current public artifacts: manuscript/comparison_20261022. Read COMPARISON.txt and
+COMPARISON.json for supported facts and missing texts. Extract the V6 supplement
+to an empty directory and run python3 -B check_all.py with Python3.10+; save any
+output outside that directory. Historical checkers bind older sources.
+Private upload packet: outputs/tmlr_submission_20261022_v6 under orchestration
+root. Author declarations and verified profile IDs remain pending. No submission.
+
+Next action requires the complete counterfactual-auditing manuscript and final
+Dominici thesis, or new accessible authoritative full-text links. Do not repeat
+unchanged failed routes or relabel code/metadata review as full-text review.
+Original failed calibrations, blocked original empirical study, held-out limits,
+protected locks and frozen remote checkout are unchanged. Zero human pair review.
+
+HISTORICAL CHECKPOINTS (older sources and scheduler states)
+
 Latest continuation — 22 October 2026: TMLR submission files prepared
 
 User requested completion of remaining submission work and supplied a separate

@@ -1,0 +1,60 @@
+LITERATURE COMPARISONS — 22 OCTOBER 2026
+
+Status: available-primary-evidence comparisons completed; both full-text
+paper-to-paper comparisons remain unresolved. Neither full text was obtained.
+The four manuscript changes affect related work, attribution and evidence limits
+only. No theorem, empirical outcome, protocol, cutoff or scientific gate changed.
+
+1. Tadakamalla, Surisetty and Asad (2026)
+Predictive State Is Not Explanatory State: An Exponential Memory Separation
+Between Forecasting and Counterfactual Auditing. DOI: 10.2139/ssrn.7520178.
+
+The public reference implementation was inspected at version 1.0.0, commit
+4143f408843394e21a0622c9eb5d5de10a687a8c:
+https://github.com/PranayTadakamalla/predictive-state-not-explanatory-state/tree/4143f408843394e21a0622c9eb5d5de10a687a8c
+Queries.py and decoder.py define a binary history H of length t, sum s, predictive
+queries 1[s>=k], and counterfactual queries 1[s+1-2H_i>=k], for all thresholds
+k=0,...,t. Predictive answers distinguish t+1 counts. The complete counterfactual
+answer tuple recovers t bits for t>=3. Its threshold-transition indices are
+s+1-2H_i; the constant-history cases have indices 1 and t-1. This is an exact
+code/algebra comparison, not verification of the missing full paper's proofs.
+
+Third's hard queries delete public blockers and return ridge heads on the same
+stored features used for curation; its continuing-state contract specifies
+fresh-state equality at the remaining deletion budget. The inspected code
+provides a concrete antecedent for task-dependent information requirements and
+exact reconstruction. It does not establish the scope of the full paper's
+state/access model. We claim no new general predictive-counterfactual separation.
+
+The advertised approximate memory expression cannot be numerically compared to
+Third's expected squared parameter-error bound without its success event and
+quantifiers. A per-query guarantee and joint recovery are different contracts.
+Code-generated plots are not a substitute for the missing theorem. Full names
+are taken from author-supplied citation metadata; software has its own pinned
+reference. No full-paper novelty, exclusion or superiority clearance is claimed.
+
+2. Leonardo Dominici (2025)
+End-to-end Machine Unlearning Through Data Preparation Pipelines and Feature
+Stores. MSc thesis, University of Amsterdam / Vrije Universiteit Amsterdam.
+
+The author's research description establishes preparation-aware pipeline
+unlearning, provenance tracking and deletion propagation as directly related
+work. Primary sources consulted include https://leodom01.github.io/ and
+https://deem.berlin/. Further author-linked ORCID and supervisor publication /
+student pages yielded no complete thesis. See COMPARISON.json for seven explicit
+comparison dimensions and their unknowns. These pages do not establish formal
+operator semantics, exactness, retained-data rereads, canonical sequential state,
+finite deletion horizons, or evaluation controls. Public performance advertising
+is not adopted as an audited result or compared numerically with Third.
+
+Third fixes one ordered raw-neighbor suppression operator and fixed feature
+graph, reproduces ridge heads and continuing state under cumulative deletions,
+and separately reports development membership/logical-state checks. These
+assumptions delimit Third; they do not establish absence of similar thesis
+guarantees. There is no supported exactness, operator or cost superiority claim.
+
+What is still needed
+The complete Tadakamalla manuscript and the final Dominici thesis, or accessible
+authoritative full-text links. Reopen proof, assumptions and evaluation review
+when supplied; do not relabel primary-metadata/code review as full-text review.
+No author contact, new experiment, scheduler restart or submission occurred.

@@ -1,0 +1,19 @@
+V6 independent artifact audit: PASSED. No findings.
+
+All four listed literature-only replacements exactly reconstruct the current
+source. Candidate, build and supplement manuscript bytes match. Every unlisted
+source byte is unchanged, preserving negative calibrations and original gates.
+Both complete prior texts remain unavailable; the comparison explicitly limits
+itself to pinned code and author descriptions, without novelty clearance.
+
+The eight-member V6 archive passes CRC, exact inventory, hash and privacy checks.
+Its nested V5 archive is byte-identical to the previously audited release. The
+saved clean replay passed; no replay or scientific experiment was repeated.
+The source-bound 16-page PDF has no author metadata or attachments, retains
+Anonymous authors and the first-page AI disclosure, and passes known-identity
+and private-path screening. References begin on page 10; appendices on page 11.
+All-page layout relies on the existing parent review, without rerendering.
+
+No network request, scheduler action, project/packet edit or submission occurred.
+Author profiles and declarations remain unresolved; technical preparation does
+not establish eligibility, rights or complete paper-to-paper novelty review.

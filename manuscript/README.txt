@@ -1,3 +1,14 @@
+CURRENT LITERATURE UPDATE / SUBMISSION PREPARATION V6 — 22 OCTOBER 2026
+Read comparison_20261022/COMPARISON.txt and COMPARISON.json.
+Current source:94d39ea4a4644fdd7863e0b75369424e49521c61b0656150a0ab97ae05710500.
+Native compile, 16-page layout, exact four-delta review and V6 replay passed.
+Extract comparison_20261022/third_tmlr_supplement_v6.zip into an empty directory;
+run python3 -B check_all.py with Python3.10+, saving outputs outside extraction.
+V6 nests unchanged V5 evidence. No full-text novelty clearance or submission.
+Author declarations/profile IDs and both full-text comparisons remain unresolved.
+Scheduler is PAUSED by the user. No automatic experiment or resubmission.
+
+HISTORICAL PREPARATION (older source bindings follow)
 CURRENT SUBMISSION PREPARATION — 22 OCTOBER 2026
 See submission_20261022/SUBMISSION_CHECKLIST.txt and readiness.json.
 Current source:7dceb58eafd0adb601a531e03ff9e69da4ee755eb75ce09f6332fb1bfbec66fa.

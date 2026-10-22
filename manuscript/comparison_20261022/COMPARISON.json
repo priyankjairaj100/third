@@ -1,0 +1,96 @@
+{
+  "schema": "third-literature-comparison-v6",
+  "date": "2026-10-22",
+  "source_sha256": "94d39ea4a4644fdd7863e0b75369424e49521c61b0656150a0ab97ae05710500",
+  "available_evidence_comparisons_completed": true,
+  "full_text_comparisons_completed": false,
+  "full_texts_obtained": false,
+  "novelty_clearance": false,
+  "counterfactual_code_commit": "4143f408843394e21a0622c9eb5d5de10a687a8c",
+  "counterfactual_sources": [
+    "https://doi.org/10.2139/ssrn.7520178",
+    "https://github.com/PranayTadakamalla/predictive-state-not-explanatory-state/tree/4143f408843394e21a0622c9eb5d5de10a687a8c"
+  ],
+  "dominici_dimensions": [
+    {
+      "dimension": "Pipeline operators",
+      "third": "One fixed ordered raw-neighbor suppression rule over fixed feature rows and a fixed graph; additive record-local statistics; ridge is the concrete learner. Corpus-dependent reclustering and encoder refitting are excluded.",
+      "dominici_supported": "Author summaries describe preparation and feature-store stages, provenance and propagated deletions; the public profile identifies a Feast extension.",
+      "dominici_unknown": "Actual supported operators, nonmonotone filtering/deduplication handling, fitted transforms and source-dependency rules.",
+      "comparison": "Affirmative systems-scope overlap; no demonstrated operator separation."
+    },
+    {
+      "dimension": "Deletion target",
+      "third": "Reproduce A(C(D minus F)); deleting an initially excluded record may add other surviving records to training.",
+      "dominici_supported": "Author describes system-wide removal through a complete data preparation and learning pipeline.",
+      "dominici_unknown": "Formal retained-data reconstruction target, whether curation reruns, treatment of previously excluded records, record versus source requests.",
+      "comparison": "Cannot equate targets or claim the thesis omits excluded-record activation."
+    },
+    {
+      "dimension": "Exactness",
+      "third": "Exact algebraic equality of selected additive statistics and fresh remaining-horizon coefficient map; constructed ridge head is rational; floating releases require a certificate.",
+      "dominici_supported": "Public description says the framework enables unlearning; this is not a formal exactness definition.",
+      "dominici_unknown": "Deterministic versus distributional equality, numerical tolerances, approximate mechanisms, solver conditions and proofs.",
+      "comparison": "No exactness superiority claim supported."
+    },
+    {
+      "dimension": "Retained-data access",
+      "third": "All usable private-data-dependent state is charged; no free reread of excluded candidates. Natural diagnostic does not enforce no-reaccess.",
+      "dominici_supported": "Use of feature stores is described.",
+      "dominici_unknown": "Permitted source/feature-store rereads, lineage data, cached payloads, deletion-request information and accounting.",
+      "comparison": "Feature-store use alone does not determine its access contract."
+    },
+    {
+      "dimension": "Continuing state",
+      "third": "Coefficient map equals reconstruction at remaining horizon; batching and order independence for the same cumulative deletion set. Logical equality is distinct from bytes/erasure.",
+      "dominici_supported": "Provenance and deletion propagation are described.",
+      "dominici_unknown": "State invariant, canonical representation, order/batch consistency, retry semantics and recoverability for later requests.",
+      "comparison": "Do not infer absence of sequential or canonical-state results from the summary."
+    },
+    {
+      "dimension": "Deletion horizon",
+      "third": "Original cumulative K decreases to h=K-|F|; eligibility is determined by remaining blockers; not a replenished K after each request.",
+      "dominici_supported": "No precise budget contract is available in the consulted descriptions.",
+      "dominici_unknown": "Finite or unbounded requests, budget resets, source versus record accounting and any horizon-dependent state theorem.",
+      "comparison": "Our explicit finite-horizon object can be described; its novelty relative to the thesis is unverified."
+    },
+    {
+      "dimension": "Evaluated workloads and costs",
+      "third": "Separate natural development diagnostic: 1001 AskUbuntu rows, 51 fixed cuts, 13056 membership updates and 408 logical-state checkpoints; no demonstrated learner utility, speedup or total-memory gain. Original semantic-effect study is blocked by failed calibrations.",
+      "dominici_supported": "Author profile advertises a performance result for its Feast-based framework.",
+      "dominici_unknown": "Workloads, operators, dataset sizes, baselines, hardware, timings, memory and exactness controls behind that result.",
+      "comparison": "Do not adopt the advertised 900x number or compare it with Third; full evaluation required."
+    }
+  ],
+  "dominici_sources": [
+    "https://leodom01.github.io/",
+    "https://de.linkedin.com/in/leonardo-dominici",
+    "https://www.linkedin.com/posts/leonardo-dominici_well-well-well-some-major-life-updates-activity-7450407679895728129-Kwul",
+    "https://github.com/Leodom01",
+    "https://orcid.org/0009-0009-5294-6272",
+    "https://pub.orcid.org/v3.0/0009-0009-5294-6272/works",
+    "https://phaniarnab.github.io/",
+    "https://www.bifold.berlin/news-events/news/view/news-detail/second-bifold-data-systems-retreat"
+  ],
+  "missing": [
+    {
+      "author": "Leonardo Dominici",
+      "year": 2025,
+      "title": "End-to-end Machine Unlearning Through Data Preparation Pipelines and Feature Stores",
+      "type": "final MSc Computer Science thesis",
+      "institutions": [
+        "University of Amsterdam",
+        "Vrije Universiteit Amsterdam"
+      ],
+      "missing": "Authoritative complete thesis PDF/HTML or an accessible final manuscript. No thesis persistent identifier or official download URL was obtained."
+    },
+    {
+      "title": "Predictive State Is Not Explanatory State: An Exponential Memory Separation Between Forecasting and Counterfactual Auditing",
+      "missing": "Complete manuscript, especially proof, success quantifiers and access/state contract."
+    }
+  ],
+  "no_scientific_results_changed": true,
+  "scheduler_resumed": false,
+  "author_contact": false,
+  "actual_submission": false
+}

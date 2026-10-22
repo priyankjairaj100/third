@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "basis": [
+        "dominici/comparison.json",
+        "dominici/TECHNICAL_COMPARISON.txt",
+        "our_contract.txt"
+      ],
+      "change": 1,
+      "conclusion": "Supported as an author-description comparison. Provenance and deletion propagation are explicitly attributed; no formal operator, exactness, access or evaluation claim is assigned to the unread thesis. The text explicitly refuses to exclude corresponding guarantees.",
+      "limitation": "The reviewer read the acquisition report and prior local literature audit; no independent author-page or thesis fetch was performed.",
+      "topic": "Dominici scope"
+    },
+    {
+      "basis": [
+        "counterfactual/code/src/predictive_state/queries.py:7-30",
+        "counterfactual/code/src/predictive_state/decoder.py:5-15",
+        "counterfactual/code/src/predictive_state/histories.py:8-17",
+        "counterfactual/code/tests/test_claims.py:23-36"
+      ],
+      "change": 2,
+      "conclusion": "Correct. Predictive queries are 1[sum(H)>=k], k=0..t, giving t+1 classes. Counterfactual queries flip each coordinate and apply every k. The complete answer tuple yields kstar_i=s+1-2e_i. Nonconstant histories recover s=(max kstar+min kstar)/2 then every bit; constant histories have kstar=1 or t-1, distinct for t>=3. The t=2 boundary is preserved.",
+      "proof_or_test_scope": "Manual direct algebra/source inspection; no external full-paper proof or fresh numerical experiment.",
+      "topic": "Exact threshold-family code facts"
+    },
+    {
+      "basis": [
+        "our_contract.txt",
+        "manuscript/third_working_draft.tex:508-606",
+        "empirical_execution/phase10/FINITE_WORD_THEORY.md:116-165,167-289"
+      ],
+      "change": 2,
+      "conclusion": "Accurate for our fixed public family: hard requests delete public blockers, exact rational ridge uses the same stored raw rows as curation, and sequential canonical state targets the same remaining cumulative horizon. Wording compares the inspected code, not full-paper scope, and makes no approximate numerical comparison without the missing event and quantifiers.",
+      "topic": "Our theorem and approximation distinction"
+    },
+    {
+      "basis": [
+        "counterfactual/code/CITATION.cff",
+        "counterfactual/code/README.md",
+        "counterfactual/source_retrieval_receipts.json"
+      ],
+      "change": 3,
+      "conclusion": "Sai Pranay Tadakamalla, Surisetty Maruthi Ram Prakash and Syed Mohammed Asad are supported by CITATION.cff/README author strings; Surisetty is explicitly the second author family name. Version 1.0.0 and the exact inspected commit are recorded. Separate 2026a/2026b keys are unique and both resolve.",
+      "topic": "Attribution and pinned implementation citation",
+      "verified_pinned_code_files": 12
+    },
+    {
+      "change": 4,
+      "conclusion": "Correctly states neither full text was obtained. Exact code queries/decoder are distinguished from unverified proof and approximate success semantics. Author/laboratory descriptions establish scope rather than theorem/evaluation guarantees. Explicitly calls these incomplete paper-to-paper comparisons and refuses absence/exclusion inferences.",
+      "topic": "Evidence limits"
+    }
+  ],
+  "comparison_status": "partial evidence-level comparison; Tadakamalla pinned-code facts checked, Dominici primary-description scope only",
+  "exact_four_replacements_reconstruct_candidate": true,
+  "external_requests_by_reviewer": 0,
+  "findings": [],
+  "full_paper_comparisons_completed": false,
+  "full_texts_obtained_by_this_review": 0,
+  "limitations": [
+    "This approves only the four inspected replacements, not a complete novelty review or full-text gap closure.",
+    "Pinned code and direct exact reconstruction algebra do not substitute for the inaccessible paper proof or its approximate-success event.",
+    "Dominici formal operator/deletion/access/state/horizon/evaluation contracts remain unresolved without the thesis.",
+    "No rendering, compilation, anonymous release rebuild, deployment or experiment was performed by this reviewer.",
+    "Author declarations, rights and submission eligibility are outside this review."
+  ],
+  "new_experiments": 0,
+  "paper_body_theorems_results_or_empirical_outcomes_changed": false,
+  "passed": true,
+  "quantitative_approximate_bound_comparison_made": false,
+  "reviewed_utc_date": "2026-10-22",
+  "scheduler_actions": 0,
+  "schema": "third-literature-comparison-candidate-independent-review-v1",
+  "source_edits_by_reviewer": false,
+  "status": "passed_scoped_literature_only_delta_review",
+  "unlisted_source_changes": false,
+  "unsupported_novelty_or_superiority_claim_found": false,
+  "source_sha256": "94d39ea4a4644fdd7863e0b75369424e49521c61b0656150a0ab97ae05710500"
+}

@@ -1,0 +1,32 @@
+Independent source-delta review — 22 October 2026
+
+PASS for the exact four literature-only replacements in source_delta.json.
+The candidate reconstructs exactly from source_before.tex; no unlisted theorem,
+result, numerical threshold or experimental-outcome change is present.
+
+The pinned code supports the stated t+1 predictive count classes and complete
+t-bit history recovery from joint coordinate-flip threshold answers for t>=3.
+For nonconstant histories, kstar_i=s+1-2e_i exposes s and every bit. All-zero and
+all-one histories have kstar 1 and t-1, respectively; the t=2 exception matters.
+This was direct source/algebra inspection, not a review of the missing paper.
+
+Full author strings match CITATION.cff/README, including Surisetty as the second
+family name. The implementation is separately attributed to version1.0.0 and
+the exact inspected commit. The new citation keys are unique and resolve.
+
+Our public-blocker, shared-raw-feature ridge and remaining-horizon state wording
+matches the bound local theorem. It is explicitly a comparison to inspected code,
+not a claim that the whole Tadakamalla paper lacks the same guarantees. Its
+approximate bound is not compared until the success event/quantifiers are known.
+
+Dominici's provenance/deletion-propagation description is supported by the source
+agent's primary-evidence report and prior local literature audit. No evaluation
+number or formal theorem is imported. The proposed text explicitly leaves the
+thesis's operator, access and evaluation details unresolved and makes no exclusion
+claim. This reviewer made no external page request and did not obtain the thesis.
+
+PARTIAL COMPARISON ONLY. Neither complete prior text was obtained, and neither
+full paper-to-paper gap is closed. There is no exhaustive priority or superiority
+clearance. No source edits, tests/model calls, scheduler changes or experiments.
+
+See independent_source_delta_review.json for exact inputs, hashes and check scope.
