@@ -143,7 +143,7 @@
       "historical_compute": "manuscript/compute_history_20261016.json",
       "id": "07-manuscript",
       "independent_ai_review": "manuscript/natural_repair_20261018/delta_review_stage2.json",
-      "next_action": "V7 reviewed/compiled. Await Dominici full thesis and factual author declarations/profile IDs. Tadakamalla comparison completed at stated scope; no repeated retrieval.",
+      "next_action": "V7 reviewed/compiled. Await factual author declarations/profile IDs. Dominici search closed by user and nonblocking; retain bounded acknowledgment. Do not restart search automatically.",
       "state": "tmlr_submission_revision_reviewed_compiled_and_visually_verified",
       "tmlr_revision": "manuscript/tmlr_20261018/adaptation_report.json",
       "unified_author_review": "manuscript/unified_review_20261016.json",
@@ -196,7 +196,7 @@
         "manuscript/independent_review_20261018.json"
       ],
       "id": "09-negative-branch-closure",
-      "next_action": "Await Dominici full thesis and author declarations/profile IDs. Scheduler remains paused. No original-study completion, automatic experiment or submission.",
+      "next_action": "Await author declarations/profile IDs. Unavailable Dominici full text is a disclosed nonblocking limitation; search closed by user. Scheduler remains paused. No original-study completion or submission claimed.",
       "public_package": "manuscript/counterfactual_fulltext_20261022/third_tmlr_supplement_v7.zip",
       "state": "submission_files_prepared_author_declarations_pending"
     },
@@ -246,13 +246,15 @@
       }
     }
   ],
-  "updated_utc": "2026-10-22T05:34:39.660923+00:00",
+  "updated_utc": "2026-10-22T09:45:40.551337+00:00",
   "venue_change_authorization": "Explicit user request on 18 October 2026; no relaxation of calibration, held-out or human gates.",
   "submission_preparation_authorization": "22 October 2026: complete remaining submission work; reuse supplied PDF for author details.",
   "literature_comparison_authorization": "22 October 2026: complete the 2 unresolved comparisons; scheduler remains paused.",
   "literature_fulltext_status": {
     "counterfactual": "supplied_and_scoped_comparison_complete_with_joint_success_caveat",
-    "dominici": "full_thesis_unavailable",
-    "open_count": 1
+    "dominici": "unavailable_nonblocking_search_closed_by_user",
+    "open_count": 0,
+    "unresolved_evidence_count": 1,
+    "submission_preparation_blocking_count": 0
   }
 }

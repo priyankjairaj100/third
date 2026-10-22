@@ -10,9 +10,11 @@ squared ridge-head error has different quantifiers/metric and is not numerically
 interchangeable. The report gives the distinction and an analytic witness.
 No exhaustive priority/superiority clearance or new scientific result is claimed.
 
-Dominici's final thesis is still missing: ONE full-text comparison remains open.
-Do not repeat retrieval for the now-supplied counterfactual manuscript. Do not
-claim both comparisons complete. The supplied PDF and extracted text stay private.
+Dominici's full thesis is unavailable. On 22 October the user closed that search
+and accepted the existing bounded acknowledgment as a nonblocking limitation.
+No full-text comparison is claimed; do not keep requesting the thesis or searching
+automatically. Reopen only on a later explicit request or newly supplied text.
+Tadakamalla's comparison is complete; its supplied PDF/extraction stay private.
 
 Current source SHA256: 397b727c33bf21c64b8ab7ce65854ee33717b07f8f2a520e0b61b787d3f72f5c.
 Exactly two literature/status replacements were independently reviewed; all other

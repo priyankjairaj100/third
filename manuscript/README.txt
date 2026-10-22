@@ -1,6 +1,7 @@
 CURRENT FULL-TEXT COMPARISON / SUBMISSION PREPARATION V7 — 22 OCTOBER 2026
 Tadakamalla full-paper comparison is complete for the supplied six-page version,
-with an explicit joint-success qualification. Dominici thesis remains unavailable.
+with an explicit joint-success qualification. Dominici thesis remains unavailable;
+the user closed that search as nonblocking. Retain its bounded acknowledgment.
 Read counterfactual_fulltext_20261022/COMPARISON.txt and COMPARISON.json.
 Source:397b727c33bf21c64b8ab7ce65854ee33717b07f8f2a520e0b61b787d3f72f5c.
 Current supplement: counterfactual_fulltext_20261022/third_tmlr_supplement_v7.zip.

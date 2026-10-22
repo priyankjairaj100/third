@@ -1,0 +1,16 @@
+{
+  "schema": "third-literature-search-disposition-v1",
+  "updated_utc": "2026-10-22T09:45:40.551337+00:00",
+  "work": "Dominici 2025 thesis on end-to-end unlearning through data preparation pipelines and feature stores",
+  "user_direction": "Stop pursuing the unavailable thesis and proceed with the existing bounded acknowledgment.",
+  "search_status": "closed_by_user",
+  "submission_preparation_blocker": false,
+  "full_text_obtained": false,
+  "full_text_comparison_completed": false,
+  "source_availability_limitation_retained": true,
+  "citation_retained": true,
+  "manuscript_unchanged_sha256": "397b727c33bf21c64b8ab7ce65854ee33717b07f8f2a520e0b61b787d3f72f5c",
+  "reopen_only_on": "A later explicit user request or a newly supplied accessible full text.",
+  "scheduler_status": "PAUSED",
+  "author_attestations_or_eligibility_certified": false
+}

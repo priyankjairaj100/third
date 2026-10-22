@@ -41,5 +41,9 @@
   "counterfactual_fulltext_comparison_complete": true,
   "counterfactual_comparison_caveat": "Theorem8(iii) counting proof supports joint complete-answer success, not separate per-query success.",
   "dominici_fulltext_comparison_complete": false,
-  "unresolved_fulltext_comparison_count": 1
+  "unresolved_fulltext_comparison_count": 1,
+  "workflow_updated_utc": "2026-10-22T09:45:40.551337+00:00",
+  "dominici_search_status": "closed_by_user_nonblocking",
+  "literature_submission_preparation_blockers": 0,
+  "literature_disposition": "manuscript/dominici_search_disposition_20261022.json"
 }
