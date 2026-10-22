@@ -1,0 +1,35 @@
+{
+  "schema": "third-tmlr-submission-preparation-v5",
+  "created_utc": "2026-10-22T04:33:26.871825+00:00",
+  "source": {
+    "sha256": "7dceb58eafd0adb601a531e03ff9e69da4ee755eb75ce09f6332fb1bfbec66fa",
+    "bytes": 69862
+  },
+  "anonymous_supplement": {
+    "path": "manuscript/submission_20261022/third_tmlr_supplement_v5.zip",
+    "sha256": "d10b3c3c4feff6c2fff40e84935882dc075f078d74cb2928a5a0284b97c6f8d4",
+    "bytes": 365252,
+    "members": 6
+  },
+  "private_pdf": {
+    "sha256": "94c3168c2f12881c1eb286a6d3d11c30e3e10e749f5baa0ef8eb664a6d29b4da",
+    "bytes": 142856,
+    "pages": 15
+  },
+  "native_compile_verified": true,
+  "visual_review_verified": true,
+  "independent_submission_review_passed": true,
+  "clean_extraction_replay_passed": true,
+  "technical_submission_preparation_complete": true,
+  "submission_ready": false,
+  "actual_submission": false,
+  "author_roster_supplied": true,
+  "author_attestations_supplied": false,
+  "openreview_profile_ids_verified": false,
+  "full_text_comparisons_complete": false,
+  "original_effect_study_complete": false,
+  "native_app_runtime_repaired": false,
+  "previous_immutable_release": "manuscript/release_20261018_tmlr_v4.zip",
+  "previous_release_status_preserved": "manuscript/submission_20261022/previous_release_status.json",
+  "public_backup_excludes_private_author_metadata_and_pdf": true
+}

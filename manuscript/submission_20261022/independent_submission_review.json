@@ -1,0 +1,147 @@
+{
+  "bindings": {
+    "package_receipt": {
+      "bytes": 510,
+      "sha256": "a77501b48498b4d8663da3386d3c2731f311cc3d992e2fccde827d222a9e2ad8"
+    },
+    "parent_visual_review": {
+      "bytes": 777,
+      "sha256": "c5ae1be5dcc7c03be97d6073f7a9618fbd415dc15b928e41ea91ec2d8594b752"
+    },
+    "pdf": {
+      "bytes": 142856,
+      "sha256": "94c3168c2f12881c1eb286a6d3d11c30e3e10e749f5baa0ef8eb664a6d29b4da"
+    },
+    "prior_reviewed_source": {
+      "bytes": 69681,
+      "sha256": "d42068febcb1b91ef9e35326cbc6bd2c19b3e6fbce8d0ee6091be53450b74703"
+    },
+    "saved_policy_review": {
+      "bytes": 16013,
+      "sha256": "935b97a063c9f7c6d21ce3697a6b8c83cae009a644983d2f9f096ee34e95eeb9"
+    },
+    "source": {
+      "bytes": 69862,
+      "sha256": "7dceb58eafd0adb601a531e03ff9e69da4ee755eb75ce09f6332fb1bfbec66fa"
+    },
+    "source_delta": {
+      "bytes": 873,
+      "sha256": "afdb3f3e8966ea56280e5e2729d970f4f7bc60f96aedb29fe836ffb3dcde7853"
+    },
+    "supplement": {
+      "bytes": 365252,
+      "sha256": "d10b3c3c4feff6c2fff40e84935882dc075f078d74cb2928a5a0284b97c6f8d4"
+    }
+  },
+  "created_utc": "2026-10-22T04:32:39.222503+00:00",
+  "current_source_sha256": "7dceb58eafd0adb601a531e03ff9e69da4ee755eb75ce09f6332fb1bfbec66fa",
+  "findings": [],
+  "form_and_eligibility": {
+    "actual_submission": false,
+    "author_declarations_verified": false,
+    "authorship_consent_contributions_quota_conflicts_rights_not_certified": true,
+    "null_author_profiles_preserved": true,
+    "null_competing_interests_and_human_subjects_reporting_preserved": true,
+    "optional_prior_submission_fields_not_assumed": true,
+    "private_form_is_draft_not_api_payload": true,
+    "status": "technical_files_prepared_author_facts_unverified",
+    "title_abstract_and_file_sizes_within_saved_initial_schema_limits": true,
+    "title_and_abstract_match_source": true,
+    "unconditional_submission_readiness_claim": false
+  },
+  "layout_scope": {
+    "five_contact_sheets_and_full_first_page_reviewed_by_parent": true,
+    "independent_rerender_or_visual_review_performed": false,
+    "metadata_and_text_checks_do_not_replace_layout_review": true,
+    "parent_bound_visual_review_covers_all15pages": true
+  },
+  "limitations": [
+    "This review verifies technical preparation and preserves unresolved author attestations; it is not permission to submit or a certification of eligibility, novelty, rights or acceptance.",
+    "The saved current policy/schema receipt was checked for internal binding and form alignment; this audit did not repeat live policy browsing.",
+    "The wrapper replays unchanged public aggregate checks and parses generating source; no private scientific input, graph, state, annotation or training job was rerun.",
+    "Anonymity screening excludes known identities, private paths and operational payloads; public hashes/source may still link to development history."
+  ],
+  "passed": true,
+  "pdf_checks": {
+    "anonymous_author_text": true,
+    "appendices_start_page": 11,
+    "appendix_E_reference_resolved": true,
+    "attachments_absent": true,
+    "author_metadata_absent": true,
+    "first_page_ai_disclosure_extracted": true,
+    "form_absent": true,
+    "metadata_stream_absent": true,
+    "pages": 15,
+    "references_start_page": 10,
+    "regular_submission_page_classification_supported": true,
+    "title_matches_submission_fields": true,
+    "unencrypted": true,
+    "upload_pdf_equals_reviewed_build_pdf": true
+  },
+  "pdf_sha256": "94c3168c2f12881c1eb286a6d3d11c30e3e10e749f5baa0ef8eb664a6d29b4da",
+  "privacy_checks": {
+    "container_summaries": [
+      {
+        "crc_passed": true,
+        "depth": 3,
+        "manifest_verified": true,
+        "members": 13
+      },
+      {
+        "crc_passed": true,
+        "depth": 2,
+        "manifest_verified": true,
+        "members": 74
+      },
+      {
+        "crc_passed": true,
+        "depth": 1,
+        "manifest_verified": true,
+        "members": 82
+      },
+      {
+        "crc_passed": true,
+        "depth": 0,
+        "manifest_verified": true,
+        "members": 6
+      }
+    ],
+    "file_extension_counts": {
+      ".json": 138,
+      ".py": 25,
+      ".tex": 1,
+      ".txt": 8,
+      ".zip": 3
+    },
+    "hashes_and_public_code_can_remain_linkable": true,
+    "known_author_names_emails_and_private_paths_absent_from_pdf_source_and_recursive_zip_payloads": true,
+    "nested_zip_count": 4,
+    "private_author_roster_and_reference_documents_excluded": true,
+    "private_inputs_states_model_weights_raw_logs_or_scheduler_receipts_not_added": true,
+    "recursive_member_count": 175,
+    "recursive_uncompressed_payload_bytes": 2667745,
+    "recursive_zip_crc_safe_names_and_manifests_verified": true,
+    "upload_directory_exactly_pdf_and_zip": true,
+    "zip_members_with_extra_fields": 0
+  },
+  "schema": "third-independent-submission-finalization-review-v1",
+  "scope": "Narrow independent read-only audit of final source delta, upload integrity, anonymous content/metadata and wrapper replay. Prior scientific audits and cluster jobs were not repeated.",
+  "source_checks": {
+    "build_source_equals_current": true,
+    "exact_single_title_footnote_reconstruction": true,
+    "nested_v4_bytes_unchanged": true,
+    "new_title_occurs_once": true,
+    "no_added_author_identity": true,
+    "old_title_occurs_once": true,
+    "scientific_content_unchanged": true,
+    "supplement_manuscript_equals_current": true
+  },
+  "supplement_sha256": "d10b3c3c4feff6c2fff40e84935882dc075f078d74cb2928a5a0284b97c6f8d4",
+  "wrapper_replay": {
+    "author_declarations_verified": false,
+    "passed": true,
+    "private_scientific_inputs_recomputed": false,
+    "source_change": "first-page assistance footnote only",
+    "unchanged_v4_nested_replay_passed": true
+  }
+}

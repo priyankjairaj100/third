@@ -1,3 +1,13 @@
+CURRENT SUBMISSION PREPARATION — 22 OCTOBER 2026
+See submission_20261022/SUBMISSION_CHECKLIST.txt and readiness.json.
+Current source:7dceb58eafd0adb601a531e03ff9e69da4ee755eb75ce09f6332fb1bfbec66fa.
+Run python3 -B manuscript/submission_20261022/check_submission.py (Python3.10+).
+The prior checkers/reviews below bind their historical source versions.
+Anonymous V5 binds the current source and replays unchanged V4 evidence.
+Technical files prepared; author declarations/profiles and two full-text
+comparisons remain unresolved. No actual submission or original-study completion.
+
+HISTORICAL PREPARATION NOTES
 Current TMLR manuscript: audited natural structure and exact repair
 
 The same standalone source includes both completed development diagnostics on

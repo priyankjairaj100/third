@@ -1,0 +1,19 @@
+{
+  "source": {
+    "sha256": "7dceb58eafd0adb601a531e03ff9e69da4ee755eb75ce09f6332fb1bfbec66fa",
+    "bytes": 69862
+  },
+  "pdf": {
+    "sha256": "94c3168c2f12881c1eb286a6d3d11c30e3e10e749f5baa0ef8eb664a6d29b4da",
+    "bytes": 142856,
+    "pages": 15
+  },
+  "supplement": {
+    "sha256": "d10b3c3c4feff6c2fff40e84935882dc075f078d74cb2928a5a0284b97c6f8d4",
+    "bytes": 365252,
+    "members": 6
+  },
+  "clean_extraction_replay_passed": true,
+  "private_scientific_rerun": false,
+  "actual_submission": false
+}

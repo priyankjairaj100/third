@@ -1,0 +1,32 @@
+{
+  "schema": "third-tmlr-backup-build-status-v4",
+  "created_utc": "2026-10-18T12:42:46.687651+00:00",
+  "source": {
+    "bytes": 69681,
+    "sha256": "d42068febcb1b91ef9e35326cbc6bd2c19b3e6fbce8d0ee6091be53450b74703"
+  },
+  "archive": {
+    "path": "manuscript/release_20261018_tmlr_v4.zip",
+    "bytes": 2697619,
+    "sha256": "c3c04fa54b91cba1f80ebde9bdb6a728dcc1868ddd4e38a8d4536fcc45867427"
+  },
+  "manifest": {
+    "path": "manuscript/release_manifest_20261018_tmlr_v4.json",
+    "bytes": 28921,
+    "sha256": "61dd6b8121197b28cb7d589fef276696c1f59381d6998732a95cfa445c5738cc"
+  },
+  "archive_members": 147,
+  "exact_member_and_crc_checks_passed": true,
+  "clean_extraction_aggregate_and_historical_replays_passed": true,
+  "anonymous_supplement_replay_passed": true,
+  "verification_python": "3.12.7",
+  "native_compile_verified": true,
+  "visual_review_verified": true,
+  "independent_delta_review_passed": true,
+  "compiled_pdf_included": false,
+  "anonymous_submission_package": false,
+  "native_app_runtime_repaired": false,
+  "stage2_results_included": true,
+  "submission_ready": false,
+  "original_effect_study_complete": false
+}

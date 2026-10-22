@@ -1,0 +1,19 @@
+{
+  "checked_utc": "2026-10-22T04:33:26.871825+00:00",
+  "full_texts_obtained": 0,
+  "technical_comparisons_closed": false,
+  "wording_action_complete": true,
+  "related_work_unchanged": true,
+  "unresolved": [
+    "Tadakamalla et al., Predictive State Is Not Explanatory State",
+    "Dominici, End-to-end Machine Unlearning Through Data Preparation Pipelines and Feature Stores"
+  ],
+  "primary_sources": [
+    "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7520178",
+    "https://github.com/PranayTadakamalla/predictive-state-not-explanatory-state",
+    "https://leodom01.github.io/",
+    "https://deem.berlin/"
+  ],
+  "conclusion": "Bounded public discovery found no new full text. Explicit overlap acknowledgments and technical-comparison limitations remain. No priority, exclusion or superiority inference from missing text.",
+  "reopen_when": "A new accessible full text is supplied or discovered; do not repeatedly retry denied routes."
+}

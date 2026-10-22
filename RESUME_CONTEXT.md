@@ -1,3 +1,34 @@
+Latest continuation — 22 October 2026: TMLR submission files prepared
+
+User requested completion of remaining submission work and supplied a separate
+published-paper PDF for author details. The private author roster is populated;
+no identifying author information was added to the anonymous review manuscript.
+Current source SHA256: 7dceb58eafd0adb601a531e03ff9e69da4ee755eb75ce09f6332fb1bfbec66fa.
+Only change from 18 October: explicit AI-assistance first-page footnote, as
+required by the current TMLR FAQ. Scientific content and negative gates unchanged.
+Native compilation, updated 15-page alternate PDF review, independent submission
+audit and clean-extraction V5 aggregate replay passed. References start on page10;
+the paper qualifies as Regular by the current at-most-12-main-page criterion.
+
+Current public preparation: manuscript/submission_20261022. The old 18 October
+checklist is historical. Current checker: python3 -B
+manuscript/submission_20261022/check_submission.py (Python3.10+).
+Private upload files and form drafts: outputs/tmlr_submission_20261022 under the
+private orchestration root. Do not publish author forms/reference PDF or upload
+development/history archives. Anonymous V5 retains unchanged V4 evidence.
+
+OpenReview profile IDs and author declarations remain unverified; author names
+from another paper do not establish consent, contribution, quota, interests,
+ethics determination, rights or absence of archival overlap. No submission made.
+Two close-prior full texts remain unavailable after bounded new discovery;
+existing acknowledgments/limitations retained, no novelty clearance claimed.
+
+Both completed engineering jobs remain terminal and audited. Original semantic
+study remains blocked; no retuning, new experiment, cluster access, human pair
+review or protected-lock change. Existing scheduler unchanged. Advance only
+new author facts or accessible comparison evidence; do not repeat unchanged
+builds, audits, denied lookups or completed experiments.
+
 Latest continuation — 18 October 2026: audited natural development repair complete
 
 Both new engineering jobs are terminal and audited:15414COMPLETED0:0(250s)

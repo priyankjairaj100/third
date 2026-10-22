@@ -1,0 +1,54 @@
+TMLR SUBMISSION PREPARATION — 22 OCTOBER 2026
+
+This is the current checklist; the 18 October checklist is historical.
+
+Completed technical preparation
+- Same anonymous standalone TMLR source, with required first-page assistance
+  footnote and preserved appendix disclosure. Only this footnote changed.
+- Native editor compiler passed; updated temporary PDF reviewed on five contact
+  sheets covering all 15 pages and individually on page one. No overflow found.
+- Main content ends on page 10, so select Regular submission (at most 12 pages).
+- Current PDF: 142856 bytes, below the 50 MB initial upload limit.
+- Anonymous V5 supplement binds the current manuscript to exact unchanged V4
+  evidence. Clean-extraction replay passed; no private observations recomputed.
+- Current live OpenReview form inspected. Prepared title, abstract, submission
+  type, upload paths and separate private author metadata from user reference.
+- Two unavailable full-text comparisons revisited using bounded new discovery.
+  No full text obtained; topical overlap and explicit uncertainty are retained.
+  This closes the search action, not the technical comparisons or novelty review.
+
+Author-dependent facts remain unconfirmed
+- Verified active OpenReview profiles and current conflict information.
+- Contribution, consent, responsibility and truthful intellectual-provenance
+  declarations, including actual use of AI tools.
+- Current annual quota and no conflicting archival submission or prior overlap;
+  any previous TMLR rejection and required resubmission information.
+- Actual funding/competing interests, applicable human-subjects/IRB determination,
+  and authority to license the permitted submission materials under CC BY 4.0.
+Do not infer these from another paper's author block or automatically enter N/A.
+
+Submission instructions
+Use only the anonymous manuscript PDF and dedicated V5 supplement for uploads.
+Do not upload private author forms, supplied reference PDFs, development/history
+archives, corpus text, model weights, source IDs or raw observations.
+Use the supplementary-material field for the ZIP, not the Beyond PDF field.
+The inspected initial form requires title, abstract, authors/profile IDs, PDF,
+submission type, competing interests and human-subjects reporting. It has no
+separate funding, action-editor or keyword field; later workflow may differ.
+An action-editor topic shortlist is prepared privately, with conflicts unchecked.
+
+Scientific status
+Both calibrations remain failed. The original downstream semantic-effect and
+held-out program remains unexecuted; no retuning or new experiments occurred.
+The paper presents scoped theory, negative calibration and exact engineering
+diagnostics. No utility, comparative cost or total-memory benefit is established.
+No submission, external author contact, rights acceptance or acceptance claim.
+
+Current official sources verified 22 October 2026
+https://jmlr.org/tmlr/author-guide.html
+https://jmlr.org/tmlr/editorial-policies.html
+https://jmlr.org/tmlr/faq.html
+https://jmlr.org/tmlr/acceptance-criteria.html
+https://jmlr.org/tmlr/ethics.html
+https://jmlr.org/tmlr/editorial-board.html
+https://api2.openreview.net/invitations?id=TMLR%2F-%2FSubmission

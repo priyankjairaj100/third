@@ -1,0 +1,10 @@
+{
+  "schema": "third-submission-disclosure-delta-v1",
+  "source_before_sha256": "d42068febcb1b91ef9e35326cbc6bd2c19b3e6fbce8d0ee6091be53450b74703",
+  "source_after_sha256": "7dceb58eafd0adb601a531e03ff9e69da4ee755eb75ce09f6332fb1bfbec66fa",
+  "old": "\\title{Unlearning What Was Never Trained:\\\\Exact Repair After Data Curation}",
+  "new": "\\title{Unlearning What Was Never Trained:\\\\Exact Repair After Data Curation\\thanks{OpenAI Codex and other AI tools assisted manuscript drafting, code preparation, source checking, and internal review. Details and limits appear in Appendix~\\ref{app:repro}.}}",
+  "reason": "TMLR FAQ explicitly requires LLM writing-assistance disclosure in first-page footnote. Appendix disclosure already existed. No scientific content changed.",
+  "policy_url": "https://jmlr.org/tmlr/faq.html",
+  "author_attestations_not_inferred": true
+}

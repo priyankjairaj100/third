@@ -1,0 +1,33 @@
+{
+  "source_sha256": "7dceb58eafd0adb601a531e03ff9e69da4ee755eb75ce09f6332fb1bfbec66fa",
+  "pdf_sha256": "94c3168c2f12881c1eb286a6d3d11c30e3e10e749f5baa0ef8eb664a6d29b4da",
+  "pages": 15,
+  "contact_sheets_inspected": 5,
+  "all_pages_covered": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "individual_first_page_inspected": true,
+  "first_page_disclosure_visible": true,
+  "layout_passed": true,
+  "nonblocking_warnings": [
+    "Underfull bibliography line",
+    "Expanded paragraph spacing on page 14"
+  ],
+  "native_compile": "success",
+  "temporary_compiler": "Tectonic 0.17.0; untrusted mode; cached TeX resources plus missing public fonts downloaded",
+  "native_preview_equivalence_claim": false
+}
