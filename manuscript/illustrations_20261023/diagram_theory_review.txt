@@ -1,0 +1,18 @@
+Independent diagram/source review: PASS
+Source SHA256: ac65927dc17e6fa8ee9b975207e0d6c9a9a7be78701c3a1d0b88c20a261dd982
+Baseline SHA256: be256390853c2eb1ca1f23db199b01e963f4dc582f174fb790de5f89420a6722
+No actionable mathematical or caption findings.
+
+Figure1: accurate excluded raw blocking, deletion ofb and fresh{a,c}; old-subset update remains{a}.
+Figure2: accurate alternative first deletions, zero current heads, one deletion remaining and8/4/0 conditional private-bit minima. Reachability, per-candidate four-sign words, overhead and current-head recovery at budgetzero stay correct.
+
+Preservation: equation, align, align*, theorem, corollary, proof and display-math blocks byte-identical. Bibliography, citation sequence and embedded style unchanged. All labels resolve; tab:live cleanly replaced by fig:live. No scientific premise, evidence or gate is removed.
+
+Recommendations:
+No further mathematical or caption changes needed.
+Perform rendered visual inspection at actual page size, especially lower chain annotation and four-cell strips. Source semantics review does not replace pixel inspection.
+Preserve explicit alternative-branch, zero-model, remaining-deletion, per-candidate four-sign and private-information wording in later layout edits.
+
+Scope: source/math/caption review. Rendered visual quality and pagination remain the parent visual review.
+
+Final addendum: Reverse substitution of the prior related-work paragraph reproduces exactly the previously reviewed226b65b0 source hash. This proves the latest source differs only in that paragraph. The shorter text retains the inaccessible-thesis limitation and the exact fixed-operator/decreasing-budget scope. PASS. Prior report preserved as diagram_theory_review_226b65b0.json/.txt.

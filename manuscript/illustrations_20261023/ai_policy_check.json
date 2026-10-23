@@ -1,0 +1,20 @@
+{
+  "checked_utc": "2026-10-23T07:55:55.028534+00:00",
+  "sources": [
+    {
+      "url": "https://jmlr.org/tmlr/faq.html",
+      "section": "Authors: LLM writing assistance",
+      "finding": "Requires explicit disclosure in a footnote on the first page. No fixed wording or detailed first-page inventory is specified. The FAQ also states an expectation of human-sourced ideas, claims and results."
+    },
+    {
+      "url": "https://jmlr.org/tmlr/editorial-policies.html",
+      "section": "LLM use policy for authors",
+      "finding": "Allows general-purpose assistance, keeps authors fully responsible for content and excludes LLM authorship."
+    }
+  ],
+  "applied_first_page_text": "OpenAI Codex assisted with prose writing.",
+  "appendix_retains_broader_assistance": true,
+  "placement_complies_with_explicit_faq_instruction": true,
+  "policy_text_difference": "FAQ human-sourced expectation is more specific than the editorial-policy wording. No claim of intellectual-provenance compliance is inferred from footnote placement.",
+  "new_author_attestations": false
+}

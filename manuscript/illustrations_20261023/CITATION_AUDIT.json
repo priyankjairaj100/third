@@ -1,0 +1,594 @@
+{
+  "checked_date": "2026-10-23T07:57:09.986447+00:00",
+  "current_source": {
+    "bytes": 94981,
+    "sha256": "ac65927dc17e6fa8ee9b975207e0d6c9a9a7be78701c3a1d0b88c20a261dd982"
+  },
+  "reference_count": 23,
+  "cited_keys_equal_bibliography_keys": true,
+  "duplicate_keys": [],
+  "unresolved_citations": [],
+  "entries": [
+    {
+      "key": "semdedup",
+      "current_bibliography_tex": "A. Abbas, K. Tirumala, D. Simig, S. Ganguli, and A. S.\nMorcos. 2023. SemDeDup: Data-efficient learning at web-scale through\nsemantic deduplication. \\href{https://arxiv.org/abs/2303.09540}{arXiv:2303.09540}.",
+      "source_audit": {
+        "key": "semdedup",
+        "status": "verified",
+        "metadata": "Amro Abbas; Kushal Tirumala; Daniel Simig; Surya Ganguli; Ari S. Morcos. 2023. SemDeDup: Data-efficient learning at web-scale through semantic deduplication. arXiv:2303.09540v3.",
+        "sources": [
+          "https://arxiv.org/abs/2303.09540",
+          "https://arxiv.org/html/2303.09540v3"
+        ],
+        "claim_locations": [
+          "Introduction, semantic deduplication before training",
+          "Related work, embedding-based redundancy removal"
+        ],
+        "support": "Abstract and Section 3 directly describe pretrained embeddings, pairwise cosine similarity within clusters, and duplicate removal before training.",
+        "correction": null,
+        "limitation": "The exact raw-neighbor suppression claim is supported separately by the implementation, not inferred solely from the paper prose."
+      },
+      "final_disposition": "Verified metadata and bounded in-text use retained."
+    },
+    {
+      "key": "aggregate",
+      "current_bibliography_tex": "Y. Amsterdamer, D. Deutch, and V. Tannen. 2011.\nProvenance for aggregate queries. PODS, 153--164.\n\\href{https://doi.org/10.1145/1989284.1989302}{doi:10.1145/1989284.1989302}.",
+      "source_audit": {
+        "key": "aggregate",
+        "status": "verified_metadata_completion_recommended",
+        "metadata": "Yael Amsterdamer; Daniel Deutch; Val Tannen. 2011. Provenance for aggregate queries. Proceedings of PODS, pages 153-164. DOI 10.1145/1989284.1989302.",
+        "sources": [
+          "https://arxiv.org/abs/1101.1110",
+          "https://arxiv.org/pdf/1101.1110",
+          "https://api.crossref.org/works/10.1145/1989284.1989302"
+        ],
+        "claim_locations": [
+          "Introduction, deletion-induced additions/nonmonotone queries and provenance",
+          "Method, established provenance ideas",
+          "Related work, aggregation and difference"
+        ],
+        "support": "Sections 3-4 develop aggregation provenance. Section 5 studies difference; Example 5.3 on PDF pages 10-11 explicitly changes an annotation to zero and obtains a newly returned tuple. This directly supports deletion-induced additions as prior art.",
+        "correction": "Optional completeness: expand PODS and add pages 153--164 and DOI.",
+        "limitation": "Its difference semantics is explicitly distinct from signed-multiplicity semantics; do not identify the present Boolean expansion with the exact same semiring construction."
+      },
+      "final_disposition": "Verified PODS pages and DOI added."
+    },
+    {
+      "key": "dbsp",
+      "current_bibliography_tex": "M. Budiu, T. Chajed, F. McSherry, L. Ryzhyk, and V. Tannen.\n2023. DBSP: Automatic incremental view maintenance for rich query\nlanguages. PVLDB, 16(7):1601--1614.\n\\url{https://www.vldb.org/pvldb/vol16/p1601-budiu.pdf}.",
+      "source_audit": {
+        "key": "dbsp",
+        "status": "verified",
+        "metadata": "Mihai Budiu; Tej Chajed; Frank McSherry; Leonid Ryzhyk; Val Tannen. 2023. DBSP: Automatic incremental view maintenance for rich query languages. PVLDB 16(7):1601-1614. DOI 10.14778/3587136.3587137.",
+        "sources": [
+          "https://www.vldb.org/pvldb/vol16/p1601-budiu.pdf"
+        ],
+        "claim_locations": [
+          "Introduction, incremental-view-maintenance antecedent",
+          "Related work, incremental query framework"
+        ],
+        "support": "Publisher PDF page 1 reference format verifies all metadata. Abstract and introduction directly state incremental maintenance for full relational algebra, aggregation and nonmonotonic operations.",
+        "correction": "No correction needed. Optional DOI may replace long PDF URL.",
+        "limitation": null
+      },
+      "final_disposition": "Verified metadata and bounded in-text use retained."
+    },
+    {
+      "key": "grace",
+      "current_bibliography_tex": "P. Bushipaka, A. D'Angelo, L. Passaro, and T. Cucinotta.\n2026. GRACE: Gradient-guided coreset selection for LLM unlearning.\n\\href{https://arxiv.org/abs/2608.28361v1}{arXiv:2608.28361v1}.",
+      "source_audit": {
+        "key": "grace",
+        "metadata_status": "verified_with_stable_source_update",
+        "claim_status": "supported",
+        "metadata": {
+          "authors": [
+            "Praveen Bushipaka",
+            "Andrea D Angelo",
+            "Lucia Passaro",
+            "Tommaso Cucinotta"
+          ],
+          "year": 2026,
+          "title": "GRACE: Gradient-guided Coreset Selection for LLM Unlearning",
+          "arxiv": "2608.28361v1",
+          "status": "arXiv says accepted to EMNLP Findings; author page identifies EMNLP 2026 Findings"
+        },
+        "sources": [
+          "https://arxiv.org/abs/2608.28361",
+          "https://arxiv.org/pdf/2608.28361",
+          "https://retis.santannapisa.it/~tommaso/papers/emnlp26.php"
+        ],
+        "locators": [
+          "arXiv metadata and comments; first submitted 28 August 2026",
+          "PDF p.1 abstract and introduction",
+          "Author publication-details page"
+        ],
+        "finding": "Gradient-guided forget and retain coreset claim and behavioral-unlearning distinction are supported. The existing author PDF URL was not retrievable by web tool in this audit; the stable arXiv primary full text was successfully inspected. Current bibliography is not fabricated, but stable arXiv identification is preferable to the fragile PDF filename.",
+        "required_correction": "Use arXiv:2608.28361v1; optional accepted-to-Findings status rather than assuming published pagination.",
+        "proposed_tex": "2026. GRACE: Gradient-guided coreset selection for LLM unlearning. Accepted to Findings of EMNLP 2026. \\href{https://arxiv.org/abs/2608.28361v1}{arXiv:2608.28361v1}."
+      },
+      "final_disposition": "Stable primary arXiv version used without invented publication pagination."
+    },
+    {
+      "key": "cao",
+      "current_bibliography_tex": "Y. Cao and J. Yang. 2015.\nTowards making systems forget with machine unlearning.\nIEEE Symposium on Security and Privacy, 463--480.\n\\href{https://doi.org/10.1109/SP.2015.35}{doi:10.1109/SP.2015.35}.",
+      "source_audit": {
+        "key": "cao",
+        "full_author_names": [
+          "Yinzhi Cao",
+          "Junfeng Yang"
+        ],
+        "title": "Towards Making Systems Forget with Machine Unlearning",
+        "year": 2015,
+        "venue": "2015 IEEE Symposium on Security and Privacy",
+        "pages": "463-480",
+        "doi": "10.1109/SP.2015.35",
+        "metadata_basis": "IEEE-deposited Crossref record; author publication page and primary text",
+        "metadata_urls": [
+          "https://api.crossref.org/works/10.1109%2FSP.2015.35",
+          "https://www.cs.columbia.edu/~junfeng/papers/unlearning/"
+        ],
+        "primary_text_url": "https://www.yinzhicao.org/unlearning/UnlearningOakland15.pdf",
+        "claim_locators": [
+          "Abstract",
+          "Section III.B, PDF p.5",
+          "Section IV, PDF pp.5-6"
+        ],
+        "comparison_boundary": "Summation-form unlearning and changing feature selection are prior work. No equivalence asserted to the specific fixed record-suppression operator or finite-feature ridge obstruction."
+      },
+      "final_disposition": "Direct antecedent added; primary metadata and bounded in-text comparison independently checked."
+    },
+    {
+      "key": "space",
+      "current_bibliography_tex": "Y. Cherapanamjeri, S. Garg, N. Rajaraman, A. Sekhari,\nand A. Shetty. 2025. The space complexity of learning-unlearning\nalgorithms (extended abstract). COLT, PMLR 291:1185--1193.\n\\url{https://proceedings.mlr.press/v291/cherapanamjeri25b.html}.\nFull version: \\href{https://arxiv.org/abs/2506.13048v1}{arXiv:2506.13048v1}.",
+      "source_audit": {
+        "key": "space",
+        "metadata_status": "verified",
+        "claim_status": "supported",
+        "metadata": {
+          "authors": [
+            "Yeshwanth Cherapanamjeri",
+            "Sumegha Garg",
+            "Nived Rajaraman",
+            "Ayush Sekhari",
+            "Abhishek Shetty"
+          ],
+          "year": 2025,
+          "title": "The Space Complexity of Learning-Unlearning Algorithms (extended abstract)",
+          "venue": "Proceedings of Thirty Eighth Conference on Learning Theory",
+          "series": "PMLR",
+          "volume": 291,
+          "pages": "1185--1193"
+        },
+        "sources": [
+          "https://proceedings.mlr.press/v291/cherapanamjeri25b.html",
+          "https://arxiv.org/pdf/2506.13048v1"
+        ],
+        "locators": [
+          "PMLR metadata and BibTeX",
+          "Full version PDF pp.14--15: Theorems 5.4 and 6.3",
+          "Full version PDF pp.48--52: Appendix G"
+        ],
+        "finding": "Bounded deletion size, memory bounds for realizability testing, and an ERM connection are all supported. The manuscript correctly names the full version separately; the theorem numbering is not being attributed to the nine-page extended abstract.",
+        "required_correction": null
+      },
+      "final_disposition": "Verified metadata and bounded in-text use retained."
+    },
+    {
+      "key": "cohencontrol",
+      "current_bibliography_tex": "A. Cohen, A. Smith, M. Swanberg,\nand P. N. Vasudevan. 2023. Control, confidentiality, and the right to be forgotten.\nProceedings of the ACM SIGSAC Conference on Computer and Communications Security,\n3358--3372. \\href{https://doi.org/10.1145/3576915.3616585}{doi:10.1145/3576915.3616585}.",
+      "source_audit": {
+        "key": "cohencontrol",
+        "full_author_names": [
+          "Aloni Cohen",
+          "Adam Smith",
+          "Marika Swanberg",
+          "Prashant Nalini Vasudevan"
+        ],
+        "title": "Control, Confidentiality, and the Right to be Forgotten",
+        "year": 2023,
+        "venue": "Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security",
+        "pages": "3358-3372",
+        "doi": "10.1145/3576915.3616585",
+        "metadata_basis": "ACM-deposited Crossref record, matched to author final PDF first-page ACM reference format",
+        "metadata_urls": [
+          "https://api.crossref.org/works/10.1145/3576915.3616585",
+          "https://doi.org/10.1145/3576915.3616585"
+        ],
+        "primary_text_url": "https://aloni.net/wp-content/uploads/2023/10/Control-Confidentiality-and-RTBF-CCS-23-FINAL.pdf",
+        "claim_locators": [
+          "Section3.1, PDF p.8",
+          "Section3.4, PDF p.10"
+        ],
+        "comparison_boundary": "History independence and internal-state versus single-output distinctions are established. This paper does not demonstrate full adaptive privacy, deletion-as-control, or physical-memory erasure."
+      },
+      "final_disposition": "Direct antecedent added; primary metadata and bounded in-text comparison independently checked."
+    },
+    {
+      "key": "dominici",
+      "current_bibliography_tex": "L. Dominici. 2025. End-to-end machine unlearning through\ndata preparation pipelines and feature stores. Master's thesis, University\nof Amsterdam and Vrije Universiteit Amsterdam. Bibliographic identification\nfrom the author's page and DEEM thesis list; full text not inspected.\n\\url{https://leodom01.github.io/}; \\url{https://deem.berlin/}.",
+      "source_audit": {
+        "key": "dominici",
+        "status": "metadata_and_scope_only",
+        "sources": [
+          "https://leodom01.github.io/",
+          "https://deem.berlin/"
+        ],
+        "locator": "Author page About Me/research and 2025 graduation; lab completed-thesis list",
+        "finding": "Name, 2025 joint UvA/VU MSc and title confirmed. Full text remains unavailable; technical guarantees explicitly not attributed. User closed full-text search as nonblocking. No renewed search."
+      },
+      "final_disposition": "Metadata/scope acknowledgment only; unavailable thesis search remains closed by user and nonblocking."
+    },
+    {
+      "key": "semcode",
+      "current_bibliography_tex": "Facebook Research. 2023.\nSemDeDup official implementation, \\texttt{semdedup.py}.\nCommit \\href{https://github.com/facebookresearch/SemDeDup/blob/6b4194511202c29b0e1ac8c730996777449ea2a4/semdedup.py}{6b4194511202}. Inspected 22 October 2026.",
+      "source_audit": {
+        "key": "semcode",
+        "status": "correction_required",
+        "metadata": "Facebook Research. 2023. SemDeDup official implementation, semdedup.py. File commit 6b4194511202c29b0e1ac8c730996777449ea2a4, 1 October 2023. Repository archived 1 November 2024.",
+        "sources": [
+          "https://github.com/facebookresearch/SemDeDup/blob/6b4194511202c29b0e1ac8c730996777449ea2a4/semdedup.py",
+          "https://api.github.com/repos/facebookresearch/SemDeDup/commits?path=semdedup.py&per_page=1"
+        ],
+        "claim_locations": [
+          "Setup, nonnegative-threshold upper-triangle column maximum rule",
+          "Related work, fixed ordered suppression motivation"
+        ],
+        "support": "Pinned file lines 64-79 compute pairwise similarities, clear the diagonal, take torch.triu(diagonal=1), and take column maxima. Lines 149-152 remove columns with M > 1-eps. All earlier raw rows contribute regardless of whether they are removed. Nonnegative threshold qualification correctly accounts for zero padding.",
+        "correction": "Replace bibliographic label [Meta/Facebook Research(2026)] and mutable main URL with [Facebook Research(2023)], explicit year 2023, and the immutable commit URL. Keep actual access date as a separate note; do not use it as publication year.",
+        "limitation": "The fixed graph/order restriction is necessary: code lines 131-137 show random/easy ordering options. No general claim about refitted clusters is warranted. Downloaded main and pinned file are byte-identical (SHA256 9280d5feb84e6c65d2e24229db3ce8efc71a0ad585c41921539ccc3cc96cc293)."
+      },
+      "final_disposition": "Publication year 2023 distinguished from inspection date; immutable file commit cited."
+    },
+    {
+      "key": "ticketed",
+      "current_bibliography_tex": "B. Ghazi, P. Kamath, R. Kumar, P. Manurangsi,\nA. Sekhari, and C. Zhang. 2023. Ticketed learning--unlearning schemes.\nCOLT, PMLR 195:5110--5139.\n\\url{https://proceedings.mlr.press/v195/ghazi23a.html}.",
+      "source_audit": {
+        "key": "ticketed",
+        "metadata_status": "verified",
+        "claim_status": "supported_with_optional_precision",
+        "metadata": {
+          "authors": [
+            "Badih Ghazi",
+            "Pritish Kamath",
+            "Ravi Kumar",
+            "Pasin Manurangsi",
+            "Ayush Sekhari",
+            "Chiyuan Zhang"
+          ],
+          "year": 2023,
+          "title": "Ticketed Learning--Unlearning Schemes",
+          "venue": "Proceedings of Thirty Sixth Conference on Learning Theory",
+          "series": "PMLR",
+          "volume": 195,
+          "pages": "5110--5139"
+        },
+        "sources": [
+          "https://proceedings.mlr.press/v195/ghazi23a.html",
+          "https://proceedings.mlr.press/v195/ghazi23a/ghazi23a.pdf"
+        ],
+        "locators": [
+          "Definitions 1--2 and Remark 3, PDF pp.4--5",
+          "Appendix B.1 immediately following proof of Theorem 22, PDF p.21"
+        ],
+        "finding": "Their main definition is explicitly one-shot and charges central bits and each ticket separately. The current comparison is accurate. However, Appendix B.1 explicitly notes that its threshold scheme supports multi-shot unlearning; adding this caveat would prevent a reader from interpreting the current contrast as claiming that the entire paper cannot handle sequential requests.",
+        "required_correction": null,
+        "recommended_insertion": "Their threshold construction also supports multiple requests (Appendix B.1); our distinction is the stated canonical remaining-horizon state contract."
+      },
+      "final_disposition": "Multi-shot threshold construction credited explicitly; distinction limited to canonical remaining-horizon state."
+    },
+    {
+      "key": "ginart",
+      "current_bibliography_tex": "A. A. Ginart, M. Y. Guan,\nG. Valiant, and J. Zou. 2019. Making AI forget you: Data deletion in\nmachine learning. Advances in Neural Information Processing Systems,\n32:3518--3531.\n\\url{https://proceedings.neurips.cc/paper/2019/hash/cb79f8fa58b91d3af6c9c991f63962d3-Abstract.html}.",
+      "source_audit": {
+        "key": "ginart",
+        "full_author_names": [
+          "Antonio A. Ginart",
+          "Melody Y. Guan",
+          "Gregory Valiant",
+          "James Zou"
+        ],
+        "author_name_basis": "Names as printed on the official primary PDF. Official BibTeX and metadata omit Ginart/Guan middle initials; landing page styles the fourth author James Y Zou. These are non-conflicting author-identity variants. Bibitem follows the printed PDF.",
+        "title": "Making AI Forget You: Data Deletion in Machine Learning",
+        "year": 2019,
+        "venue": "Advances in Neural Information Processing Systems",
+        "volume": 32,
+        "pages": "3518-3531",
+        "doi": null,
+        "doi_note": "No DOI supplied in inspected official landing page, metadata JSON or BibTeX; use stable proceedings URL. This is not a claim that no DOI exists anywhere.",
+        "metadata_basis": "Official NeurIPS proceedings landing, Metadata.json and BibTeX; PDF title page",
+        "metadata_urls": [
+          "https://proceedings.neurips.cc/paper/2019/hash/cb79f8fa58b91d3af6c9c991f63962d3-Abstract.html",
+          "https://proceedings.neurips.cc/paper_files/paper/2019/file/cb79f8fa58b91d3af6c9c991f63962d3-Metadata.json",
+          "https://proceedings.neurips.cc/paper_files/paper/2019/file/cb79f8fa58b91d3af6c9c991f63962d3-Bibtex.bib"
+        ],
+        "primary_text_url": "https://papers.neurips.cc/paper/2019/file/cb79f8fa58b91d3af6c9c991f63962d3-Paper.pdf",
+        "claim_locators": [
+          "Section3 before Definition3.1, PDF p.3",
+          "Definition3.1 and online-deletion paragraph, PDF p.3"
+        ],
+        "comparison_boundary": "Internal metadata used for subsequent deletions is already included in the learned object; do not claim stateful recovery as a new general idea."
+      },
+      "final_disposition": "Direct antecedent added; primary metadata and bounded in-text comparison independently checked."
+    },
+    {
+      "key": "green",
+      "current_bibliography_tex": "T. J. Green, G. Karvounarakis, and V. Tannen. 2007.\nProvenance semirings. PODS, 31--40.\n\\href{https://doi.org/10.1145/1265530.1265535}{doi:10.1145/1265530.1265535}.",
+      "source_audit": {
+        "key": "green",
+        "status": "verified_metadata_completion_recommended",
+        "metadata": "Todd J. Green; Grigoris Karvounarakis; Val Tannen. 2007. Provenance semirings. Proceedings of PODS, pages 31-40. DOI 10.1145/1265530.1265535.",
+        "sources": [
+          "https://www.cs.ucdavis.edu/~green/papers/pods07.pdf",
+          "https://api.crossref.org/works/10.1145/1265530.1265535"
+        ],
+        "claim_locations": [
+          "Introduction, provenance antecedent",
+          "Method, signed Boolean representation builds on provenance ideas",
+          "Related work, polynomial provenance"
+        ],
+        "support": "Abstract and Section 4 give polynomial-semiring provenance and evaluation under valuations; Theorem 4.3 is the positive-relational-algebra evaluation result.",
+        "correction": "Optional completeness: expand PODS and add pages 31--40 and DOI. Do not use 61--70 (not the publisher record).",
+        "limitation": "Green concerns positive relational algebra and N[X]; it does not itself establish this paper's signed negative-dependency formula. The current wording says building on established ideas, and the aggregate/difference source supplies the necessary nonmonotone antecedent."
+      },
+      "final_disposition": "Verified PODS pages and DOI added."
+    },
+    {
+      "key": "mistral",
+      "current_bibliography_tex": "Mistral AI. 2024. Mistral NeMo.\nModel release, 18 July 2024. \\url{https://mistral.ai/news/mistral-nemo/}.",
+      "source_audit": {
+        "key": "mistral",
+        "status": "verified",
+        "sources": [
+          "https://mistral.ai/news/mistral-nemo/"
+        ],
+        "locator": "Publisher release 18 July 2024",
+        "finding": "Mistral AI release, model identity and NVIDIA collaboration verified."
+      },
+      "final_disposition": "Formal primary model-release citation added."
+    },
+    {
+      "key": "qwen",
+      "current_bibliography_tex": "Qwen Team. 2024. Qwen2.5: A party of foundation models.\nModel release, 19 September 2024. \\url{https://qwenlm.github.io/blog/qwen2.5/}.",
+      "source_audit": {
+        "key": "qwen",
+        "status": "verified",
+        "sources": [
+          "https://qwenlm.github.io/blog/qwen2.5/"
+        ],
+        "locator": "Publisher release 19 September 2024 and supplied BibTeX",
+        "finding": "Qwen Team, title, release date and 7B Instruct attribution verified."
+      },
+      "final_disposition": "Formal primary model-release citation added."
+    },
+    {
+      "key": "ivmunlearning",
+      "current_bibliography_tex": "S. Schelter. 2021. Towards efficient machine\nunlearning via incremental view maintenance. Workshop on Challenges in\nDeploying and Monitoring ML Systems at ICML.\n\\url{https://ssc.io/pdf/ivm-unlearning.pdf}.",
+      "source_audit": {
+        "key": "ivmunlearning",
+        "status": "verified",
+        "metadata": "Sebastian Schelter. 2021. Towards efficient machine unlearning via incremental view maintenance. Workshop on Challenges in Deploying and Monitoring ML Systems at ICML 2021.",
+        "sources": [
+          "https://ssc.io/pdf/ivm-unlearning.pdf"
+        ],
+        "claim_locations": [
+          "Introduction, view-maintenance antecedent",
+          "Related work, preprocessing/tokenization and sparse computational dependencies"
+        ],
+        "support": "PDF p.3 Section 2 explicitly includes tokenise/explode preprocessing and tokenize(e.text) Rust code in the maintained dataflow. Section 3 on that page explains sparse computational dependencies and the recomputation boundary. Abstract frames ML models as views.",
+        "correction": "No correction needed. Section 2 locator can be added to tokenization clause if desired.",
+        "limitation": "Web text search missed the tokenization paragraph; direct PDF extraction verified it. Do not remove this supported comparison."
+      },
+      "final_disposition": "Verified metadata and bounded in-text use retained."
+    },
+    {
+      "key": "shannon",
+      "current_bibliography_tex": "C. E. Shannon. 1959. Coding theorems for a discrete\nsource with a fidelity criterion. IRE International Convention Record, 7(4):\n142--163. \\href{https://gwern.net/doc/cs/algorithm/information/1959-shannon.pdf}{Reprinted text}.",
+      "source_audit": {
+        "key": "shannon",
+        "status": "link_description_correction",
+        "metadata": "Claude E. Shannon. 1959. Coding theorems for a discrete source with a fidelity criterion. IRE National Convention Record, volume 7, part 4, pages 142-163.",
+        "sources": [
+          "https://gwern.net/doc/cs/algorithm/information/1959-shannon.pdf",
+          "https://ieeexplore.ieee.org/document/5311476",
+          "https://api.crossref.org/works/10.1109/9780470544242.ch21"
+        ],
+        "claim_locations": [
+          "Related work, information-distortion arguments are classical"
+        ],
+        "support": "Reprinted primary text abstract and introduction define R(d), discuss allowable distortion, and give the source-rate/capacity tradeoff. Its first-page footnote identifies IRE International Convention Record vol.7, 1959.",
+        "correction": "Change hyperlink label Original-paper scan to Reprinted text (or Author text, reprint); the supplied PDF is a collected-papers reprint with printed pp.325-350, not the original proceedings pagination. Add volume 7 if desired. Keep original 1959 citation; do not replace with Crossref reprint digitization year 2009.",
+        "limitation": "IEEE page is bot-gated. Crossref DOI concerns the collected-papers digital chapter and does not independently supply original 142-163 pagination; original page range was not changed because no contradictory primary evidence was found."
+      },
+      "final_disposition": "Volume/part/pages completed; linked collected-papers text labeled reprint; International venue wording matches primary reprint and editors bibliography."
+    },
+    {
+      "key": "askubuntu",
+      "current_bibliography_tex": "Stack Exchange. 2024.\nStack Exchange Data Dump, corrected April 2024 release, Ask Ubuntu component.\n\\href{https://archive.org/details/stackexchange_20240402_bis}{Community mirror}.\nRelease identified by the \\href{https://meta.stackexchange.com/questions/224873/all-stack-exchange-data-dump-releases}{release index}\nand \\href{https://meta.stackexchange.com/a/398606}{staff correction announcement}.",
+      "source_audit": {
+        "key": "askubuntu",
+        "status": "documentary_release_identity",
+        "sources": [
+          "https://archive.org/details/stackexchange_20240402_bis",
+          "https://meta.stackexchange.com/questions/224873/all-stack-exchange-data-dump-releases",
+          "https://meta.stackexchange.com/a/398606"
+        ],
+        "locator": "Release index corrected April 2024 XML row and original acquisition receipts",
+        "finding": "Current index links the community mirror; acquisition and checksum receipts identify askubuntu.com.7z. Archive landing fetch unavailable in web tool; identity corroborated by index and existing receipt, not claimed publisher-signed bytes."
+      },
+      "final_disposition": "Actual corrected April 2024 data release cited, with mirror and staff/index identity chain."
+    },
+    {
+      "key": "counterfactual",
+      "current_bibliography_tex": "Sai Pranay Tadakamalla,\nSurisetty Maruthi Ram Prakash, and Syed Mohammed Asad. 2026a.\nPredictive state is not explanatory state: An exponential memory separation\nbetween forecasting and counterfactual auditing. SSRN manuscript.\n\\url{https://doi.org/10.2139/ssrn.7520178}.",
+      "source_audit": {
+        "key": "counterfactual",
+        "status": "supplied_full_text_checked",
+        "sources": [
+          "https://doi.org/10.2139/ssrn.7520178"
+        ],
+        "evidence": "Previously supplied six-page PDF; preserved extraction reread at pages 1 and 3. Receipt SHA256 062d9cf8b580c3908879e16f0c07ca16a75df2478097588a2236617d7c502634. Original supplied path no longer present; extraction and prior receipt retained.",
+        "locator": "Section III, Theorem 8 and proof, manuscript pp.2-3",
+        "finding": "Title and author strings match. Exact counts t+1 and 2^t for t>=3 supported; approximate counting proof requires complete answer-tuple success, correctly qualified. No new publisher-version authentication."
+      },
+      "final_disposition": "Verified metadata and bounded in-text use retained."
+    },
+    {
+      "key": "counterfactualcode",
+      "current_bibliography_tex": "Sai Pranay Tadakamalla,\nSurisetty Maruthi Ram Prakash, and Syed Mohammed Asad. 2026b.\nPredictive state is not explanatory state. Reference implementation, version\n1.0.0. Inspected \\texttt{queries.py}, \\texttt{decoder.py}, and associated\nverification sources at commit\n\\href{https://github.com/PranayTadakamalla/predictive-state-not-explanatory-state/tree/4143f408843394e21a0622c9eb5d5de10a687a8c}{4143f4088433}.",
+      "source_audit": {
+        "key": "counterfactualcode",
+        "status": "pinned_primary_copy_checked",
+        "sources": [
+          "https://github.com/PranayTadakamalla/predictive-state-not-explanatory-state/tree/4143f408843394e21a0622c9eb5d5de10a687a8c"
+        ],
+        "locator": "CITATION.cff, queries.py, decoder.py",
+        "finding": "Author identities, version 1.0.0 and 2026-09-24 release confirmed from previously retrieved pinned primary copy. Web refresh was unavailable; immutable local copy and retrieval receipt used."
+      },
+      "final_disposition": "Verified metadata and bounded in-text use retained."
+    },
+    {
+      "key": "e5",
+      "current_bibliography_tex": "L. Wang, N. Yang, X. Huang, L. Yang, R. Majumder, and F. Wei.\n2024. Multilingual E5 text embeddings: A technical report.\n\\href{https://arxiv.org/abs/2402.05672}{arXiv:2402.05672}.",
+      "source_audit": {
+        "key": "e5",
+        "metadata_status": "verified",
+        "claim_status": "supported",
+        "metadata": {
+          "authors": [
+            "Liang Wang",
+            "Nan Yang",
+            "Xiaolong Huang",
+            "Linjun Yang",
+            "Rangan Majumder",
+            "Furu Wei"
+          ],
+          "year": 2024,
+          "title": "Multilingual E5 Text Embeddings: A Technical Report",
+          "arxiv": "2402.05672"
+        },
+        "sources": [
+          "https://arxiv.org/abs/2402.05672",
+          "https://huggingface.co/intfloat/multilingual-e5-base/blob/d128750597153bb5987e10b1c3493a34e5a4502a/README.md"
+        ],
+        "locators": [
+          "arXiv title/authors/abstract",
+          "Pinned model card: model size and Training Details"
+        ],
+        "finding": "Six author names, year, title, representation claim, model dimension 768, and MIT label all match primary sources. The pinned card reports Stack Exchange among pretraining data. Exact AskUbuntu row overlap is unknown; this study cannot imply the fixed encoder has never seen the source corpus.",
+        "required_correction": null,
+        "recommended_insertion": "The pretrained E5 card lists Stack Exchange data, so overlap with this corpus is unknown; our repair target keeps the encoder fixed."
+      },
+      "final_disposition": "Stack Exchange pretraining caveat added; unknown exact overlap and fixed-encoder target explicit."
+    },
+    {
+      "key": "priu",
+      "current_bibliography_tex": "Y. Wu, V. Tannen, and S. B. Davidson. 2020.\nPrIU: A provenance-based approach for incrementally updating regression\nmodels. SIGMOD, 447--462.\n\\href{https://doi.org/10.1145/3318464.3380571}{doi:10.1145/3318464.3380571}.",
+      "source_audit": {
+        "key": "priu",
+        "status": "verified",
+        "metadata": "Yinjun Wu; Val Tannen; Susan B. Davidson. 2020. PrIU: A provenance-based approach for incrementally updating regression models. SIGMOD, pages 447-462. DOI 10.1145/3318464.3380571.",
+        "sources": [
+          "https://arxiv.org/abs/2002.11791",
+          "https://arxiv.org/pdf/2002.11791",
+          "https://api.crossref.org/works/10.1145/3318464.3380571"
+        ],
+        "claim_locations": [
+          "Introduction, provenance/incremental-learning antecedent",
+          "Related work, provenance-based regression updates"
+        ],
+        "support": "Author PDF abstract and introduction support provenance-based incremental parameter updates after training-sample removals. Publisher-deposited Crossref metadata confirms page range 447-462, author order, title and year.",
+        "correction": "No substantive correction needed. Optionally expand venue and add DOI.",
+        "limitation": "Do not strengthen the present brief antecedent statement to universal exact retraining parity; source describes highly similar models in abstract."
+      },
+      "final_disposition": "Verified publication DOI used."
+    },
+    {
+      "key": "arcane",
+      "current_bibliography_tex": "H. Yan, X. Li, Z. Guo, H. Li, F. Li, and X. Lin. 2022.\nARCANE: An efficient architecture for exact machine unlearning. IJCAI,\n4006--4013. \\href{https://doi.org/10.24963/ijcai.2022/556}{doi:10.24963/ijcai.2022/556}.",
+      "source_audit": {
+        "key": "arcane",
+        "metadata_status": "correct_but_incomplete",
+        "claim_status": "supported",
+        "metadata": {
+          "authors": [
+            "Haonan Yan",
+            "Xiaoguang Li",
+            "Ziyao Guo",
+            "Hui Li",
+            "Fenghua Li",
+            "Xiaodong Lin"
+          ],
+          "year": 2022,
+          "title": "ARCANE: An Efficient Architecture for Exact Machine Unlearning",
+          "venue": "Proceedings of the Thirty-First International Joint Conference on Artificial Intelligence",
+          "pages": "4006--4013",
+          "doi": "10.24963/ijcai.2022/556"
+        },
+        "sources": [
+          "https://www.ijcai.org/proceedings/2022/556",
+          "https://www.ijcai.org/proceedings/2022/0556.pdf"
+        ],
+        "locators": [
+          "IJCAI proceedings landing page metadata",
+          "PDF p.3 / proceedings p.4008, Section 3.2"
+        ],
+        "finding": "Section 3.2 explicitly gives zero retraining when the requested point lies outside the selected representative subset. Manuscript restricts the comparison to this specific selection contract, correctly.",
+        "required_correction": "Complete the venue with page range 4006--4013 and optionally DOI."
+      },
+      "final_disposition": "Verified proceedings pages and DOI added."
+    },
+    {
+      "key": "judge",
+      "current_bibliography_tex": "L. Zheng, W.-L. Chiang, Y. Sheng, S. Zhuang,\nZ. Wu, Y. Zhuang, Z. Lin, Z. Li, D. Li, E. P. Xing, H. Zhang,\nJ. E. Gonzalez, and I. Stoica. 2023. Judging LLM-as-a-judge with MT-Bench\nand Chatbot Arena. Advances in Neural Information Processing Systems, 36.\n\\href{https://proceedings.nips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html}{Datasets and Benchmarks Track}.",
+      "source_audit": {
+        "key": "judge",
+        "metadata_status": "correct_but_incomplete",
+        "claim_status": "supported",
+        "metadata": {
+          "authors": [
+            "Lianmin Zheng",
+            "Wei-Lin Chiang",
+            "Ying Sheng",
+            "Siyuan Zhuang",
+            "Zhanghao Wu",
+            "Yonghao Zhuang",
+            "Zi Lin",
+            "Zhuohan Li",
+            "Dacheng Li",
+            "Eric P. Xing",
+            "Hao Zhang",
+            "Joseph E. Gonzalez",
+            "Ion Stoica"
+          ],
+          "year": 2023,
+          "title": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
+          "venue": "Advances in Neural Information Processing Systems",
+          "volume": 36,
+          "track": "Datasets and Benchmarks",
+          "doi": "10.52202/075280-2020"
+        },
+        "sources": [
+          "https://proceedings.nips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html",
+          "https://arxiv.org/html/2306.05685v4"
+        ],
+        "locators": [
+          "Official NeurIPS metadata",
+          "Sections 3.3--3.4 and Appendix D.1"
+        ],
+        "finding": "Position/order bias and the value of order-swapping diagnostics are directly supported. The paper studies answer preference judgments, not semantic-duplicate truth, and manuscript correctly makes no transfer-validity claim.",
+        "required_correction": "Expand all 13 authors in bibliography and identify NeurIPS 36; use official proceedings URL."
+      },
+      "final_disposition": "Full 13-author list and official proceedings source supplied."
+    }
+  ],
+  "scope": "V11 preserves all23 bibliography entries and the citation sequence from audited V10. Source delta review confirms shortened related-work summaries preserve claim scope. Earlier primary-source audits are retained; no fresh literature search this illustration edit.",
+  "limits": [
+    "Dominici checked only against primary author/lab metadata; thesis not read and search closed by user.",
+    "Counterfactual paper checked using supplied-text extraction/receipt; pinned code checked against preserved primary copy; not a fresh publisher authenticity claim.",
+    "AskUbuntu release independently rechecked by source reviewer; documentary identity is not a redistribution-rights certification.",
+    "Initial source audits retain pre-edit findings; final_disposition and independently reviewed source delta record their resolution.",
+    "Dominici full text remains unavailable; user-closed search remains nonblocking.",
+    "No exhaustive novelty clearance, proof certification, or submission acceptance guarantee."
+  ],
+  "current_rewrite_review": "diagram_theory_review.json"
+}

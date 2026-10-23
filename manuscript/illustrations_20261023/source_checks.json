@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "source": {
+    "bytes": 94981,
+    "sha256": "ac65927dc17e6fa8ee9b975207e0d6c9a9a7be78701c3a1d0b88c20a261dd982"
+  },
+  "formal_blocks_and_abstract_byte_identical": true,
+  "bibliography_and_citation_sequence_byte_identical": true,
+  "reference_count": 23,
+  "labels": 39,
+  "unresolved_references": [],
+  "official_style_unchanged": true,
+  "body_font_size_and_margins_unchanged": true,
+  "main_pages": 12,
+  "references_start_page": 13,
+  "appendices_start_page": 14,
+  "total_pages": 21,
+  "figures": {
+    "fig:chain": 2,
+    "fig:live": 8
+  },
+  "short_disclosure_on_first_page": true,
+  "fuller_assistance_record_preserved": true,
+  "all_scientific_package_members_byte_identical": true,
+  "protected_files_unchanged": true,
+  "no_new_experiment": true
+}

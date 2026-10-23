@@ -1,3 +1,22 @@
+Latest continuation - 23 October 2026: TMLR V11 illustrations and disclosure
+
+Source SHA256: ac65927dc17e6fa8ee9b975207e0d6c9a9a7be78701c3a1d0b88c20a261dd982.
+Two inline vector figures now explain excluded-record blocking (page2) and
+the8/4/0private-bit contrast (page8). First-page AI footnote is the requested
+one-sentence note; the fuller appendix account remains. Official TMLR policy
+URLs and wording distinctions are recorded in manuscript/illustrations_20261023/ai_policy_check.json.
+12mainpages, references13, appendices14,21total. All23references, formal math,
+scientific results and protocols preserved. Native compile, visual inspection,
+independent source/diagram audit and clean supplement replay passed.
+
+Current public milestone: manuscript/illustrations_20261023.
+Private upload packet: outputs/tmlr_submission_20261023_v11.
+199ZIPmembers,189unchanged copies; only manuscript and bindings change fromV10.
+Author attestations/profile IDs remain unconfirmed. No actual submission.
+Scheduler stays PAUSED. No experiment, SSH, inference or protected-file changes.
+
+HISTORICAL CHECKPOINTS FOLLOW
+
 Latest continuation - 23 October 2026: TMLR final rewrite V10 complete
 
 Current title: Exact Unlearning After Data Curation.

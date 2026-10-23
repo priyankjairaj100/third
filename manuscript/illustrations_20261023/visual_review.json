@@ -1,0 +1,42 @@
+{
+  "source": {
+    "bytes": 94981,
+    "sha256": "ac65927dc17e6fa8ee9b975207e0d6c9a9a7be78701c3a1d0b88c20a261dd982"
+  },
+  "pdf": {
+    "bytes": 185456,
+    "sha256": "d2c6a1ff1cfc513d225cd81a8eb4b66f31276a55024f85d268d4f3f48a3f8b64"
+  },
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "method": "100 dpi page renders and contact sheets; full-size checks of figures, first-page footnote and main-body ending. Vector source inspected separately.",
+  "passed": true,
+  "overlap_or_clipping": false,
+  "overfull_boxes": false,
+  "figure_style": "Inline vector diagrams, consistent teal/blue/gray palette, text and shape cues beyond color.",
+  "main_pages": 12,
+  "references_start_page": 13,
+  "appendices_start_page": 14,
+  "total_pages": 21
+}

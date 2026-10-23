@@ -1,0 +1,36 @@
+TMLR V11 ILLUSTRATIONS AND DISCLOSURE - 23 OCTOBER 2026
+
+Exact Unlearning After Data Curation
+
+Two inline vector illustrations replace the plain chain box and the8/4/0-bit
+table. Figure1 (page2) explains excluded-record blocking and fresh selection.
+Figure2 (page8) contrasts alternative first deletions with identical zero heads
+but different conditional private-information needs. Labels and shape cues
+complement the color palette. Nearby repetition was shortened to preserve12
+main pages. References begin13, appendices14; total21. The official TMLR style,
+body font size and margins are unchanged. All23 references remain unchanged.
+
+The first-page footnote now reads exactly:
+OpenAI Codex assisted with prose writing.
+The appendix retains the fuller account of writing, code/figure preparation,
+source checking and internal review. Current TMLR FAQ explicitly requires
+first-page footnote placement and prescribes no fixed wording. Its human-sourced
+ideas/results expectation differs from the more general assistance wording in
+the editorial policy. No intellectual-provenance attestation is inferred.
+See ai_policy_check.json for the official policy URLs.
+
+Native compilation,21-page visual review, independent diagram/scientific-delta
+review and independent clean package replay passed. The ZIP has199members,
+including189unchanged source copies. Only manuscript.tex,SOURCE_MAP.json and
+MANIFEST.json differ fromV10; scientific code/evidence/checker bytes are identical.
+Checks replay supplied public aggregates, not unavailable private inference.
+
+Upload artifacts are the anonymous PDF and third_tmlr_supplement_v11.zip in
+the private packet's upload directory. Development reports, author forms and
+third-party PDFs are not upload artifacts. The source in the editor is current.
+
+Author attestations and active OpenReview IDs remain unconfirmed. Earlier
+scientific limits and failed calibrations remain unchanged. No submission,
+experiment, SSH access, retuning, annotation or scheduler restart occurred.
+Protected files and original unmet human gates remain intact. Scheduler PAUSED.
+This edit does not certify editorial acceptance or final author declarations.

@@ -1,0 +1,112 @@
+{
+  "review": "independent_diagram_caption_and_scientific_delta_review",
+  "created_at_utc": "2026-10-23T07:54:40.672167+00:00",
+  "status": "pass_for_source_math_captions_and_preservation",
+  "source_path": "REPOSITORY_ROOT/manuscript/third_working_draft.tex",
+  "source_sha256": "ac65927dc17e6fa8ee9b975207e0d6c9a9a7be78701c3a1d0b88c20a261dd982",
+  "baseline_path": "work/illustrations-20261023/source_before.tex",
+  "baseline_sha256": "be256390853c2eb1ca1f23db199b01e963f4dc582f174fb790de5f89420a6722",
+  "actionable_findings": [],
+  "figures": [
+    {
+      "label": "fig:chain",
+      "source_line": 324,
+      "verdict": "pass",
+      "checks": [
+        "Directed a-to-b and b-to-c arrows explicitly denote blocking by earlier raw neighbors, not directed cosine similarity. No a-c edge is drawn or claimed.",
+        "Before state selects onlya. b andc are excluded, yetb still blocksc. This is raw-neighbor suppression, not greedy retained-neighbor suppression.",
+        "After deletingb, survivinga andc are selected andb is visibly deleted. No residual blocker edge is shown.",
+        "Text correctly contrasts old-training-set update{a} with fresh selection{a,c}. Caption says model can change, not that every learner must change.",
+        "The diagram is an algebraic illustration; no new natural-language record or empirical model measurement is introduced."
+      ]
+    },
+    {
+      "label": "fig:live",
+      "source_line": 816,
+      "verdict": "pass",
+      "checks": [
+        "Three cards are explicitly alternative first deletions from the same originalK2 state, each with one fresh deletion left and current modelzero.",
+        "Deleting shared blockers retains both eligible four-sign words:8privatebits. Deletingp1 retains onlyword1:4bits. Deletinga retains neither:0bits.",
+        "Reachable words are distinguished from selected candidates. No claim that the selected set is empty after anchor deletion.",
+        "Four filled squares per retained word and crossed unreachable words encode the replaced8/4/0 table exactly. No specific private sign pattern is invented.",
+        "Caption states conditional minimum private information and separates public metadata/physical overhead. No total-byte optimum, physical erasure or natural-data minimum is claimed.",
+        "The complete{s,p1} case remains in surrounding text:4signs are still required for the current head at remainingbudgetzero."
+      ]
+    }
+  ],
+  "scientific_preservation": {
+    "formal_blocks": {
+      "equation": {
+        "before_count": 9,
+        "after_count": 9,
+        "ordered_blocks_byte_identical": true
+      },
+      "align": {
+        "before_count": 2,
+        "after_count": 2,
+        "ordered_blocks_byte_identical": true
+      },
+      "align*": {
+        "before_count": 1,
+        "after_count": 1,
+        "ordered_blocks_byte_identical": true
+      },
+      "theorem": {
+        "before_count": 2,
+        "after_count": 2,
+        "ordered_blocks_byte_identical": true
+      },
+      "corollary": {
+        "before_count": 1,
+        "after_count": 1,
+        "ordered_blocks_byte_identical": true
+      },
+      "proof": {
+        "before_count": 3,
+        "after_count": 3,
+        "ordered_blocks_byte_identical": true
+      },
+      "display_math": {
+        "before_count": 19,
+        "after_count": 19,
+        "ordered_blocks_byte_identical": true
+      }
+    },
+    "bibliography_byte_identical": true,
+    "citation_sequence_identical": true,
+    "embedded_style_byte_identical": true,
+    "old_table_data_preserved_in_figure": [
+      8,
+      4,
+      0
+    ],
+    "crossreference_migration": "tab:live removed; fig:live defined once and referenced correctly",
+    "labels": 39,
+    "unresolved_references": [],
+    "dropped_scientific_content": false,
+    "reduced_prose": "Chain details and8/4/0 explanation are carried by the diagrams/captions; redundant target/blocker prose is removed without changing target definitions, assumptions, outcomes or gates.",
+    "other_changes": "Adds TikZ and six visual colors, shortens the first-page AI prose notice and includes figure preparation in the existing fuller appendix assistance disclosure."
+  },
+  "recommendations": [
+    "No further mathematical or caption changes needed.",
+    "Perform rendered visual inspection at actual page size, especially lower chain annotation and four-cell strips. Source semantics review does not replace pixel inspection.",
+    "Preserve explicit alternative-branch, zero-model, remaining-deletion, per-candidate four-sign and private-information wording in later layout edits."
+  ],
+  "scope_limits": [
+    "Read-only manuscript inspection plus private report and audit script writes. No experiments, inference, SSH, scheduler or scientific-data changes.",
+    "Parent reports native compilation success; no independent compiler/rendered-pagination certification in this source review.",
+    "No general submission-readiness or editorial-acceptance guarantee."
+  ],
+  "final_one_paragraph_addendum": {
+    "previous_reviewed_source_sha256": "226b65b0444d80f5f4bbbc3c8bbf5df8d3b4e43262b801bedba74de7683d571a",
+    "current_source_sha256": "ac65927dc17e6fa8ee9b975207e0d6c9a9a7be78701c3a1d0b88c20a261dd982",
+    "reconstruction_proves_only_one_paragraph_changed": true,
+    "before": "\\paragraph{Curation and complete-pipeline targets.}\n\\citet{cao} use summation-form learning to update feature selection and\nmodels after deletion. \\citet{ivmunlearning} casts unlearning as view\nmaintenance, including preprocessing in the maintained dataflow.\nDominici's thesis concerns data preparation pipelines and feature stores\n\\citep{dominici}; its metadata and research description were available\nfor comparison, while its full text was not. These works motivate treating\ndata preparation as part of the target rather than an external fixed input.\nOur result fixes record-level suppression and characterizes the exact\nstatistic map that survives a decreasing deletion budget.\n\n",
+    "after": "\\paragraph{Curation and complete-pipeline targets.}\n\\citet{cao} use summation-form learning to update feature selection and\nmodels after deletion. \\citet{ivmunlearning} casts unlearning as view\nmaintenance, including preprocessing in the maintained dataflow.\nDominici's thesis concerns data preparation pipelines and feature stores\n\\citep{dominici}; its metadata and research description were available\nfor comparison, while its full text was not. Our result fixes record-level\nsuppression and characterizes its exact statistic map under a decreasing\ndeletion budget.\n\n",
+    "finding": "pass: preserves full-text access limitation and scoped exact-statistic-map/decreasing-budget statement; removes redundant broad motivation only."
+  },
+  "preserved_previous_review": [
+    "diagram_theory_review_226b65b0.json",
+    "diagram_theory_review_226b65b0.txt"
+  ]
+}

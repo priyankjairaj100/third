@@ -6,14 +6,14 @@ Research workspace for **counterfactual repair after semantic data curation**, t
 
 ## Current submission preparation - 23 October 2026
 
-The TMLR V10 final rewrite presents the retention contract for exact repair after
-curation in12 main pages. See [the rewrite checkpoint](manuscript/final_rewrite_20261023/README.txt),
-[the submission checklist](manuscript/final_rewrite_20261023/SUBMISSION_CHECKLIST.txt)
-and [release status](manuscript/RELEASE_BUILD_STATUS.json). Theory, empirical fidelity,
-citation, native compile, visual and package checks pass. Author attestations and
-profile IDs remain unconfirmed; no submission occurred. Both model calibrations
-failed, the original effect study remains unexecuted, and the scheduler stays paused.
-Earlier sections below are historical; RESUME_CONTEXT.md gives current evidence.
+TMLR V11 adds two explanatory vector figures and a short first-page AI disclosure
+to the12-page main body. See [the current checkpoint](manuscript/illustrations_20261023/README.txt),
+[submission checklist](manuscript/illustrations_20261023/SUBMISSION_CHECKLIST.txt)
+and [release status](manuscript/RELEASE_BUILD_STATUS.json). Source, diagram, native
+compile, visual and package checks pass. Scientific results and all23references
+remain intact. Author attestations/profile IDs remain unconfirmed; no submission
+occurred. Both calibrations failed, the effect study remains unexecuted, and the
+scheduler is paused. RESUME_CONTEXT.md retains the complete checkpoint history.
 
 ## Local empirical execution — 5 October 2026
 

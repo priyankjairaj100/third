@@ -1,0 +1,11 @@
+PASS: independent V11 manuscript-only supplement review.
+Archive: 9c5a9e180c3e5cf2b26cb0cd72abdabe814e76f23e3022aaedfc893947cd2a50 (615959 bytes).
+Source: ac65927dc17e6fa8ee9b975207e0d6c9a9a7be78701c3a1d0b88c20a261dd982 (94981 bytes).
+199 members; 196 byte-identical to V10; 189 unchanged-copy entries; 3 derived entries preserved.
+Changed members: manuscript.tex, SOURCE_MAP.json, MANIFEST.json.
+SOURCE_MAP changes: current_manuscript and previous_flat_release only.
+All manifests, exact member bindings, safe paths, anonymous author settings and known direct identifier/credential screens passed.
+One fresh Python 3.12 -I -B check_all.py replay passed; extraction unchanged afterward.
+Prior negative controls and primary-origin traversal were not repeated; checker and evidence bytes are unchanged.
+No scientific source import/execution, models, experiments, network requests or private-data replay. No source/repository/archive edits.
+Scope limits: aggregate arithmetic and package identity only; anonymity is not guaranteed against external source matching.

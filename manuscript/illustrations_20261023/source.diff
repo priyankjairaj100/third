@@ -1,0 +1,267 @@
+--- v10/third_working_draft.tex
++++ v11/third_working_draft.tex
+@@ -212,6 +212,15 @@
+ \usepackage{amsmath,amssymb,amsthm,microtype}
+ \usepackage[hidelinks]{hyperref}
+ \usepackage{url}
++\usepackage{tikz}
++\usetikzlibrary{arrows.meta}
++% Vector illustrations use redundant text/shape cues as well as color.
++\definecolor{figink}{HTML}{243549}
++\definecolor{figteal}{HTML}{137C80}
++\definecolor{figblue}{HTML}{416CB0}
++\definecolor{figrust}{HTML}{B65F3F}
++\definecolor{figgray}{HTML}{7B8490}
++\definecolor{figpale}{HTML}{F3F6F9}
+ \newtheorem{theorem}{Theorem}
+ \newtheorem{proposition}[theorem]{Proposition}
+ \newtheorem{corollary}[theorem]{Corollary}
+@@ -222,7 +231,7 @@
+ \newcommand{\cur}{\mathcal C}
+ \newcommand{\bits}{\mathsf B}
+ \setlength{\emergencystretch}{1em}
+-\title{Exact Unlearning After Data Curation\thanks{OpenAI Codex and other AI tools assisted manuscript drafting, code preparation, source checking, and internal review. Details and limits appear in Appendix~\ref{app:repro}.}}
++\title{Exact Unlearning After Data Curation\thanks{OpenAI Codex assisted with prose writing.}}
+ \author{Anonymous authors}
+ \date{}
+ \hypersetup{pdfauthor={},pdftitle={Exact Unlearning After Data Curation}}
+@@ -266,24 +275,52 @@
+ representations and removes examples that are too similar to earlier
+ ones \citep{semdedup}. Consider the three-record illustration in
+ Figure~\ref{fig:chain}. Record $a$ precedes $b$, which precedes $c$.
+-Similarity connects $a$ to $b$ and $b$ to $c$, but not $a$ to $c$.
+ Under the rule studied here, every earlier raw neighbor blocks a record,
+-even when that neighbor is itself excluded. Initially only $a$ is selected.
+-Deleting the excluded record $b$ then admits $c$. The selected set changes
+-although the deleted record was absent from the original model fit.
++even when that neighbor is itself excluded. The illustration shows why
++this makes an excluded record relevant to a later model fit.
+ 
+ \begin{figure}[t]
+ \centering
+-\setlength{\fboxsep}{7pt}
+-\fbox{\begin{minipage}{.86\linewidth}\centering
+-\textbf{One raw collection, two deletion targets}\\[5pt]
+-Priority: $a\prec b\prec c$ \qquad Similarity: $a\!-\!b\!-\!c$\\[5pt]
+-Initially selected: $\{a\}$ \qquad Request: delete $b$\\[5pt]
+-Update the old selection: $\{a\}$ \qquad Rerun selection: $\{a,c\}$
+-\end{minipage}}
+-\caption{Illustration of ordered raw-neighbor suppression. There is no
+-$a,c$ edge. An excluded record can still determine whether another record
+-enters training. The two resulting training sets can yield different models.}
++\begin{tikzpicture}[x=1cm,y=1cm,
++ font=\sffamily\fontsize{9}{11}\selectfont,text=figink,
++ record/.style={rounded corners=3pt,minimum width=.86cm,minimum height=.72cm,
++   draw=figgray!45,fill=white,line width=.65pt,font=\sffamily\bfseries\normalsize},
++ chosen/.style={record,draw=figteal,fill=figteal!10,text=figteal},
++ blocked/.style={record,draw=figgray!45,fill=white,text=figgray},
++ link/.style={-{Stealth[length=4pt,width=4pt]},line width=.85pt,draw=figgray!70}]
++\path[use as bounding box] (0,0) rectangle (15.8,3.52);
++\fill[figpale,rounded corners=5pt] (0,.64) rectangle (6.32,3.52);
++\fill[figteal!5,rounded corners=5pt] (9.48,.64) rectangle (15.8,3.52);
++\node[anchor=west,font=\sffamily\bfseries\small] at (.28,3.14) {Before deletion};
++\node[anchor=east,text=figgray] at (6.04,3.14) {Priority: $a\prec b\prec c$};
++\node[chosen] (a0) at (1.16,2.24) {$a$};
++\node[blocked] (b0) at (3.16,2.24) {$b$};
++\node[blocked] (c0) at (5.16,2.24) {$c$};
++\draw[link] (a0) -- node[above,font=\sffamily\scriptsize] {blocks} (b0);
++\draw[link] (b0) -- node[above,font=\sffamily\scriptsize] {blocks} (c0);
++\node[text=figteal] at (1.16,1.58) {selected};
++\node[text=figgray] at (3.16,1.58) {excluded};
++\node[text=figgray] at (5.16,1.58) {excluded};
++\node[font=\sffamily\bfseries\small] at (3.16,.98) {Training set: $\{a\}$};
++\draw[-{Stealth[length=6pt,width=6pt]},line width=1.2pt,figrust]
++ (6.63,2.24) -- (9.16,2.24);
++\node[align=center,text=figrust,font=\sffamily\bfseries\small] at (7.9,2.9) {Delete $b$};
++\node[align=center,text=figgray,font=\sffamily\scriptsize] at (7.9,1.54) {It never entered\\the original fit.};
++\node[anchor=west,font=\sffamily\bfseries\small] at (9.76,3.14) {Select again from survivors};
++\node[chosen] (a1) at (10.64,2.24) {$a$};
++\node[record,draw=figrust!60,dashed,text=figrust,fill=white] (b1) at (12.64,2.24) {$b$};
++\draw[figrust,line width=.85pt] (12.32,1.99) -- (12.96,2.49);
++\node[chosen] (c1) at (14.64,2.24) {$c$};
++\node[text=figteal] at (10.64,1.58) {selected};
++\node[text=figrust] at (12.64,1.58) {deleted};
++\node[text=figteal,font=\sffamily\bfseries\small] at (14.64,1.58) {newly selected};
++\node[font=\sffamily\bfseries\small] at (12.64,.98) {Training set: $\{a,c\}$};
++\draw[figgray!30,line width=.5pt] (.28,.32) -- (15.52,.32);
++\node[font=\sffamily\small] at (7.9,-.02) {Updating only the old training set would keep $\{a\}$ and miss $c$.};
++\end{tikzpicture}
++\caption{An excluded record can still control selection. Arrows show blocking
++by earlier raw neighbors, including excluded neighbors. There is no $a,c$
++edge. Deleting $b$ changes the training set and can change the fitted model.}
+ \label{fig:chain}
+ \end{figure}
+ 
+@@ -295,9 +332,7 @@
+ It means selecting from the surviving raw records and then training again.
+ Updating the original selected set instead gives
+ $A(\cur(\mathcal D)\minus F)$. These expressions place deletion on
+-different sides of selection. Figure~\ref{fig:chain} explains why this
+-order matters. An exact service must choose its target before deciding
+-which records or summaries to retain.
++different sides of selection, so they define different retention targets.
+ 
+ \paragraph{The practical question: what must remain recoverable?}
+ Keeping the entire raw collection allows fresh reconstruction after every
+@@ -373,7 +408,6 @@
+ A record must survive, and every one of its blockers must be gone.
+ In Figure~\ref{fig:chain}, the blocker sets are
+ $B(a)=\varnothing$, $B(b)=\{a\}$, and $B(c)=\{b\}$.
+-The middle record blocks the last one despite being excluded itself.
+ 
+ This is \emph{raw-neighbor suppression}. Greedy selection against only
+ previously retained neighbors is a different rule: it would select both
+@@ -737,33 +771,54 @@
+ Take one common blocker ($b=1$), two candidates ($m=2$), and four private
+ signs per candidate ($D=4$). Use $k=4$ with public signatures
+ $(1,1,1,1)/2$ and $(1,1,-1,-1)/2$, so the full feature dimension is ten.
+-The original budget is $K=2$. Table~\ref{tab:live} compares admissible
+-first requests. Every current head is still zero, but the number of
+-private bits needed for the remaining deletion is different.
+-
+-\begin{table}[t]
++The original budget is $K=2$. Figure~\ref{fig:live} compares three
++alternative first requests and the private words they leave reachable.
++
++\begin{figure}[t]
+ \centering
+-\small
+-\caption{Algebraic instance with two four-sign candidates and one shared
+-blocker $s$. After one deletion, one deletion remains. Equal current models
+-do not imply equal future information requirements.}
+-\label{tab:live}
+-\begin{tabular}{llll}
+-\hline
+-First deletion & Still reachable candidates & Current head & Private bits\\
+-\hline
+-$s$ & Both candidates & Zero & 8\\
+-$p_1$ & Candidate 1 only & Zero & 4\\
+-$a$ & Neither candidate & Zero & 0\\
+-\hline
+-\end{tabular}
+-\end{table}
+-
+-Deleting $s$ leaves each candidate one individual blocker, so either can
+-still be exposed. Deleting $p_1$ leaves only candidate 1 reachable: the
+-other candidate still has two blockers. Deleting $a$ leaves both
+-candidates with two blockers and only one deletion available. No private
+-word is then needed. If the complete request is $\{s,p_1\}$, candidate 1
++\begin{tikzpicture}[x=1cm,y=1cm,
++ font=\sffamily\fontsize{9}{11}\selectfont,text=figink]
++\path[use as bounding box] (0,0) rectangle (15.8,4.1);
++\node[font=\sffamily\bfseries\small] at (7.9,3.86) {One starting state. Three alternative first deletions.};
++\node[text=figgray] at (7.9,3.46) {Each leaves the current model at zero and one deletion still available.};
++\foreach \x/\request/\count/\tone in {0/s/8/figteal,5.4/p_1/4/figblue,10.8/a/0/figgray}{
++  \fill[\tone!5,rounded corners=5pt] (\x,0) rectangle +(5,3.06);
++  \draw[\tone,line width=2pt] (\x+.2,3.06) -- (\x+4.8,3.06);
++  \node[anchor=west,font=\sffamily\bfseries\small] at (\x+.27,2.66) {Delete $\request$};
++  \node[text=\tone,font=\sffamily\bfseries\Large,anchor=east] at (\x+4.7,2.66) {\count};
++  \node[text=\tone,anchor=east,font=\sffamily\scriptsize] at (\x+4.7,2.24) {private bits};
++  \node[anchor=west] at (\x+.27,1.64) {Candidate 1};
++  \node[anchor=west] at (\x+.27,.93) {Candidate 2};
++}
++% Filled square = one retained private sign bit; crossed word = unreachable.
++\foreach \x/\y/\tone in {0/1.64/figteal,0/.93/figteal,5.4/1.64/figblue}{
++  \foreach \j in {0,1,2,3}{
++    \filldraw[fill=\tone!17,draw=\tone,line width=.55pt,rounded corners=1pt]
++      (\x+2.55+\j*.49,\y-.18) rectangle +(.36,.36);
++  }
++}
++\foreach \x/\y in {5.4/.93,10.8/1.64,10.8/.93}{
++  \foreach \j in {0,1,2,3}{
++    \draw[draw=figgray!35,fill=white,rounded corners=1pt,line width=.5pt]
++      (\x+2.55+\j*.49,\y-.18) rectangle +(.36,.36);
++  }
++  \draw[figgray,line width=.7pt] (\x+2.49,\y-.25) -- (\x+4.44,\y+.25);
++}
++\node[text=figteal,font=\sffamily\bfseries\small] at (2.5,.32) {Both words remain reachable};
++\node[text=figblue,font=\sffamily\bfseries\small] at (7.9,.32) {Only word 1 remains reachable};
++\node[text=figgray,font=\sffamily\bfseries\small] at (13.3,.32) {Neither word remains reachable};
++\end{tikzpicture}
++\caption{Identical current models, different retention needs. In this
++constructed $K=2$ instance, each candidate has four private sign bits, shown as
++filled squares. Crossed words cannot affect any permitted continuation. Counts give
++the conditional minimum private information and exclude public metadata and
++physical overhead.}
++\label{fig:live}
++\end{figure}
++
++The shared blocker $s$ and individual blocker $p_1$ open different
++continuations. Deleting the anchor $a$ uses budget without removing either
++candidate's blockers. If the complete request is $\{s,p_1\}$, candidate 1
+ is already selected. Its four signs remain necessary even at remaining
+ budget zero, because the current head must still be recoverable.
+ 
+@@ -819,9 +874,7 @@
+ and explains the distinction between parameter error and prediction risk.
+ 
+ \section{What the contract means for a training service}\label{sec:contracts}
+-The target and future budget determine what the service must be able to
+-reconstruct. How it stores that information determines its implementation
+-cost. These are separate design decisions.
++The service must choose what it can reconstruct, then how to store it.
+ 
+ \subsection{Retain payloads and dependencies for different purposes}
+ Deleting an excluded record involves both payloads and dependencies.
+@@ -1041,10 +1094,9 @@
+ maintenance, including preprocessing in the maintained dataflow.
+ Dominici's thesis concerns data preparation pipelines and feature stores
+ \citep{dominici}; its metadata and research description were available
+-for comparison, while its full text was not. These works motivate treating
+-data preparation as part of the target rather than an external fixed input.
+-Our result fixes record-level suppression and characterizes the exact
+-statistic map that survives a decreasing deletion budget.
++for comparison, while its full text was not. Our result fixes record-level
++suppression and characterizes its exact statistic map under a decreasing
++deletion budget.
+ 
+ SemDeDup studies embedding-space redundancy \citep{semdedup}; its released
+ suppression computation motivates our operator \citep{semcode}. ARCANE
+@@ -1059,11 +1111,9 @@
+ Polynomial provenance \citep{green}, provenance for aggregation and
+ difference \citep{aggregate}, DBSP's incremental query framework
+ \citep{dbsp}, and provenance-based regression updates \citep{priu}
+-provide the algebraic foundations. Our signed expansion associates each
+-record with its activation and deletion conditions. Its finite-degree
+-truncation remains valid because every substitution reduces the admissible
+-future degree by the same amount. This yields equality with a designated
+-fresh coefficient map, including coefficients for later requests.
++provide the algebraic foundations. Our signed expansion couples substitution
++with a decreasing degree cutoff. It preserves the fresh coefficient map,
++including coefficients for future requests.
+ 
+ \paragraph{Continuing state and storage.}
+ \citet{ginart} include metadata for subsequent deletions in the object
+@@ -1090,15 +1140,12 @@
+ records the precise comparison of these guarantees.
+ 
+ \section{Conclusion}
+-Exact repair after curation is a question about future training sets.
+-The original deletion budget specifies which excluded records can still
+-enter, and the remaining budget specifies which information may be
+-discarded from the retained state. The coefficient construction makes
+-this contract executable for additive statistics. The finite-feature
+-family shows why the same contract can require information that the
+-current model does not reveal. A practical deletion service should make
+-its curation target, cumulative horizon, and retained-data access explicit
+-before discarding the payloads needed to honor them.
++For exact repair after curation, the cumulative deletion budget determines
++which excluded records can still matter. We turn this retention contract
++into a repairable statistic summary. The finite-feature family shows that
++it can require information absent from the current model. A service should
++specify its curation target, cumulative horizon, and retained-data access
++before discarding payloads.
+ 
+ \begin{thebibliography}{99}
+ \bibitem[Abbas et~al.(2023)]{semdedup} A. Abbas, K. Tirumala, D. Simig, S. Ganguli, and A. S.
+@@ -1526,8 +1573,8 @@
+ comparison remains incomplete; absence of the text does not establish
+ absence of a corresponding result.
+ \paragraph{AI assistance.}
+-AI tools assisted manuscript drafting, code preparation, source checking, and
+-internal review. Those internal checks are not external peer review, formal
++AI tools assisted manuscript drafting, code and figure preparation, source
++checking, and internal review. Those internal checks are not external peer review, formal
+ verification, or authentication of private observations. The two annotation
+ models and their distinct empirical role are specified in
+ Section~\ref{sec:judges}. No AI system is listed as an author.
