@@ -1,0 +1,451 @@
+--- V8
++++ V9
+@@ -236,9 +236,10 @@
+ document blocks it. We give a finite-horizon summary of additive training
+ statistics whose exact update equals reconstruction after deletion, with the
+ remaining deletion budget reduced accordingly. We also construct stored FP32
+-features for which increasing that budget by one changes the minimum private
+-information needed for exact ridge recovery from zero to $mD$ bits. The graph
+-is stable under a specified FP64 cosine scorer, and a sequential codec attains
++features for which one additional allowed deletion changes the private
++information needed for exact rational ridge recovery from zero to $mD$ bits:
++$m$ excluded candidates each carry $D$ private feature signs. The graph is
++stable under a specified FP64 cosine scorer, and a sequential codec attains
+ the conditional private-information minimum on this family. These are scoped
+ algebraic and information results. An AskUbuntu calibration study uses two
+ local LLMs and no human annotation. Both completed calibration versions failed
+@@ -260,8 +261,10 @@
+ examples judged too similar to earlier examples, often before training begins
+ \citep{semdedup}. A later deletion request acts on the raw data collection.
+ Repeating the same curator after that deletion can produce a different
+-training set, including documents that were never used by the original model.
+-An unlearning procedure must specify whether it promises to reproduce that
++training set, including documents not used to fit the original downstream
++learner. This is the sense of ``never trained'' in our title: the records
++still affect curation, and we hold the pretrained representation fixed.
++An unlearning procedure must specify whether it promises to reproduce the
+ new training set and learner.
+ 
+ Let $D$ be a raw corpus, $F$ the records to forget, $\cur$ a curator, and
+@@ -287,43 +290,44 @@
+ Delete $b$: $\cur(D\minus\{b\})=\{a,c\}$
+ \end{minipage}}
+ \caption{An excluded record can block another record. Removing it changes
+-the correct training target although it never trained the original model.
++the correct training target although it was excluded from downstream fitting.
+ There is no $a,c$ edge.}
+ \label{fig:chain}
+ \end{figure}
+ 
+ This behavior raises two connected questions. What state supports exact
+ repair without rereading the surviving raw corpus? How much information can
+-be necessary about examples that remain excluded today but could enter after
+-future deletions? The allowed number of deletions matters to both questions.
+-With a limited cumulative budget, some examples can never lose all their
+-blockers, so their private payloads need not be retained for this target.
++future deletions require about examples excluded today? For this curator,
++the remaining deletion budget determines which records can still enter
++training. Payloads that cannot become eligible can be discarded permanently
++within that budget. The construction below shows the converse possibility:
++one additional allowed deletion can make every private sign of the excluded
++candidates necessary for exact model recovery.
+ 
+ We make three scoped contributions. First, we specialize signed Boolean
+-provenance to the ordered curator and derive a summary that repairs both
+-training statistics and its own designated algebraic state. Second, we give
+-a finite-format construction linking excluded feature bits to exact ridge
+-heads, including a sharp change in required private information when the
+-deletion horizon increases by one. Third, we report two completed, negative
+-calibrations for a fully LLM natural-text study. Neither admitted a threshold
+-under its frozen model-agreement criterion. The downstream comparison of
++provenance to obtain an exact summary of additive training statistics whose
++updated state equals reconstruction at the remaining deletion horizon.
++Second, we construct finite-format features shared by the curator and ridge
++learner for which that horizon determines an exact private-information
++minimum, attained by a sequential codec. Third, we report two negative
++calibrations for a fully LLM natural-text study. Neither selected a threshold
++under its frozen model-defined criterion, so the downstream comparison of
+ target changes, utility, and complete system cost remains unexecuted.
+-A separately declared structural follow-up characterizes all 51 score graphs
+-on a fixed natural development panel without selecting a cutoff.
+-
+-Neither deletion-induced additions nor provenance maintenance is a new
+-general principle. Nonmonotone database queries already exhibit the former,
+-and provenance and incremental view maintenance address the latter
+-\citep{green,aggregate,dbsp,priu,ivmunlearning}. Our claim concerns the stated curator,
+-remaining-horizon repair contract, and shared-feature learner construction.
+-The results are useful when specifying an unlearning service: its target,
+-remaining deletion budget, and access to excluded data determine what it must
+-retain. They do not establish that a polynomial summary is the cheapest
+-implementation. In particular, a compact eligible-payload baseline can use
+-less total memory. The negative calibration also shows why a theoretical
+-repair guarantee should not be presented as validated semantic deduplication.
+-Whether natural-text target changes justify the complete repair cost remains
+-an open empirical question.
++Separate development diagnostics characterize all 51 score graphs and check
++exact membership repair without selecting a cutoff.
++
++Deletion-induced additions and provenance maintenance are established in
++nonmonotone queries and incremental computation
++\citep{green,aggregate,dbsp,priu,ivmunlearning}. Summary-based unlearning
++across feature selection and model fitting also precedes this work
++\citep{cao}. So do definitions that include metadata for subsequent deletions
++and distinguish internal state from one released output \citep{ginart,cohencontrol}.
++Our results specify one ordered curator, its remaining-horizon coefficient
++map, and a shared-feature ridge construction. They make the target, allowed
++future requests, and access to excluded data part of an explicit storage
++contract. They do not establish a practical memory advantage: a compact
++eligible-payload baseline can use less total memory. Whether natural-text
++target changes justify the complete repair cost remains unresolved.
+ 
+ \section{Target, curator, and access contract}\label{sec:setup}
+ Each record $v$ has a stable identifier, a fixed feature row $z_v$, and, when
+@@ -422,18 +426,13 @@
+ also does not imply bitwise equality of floating-point additions.
+ 
+ \paragraph{Indexed implementation.}
+-The P-I method stores nonzero coefficient keys, inverse incidences from
+-identifiers to keys, and degree buckets. Deleting $u$ touches only incident
+-keys, removes $u$ from each key, combines collisions, removes zero values,
+-and drops keys above the new horizon. The low-level integer-ID kernel
+-rejects repeated, already deleted, invalid, and over-budget IDs before
+-mutation. The frozen Phase 5/6 empirical service first deduplicates IDs and
+-removes already deleted IDs, so retries are no-ops, including after budget
+-exhaustion. It rejects invalid IDs and requests with too many fresh IDs.
+-The earlier mathematical reference also treats retries as no-ops.
+-These interfaces apply the same substitution to valid fresh deletions.
+-The reference P-S method scans all keys. Both implement
+-Equation~\eqref{eq:update} under the same numerical contract.
++The indexed method P-I stores nonzero coefficient keys, inverse incidences
++from identifiers to keys, and degree buckets. Deleting $u$ touches only
++incident keys, removes $u$ from each key, combines collisions, removes zero
++values, and drops keys above the new horizon. The scanning method P-S
++visits all keys. Both implement Equation~\eqref{eq:update} under the same
++numerical contract. Appendix~\ref{app:work} specifies request validation,
++retry behavior, and the implementation costs beyond substitution.
+ 
+ For initial key count $M_0$, total key length $L_0$, statistic dimension
+ $s$, and $Q$ supplied integer request IDs, define
+@@ -519,6 +518,8 @@
+ Initially only the zero-label anchor is selected. At budget $b$, no
+ candidate can lose its $b+1$ blockers, and every target head is zero.
+ At budget $K=b+1$, the request $F_i=S\cup\{p_i\}$ selects $a,w_i$.
++Each candidate has exactly $K$ blockers, so any allowed request selecting
++it must equal $F_i$; no allowed request selects two candidates.
+ For exact rational ridge with rational $\lambda>0$, define
+ \[
+                 t=16641/16384+2\lambda.
+@@ -611,9 +612,8 @@
+ repair method has useful total cost. The calibration uses existing
+ AskUbuntu records, native tag labels, and two local model raters. Pair
+ annotation and adjudication are entirely model-based; no human pair
+-annotations or pair reviews were collected. Earlier human-gated protocol
+-requirements remain unmet; this branch does not relabel model judgments
+-as human evidence or inherit acceptance of the historical primary study.
++annotations or pair reviews were collected. The original human-validation
++requirements remain unmet.
+ 
+ \subsection{Data and task configuration}
+ The prepared population contains 140,250 question records, split into
+@@ -625,15 +625,22 @@
+ surviving records after the fixed export and filtering rules, not every
+ historical, deleted, or private contribution.
+ 
+-The corrected April 2024 export \citep{askubuntu} is supported by a
+-documentary provenance chain and checksummed acquisition. This is not publisher cryptographic
+-attestation. The active development acceptance is separate from earlier
+-source gates. Raw text and account-level records remain private; the
+-public return reports contain bindings and aggregate counts.
++The corpus uses the corrected April 2024 export \citep{askubuntu}, with
++checksummed acquisition and documented provenance. Raw text and
++account-level records remain private; released evidence contains hashes
++and aggregate counts. Appendix~\ref{app:repro} describes provenance and
++replay limits.
+ 
+ The assembled E5 cache contains 140,250 rows of 768 FP32 coordinates,
+ produced and replayed in 32 CPU shards. E5 provides fixed pretrained text
+-representations \citep{e5}. The native prediction task uses 20 tags and
++representations \citep{e5}. We encode complete documents in consecutive
++256-content-token chunks, prepend \texttt{query:} to each chunk, and
++normalize its attended-token mean. A content-length-weighted average of
++these chunk vectors is normalized again to form the stored row.
++Appendix~\ref{app:embedding} specifies tokenization, precision, padding,
++and aggregation order. This custom full-document recipe can affect the
++absolute cosine distribution; it is not first-window truncation.
++The native prediction task uses 20 tags and
+ retains questions with all-zero target vectors. Five source-grouped
+ calibration folds selected $\lambda=10^{-5}$ from the six frozen values
+ $10^{-6},10^{-5},\ldots,10^{-1}$; exact ties select larger $\lambda$.
+@@ -650,9 +657,9 @@
+ later evaluation, even if a small pilot does not use all its rows.
+ The development targets of 1,000, 2,500, and 5,000 training rows include
+ the entire boundary source and are selected in a frozen order after the
+-guard. Current pre-guard counts are upper bounds. The original 100,000
+-and 200,000 panels are infeasible on this preparation; unavailable cells
+-must remain visible rather than be filled from held-out data.
++guard. These counts are upper bounds before leakage filtering; the
++conditional downstream design and infeasible panels are documented in
++Appendix~\ref{sec:design}.
+ 
+ \subsection{Model-defined threshold calibration}\label{sec:judges}
+ The raters are pinned Qwen2.5-7B-Instruct \citep{qwen} and
+@@ -664,7 +671,8 @@
+ 32,768-token total budget. Truncation, summarization, format repairs,
+ semantic retries, and fallback attention are disallowed. Source text is
+ untrusted input; the judges have no tools or retrieval. The supplement
+-provides the exact system prompt, pair template, and response schema.
++provides the exact system instructions and response schemas, the rendering
++specification, and the renderer and constrained-inference kernels.
+ 
+ A pair is positive only if both valid outputs label it either an exact
+ copy or substantially the same meaning. Other labels, disagreements,
+@@ -714,10 +722,9 @@
+ Version 4 is a separately versioned follow-up after that negative result;
+ it is not independent confirmation or a rescue of version 3. Both models
+ completed all 396 calls. Qwen produced 391 valid responses and five invalid
+-JSON responses; Mistral produced 396 valid responses. Separate exact-byte
+-audits verified prompt, token, and grammar identities without repeating
+-model calls. The prior Qwen audit's newline-normalization failure and all
+-original outputs remain preserved.
++JSON responses; Mistral produced 396 valid responses. The supplement
++provides the exact prompts and response-validation rules; invalid outputs
++were retained in the analysis.
+ 
+ None of the 51 frozen cuts passed. The maximum weighted joint-positive
+ proportion was $2/5$, reached at $.99$ and $.995$, against the required
+@@ -762,15 +769,6 @@
+ fixed representation, rater pair, rubric, and selection protocol; it does
+ not establish the absence of semantic duplicates in AskUbuntu.
+ 
+-\paragraph{Completed development preparation.}
+-Actual source/cache/task bindings and the source-disjoint development
+-allocation passed a separate implementation review. A resource pilot
+-scanned 262,144 real-cache cross-pairs and matched the original guard's
+-canonical first witness, score, and keep decision at $.50,.99,.995$.
+-The scan kernel took 0.7783 seconds in that pilot. This does not establish
+-full-scale runtime, full-guard completion, or empirical effect size.
+-The first stable-ID witness is not the maximum-scoring witness.
+-
+ \paragraph{Post-failure structural characterization.}
+ A separately versioned diagnostic used the original pre-guard whole-source
+ prefix of 1,001 development-training records and its stored E5 rows.
+@@ -806,27 +804,30 @@
+ unchanged.
+ 
+ \paragraph{Theory and software evidence.}
+-The inherited theory has separate algebraic, scorer, and codec reviews.
+-Finite tests exercise reconstruction, graph margins, and sequential
+-serialization; they are checks of implementations, not natural-text
+-experiments or substitutes for proofs. Earlier lexical development favored the compact eligible-payload
+-baseline B-E (Appendix~\ref{sec:design}) in total bytes. The new private-information theorem does not
+-reverse that observation or establish a storage win on natural data.
++Implementation checks exercise coefficient reconstruction, scorer margins,
++and sequential serialization; the general guarantees follow from the
++proofs above. Earlier lexical development favored the compact
++eligible-payload baseline B-E (Appendix~\ref{sec:design}) in total bytes.
++The private-information theorem does not establish a storage advantage on
++natural data.
+ 
+ \paragraph{Consequences for empirical claims.}
+-The completed development diagnostics establish graph structure and exact
+-repair for the fixed cases, but no natural-text utility or cost benefit. The failed selection blocks the full guard,
+-post-guard panels, the original threshold-qualified development runs,
+-and dependent held-out evaluation under this configuration. Their effects, uncertainty analysis, and
+-cross-representation robustness remain unmeasured. The prepared guard
+-package is software evidence only and was not launched.
+-The original program's 21,332 prospective jobs are a design inventory,
+-not executed evidence. The planned study cannot be completed by substituting
+-a favorable cut, prompt, or judge after observing this failure. The original
+-evaluation reservation and human gates remain unchanged.
++The diagnostics establish graph structure and exact membership repair for
++these development cases. Because neither calibration selected a threshold,
++the threshold-qualified downstream study and held-out evaluation remain
++unexecuted. Natural-text utility, complete cost, uncertainty in effect
++estimates, and cross-representation robustness remain unmeasured. The
++failed criteria, evaluation reservation, and original human-validation
++requirements remain unchanged; choosing a favorable cutoff, prompt, or
++judge after the failure would define a different study.
+ 
+ \section{Related work}\label{sec:related}
+ \paragraph{Curation and whole-pipeline targets.}
++\citet{cao} develop summation-form unlearning across feature selection and
++model fitting: deletion can change the selected features before the
++model is updated. Thus summaries and preprocessing-aware unlearning are
++established ideas. Our analysis instead fixes record-level suppression and
++characterizes its remaining-horizon statistic map and ridge outputs.
+ SemDeDup studies embedding-based redundancy removal \citep{semdedup}.
+ The released suppression computation motivates our fixed ordered rule
+ \citep{semcode}; a full curation pipeline may have additional data-dependent
+@@ -858,9 +859,20 @@
+ corresponding guarantees from the thesis. Its operator semantics, retained-data
+ access, and evaluation could not be checked without the full text.
+ Our Boolean expansion is a specialization.
+-The scoped claims add the cumulative-horizon state contract and the
+-learner-level finite-feature obstruction. We do not claim that negative
++Our scoped results are the coefficient-map identity at the remaining
++horizon and the learner-level finite-feature obstruction. We do not claim that negative
+ dependencies, moment updates, or deletion-induced additions originate here.
++
++\paragraph{State and future requests.}
++\citet{ginart} include metadata for subsequent deletions in the object whose
++distribution must match retraining (Section~3, Definition~3.1).
++\citet{cohencontrol} relate unlearning to adaptive history independence and
++distinguish one released output from internal state and future behavior
++(Sections~3.1 and~3.4). We do not introduce state recovery as a general
++requirement. Theorem~\ref{thm:repair} proves equality for a particular
++coefficient map at a decreasing horizon; the finite-family codec attains
++the corresponding conditional private-information minimum. These results
++do not imply the broader interactive privacy or deletion guarantees.
+ 
+ \paragraph{Information needed for unlearning.}
+ Learning-unlearning space complexity already studies memory under a
+@@ -874,9 +886,10 @@
+ per-record tickets supplied with forgotten examples \citep{ticketed}.
+ Their main Definitions~1--2 and Remark~3 require exact predictor recovery
+ after one deletion request; their threshold construction also supports
+-multiple requests (Appendix~B.1). Our distinction is the designated
+-canonical state for subsequent requests at the remaining horizon, with
+-all usable private information charged, including tickets. These different
++multiple requests (Appendix~B.1). Our theorem specifies a designated
++canonical state at the remaining horizon, with all usable private
++information charged, including tickets; this is a particular instance
++of a continuing-state requirement, not a new general requirement. These different
+ targets and access rules must accompany any comparison of bounds.
+ Tadakamalla et~al. formalize static summaries of binary histories through
+ query sufficiency and partition refinement \citep{counterfactual}.
+@@ -963,11 +976,19 @@
+ \bibitem[Bushipaka et~al.(2026)]{grace} P. Bushipaka, A. D'Angelo, L. Passaro, and T. Cucinotta.
+ 2026. GRACE: Gradient-guided coreset selection for LLM unlearning.
+ \href{https://arxiv.org/abs/2608.28361v1}{arXiv:2608.28361v1}.
++\bibitem[Cao and Yang(2015)]{cao} Y. Cao and J. Yang. 2015.
++Towards making systems forget with machine unlearning.
++IEEE Symposium on Security and Privacy, 463--480.
++\href{https://doi.org/10.1109/SP.2015.35}{doi:10.1109/SP.2015.35}.
+ \bibitem[Cherapanamjeri et~al.(2025)]{space} Y. Cherapanamjeri, S. Garg, N. Rajaraman, A. Sekhari,
+ and A. Shetty. 2025. The space complexity of learning-unlearning
+ algorithms (extended abstract). COLT, PMLR 291:1185--1193.
+ \url{https://proceedings.mlr.press/v291/cherapanamjeri25b.html}.
+ Full version: \href{https://arxiv.org/abs/2506.13048v1}{arXiv:2506.13048v1}.
++\bibitem[Cohen et~al.(2023)]{cohencontrol} A. Cohen, A. Smith, M. Swanberg,
++and P. N. Vasudevan. 2023. Control, confidentiality, and the right to be forgotten.
++Proceedings of the ACM SIGSAC Conference on Computer and Communications Security,
++3358--3372. \href{https://doi.org/10.1145/3576915.3616585}{doi:10.1145/3576915.3616585}.
+ \bibitem[Dominici(2025)]{dominici} L. Dominici. 2025. End-to-end machine unlearning through
+ data preparation pipelines and feature stores. Master's thesis, University
+ of Amsterdam and Vrije Universiteit Amsterdam. Bibliographic identification
+@@ -980,6 +1001,11 @@
+ A. Sekhari, and C. Zhang. 2023. Ticketed learning--unlearning schemes.
+ COLT, PMLR 195:5110--5139.
+ \url{https://proceedings.mlr.press/v195/ghazi23a.html}.
++\bibitem[Ginart et~al.(2019)]{ginart} A. A. Ginart, M. Y. Guan,
++G. Valiant, and J. Zou. 2019. Making AI forget you: Data deletion in
++machine learning. Advances in Neural Information Processing Systems,
++32:3518--3531.
++\url{https://proceedings.neurips.cc/paper/2019/hash/cb79f8fa58b91d3af6c9c991f63962d3-Abstract.html}.
+ \bibitem[Green et~al.(2007)]{green} T. J. Green, G. Karvounarakis, and V. Tannen. 2007.
+ Provenance semirings. PODS, 31--40.
+ \href{https://doi.org/10.1145/1265530.1265535}{doi:10.1145/1265530.1265535}.
+@@ -1029,6 +1055,14 @@
+ 
+ \appendix
+ \section{Update accounting and state boundaries}\label{app:work}
++The low-level integer-ID kernel rejects repeated, already deleted, invalid,
++and over-budget IDs before mutation. The empirical service first
++deduplicates IDs and removes already deleted IDs, so retries are no-ops,
++including after budget exhaustion. It rejects invalid IDs and requests
++with too many fresh IDs. The mathematical reference also treats retries as
++no-ops. These interfaces apply the same substitution to valid fresh
++deletions.
++
+ For singleton deletion of $u$, first obtain the inverse-incidence handles
+ of keys containing $u$. For each entry, remove its incidence at $u$, its
+ old dictionary key, and its degree-bucket membership. Remove $u$ from
+@@ -1043,7 +1077,7 @@
+ 
+ Give each initial incidence a token. A shrink removes a token; a merge
+ or prune removes its source tokens. None are created. Thus at most $L_0$
+-identifier touches and incidence removals occur over the whole sequence.
++inverse-incidence removals occur over the whole sequence.
+ Each merge decreases key count, giving at most $M_0$ vector additions.
+ A tuple shrink from size $j$ costs $O(j)$, and decreases its potential
+ $j(j+1)/2$ by $j$. This charges tuple copying, hashing, and comparisons
+@@ -1213,6 +1247,11 @@
+ This standalone source embeds the unmodified official TMLR style and its
+ bibliography. The anonymous supplement contains an explicit subset of source
+ code, exact annotation prompts and schemas, and aggregate evidence.
++The code includes data adapters, embedding and task configuration, development
++selection, pair sampling, and the production-reused rendering and inference
++kernels. Its source map distinguishes unchanged research modules from a
++small extracted support helper. Deployment wrappers and private activation
++locks are excluded; the package documents these remaining inputs.
+ A top-level \texttt{README.txt} maps claims to files, and
+ \texttt{python3 -B check\_all.py} runs the public checks with Python 3.10
+ or later, without model downloads or private data. The full
+@@ -1231,6 +1270,24 @@
+ seeds. Source/cache/task intake and independent arithmetic reviews bind
+ private outputs by exact bytes and hashes. Checksums support identity;
+ they do not establish semantic correctness or source rights.
++
++\paragraph{Full-document embedding recipe.}\label{app:embedding}
++Content is tokenized once without special tokens or truncation and split
++into consecutive blocks of at most 256 content tokens. Separately tokenized
++\texttt{query: } IDs are prepended to each block before the tokenizer adds
++special tokens; content is never decoded and retokenized. For the pinned
++E5 tokenizer, chunks are padded to 261 tokens. Batches contain chunks of
++one document only. The encoder runs in evaluation mode on CPU in FP32,
++with eager attention and deterministic algorithms enabled. Pooling masks
++padding and averages all attended tokens, including prefix and special
++tokens. Each FP32 mean is normalized using coordinate-ordered FP64 norm
++accumulation. In document order, normalized chunk vectors are weighted by
++their content-token counts and accumulated in FP64. Their weighted mean
++is normalized again and cast to the stored FP32 row. Cosine scoring
++renormalizes those stored rows in FP64. The supplement provides the exact
++embedding and scoring source; the model card alone does not specify this
++full-document procedure. Absolute scores and the failed calibration are
++conditional on this fixed recipe, not a conclusion about every use of E5.
+ 
+ \paragraph{Asset attribution and replay limits.}
+ The pinned publisher cards declare MIT for
+@@ -1255,6 +1312,26 @@
+ verification levels. Fixed revisions and seeds alone do not establish
+ bitwise inference portability. The attribution ledger records documentary
+ sources and remaining gaps without changing the original acceptance gates.
++
++\paragraph{Protocol and implementation history.}
++The fully LLM branch does not relabel model judgments as human evidence or
++inherit acceptance of the original human-gated study. The documentary
++source chain is not publisher cryptographic attestation, and development
++source acceptance is separate from earlier source gates.
++Separate exact-byte audits verified prompt, token, and grammar identities
++without repeating model calls. The prior Qwen audit's newline-normalization
++failure and all original outputs remain preserved.
++The algebraic, scorer, and codec artifacts retain their internal reviews;
++these are implementation/reasoning checks, not external peer review.
++
++\paragraph{Completed development preparation.}
++Actual source/cache/task bindings and the source-disjoint development
++allocation passed a separate implementation review. A resource pilot
++scanned 262,144 real-cache cross-pairs and matched the original guard's
++canonical first witness, score, and keep decision at $.50,.99,.995$.
++The scan kernel took 0.7783 seconds in that pilot. This does not establish
++full-scale runtime, full-guard completion, or empirical effect size.
++The first stable-ID witness is not the maximum-scoring witness.
+ 
+ \paragraph{Observed compute scope.}
+ The two completed v4 inference jobs each allocated one A100 80GB GPU.
+@@ -1318,6 +1395,15 @@
+ Section~\ref{sec:judges}. No AI system is listed as an author.
+ 
+ \section{Preserved downstream design: not executed}\label{sec:design}
++Neither calibration failure was retuned away. The failed selection blocks
++the full leakage guard, post-guard panels, threshold-qualified development
++runs, and dependent held-out evaluation. The prepared guard package was
++not launched. The original 21,332 prospective jobs are a design inventory,
++not executed evidence. The original 100,000- and 200,000-row panels are
++infeasible on this preparation; unavailable cells remain unfilled and are
++not supplemented from held-out data. The original evaluation reservation
++and unmet human-validation requirements remain unchanged.
++
+ The full development guard is conditional on passed fresh model
+ validation. It compares every reserved training row against all original
+ calibration and test rows, removing training leakage using the locked

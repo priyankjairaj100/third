@@ -1,0 +1,30 @@
+FINAL INTEGRATED CITATION REVIEW
+
+Status: pass_for_citation_and_framing_scope
+Source SHA256: adf82e53d6720634cded6f75cf3158b1e0d58f73a1ec6c0c051e40fee2a28bfc
+Baseline SHA256: f8b898047380c45055b341ed88fcc3d6d6fa379f0e4c17fa60fbb22910e1400e
+
+All23bibliography keys are defined and cited; no duplicate keys. The original20entries are internally byte-identical to source_before.tex. Added keys: cao, cohencontrol, ginart.
+
+Three integrated entries match verified primary metadata:
+- cao: Yinzhi Cao, Junfeng Yang. 2015. 2015 IEEE Symposium on Security and Privacy, 463-480. DOI: 10.1109/SP.2015.35.
+- ginart: Antonio A. Ginart, Melody Y. Guan, Gregory Valiant, James Zou. 2019. Advances in Neural Information Processing Systems, 3518-3531. DOI: not supplied by inspected official citation; stable proceedings URL used.
+- cohencontrol: Aloni Cohen, Adam Smith, Marika Swanberg, Prashant Nalini Vasudevan. 2023. Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security, 3358-3372. DOI: 10.1145/3576915.3616585.
+
+Framing review:
+- Cao and Yang attribution (lines 321--830): supported. Credits summary-based unlearning spanning feature selection and model fitting; distinguishes record-level suppression without claiming preprocessing-aware unlearning originated here.
+- Ginart metadata and subsequent-deletion attribution (lines 323--868): supported. Correctly identifies metadata as part of the learned object with retraining-equivalent distribution, rather than claiming this paper invented continuing-state recovery.
+- Cohen history independence attribution and guarantee scope (lines 869--875): supported. Correctly attributes the distinction between one output, internal state and future behavior. The paragraph explicitly withholds broader interactive privacy/deletion guarantees.
+- Ticketed comparison after added state antecedents (lines 885--893): supported_scope_preserved. Retains one-shot main-definition and multi-shot AppendixB.1 qualifications, and now calls the current construction a particular instance of an established continuing-state requirement.
+- Tadakamalla and Dominici boundaries preserved (lines 852--911): scope_preserved. Dominici remains metadata-only; no guarantees are excluded without full text. Tadakamalla exact and joint-answer-tuple approximation distinctions remain intact. No renewed thesis search.
+- First-page never-trained framing (lines 232--294): corrected. Introduction immediately defines never trained as exclusion from the downstream fit, states records still affect curation, and holds the pretrained representation fixed. Caption now says excluded from downstream fitting. The abstract is clear about the original selected set and does not claim removal of encoder-pretraining influence.
+- First-page evidence and practical claims (lines 238--330): appropriately_scoped. Abstract identifies exact rational ridge recovery and the family parameters, retains both failed calibrations and unexecuted downstream study, and disclaims natural-text utility/runtime/total-memory advantage. Contribution text ties claims to the particular curator and construction.
+
+Remaining actionable findings within this scope: none.
+
+Limits:
+- No repeated URL checks where unchanged; this is a source-content comparison.
+- Dominici full-text search remains closed; metadata-only limitation remains explicit.
+- No new data collection, experiment, manuscript edit, scheduler action or author contact.
+- Existing original20 evidence limitations, including supplied Tadakamalla primary-text provenance and AskUbuntu documentary release identity, remain.
+- No exhaustive retraction-registry or all-literature novelty clearance is implied.

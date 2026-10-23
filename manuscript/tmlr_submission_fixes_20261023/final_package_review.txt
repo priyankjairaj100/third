@@ -1,0 +1,60 @@
+FINAL INDEPENDENT V9 PACKAGE REVIEW
+
+PASS for the scoped package audit. No remaining actionable package finding.
+
+Archive: third_tmlr_supplement_v9.zip
+SHA256: d005b1bdea2ef74020c989e2a57557c3e4646c628efc3d5834bc75665ab79bf4
+Bytes: 610719
+Current manuscript SHA256: adf82e53d6720634cded6f75cf3158b1e0d58f73a1ec6c0c051e40fee2a28bfc
+
+Integrity and provenance
+- 199 safe, unique, regular files; 198 manifest payload entries; one current
+  manuscript; no nested ZIPs, PDFs, raw dataset formats or model weight files.
+- 189 unchanged-copy entries checked against 200 actual original origins,
+  including traversal of retained source archives and repository originals.
+- All V8 scientific code, evidence and protocol bytes remain unchanged. Only
+  manuscript.tex, README.txt, SOURCE_MAP.json, check_all.py and MANIFEST.json
+  differ among the existing V8 members. The rebuilt manifest is included in
+  the verified changed-member list.
+- All added exact copies match their repository sources. The derived common.py
+  contains the exact original require excerpt, with matching AST and source
+  line/hash bindings; panel_core.py accesses only c.require. It is disclosed
+  as an excerpt, not passed off as the original deployment module.
+- Prompt/schema copies match each other. The response schema still fixes
+  human_completed=false. E5 and judge recipe runtime values match expectations.
+
+Fresh replay and negative controls
+An empty temporary extraction passed under Python 3.12 with -I -B. It checked
+38 Python source files, 102 calibration cut decisions, 12 V4 bin boundaries,
+72 compute-history records, 51 structural cuts and saved repair aggregates covering
+13,056 membership steps and 408 checkpoints. This is aggregate arithmetic replay;
+private graph/state recomputation and model inference were not performed.
+The checker wrote no files into the sealed extraction. An unexpected file,
+a changed calibration aggregate, and -O execution were each rejected with
+the expected specific error.
+
+Disclosure and privacy review
+README and REPRODUCTION_README accurately distinguish executable aggregate
+checks from implementation disclosure. E5 chunking/pooling and both model
+renderers match the described source. Newly included V3 sampler/statistics
+modules are correctly mapped and preserve frozen gates. Historical human-gate
+and pilot names are explicitly separated from the current fully LLM study.
+
+Private corpus text/ownership, record and pair allocations, activation material,
+individual responses, embeddings, model assets and cluster receipts remain
+absent. Hash-only references to those artifacts are not their contents. The
+README explicitly says these omissions prevent independent end-to-end
+replication from this ZIP. No removal of guards or hidden execution prerequisite
+is represented as a completed experiment.
+
+No known direct author identifier, local private path, cluster host, credential
+marker or key marker was found. Email-like tokens are LaTeX commands and a
+historical third-party style comment. Source hashes may still permit external
+linking; scanning is not a guarantee of unlinkability.
+
+Limits
+This is an internal automated package audit, not external peer review, a new
+scientific experiment, model-token replay, proof validation, rights clearance,
+author declaration or final submission-eligibility certification. No model was
+loaded; no network request or original experiment was run. No manuscript,
+repository source or archive was edited.

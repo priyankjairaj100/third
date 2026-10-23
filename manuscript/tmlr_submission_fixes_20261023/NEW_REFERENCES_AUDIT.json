@@ -1,0 +1,126 @@
+{
+  "audit": "three_added_reference_metadata_and_comparison",
+  "date_utc": "2026-10-23T06:38:23.626797+00:00",
+  "references": [
+    {
+      "key": "cao",
+      "full_author_names": [
+        "Yinzhi Cao",
+        "Junfeng Yang"
+      ],
+      "title": "Towards Making Systems Forget with Machine Unlearning",
+      "year": 2015,
+      "venue": "2015 IEEE Symposium on Security and Privacy",
+      "pages": "463-480",
+      "doi": "10.1109/SP.2015.35",
+      "metadata_basis": "IEEE-deposited Crossref record; author publication page and primary text",
+      "metadata_urls": [
+        "https://api.crossref.org/works/10.1109%2FSP.2015.35",
+        "https://www.cs.columbia.edu/~junfeng/papers/unlearning/"
+      ],
+      "primary_text_url": "https://www.yinzhicao.org/unlearning/UnlearningOakland15.pdf",
+      "claim_locators": [
+        "Abstract",
+        "Section III.B, PDF p.5",
+        "Section IV, PDF pp.5-6"
+      ],
+      "comparison_boundary": "Summation-form unlearning and changing feature selection are prior work. No equivalence asserted to the specific fixed record-suppression operator or finite-feature ridge obstruction."
+    },
+    {
+      "key": "ginart",
+      "full_author_names": [
+        "Antonio A. Ginart",
+        "Melody Y. Guan",
+        "Gregory Valiant",
+        "James Zou"
+      ],
+      "author_name_basis": "Names as printed on the official primary PDF. Official BibTeX and metadata omit Ginart/Guan middle initials; landing page styles the fourth author James Y Zou. These are non-conflicting author-identity variants. Bibitem follows the printed PDF.",
+      "title": "Making AI Forget You: Data Deletion in Machine Learning",
+      "year": 2019,
+      "venue": "Advances in Neural Information Processing Systems",
+      "volume": 32,
+      "pages": "3518-3531",
+      "doi": null,
+      "doi_note": "No DOI supplied in inspected official landing page, metadata JSON or BibTeX; use stable proceedings URL. This is not a claim that no DOI exists anywhere.",
+      "metadata_basis": "Official NeurIPS proceedings landing, Metadata.json and BibTeX; PDF title page",
+      "metadata_urls": [
+        "https://proceedings.neurips.cc/paper/2019/hash/cb79f8fa58b91d3af6c9c991f63962d3-Abstract.html",
+        "https://proceedings.neurips.cc/paper_files/paper/2019/file/cb79f8fa58b91d3af6c9c991f63962d3-Metadata.json",
+        "https://proceedings.neurips.cc/paper_files/paper/2019/file/cb79f8fa58b91d3af6c9c991f63962d3-Bibtex.bib"
+      ],
+      "primary_text_url": "https://papers.neurips.cc/paper/2019/file/cb79f8fa58b91d3af6c9c991f63962d3-Paper.pdf",
+      "claim_locators": [
+        "Section3 before Definition3.1, PDF p.3",
+        "Definition3.1 and online-deletion paragraph, PDF p.3"
+      ],
+      "comparison_boundary": "Internal metadata used for subsequent deletions is already included in the learned object; do not claim stateful recovery as a new general idea."
+    },
+    {
+      "key": "cohencontrol",
+      "full_author_names": [
+        "Aloni Cohen",
+        "Adam Smith",
+        "Marika Swanberg",
+        "Prashant Nalini Vasudevan"
+      ],
+      "title": "Control, Confidentiality, and the Right to be Forgotten",
+      "year": 2023,
+      "venue": "Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security",
+      "pages": "3358-3372",
+      "doi": "10.1145/3576915.3616585",
+      "metadata_basis": "ACM-deposited Crossref record, matched to author final PDF first-page ACM reference format",
+      "metadata_urls": [
+        "https://api.crossref.org/works/10.1145/3576915.3616585",
+        "https://doi.org/10.1145/3576915.3616585"
+      ],
+      "primary_text_url": "https://aloni.net/wp-content/uploads/2023/10/Control-Confidentiality-and-RTBF-CCS-23-FINAL.pdf",
+      "claim_locators": [
+        "Section3.1, PDF p.8",
+        "Section3.4, PDF p.10"
+      ],
+      "comparison_boundary": "History independence and internal-state versus single-output distinctions are established. This paper does not demonstrate full adaptive privacy, deletion-as-control, or physical-memory erasure."
+    }
+  ],
+  "proposed_files": [
+    "NEW_REFERENCES.tex",
+    "literature_revisions.txt"
+  ],
+  "baseline_current20_audit": "work/desk-reject-deep-20261023/literature_audit.json",
+  "preserve_current20": true,
+  "source_receipts": [
+    {
+      "path": "work/desk-reject-fixes-20261023/sources/cao_crossref.json",
+      "sha256": "d25f91303d597b2e7ed94225e6af4eb33cbd3c7027a3803355835943ea6cd505",
+      "bytes": 11503
+    },
+    {
+      "path": "work/desk-reject-fixes-20261023/sources/cohen_crossref.json",
+      "sha256": "4d826b2986a4018c18aa5198dedcbe83cd0d87ef625ddcd8329d46c82c3f0a35",
+      "bytes": 15938
+    },
+    {
+      "path": "work/desk-reject-fixes-20261023/sources/ginart_bibtex.bib",
+      "sha256": "e795d18be7597ffe0e10f4299bd04162a1c794a4bf13104c0bec1c2d090a1add",
+      "bytes": 577
+    },
+    {
+      "path": "work/desk-reject-fixes-20261023/sources/ginart_metadata.json",
+      "sha256": "0d4dc31772959534568b961b9d54cd72e1726ad4b4d4f53ac9a1df5d1e0e9bc1",
+      "bytes": 61576
+    }
+  ],
+  "verification_checks": {
+    "cao_pages_match_primary_publisher_record": true,
+    "cohen_pages_match_primary_publisher_record": true,
+    "ginart_pages_match_official_metadata": true,
+    "all_three_titles_and_author_identities_verified": true,
+    "no_manuscript_edits": true,
+    "no_dominici_search": true
+  },
+  "retrieval_limits": [
+    "IEEE DOI page required JavaScript; ACM DOI page unavailable through browser fetch. Publisher-deposited Crossref records were successfully retrieved instead.",
+    "One initial Crossref request was rate limited; one later bounded retry succeeded.",
+    "Official NeurIPS BibTeX leaves pages blank, but its official metadata JSON explicitly supplies3518-3531.",
+    "No DOI invented for Ginart2019."
+  ]
+}

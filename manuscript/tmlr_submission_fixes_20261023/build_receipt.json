@@ -1,0 +1,71 @@
+{
+  "added_members": [
+    "ADDON_SOURCE_MAP.json",
+    "REPRODUCTION_README.txt",
+    "REPRODUCTION_RECIPE.json",
+    "code/empirical_execution/config/planned_study_design.json",
+    "code/empirical_execution/phase3/calibration.py",
+    "code/empirical_execution/phase3/run_preparation.py",
+    "code/empirical_execution/phase4/adapters.py",
+    "code/empirical_execution/phase4/embeddings.py",
+    "code/empirical_execution/phase4/model_selection.py",
+    "code/empirical_execution/phase4/news_calendar.py",
+    "code/local_run/e5_sharded_cpu_v2_20261013/expectations.json",
+    "code/local_run/llm_annotation_inference_v1_20261014/contract.py",
+    "code/local_run/llm_annotation_inference_v1_20261014/expectations.json",
+    "code/local_run/llm_annotation_inference_v1_20261014/kernel.py",
+    "code/local_run/llm_annotation_inference_v1_20261014/ledger.py",
+    "code/local_run/llm_annotation_statistics_v1_20261014/statistics_core.py",
+    "code/local_run/llm_development_guard_v1_20261016/RESERVATION_PLAN.json",
+    "code/local_run/llm_development_guard_v1_20261016/common.py",
+    "code/local_run/llm_development_guard_v1_20261016/panel_core.py",
+    "code/local_run/llm_selection_sampler_v1_20261014/sampler.py",
+    "code/local_run/llm_v4_inference_v2_20261014/contract.py",
+    "code/local_run/llm_v4_inference_v2_20261014/expectations.json",
+    "code/local_run/llm_v4_inference_v2_20261014/kernel.py",
+    "code/local_run/llm_v4_inference_v2_20261014/ledger.py",
+    "code/local_run/llm_v4_inference_v2_20261014/statistics_core.py",
+    "code/local_run/model_annotation_runtime_mistral_v1_20261011/bounded_reason.py",
+    "code/local_run/model_annotation_runtime_mistral_v1_20261011/requirements.txt",
+    "code/local_run/model_annotation_runtime_mistral_v1_20261011/run_pilot.py",
+    "code/local_run/model_annotation_runtime_mistral_v1_20261011/runtime_plan.json",
+    "code/local_run/model_annotation_runtime_v5_20261011/bounded_reason.py",
+    "code/local_run/model_annotation_runtime_v5_20261011/requirements.txt",
+    "code/local_run/model_annotation_runtime_v5_20261011/run_pilot.py",
+    "code/local_run/model_annotation_runtime_v5_20261011/runtime_plan.json",
+    "code/local_run/model_annotation_v2_20261011/judge_system_prompt.txt",
+    "code/local_run/model_annotation_v2_20261011/judge_task_definition.txt",
+    "code/local_run/model_annotation_v2_20261011/model_judgment.schema.json",
+    "code/local_run/model_annotation_v2_20261011/model_response.schema.json",
+    "code/local_run/model_annotation_v3_20261014/PLAN.json",
+    "code/local_run/model_annotation_v3_20261014/protocol.py",
+    "code/local_run/model_annotation_v4_20261014/PLAN.json",
+    "code/local_run/model_annotation_v4_20261014/parent_PLAN.json",
+    "code/local_run/model_annotation_v4_20261014/protocol.py",
+    "code/local_run/model_annotation_v4_20261014/sampling.py"
+  ],
+  "derived_entries": [
+    "REPRODUCTION_README.txt",
+    "REPRODUCTION_RECIPE.json",
+    "code/local_run/llm_development_guard_v1_20261016/common.py"
+  ],
+  "experiments_run": false,
+  "members": 199,
+  "old_v8_members_changed": [
+    "MANIFEST.json",
+    "README.txt",
+    "SOURCE_MAP.json",
+    "check_all.py",
+    "manuscript.tex"
+  ],
+  "old_v8_scientific_members_preserved": true,
+  "source": {
+    "bytes": 78720,
+    "sha256": "adf82e53d6720634cded6f75cf3158b1e0d58f73a1ec6c0c051e40fee2a28bfc"
+  },
+  "unchanged_copy_count": 189,
+  "zip": {
+    "bytes": 610719,
+    "sha256": "d005b1bdea2ef74020c989e2a57557c3e4646c628efc3d5834bc75665ab79bf4"
+  }
+}

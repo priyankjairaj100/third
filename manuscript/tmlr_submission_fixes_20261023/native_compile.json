@@ -1,0 +1,12 @@
+{
+  "checked_utc": "2026-10-23T06:51:47.728214+00:00",
+  "source": {
+    "bytes": 78720,
+    "sha256": "adf82e53d6720634cded6f75cf3158b1e0d58f73a1ec6c0c051e40fee2a28bfc"
+  },
+  "kind": "success",
+  "tool": "mcp__codex_app__compile_latex_document",
+  "message": "The current source compiled successfully with the desktop editor's compiler.",
+  "editor_left_open": true,
+  "temporary_pdf_separately_authorized": true
+}

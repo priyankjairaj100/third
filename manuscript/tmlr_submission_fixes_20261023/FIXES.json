@@ -1,0 +1,24 @@
+{
+  "current_source": {
+    "bytes": 78720,
+    "sha256": "adf82e53d6720634cded6f75cf3158b1e0d58f73a1ec6c0c051e40fee2a28bfc"
+  },
+  "reviewed_baseline": "f8b898047380c45055b341ed88fcc3d6d6fa379f0e4c17fa60fbb22910e1400e",
+  "closed_findings": [
+    "three_direct_antecedents",
+    "custom_e5_method_description",
+    "processing_source_disclosure",
+    "never_trained_scope",
+    "inverse_incidence_accounting_wording",
+    "main_text_workflow_history"
+  ],
+  "remaining": [
+    "editorial_interest_and_depth_judgment",
+    "unmeasured_natural_task_and_cost_advantage",
+    "author_factual_attestations_and_profile_ids",
+    "private_input_replication_limits"
+  ],
+  "new_scientific_results": false,
+  "frozen_gates_changed": false,
+  "actual_submission": false
+}

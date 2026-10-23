@@ -1,0 +1,158 @@
+{
+  "before_sha256": "f8b898047380c45055b341ed88fcc3d6d6fa379f0e4c17fa60fbb22910e1400e",
+  "after_sha256": "adf82e53d6720634cded6f75cf3158b1e0d58f73a1ec6c0c051e40fee2a28bfc",
+  "edits": [
+    {
+      "reason": "Define abstract information unit and exact target",
+      "before": "features for which increasing that budget by one changes the minimum private\ninformation needed for exact ridge recovery from zero to $mD$ bits. The graph\nis stable under a specified FP64 cosine scorer, and a sequential codec attains",
+      "after": "features for which one additional allowed deletion changes the private\ninformation needed for exact rational ridge recovery from zero to $mD$ bits:\n$m$ excluded candidates each carry $D$ private feature signs. The graph is\nstable under a specified FP64 cosine scorer, and a sequential codec attains"
+    },
+    {
+      "reason": "Scope first-page never-trained language",
+      "before": "training set, including documents that were never used by the original model.\nAn unlearning procedure must specify whether it promises to reproduce that\nnew training set and learner.",
+      "after": "training set, including documents not used to fit the original downstream\nlearner. This is the sense of ``never trained'' in our title: the records\nstill affect curation, and we hold the pretrained representation fixed.\nAn unlearning procedure must specify whether it promises to reproduce the\nnew training set and learner."
+    },
+    {
+      "reason": "Scope figure caption",
+      "before": "the correct training target although it never trained the original model.",
+      "after": "the correct training target although it was excluded from downstream fitting."
+    },
+    {
+      "reason": "Explain concrete theory lesson",
+      "before": "This behavior raises two connected questions. What state supports exact\nrepair without rereading the surviving raw corpus? How much information can\nbe necessary about examples that remain excluded today but could enter after\nfuture deletions? The allowed number of deletions matters to both questions.\nWith a limited cumulative budget, some examples can never lose all their\nblockers, so their private payloads need not be retained for this target.",
+      "after": "This behavior raises two connected questions. What state supports exact\nrepair without rereading the surviving raw corpus? How much information can\nfuture deletions require about examples excluded today? For this curator,\nthe remaining deletion budget determines which records can still enter\ntraining. Payloads that cannot become eligible can be discarded permanently\nwithin that budget. The construction below shows the converse possibility:\none additional allowed deletion can make every private sign of the excluded\ncandidates necessary for exact model recovery."
+    },
+    {
+      "reason": "State contributions without implying general state recovery is new",
+      "before": "We make three scoped contributions. First, we specialize signed Boolean\nprovenance to the ordered curator and derive a summary that repairs both\ntraining statistics and its own designated algebraic state. Second, we give\na finite-format construction linking excluded feature bits to exact ridge\nheads, including a sharp change in required private information when the\ndeletion horizon increases by one. Third, we report two completed, negative\ncalibrations for a fully LLM natural-text study. Neither admitted a threshold\nunder its frozen model-agreement criterion. The downstream comparison of\ntarget changes, utility, and complete system cost remains unexecuted.\nA separately declared structural follow-up characterizes all 51 score graphs\non a fixed natural development panel without selecting a cutoff.",
+      "after": "We make three scoped contributions. First, we specialize signed Boolean\nprovenance to obtain an exact summary of additive training statistics whose\nupdated state equals reconstruction at the remaining deletion horizon.\nSecond, we construct finite-format features shared by the curator and ridge\nlearner for which that horizon determines an exact private-information\nminimum, attained by a sequential codec. Third, we report two negative\ncalibrations for a fully LLM natural-text study. Neither selected a threshold\nunder its frozen model-defined criterion, so the downstream comparison of\ntarget changes, utility, and complete system cost remains unexecuted.\nSeparate development diagnostics characterize all 51 score graphs and check\nexact membership repair without selecting a cutoff."
+    },
+    {
+      "reason": "Credit direct antecedents and tighten contribution boundary",
+      "before": "Neither deletion-induced additions nor provenance maintenance is a new\ngeneral principle. Nonmonotone database queries already exhibit the former,\nand provenance and incremental view maintenance address the latter\n\\citep{green,aggregate,dbsp,priu,ivmunlearning}. Our claim concerns the stated curator,\nremaining-horizon repair contract, and shared-feature learner construction.\nThe results are useful when specifying an unlearning service: its target,\nremaining deletion budget, and access to excluded data determine what it must\nretain. They do not establish that a polynomial summary is the cheapest\nimplementation. In particular, a compact eligible-payload baseline can use\nless total memory. The negative calibration also shows why a theoretical\nrepair guarantee should not be presented as validated semantic deduplication.\nWhether natural-text target changes justify the complete repair cost remains\nan open empirical question.",
+      "after": "Deletion-induced additions and provenance maintenance are established in\nnonmonotone queries and incremental computation\n\\citep{green,aggregate,dbsp,priu,ivmunlearning}. Summary-based unlearning\nacross feature selection and model fitting also precedes this work\n\\citep{cao}. So do definitions that include metadata for subsequent deletions\nand distinguish internal state from one released output \\citep{ginart,cohencontrol}.\nOur results specify one ordered curator, its remaining-horizon coefficient\nmap, and a shared-feature ridge construction. They make the target, allowed\nfuture requests, and access to excluded data part of an explicit storage\ncontract. They do not establish a practical memory advantage: a compact\neligible-payload baseline can use less total memory. Whether natural-text\ntarget changes justify the complete repair cost remains unresolved."
+    },
+    {
+      "reason": "Move API-history detail to accounting appendix",
+      "before": "\\paragraph{Indexed implementation.}\nThe P-I method stores nonzero coefficient keys, inverse incidences from\nidentifiers to keys, and degree buckets. Deleting $u$ touches only incident\nkeys, removes $u$ from each key, combines collisions, removes zero values,\nand drops keys above the new horizon. The low-level integer-ID kernel\nrejects repeated, already deleted, invalid, and over-budget IDs before\nmutation. The frozen Phase 5/6 empirical service first deduplicates IDs and\nremoves already deleted IDs, so retries are no-ops, including after budget\nexhaustion. It rejects invalid IDs and requests with too many fresh IDs.\nThe earlier mathematical reference also treats retries as no-ops.\nThese interfaces apply the same substitution to valid fresh deletions.\nThe reference P-S method scans all keys. Both implement\nEquation~\\eqref{eq:update} under the same numerical contract.\n\n",
+      "after": "\\paragraph{Indexed implementation.}\nThe indexed method P-I stores nonzero coefficient keys, inverse incidences\nfrom identifiers to keys, and degree buckets. Deleting $u$ touches only\nincident keys, removes $u$ from each key, combines collisions, removes zero\nvalues, and drops keys above the new horizon. The scanning method P-S\nvisits all keys. Both implement Equation~\\eqref{eq:update} under the same\nnumerical contract. Appendix~\\ref{app:work} specifies request validation,\nretry behavior, and the implementation costs beyond substitution.\n\n"
+    },
+    {
+      "reason": "Preserve complete request/retry contract",
+      "before": "\\section{Update accounting and state boundaries}\\label{app:work}\n",
+      "after": "\\section{Update accounting and state boundaries}\\label{app:work}\nThe low-level integer-ID kernel rejects repeated, already deleted, invalid,\nand over-budget IDs before mutation. The empirical service first\ndeduplicates IDs and removes already deleted IDs, so retries are no-ops,\nincluding after budget exhaustion. It rejects invalid IDs and requests\nwith too many fresh IDs. The mathematical reference also treats retries as\nno-ops. These interfaces apply the same substitution to valid fresh\ndeletions.\n\n"
+    },
+    {
+      "reason": "Correct L0 accounting; Phi0 bound unchanged",
+      "before": "identifier touches and incidence removals occur over the whole sequence.",
+      "after": "inverse-incidence removals occur over the whole sequence."
+    },
+    {
+      "reason": "Make existing upper-bound exclusivity argument explicit",
+      "before": "At budget $K=b+1$, the request $F_i=S\\cup\\{p_i\\}$ selects $a,w_i$.\nFor exact rational ridge with rational $\\lambda>0$, define",
+      "after": "At budget $K=b+1$, the request $F_i=S\\cup\\{p_i\\}$ selects $a,w_i$.\nEach candidate has exactly $K$ blockers, so any allowed request selecting\nit must equal $F_i$; no allowed request selects two candidates.\nFor exact rational ridge with rational $\\lambda>0$, define"
+    },
+    {
+      "reason": "Condense protocol history without waiving human gates",
+      "before": "annotations or pair reviews were collected. Earlier human-gated protocol\nrequirements remain unmet; this branch does not relabel model judgments\nas human evidence or inherit acceptance of the historical primary study.",
+      "after": "annotations or pair reviews were collected. The original human-validation\nrequirements remain unmet."
+    },
+    {
+      "reason": "Move provenance-history qualifications to appendix",
+      "before": "The corrected April 2024 export \\citep{askubuntu} is supported by a\ndocumentary provenance chain and checksummed acquisition. This is not publisher cryptographic\nattestation. The active development acceptance is separate from earlier\nsource gates. Raw text and account-level records remain private; the\npublic return reports contain bindings and aggregate counts.",
+      "after": "The corpus uses the corrected April 2024 export \\citep{askubuntu}, with\nchecksummed acquisition and documented provenance. Raw text and\naccount-level records remain private; released evidence contains hashes\nand aggregate counts. Appendix~\\ref{app:repro} describes provenance and\nreplay limits."
+    },
+    {
+      "reason": "Disclose custom representation in main methods",
+      "before": "produced and replayed in 32 CPU shards. E5 provides fixed pretrained text\nrepresentations \\citep{e5}. The native prediction task uses 20 tags and",
+      "after": "produced and replayed in 32 CPU shards. E5 provides fixed pretrained text\nrepresentations \\citep{e5}. We encode complete documents in consecutive\n256-content-token chunks, prepend \\texttt{query:} to each chunk, and\nnormalize its attended-token mean. A content-length-weighted average of\nthese chunk vectors is normalized again to form the stored row.\nAppendix~\\ref{app:embedding} specifies tokenization, precision, padding,\nand aggregation order. This custom full-document recipe can affect the\nabsolute cosine distribution; it is not first-window truncation.\nThe native prediction task uses 20 tags and"
+    },
+    {
+      "reason": "Move infeasible historical design sizes to appendix",
+      "before": "guard. Current pre-guard counts are upper bounds. The original 100,000\nand 200,000 panels are infeasible on this preparation; unavailable cells\nmust remain visible rather than be filled from held-out data.",
+      "after": "guard. These counts are upper bounds before leakage filtering; the\nconditional downstream design and infeasible panels are documented in\nAppendix~\\ref{sec:design}."
+    },
+    {
+      "reason": "Distinguish specification and supplied execution code",
+      "before": "provides the exact system prompt, pair template, and response schema.",
+      "after": "provides the exact system instructions and response schemas, the rendering\nspecification, and the renderer and constrained-inference kernels."
+    },
+    {
+      "reason": "Move audit history out of scientific results",
+      "before": "JSON responses; Mistral produced 396 valid responses. Separate exact-byte\naudits verified prompt, token, and grammar identities without repeating\nmodel calls. The prior Qwen audit's newline-normalization failure and all\noriginal outputs remain preserved.",
+      "after": "JSON responses; Mistral produced 396 valid responses. The supplement\nprovides the exact prompts and response-validation rules; invalid outputs\nwere retained in the analysis."
+    },
+    {
+      "reason": "Move engineering resource pilot to reproducibility appendix",
+      "before": "\\paragraph{Completed development preparation.}\nActual source/cache/task bindings and the source-disjoint development\nallocation passed a separate implementation review. A resource pilot\nscanned 262,144 real-cache cross-pairs and matched the original guard's\ncanonical first witness, score, and keep decision at $.50,.99,.995$.\nThe scan kernel took 0.7783 seconds in that pilot. This does not establish\nfull-scale runtime, full-guard completion, or empirical effect size.\nThe first stable-ID witness is not the maximum-scoring witness.\n\n",
+      "after": ""
+    },
+    {
+      "reason": "Foreground proofs while preserving unfavorable memory result",
+      "before": "\\paragraph{Theory and software evidence.}\nThe inherited theory has separate algebraic, scorer, and codec reviews.\nFinite tests exercise reconstruction, graph margins, and sequential\nserialization; they are checks of implementations, not natural-text\nexperiments or substitutes for proofs. Earlier lexical development favored the compact eligible-payload\nbaseline B-E (Appendix~\\ref{sec:design}) in total bytes. The new private-information theorem does not\nreverse that observation or establish a storage win on natural data.",
+      "after": "\\paragraph{Theory and software evidence.}\nImplementation checks exercise coefficient reconstruction, scorer margins,\nand sequential serialization; the general guarantees follow from the\nproofs above. Earlier lexical development favored the compact\neligible-payload baseline B-E (Appendix~\\ref{sec:design}) in total bytes.\nThe private-information theorem does not establish a storage advantage on\nnatural data."
+    },
+    {
+      "reason": "Condense unexecuted-program history and retain complete scientific boundary",
+      "before": "\\paragraph{Consequences for empirical claims.}\nThe completed development diagnostics establish graph structure and exact\nrepair for the fixed cases, but no natural-text utility or cost benefit. The failed selection blocks the full guard,\npost-guard panels, the original threshold-qualified development runs,\nand dependent held-out evaluation under this configuration. Their effects, uncertainty analysis, and\ncross-representation robustness remain unmeasured. The prepared guard\npackage is software evidence only and was not launched.\nThe original program's 21,332 prospective jobs are a design inventory,\nnot executed evidence. The planned study cannot be completed by substituting\na favorable cut, prompt, or judge after observing this failure. The original\nevaluation reservation and human gates remain unchanged.\n\n",
+      "after": "\\paragraph{Consequences for empirical claims.}\nThe diagnostics establish graph structure and exact membership repair for\nthese development cases. Because neither calibration selected a threshold,\nthe threshold-qualified downstream study and held-out evaluation remain\nunexecuted. Natural-text utility, complete cost, uncertainty in effect\nestimates, and cross-representation robustness remain unmeasured. The\nfailed criteria, evaluation reservation, and original human-validation\nrequirements remain unchanged; choosing a favorable cutoff, prompt, or\njudge after the failure would define a different study.\n\n"
+    },
+    {
+      "reason": "Compare Cao2015 specifically without equating feature and record selection",
+      "before": "\\paragraph{Curation and whole-pipeline targets.}\nSemDeDup studies",
+      "after": "\\paragraph{Curation and whole-pipeline targets.}\n\\citet{cao} develop summation-form unlearning across feature selection and\nmodel fitting: deletion can change the selected features before the\nmodel is updated. Thus summaries and preprocessing-aware unlearning are\nestablished ideas. Our analysis instead fixes record-level suppression and\ncharacterizes its remaining-horizon statistic map and ridge outputs.\nSemDeDup studies"
+    },
+    {
+      "reason": "Remove general state-contract novelty implication",
+      "before": "The scoped claims add the cumulative-horizon state contract and the\nlearner-level finite-feature obstruction.",
+      "after": "Our scoped results are the coefficient-map identity at the remaining\nhorizon and the learner-level finite-feature obstruction."
+    },
+    {
+      "reason": "Credit metadata and history-independence antecedents",
+      "before": "\\paragraph{Information needed for unlearning.}\n",
+      "after": "\\paragraph{State and future requests.}\n\\citet{ginart} include metadata for subsequent deletions in the object whose\ndistribution must match retraining (Section~3, Definition~3.1).\n\\citet{cohencontrol} relate unlearning to adaptive history independence and\ndistinguish one released output from internal state and future behavior\n(Sections~3.1 and~3.4). We do not introduce state recovery as a general\nrequirement. Theorem~\\ref{thm:repair} proves equality for a particular\ncoefficient map at a decreasing horizon; the finite-family codec attains\nthe corresponding conditional private-information minimum. These results\ndo not imply the broader interactive privacy or deletion guarantees.\n\n\\paragraph{Information needed for unlearning.}\n"
+    },
+    {
+      "reason": "Narrow ticketed comparison in view of metadata literature",
+      "before": "Our distinction is the designated\ncanonical state for subsequent requests at the remaining horizon, with\nall usable private information charged, including tickets.",
+      "after": "Our theorem specifies a designated\ncanonical state at the remaining horizon, with all usable private\ninformation charged, including tickets; this is a particular instance\nof a continuing-state requirement, not a new general requirement."
+    },
+    {
+      "reason": "Document complete frozen tokenization/pooling/precision recipe",
+      "before": "\\paragraph{Asset attribution and replay limits.}\n",
+      "after": "\\paragraph{Full-document embedding recipe.}\\label{app:embedding}\nContent is tokenized once without special tokens or truncation and split\ninto consecutive blocks of at most 256 content tokens. Separately tokenized\n\\texttt{query: } IDs are prepended to each block before the tokenizer adds\nspecial tokens; content is never decoded and retokenized. For the pinned\nE5 tokenizer, chunks are padded to 261 tokens. Batches contain chunks of\none document only. The encoder runs in evaluation mode on CPU in FP32,\nwith eager attention and deterministic algorithms enabled. Pooling masks\npadding and averages all attended tokens, including prefix and special\ntokens. Each FP32 mean is normalized using coordinate-ordered FP64 norm\naccumulation. In document order, normalized chunk vectors are weighted by\ntheir content-token counts and accumulated in FP64. Their weighted mean\nis normalized again and cast to the stored FP32 row. Cosine scoring\nrenormalizes those stored rows in FP64. The supplement provides the exact\nembedding and scoring source; the model card alone does not specify this\nfull-document procedure. Absolute scores and the failed calibration are\nconditional on this fixed recipe, not a conclusion about every use of E5.\n\n\\paragraph{Asset attribution and replay limits.}\n"
+    },
+    {
+      "reason": "Describe expanded source package and excluded deployment inputs",
+      "before": "code, exact annotation prompts and schemas, and aggregate evidence.",
+      "after": "code, exact annotation prompts and schemas, and aggregate evidence.\nThe code includes data adapters, embedding and task configuration, development\nselection, pair sampling, and the production-reused rendering and inference\nkernels. Its source map distinguishes unchanged research modules from a\nsmall extracted support helper. Deployment wrappers and private activation\nlocks are excluded; the package documents these remaining inputs."
+    },
+    {
+      "reason": "Preserve moved audit/provenance/resource-pilot history",
+      "before": "\\paragraph{Observed compute scope.}\n",
+      "after": "\\paragraph{Protocol and implementation history.}\nThe fully LLM branch does not relabel model judgments as human evidence or\ninherit acceptance of the original human-gated study. The documentary\nsource chain is not publisher cryptographic attestation, and development\nsource acceptance is separate from earlier source gates.\nSeparate exact-byte audits verified prompt, token, and grammar identities\nwithout repeating model calls. The prior Qwen audit's newline-normalization\nfailure and all original outputs remain preserved.\nThe algebraic, scorer, and codec artifacts retain their internal reviews;\nthese are implementation/reasoning checks, not external peer review.\n\n\\paragraph{Completed development preparation.}\nActual source/cache/task bindings and the source-disjoint development\nallocation passed a separate implementation review. A resource pilot\nscanned 262,144 real-cache cross-pairs and matched the original guard's\ncanonical first witness, score, and keep decision at $.50,.99,.995$.\nThe scan kernel took 0.7783 seconds in that pilot. This does not establish\nfull-scale runtime, full-guard completion, or empirical effect size.\nThe first stable-ID witness is not the maximum-scoring witness.\n\n\\paragraph{Observed compute scope.}\n"
+    },
+    {
+      "reason": "Preserve full unexecuted design and infeasible panels in appendix",
+      "before": "\\section{Preserved downstream design: not executed}\\label{sec:design}\n",
+      "after": "\\section{Preserved downstream design: not executed}\\label{sec:design}\nNeither calibration failure was retuned away. The failed selection blocks\nthe full leakage guard, post-guard panels, threshold-qualified development\nruns, and dependent held-out evaluation. The prepared guard package was\nnot launched. The original 21,332 prospective jobs are a design inventory,\nnot executed evidence. The original 100,000- and 200,000-row panels are\ninfeasible on this preparation; unavailable cells remain unfilled and are\nnot supplemented from held-out data. The original evaluation reservation\nand unmet human-validation requirements remain unchanged.\n\n"
+    },
+    {
+      "reason": "Add verified cao bibliography entry",
+      "before": "\\bibitem[Cherapanamjeri et~al.(2025)]{space}",
+      "after": "\\bibitem[Cao and Yang(2015)]{cao} Y. Cao and J. Yang. 2015.\nTowards making systems forget with machine unlearning.\nIEEE Symposium on Security and Privacy, 463--480.\n\\href{https://doi.org/10.1109/SP.2015.35}{doi:10.1109/SP.2015.35}.\n\\bibitem[Cherapanamjeri et~al.(2025)]{space}"
+    },
+    {
+      "reason": "Add verified cohencontrol bibliography entry",
+      "before": "\\bibitem[Dominici(2025)]{dominici}",
+      "after": "\\bibitem[Cohen et~al.(2023)]{cohencontrol} A. Cohen, A. Smith, M. Swanberg,\nand P. N. Vasudevan. 2023. Control, confidentiality, and the right to be forgotten.\nProceedings of the ACM SIGSAC Conference on Computer and Communications Security,\n3358--3372. \\href{https://doi.org/10.1145/3576915.3616585}{doi:10.1145/3576915.3616585}.\n\\bibitem[Dominici(2025)]{dominici}"
+    },
+    {
+      "reason": "Add verified ginart bibliography entry",
+      "before": "\\bibitem[Green et~al.(2007)]{green}",
+      "after": "\\bibitem[Ginart et~al.(2019)]{ginart} A. A. Ginart, M. Y. Guan,\nG. Valiant, and J. Zou. 2019. Making AI forget you: Data deletion in\nmachine learning. Advances in Neural Information Processing Systems,\n32:3518--3531.\n\\url{https://proceedings.neurips.cc/paper/2019/hash/cb79f8fa58b91d3af6c9c991f63962d3-Abstract.html}.\n\\bibitem[Green et~al.(2007)]{green}"
+    }
+  ],
+  "embedded_style_unchanged": true,
+  "references": 23
+}

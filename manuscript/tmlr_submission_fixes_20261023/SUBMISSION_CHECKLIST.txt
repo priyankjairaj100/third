@@ -1,0 +1,55 @@
+TMLR SUBMISSION PREPARATION V9 - 23 OCTOBER 2026
+
+TECHNICAL REVISION COMPLETE; AUTHOR FACTS REMAIN UNCONFIRMED
+
+Closed findings from the fresh desk-rejection review
+- Added Cao and Yang2015, Ginart et al.2019, Cohen et al.2023 and explicit
+  contract comparisons. The paper claims the specific remaining-horizon
+  coefficient-map identity and joint finite-feature/learner/scorer result.
+- Defined never trained as exclusion from downstream fitting. Records still
+  affect curation, and pretrained-encoder exposure is not being removed.
+- Described the custom E5 full-document chunk/prefix/pooling/precision recipe.
+  Added the unchanged preparation, embedding, selection, sampling, rendering,
+  constrained inference and model-statistics sources. The only helper excerpt
+  is separately labeled and bound; original deployment controls are excluded.
+- Corrected L0 to count inverse-incidence removals. Formal statements, displayed
+  formulas, all reported numerical outcomes and scientific gates are unchanged.
+- Moved operational history and the unexecuted design to the appendices, while
+  retaining failed calibrations, prior audit failures and original unmet gates.
+- All23 references are defined/cited; original20 entries remain unchanged.
+  Independent source-delta/citation/package reviews, native compile and visual
+  inspection of all17 pages passed. Main ends p10; references p10; appendices p12.
+
+Residual editorial judgment
+The constructed theory result uses established algebraic and information tools;
+an editor/reviewer may still judge its interest or depth insufficient. There is
+no demonstrated natural-text utility, comparative runtime or total-memory gain.
+Both calibrations failed, and the original downstream study remains unexecuted.
+The corrections remove the identified fixable omissions; they do not guarantee
+desk acceptance or external peer-review approval.
+
+Reproduction boundary
+Extract the anonymous ZIP into an empty directory and run python3 -B check_all.py
+with Python3.10+, without -O, writing outputs outside the extracted directory.
+This checks identity, syntax and saved aggregate arithmetic. It does not rerun
+private inference, regenerate private graphs/states, or certify proofs.
+REPRODUCTION_README.txt lists runtime pins and missing private inputs. No model
+weights, corpus text, account/record IDs, per-pair observations or author forms
+are included. This is implementation disclosure and aggregate replay, not a
+complete end-to-end replication package.
+
+Author-owned facts still required before submission
+The supplied author identity details are already confirmed for reuse. Remaining
+facts are present-paper contributions, consent, responsibility and intellectual
+provenance; active OpenReview IDs/conflicts; quota and prior-submission/overlap
+status; funding/interests and applicable human-data determination; and authority
+to license the permitted submission. The private AUTHOR_DECLARATIONS.txt gives
+the exact list. No favorable declarations were invented or checked on behalf
+of the authors. Actual AI provenance must be truthful; disclosure alone does
+not establish human intellectual origin or policy eligibility.
+
+Upload only the anonymous PDF and third_tmlr_supplement_v9.zip in the private
+upload directory. The public development audit directory, previous releases,
+private author forms and third-party reference PDFs are not upload artifacts.
+Dominici's unavailable thesis remains a bounded acknowledgment, not a renewed
+search task. Scheduler stays PAUSED. No experiment, SSH, retuning or submission.

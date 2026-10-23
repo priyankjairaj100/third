@@ -1,0 +1,224 @@
+{
+  "audit": "independent_exact_source_delta_mechanical_review",
+  "created_at_utc": "2026-10-23T06:44:42.151900+00:00",
+  "source_path": "REPOSITORY_ROOT/manuscript/third_working_draft.tex",
+  "source_before_sha256": "f8b898047380c45055b341ed88fcc3d6d6fa379f0e4c17fa60fbb22910e1400e",
+  "source_after_sha256": "adf82e53d6720634cded6f75cf3158b1e0d58f73a1ec6c0c051e40fee2a28bfc",
+  "source_delta_sha256": "05aaaae9e9e83bf24a94091671217b0f3bf004e14320bda5a28b60ce946bf73e",
+  "source_diff_sha256": "387a56ae3733d669cd511948cac37956b02c6a742fb943a0c666a8bdee947d13",
+  "declared_before_sha256_matches": true,
+  "declared_after_sha256_matches": true,
+  "exact_reconstruction": true,
+  "exact_unified_diff": true,
+  "edit_count": 30,
+  "edits": [
+    {
+      "number": 1,
+      "reason": "Define abstract information unit and exact target",
+      "unique_before_match": true
+    },
+    {
+      "number": 2,
+      "reason": "Scope first-page never-trained language",
+      "unique_before_match": true
+    },
+    {
+      "number": 3,
+      "reason": "Scope figure caption",
+      "unique_before_match": true
+    },
+    {
+      "number": 4,
+      "reason": "Explain concrete theory lesson",
+      "unique_before_match": true
+    },
+    {
+      "number": 5,
+      "reason": "State contributions without implying general state recovery is new",
+      "unique_before_match": true
+    },
+    {
+      "number": 6,
+      "reason": "Credit direct antecedents and tighten contribution boundary",
+      "unique_before_match": true
+    },
+    {
+      "number": 7,
+      "reason": "Move API-history detail to accounting appendix",
+      "unique_before_match": true
+    },
+    {
+      "number": 8,
+      "reason": "Preserve complete request/retry contract",
+      "unique_before_match": true
+    },
+    {
+      "number": 9,
+      "reason": "Correct L0 accounting; Phi0 bound unchanged",
+      "unique_before_match": true
+    },
+    {
+      "number": 10,
+      "reason": "Make existing upper-bound exclusivity argument explicit",
+      "unique_before_match": true
+    },
+    {
+      "number": 11,
+      "reason": "Condense protocol history without waiving human gates",
+      "unique_before_match": true
+    },
+    {
+      "number": 12,
+      "reason": "Move provenance-history qualifications to appendix",
+      "unique_before_match": true
+    },
+    {
+      "number": 13,
+      "reason": "Disclose custom representation in main methods",
+      "unique_before_match": true
+    },
+    {
+      "number": 14,
+      "reason": "Move infeasible historical design sizes to appendix",
+      "unique_before_match": true
+    },
+    {
+      "number": 15,
+      "reason": "Distinguish specification and supplied execution code",
+      "unique_before_match": true
+    },
+    {
+      "number": 16,
+      "reason": "Move audit history out of scientific results",
+      "unique_before_match": true
+    },
+    {
+      "number": 17,
+      "reason": "Move engineering resource pilot to reproducibility appendix",
+      "unique_before_match": true
+    },
+    {
+      "number": 18,
+      "reason": "Foreground proofs while preserving unfavorable memory result",
+      "unique_before_match": true
+    },
+    {
+      "number": 19,
+      "reason": "Condense unexecuted-program history and retain complete scientific boundary",
+      "unique_before_match": true
+    },
+    {
+      "number": 20,
+      "reason": "Compare Cao2015 specifically without equating feature and record selection",
+      "unique_before_match": true
+    },
+    {
+      "number": 21,
+      "reason": "Remove general state-contract novelty implication",
+      "unique_before_match": true
+    },
+    {
+      "number": 22,
+      "reason": "Credit metadata and history-independence antecedents",
+      "unique_before_match": true
+    },
+    {
+      "number": 23,
+      "reason": "Narrow ticketed comparison in view of metadata literature",
+      "unique_before_match": true
+    },
+    {
+      "number": 24,
+      "reason": "Document complete frozen tokenization/pooling/precision recipe",
+      "unique_before_match": true
+    },
+    {
+      "number": 25,
+      "reason": "Describe expanded source package and excluded deployment inputs",
+      "unique_before_match": true
+    },
+    {
+      "number": 26,
+      "reason": "Preserve moved audit/provenance/resource-pilot history",
+      "unique_before_match": true
+    },
+    {
+      "number": 27,
+      "reason": "Preserve full unexecuted design and infeasible panels in appendix",
+      "unique_before_match": true
+    },
+    {
+      "number": 28,
+      "reason": "Add verified cao bibliography entry",
+      "unique_before_match": true
+    },
+    {
+      "number": 29,
+      "reason": "Add verified cohencontrol bibliography entry",
+      "unique_before_match": true
+    },
+    {
+      "number": 30,
+      "reason": "Add verified ginart bibliography entry",
+      "unique_before_match": true
+    }
+  ],
+  "unchanged_scientific_blocks": {
+    "equation": {
+      "before_count": 9,
+      "after_count": 9,
+      "ordered_blocks_byte_identical": true
+    },
+    "align": {
+      "before_count": 2,
+      "after_count": 2,
+      "ordered_blocks_byte_identical": true
+    },
+    "theorem": {
+      "before_count": 2,
+      "after_count": 2,
+      "ordered_blocks_byte_identical": true
+    },
+    "corollary": {
+      "before_count": 1,
+      "after_count": 1,
+      "ordered_blocks_byte_identical": true
+    },
+    "proof": {
+      "before_count": 3,
+      "after_count": 3,
+      "ordered_blocks_byte_identical": true
+    },
+    "tabular": {
+      "before_count": 1,
+      "after_count": 1,
+      "ordered_blocks_byte_identical": true
+    },
+    "unnumbered_display_math": {
+      "before_count": 15,
+      "after_count": 15,
+      "ordered_blocks_byte_identical": true
+    }
+  },
+  "embedded_style_byte_identical": true,
+  "bibliography": {
+    "before_count": 20,
+    "after_count": 23,
+    "all_original_entries_internally_byte_identical": true,
+    "new_keys": [
+      "cao",
+      "cohencontrol",
+      "ginart"
+    ],
+    "alphabetical_author_year_order": true,
+    "duplicate_keys": [],
+    "undefined_citation_keys": [],
+    "uncited_keys": []
+  },
+  "crossreferences": {
+    "label_count": 32,
+    "duplicate_labels": [],
+    "undefined_references": []
+  },
+  "status": "pass"
+}

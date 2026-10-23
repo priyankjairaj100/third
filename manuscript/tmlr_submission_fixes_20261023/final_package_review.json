@@ -1,0 +1,1865 @@
+{
+  "added_members": [
+    "ADDON_SOURCE_MAP.json",
+    "REPRODUCTION_README.txt",
+    "REPRODUCTION_RECIPE.json",
+    "code/empirical_execution/config/planned_study_design.json",
+    "code/empirical_execution/phase3/calibration.py",
+    "code/empirical_execution/phase3/run_preparation.py",
+    "code/empirical_execution/phase4/adapters.py",
+    "code/empirical_execution/phase4/embeddings.py",
+    "code/empirical_execution/phase4/model_selection.py",
+    "code/empirical_execution/phase4/news_calendar.py",
+    "code/local_run/e5_sharded_cpu_v2_20261013/expectations.json",
+    "code/local_run/llm_annotation_inference_v1_20261014/contract.py",
+    "code/local_run/llm_annotation_inference_v1_20261014/expectations.json",
+    "code/local_run/llm_annotation_inference_v1_20261014/kernel.py",
+    "code/local_run/llm_annotation_inference_v1_20261014/ledger.py",
+    "code/local_run/llm_annotation_statistics_v1_20261014/statistics_core.py",
+    "code/local_run/llm_development_guard_v1_20261016/RESERVATION_PLAN.json",
+    "code/local_run/llm_development_guard_v1_20261016/common.py",
+    "code/local_run/llm_development_guard_v1_20261016/panel_core.py",
+    "code/local_run/llm_selection_sampler_v1_20261014/sampler.py",
+    "code/local_run/llm_v4_inference_v2_20261014/contract.py",
+    "code/local_run/llm_v4_inference_v2_20261014/expectations.json",
+    "code/local_run/llm_v4_inference_v2_20261014/kernel.py",
+    "code/local_run/llm_v4_inference_v2_20261014/ledger.py",
+    "code/local_run/llm_v4_inference_v2_20261014/statistics_core.py",
+    "code/local_run/model_annotation_runtime_mistral_v1_20261011/bounded_reason.py",
+    "code/local_run/model_annotation_runtime_mistral_v1_20261011/requirements.txt",
+    "code/local_run/model_annotation_runtime_mistral_v1_20261011/run_pilot.py",
+    "code/local_run/model_annotation_runtime_mistral_v1_20261011/runtime_plan.json",
+    "code/local_run/model_annotation_runtime_v5_20261011/bounded_reason.py",
+    "code/local_run/model_annotation_runtime_v5_20261011/requirements.txt",
+    "code/local_run/model_annotation_runtime_v5_20261011/run_pilot.py",
+    "code/local_run/model_annotation_runtime_v5_20261011/runtime_plan.json",
+    "code/local_run/model_annotation_v2_20261011/judge_system_prompt.txt",
+    "code/local_run/model_annotation_v2_20261011/judge_task_definition.txt",
+    "code/local_run/model_annotation_v2_20261011/model_judgment.schema.json",
+    "code/local_run/model_annotation_v2_20261011/model_response.schema.json",
+    "code/local_run/model_annotation_v3_20261014/PLAN.json",
+    "code/local_run/model_annotation_v3_20261014/protocol.py",
+    "code/local_run/model_annotation_v4_20261014/PLAN.json",
+    "code/local_run/model_annotation_v4_20261014/parent_PLAN.json",
+    "code/local_run/model_annotation_v4_20261014/protocol.py",
+    "code/local_run/model_annotation_v4_20261014/sampling.py"
+  ],
+  "all_archive_member_modes_regular_0644": true,
+  "all_json_strictly_parsed": true,
+  "all_paths_safe_unique_and_regular": true,
+  "all_python_sources_ast_parsed": true,
+  "archive": {
+    "bytes": 610719,
+    "sha256": "d005b1bdea2ef74020c989e2a57557c3e4646c628efc3d5834bc75665ab79bf4"
+  },
+  "archive_path": "PRIVATE_ORCHESTRATION_ROOT/work/desk-reject-fixes-20261023/third_tmlr_supplement_v9.zip",
+  "audit": "independent_final_v9_package_review",
+  "derived_entries": {
+    "REPRODUCTION_README.txt": {
+      "binding": {
+        "bytes": 9492,
+        "sha256": "71e45f126aeaa391519c8f7ce2941347471f70d70d3ad1b39909412acfb924d9"
+      },
+      "kind": "new_reviewer_documentation",
+      "scientific_code_changed": false
+    },
+    "REPRODUCTION_RECIPE.json": {
+      "binding": {
+        "bytes": 3666,
+        "sha256": "ed55646f6de80d81440daac8d3c10fe03cd9e02828a1f050f8371bc930f3bac3"
+      },
+      "kind": "allowlisted_source_bound_recipe_view",
+      "origin_bindings": {
+        "empirical_execution/phase4/adapters.py": {
+          "bytes": 31889,
+          "sha256": "7171b59802dff219636a08b53f13d8b3bdbb7bc400f5712f041280e61e8d6f0d"
+        },
+        "empirical_execution/phase4/embeddings.py": {
+          "bytes": 27522,
+          "sha256": "bb1af9a6583a90372f7641f406afdb418017797cc8d86ee67f117f215c65d2c1"
+        },
+        "empirical_execution/phase4/model_selection.py": {
+          "bytes": 20135,
+          "sha256": "b9a73b9cc0d7a2a0531c38e7a606290df52845e3002a6d47c21cc6c3fb459434"
+        },
+        "local_run/e5_sharded_cpu_v2_20261013/expectations.json": {
+          "bytes": 3008,
+          "sha256": "68442e55534e49f02573c4b05d602bd6ebea67d35bbcb673dac083608131bcbe"
+        },
+        "local_run/llm_v4_inference_v2_20261014/expectations.json": {
+          "bytes": 13397,
+          "sha256": "379eefe073e335dd76408ba15d325f2df00eebf533263cae1ffdf490918ec895"
+        }
+      },
+      "scientific_parameters_changed": false
+    },
+    "code/local_run/llm_development_guard_v1_20261016/common.py": {
+      "binding": {
+        "bytes": 321,
+        "sha256": "ffe518c30490314c1631803068e78b46c49ec23e094cfca2f4d3c1da4b192f3b"
+      },
+      "kind": "source_function_excerpt_with_documentation",
+      "origin": {
+        "binding": {
+          "bytes": 5070,
+          "sha256": "aca3028fb30aafa1d6e0b1289098c9d6b4981733d0dd609c730eaa7fc64eec38"
+        },
+        "excerpt_binding": {
+          "bytes": 81,
+          "sha256": "fba5518dbbe127c5d736b6a2ef99ebbb28b24be84759bc3ce649d93a6815e637"
+        },
+        "line_end": 41,
+        "line_start": 39,
+        "repository_member": "local_run/llm_development_guard_v1_20261016/common.py"
+      },
+      "transformation": "Preserve exact require function bytes; add explanatory docstring; omit deployment constants and unrelated I/O helpers. panel_core.py uses only c.require."
+    }
+  },
+  "email_like_strings": [
+    {
+      "line": 30,
+      "member": "manuscript.tex",
+      "value": "if@accepted"
+    },
+    {
+      "line": 36,
+      "member": "manuscript.tex",
+      "value": "if@preprint"
+    },
+    {
+      "line": 69,
+      "member": "manuscript.tex",
+      "value": "drstrip@sandia-2"
+    },
+    {
+      "line": 81,
+      "member": "manuscript.tex",
+      "value": "m@th"
+    },
+    {
+      "line": 112,
+      "member": "manuscript.tex",
+      "value": "if@accepted"
+    },
+    {
+      "line": 113,
+      "member": "manuscript.tex",
+      "value": "if@preprint"
+    },
+    {
+      "line": 127,
+      "member": "manuscript.tex",
+      "value": "if@accepted"
+    },
+    {
+      "line": 128,
+      "member": "manuscript.tex",
+      "value": "if@preprint"
+    }
+  ],
+  "forbidden_payload_suffixes": [],
+  "fresh_extraction_command": [
+    "/opt/homebrew/bin/python3.12",
+    "-I",
+    "-B",
+    "check_all.py"
+  ],
+  "fresh_extraction_replay": {
+    "calibration": {
+      "compute_records_summed": 72,
+      "cut_quotients_and_decisions_checked": 102,
+      "fresh_validation_run": false,
+      "v3_and_v4_selection_passed": false,
+      "v4_bin_boundaries_reconstructed": 12
+    },
+    "generating_code_executed": false,
+    "manuscript_source_sha256": "adf82e53d6720634cded6f75cf3158b1e0d58f73a1ec6c0c051e40fee2a28bfc",
+    "passed": true,
+    "payload_files_checked": 198,
+    "private_data_replayed": false,
+    "python_sources_syntax_checked": 38,
+    "repair": {
+      "completion_output_hashes": 53,
+      "fixed_retained_selection_monotonicity_checks": 400,
+      "meter_checks": 102,
+      "passed": true,
+      "public_files_verified": 67,
+      "scope": "Portable aggregate arithmetic/metadata replay; private states/graphs and original raw receipts are not recomputed.",
+      "summary": {
+        "checkpoint_count": 408,
+        "checkpoints": [
+          1,
+          8,
+          32,
+          128
+        ],
+        "horizon": 128,
+        "human_or_model_annotations": 0,
+        "no_selected_cutoff": true,
+        "record_arms_completed": 51,
+        "request_frame_sizes": {
+          "R": 1001,
+          "S": 457
+        },
+        "singleton_membership_checks": 13056,
+        "source_arms_completed": 51,
+        "task_learner_trained": false,
+        "thresholds_completed": 51,
+        "unavailable_arms": []
+      }
+    },
+    "scope": "File identity, source syntax and aggregate arithmetic; no private inference, graph/state regeneration or proof verification.",
+    "structure": {
+      "all51cuts": true,
+      "blocker_cdf_comparisons": 50050,
+      "bundle_files_checked": 62,
+      "completion_output_hashes_checked": 53,
+      "exact_expectations_replayed": 204,
+      "passed": true,
+      "scope": "Portable aggregate replay only; private graphs and original execution metadata were not re-created.",
+      "summary": {
+        "complete_graph_cut_count": 25,
+        "cuts_with_any_genuine_source_admission": 47,
+        "cuts_with_any_singleton_record_admission": 48,
+        "cuts_with_excluded_record_deletion_admission": 13,
+        "empty_graph_cut_count": 1,
+        "human_or_model_annotations": 0,
+        "rows": 1001,
+        "threshold_selected": false,
+        "thresholds": 51
+      }
+    },
+    "unchanged_copy_bindings_checked": 189
+  },
+  "known_identity_or_secret_hits": [],
+  "limitations": [
+    "Public arithmetic replay does not regenerate private observations, sample realizations, embeddings, inference, graphs or exact repair states.",
+    "Private activation seeds, raw text/ownership, row/pair allocations, individual model outputs, assets and deployment receipts remain intentionally absent.",
+    "Provided scientific sources and runtime pins are disclosure for inspection/reuse, not a turnkey reconstruction of the original admitted cluster calls.",
+    "The small require helper is an explicitly marked source excerpt, not an unchanged copy of its deployment module.",
+    "No model was loaded, no new scientific experiment or network request was run, and no source/repository/archive file was edited.",
+    "Known-marker and file-type privacy screens do not guarantee unlinkability against external source matching.",
+    "Package checks do not certify author declarations, rights, novelty, scientific validity or final submission eligibility."
+  ],
+  "manifest_payloads_checked": 198,
+  "members": 199,
+  "negative_controls": [
+    {
+      "case": "unexpected_file",
+      "rejected": true,
+      "required_error": "Exact inventory",
+      "returncode": 1
+    },
+    {
+      "case": "tampered_aggregate",
+      "rejected": true,
+      "required_error": "Hash/size mismatch",
+      "returncode": 1
+    },
+    {
+      "case": "optimized_python",
+      "rejected": true,
+      "required_error": "Run without -O",
+      "returncode": 1
+    }
+  ],
+  "new_exact_addon_entries": 41,
+  "origin_comparisons": [
+    {
+      "byte_identical": true,
+      "member": "TMLR_STYLE_LICENSE.txt",
+      "origin": {
+        "upstream": "https://github.com/JmlrOrg/tmlr-style-file/blob/main/LICENSE"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "annotation/judge_system_prompt.txt",
+      "origin": {
+        "protocol_member": "local_run/model_annotation_v2_20261011/judge_system_prompt.txt"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "annotation/judge_task_definition.txt",
+      "origin": {
+        "protocol_member": "local_run/model_annotation_v2_20261011/judge_task_definition.txt"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "annotation/model_judgment.schema.json",
+      "origin": {
+        "protocol_member": "local_run/model_annotation_v2_20261011/model_judgment.schema.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "annotation/model_response.schema.json",
+      "origin": {
+        "protocol_member": "local_run/model_annotation_v2_20261011/model_response.schema.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "checks/calibration.py",
+      "origin": {
+        "archive_version": 1,
+        "member": "check_aggregates.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/algorithm_round2.py",
+      "origin": {
+        "archive_version": 1,
+        "member": "code/algorithm_round2.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/algorithm_round2.py",
+      "origin": {
+        "archive_version": 4,
+        "member": "code/algorithm_round2.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/empirical_execution/ccu/__init__.py",
+      "origin": {
+        "archive_version": 1,
+        "member": "code/empirical_execution/ccu/__init__.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/empirical_execution/ccu/__init__.py",
+      "origin": {
+        "archive_version": 3,
+        "member": "code/empirical_execution/ccu/__init__.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/empirical_execution/ccu/__init__.py",
+      "origin": {
+        "archive_version": 4,
+        "member": "code/empirical_execution/ccu/__init__.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/empirical_execution/ccu/core.py",
+      "origin": {
+        "archive_version": 1,
+        "member": "code/empirical_execution/ccu/core.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/empirical_execution/ccu/core.py",
+      "origin": {
+        "archive_version": 3,
+        "member": "code/empirical_execution/ccu/core.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/empirical_execution/ccu/core.py",
+      "origin": {
+        "archive_version": 4,
+        "member": "code/empirical_execution/ccu/core.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/empirical_execution/ccu/structure.py",
+      "origin": {
+        "archive_version": 4,
+        "member": "code/empirical_execution/ccu/structure.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/empirical_execution/config/planned_study_design.json",
+      "origin": {
+        "repository_member": "empirical_execution/config/planned_study_design.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/empirical_execution/phase10/finite_word_codec.py",
+      "origin": {
+        "archive_version": 1,
+        "member": "code/empirical_execution/phase10/finite_word_codec.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/empirical_execution/phase3/calibration.py",
+      "origin": {
+        "repository_member": "empirical_execution/phase3/calibration.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/empirical_execution/phase3/panels.py",
+      "origin": {
+        "archive_version": 1,
+        "member": "code/empirical_execution/phase3/panels.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/empirical_execution/phase3/panels.py",
+      "origin": {
+        "archive_version": 3,
+        "member": "code/empirical_execution/phase3/panels.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/empirical_execution/phase3/panels.py",
+      "origin": {
+        "archive_version": 4,
+        "member": "code/empirical_execution/phase3/panels.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/empirical_execution/phase3/panels.py",
+      "origin": {
+        "repository_member": "empirical_execution/phase3/panels.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/empirical_execution/phase3/reference_graph.py",
+      "origin": {
+        "archive_version": 1,
+        "member": "code/empirical_execution/phase3/reference_graph.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/empirical_execution/phase3/reference_graph.py",
+      "origin": {
+        "archive_version": 3,
+        "member": "code/empirical_execution/phase3/reference_graph.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/empirical_execution/phase3/reference_graph.py",
+      "origin": {
+        "archive_version": 4,
+        "member": "code/empirical_execution/phase3/reference_graph.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/empirical_execution/phase3/reference_graph.py",
+      "origin": {
+        "repository_member": "empirical_execution/phase3/reference_graph.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/empirical_execution/phase3/run_preparation.py",
+      "origin": {
+        "repository_member": "empirical_execution/phase3/run_preparation.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/empirical_execution/phase4/adapters.py",
+      "origin": {
+        "repository_member": "empirical_execution/phase4/adapters.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/empirical_execution/phase4/embeddings.py",
+      "origin": {
+        "repository_member": "empirical_execution/phase4/embeddings.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/empirical_execution/phase4/model_selection.py",
+      "origin": {
+        "repository_member": "empirical_execution/phase4/model_selection.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/empirical_execution/phase4/news_calendar.py",
+      "origin": {
+        "repository_member": "empirical_execution/phase4/news_calendar.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/e5_sharded_cpu_v2_20261013/expectations.json",
+      "origin": {
+        "repository_member": "local_run/e5_sharded_cpu_v2_20261013/expectations.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/llm_annotation_inference_v1_20261014/contract.py",
+      "origin": {
+        "repository_member": "local_run/llm_annotation_inference_v1_20261014/contract.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/llm_annotation_inference_v1_20261014/expectations.json",
+      "origin": {
+        "repository_member": "local_run/llm_annotation_inference_v1_20261014/expectations.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/llm_annotation_inference_v1_20261014/kernel.py",
+      "origin": {
+        "repository_member": "local_run/llm_annotation_inference_v1_20261014/kernel.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/llm_annotation_inference_v1_20261014/ledger.py",
+      "origin": {
+        "repository_member": "local_run/llm_annotation_inference_v1_20261014/ledger.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/llm_annotation_statistics_v1_20261014/statistics_core.py",
+      "origin": {
+        "repository_member": "local_run/llm_annotation_statistics_v1_20261014/statistics_core.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/llm_development_guard_v1_20261016/RESERVATION_PLAN.json",
+      "origin": {
+        "repository_member": "local_run/llm_development_guard_v1_20261016/RESERVATION_PLAN.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/llm_development_guard_v1_20261016/panel_core.py",
+      "origin": {
+        "repository_member": "local_run/llm_development_guard_v1_20261016/panel_core.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/llm_selection_sampler_v1_20261014/sampler.py",
+      "origin": {
+        "repository_member": "local_run/llm_selection_sampler_v1_20261014/sampler.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/llm_v4_inference_v2_20261014/contract.py",
+      "origin": {
+        "repository_member": "local_run/llm_v4_inference_v2_20261014/contract.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/llm_v4_inference_v2_20261014/expectations.json",
+      "origin": {
+        "repository_member": "local_run/llm_v4_inference_v2_20261014/expectations.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/llm_v4_inference_v2_20261014/kernel.py",
+      "origin": {
+        "repository_member": "local_run/llm_v4_inference_v2_20261014/kernel.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/llm_v4_inference_v2_20261014/ledger.py",
+      "origin": {
+        "repository_member": "local_run/llm_v4_inference_v2_20261014/ledger.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/llm_v4_inference_v2_20261014/statistics_core.py",
+      "origin": {
+        "repository_member": "local_run/llm_v4_inference_v2_20261014/statistics_core.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/model_annotation_runtime_mistral_v1_20261011/bounded_reason.py",
+      "origin": {
+        "repository_member": "local_run/model_annotation_runtime_mistral_v1_20261011/bounded_reason.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/model_annotation_runtime_mistral_v1_20261011/requirements.txt",
+      "origin": {
+        "repository_member": "local_run/model_annotation_runtime_mistral_v1_20261011/requirements.txt"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/model_annotation_runtime_mistral_v1_20261011/run_pilot.py",
+      "origin": {
+        "repository_member": "local_run/model_annotation_runtime_mistral_v1_20261011/run_pilot.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/model_annotation_runtime_mistral_v1_20261011/runtime_plan.json",
+      "origin": {
+        "repository_member": "local_run/model_annotation_runtime_mistral_v1_20261011/runtime_plan.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/model_annotation_runtime_v5_20261011/bounded_reason.py",
+      "origin": {
+        "repository_member": "local_run/model_annotation_runtime_v5_20261011/bounded_reason.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/model_annotation_runtime_v5_20261011/requirements.txt",
+      "origin": {
+        "repository_member": "local_run/model_annotation_runtime_v5_20261011/requirements.txt"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/model_annotation_runtime_v5_20261011/run_pilot.py",
+      "origin": {
+        "repository_member": "local_run/model_annotation_runtime_v5_20261011/run_pilot.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/model_annotation_runtime_v5_20261011/runtime_plan.json",
+      "origin": {
+        "repository_member": "local_run/model_annotation_runtime_v5_20261011/runtime_plan.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/model_annotation_v2_20261011/judge_system_prompt.txt",
+      "origin": {
+        "repository_member": "local_run/model_annotation_v2_20261011/judge_system_prompt.txt"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/model_annotation_v2_20261011/judge_task_definition.txt",
+      "origin": {
+        "repository_member": "local_run/model_annotation_v2_20261011/judge_task_definition.txt"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/model_annotation_v2_20261011/model_judgment.schema.json",
+      "origin": {
+        "repository_member": "local_run/model_annotation_v2_20261011/model_judgment.schema.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/model_annotation_v2_20261011/model_response.schema.json",
+      "origin": {
+        "repository_member": "local_run/model_annotation_v2_20261011/model_response.schema.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/model_annotation_v3_20261014/PLAN.json",
+      "origin": {
+        "repository_member": "local_run/model_annotation_v3_20261014/PLAN.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/model_annotation_v3_20261014/protocol.py",
+      "origin": {
+        "repository_member": "local_run/model_annotation_v3_20261014/protocol.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/model_annotation_v4_20261014/PLAN.json",
+      "origin": {
+        "repository_member": "local_run/model_annotation_v4_20261014/PLAN.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/model_annotation_v4_20261014/parent_PLAN.json",
+      "origin": {
+        "repository_member": "local_run/model_annotation_v4_20261014/parent_PLAN.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/model_annotation_v4_20261014/protocol.py",
+      "origin": {
+        "repository_member": "local_run/model_annotation_v4_20261014/protocol.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/local_run/model_annotation_v4_20261014/sampling.py",
+      "origin": {
+        "repository_member": "local_run/model_annotation_v4_20261014/sampling.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/stage1/structure_stage1.py",
+      "origin": {
+        "archive_version": 3,
+        "member": "code/stage1/structure_stage1.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/stage2/curation_repair.py",
+      "origin": {
+        "archive_version": 4,
+        "member": "code/stage2/curation_repair.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "code/stage2/stage1_common.py",
+      "origin": {
+        "archive_version": 4,
+        "member": "code/stage2/stage1_common.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/calibration/data/calibration_v3.json",
+      "origin": {
+        "archive_version": 1,
+        "member": "data/calibration_v3.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/calibration/data/calibration_v4.json",
+      "origin": {
+        "archive_version": 1,
+        "member": "data/calibration_v4.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/calibration/data/compute_history.json",
+      "origin": {
+        "archive_version": 1,
+        "member": "data/compute_history.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/MANIFEST.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/MANIFEST.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/PRIVACY_INVENTORY.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/PRIVACY_INVENTORY.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/README.txt",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/README.txt"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/SOURCE_BINDINGS.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/SOURCE_BINDINGS.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/allcut_summary.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/allcut_summary.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/audit_receipt_adapter.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/audit_receipt_adapter.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/independent_review.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/independent_review.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/independent_review.txt",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/independent_review.txt"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/initial_audit_receipt.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/initial_audit_receipt.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/output_field_interpretation.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/output_field_interpretation.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/replay_aggregates.py",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/replay_aggregates.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/resource_receipt.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/resource_receipt.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/completion.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/completion.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/intake.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/intake.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/subset_oracle.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/subset_oracle.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_00.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_00.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_01.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_01.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_02.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_02.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_03.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_03.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_04.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_04.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_05.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_05.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_06.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_06.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_07.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_07.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_08.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_08.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_09.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_09.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_10.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_10.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_11.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_11.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_12.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_12.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_13.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_13.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_14.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_14.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_15.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_15.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_16.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_16.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_17.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_17.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_18.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_18.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_19.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_19.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_20.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_20.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_21.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_21.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_22.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_22.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_23.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_23.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_24.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_24.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_25.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_25.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_26.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_26.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_27.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_27.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_28.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_28.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_29.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_29.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_30.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_30.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_31.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_31.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_32.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_32.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_33.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_33.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_34.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_34.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_35.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_35.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_36.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_36.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_37.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_37.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_38.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_38.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_39.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_39.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_40.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_40.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_41.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_41.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_42.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_42.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_43.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_43.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_44.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_44.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_45.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_45.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_46.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_46.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_47.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_47.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_48.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_48.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_49.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_49.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/run/threshold_50.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/run/threshold_50.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/stage1_reference.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/stage1_reference.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/repair/study_protocol.json",
+      "origin": {
+        "archive_version": 4,
+        "member": "repair/study_protocol.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/MANIFEST.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/MANIFEST.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/PRIVACY_INVENTORY.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/PRIVACY_INVENTORY.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/README.txt",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/README.txt"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/SOURCE_BINDINGS.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/SOURCE_BINDINGS.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/independent_review.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/independent_review.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/independent_review.txt",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/independent_review.txt"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/replay_aggregates.py",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/replay_aggregates.py"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/resource_receipt.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/resource_receipt.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/completion.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/completion.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/intake.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/intake.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/subset_oracle.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/subset_oracle.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_00.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_00.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_01.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_01.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_02.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_02.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_03.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_03.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_04.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_04.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_05.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_05.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_06.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_06.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_07.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_07.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_08.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_08.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_09.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_09.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_10.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_10.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_11.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_11.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_12.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_12.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_13.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_13.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_14.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_14.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_15.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_15.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_16.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_16.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_17.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_17.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_18.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_18.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_19.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_19.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_20.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_20.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_21.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_21.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_22.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_22.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_23.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_23.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_24.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_24.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_25.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_25.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_26.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_26.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_27.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_27.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_28.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_28.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_29.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_29.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_30.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_30.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_31.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_31.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_32.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_32.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_33.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_33.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_34.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_34.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_35.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_35.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_36.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_36.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_37.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_37.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_38.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_38.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_39.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_39.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_40.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_40.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_41.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_41.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_42.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_42.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_43.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_43.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_44.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_44.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_45.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_45.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_46.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_46.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_47.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_47.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_48.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_48.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_49.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_49.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/run/threshold_50.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/run/threshold_50.json"
+      }
+    },
+    {
+      "byte_identical": true,
+      "member": "evidence/structure/study_protocol.json",
+      "origin": {
+        "archive_version": 3,
+        "member": "structure/study_protocol.json"
+      }
+    }
+  ],
+  "original_origins_checked": 200,
+  "panel_common_attributes": [
+    "require"
+  ],
+  "passed": true,
+  "private_payload_review": {
+    "archive_is_utf8_code_metadata_and_aggregate_evidence": true,
+    "email_like_token_classification": "LaTeX macro names plus a historical third-party style-source comment (drstrip@sandia-2); no paper-author email found.",
+    "known_direct_identity_or_credential_markers": 0,
+    "metadata_bindings_to_missing_private_artifacts_do_not_include_their_contents": true,
+    "new_members_are_declared_code_config_recipe_and_mappings": true,
+    "no_raw_dataset_or_model_asset_file_formats_present": true,
+    "residual_limit": "File classification and known-pattern screening cannot prove anonymity against public source-hash matching or every unknown identifier."
+  },
+  "readme_review": {
+    "aggregate_command_matches_observed_behavior": true,
+    "derived_helper_context_explicit": true,
+    "e5_recipe_matches_source_functions": "chunk_inputs, normalize_reference, encode_document and LocalTransformer, embeddings.py lines190-329: complete once-tokenized content, 256-content-token chunks with separately tokenized prefix, attention-mask mean, FP64 chunk normalization and content-count weighted document normalization, then FP32 storage.",
+    "historical_gate_context_explicit": true,
+    "new_generating_modules_not_imported_by_checker": true,
+    "no_turnkey_end_to_end_or_token_replay_claim": true,
+    "private_input_omissions_explicit": true,
+    "renderer_claim_matches_both_model_families": "Both tokenize_call implementations construct only task_definition and A/B document text in the user payload and apply the pinned chat template; scores, IDs and strata are not task fields.",
+    "scientific_verification_scope_not_inflated": true,
+    "status": "accurate_with_explicit_reproduction_limits",
+    "v3_sampling_and_statistics_disclosure": "Added sampler.py implements20 reservoirs with exact inclusion weights and separate swaps; added V3 statistics_core.py enforces20-bin design and19/20 joint-model selection. Both are exact source copies."
+  },
+  "recipe_runtime_values_match_original_expectations": true,
+  "remaining_actionable_findings": [],
+  "require_helper_exact_original_excerpt_verified": true,
+  "reviewed_at_utc": "2026-10-23T06:48:34.897079+00:00",
+  "scope": "Package integrity, exact-origin comparisons, disclosure boundaries and aggregate replay. Not model inference, scientific replication, proof review or external peer review.",
+  "source_sha256": "adf82e53d6720634cded6f75cf3158b1e0d58f73a1ec6c0c051e40fee2a28bfc",
+  "unchanged_copy_entries": 189,
+  "v8_member_changes": [
+    "MANIFEST.json",
+    "README.txt",
+    "SOURCE_MAP.json",
+    "check_all.py",
+    "manuscript.tex"
+  ],
+  "v8_scientific_code_evidence_and_protocol_bytes_preserved": true
+}

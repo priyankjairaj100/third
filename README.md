@@ -1,8 +1,18 @@
 # Unlearning What Was Never Trained
 
-Research workspace for **counterfactual repair after semantic data curation**, targeting ACL 2027.
+Research workspace for **counterfactual repair after semantic data curation**, targeting TMLR.
 
 **Start a new chat with [RESUME_CONTEXT.md](RESUME_CONTEXT.md).** It records the current state, user constraints, evidence boundaries, and next steps. [THEORY_AND_RESULTS_HANDOFF.md](THEORY_AND_RESULTS_HANDOFF.md) provides the deeper theory and results history.
+
+## Current submission preparation - 23 October 2026
+
+The TMLR V9 manuscript and anonymous supplement incorporate the desk-review
+corrections. See [the current checklist](manuscript/tmlr_submission_fixes_20261023/SUBMISSION_CHECKLIST.txt)
+and [release status](manuscript/RELEASE_BUILD_STATUS.json). Technical checks pass;
+author attestations/profile IDs remain unconfirmed, and no submission occurred.
+Both LLM calibrations failed; the original effect study remains unexecuted.
+The scheduler is paused. Earlier sections below describe historical checkpoints;
+use RESUME_CONTEXT.md for current evidence and the fully LLM annotation boundary.
 
 ## Local empirical execution — 5 October 2026
 

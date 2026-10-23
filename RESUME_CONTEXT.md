@@ -1,3 +1,28 @@
+Latest continuation - 23 October 2026: TMLR V9 desk-review fixes complete
+
+Current source SHA256: adf82e53d6720634cded6f75cf3158b1e0d58f73a1ec6c0c051e40fee2a28bfc.
+Closed the fresh review's3 missing antecedents, custom E5 description/source
+omission, never-trained scope, L0 accounting wording and main-text workflow
+history. All23 references resolve and their audited scope is explicit. Formal
+math, numerical outcomes, failed calibrations and original unmet gates remain.
+
+Native compiler and all17page visual review passed (main/references p10,
+appendices p12). Final anonymous supplement has199 direct members,
+189 exact-copy entries and one disclosed helper excerpt.
+Independent source/citation/package reviews passed. No new scientific result.
+Current public milestone: manuscript/tmlr_submission_fixes_20261023.
+Read SUBMISSION_CHECKLIST.txt, CITATION_AUDIT.json and final_package_review.json.
+Private upload packet: outputs/tmlr_submission_20261023_v9.
+
+Author identity details from the supplied PDF are confirmed; actual current-paper
+attestations/profile IDs remain unconfirmed. Editorial interest/depth and absent
+natural utility/cost evidence remain limitations, not solved by packaging.
+Technical preparation is complete; submission_ready remains false. No submission.
+Scheduler remains PAUSED; no SSH, experiment, retuning, protected-file change or
+renewed Dominici search. The unavailable thesis remains acknowledged/nonblocking.
+
+HISTORICAL CHECKPOINTS FOLLOW
+
 Latest continuation — 22 October 2026: TMLR desk-rejection and citation audit
 
 Current source SHA256: f8b898047380c45055b341ed88fcc3d6d6fa379f0e4c17fa60fbb22910e1400e.

@@ -1,0 +1,57 @@
+Independent final source review: PASS for source, theory delta and coherence scope
+Source: adf82e53d6720634cded6f75cf3158b1e0d58f73a1ec6c0c051e40fee2a28bfc
+Baseline: f8b898047380c45055b341ed88fcc3d6d6fa379f0e4c17fa60fbb22910e1400e
+Delta JSON: 05aaaae9e9e83bf24a94091671217b0f3bf004e14320bda5a28b60ce946bf73e
+Diff: 387a56ae3733d669cd511948cac37956b02c6a742fb943a0c666a8bdee947d13
+
+No actionable source findings. All 30 recorded edits exactly reconstruct the current file.
+
+All 30 exact replacements: pass
+Each before span occurs once in sequential application; applying every replacement to the frozen baseline exactly reconstructs the requested current bytes. Independently regenerated unified diff is byte-identical to source.diff.
+
+Formal statements and formulas: pass
+All 9 equation, 2 align, 2 theorem, 1 corollary, 3 proof, 1 tabular and 15 true display-math blocks are byte-identical in order. Embedded TMLR style is byte-identical. This includes scorer/range assumptions, exact rational ridge target, all bit-counting formulas and the squared-error contract.
+
+L0 correction: pass (source line 1080)
+Correctly replaces the overstrong identifier-touch wording by inverse-incidence removals. Tuple copying, hashing and comparison work remains charged to Phi0, so the theorem-level O(Q+Phi0+sM0) bound is unchanged. The main-text incidence-touch shorthand concerns the inverse-index incidences, not tuple identifier-cell copying.
+
+Hard-query exclusivity: pass (source line 521)
+Each blocker set has size K; an allowed request activating candidate i must contain that full set and therefore equal F_i. Distinct candidates have distinct individual blockers, so no allowed request activates two. This makes an existing sufficiency argument explicit without strengthening the theorem.
+
+Abstract information units and title scope: pass (source line 240)
+The abstract now identifies exact rational ridge and defines m excluded candidates each with D private signs. Introduction and caption explicitly limit never trained to downstream fitting; curation influence and fixed pretrained representation remain disclosed. No claim of encoder-pretraining unlearning is added.
+
+Theory lesson and novelty scope: pass (source line 301)
+Permanent ineligibility follows the existing monotonicity argument. The one-extra-deletion private-sign statement is explicitly construction-specific. State recovery, preprocessing-aware unlearning and provenance are credited as established; no broad new-general-framework claim is introduced.
+
+New bibliography and citation coverage: pass
+Original 20 entries retain their internal bytes; precisely Cao/Yang2015, Ginartetal2019 and Cohenetal2023 are added. All 23 keys are cited and resolve, without duplicates, in alphabetical author/year order. All 32 labels are unique and referenced labels resolve.
+
+Primary-source support for new comparisons: pass
+Cao primary text supports summation-form treatment of feature selection and modeling; Ginart Definition3.1 includes arbitrary metadata supporting subsequent deletions; Cohen Sections3.1/3.4 treats adaptive history independence and one output versus state/future behavior. These establish antecedents, not equivalence of all contracts. The separate integrated citation review provides full metadata and audit trail.
+
+Prior comparison limitations: pass (source line 887)
+Ticketed main one-request and AppendixB.1 multiple-request caveats remain. The information accounting remains distinct from central/ticket accounting. Tadakamalla joint answer-tuple qualifier and Dominici unavailable-fulltext qualification remain unchanged in substance. E5 pretraining-overlap limitation remains explicit.
+
+Numerical results and scientific gates: pass (source line 729)
+Checked unchanged numerical calibration, structural, repair and compute statements against the baseline. All selection/validation cutoffs, failure counts, invalid-response handling, favorable-imputation limit, all51-cut diagnostic scope, 13056 updates, 408 checkpoints, negative B-E memory result, no-retuning and unexecuted utility/held-out boundary are retained. No acceptance criterion or original unmet human gate is waived.
+
+Historical moves: pass (source line 1316)
+Appendices retain low-level/service retry distinctions; original human branch noninheritance; documentary-not-cryptographic source provenance; exact-byte audits and newline failure; internal-not-external reviews; entire262144-pair engineering pilot with .50/.99/.995, .7783seconds and nonperformance caveat; 21332-job design inventory; infeasible100000/200000-row panels; evaluation reservation and no held-out supplementation.
+
+New embedding recipe: pass_for_source_description (source line 1274)
+Compared against frozen phase4/embeddings.py: tokenize once without truncation, consecutive256 content chunks, separately tokenized query-prefix, specials, one-document batches, CPU FP32/eager/eval, mask padding but include attended prefix/specials, FP64 ordered normalization, content-count weighting, document-order FP64 accumulation, renormalization and FP32 storage match. Fixed261 padding is supported by the existing admitted-tokenizer evidence and independent empirical audit. No inference was rerun and no custom-recipe result is generalized to all E5 uses.
+
+Full-source coherence: pass
+Read all current manuscript content and all exact changes; rechecked unchanged embedded style mechanically. Main text follows target, algorithm, scoped obstruction, failed calibration, structural/repair diagnostics, antecedents and limitations. Moved details remain reachable via appendix references. Planned comparisons remain explicitly unexecuted.
+
+Supplement coverage sentences: conditional_on_separate_package_review (source line 1248)
+Wording now correctly describes an explicit source subset and excluded wrappers/private activation locks. New actual included-module and top-level check claims must be bound to the final assembled supplement by the separate package review. This source/theory review does not certify that artifact or private-observation authenticity.
+
+Limits:
+Finite construction and standard proof tools may still raise an editor or reviewer interest/technical-depth question; no editorial acceptance or blanket desk-reject clearance is claimed.
+Natural-text utility and matched-cost advantage remain unmeasured; revisions appropriately do not manufacture results.
+This is a source-content review. Parent separately handles compile/render inspection and final supplement verification.
+No source/repo edits, new experiments, SSH, human annotations, gate modifications or private-source publication performed.
+
+Companion: source_review_mechanical_checks.json. Prior theory_audit.json and final_citation_review.json remain preserved as the review chain.

@@ -1,0 +1,331 @@
+{
+  "audit": "final_integrated_citation_and_framing_review",
+  "reviewed_at_utc": "2026-10-23T06:40:39.395732+00:00",
+  "source_path": "REPOSITORY_ROOT/manuscript/third_working_draft.tex",
+  "source_sha256": "adf82e53d6720634cded6f75cf3158b1e0d58f73a1ec6c0c051e40fee2a28bfc",
+  "baseline_path": "work/desk-reject-fixes-20261023/source_before.tex",
+  "baseline_sha256": "f8b898047380c45055b341ed88fcc3d6d6fa379f0e4c17fa60fbb22910e1400e",
+  "status": "pass_for_citation_and_framing_scope",
+  "scope": "Independent read-only review of three integrated references and introduction/related-work framing; structural check of all23 citations and exact preservation of the original20 bibliography entries. Not a proof audit, full novelty determination, submission-policy clearance or blanket submission-ready certification.",
+  "checks": {
+    "source_hash_matches_requested": true,
+    "old_bibliography_entry_count": 20,
+    "current_bibliography_entry_count": 23,
+    "old20_entries_byte_identical_internally": true,
+    "changed_old_keys": [],
+    "removed_old_keys": [],
+    "added_keys": [
+      "cao",
+      "cohencontrol",
+      "ginart"
+    ],
+    "undefined_citation_keys": [],
+    "uncited_bibliography_keys": [],
+    "duplicate_bib_keys": []
+  },
+  "new_entries": [
+    {
+      "key": "cao",
+      "status": "verified_matches_primary_metadata",
+      "current_entry_sha256": "80e0e930a65bb20676e7195410a3c50b6837e98002da12876b96843fcf517d55",
+      "full_author_names": [
+        "Yinzhi Cao",
+        "Junfeng Yang"
+      ],
+      "venue": "2015 IEEE Symposium on Security and Privacy",
+      "year": 2015,
+      "pages": "463-480",
+      "doi": "10.1109/SP.2015.35",
+      "sources": [
+        "https://api.crossref.org/works/10.1109%2FSP.2015.35",
+        "https://www.cs.columbia.edu/~junfeng/papers/unlearning/"
+      ],
+      "notes": ""
+    },
+    {
+      "key": "ginart",
+      "status": "verified_matches_primary_metadata",
+      "current_entry_sha256": "1877163e0079ea6a5129e11e39af94ed7abc041b278627a24ea0ff2ada4a1ea2",
+      "full_author_names": [
+        "Antonio A. Ginart",
+        "Melody Y. Guan",
+        "Gregory Valiant",
+        "James Zou"
+      ],
+      "venue": "Advances in Neural Information Processing Systems",
+      "year": 2019,
+      "pages": "3518-3531",
+      "doi": null,
+      "sources": [
+        "https://proceedings.neurips.cc/paper/2019/hash/cb79f8fa58b91d3af6c9c991f63962d3-Abstract.html",
+        "https://proceedings.neurips.cc/paper_files/paper/2019/file/cb79f8fa58b91d3af6c9c991f63962d3-Metadata.json",
+        "https://proceedings.neurips.cc/paper_files/paper/2019/file/cb79f8fa58b91d3af6c9c991f63962d3-Bibtex.bib"
+      ],
+      "notes": "No DOI supplied in inspected official landing page, metadata JSON or BibTeX; use stable proceedings URL. This is not a claim that no DOI exists anywhere."
+    },
+    {
+      "key": "cohencontrol",
+      "status": "verified_matches_primary_metadata",
+      "current_entry_sha256": "d37085183daed2ee4e16ddcca4c295f1f89ec80d95882ebab3459c8999c4483b",
+      "full_author_names": [
+        "Aloni Cohen",
+        "Adam Smith",
+        "Marika Swanberg",
+        "Prashant Nalini Vasudevan"
+      ],
+      "venue": "Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security",
+      "year": 2023,
+      "pages": "3358-3372",
+      "doi": "10.1145/3576915.3616585",
+      "sources": [
+        "https://api.crossref.org/works/10.1145/3576915.3616585",
+        "https://doi.org/10.1145/3576915.3616585"
+      ],
+      "notes": ""
+    }
+  ],
+  "framing_review": [
+    {
+      "check": "Cao and Yang attribution",
+      "lines": [
+        321,
+        323,
+        825,
+        830
+      ],
+      "status": "supported",
+      "reason": "Credits summary-based unlearning spanning feature selection and model fitting; distinguishes record-level suppression without claiming preprocessing-aware unlearning originated here.",
+      "evidence_url": "https://www.yinzhicao.org/unlearning/UnlearningOakland15.pdf",
+      "locator": "Abstract and Section III.B, PDF p.5"
+    },
+    {
+      "check": "Ginart metadata and subsequent-deletion attribution",
+      "lines": [
+        323,
+        324,
+        866,
+        868
+      ],
+      "status": "supported",
+      "reason": "Correctly identifies metadata as part of the learned object with retraining-equivalent distribution, rather than claiming this paper invented continuing-state recovery.",
+      "evidence_url": "https://papers.neurips.cc/paper/2019/file/cb79f8fa58b91d3af6c9c991f63962d3-Paper.pdf",
+      "locator": "Section3, pre-Definition3.1 paragraph and Definition3.1, PDF p.3"
+    },
+    {
+      "check": "Cohen history independence attribution and guarantee scope",
+      "lines": [
+        869,
+        875
+      ],
+      "status": "supported",
+      "reason": "Correctly attributes the distinction between one output, internal state and future behavior. The paragraph explicitly withholds broader interactive privacy/deletion guarantees.",
+      "evidence_url": "https://aloni.net/wp-content/uploads/2023/10/Control-Confidentiality-and-RTBF-CCS-23-FINAL.pdf",
+      "locator": "Sections3.1 and3.4, especially PDF p.10"
+    },
+    {
+      "check": "Ticketed comparison after added state antecedents",
+      "lines": [
+        885,
+        893
+      ],
+      "status": "supported_scope_preserved",
+      "reason": "Retains one-shot main-definition and multi-shot AppendixB.1 qualifications, and now calls the current construction a particular instance of an established continuing-state requirement.",
+      "evidence_url": "https://proceedings.mlr.press/v195/ghazi23a/ghazi23a.pdf",
+      "locator": "Definitions1-2/Remark3 and AppendixB.1"
+    },
+    {
+      "check": "Tadakamalla and Dominici boundaries preserved",
+      "lines": [
+        852,
+        860,
+        894,
+        911
+      ],
+      "status": "scope_preserved",
+      "reason": "Dominici remains metadata-only; no guarantees are excluded without full text. Tadakamalla exact and joint-answer-tuple approximation distinctions remain intact. No renewed thesis search."
+    },
+    {
+      "check": "First-page never-trained framing",
+      "lines": [
+        232,
+        255,
+        260,
+        268,
+        292,
+        294
+      ],
+      "status": "corrected",
+      "reason": "Introduction immediately defines never trained as exclusion from the downstream fit, states records still affect curation, and holds the pretrained representation fixed. Caption now says excluded from downstream fitting. The abstract is clear about the original selected set and does not claim removal of encoder-pretraining influence."
+    },
+    {
+      "check": "First-page evidence and practical claims",
+      "lines": [
+        238,
+        255,
+        307,
+        330
+      ],
+      "status": "appropriately_scoped",
+      "reason": "Abstract identifies exact rational ridge recovery and the family parameters, retains both failed calibrations and unexecuted downstream study, and disclaims natural-text utility/runtime/total-memory advantage. Contribution text ties claims to the particular curator and construction."
+    }
+  ],
+  "remaining_actionable_findings": [],
+  "old_entry_hashes": [
+    {
+      "key": "semdedup",
+      "sha256_before": "058b498f4fddd85428b221e49c96cf513df82f0c374b2a88fd01a02a5a103eee",
+      "sha256_after": "058b498f4fddd85428b221e49c96cf513df82f0c374b2a88fd01a02a5a103eee",
+      "unchanged": true
+    },
+    {
+      "key": "aggregate",
+      "sha256_before": "26888f26ee0a128607513d437af45bb22499c728ae20eee0770d24fa35a60fa0",
+      "sha256_after": "26888f26ee0a128607513d437af45bb22499c728ae20eee0770d24fa35a60fa0",
+      "unchanged": true
+    },
+    {
+      "key": "dbsp",
+      "sha256_before": "b0c529e59e0a77e7672fc720a21c99ec77bf7ed3769dcc43517587eadfdbd606",
+      "sha256_after": "b0c529e59e0a77e7672fc720a21c99ec77bf7ed3769dcc43517587eadfdbd606",
+      "unchanged": true
+    },
+    {
+      "key": "grace",
+      "sha256_before": "67c1093f7c43ae89ca952f287d16d5143facbda9a74b62def27576522d642951",
+      "sha256_after": "67c1093f7c43ae89ca952f287d16d5143facbda9a74b62def27576522d642951",
+      "unchanged": true
+    },
+    {
+      "key": "space",
+      "sha256_before": "71565bb17590532d50a6edbebdced0c4c3647804441ec18586c5305a68f51cb1",
+      "sha256_after": "71565bb17590532d50a6edbebdced0c4c3647804441ec18586c5305a68f51cb1",
+      "unchanged": true
+    },
+    {
+      "key": "dominici",
+      "sha256_before": "cb309c7b72fcb29ddbd0fe4076325aa9f58725b150eef1f8c3947344d0c95e2a",
+      "sha256_after": "cb309c7b72fcb29ddbd0fe4076325aa9f58725b150eef1f8c3947344d0c95e2a",
+      "unchanged": true
+    },
+    {
+      "key": "semcode",
+      "sha256_before": "f158ebb8747957d80f75e98df3e70223097baa464484d93036336ce4fc095671",
+      "sha256_after": "f158ebb8747957d80f75e98df3e70223097baa464484d93036336ce4fc095671",
+      "unchanged": true
+    },
+    {
+      "key": "ticketed",
+      "sha256_before": "b7728c201317efc1d2ee576f4920297ef7f5cf4a6a48f22cfe31896a1c640f06",
+      "sha256_after": "b7728c201317efc1d2ee576f4920297ef7f5cf4a6a48f22cfe31896a1c640f06",
+      "unchanged": true
+    },
+    {
+      "key": "green",
+      "sha256_before": "dc69cd55bfc865baf761fedc891b7aa485b50f9283ec3a2426451f85eb8b7610",
+      "sha256_after": "dc69cd55bfc865baf761fedc891b7aa485b50f9283ec3a2426451f85eb8b7610",
+      "unchanged": true
+    },
+    {
+      "key": "mistral",
+      "sha256_before": "b59cc812f0028cd755a4e356de5facf70bf61ab159c1efb195cc96186b5fd5f8",
+      "sha256_after": "b59cc812f0028cd755a4e356de5facf70bf61ab159c1efb195cc96186b5fd5f8",
+      "unchanged": true
+    },
+    {
+      "key": "qwen",
+      "sha256_before": "d7ea86cdceb0d663b98a2e68833e1288ae50379b62f552c446494f09c7393632",
+      "sha256_after": "d7ea86cdceb0d663b98a2e68833e1288ae50379b62f552c446494f09c7393632",
+      "unchanged": true
+    },
+    {
+      "key": "ivmunlearning",
+      "sha256_before": "3cf0874477c89029389ea93499b7d89d47a60d55d0a43fda7906f16050ca30b5",
+      "sha256_after": "3cf0874477c89029389ea93499b7d89d47a60d55d0a43fda7906f16050ca30b5",
+      "unchanged": true
+    },
+    {
+      "key": "shannon",
+      "sha256_before": "8da85e4c3b623f40af0b084c0653360bfe3da4dff6ec308292e07b1456b78f62",
+      "sha256_after": "8da85e4c3b623f40af0b084c0653360bfe3da4dff6ec308292e07b1456b78f62",
+      "unchanged": true
+    },
+    {
+      "key": "askubuntu",
+      "sha256_before": "60dbd63b6049792906b90af84a22b44ff89440e9383a5885cbbd164edd39a77a",
+      "sha256_after": "60dbd63b6049792906b90af84a22b44ff89440e9383a5885cbbd164edd39a77a",
+      "unchanged": true
+    },
+    {
+      "key": "counterfactual",
+      "sha256_before": "ef774bfaa628330287b8cebeb3db115586de86369b861eb76be5d78e2784c4a3",
+      "sha256_after": "ef774bfaa628330287b8cebeb3db115586de86369b861eb76be5d78e2784c4a3",
+      "unchanged": true
+    },
+    {
+      "key": "counterfactualcode",
+      "sha256_before": "77ec1aea2a9c5939152a4e99cd1b5cb2bff5329077341a76a56ebc89ead90f8f",
+      "sha256_after": "77ec1aea2a9c5939152a4e99cd1b5cb2bff5329077341a76a56ebc89ead90f8f",
+      "unchanged": true
+    },
+    {
+      "key": "e5",
+      "sha256_before": "9da9e76ba1c78e1370a73253ff309429b332a3602e46cd444c0f0122413ff4e6",
+      "sha256_after": "9da9e76ba1c78e1370a73253ff309429b332a3602e46cd444c0f0122413ff4e6",
+      "unchanged": true
+    },
+    {
+      "key": "priu",
+      "sha256_before": "a83a76d4ae8ab96c00f312cad4b24db6bd2b6b2a0abe0e9a13d73aa533a97596",
+      "sha256_after": "a83a76d4ae8ab96c00f312cad4b24db6bd2b6b2a0abe0e9a13d73aa533a97596",
+      "unchanged": true
+    },
+    {
+      "key": "arcane",
+      "sha256_before": "01f6aa58d8cd91687575355b9de02c27f444bdb5660d34d1d6489429437cffc7",
+      "sha256_after": "01f6aa58d8cd91687575355b9de02c27f444bdb5660d34d1d6489429437cffc7",
+      "unchanged": true
+    },
+    {
+      "key": "judge",
+      "sha256_before": "818ca07536b1d8624e6a8770ea8213248fbe06e7c9a629ab7e0ca0c19cb9fb5a",
+      "sha256_after": "818ca07536b1d8624e6a8770ea8213248fbe06e7c9a629ab7e0ca0c19cb9fb5a",
+      "unchanged": true
+    }
+  ],
+  "citation_use_counts": {
+    "aggregate": 3,
+    "arcane": 1,
+    "askubuntu": 1,
+    "cao": 2,
+    "cohencontrol": 2,
+    "counterfactual": 2,
+    "counterfactualcode": 2,
+    "dbsp": 2,
+    "dominici": 2,
+    "e5": 1,
+    "ginart": 2,
+    "grace": 1,
+    "green": 3,
+    "ivmunlearning": 2,
+    "judge": 1,
+    "mistral": 1,
+    "priu": 2,
+    "qwen": 1,
+    "semcode": 2,
+    "semdedup": 2,
+    "shannon": 1,
+    "space": 2,
+    "ticketed": 2
+  },
+  "evidence_basis": [
+    "Fresh integration inspection against saved public publisher metadata in work/desk-reject-fixes-20261023/sources",
+    "Primary fulltext comparisons documented in NEW_REFERENCES_AUDIT.json and work/desk-reject-deep-20261023/literature_audit.json"
+  ],
+  "limits": [
+    "No repeated URL checks where unchanged; this is a source-content comparison.",
+    "Dominici full-text search remains closed; metadata-only limitation remains explicit.",
+    "No new data collection, experiment, manuscript edit, scheduler action or author contact.",
+    "Existing original20 evidence limitations, including supplied Tadakamalla primary-text provenance and AskUbuntu documentary release identity, remain.",
+    "No exhaustive retraction-registry or all-literature novelty clearance is implied."
+  ]
+}

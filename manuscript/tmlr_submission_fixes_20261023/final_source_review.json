@@ -1,0 +1,130 @@
+{
+  "audit": "independent_final_source_delta_and_theory_review",
+  "created_at_utc": "2026-10-23T06:46:03.985651+00:00",
+  "source_path": "REPOSITORY_ROOT/manuscript/third_working_draft.tex",
+  "source_sha256": "adf82e53d6720634cded6f75cf3158b1e0d58f73a1ec6c0c051e40fee2a28bfc",
+  "baseline_path": "work/desk-reject-fixes-20261023/source_before.tex",
+  "baseline_sha256": "f8b898047380c45055b341ed88fcc3d6d6fa379f0e4c17fa60fbb22910e1400e",
+  "delta_path": "work/desk-reject-fixes-20261023/source_delta.json",
+  "delta_sha256": "05aaaae9e9e83bf24a94091671217b0f3bf004e14320bda5a28b60ce946bf73e",
+  "diff_sha256": "387a56ae3733d669cd511948cac37956b02c6a742fb943a0c666a8bdee947d13",
+  "status": "pass_for_source_delta_theory_and_coherence_scope",
+  "actionable_source_findings": [],
+  "mechanical_report": "source_review_mechanical_checks.json",
+  "checks": [
+    {
+      "name": "All 30 exact replacements",
+      "status": "pass",
+      "detail": "Each before span occurs once in sequential application; applying every replacement to the frozen baseline exactly reconstructs the requested current bytes. Independently regenerated unified diff is byte-identical to source.diff."
+    },
+    {
+      "name": "Formal statements and formulas",
+      "status": "pass",
+      "detail": "All 9 equation, 2 align, 2 theorem, 1 corollary, 3 proof, 1 tabular and 15 true display-math blocks are byte-identical in order. Embedded TMLR style is byte-identical. This includes scorer/range assumptions, exact rational ridge target, all bit-counting formulas and the squared-error contract."
+    },
+    {
+      "name": "L0 correction",
+      "status": "pass",
+      "line": 1080,
+      "detail": "Correctly replaces the overstrong identifier-touch wording by inverse-incidence removals. Tuple copying, hashing and comparison work remains charged to Phi0, so the theorem-level O(Q+Phi0+sM0) bound is unchanged. The main-text incidence-touch shorthand concerns the inverse-index incidences, not tuple identifier-cell copying."
+    },
+    {
+      "name": "Hard-query exclusivity",
+      "status": "pass",
+      "line": 521,
+      "detail": "Each blocker set has size K; an allowed request activating candidate i must contain that full set and therefore equal F_i. Distinct candidates have distinct individual blockers, so no allowed request activates two. This makes an existing sufficiency argument explicit without strengthening the theorem."
+    },
+    {
+      "name": "Abstract information units and title scope",
+      "status": "pass",
+      "line": 240,
+      "detail": "The abstract now identifies exact rational ridge and defines m excluded candidates each with D private signs. Introduction and caption explicitly limit never trained to downstream fitting; curation influence and fixed pretrained representation remain disclosed. No claim of encoder-pretraining unlearning is added."
+    },
+    {
+      "name": "Theory lesson and novelty scope",
+      "status": "pass",
+      "line": 301,
+      "detail": "Permanent ineligibility follows the existing monotonicity argument. The one-extra-deletion private-sign statement is explicitly construction-specific. State recovery, preprocessing-aware unlearning and provenance are credited as established; no broad new-general-framework claim is introduced."
+    },
+    {
+      "name": "New bibliography and citation coverage",
+      "status": "pass",
+      "detail": "Original 20 entries retain their internal bytes; precisely Cao/Yang2015, Ginartetal2019 and Cohenetal2023 are added. All 23 keys are cited and resolve, without duplicates, in alphabetical author/year order. All 32 labels are unique and referenced labels resolve."
+    },
+    {
+      "name": "Primary-source support for new comparisons",
+      "status": "pass",
+      "detail": "Cao primary text supports summation-form treatment of feature selection and modeling; Ginart Definition3.1 includes arbitrary metadata supporting subsequent deletions; Cohen Sections3.1/3.4 treats adaptive history independence and one output versus state/future behavior. These establish antecedents, not equivalence of all contracts. The separate integrated citation review provides full metadata and audit trail."
+    },
+    {
+      "name": "Prior comparison limitations",
+      "status": "pass",
+      "line": 887,
+      "detail": "Ticketed main one-request and AppendixB.1 multiple-request caveats remain. The information accounting remains distinct from central/ticket accounting. Tadakamalla joint answer-tuple qualifier and Dominici unavailable-fulltext qualification remain unchanged in substance. E5 pretraining-overlap limitation remains explicit."
+    },
+    {
+      "name": "Numerical results and scientific gates",
+      "status": "pass",
+      "line": 729,
+      "detail": "Checked unchanged numerical calibration, structural, repair and compute statements against the baseline. All selection/validation cutoffs, failure counts, invalid-response handling, favorable-imputation limit, all51-cut diagnostic scope, 13056 updates, 408 checkpoints, negative B-E memory result, no-retuning and unexecuted utility/held-out boundary are retained. No acceptance criterion or original unmet human gate is waived."
+    },
+    {
+      "name": "Historical moves",
+      "status": "pass",
+      "line": 1316,
+      "detail": "Appendices retain low-level/service retry distinctions; original human branch noninheritance; documentary-not-cryptographic source provenance; exact-byte audits and newline failure; internal-not-external reviews; entire262144-pair engineering pilot with .50/.99/.995, .7783seconds and nonperformance caveat; 21332-job design inventory; infeasible100000/200000-row panels; evaluation reservation and no held-out supplementation."
+    },
+    {
+      "name": "New embedding recipe",
+      "status": "pass_for_source_description",
+      "line": 1274,
+      "detail": "Compared against frozen phase4/embeddings.py: tokenize once without truncation, consecutive256 content chunks, separately tokenized query-prefix, specials, one-document batches, CPU FP32/eager/eval, mask padding but include attended prefix/specials, FP64 ordered normalization, content-count weighting, document-order FP64 accumulation, renormalization and FP32 storage match. Fixed261 padding is supported by the existing admitted-tokenizer evidence and independent empirical audit. No inference was rerun and no custom-recipe result is generalized to all E5 uses."
+    },
+    {
+      "name": "Full-source coherence",
+      "status": "pass",
+      "detail": "Read all current manuscript content and all exact changes; rechecked unchanged embedded style mechanically. Main text follows target, algorithm, scoped obstruction, failed calibration, structural/repair diagnostics, antecedents and limitations. Moved details remain reachable via appendix references. Planned comparisons remain explicitly unexecuted."
+    },
+    {
+      "name": "Supplement coverage sentences",
+      "status": "conditional_on_separate_package_review",
+      "line": 1248,
+      "detail": "Wording now correctly describes an explicit source subset and excluded wrappers/private activation locks. New actual included-module and top-level check claims must be bound to the final assembled supplement by the separate package review. This source/theory review does not certify that artifact or private-observation authenticity."
+    }
+  ],
+  "primary_sources": [
+    {
+      "url": "https://www.yinzhicao.org/unlearning/UnlearningOakland15.pdf",
+      "locator": "Abstract and feature-selection/update discussion around pp.10-11"
+    },
+    {
+      "url": "https://papers.neurips.cc/paper/2019/file/cb79f8fa58b91d3af6c9c991f63962d3-Paper.pdf",
+      "locator": "Section3 Definition3.1 and preceding model/metadata explanation"
+    },
+    {
+      "url": "https://aloni.net/wp-content/uploads/2023/10/Control-Confidentiality-and-RTBF-CCS-23-FINAL.pdf",
+      "locator": "Sections3.1 and3.4; one-output versus future-behavior discussion"
+    }
+  ],
+  "frozen_embedding_source_sha256": "bb1af9a6583a90372f7641f406afdb418017797cc8d86ee67f117f215c65d2c1",
+  "review_chain": [
+    {
+      "report": "work/desk-reject-deep-20261023/theory_audit.json",
+      "scope": "Adversarial baseline theory review on f8b898...; identified minor L0 wording issue, no proved fatal theorem gap."
+    },
+    {
+      "report": "work/desk-reject-fixes-20261023/theory_editorial_suggestions.txt",
+      "scope": "Proposed narrowly scoped explanations and history relocation."
+    },
+    {
+      "report": "work/desk-reject-fixes-20261023/final_citation_review.json",
+      "scope": "Separate final integrated three-reference and framing verification on adf82e..."
+    }
+  ],
+  "remaining_judgment_limits": [
+    "Finite construction and standard proof tools may still raise an editor or reviewer interest/technical-depth question; no editorial acceptance or blanket desk-reject clearance is claimed.",
+    "Natural-text utility and matched-cost advantage remain unmeasured; revisions appropriately do not manufacture results.",
+    "This is a source-content review. Parent separately handles compile/render inspection and final supplement verification.",
+    "No source/repo edits, new experiments, SSH, human annotations, gate modifications or private-source publication performed."
+  ]
+}

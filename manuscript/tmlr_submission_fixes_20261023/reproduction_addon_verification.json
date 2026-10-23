@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "exact_source_files_checked": 41,
+  "derived_entries_bound": 3,
+  "python_files_ast_parsed": 26,
+  "prompt_schema_duplicates_match": 4,
+  "identifier_scan_hits": 0,
+  "archive_payload_or_launcher_files": 0,
+  "merge_check": {
+    "exact_addon_entries": 41,
+    "derived_addon_entries": 3,
+    "merged_exact_entries": 189,
+    "root_manifest_requires_rebuild": true
+  },
+  "checks": [
+    {
+      "check": "scientific_imports",
+      "returncode": 0,
+      "stdout": "8 imports passed; no models instantiated",
+      "stderr": ""
+    },
+    {
+      "check": "llm_selection_sampler_v1_20261014",
+      "returncode": 0,
+      "stdout": "imports only passed",
+      "stderr": ""
+    },
+    {
+      "check": "llm_annotation_statistics_v1_20261014",
+      "returncode": 0,
+      "stdout": "imports only passed",
+      "stderr": ""
+    },
+    {
+      "check": "llm_development_guard_v1_20261016",
+      "returncode": 0,
+      "stdout": "imports only passed",
+      "stderr": ""
+    },
+    {
+      "check": "model_annotation_v3_20261014",
+      "returncode": 0,
+      "stdout": "imports only passed",
+      "stderr": ""
+    },
+    {
+      "check": "model_annotation_v4_20261014",
+      "returncode": 0,
+      "stdout": "imports only passed",
+      "stderr": ""
+    },
+    {
+      "check": "llm_annotation_inference_v1_20261014",
+      "returncode": 0,
+      "stdout": "imports only passed",
+      "stderr": ""
+    },
+    {
+      "check": "llm_v4_inference_v2_20261014",
+      "returncode": 0,
+      "stdout": "imports only passed",
+      "stderr": ""
+    },
+    {
+      "check": "model_annotation_runtime_v5_20261011 renderer",
+      "returncode": 0,
+      "stdout": "renderer toy interface check passed; no tokenizer asset or model was loaded",
+      "stderr": ""
+    },
+    {
+      "check": "model_annotation_runtime_v5_20261011 guard import",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"PRIVATE_ORCHESTRATION_ROOT/work/desk-reject-fixes-20261023/reproduction_import_check_tree_complete/code/local_run/model_annotation_runtime_v5_20261011/bounded_reason.py\", line 9, in <module>\n    from lmformatenforcer import CharacterLevelParser, CharacterLevelParserConfig, JsonSchemaParser\nModuleNotFoundError: No module named 'lmformatenforcer'"
+    },
+    {
+      "check": "model_annotation_runtime_mistral_v1_20261011 renderer",
+      "returncode": 0,
+      "stdout": "renderer toy interface check passed; no tokenizer asset or model was loaded",
+      "stderr": ""
+    },
+    {
+      "check": "model_annotation_runtime_mistral_v1_20261011 guard import",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"PRIVATE_ORCHESTRATION_ROOT/work/desk-reject-fixes-20261023/reproduction_import_check_tree_complete/code/local_run/model_annotation_runtime_mistral_v1_20261011/bounded_reason.py\", line 9, in <module>\n    from lmformatenforcer import CharacterLevelParser, CharacterLevelParserConfig, JsonSchemaParser\nModuleNotFoundError: No module named 'lmformatenforcer'"
+    }
+  ],
+  "scope": "Byte identity, static privacy scan, syntax, isolated imports, synthetic renderer interface only. No private corpus/model inference, no model asset download, no empirical result revalidation.",
+  "software_check_runtime": "3.9.6 (default, Oct 18 2022, 12:41:40) \n[Clang 14.0.0 (clang-1400.0.29.202)]",
+  "bundled_runtime_limitation": "Bundled Python NumPy cannot load on this macOS because its binary requires newer Accelerate; isolated import/interface checks use the existing system Python and NumPy, not the production runtime.",
+  "guard_import_limit": "lmformatenforcer may be absent from packaging environment; AST and exact source binding still checked."
+}

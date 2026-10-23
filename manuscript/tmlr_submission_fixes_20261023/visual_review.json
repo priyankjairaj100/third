@@ -1,0 +1,25 @@
+{
+  "source": {
+    "bytes": 78720,
+    "sha256": "adf82e53d6720634cded6f75cf3158b1e0d58f73a1ec6c0c051e40fee2a28bfc"
+  },
+  "pdf": {
+    "bytes": 152625,
+    "sha256": "5e59d6ffe37fe29c26cfdaedf167fcbd7264181c3cf5abadb0bc28f475a29638",
+    "pages": 17
+  },
+  "all_pages_visually_reviewed": true,
+  "visual_method": "Poppler PNG rendering of the authorized temporary Tectonic PDF; 9 contact sheets covering pages1-17 inspected, with individual pages4 and6 checked additionally. No text, equation, table or reference clipping observed.",
+  "references_start_on_page": 10,
+  "appendices_start_on_page": 12,
+  "pdf_author_metadata_absent": true,
+  "known_direct_identifiers_absent": true,
+  "no_overfull_or_undefined_reference_warnings": true,
+  "nonfatal_warnings": [
+    "Embedded official style regenerated as intended.",
+    "Underfull Green bibliography line, visually readable."
+  ],
+  "native_preview_pixel_equality_claimed": false,
+  "source_matches_native_compile_receipt": true,
+  "scientific_results_changed": false
+}
