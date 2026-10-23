@@ -1,0 +1,178 @@
+{
+  "schema": "third-final-rewrite-empirical-fidelity-review-v1",
+  "reviewed_source": {
+    "path": "manuscript/third_working_draft.tex",
+    "sha256": "be256390853c2eb1ca1f23db199b01e963f4dc582f174fb790de5f89420a6722",
+    "bytes": 92137
+  },
+  "review_mode": "Read-only source and public aggregate inspection. No empirical model/data rerun or network lookup.",
+  "overall": "PASS_no_unresolved_empirical_fidelity_findings",
+  "verified": {
+    "graph_table": [
+      {
+        "cut": 0.5,
+        "edges": 500500,
+        "selected": 1,
+        "excluded": 1000,
+        "excluded_singletons_with_admission": 0
+      },
+      {
+        "cut": 0.84,
+        "edges": 245841,
+        "selected": 7,
+        "excluded": 994,
+        "excluded_singletons_with_admission": 1
+      },
+      {
+        "cut": 0.9,
+        "edges": 15678,
+        "selected": 504,
+        "excluded": 497,
+        "excluded_singletons_with_admission": 50
+      },
+      {
+        "cut": 0.96,
+        "edges": 197,
+        "selected": 952,
+        "excluded": 49,
+        "excluded_singletons_with_admission": 7
+      },
+      {
+        "cut": 0.995,
+        "edges": 0,
+        "selected": 1001,
+        "excluded": 0,
+        "excluded_singletons_with_admission": 0
+      }
+    ],
+    "excluded_blocker_cut_count": 13,
+    "excluded_blocker_cut_range": [
+      0.84,
+      0.96
+    ],
+    "complete_graph_cut_count": 25,
+    "complete_graph_cut_range": [
+      0.5,
+      0.74
+    ],
+    "membership_checks": 13056,
+    "state_checkpoints": 408,
+    "record_stream_final_removed_records": [
+      128
+    ],
+    "source_stream_final_removed_records": [
+      261
+    ],
+    "all_51_cut_all_arm_flags_true": true,
+    "v3_canonical_pairs": 90,
+    "v3_fresh_validation_run": false,
+    "v4_canonical_pairs": 360,
+    "v4_fresh_validation_run": false,
+    "all_selection_decisions_negative": true,
+    "v4_maximum_weighted_joint": "2/5",
+    "calibration_table": [
+      {
+        "cut": 0.9,
+        "sample_support": 330,
+        "joint_percent_2dp": "0.01"
+      },
+      {
+        "cut": 0.95,
+        "sample_support": 180,
+        "joint_percent_2dp": "0.31"
+      },
+      {
+        "cut": 0.98,
+        "sample_support": 90,
+        "joint_percent_2dp": "9.66"
+      },
+      {
+        "cut": 0.99,
+        "sample_support": 60,
+        "joint_percent_2dp": "40.00"
+      },
+      {
+        "cut": 0.995,
+        "sample_support": 30,
+        "joint_percent_2dp": "40.00"
+      }
+    ]
+  },
+  "fidelity_assessment": {
+    "population_separation": "PASS: main 140250 population, 20996 calibration, 1001 pre-guard development panel distinguished.",
+    "post_failure_provenance": "PASS: separately fixed after failed calibration; all 51 original cuts retained without selection.",
+    "deletion_units": "PASS: 128 record requests remove128 records;128 source requests remove261; source/record effects explicitly not matched-volume comparison.",
+    "exactness": "PASS: exact membership and logical coefficient/index state, not trained-task head, serialized bytes, physical erasure, or independent graph regeneration.",
+    "validation_provenance": "PASS: private-state comparisons were in cluster execution; independent aggregate review checks bound receipts/counts.",
+    "fully_llm": "PASS: no human pair review, model-label target and retained invalid denominator remain; human-validity limitations moved to appendix.",
+    "failures": "PASS: v3 and v4 both fail; v4 is separately versioned follow-up. No fresh validation, task utility, comparative cost, held-out effect result invented.",
+    "prepared_task": "PASS: app:protocol identifies tag/lambda/F1 choices as preparation rather than completed downstream deletion experiment.",
+    "earlier_negative_memory": "PASS: compact eligible-row baseline still favored in earlier lexical total-byte comparison.",
+    "replay": "PASS: appendix distinguishes public aggregate checks from private inference regeneration.",
+    "story": "PASS: stronger retention-contract opening and positive exact-repair diagnostics; no unsupported practical speed/memory benefit asserted."
+  },
+  "evidence_bindings": {
+    "repair/allcut_summary.json": {
+      "bytes": 2929,
+      "sha256": "228facd6c401414f36e79e455dc82ac95d90cfc5115cfbd341994fdae3db0803"
+    },
+    "repair/output_field_interpretation.json": {
+      "bytes": 1651,
+      "sha256": "f721948194fdf03031c2d7c1f9698083ec040d883248fc37326baa5c63ef6c86"
+    },
+    "structure/study_protocol.json": {
+      "bytes": 6609,
+      "sha256": "76e1fc1ea04e2ad318b92e7553cfafc392dc41def3161d56d1f1cdaf8d546506"
+    },
+    "repair/study_protocol.json": {
+      "bytes": 10199,
+      "sha256": "c48206676b23b4dcc79f687b58d362b0edbcb734047ae4d75d9e27ebdaafd848"
+    },
+    "calibration/data/calibration_v3.json": {
+      "bytes": 31235,
+      "sha256": "3154ea81ef7f08f2391dce05729dcc395ea07f72e4f172d47b02bcd32be9103a"
+    },
+    "calibration/data/calibration_v4.json": {
+      "bytes": 37142,
+      "sha256": "a88012c169fc54570068654e6a4570c7d1343a017c653031ff232fe92b512021"
+    }
+  },
+  "scope_limits": [
+    "No full private-data or model rerun",
+    "No theorem proof certification in this empirical audit",
+    "No rendered-page layout/citation freshness review"
+  ],
+  "initial_reviewed_source": {
+    "sha256": "997af59e79eda0c9a07db538ef36028b657832961faff6b0308d4fb768e1651f",
+    "bytes": 92996
+  },
+  "resolved_findings": [
+    {
+      "severity": "scope_wording_correction",
+      "source_lines": [
+        245,
+        247
+      ],
+      "claim": "the selection mechanism admits previously excluded records at 13 of 51 fixed similarity cutoffs",
+      "issue": "The 13-cut count is conditional on deleting an initially excluded record. Ordinary deletion-induced admissions also occur on other cuts, including complete graphs when the first selected record is deleted.",
+      "fix": "Deleting an initially excluded record admits another record at 13 of 51 fixed cutoffs on 1,001 AskUbuntu development records.",
+      "main_text_status": "Main structural section and table already preserve the correct condition.",
+      "status": "Resolved: initially excluded deletion condition restored in final abstract."
+    }
+  ],
+  "required_findings": [],
+  "final_delta_review": {
+    "abstract_private_rational_constructed_family_qualifiers": "PASS",
+    "abstract_13_cut_condition": "PASS",
+    "section_5_redundancy_reduction": "PASS; no empirical observation removed or altered",
+    "source_record_request_unit_clarification": "PASS",
+    "discarded_word_in_conclusion": "PASS",
+    "empirical_sections_and_app_protocol": "Table numbers, failure decisions and scope retained",
+    "final_readability_changes": "PASS: split abstract sentence retains exact rational ridge/private-information scope; FP32/FP64 expanded at first use. No result/table/protocol changes."
+  },
+  "previous_approved_source": {
+    "path": "manuscript/third_working_draft.tex",
+    "sha256": "863df44d6f348d1554b300a05202c4425b9119a70b2b8806b2609dfa06012a4e",
+    "bytes": 92074
+  }
+}

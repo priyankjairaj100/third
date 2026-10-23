@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "current_sha256": "be256390853c2eb1ca1f23db199b01e963f4dc582f174fb790de5f89420a6722",
+  "current_bytes": 92137,
+  "previous_reviewed_sha256": "863df44d6f348d1554b300a05202c4425b9119a70b2b8806b2609dfa06012a4e",
+  "inverse_delta_sha256": "863df44d6f348d1554b300a05202c4425b9119a70b2b8806b2609dfa06012a4e",
+  "exactly_three_text_replacements": true,
+  "claim_effect": "None. Abstract sentence split preserves exact rational outputs, private information, constructed-family conditional minimum; FP32 and FP64 first uses are expanded."
+}

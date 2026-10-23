@@ -222,275 +222,428 @@ plus      -0.5ex minus -.2ex}{0.5ex plus
 \newcommand{\cur}{\mathcal C}
 \newcommand{\bits}{\mathsf B}
 \setlength{\emergencystretch}{1em}
-\title{Unlearning What Was Never Trained:\\Exact Repair After Data Curation\thanks{OpenAI Codex and other AI tools assisted manuscript drafting, code preparation, source checking, and internal review. Details and limits appear in Appendix~\ref{app:repro}.}}
+\title{Exact Unlearning After Data Curation\thanks{OpenAI Codex and other AI tools assisted manuscript drafting, code preparation, source checking, and internal review. Details and limits appear in Appendix~\ref{app:repro}.}}
 \author{Anonymous authors}
 \date{}
-\hypersetup{pdfauthor={},pdftitle={Unlearning What Was Never Trained: Exact Repair After Data Curation}}
+\hypersetup{pdfauthor={},pdftitle={Exact Unlearning After Data Curation}}
 \begin{document}
 \maketitle
 \begin{abstract}
-Deleting a raw document can change which surviving documents enter training.
-A model trained after semantic deduplication may therefore need examples that
-were excluded from its original training set. We study this effect for a fixed
-ordered suppression rule: a document is retained only when no earlier raw
-document blocks it. We give a finite-horizon summary of additive training
-statistics whose exact update equals reconstruction after deletion, with the
-remaining deletion budget reduced accordingly. We also construct stored FP32
-features for which one additional allowed deletion changes the private
-information needed for exact rational ridge recovery from zero to $mD$ bits:
-$m$ excluded candidates each carry $D$ private feature signs. The graph is
-stable under a specified FP64 cosine scorer, and a sequential codec attains
-the conditional private-information minimum on this family. These are scoped
-algebraic and information results. An AskUbuntu calibration study uses two
-local LLMs and no human annotation. Both completed calibration versions failed
-their frozen selection criteria. In the follow-up, the largest weighted
-joint-positive proportion over 51 cuts was 40\%, below the required 95\%.
-The downstream effect study therefore remains unexecuted. A separate
-diagnostic on 1,001 natural development records exhibits excluded-blocker
-admissions at 13 of the 51 fixed score cutoffs, without semantic qualification.
-On the same panel, indexed repair matches exact membership after 13,056
-deletion steps and reconstructed logical state at 408 checkpoints.
-The results identify what exact counterfactual repair must remember,
-while providing no evidence of a natural-text utility, runtime, or
-total-memory advantage.
+Training pipelines often remove similar examples before fitting a model.
+Deleting a raw record can change that selection and admit an example that
+was excluded before. What must a service retain to reproduce training
+after such requests? We answer this question for a fixed rule in which
+earlier similar records block later ones. A limit on the total number of
+future deletions identifies exactly which records can still enter training.
+We use this boundary to build a summary of training statistics that can
+be repaired exactly after repeated deletions. The repaired summary is the
+same as rebuilding it on the surviving data with the remaining budget.
+We also construct finite-precision features for ridge regression, a linear
+learner with a penalty on coefficient size. With exact rational outputs,
+allowing one more deletion changes the required private information.
+It rises from zero to every private feature sign in the excluded candidates. An encoding
+attains this conditional private-information minimum on the constructed
+family throughout a sequence of requests.
+On 1,001 AskUbuntu development records, deleting an initially excluded
+record admits another record at 13 of 51 fixed similarity cutoffs. Exact
+membership repair passes 13,056 deletion-step checks. Two model-based
+semantic calibrations fail their fixed criteria, so the downstream task
+study is not run. The central result is a retention contract: the future
+deletions a service promises to support determine which excluded data
+can still be needed.
 \end{abstract}
 
-
 \section{Introduction}
-Data curation determines what a learner sees. Semantic deduplication removes
-examples judged too similar to earlier examples, often before training begins
-\citep{semdedup}. A later deletion request acts on the raw data collection.
-Repeating the same curator after that deletion can produce a different
-training set, including documents not used to fit the original downstream
-learner. This is the sense of ``never trained'' in our title: the records
-still affect curation, and we hold the pretrained representation fixed.
-An unlearning procedure must specify whether it promises to reproduce the
-new training set and learner.
+Training begins before a model is fitted. A pipeline may first remove
+near-duplicate documents, choose representative examples, or filter a
+collection for quality. These decisions depend on relationships among
+records. When a record is later withdrawn, applying the same selection
+rule to the surviving collection can change which examples enter training.
+A deletion service that updates only the old training set can therefore
+reproduce the wrong model.
 
-Let $D$ be a raw corpus, $F$ the records to forget, $\cur$ a curator, and
-$A$ a learner. The target studied here is
-\begin{equation}\label{eq:target}
-                    A\bigl(\cur(D\minus F)\bigr).
-\end{equation}
-Deleting $F$ from the already selected set instead gives
-$A(\cur(D)\minus F)$. These targets can differ even when $F$ contains no
-training example. For example, order three records $a\prec b\prec c$ and
-place similarity edges only between $a,b$ and $b,c$. If every earlier raw
-neighbor blocks a record, initially only $a$ is selected. Deleting the
-excluded record $b$ admits $c$ (Figure~\ref{fig:chain}). The example is an
-algebraic illustration; it is not a fabricated natural-language observation.
+Semantic deduplication makes this issue concrete. It compares document
+representations and removes examples that are too similar to earlier
+ones \citep{semdedup}. Consider the three-record illustration in
+Figure~\ref{fig:chain}. Record $a$ precedes $b$, which precedes $c$.
+Similarity connects $a$ to $b$ and $b$ to $c$, but not $a$ to $c$.
+Under the rule studied here, every earlier raw neighbor blocks a record,
+even when that neighbor is itself excluded. Initially only $a$ is selected.
+Deleting the excluded record $b$ then admits $c$. The selected set changes
+although the deleted record was absent from the original model fit.
 
 \begin{figure}[t]
 \centering
 \setlength{\fboxsep}{7pt}
-\fbox{\begin{minipage}{0.65\linewidth}\centering
-Priority: $a\prec b\prec c$\\[4pt]
-Similarity edges: $a\;---\;b\;---\;c$\\[5pt]
-Before deletion: $\cur(D)=\{a\}$\\
-Delete $b$: $\cur(D\minus\{b\})=\{a,c\}$
+\fbox{\begin{minipage}{.86\linewidth}\centering
+\textbf{One raw collection, two deletion targets}\\[5pt]
+Priority: $a\prec b\prec c$ \qquad Similarity: $a\!-\!b\!-\!c$\\[5pt]
+Initially selected: $\{a\}$ \qquad Request: delete $b$\\[5pt]
+Update the old selection: $\{a\}$ \qquad Rerun selection: $\{a,c\}$
 \end{minipage}}
-\caption{An excluded record can block another record. Removing it changes
-the correct training target although it was excluded from downstream fitting.
-There is no $a,c$ edge.}
+\caption{Illustration of ordered raw-neighbor suppression. There is no
+$a,c$ edge. An excluded record can still determine whether another record
+enters training. The two resulting training sets can yield different models.}
 \label{fig:chain}
 \end{figure}
 
-This behavior raises two connected questions. What state supports exact
-repair without rereading the surviving raw corpus? How much information can
-future deletions require about examples excluded today? For this curator,
-the remaining deletion budget determines which records can still enter
-training. Payloads that cannot become eligible can be discarded permanently
-within that budget. The construction below shows the converse possibility:
-one additional allowed deletion can make every private sign of the excluded
-candidates necessary for exact model recovery.
+Let $\mathcal D$ be the raw collection, $F$ the records deleted so far,
+$\cur$ the selection rule, and $A$ the learner. We study the target
+\begin{equation}\label{eq:target}
+                 A\bigl(\cur(\mathcal D\minus F)\bigr).
+\end{equation}
+It means selecting from the surviving raw records and then training again.
+Updating the original selected set instead gives
+$A(\cur(\mathcal D)\minus F)$. These expressions place deletion on
+different sides of selection. Figure~\ref{fig:chain} explains why this
+order matters. An exact service must choose its target before deciding
+which records or summaries to retain.
 
-We make three scoped contributions. First, we specialize signed Boolean
-provenance to obtain an exact summary of additive training statistics whose
-updated state equals reconstruction at the remaining deletion horizon.
-Second, we construct finite-format features shared by the curator and ridge
-learner for which that horizon determines an exact private-information
-minimum, attained by a sequential codec. Third, we report two negative
-calibrations for a fully LLM natural-text study. Neither selected a threshold
-under its frozen model-defined criterion, so the downstream comparison of
-target changes, utility, and complete system cost remains unexecuted.
-Separate development diagnostics characterize all 51 score graphs and check
-exact membership repair without selecting a cutoff.
+\paragraph{The practical question: what must remain recoverable?}
+Keeping the entire raw collection allows fresh reconstruction after every
+request. A service may instead keep summaries and discard raw payloads,
+such as feature rows and labels. It then needs to know which excluded
+records can affect a future target. We make the permitted future requests
+explicit through a cumulative deletion budget: the maximum number of
+records that may be deleted over the life of the retained state.
 
-Deletion-induced additions and provenance maintenance are established in
-nonmonotone queries and incremental computation
-\citep{green,aggregate,dbsp,priu,ivmunlearning}. Summary-based unlearning
-across feature selection and model fitting also precedes this work
-\citep{cao}. So do definitions that include metadata for subsequent deletions
-and distinguish internal state from one released output \citep{ginart,cohencontrol}.
-Our results specify one ordered curator, its remaining-horizon coefficient
-map, and a shared-feature ridge construction. They make the target, allowed
-future requests, and access to excluded data part of an explicit storage
-contract. They do not establish a practical memory advantage: a compact
-eligible-payload baseline can use less total memory. Whether natural-text
-target changes justify the complete repair cost remains unresolved.
+For the rule above, an excluded record becomes selected only after all
+its earlier blockers are deleted. If it has more surviving blockers than
+remaining deletions, it cannot enter training within the contract. Its
+payload can be discarded for this target. If the budget is large enough
+to remove those blockers, the record remains potentially relevant.
+The budget thus connects an operational promise to a concrete retention
+decision. It decreases with every newly deleted record. A fresh allowance after
+each request would be a different promise.
 
-\section{Target, curator, and access contract}\label{sec:setup}
-Each record $v$ has a stable identifier, a fixed feature row $z_v$, and, when
-needed, a task label $y_v$. A fixed graph defines eligible similarity edges,
-and a fixed total order $\prec$ defines priority. An edge may require a
-fixed partition membership as well as cosine similarity strictly above a
-threshold $\tau$. Define the earlier blockers
+\paragraph{Two connected results.}
+First, we derive an exact summary of additive training statistics for this
+selection rule. Its update removes deleted contributions and adds newly
+selected ones. More strongly, the updated summary equals fresh construction
+on the surviving records at the remaining budget. This permits repeated
+requests without accumulating a different logical state.
+
+Second, we show that the budget can determine necessary information, not
+just sufficient storage. We construct features that are exactly stored
+in single precision (FP32) and used by both selection and ridge regression.
+Under one budget, every model is zero. Increasing the budget by one makes
+every private feature sign in the excluded candidates necessary for exact
+model recovery across the allowed requests. A sequential encoding retains
+exactly the signs that can still matter. The current model alone cannot
+describe this future information requirement.
+
+The natural-data study examines the same selection and repair mechanism on
+fixed AskUbuntu score graphs. It checks exact membership and continuing
+state across all original cutoffs. Its separate semantic calibration uses
+two local language models and zero human pair review. Both calibration
+versions fail their fixed selection criteria; the threshold-qualified
+utility and cost study therefore remains unexecuted. Section~\ref{sec:evidence}
+presents the completed evidence and its empirical scope together.
+
+\paragraph{Position of the contribution.}
+Summaries for preprocessing-aware unlearning \citep{cao}, incremental view
+maintenance \citep{ivmunlearning}, and state that supports later deletions
+\citep{ginart,cohencontrol} provide the starting point. We specialize signed
+provenance \citep{green,aggregate} to a fixed ordered selection rule and
+prove its remaining-budget state identity. The information result joins
+finite stored features, stable similarity decisions, exact learner outputs,
+and a matching sequential state in one construction. The resulting design
+question is precise: which future requests can this retained state still
+answer? Section~\ref{sec:related} compares the relevant contracts.
+
+\section{From a deletion promise to a retention rule}\label{sec:setup}
+We first define the selection rule and the service contract. The key
+objects are the blockers of each record and the deletions still allowed.
+No model-specific algebra is needed to determine future eligibility.
+
+\subsection{A fixed ordered selection rule}
+Each raw record $v\in\mathcal D$ has a stable identifier, a fixed feature
+vector $z_v$, and, when needed, a label $y_v$. A graph connects pairs that
+qualify as similar. A fixed total order $\prec$ gives one record priority
+over another. An edge can require both membership in the same fixed
+partition and cosine similarity strictly above a threshold $\tau$.
+Define the \emph{blocker set} of $v$ as its earlier raw neighbors:
 \[
-                 B(v)=\{u:u\prec v,\ \{u,v\}\text{ is an edge}\}.
+                  B(v)=\{u:u\prec v,\ \{u,v\}\text{ is an edge}\}.
 \]
-The selection after cumulative deletion $F$ is
+After a cumulative deletion set $F$, selection returns
 \begin{equation}\label{eq:activation}
- S_F=\cur(D\minus F)=\{v\notin F:B(v)\subseteq F\}.
+ S_F=\cur(\mathcal D\minus F)=\{v\notin F:B(v)\subseteq F\}.
 \end{equation}
-All earlier raw neighbors matter, including neighbors that the curator
-rejects. This is not greedy selection against only previously retained
-records. For nonnegative thresholds, the upper-triangle column-maximum
-test in the released SemDeDup code has this suppression form
-\citep{semcode}. We analyze its fixed graph and order; we do not identify
-our target with every stage or configuration of that pipeline.
+A record must survive, and every one of its blockers must be gone.
+In Figure~\ref{fig:chain}, the blocker sets are
+$B(a)=\varnothing$, $B(b)=\{a\}$, and $B(c)=\{b\}$.
+The middle record blocks the last one despite being excluded itself.
 
-\paragraph{Restriction consistency.}
-Under deletion, feature rows, pair eligibility, relative priority, and the
-threshold remain unchanged on surviving records. A hash of each stable ID,
-with an explicit ID tie break, can preserve the order. Rerunning a
-corpus-dependent shuffle with the same random seed need not preserve it.
-Refitting clusters or embeddings can change surviving edges and defines a
-different counterfactual target. Such refitting requires separate oracles
-and evidence; it is outside the exact theorem below.
+This is \emph{raw-neighbor suppression}. Greedy selection against only
+previously retained neighbors is a different rule: it would select both
+$a$ and $c$ in the initial chain. For nonnegative thresholds, the
+upper-triangle column-maximum test in the released SemDeDup code has
+our suppression form \citep{semcode}. We fix this operator's graph and
+order, including any pair-eligibility partition.
 
-\paragraph{Budget and eligible payloads.}
-Fix an original cumulative record budget $K$. After forgetting $F$, the
-remaining budget is $h=K-|F|$. A surviving record can appear under some
-allowed continuation exactly when it belongs to
+\paragraph{What stays fixed under deletion.}
+Features, pair eligibility, relative priority, and threshold remain
+unchanged on surviving records. We call this \emph{restriction consistency}.
+It makes the retained graph the original graph restricted to surviving
+vertices. Ordering records by a hash of each stable ID, with an ID tie
+break, preserves their relative priority. Repeating a corpus-dependent
+shuffle with the same seed need not. Similarly, refitting clusters or a
+text encoder can change surviving edges and defines a different target.
+Here the pretrained representation is held fixed throughout repair.
+
+\subsection{Which records can still enter training?}
+Let $K$ be the original cumulative record-deletion budget. After deleting
+$F$, the remaining budget is $h=K-|F|$. We say a surviving record is
+\emph{eligible} if some continuation using at most $h$ further deletions
+can select it. The eligible set is exactly
 \begin{equation}\label{eq:eligible}
-       E(F,h)=\{v\notin F:|B(v)\minus F|\le h\}.
+ E(F,h)=\{v\notin F:|B(v)\minus F|\le h\}.
 \end{equation}
-Deleting all remaining blockers proves sufficiency; fewer deletions cannot
-remove them all, proving necessity. Along a valid continuation, a record
-outside this set cannot become eligible: its blocker count decreases by
-at most the number of newly deleted records while $h$ decreases by exactly
-that number. Existing selected survivors remain selected under this rule.
+To select $v$, a request must remove all its surviving blockers. This is
+possible precisely when their number fits in the remaining budget.
+Eligibility includes currently selected records, whose remaining blocker
+count is zero, as well as some currently excluded records.
 
-\paragraph{Three separate guarantees.}
-Corpus recovery returns $S_F$. Model recovery returns the prescribed
-learner on $S_F$. State recovery reconstructs a specified retained-data
-state that supports further requests with budget $h$. The last guarantee
-does not erase earlier outputs, backups, allocator history, or every
-machine file. Our lower bound charges all usable private-data-dependent
-state, including caches, tickets, remote stores, retained random seeds,
-and earlier outputs available to the repair procedure. There is no free
-reread of an excluded candidate. Public metadata is distinguished from
-private information but remains part of physical cost.
+The rule supports permanent discard within the contract. Suppose a record
+has $r>h$ remaining blockers. After a further $\ell$ deletions, it has at
+least $r-\ell$ blockers and the budget becomes $h-\ell$. It still has
+more blockers than the budget allows. Thus eligibility can only shrink
+along a valid sequence. The same argument shows that a currently selected
+record remains selected until it is itself deleted.
 
-\section{Exact repair of training statistics}\label{sec:method}
-Let $t(v)\in\R^s$ be a fixed record-local statistic. It must be independent
-of a model or feature extractor fitted to the deletable corpus when exact
-state recovery is claimed. Introduce deletion indicators $x_u$ and write
-$x_J=\prod_{u\in J}x_u$, including $x_\varnothing=1$. Then
+For example, consider a surviving record with four blockers and a budget
+of three further deletions. Removing two of its blockers leaves two
+blockers and one deletion available. Removing an unrelated record instead
+leaves all four blockers and a budget of two. Neither action can make the
+record reachable. This simple count is the basis for safe payload discard;
+it does not require anticipating the order of later requests.
+
+\subsection{What the service returns and what it may read}
+Three recovery targets are useful. \emph{Corpus recovery} returns the
+selected identifiers $S_F$. \emph{Model recovery} returns the specified
+learner fitted on those records. \emph{State recovery} returns a designated
+summary that supports the remaining requests. We compare that summary
+with a fresh construction on the survivors using the same remaining
+budget. Two states can give the same current model while supporting
+different future requests, as Section~\ref{sec:memory} will demonstrate.
+
+For the storage question, all usable private-data-dependent information
+is charged to the retained state. This includes models, caches, tickets,
+remote stores, retained random seeds, and earlier outputs that repair can
+read. There is no free reread of surviving candidate features. Public
+metadata is fixed independently of the private payload, but its physical
+storage still counts in a complete implementation. These conventions
+separate a private-information bound from a total-byte comparison.
+
+The state identity proved next concerns a logical coefficient map.
+It is an exact specification for continuing computation. Physical erasure,
+previous releases, and external privacy obligations are discussed in
+Appendix~\ref{sec:limits}.
+
+\section{Building an exact repair summary}\label{sec:method}
+Many learners can be fitted from additive statistics. Rather than store
+one selected total, we represent how that total changes when blockers
+are deleted. The representation records the conditions under which each
+row contributes, including the condition that the row itself survives.
+
+\subsection{From one record to a signed coefficient map}
+Let $t(v)\in\R^s$ be a fixed statistic of record $v$, with $s$ coordinates.
+It is record-local: it does not change when other records are deleted.
+For each record $u$, introduce a deletion indicator $x_u$, equal to one
+when $u$ is deleted and zero otherwise. For an identifier set $J$, write
+$x_J=\prod_{u\in J}x_u$, with $x_\varnothing=1$.
+
+The statistic of $v$ should contribute exactly when all its blockers are
+deleted and $v$ survives. Its contribution is therefore
+$t(v)(1-x_v)x_{B(v)}$. Summing over records gives
 \begin{align}
- T(x)&=\sum_v t(v)(1-x_v)x_{B(v)}=\sum_J\alpha_J x_J,\label{eq:poly}\\
+ T(x)&=\sum_v t(v)(1-x_v)x_{B(v)}
+       =\sum_J\alpha_J x_J,\label{eq:poly}\\
  \alpha_J&=\sum_{v:B(v)=J}t(v)
        -\sum_{v:B(v)\cup\{v\}=J}t(v).\label{eq:coeff}
 \end{align}
-Each record contributes to at most two keys. This is a signed Boolean
-provenance representation, building on established provenance ideas
-\citep{green,aggregate}, rather than a new polynomial formalism.
+A key $J$ names a set of deletions, and its signed value $\alpha_J$ is
+added when every deletion in that key has occurred. Each record contributes
+to at most two keys: a positive term for removing its blockers and a
+negative term for also removing the record. Combining equal keys can
+cancel contributions. This is a signed Boolean specialization of
+provenance for data and aggregates \citep{green,aggregate}.
+
+\paragraph{Worked example: deletion requires addition and cancellation.}
+For the three-record chain, abbreviate the statistics as
+$A_0=t(a)$, $B_0=t(b)$, and $C_0=t(c)$. Then
+\begin{align*}
+ T(x)&=A_0(1-x_a)+B_0(1-x_b)x_a+C_0(1-x_c)x_b\\
+ &=A_0+(B_0-A_0)x_a+C_0x_b-B_0x_ax_b-C_0x_bx_c.
+\end{align*}
+With an original budget $K=2$, every displayed key is retained.
+Deleting $b$ sets $x_b=1$ and leaves a budget of one:
+\[
+                  T_{\rm retained}(x_a,x_c)
+                   =(A_0+C_0)-A_0x_a-C_0x_c.
+\]
+The $B_0$ terms cancel, while $C_0$ enters the current total. This is
+exactly the expression built from the two unconnected survivors $a,c$.
+Deleting a previously excluded record thus needs more than subtracting
+its old training contribution, which was zero.
+
+\subsection{Truncate once, then reduce the budget}
+The degree of a key is its number of identifiers. A key with more than
+$K$ identifiers can never be activated by at most $K$ deletions. We can
+therefore omit coefficients of degree above $K$ at construction. The
+important question is whether an omitted term could become needed after
+some of its identifiers are deleted. It cannot when the remaining budget
+falls by the same amount.
 
 \begin{theorem}[Finite-horizon state repair]\label{thm:repair}
 Keep only coefficients with $|J|\le K$. For every $|F|\le K$,
 \[
-             \sum_{v\in S_F}t(v)=\sum_{J\subseteq F}\alpha_J.
+                 \sum_{v\in S_F}t(v)=\sum_{J\subseteq F}\alpha_J.
 \]
-After an allowed request $F$, form
+After an allowed cumulative deletion $F$, form
 \begin{equation}\label{eq:update}
- \beta_L=\sum_{J:J\minus F=L}\alpha_J,\qquad |L|\le K-|F|.
+ \beta_L=\sum_{J:J\minus F=L}\alpha_J,
+                       \qquad |L|\le K-|F|.
 \end{equation}
-In exact arithmetic this is the same coefficient map as fresh construction
-on $D\minus F$ with horizon $K-|F|$. Repeated requests therefore compose
-independently of their batching and order, for the same final deleted set.
+In exact arithmetic, this is the same coefficient map as fresh construction
+on $\mathcal D\minus F$ with horizon $K-|F|$. Repeated requests compose
+independently of their batching and order for the same final deleted set.
 \end{theorem}
 \begin{proof}
-A monomial evaluates to one precisely when its key is contained in $F$;
-larger-than-budget keys vanish. Substituting $x_u=1$ for $u\in F$ removes
-deleted records through their $(1-x_u)$ factor and replaces each surviving
-record's blockers by $B(v)\minus F$. A discarded degree-$K+1$ or higher
-term loses at most $|F|$ variables, so it still exceeds the new cutoff.
-Thus early truncation loses no term needed in the retained-data map.
-Substitution commutes, and this argument also applies at every intermediate
-remaining horizon.
+A monomial equals one precisely when its key is contained in $F$.
+Keys of degree above $K$ therefore contribute zero to the current total.
+Substituting $x_u=1$ for every $u\in F$ removes deleted records through
+their $(1-x_u)$ factor. For each surviving record it replaces $B(v)$ by
+$B(v)\minus F$. Collecting the resulting keys gives Equation~\eqref{eq:update}.
+Any term discarded at construction had degree at least $K+1$. Deleting
+$|F|$ identifiers reduces its degree by at most $|F|$, leaving degree
+at least $K+1-|F|$, above the new cutoff. It cannot affect the fresh
+remaining-budget map. Substitutions commute, and the same argument applies
+at each intermediate horizon.
 \end{proof}
 
-The comparison uses the remaining budget, not a fresh budget of $K$ after
-every request. Replenishing the budget can require payloads that were
-correctly discarded under the original contract. Exact algebraic equality
-also does not imply bitwise equality of floating-point additions.
+The empty key is the currently selected statistic. Other keys describe
+possible future changes. The theorem preserves both parts, so a request
+can be answered now without losing the state needed by the next request.
+It also supplies a direct oracle: reconstruct the same map from retained
+records and compare it with the updated map.
 
-\paragraph{Indexed implementation.}
-The indexed method P-I stores nonzero coefficient keys, inverse incidences
-from identifiers to keys, and degree buckets. Deleting $u$ touches only
-incident keys, removes $u$ from each key, combines collisions, removes zero
-values, and drops keys above the new horizon. The scanning method P-S
-visits all keys. Both implement Equation~\eqref{eq:update} under the same
-numerical contract. Appendix~\ref{app:work} specifies request validation,
-retry behavior, and the implementation costs beyond substitution.
+The decreasing budget is essential. In the chain with $K=1$, only the
+constant and degree-one terms are stored. Deleting $b$ still gives the
+correct current statistic $A_0+C_0$, but the remaining budget is zero.
+If one incorrectly kept the old degree-one allowance and then deleted
+$a$, that truncated expression would give $B_0+C_0$ instead of $C_0$.
+The second request exceeds the original contract. Renewing a deletion
+budget requires a state prepared for the larger promise.
 
-For initial key count $M_0$, total key length $L_0$, statistic dimension
-$s$, and $Q$ supplied integer request IDs, define
-$\Phi_0=\sum_{J}|J|(|J|+1)/2$. The abstract indexed substitution core,
-with streamed IDs and excluding per-call overhead, has sequence-wide cost
+\subsection{Indexed updates and their cost}\label{sec:implementation}
+An indexed implementation, called P-I in the supplement, stores three
+objects: the nonzero coefficient map, an inverse index from each identifier
+to keys containing it, and buckets grouping keys by degree. A singleton
+deletion follows a short sequence:
+\begin{enumerate}
+\item Find the keys containing the deleted identifier through the inverse index.
+\item Remove that identifier from each key and combine values whose reduced keys coincide.
+\item Remove zero coefficients and their index entries.
+\item Decrease the remaining budget and discard the newly excessive degree bucket.
+\end{enumerate}
+A coefficient can move without changing its value. Vector addition is
+needed only when keys merge. For example, deleting $b$ in the chain
+merges the old constant with key $\{b\}$ and merges $\{a\}$ with
+$\{a,b\}$. Their values become $A_0+C_0$ and $-A_0$, respectively.
+The scanning implementation P-S applies the same substitution by visiting
+all keys. The inverse index avoids scanning unaffected entries.
+
+Let $M_0$ be the initial number of keys and $L_0$ their total length.
+Let $Q$ count supplied integer request identifiers across the sequence.
+For statistic dimension $s$, define the initial potential
+$\Phi_0=\sum_J |J|(|J|+1)/2$. The indexed substitution core has
+sequence-wide cost
 \begin{equation}\label{eq:work}
-              O(Q+\Phi_0+sM_0)
-              \subseteq O(Q+KL_0+sM_0),
+ O(Q+\Phi_0+sM_0)\subseteq O(Q+K L_0+sM_0),
 \end{equation}
-under expected constant-time dictionary operations apart from tuple
-processing. Each key shrink consumes its triangular-length potential;
-merges and pruning delete entries and incidences. There are at most
-$L_0$ incidence touches and $M_0$ merges. Appendix~\ref{app:work}
-gives the accounting and the frozen service's additional full-ID lookup,
-request sorting, empty-call, and workspace costs. Construction, model
-solves, bit complexity, and canonical serialization are additional costs.
-Equation~\eqref{eq:work} is not an end-to-end bound for that Python service.
-A single request can touch
-all keys; there is no uniform sublinear per-request promise.
+under expected constant-time dictionary operations apart from tuple work.
+Shrinking a length-$j$ key costs $O(j)$ and decreases its potential by $j$.
+Each merge removes an entry, so at most $M_0$ vector merges occur.
+Initial incidences are only removed, giving at most $L_0$
+inverse-incidence removals. This amortized argument allows an individual
+request to touch all keys.
 
-\paragraph{Ridge target.}
-For $q$ responses and raw learner rows $z_v\in\R^d$, use
-$t(v)=(z_vz_v^\top,z_vy_v^\top,1)$. Write the selected statistics as
-$(G,H,n)$. Average-loss ridge with fixed $\lambda>0$ satisfies
+The coefficient map and indices use $O(sM_0+M_0+L_0)$ words, plus
+membership storage. Construction, learner solves, rational bit lengths,
+and serialization are separate costs. The frozen Python service also
+performs request validation, a full public-ID lookup, sorting, and per-call
+work. Appendix~\ref{app:work} gives these costs and retry behavior.
+Equation~\eqref{eq:work} describes the substitution core rather than the
+complete service.
+
+\subsection{Ridge regression and contributor withdrawal}
+For ridge regression, let $z_v\in\R^d$ be a stored feature column and
+$y_v\in\R^q$ its response column. A matrix $W\in\R^{d\times q}$
+predicts $W^\top z_v$. Use the record statistic
+\[
+              t(v)=(z_vz_v^\top,z_vy_v^\top,1).
+\]
+Its selected sum is $(G,H,n)$: a feature cross-product matrix, a
+feature-response matrix, and the selected count. Average-loss ridge with
+fixed $\lambda>0$ solves
 \begin{equation}\label{eq:ridge}
-                    (G+\lambda n I)W=H.
+                       (G+\lambda n I)W=H.
 \end{equation}
-The learner has no intercept, penalizes all coordinates, and returns zero
-when $n=0$. The regularizer scales with the current selected count.
-Features normalized for cosine scoring do not replace the stored raw
-learner rows. A dense solve costs $O(d^3+d^2q)$, and each dense statistic
-contains $O(d^2+dq)$ values. Storing these values can cost more than compact
-eligible rows; arithmetic convenience alone is no memory advantage.
+There is no intercept, all coordinates are penalized, and the empty
+selected set returns zero. The factor $n$ follows from using average loss;
+repairing moments while retaining the old count would change this learner.
+Cosine-normalized scoring rows also do not replace the stored raw rows in
+its objective.
 
-\paragraph{Source withdrawal.}
-For a partition of records into sources, let $g(v)$ be a record's source
-and $U(v)=\{g(u):u\in B(v)\}$. Replace the record contribution by
-$t(v)(1-x_{g(v)})x_{U(v)}$ and apply Boolean idempotence. If
-$g(v)\in U(v)$, the contribution vanishes: the record cannot survive the
-withdrawal of its own blocking source. Otherwise the same substitution
-and degree argument applies, now with a source-count budget. Mathematical
-singleton sources do not demonstrate genuine contributor withdrawal.
+This specialization makes corpus and model repair distinct operations.
+The coefficient update supplies exact moments and count. A subsequent
+solve produces the head. Dense statistics have $O(d^2+dq)$ coordinates,
+and a dense solve costs $O(d^3+d^2q)$. Whether maintaining these moments
+is preferable to retaining compact eligible rows depends on the complete
+costs considered in Section~\ref{sec:contracts}.
 
-\section{A finite-format memory obstruction}\label{sec:memory}
-The previous algorithm establishes sufficiency. We next show why an exact
-service may need information about excluded records even when the current
-head, and every head under a smaller budget, is zero. The construction is
-mathematical; no claim is made that a text encoder realizes these rows.
+The same algebra supports withdrawal of all records belonging to one
+source. Assume sources partition the records, and write $g(v)$ for the
+source of $v$. Define the distinct blocking sources
+$U(v)=\{g(u):u\in B(v)\}$. With one deletion indicator per source,
+the contribution becomes
+\[
+                       t(v)(1-x_{g(v)})x_{U(v)}.
+\]
+Repeated occurrences of one source collapse because a Boolean indicator
+satisfies $x^2=x$. If $g(v)\in U(v)$, this expression is zero: removing
+that blocking source would also remove $v$. Otherwise the previous
+construction and proof apply with a source-count budget. Several blocking
+records from one source cost only one withdrawal request. The ownership
+partition must therefore be part of the target, alongside the graph.
 
+\section{Why the future budget can require excluded data}\label{sec:memory}
+The summary above is sufficient for exact repair. We now ask how much
+information any exact model-recovery service can require. The example
+uses a collection of excluded candidates. Each has a private word of
+feature signs, a shared group of blockers, and one individual blocker.
+Removing its blockers exposes that candidate to the learner.
+
+The construction connects graph selection to model information. Public
+feature coordinates determine which deletions expose each candidate.
+Private coordinates determine the resulting ridge head without changing
+the graph. The same stored rows serve both purposes. We first describe
+the feature family, then derive its current and future state requirements.
+
+\subsection{A graph that exposes one private word at a time}
 Fix $b\ge1$, $m\ge2$, and powers of four $k,D$ with
 $d=2+k+D\le2^{20}$. Public signatures
 $u_i\in\{\pm1/\sqrt{k}\}^k$ satisfy $|u_i^\top u_j|\le1/6$ for
 $i\ne j$; orthogonal Hadamard rows suffice when $m\le k$.
 Sort fixed public IDs by their actual priority and assign roles: an anchor
-$a$, $b$ common blockers $S$, $m$ individual blockers $p_i$, and $m$
+$a$, $b$ common blockers $S_0$, $m$ individual blockers $p_i$, and $m$
 candidates $w_i$, in that order. Use orthogonal coordinate blocks
 $e_0,e_1,U,H$ of dimensions $1,1,k,D$, and set $\alpha=1/128$.
-Only the signs of $z_i\in\{\pm1/\sqrt D\}^D$ are private. The raw rows are
+The public $U$ block identifies a candidate through $u_i$. The $H$ block
+carries its private word $z_i\in\{\pm1/\sqrt D\}^D$. The words vary
+independently across candidates; only their signs are private. The raw rows are
 \begin{equation}\label{eq:rows}
 \begin{aligned}
  a&=e_0,\\
@@ -505,29 +658,30 @@ Candidate labels, graph, signatures, roles, and blocker payloads are public.
 The entire public contract is fixed independently of the private signs.
 
 At the stored binary64 threshold $\tau=\operatorname{float64}(0.4)$,
-the frozen ordered FP64 normalization and dot product give
+the frozen ordered double-precision (FP64) normalization and dot product give
 \[
-                         B(w_i)=S\cup\{p_i\}
+                         B(w_i)=S_0\cup\{p_i\}
 \]
 uniformly over all private signs. Ideal required edges exceed $.43$;
 required nonedges are below $.372$. The scorer error is below $2^{-32}$
 under the explicit arithmetic assumptions in Appendix~\ref{app:scorer}.
-This is a proof for that operation order, not a certificate for arbitrary
-BLAS kernels, GPUs, or reassociated arithmetic.
+The operation order and arithmetic assumptions are part of the scorer
+contract; Appendix~\ref{app:scorer} gives the full margin proof.
 
+\subsection{From an exposed candidate to an information bound}
 Initially only the zero-label anchor is selected. At budget $b$, no
 candidate can lose its $b+1$ blockers, and every target head is zero.
-At budget $K=b+1$, the request $F_i=S\cup\{p_i\}$ selects $a,w_i$.
+At budget $K=b+1$, the request $F_i=S_0\cup\{p_i\}$ selects $a,w_i$.
 Each candidate has exactly $K$ blockers, so any allowed request selecting
 it must equal $F_i$; no allowed request selects two candidates.
 For exact rational ridge with rational $\lambda>0$, define
 \[
-                t=16641/16384+2\lambda.
+                \kappa=16641/16384+2\lambda.
 \]
 Since $a\perp w_i$, the resulting head is
 \begin{equation}\label{eq:hardhead}
- \theta_i=\frac{w_i}{t}
-     =\frac{\tfrac12e_1+\tfrac78u_i}{t}+\frac\alpha t z_i.
+ \theta_i=\frac{w_i}{\kappa}
+     =\frac{\tfrac12e_1+\tfrac78u_i}{\kappa}+\frac\alpha \kappa z_i.
 \end{equation}
 Its $H$ coordinates reveal all $D$ private signs of candidate $i$.
 
@@ -551,20 +705,19 @@ distinguishability argument applies.
 
 Here a $\bits$-bit state has at most $2^{\bits}$ distinguishable values
 conditional on public information and independent public coins. Usable
-length or framing choices must also be charged. The probes delete only
-public blockers, so access to their forgotten payloads does not bypass
-the bound. This result concerns private information; public metadata,
-padding, workspace, and output representation still consume bytes.
-Every usable sign-dependent model, cache, ticket, retained random seed,
-earlier output, or external store counts toward the private state. Repair
-cannot reread retained candidate features or use an uncharged private
-side channel. This access restriction is part of the theorem, not a
-property established by hashing an input file.
+length or framing choices are charged as well. Each isolating request $F_i$ exposes
+one candidate, but the initial state must support every candidate's request.
+That is why the lower bound sums all $mD$ signs rather than the $D$ signs
+revealed by a single answer. The requests delete only public blocker
+payloads, so receiving those deleted payloads supplies none of the missing
+private information. Public metadata, padding, and workspace consume
+additional physical storage under the contract of Section~\ref{sec:setup}.
 
+\subsection{The minimum information after earlier deletions}
 For cumulative deletion $F$ under the original $K=b+1$, define
 \begin{align}
  I(F)&=\{i:w_i\notin F,\ |B(w_i)\minus F|\le K-|F|\}\nonumber\\
-     &=\{i:F\subseteq S\cup\{p_i\}\},\qquad e(F)=|I(F)|.\label{eq:live}
+     &=\{i:F\subseteq S_0\cup\{p_i\}\},\qquad e(F)=|I(F)|.\label{eq:live}
 \end{align}
 The equality uses the specific construction, not arbitrary graphs.
 
@@ -580,387 +733,372 @@ Under further deletion $F'\supseteq F$, $I(F')\subseteq I(F)$, so a
 discarded word never becomes relevant again within this horizon.
 \end{proof}
 
-The implemented finite-family codec packs these words in canonical order
-and copies only surviving eligible words at each transition. Its immutable
-export has a 48-byte header, the charged public deletion ledger, and
-$\lceil e(F)D/8\rceil$ payload bytes. Fresh retained-data initialization
-and sequential export produce the same bytes under the same public
-universe and remaining budget. This is not a general compressor for
-natural embeddings, physical erasure, or a claim about transcripts.
-The conditional theorem fixes $F$; an adaptive request policy can itself
-reveal private information through its requests.
-
-\paragraph{Approximate heads.}
-With expected squared parameter error at most $\varepsilon$ on each fixed
-input and hard probe, a standard information argument gives
-\begin{equation}\label{eq:rate}
- \bits\ge mD R_{\rm sq}\!\left(\frac{t^2\varepsilon}{4\alpha^2}\right),
-\end{equation}
-where $h_2$ is binary entropy in bits,
-$R_{\rm sq}(v)=1-h_2((1-\sqrt{1-4v})/2)$ for $0\le v\le1/4$
-and zero above that range. The public component of
-Equation~\eqref{eq:hardhead} attains error $\alpha^2/t^2$ with no private
-information. Appendix~\ref{app:information} derives the bound. These are
-classical information tools specialized to this family, not a new general
-coding theorem. Parameter fidelity does not establish constant NLP test
-loss: averaging prediction error over hidden basis directions introduces
-a factor of $1/D$.
-
-\section{A fully LLM calibration study}\label{sec:study}
-The empirical objective is to measure whether the target difference in
-Equation~\eqref{eq:target} matters in a real text pipeline and whether a
-repair method has useful total cost. The calibration uses existing
-AskUbuntu records, native tag labels, and two local model raters. Pair
-annotation and adjudication are entirely model-based; no human pair
-annotations or pair reviews were collected. The original human-validation
-requirements remain unmet.
-
-\subsection{Data and task configuration}
-The prepared population contains 140,250 question records, split into
-98,187 training, 20,996 calibration, and 21,067 test rows. Source grouping
-uses native account metadata as a contributor proxy. Missing or community
-owners remain explicit unknown singletons; these are not eligible targets
-for genuine source-withdrawal requests. The prepared data contain 88,344
-source units, including 1,522 unknown units. Source completeness means
-surviving records after the fixed export and filtering rules, not every
-historical, deleted, or private contribution.
-
-The corpus uses the corrected April 2024 export \citep{askubuntu}, with
-checksummed acquisition and documented provenance. Raw text and
-account-level records remain private; released evidence contains hashes
-and aggregate counts. Appendix~\ref{app:repro} describes provenance and
-replay limits.
-
-The assembled E5 cache contains 140,250 rows of 768 FP32 coordinates,
-produced and replayed in 32 CPU shards. E5 provides fixed pretrained text
-representations \citep{e5}. We encode complete documents in consecutive
-256-content-token chunks, prepend \texttt{query:} to each chunk, and
-normalize its attended-token mean. A content-length-weighted average of
-these chunk vectors is normalized again to form the stored row.
-Appendix~\ref{app:embedding} specifies tokenization, precision, padding,
-and aggregation order. This custom full-document recipe can affect the
-absolute cosine distribution; it is not first-window truncation.
-The native prediction task uses 20 tags and
-retains questions with all-zero target vectors. Five source-grouped
-calibration folds selected $\lambda=10^{-5}$ from the six frozen values
-$10^{-6},10^{-5},\ldots,10^{-1}$; exact ties select larger $\lambda$.
-Out-of-fold calibration predictions fix one F1 threshold per tag, with
-the stricter threshold on ties and a never-positive rule when no
-calibration positive exists. Test labels and deletion outcomes are not
-used for this configuration. Other feature representations need their
-own task settings.
-
-Before effect measurements, a deterministic one-tenth whole-source
-reservation allocated 10,314 training and 2,138 test rows to development.
-The remaining evaluation allocation contains 87,873 training and 18,929
-test rows; calibration is unchanged. Every reserved source stays outside
-later evaluation, even if a small pilot does not use all its rows.
-The development targets of 1,000, 2,500, and 5,000 training rows include
-the entire boundary source and are selected in a frozen order after the
-guard. These counts are upper bounds before leakage filtering; the
-conditional downstream design and infeasible panels are documented in
-Appendix~\ref{sec:design}.
-
-\subsection{Model-defined threshold calibration}\label{sec:judges}
-The raters are pinned Qwen2.5-7B-Instruct \citep{qwen} and
-Mistral-Nemo-Instruct-2407 \citep{mistral}.
-They receive complete original pair texts and the same fixed task, with
-no IDs, cosine scores, tags, prior answers, or desired outcome. Each runs
-offline on an admitted A100 with BF16, batch size one, greedy constrained
-decoding, forced Flash attention, a 512-token output budget, and a
-32,768-token total budget. Truncation, summarization, format repairs,
-semantic retries, and fallback attention are disallowed. Source text is
-untrusted input; the judges have no tools or retrieval. The supplement
-provides the exact system instructions and response schemas, the rendering
-specification, and the renderer and constrained-inference kernels.
-
-A pair is positive only if both valid outputs label it either an exact
-copy or substantially the same meaning. Other labels, disagreements,
-uncertainty, and invalid or unavailable outputs contribute zero positive
-mass while remaining in the full denominator. The models are not assumed
-independent. Thus the target is a conservative two-model label function,
-not semantic truth. Known LLM-judge biases motivate retaining order
-diagnostics, but agreement cannot replace human validity
-\citep{judge}.
-
-Version 4 enumerates all 220,405,510 unordered calibration pairs,
-including pairs within the same source. Thirteen right-closed cosine
-strata use cuts $.50,.90,.91,\ldots,.99,.995$. Each nonempty stratum
-contributes a simple random sample without replacement of up to 30
-pairs. The realized selection has 360 canonical pairs and 36 swapped
-diagnostics per model. Exact inverse-inclusion weights estimate the
-joint-positive proportion above each of the 51 original thresholds
-$.50,.51,\ldots,.99,.995$, always with the strict stored-float comparison
-$\text{score}>\tau$. The least strict threshold with weighted proportion
-at least $.95$ and nonzero support is selected.
-
-Only a selected threshold proceeds to a fresh simple random sample of up
-to 200 pairs from \emph{all} above-threshold calibration pairs. A one-sided
-exact 95\% finite-population lower bound must reach $.90$. Any change in
-a model's availability/status or valid category on canonical overlap
-between selection and validation makes validation unavailable. Swapped
-pairs are diagnostics, not extra votes. No retuning follows a failure.
-The confidence bound concerns the fixed/potential model-label function
-under the sampling model; observed replay stability does not establish
-stability everywhere or accuracy against human judgments.
-
-The frozen downstream design is retained in Appendix~\ref{sec:design}
-to distinguish planned comparisons from executed evidence. It was not
-activated because neither calibration selected a threshold.
-
-\section{Calibration results and their implications}\label{sec:evidence}
-\paragraph{Completed negative calibration.}
-The earlier version 3 attempted all 198 model calls: 90 canonical pairs
-and nine swapped diagnostics per model. It produced zero joint positives
-among the 90 canonical pairs and no qualifying threshold. One canonical
-Mistral response was invalid JSON and stayed in the denominator without
-retry. All 51 weighted cuts were independently recomputed. Fresh
-validation was therefore not run. This is a failure of the registered
-model-defined selection criterion, not evidence that every population
-pair is semantically distinct.
-
-Version 4 is a separately versioned follow-up after that negative result;
-it is not independent confirmation or a rescue of version 3. Both models
-completed all 396 calls. Qwen produced 391 valid responses and five invalid
-JSON responses; Mistral produced 396 valid responses. The supplement
-provides the exact prompts and response-validation rules; invalid outputs
-were retained in the analysis.
-
-None of the 51 frozen cuts passed. The maximum weighted joint-positive
-proportion was $2/5$, reached at $.99$ and $.995$, against the required
-$19/20$. Independent arithmetic replay verified all 51 cuts and the
-negative decision. Fresh validation was consequently not run. Even the
-frozen favorable-imputation sensitivity calculation peaked at $8/15$:
-it treats invalid or uncertain judgments as potentially positive but
-preserves observed substantive negatives. This is not a confidence bound.
-Table~\ref{tab:calibration} reports representative frozen cuts; the companion
-ledger contains every cut and its exact rational arithmetic.
+A small instance illustrates why current output and future state differ.
+Take one common blocker ($b=1$), two candidates ($m=2$), and four private
+signs per candidate ($D=4$). Use $k=4$ with public signatures
+$(1,1,1,1)/2$ and $(1,1,-1,-1)/2$, so the full feature dimension is ten.
+The original budget is $K=2$. Table~\ref{tab:live} compares admissible
+first requests. Every current head is still zero, but the number of
+private bits needed for the remaining deletion is different.
 
 \begin{table}[t]
 \centering
 \small
-\caption{Completed v4 selection. Pairs are sampled canonical pairs with
-score strictly above the cut. Joint proportions and sensitivity values
-use the frozen inclusion weights. Every one of the 51 cuts failed the
-95\% selection requirement. Sensitivity is favorable imputation, not a
-statistical confidence limit.}
-\label{tab:calibration}
-\begin{tabular}{rrrr}
+\caption{Algebraic instance with two four-sign candidates and one shared
+blocker $s$. After one deletion, one deletion remains. Equal current models
+do not imply equal future information requirements.}
+\label{tab:live}
+\begin{tabular}{llll}
 \hline
-$\tau$ & Pairs & Joint (\%) & Sensitivity (\%) \\
+First deletion & Still reachable candidates & Current head & Private bits\\
 \hline
-.90 & 330 & 0.01 & 1.72 \\
-.95 & 180 & 0.31 & 5.64 \\
-.98 & 90 & 9.66 & 10.08 \\
-.99 & 60 & 40.00 & 44.68 \\
-.995 & 30 & 40.00 & 53.33 \\
+$s$ & Both candidates & Zero & 8\\
+$p_1$ & Candidate 1 only & Zero & 4\\
+$a$ & Neither candidate & Zero & 0\\
 \hline
 \end{tabular}
 \end{table}
 
-The raw stratified sample contained 27 joint positives among 360 pairs;
-this ratio is not a population prevalence estimate. Qwen marked 32
-canonical pairs positive and Mistral marked 151. Their six-way categories
-differed on 308 of the 355 pairs with two valid responses. Reversing the
-order of the 36 diagnostic pairs changed status or category in three
-Qwen responses and 14 Mistral responses; binary-positive decisions changed
-in one and six, respectively. These are rater and order-sensitivity
-diagnostics, not measures of human accuracy. The failure concerns this
-fixed representation, rater pair, rubric, and selection protocol; it does
-not establish the absence of semantic duplicates in AskUbuntu.
+Deleting $s$ leaves each candidate one individual blocker, so either can
+still be exposed. Deleting $p_1$ leaves only candidate 1 reachable: the
+other candidate still has two blockers. Deleting $a$ leaves both
+candidates with two blockers and only one deletion available. No private
+word is then needed. If the complete request is $\{s,p_1\}$, candidate 1
+is already selected. Its four signs remain necessary even at remaining
+budget zero, because the current head must still be recoverable.
 
-\paragraph{Post-failure structural characterization.}
-A separately versioned diagnostic used the original pre-guard whole-source
-prefix of 1,001 development-training records and its stored E5 rows.
-All 51 original cutoffs were retained. The first 25, $.50$ through $.74$,
-produced complete graphs; $.995$ produced an empty graph. Deleting an
-originally excluded record could admit another record at 13 cuts,
-$.84$ through $.96$. The exact expected admissions under uniform deletion
-of 128 records ranged from zero to 12.51 across the full grid. These are
-conditional structural properties of this panel, without established
-semantic usefulness or task benefit. The execution matched every graph
-under two tile sizes, and a separate aggregate audit verified all 204
-exact expectations for budgets $1,8,32,128$. No task labels, held-out
-feature rows, model judgments or learner heads were used. No cutoff was
-selected, and the failed calibration gates remain unchanged.
+The finite-family codec stores eligible sign words in candidate order.
+A transition copies only words that remain eligible, using immutable
+canonical exports. The export has a 48-byte header, a charged public
+deletion ledger, and $\lceil e(F)D/8\rceil$ private payload bytes.
+Fresh retained-data initialization and sequential export yield identical
+bytes under the same public universe and remaining budget. The conditional
+bound fixes $F$; Appendix~\ref{sec:limits} discusses request policies that
+reveal information through their own adaptive choices.
 
-\paragraph{Exact repair on natural score graphs.}
-A second, prospectively fixed diagnostic applied the unchanged indexed
-repair algorithm to the same 1,001 records at all 51 cutoffs. It maintained
-exact integer membership coordinates rather than a task learner. One
-fixed record-deletion sequence and one contributor-proxy source-deletion
-sequence were reused across cuts, each with a horizon of 128 requests.
-All 13,056 singleton updates matched a direct raw-blocker membership
-oracle. At 408 checkpoints, after $1,8,32,128$ requests per sequence,
-sequential, batch and reverse-order updates had exactly equal logical
-coefficient and index states; recomputing the retained-data graph and
-reconstructing the state at the remaining horizon agreed as well.
-An independent aggregate audit checked the bound execution receipts;
-private-state equality was tested within the cluster run.
-This checks exact repair for these development cases. It does not certify
-physical byte equality or erasure, enforce a no-reaccess boundary, or
-establish learner accuracy, semantic usefulness, speedup or memory savings.
-The failed calibration gates and original evaluation reservations remain
-unchanged.
+\subsection{Approximate heads and finite output precision}
 
-\paragraph{Theory and software evidence.}
-Implementation checks exercise coefficient reconstruction, scorer margins,
-and sequential serialization; the general guarantees follow from the
-proofs above. Earlier lexical development favored the compact
-eligible-payload baseline B-E (Appendix~\ref{sec:design}) in total bytes.
-The private-information theorem does not establish a storage advantage on
-natural data.
+With expected squared parameter error at most $\varepsilon$ on each fixed
+input and hard probe, the same private words yield a quantitative bound. Write $h_2$ for binary
+entropy in bits and define the squared-error information function
+\[
+ R_{\rm sq}(v)=
+ \begin{cases}
+ 1-h_2((1-\sqrt{1-4v})/2),&0\le v\le1/4,\\
+ 0,&v>1/4.
+ \end{cases}
+\]
+A standard information-distortion argument \citep{shannon} gives
+\begin{equation}\label{eq:rate}
+ \bits\ge mD R_{\rm sq}\!\left(\frac{\kappa^2\varepsilon}{4\alpha^2}\right),
+\end{equation}
+The normalization relates head error to uncertainty about a private sign.
+For a hidden sign encoded as a bit $Y_{ij}\in\{0,1\}$, the corresponding
+exact head coordinate is $\alpha(2Y_{ij}-1)/(\kappa\sqrt D)$.
+Rescaling an estimated coordinate to the bit interval multiplies its
+squared error by $\kappa^2D/(4\alpha^2)$. The entropy bound then charges
+the uncertainty removed across all $mD$ bits. Appendix~\ref{app:information}
+gives the posterior-variance argument and its concavity step.
 
-\paragraph{Consequences for empirical claims.}
-The diagnostics establish graph structure and exact membership repair for
-these development cases. Because neither calibration selected a threshold,
-the threshold-qualified downstream study and held-out evaluation remain
-unexecuted. Natural-text utility, complete cost, uncertainty in effect
-estimates, and cross-representation robustness remain unmeasured. The
-failed criteria, evaluation reservation, and original human-validation
-requirements remain unchanged; choosing a favorable cutoff, prompt, or
-judge after the failure would define a different study.
+At zero error, Equation~\eqref{eq:rate} recovers the exact $mD$ lower
+bound. Returning only the public part of Equation~\eqref{eq:hardhead}
+uses no private signs and attains squared error $\alpha^2/\kappa^2$.
+At that error the lower bound becomes zero. Thus the parameter-error
+allowance controls how much of the private word must be retained.
+The criterion applies to every fixed input and isolating request;
+averaging over all deletion sets would dilute the difficult cases among
+requests whose answer is zero.
+
+The exact head is rational even though the input features are stored in
+FP32. In the ten-dimensional example with $\lambda=1$, a hidden feature
+coordinate is $\pm1/256$ and the corresponding head coordinate is
+$\pm64/49409$, which has no finite binary expansion. A floating release
+therefore needs a stated approximation contract. An actual certified
+parameter radius below $\alpha/(\kappa\sqrt D)$ preserves every sign.
+Appendix~\ref{app:certificate} gives a sufficient finite-output radius
+and explains the distinction between parameter error and prediction risk.
+
+\section{What the contract means for a training service}\label{sec:contracts}
+The target and future budget determine what the service must be able to
+reconstruct. How it stores that information determines its implementation
+cost. These are separate design decisions.
+
+\subsection{Retain payloads and dependencies for different purposes}
+Deleting an excluded record involves both payloads and dependencies.
+Its own training contribution may be zero, but its identifier can still
+appear in conditions controlling other records. Payload discard and
+dependency discard serve different purposes. A correct implementation
+must remove the record's selection influence as well as its own
+contribution. In the coefficient representation, the substitution does
+both operations and allows their effects to cancel where appropriate.
+
+\subsection{Compare with the strongest simple storage alternative}
+A natural baseline stores compact feature and label rows only for records
+that remain eligible. It also retains their blocker incidences and degree
+buckets. After a request, it identifies selected-set changes and updates
+moments in a batch. The supplement calls this baseline B-E. It uses the
+same eligibility boundary as the coefficient method, but delays expanding
+a feature row into an outer product.
+
+This is a consequential choice for high-dimensional features. A row uses
+$O(d+q)$ values, while its dense ridge statistic uses $O(d^2+dq)$.
+Combining many rows into a shared coefficient can amortize the larger
+statistic. If few records share a key, compact rows can be preferable.
+The earlier lexical development comparison favored the compact eligible-row
+baseline in total bytes. A bound on necessary private information does
+not rank these general implementations by physical memory.
+
+A useful evaluation therefore compares full lifecycles under identical
+requests. It includes initialization, graph and index storage, payloads,
+moments, temporary gathered rows, solves, and serialization. Incremental
+update time and total service time answer different questions. Fresh
+reconstruction remains the correctness oracle; an optimized eligible-row
+baseline is the practical cost comparator. Appendix~\ref{sec:design}
+retains the prepared evaluation design and all unexecuted comparisons.
+
+\section{Evidence on natural score graphs}\label{sec:evidence}
+We examine two questions: does the fixed selection rule admit records
+after deletion on natural features, and does a chosen similarity threshold
+support the intended semantic application? These questions use different
+oracles. Exact membership checks test the selection and repair algebra.
+Model agreement tests the frozen semantic qualification criterion.
+
+\subsection{Data, representations, and study populations}\label{sec:study}
+The prepared AskUbuntu population contains 140,250 questions from the
+corrected April 2024 export \citep{askubuntu}. Calibration uses 20,996
+questions. Development is reserved by whole contributor source before
+any effect measurement. The structural and repair diagnostics use the
+original pre-guard prefix of 1,001 development-training records. They
+were separately fixed after the failed calibration and retain all 51
+original cutoffs: $.50,.51,\ldots,.99,.995$. No operating cutoff is
+chosen from these diagnostics.
+
+The representation is the pinned multilingual E5 base encoder \citep{e5},
+with 768 stored FP32 coordinates per question. We encode complete documents
+in successive 256-content-token chunks. Each chunk receives a
+\texttt{query:} prefix and an attended-token mean, which is normalized.
+A content-length-weighted average of the chunk vectors is normalized
+again to produce the stored row. The scorer normalizes stored rows in
+FP64 before cosine comparison. This fixed full-document recipe determines
+the score distribution; Appendix~\ref{app:embedding} specifies its precision
+and operation order.
+
+Native accounts supply contributor proxies. Unknown and community owners
+remain explicit singletons and are excluded from genuine source-withdrawal
+requests. The complete split, ownership counts, source reservation, and
+prepared tag-prediction task appear in Appendix~\ref{app:protocol}.
+Neither diagnostic reads task labels, held-out feature rows, or model
+judgments. Both reuse the same feature cache, priority order, and strict
+comparison $\mathrm{score}>\tau$.
+
+\subsection{Where deletion changes the selected set}
+The grid contains markedly different graph regimes
+(Table~\ref{tab:structure}). The first 25 cutoffs, $.50$ through $.74$,
+produce complete graphs. At $.995$ the graph is empty. Between these
+extremes, deleting an initially excluded record admits another record at
+13 cutoffs, $.84$ through $.96$.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Illustrative points from the full 51-cut grid on 1,001 development
+records. The last column counts initially excluded records whose singleton
+deletion admits at least one other record. These are fixed score graphs,
+not selected or semantically qualified operating thresholds.}
+\label{tab:structure}
+\begin{tabular}{rrrrr}
+\hline
+Cutoff & Edges & Selected & Excluded & Excluded deletions with admission\\
+\hline
+.50 & 500,500 & 1 & 1,000 & 0\\
+.84 & 245,841 & 7 & 994 & 1\\
+.90 & 15,678 & 504 & 497 & 50\\
+.96 & 197 & 952 & 49 & 7\\
+.995 & 0 & 1,001 & 0 & 0\\
+\hline
+\end{tabular}
+\end{table}
+
+The intermediate graphs expose the distinction in Figure~\ref{fig:chain}.
+At the illustrative $.90$ cutoff, 50 of the 497 excluded records each
+have a deletion that admits another record. In a complete graph, every
+later record has all earlier records as blockers. Deleting one excluded
+record cannot remove that entire earlier set. In an empty graph, all
+records are already selected. Graph density alone therefore does not
+predict the excluded-blocker effect; the arrangement of blockers matters.
+
+For uniform deletion of 128 records, the exact expected number of
+admissions ranges from zero to 12.51 across the full grid. These
+expectations concern the fixed panel and sampling rule. The execution
+reproduced every graph with two tile sizes. A separate aggregate audit
+checked all 204 exact expectations for budgets $1,8,32,128$.
+
+\subsection{Exact repair throughout deletion sequences}
+We apply the unchanged indexed algorithm to integer membership coordinates:
+each record contributes its own coordinate when selected. This makes the
+sum an exact indicator vector of the selected set and exercises the
+coefficient mechanism without fitting a task learner.
+
+One fixed record-deletion stream and one fixed contributor-proxy source
+stream are reused at every cutoff. Each has an original horizon of 128
+requests. The record stream removes 128 records; the source stream removes
+261. The streams check both request units, rather than comparing their
+effect sizes at matched removed-record volume.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Exact integer repair checks over all 51 cutoffs. Counts come from
+the same two fixed trajectories, not independent statistical replicates.
+State equality compares logical coefficient maps and indices at the
+remaining budget.}
+\label{tab:repair}
+\begin{tabular}{lr}
+\hline
+Check & Matches / checks\\
+\hline
+Selected membership after each singleton request & 13,056 / 13,056\\
+Sequential versus batched retained state & 408 / 408\\
+Sequential versus reverse-order retained state & 408 / 408\\
+Retained state versus fresh reconstruction & 408 / 408\\
+\hline
+\end{tabular}
+\end{table}
+
+Every singleton update matches a direct raw-blocker membership oracle
+(Table~\ref{tab:repair}). After $1,8,32,128$ requests in each trajectory,
+we also compare sequential, batched, and reverse-order processing.
+Recomputing the retained-data graph and constructing the summary at the
+remaining horizon gives the same logical state at all 408 checkpoints.
+These comparisons test the stronger conclusion of Theorem~\ref{thm:repair},
+not just equality of the current selected count. Private-state comparisons
+were executed in the cluster run; an independent aggregate audit checked
+the bound receipts and reported counts.
+
+\subsection{Semantic qualification: two failed calibrations}\label{sec:judges}
+The intended semantic application requires a qualified similarity cutoff.
+Annotation uses pinned Qwen2.5-7B-Instruct \citep{qwen} and
+Mistral-Nemo-Instruct-2407 \citep{mistral}, with no human pair review.
+Both receive the complete pair texts under a fixed rubric, without IDs,
+scores, tags, or each other's answers. A pair is positive only when both
+valid outputs call it an exact copy or substantially the same meaning.
+Disagreements, other labels, uncertainty, and invalid or unavailable
+outputs contribute zero positive mass and remain in the denominator.
+The target is this joint model-label function. Model agreement and
+order sensitivity are assessed as such \citep{judge}.
+
+Version 3 completed 90 canonical pairs and nine swapped diagnostics per
+model. It produced zero joint positives and no qualifying cutoff.
+Version 4 is a separately versioned follow-up, with the earlier negative
+result preserved. It enumerates all 220,405,510 unordered calibration
+pairs and samples up to 30 pairs without replacement from each of 13
+score strata. The realized sample has 360 canonical pairs and 36 swapped
+diagnostics per model. Inverse-inclusion weights estimate the joint-positive
+proportion above each original cutoff.
+
+The frozen selection rule requires a weighted proportion of at least
+95\% with nonzero support, choosing the least strict qualifying cutoff.
+Only a selected cutoff proceeds to fresh validation, whose one-sided
+95\% finite-population lower bound must reach 90\%. Neither version
+selected a cutoff, so fresh validation was not run. In version 4, the
+largest weighted proportion is 40\%, reached at $.99$ and $.995$
+(Table~\ref{tab:calibration}). All 51 negative decisions were independently
+recomputed. Appendix~\ref{app:protocol} gives invalid-response counts,
+order diagnostics, sensitivity analysis, and the full decision protocol.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Version 4 semantic selection at representative frozen cutoffs.
+Pairs are sampled canonical pairs with score strictly above the cutoff.
+Joint proportions use inclusion weights; the selection requirement is 95\%.}
+\label{tab:calibration}
+\begin{tabular}{rrr}
+\hline
+Cutoff & Pairs & Weighted joint positive (\%)\\
+\hline
+.90 & 330 & 0.01\\
+.95 & 180 & 0.31\\
+.98 & 90 & 9.66\\
+.99 & 60 & 40.00\\
+.995 & 30 & 40.00\\
+\hline
+\end{tabular}
+\end{table}
+
+The completed natural-data evidence establishes structural admissions and
+exact membership repair on these development graphs. Both semantic
+calibrations failed, leaving the threshold-qualified task, comparative
+cost, and held-out effect study unexecuted. This failure concerns the fixed
+representation, rater pair, and rubric; it does not establish the absence
+of semantic duplicates in AskUbuntu. The original evaluation reservation
+and unmet human-validation gates remain preserved.
 
 \section{Related work}\label{sec:related}
-\paragraph{Curation and whole-pipeline targets.}
-\citet{cao} develop summation-form unlearning across feature selection and
-model fitting: deletion can change the selected features before the
-model is updated. Thus summaries and preprocessing-aware unlearning are
-established ideas. Our analysis instead fixes record-level suppression and
-characterizes its remaining-horizon statistic map and ridge outputs.
-SemDeDup studies embedding-based redundancy removal \citep{semdedup}.
-The released suppression computation motivates our fixed ordered rule
-\citep{semcode}; a full curation pipeline may have additional data-dependent
-steps. ARCANE combines exact-unlearning architecture with representative
-data selection \citep{arcane}. Its Section~3.2 assigns no retraining cost
-to a request outside the selected subset. Under our raw-neighbor rule,
-such a request can instead admit surviving records and change the head,
-as Figure~\ref{fig:chain} shows. This comparison concerns that specific
-selection contract. GRACE studies gradient-guided
-forget/retain coresets for behavioral LLM unlearning \citep{grace}; its
-target differs from rerunning the original fixed curator in
-Equation~\eqref{eq:target}.
+\paragraph{Curation and complete-pipeline targets.}
+\citet{cao} use summation-form learning to update feature selection and
+models after deletion. \citet{ivmunlearning} casts unlearning as view
+maintenance, including preprocessing in the maintained dataflow.
+Dominici's thesis concerns data preparation pipelines and feature stores
+\citep{dominici}; its metadata and research description were available
+for comparison, while its full text was not. These works motivate treating
+data preparation as part of the target rather than an external fixed input.
+Our result fixes record-level suppression and characterizes the exact
+statistic map that survives a decreasing deletion budget.
 
-\paragraph{Provenance and incremental computation.}
+SemDeDup studies embedding-space redundancy \citep{semdedup}; its released
+suppression computation motivates our operator \citep{semcode}. ARCANE
+combines representative selection with an exact-unlearning architecture
+\citep{arcane}. Its Section~3.2 assigns no retraining cost to deletions
+outside the selected subset. Our example shows why that property depends
+on the selection contract. GRACE selects forget and retain coresets for
+behavioral language-model unlearning \citep{grace}, a different target
+from reconstructing a fixed curator and learner.
+
+\paragraph{Provenance and additive repair.}
 Polynomial provenance \citep{green}, provenance for aggregation and
 difference \citep{aggregate}, DBSP's incremental query framework
-\citep{dbsp}, and PrIU's provenance-based regression updates \citep{priu}
-are direct antecedents. Schelter explicitly frames unlearning as view
-maintenance and includes tokenization in the maintained dataflow
-\citep{ivmunlearning}. His Section~3 links efficient repair to sparse
-computational dependencies. Thus preprocessing-aware incremental unlearning
-also precedes this work. Dominici's thesis studies end-to-end unlearning through data preparation
-pipelines and feature stores \citep{dominici}. The author's research description
-emphasizes provenance tracking and deletion propagation. This is directly
-relevant to the whole-pipeline target in Equation~\eqref{eq:target}.
-Our analysis fixes one ordered suppression operator and its feature graph,
-then requires exact ridge-head and continuing-state recovery under a cumulative
-deletion budget. These assumptions delimit our result; they do not exclude
-corresponding guarantees from the thesis. Its operator semantics, retained-data
-access, and evaluation could not be checked without the full text.
-Our Boolean expansion is a specialization.
-Our scoped results are the coefficient-map identity at the remaining
-horizon and the learner-level finite-feature obstruction. We do not claim that negative
-dependencies, moment updates, or deletion-induced additions originate here.
+\citep{dbsp}, and provenance-based regression updates \citep{priu}
+provide the algebraic foundations. Our signed expansion associates each
+record with its activation and deletion conditions. Its finite-degree
+truncation remains valid because every substitution reduces the admissible
+future degree by the same amount. This yields equality with a designated
+fresh coefficient map, including coefficients for later requests.
 
-\paragraph{State and future requests.}
-\citet{ginart} include metadata for subsequent deletions in the object whose
-distribution must match retraining (Section~3, Definition~3.1).
-\citet{cohencontrol} relate unlearning to adaptive history independence and
-distinguish one released output from internal state and future behavior
-(Sections~3.1 and~3.4). We do not introduce state recovery as a general
-requirement. Theorem~\ref{thm:repair} proves equality for a particular
-coefficient map at a decreasing horizon; the finite-family codec attains
-the corresponding conditional private-information minimum. These results
-do not imply the broader interactive privacy or deletion guarantees.
+\paragraph{Continuing state and storage.}
+\citet{ginart} include metadata for subsequent deletions in the object
+compared with retraining. \citet{cohencontrol} relate unlearning to adaptive
+history independence and distinguish current outputs from internal state
+and later behavior. Learning-unlearning space complexity studies
+budget-dependent storage \citep{space}. Ticketed unlearning separately
+charges central information and per-record tickets \citep{ticketed},
+including a multi-request threshold construction. Our bound charges all
+private information accessible to repair, including tickets, under a
+fixed public contract. Its matching codec concerns the constructed
+feature family at each remaining horizon.
 
-\paragraph{Information needed for unlearning.}
-Learning-unlearning space complexity already studies memory under a
-bounded number of deletions \citep{space}. In the full version,
-Theorems~5.4 and~6.3 give budget-dependent upper and lower bounds for
-realizability testing; Appendix~G connects this task to empirical risk
-minimization. Horizon-dependent memory and reconstruction arguments
-therefore precede our construction. Our theorem specifies the joint
-curator, stored feature values, ridge outputs, and sequential state.
-Ticketed schemes separately measure central auxiliary bits and
-per-record tickets supplied with forgotten examples \citep{ticketed}.
-Their main Definitions~1--2 and Remark~3 require exact predictor recovery
-after one deletion request; their threshold construction also supports
-multiple requests (Appendix~B.1). Our theorem specifies a designated
-canonical state at the remaining horizon, with all usable private
-information charged, including tickets; this is a particular instance
-of a continuing-state requirement, not a new general requirement. These different
-targets and access rules must accompany any comparison of bounds.
-Tadakamalla et~al. formalize static summaries of binary histories through
-query sufficiency and partition refinement \citep{counterfactual}.
-Their Theorem~8(i--ii) requires $t+1$ states for all count-threshold
-predictions and $2^t$ states for all single-bit-flip threshold queries when
-$t\ge3$. Their exact reconstruction argument and released implementation
-\citep{counterfactualcode} are direct antecedents to task-dependent
-information bounds. The counting proof of Theorem~8(iii) requires at least
-$(1-\delta)2^t$ states when the \emph{entire answer tuple} is correct with
-probability at least $1-\delta$ under uniform histories. This joint success
-event differs from separate success probabilities for individual queries.
-Our approximation criterion instead bounds expected squared ridge-head
-error for each fixed input and hard deletion probe; the two bounds are
-not numerically interchangeable. Our construction uses the same stored
-features for curation and ridge learning, with public-blocker deletions
-exposing private signs. It also specifies canonical state after cumulative
-deletions at the remaining budget. These are the scoped objects of our
-results; we claim no new general prediction--counterfactual separation. Information-distortion arguments are classical
-\citep{shannon}.
-
-\section{Limitations and broader impact}\label{sec:limits}
-The theory assumes restriction consistency, fixed features, and a fixed
-cumulative budget. It does not cover arbitrary reclustering, encoder
-refitting, overlapping ownership, or nonconvex language-model fine-tuning.
-The pinned E5 model card lists Stack Exchange among its pretraining
-sources; overlap with the present corpus is unknown. Our target holds
-that encoder fixed and does not remove influence from encoder pretraining.
-The finite-family lower bound measures private information and exact
-rational heads. It neither proves total-byte optimality nor shows that
-natural text embeddings contain the constructed private sign patterns.
-A floating solver needs an actual error certificate before an exact-head
-lower bound transfers to its releases (Appendix~\ref{app:certificate}).
-
-The LLM-only study can establish properties of its model-defined labels.
-Shared training data and correlated biases can make both judges wrong;
-agreement is not human validation. Invalid responses remain part of the
-criterion, and order sensitivity is reported separately. Existing native
-tags are dataset labels, not newly obtained human annotations. No human pair review was used, and no human-ground-truth claim is
-available. This annotation boundary is separate from the authors' responsibility
-for the paper and its conclusions.
-
-The study uses an existing public forum export and recruits no new
-participants. Native account identifiers are contributor proxies. Export filters and
-unknown ownership limit the scope of source withdrawal. Source text may
-contain personal information, so bodies and account-level manifests stay
-private. Redistribution and attribution requirements must be resolved
-before any raw-data release. Canonical state equality does not imply
-physical erasure, privacy of prior answers, or compliance with every
-possible deletion obligation. A useful application is making deletion-service
-contracts explicit. A corresponding risk is retaining excluded personal data
-in the name of future repair or mistaking model agreement for permission to
-remove legitimate content. Data minimization, access controls, and a clearly
-limited deletion horizon remain necessary operational safeguards.
-
-The natural-text effect study was not executed. Accordingly, this paper
-makes no claim of natural semantic value or competitive efficiency. Both
-failed calibrations and the earlier unfavorable memory comparison remain
-part of the evidence. The theoretical results identify an exact target and
-its information requirements; they do not validate a deployment.
+\paragraph{Information for counterfactual queries.}
+\citet{counterfactual,counterfactualcode} study query-sufficient summaries
+of binary histories. Their count-threshold example separates the state
+needed for prediction from that needed for counterfactual answers.
+Our construction ties the queries to deletion of public blockers and the
+answers to exact ridge heads on the same finite features used by curation.
+The approximate extension uses classical information-distortion tools
+\citep{shannon} for expected squared head error on each fixed input and
+probe. This criterion differs from the joint answer-tuple success event
+in the counterfactual counting proof. Appendix~\ref{app:comparison}
+records the precise comparison of these guarantees.
 
 \section{Conclusion}
-Under ordered raw-neighbor suppression, deleting an excluded record can
-change the learner's training target. A cumulative deletion horizon gives
-both an exact repair rule and a precise boundary on which excluded
-payloads can still matter. The finite-format family shows that this
-boundary can change required private information sharply, even when all
-lower-budget heads are identical. Both fully LLM calibration versions
-failed their frozen selection criteria. Consequently, the downstream
-natural-text effect study remains unexecuted. Separate development
-diagnostics exhibit structural admissions and verify exact indexed repair
-on fixed score graphs; their practical NLP value remains unresolved.
+Exact repair after curation is a question about future training sets.
+The original deletion budget specifies which excluded records can still
+enter, and the remaining budget specifies which information may be
+discarded from the retained state. The coefficient construction makes
+this contract executable for additive statistics. The finite-feature
+family shows why the same contract can require information that the
+current model does not reveal. A practical deletion service should make
+its curation target, cumulative horizon, and retained-data access explicit
+before discarding the payloads needed to honor them.
 
 \begin{thebibliography}{99}
 \bibitem[Abbas et~al.(2023)]{semdedup} A. Abbas, K. Tirumala, D. Simig, S. Ganguli, and A. S.
@@ -1189,16 +1327,16 @@ $2Y_{ij}-1$. There are $n=mD$ bits. Given a state $M$ and independent
 public coins $R$, rescale an approximate hard-probe head by
 \[
  \widehat Y_{ij}=\frac12\left(1+
-                       \frac{t\sqrt D}{\alpha}\widehat\theta_i[H_j]\right).
+                       \frac{\kappa\sqrt D}{\alpha}\widehat\theta_i[H_j]\right).
 \]
 Clipping to $[0,1]$ cannot increase squared error, and
 \[
  \frac1D\sum_j(\widehat Y_{ij}-Y_{ij})^2
- \le\frac{t^2}{4\alpha^2}\norm{\widehat\theta_i-\theta_i}^2.
+ \le\frac{\kappa^2}{4\alpha^2}\norm{\widehat\theta_i-\theta_i}^2.
 \]
 Posterior means $p_l=\Pr(Y_l=1\mid M,R)$ minimize conditional squared
 error, even if a decoder uses fresh randomness. Thus average posterior
-variance is at most $v=t^2\varepsilon/(4\alpha^2)$. For
+variance is at most $v=\kappa^2\varepsilon/(4\alpha^2)$. For
 $0\le s\le1/4$, the function
 \[
  g(s)=h_2\!\left(\frac{1-\sqrt{1-4s}}2\right)
@@ -1219,7 +1357,7 @@ suffices. Averaging over all valid deletion sets is weaker because many
 produce a zero head and can dilute the error.
 
 The zero-information threshold is attained by returning just the public
-component of the hard-probe head. Its squared error is $\alpha^2/t^2$
+component of the hard-probe head. Its squared error is $\alpha^2/\kappa^2$
 for every sign assignment. The repository also gives a finite covering
 code upper bound for a query summary. It can require an enormous public
 codebook and does not give an efficient sequentially erasable lossy codec;
@@ -1227,9 +1365,9 @@ we make no such implementation claim here.
 
 \section{Finite-output and utility limits}\label{app:certificate}
 The hidden coordinate magnitude in a hard-probe exact head is
-$a_H=\alpha/(t\sqrt D)$. A deterministic certified parameter radius
+$a_H=\alpha/(\kappa\sqrt D)$. A deterministic certified parameter radius
 strictly below $a_H$ identifies every hidden sign and transfers the
-exact $mD$ private-bit bound. If $0<\lambda\le1$, then $t<4$ and
+exact $mD$ private-bit bound. If $0<\lambda\le1$, then $\kappa<4$ and
 $\sqrt D\le2^{10}$, giving $a_H>2^{-19}$. An actual radius at most
 $2^{-20}$ is therefore sufficient. A configured tolerance is not a
 certificate: the radius must cover moment accumulation, solving, and
@@ -1443,5 +1581,153 @@ rows, peak workspace, serialization, initialization, updates, and solves.
 Incremental timing and complete lifecycle timing are separate. A speedup
 over fresh graph reconstruction alone is insufficient evidence of an
 advantage over a strong incremental baseline.
+
+\section{Limitations and broader impact}\label{sec:limits}
+The theory assumes restriction consistency, fixed features, and a fixed
+cumulative budget. It does not cover arbitrary reclustering, encoder
+refitting, overlapping ownership, or nonconvex language-model fine-tuning.
+The pinned E5 model card lists Stack Exchange among its pretraining
+sources; overlap with the present corpus is unknown. Our target holds
+that encoder fixed and does not remove influence from encoder pretraining.
+The conditional retained-state bound fixes the deleted set $F$. An adaptive
+request policy can reveal private information through the requests themselves.
+The finite-family lower bound measures private information and exact
+rational heads. It neither proves total-byte optimality nor shows that
+natural text embeddings contain the constructed private sign patterns.
+A floating solver needs an actual error certificate before an exact-head
+lower bound transfers to its releases (Appendix~\ref{app:certificate}).
+
+The LLM-only study can establish properties of its model-defined labels.
+Shared training data and correlated biases can make both judges wrong;
+agreement is not human validation. Invalid responses remain part of the
+criterion, and order sensitivity is reported separately. Existing native
+tags are dataset labels, not newly obtained human annotations. No human pair review was used, and no human-ground-truth claim is
+available. This annotation boundary is separate from the authors' responsibility
+for the paper and its conclusions.
+
+The study uses an existing public forum export and recruits no new
+participants. Native account identifiers are contributor proxies. Export filters and
+unknown ownership limit the scope of source withdrawal. Source text may
+contain personal information, so bodies and account-level manifests stay
+private. Redistribution and attribution requirements must be resolved
+before any raw-data release. Canonical state equality does not imply
+physical erasure, privacy of prior answers, or compliance with every
+possible deletion obligation. A useful application is making deletion-service
+contracts explicit. A corresponding risk is retaining excluded personal data
+in the name of future repair or mistaking model agreement for permission to
+remove legitimate content. Data minimization, access controls, and a clearly
+limited deletion horizon remain necessary operational safeguards.
+
+The natural-text effect study was not executed. Accordingly, this paper
+makes no claim of natural semantic value or competitive efficiency. Both
+failed calibrations and the earlier unfavorable memory comparison remain
+part of the evidence. The theoretical results identify an exact target and
+its information requirements; they do not validate a deployment.
+
+
+
+\section{Detailed comparison of information contracts}\label{app:comparison}
+Learning-unlearning space complexity \citep{space} gives budget-dependent
+upper and lower bounds for realizability testing in Theorems~5.4 and~6.3
+of the full version. Appendix~G connects that task to empirical risk
+minimization. Ticketed schemes \citep{ticketed} separate central auxiliary
+information from tickets provided with forgotten records. Their main
+Definitions~1--2 and Remark~3 specify exact predictor recovery after one
+request; the threshold construction in Appendix~B.1 supports multiple
+requests. Our private-information accounting includes all such usable
+side information.
+
+For binary histories of length $t\ge3$, Theorem~8(i--ii) of
+\citet{counterfactual} requires $t+1$ states for all count-threshold
+predictions and $2^t$ states for all single-bit-flip threshold queries.
+The exact reconstruction argument and released implementation
+\citep{counterfactualcode} concern query-sufficient history summaries.
+Theorem~8(iii)'s counting proof requires at least $(1-\delta)2^t$ states
+when the entire answer tuple is correct with probability at least
+$1-\delta$ under uniform histories. This is a joint success event, not a
+separate marginal success guarantee for each query. Our approximate
+criterion bounds expected squared ridge-head error for each fixed input
+and designated deletion probe. These numerical bounds have different
+error contracts and are not interchangeable.
+
+
+\section{Calibration protocol and prepared task}\label{app:protocol}
+\subsection{Population, sources, and reserved task configuration}
+The 140,250 prepared questions split into 98,187 training, 20,996
+calibration, and 21,067 test rows. The source grouping contains 88,344
+units, including 1,522 unknown units. Missing and community owners are
+explicit unknown singletons. Source completeness concerns retained records
+after the fixed export and filters, not every historical or private
+contribution. Acquisition is checksummed and the export provenance is
+recorded. Bodies and account-level records remain private.
+
+A deterministic one-tenth whole-source reservation allocated 10,314
+training and 2,138 test rows to development. Evaluation retains 87,873
+training and 18,929 test rows; calibration is unchanged. Every reserved
+source stays outside later evaluation, even when a pilot uses only part
+of the allocation. Planned development targets of 1,000, 2,500, and 5,000
+training rows include the entire boundary source and use frozen priority
+after the guard. These are upper bounds before leakage filtering. The
+executed 1,001-row diagnostic uses the original pre-guard prefix, as stated
+in Section~\ref{sec:study}.
+
+The prepared prediction task uses 20 native tags and retains all-zero
+target vectors. Five source-grouped calibration folds selected
+$\lambda=10^{-5}$ from $10^{-6},10^{-5},\ldots,10^{-1}$, with larger
+$\lambda$ on exact ties. Out-of-fold predictions fix one F1 threshold per
+tag, choosing the stricter threshold on ties and a never-positive rule
+when no calibration positive exists. Test labels and deletion outcomes
+are not used for configuration. Different representations need separate
+task settings. These preparatory choices are not a completed downstream
+deletion experiment.
+
+\subsection{Inference, sampling, and validation rules}
+The models run offline on admitted A100 GPUs with BF16, batch size one,
+greedy constrained decoding, forced Flash attention, a 512-token output
+budget, and a 32,768-token total budget. Truncation, summarization, format
+repairs, semantic retries, and fallback attention are disallowed. Pair
+texts are untrusted inputs; judges have no tools or retrieval. The
+supplement supplies the exact instructions, schemas, renderer, and
+constrained-inference kernels. No independence between the two raters is
+assumed.
+
+Version 4 includes same-source pairs in its calibration-pair population.
+Its 13 right-closed score strata use cuts
+$.50,.90,.91,\ldots,.99,.995$. Each nonempty stratum contributes a simple
+random sample without replacement of up to 30 pairs. The 360 canonical
+pairs support the weighted selection calculation; the 36 swapped pairs
+are diagnostics and supply no extra votes.
+
+A selected cutoff would proceed to a fresh simple random sample of up to
+200 pairs from all above-threshold calibration pairs. Its exact one-sided
+95\% finite-population lower bound must reach $.90$. Any change in a
+model's availability/status or valid category on canonical overlap between
+selection and validation makes validation unavailable. This bound concerns
+the fixed/potential model-label function under the sampling model. There
+is no retuning after failure and no fresh-validation result for either
+completed selection version.
+
+\subsection{Response and sensitivity diagnostics}
+Version 3 attempted all 198 model calls. One canonical Mistral output was
+invalid JSON and remained in the denominator without retry. All 51 cuts
+were recomputed independently. Version 4 completed 396 calls per model.
+Qwen returned 391 valid outputs and five invalid JSON outputs; Mistral
+returned 396 valid outputs.
+
+The version 4 stratified sample contains 27 joint positives among 360
+canonical pairs. This unweighted ratio is not a population prevalence
+estimate. Qwen marks 32 pairs positive and Mistral 151. Their six-way
+categories differ on 308 of the 355 pairs with two valid outputs. Swapping
+pair order changes status or category in three Qwen and 14 Mistral cases;
+the binary-positive decisions change in one and six cases, respectively.
+These characterize the raters, not accuracy against human judgments.
+
+The frozen favorable-imputation sensitivity treats invalid or uncertain
+judgments as potentially positive while preserving substantive negatives.
+At cuts $.90,.95,.98,.99,.995$, the weighted values are respectively
+$1.72\%,5.64\%,10.08\%,44.68\%,53.33\%$. The maximum over all cuts is
+$8/15$, still below the selection requirement. These are sensitivity
+values, not confidence limits. The all-cut ledger preserves exact
+rational arithmetic and the original negative decisions.
 
 \end{document}

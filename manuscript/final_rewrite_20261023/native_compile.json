@@ -1,0 +1,11 @@
+{
+  "source": {
+    "bytes": 92137,
+    "sha256": "be256390853c2eb1ca1f23db199b01e963f4dc582f174fb790de5f89420a6722"
+  },
+  "checked_utc": "2026-10-23T07:33:03.077728+00:00",
+  "kind": "success",
+  "editor_left_open": true,
+  "tool": "compile_latex_document",
+  "temporary_review_pdf_authorized": true
+}

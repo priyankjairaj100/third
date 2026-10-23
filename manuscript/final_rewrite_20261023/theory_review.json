@@ -1,0 +1,145 @@
+{
+  "review": "independent_final_rewrite_theory_notation_and_examples",
+  "reviewed_at_utc": "2026-10-23T07:29:03.180405+00:00",
+  "status": "pass_for_theory_notation_and_new_algebraic_examples",
+  "source_path": "REPOSITORY_ROOT/manuscript/third_working_draft.tex",
+  "source_sha256": "be256390853c2eb1ca1f23db199b01e963f4dc582f174fb790de5f89420a6722",
+  "candidate_path": "work/final-rewrite-20261023/candidate.tex",
+  "candidate_byte_identical_to_source": true,
+  "baseline_path": "work/final-rewrite-20261023/source_before.tex",
+  "baseline_sha256": "adf82e53d6720634cded6f75cf3158b1e0d58f73a1ec6c0c051e40fee2a28bfc",
+  "actionable_findings": [],
+  "resolved_findings": [
+    {
+      "issue": "Abstract could overstate all eligible payloads as individually necessary.",
+      "resolution": "Now says excluded data can still be needed and limits conditional minimum to constructed family."
+    },
+    {
+      "issue": "Every request decreases budget included empty/retry calls.",
+      "resolution": "Every newly deleted record; line 316"
+    },
+    {
+      "issue": "Each public request exposes one candidate was too broad.",
+      "resolution": "Each isolating request F_i; line 708"
+    },
+    {
+      "issue": "Remaining request confused call count with record budget.",
+      "resolution": "Remaining deletion; line 742"
+    },
+    {
+      "issue": "Released from state could mean published.",
+      "resolution": "Discarded from state; line 1096"
+    }
+  ],
+  "checks": [
+    {
+      "object": "Fixed target and eligibility",
+      "status": "pass",
+      "detail": "Corpus notation mathcal D, fixed features/edges/priority/threshold, raw-neighbor blockers, cumulative K, remaining h, and no free candidate reread are preserved. The r>h monotonicity argument is correct. Payload discard is distinguished from dependency discard."
+    },
+    {
+      "object": "Finite-horizon repair theorem",
+      "status": "pass",
+      "detail": "Signed record contributions, exact arithmetic, fixed record-local statistics, degree truncation and fresh reconstruction at K-|F| are retained. The rewritten proof is correct. Empty-key current-statistic interpretation is correct."
+    },
+    {
+      "object": "Three-record worked polynomial",
+      "status": "pass",
+      "detail": "The stated expansion follows the blocker sets. Setting xb=1 gives (A0+C0)-A0xa-C0xc, with B0 cancellation. The key-collision explanation is correct."
+    },
+    {
+      "object": "Budget-reset illustration",
+      "status": "pass",
+      "detail": "K1 stores only degree0/1 terms. Illegally keeping the degree1 allowance after deletingb and then deletinga gives B0+C0 instead of C0. The text explicitly identifies the second deletion as outside the original contract."
+    },
+    {
+      "object": "Indexed cost and L0",
+      "status": "pass",
+      "detail": "O(Q+Phi0+sM0), tuple-potential accounting and L0 inverse-incidence removals remain correct. No return of the old identifier-touch overclaim. Construction, rational bit lengths, solving, serialization, lookup/sorting and per-call work remain separate."
+    },
+    {
+      "object": "Ridge and contributor withdrawal",
+      "status": "pass",
+      "detail": "z and y column shapes and W dimensions are clear; lambda*n, raw learner rows, no intercept/all-coordinate penalty and empty-setzero remain. Source Boolean idempotence and same-source cancellation are correct for partitioned ownership."
+    },
+    {
+      "object": "Finite construction and exact information",
+      "status": "pass",
+      "detail": "Same raw FP32 features for curation and ridge, fixed public graph/signatures/blocker payloads, private signs, powers-of-four dimension constraints, rational positive lambda, exact target, all-side-information accounting and independent public coins remain. Sharp transition and conditional corollary statements and proofs preserve meaning."
+    },
+    {
+      "object": "Notation migration",
+      "status": "pass",
+      "detail": "S_0 consistently names common blockers; kappa consistently replaces the ridge denominator in the main text, information proof and certificate. Corpus mathcal D is separated from private dimensionD. No regex corruption or dangling old denominator found; t in statistic t(v) and counterfactual-history length remains legitimate."
+    },
+    {
+      "object": "Eight/four/zero example",
+      "status": "pass",
+      "detail": "b1,m2,kD4 gives dimension10 and two orthogonal unit signatures. First deletions s,p1,a yield zero current heads and required private state8,4,0 bits. Completed {s,p1} still needs4 signs for the current head at budgetzero. Exact rational checks corroborate the stated instance."
+    },
+    {
+      "object": "Finite-output example",
+      "status": "pass",
+      "detail": "At D4 the hidden raw coordinate is +/-1/256. For lambda1, kappa49409/16384 and exact output +/-64/49409 are correct. The latter has no finite binary expansion. This is an algebraic example, not an inference experiment."
+    },
+    {
+      "object": "Approximation and certificates",
+      "status": "pass",
+      "detail": "kappa^2 error scaling, per-input/isolating-probe squared-error criterion, zero-information erroralpha^2/kappa^2, all-deletion-set dilution issue and actual certified radius remain. The information and certificate appendices are identical to baseline after exact denominator rename."
+    },
+    {
+      "object": "Practical interpretation and limits",
+      "status": "pass",
+      "detail": "General discussion preserves the compact eligible-row comparator and its earlier unfavorable memory result. Abstract now states exact rational outputs and confines the conditional information minimum to the constructed family. No new practical speedup, natural utility, total-byte optimum, physical erasure or pretraining unlearning claim appears."
+    },
+    {
+      "object": "Moved material",
+      "status": "pass",
+      "detail": "Full source retains adaptive-policy/fixedF distinction, original unmet human gates, no retuning, unexecuted downstream and held-out boundaries, source scope and E5 pretraining-overlap limits. Whole-source review found no substantive theory premise loss."
+    },
+    {
+      "object": "Final readability changes",
+      "status": "pass",
+      "detail": "Latest abstract sentence split still identifies ridge, exact rational outputs and private information. FP32/FP64 expansions alter no numerical contract. Conclusion now says discarded rather than released."
+    }
+  ],
+  "mechanical_checks": {
+    "scorer_appendix_byte_identical": true,
+    "information_certificate_appendices_exact_after_denominator_rename": true,
+    "sharp_transition_and_conditional_corollary_statements_byte_identical": true,
+    "corpus_notation_occurrences": 6,
+    "common_blocker_notation_occurrences": 4,
+    "kappa_occurrences": 15,
+    "label_count": 39,
+    "duplicate_labels": [],
+    "undefined_references": [],
+    "regex_corruption_found": false
+  },
+  "exact_example_arithmetic": {
+    "signature_inner_product": "0",
+    "signature_squared_norms": [
+      "1",
+      "1"
+    ],
+    "kappa_at_lambda1": "49409/16384",
+    "hidden_head_coordinate": "64/49409",
+    "required_private_bits_by_deleted_set": {
+      "s": 8,
+      "p1": 4,
+      "a": 0,
+      "s,p1": 4
+    }
+  },
+  "scope_limits": [
+    "Read all current manuscript content for theory, notation, examples and coherence. No repository edits.",
+    "New empirical graph-table values and package provenance belong to the separate empirical/package review; not independently certified by this report.",
+    "Compilation, rendered pagination and visual layout belong to parent review.",
+    "Exact arithmetic here checks new algebraic exposition only; no experiment, model inference, SSH, scheduler action or gate change.",
+    "Editorial interest, novelty depth and acceptance remain judgments; no universal desk-rejection clearance is implied."
+  ],
+  "review_chain": [
+    "work/final-rewrite-20261023/theory_story.txt",
+    "work/desk-reject-fixes-20261023/final_source_review.json",
+    "work/desk-reject-deep-20261023/theory_audit.json"
+  ]
+}

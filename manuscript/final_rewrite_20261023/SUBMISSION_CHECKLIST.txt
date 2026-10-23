@@ -1,0 +1,43 @@
+TMLR FINAL REWRITE V10 - 23 OCTOBER 2026
+
+Exact Unlearning After Data Curation
+
+The manuscript is rewritten around one story: the promised cumulative deletion
+budget determines which excluded records can still matter to exact repair.
+The opening uses a three-record illustration before formal notation. New worked
+algebra and an 8/4/0-bit example explain the statistic update and continuing-state
+bound. Practical relevance is expressed through retention, dependency tracking,
+and the compact eligible-row comparator. It is not a claim of measured speedup.
+
+The main body occupies exactly 12 pages in the unchanged official TMLR style.
+References start on page 13; appendices start on page 14; total PDF is 21 pages.
+Notation is defined progressively, corpus and feature-dimension symbols are
+separated, and the ridge denominator is renamed consistently. Detailed protocols,
+limitations and history are in appendices, with necessary local assumptions kept.
+The source contains no prose em dashes. No font, margin or spacing compression.
+
+Three source-bound internal reviews passed: theory/examples, empirical fidelity,
+and citation/claim support. All23 references remain intact and cited. Native
+compilation and all21-page visual inspection passed. The anonymous supplement
+has199 members and189 unchanged source-copy entries. Only current manuscript,
+its bindings, title in README, and the root manifest changed from V9. Clean
+extraction passes the supplied public aggregate and source-identity checks.
+These checks do not regenerate unavailable private inputs or model inference.
+
+All scientific results, both failed calibrations, the unfavorable prior compact-row
+memory result, original unmet human gates, and held-out boundaries are preserved.
+No experiment, model call, SSH request, retuning, new annotation or submission.
+Annotation remains fully LLM with zero human pair review. Scheduler remains PAUSED.
+Dominici's unavailable full text remains acknowledged; its search is user-closed.
+
+Remaining author-owned submission facts are unchanged: current-paper contributions,
+consent, responsibility/intellectual provenance; active OpenReview IDs/conflicts;
+quota, overlap/prior-submission status; funding/interests and applicable human-data
+determination; and authority for the submission license. The supplied author roster
+is retained privately. No favorable attestation has been invented. Technical
+preparation is complete, but submission_ready remains false until these are resolved.
+
+Only upload the anonymous PDF and third_tmlr_supplement_v10.zip from the private
+packet's upload directory. Public development reviews, old packages, author forms,
+and third-party paper PDFs are not submission artifacts. The rewrite does not
+establish natural-task utility, competitive total cost, or acceptance by TMLR.

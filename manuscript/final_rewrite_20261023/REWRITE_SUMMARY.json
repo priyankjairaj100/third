@@ -1,0 +1,29 @@
+{
+  "source": {
+    "bytes": 92137,
+    "sha256": "be256390853c2eb1ca1f23db199b01e963f4dc582f174fb790de5f89420a6722"
+  },
+  "previous_source": {
+    "bytes": 78720,
+    "sha256": "adf82e53d6720634cded6f75cf3158b1e0d58f73a1ec6c0c051e40fee2a28bfc"
+  },
+  "title": "Exact Unlearning After Data Curation",
+  "main_pages": 12,
+  "total_pages": 21,
+  "references_start_page": 13,
+  "appendices_start_page": 14,
+  "central_story": "Future cumulative deletion promises determine which excluded records can still be needed for exact repair.",
+  "changes": [
+    "rewritten accessible abstract and opening",
+    "worked coefficient-cancellation example",
+    "8/4/0 conditional private-information example",
+    "notation disambiguation",
+    "practical retention and compact-row comparison",
+    "graph and exact-repair result tables from existing evidence",
+    "protocols and limitations moved to appendices",
+    "related-work compression preserving all23 references"
+  ],
+  "new_scientific_results": false,
+  "frozen_protocol_changes": false,
+  "actual_submission": false
+}

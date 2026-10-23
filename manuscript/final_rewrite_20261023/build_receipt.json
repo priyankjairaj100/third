@@ -1,0 +1,160 @@
+{
+  "added_members": [],
+  "changed_member_bindings": {
+    "MANIFEST.json": {
+      "current": {
+        "bytes": 32379,
+        "sha256": "c154349739090e14921012acfc393ea1732a8102fc445f5110fa6a80f2375eed"
+      },
+      "previous": {
+        "bytes": 32379,
+        "sha256": "4541ed850756229e669aa4d2d8eeacdbcc0d1e41a717795194db0a6c627773cd"
+      }
+    },
+    "README.txt": {
+      "current": {
+        "bytes": 4432,
+        "sha256": "81174253c6ccbff58f1fdb01a691b7d5602ceeb70f796b771f0f445565e102f1"
+      },
+      "previous": {
+        "bytes": 4463,
+        "sha256": "2bc23bcd9bcccd65e4ebccc65ed43ece17e74169e14d8e9c612a7cf92a45059b"
+      }
+    },
+    "SOURCE_MAP.json": {
+      "current": {
+        "bytes": 67817,
+        "sha256": "f34fa8369d25fad72fca913e189fdc5757ce36e9d091961e201cb7f4db5df2a0"
+      },
+      "previous": {
+        "bytes": 67817,
+        "sha256": "68acc539913bb9e6cc32f93f6771011613111ef737acf8cb942128e99559e486"
+      }
+    },
+    "manuscript.tex": {
+      "current": {
+        "bytes": 92137,
+        "sha256": "be256390853c2eb1ca1f23db199b01e963f4dc582f174fb790de5f89420a6722"
+      },
+      "previous": {
+        "bytes": 78720,
+        "sha256": "adf82e53d6720634cded6f75cf3158b1e0d58f73a1ec6c0c051e40fee2a28bfc"
+      }
+    }
+  },
+  "clean_extract_check": {
+    "inventory_unchanged": true,
+    "python": "Python 3.12.7",
+    "result": {
+      "calibration": {
+        "compute_records_summed": 72,
+        "cut_quotients_and_decisions_checked": 102,
+        "fresh_validation_run": false,
+        "v3_and_v4_selection_passed": false,
+        "v4_bin_boundaries_reconstructed": 12
+      },
+      "generating_code_executed": false,
+      "manuscript_source_sha256": "be256390853c2eb1ca1f23db199b01e963f4dc582f174fb790de5f89420a6722",
+      "passed": true,
+      "payload_files_checked": 198,
+      "private_data_replayed": false,
+      "python_sources_syntax_checked": 38,
+      "repair": {
+        "completion_output_hashes": 53,
+        "fixed_retained_selection_monotonicity_checks": 400,
+        "meter_checks": 102,
+        "passed": true,
+        "public_files_verified": 67,
+        "scope": "Portable aggregate arithmetic/metadata replay; private states/graphs and original raw receipts are not recomputed.",
+        "summary": {
+          "checkpoint_count": 408,
+          "checkpoints": [
+            1,
+            8,
+            32,
+            128
+          ],
+          "horizon": 128,
+          "human_or_model_annotations": 0,
+          "no_selected_cutoff": true,
+          "record_arms_completed": 51,
+          "request_frame_sizes": {
+            "R": 1001,
+            "S": 457
+          },
+          "singleton_membership_checks": 13056,
+          "source_arms_completed": 51,
+          "task_learner_trained": false,
+          "thresholds_completed": 51,
+          "unavailable_arms": []
+        }
+      },
+      "scope": "File identity, source syntax and aggregate arithmetic; no private inference, graph/state regeneration or proof verification.",
+      "structure": {
+        "all51cuts": true,
+        "blocker_cdf_comparisons": 50050,
+        "bundle_files_checked": 62,
+        "completion_output_hashes_checked": 53,
+        "exact_expectations_replayed": 204,
+        "passed": true,
+        "scope": "Portable aggregate replay only; private graphs and original execution metadata were not re-created.",
+        "summary": {
+          "complete_graph_cut_count": 25,
+          "cuts_with_any_genuine_source_admission": 47,
+          "cuts_with_any_singleton_record_admission": 48,
+          "cuts_with_excluded_record_deletion_admission": 13,
+          "empty_graph_cut_count": 1,
+          "human_or_model_annotations": 0,
+          "rows": 1001,
+          "threshold_selected": false,
+          "thresholds": 51
+        }
+      },
+      "unchanged_copy_bindings_checked": 189
+    },
+    "returncode": 0
+  },
+  "deleted_members": [],
+  "installed_into_repository": false,
+  "members": 199,
+  "no_new_experiments": true,
+  "no_private_observation_regeneration": true,
+  "old_v9_members_changed": [
+    "MANIFEST.json",
+    "README.txt",
+    "SOURCE_MAP.json",
+    "manuscript.tex"
+  ],
+  "previous_v9": {
+    "bytes": 610719,
+    "sha256": "d005b1bdea2ef74020c989e2a57557c3e4646c628efc3d5834bc75665ab79bf4"
+  },
+  "privacy_check": {
+    "anonymous_source_author": true,
+    "deterministic_nonidentifying_zip_metadata": true,
+    "direct_identifiers_or_private_paths_hits": 0,
+    "identity_scope": "Direct identifier/path/credential screening and preserved prior payload boundary; not anonymity against external source matching.",
+    "nested_archives": false,
+    "pdfauthor_empty_source_setting": true,
+    "safe_paths_and_regular_files": true,
+    "zip_comment_empty": true
+  },
+  "readme_change": "Current manuscript title only",
+  "schema": "third-v10-manuscript-only-build-v1",
+  "scientific_evidence_members_preserved": true,
+  "source": {
+    "bytes": 92137,
+    "sha256": "be256390853c2eb1ca1f23db199b01e963f4dc582f174fb790de5f89420a6722"
+  },
+  "source_map_fields_changed": [
+    "current_manuscript",
+    "previous_flat_release"
+  ],
+  "unchanged_copies_preserved_byte_for_byte": true,
+  "unchanged_copy_count": 189,
+  "unchanged_derived_entries": true,
+  "zip": {
+    "bytes": 615030,
+    "sha256": "de69a13fb734cd1c3fe3434a2b7ceec2313cee954bf252f628075ca64c7a8ba1"
+  }
+}

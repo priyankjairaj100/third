@@ -1,0 +1,51 @@
+FINAL REWRITE EMPIRICAL FIDELITY REVIEW: PASS
+
+Final source SHA-256: be256390853c2eb1ca1f23db199b01e963f4dc582f174fb790de5f89420a6722
+Bytes: 92137
+The private candidate and installed manuscript are identical.
+
+No unresolved empirical fidelity finding remains. Initial source 997af59...
+broadened the abstract's 13-cut statement to ordinary admissions. The final
+source restores the condition: deleting an initially excluded record admits
+another record. Main Section 6.2 already used the correct condition.
+
+Verified directly against unchanged V9 public evidence:
+- All cells of the five-row graph table. The .90 row has 15,678 edges,
+  504 selected, 497 excluded, and 50 excluded singleton deletions with admission.
+- Exactly 13 such cutoffs (.84-.96); 25 complete graphs (.50-.74); empty .995.
+- 13,056 membership checks and 408 logical-state checkpoints across 51 cuts
+  and two fixed 128-request streams. All checked equality flags are true.
+- The record stream removes 128 records; the source stream removes 261 records
+  after 128 source requests at every cutoff. These are not matched-volume arms.
+- Both calibrations fail. V4's maximum weighted joint proportion is 2/5 against
+  the 95% selection requirement. All representative-cut table values/support
+  counts match. Neither version ran fresh validation.
+
+Preserved scope:
+The full population, calibration population and 1,001-row reserved pre-guard
+development diagnostic remain distinct. Post-failure diagnostic provenance,
+all 51 cuts, and no operating-cutoff selection are explicit. Membership vectors
+are not task labels or trained heads. State equality means logical coefficient
+and index state; no serialized-byte/physical-erasure result is claimed.
+Private-state checks ran in the cluster; independent aggregate reviews checked
+bound receipts and counts. No natural-task utility, comparative cost, or held-out
+effect result is invented.
+
+The moved app:protocol preserves fully LLM labels, invalid-as-zero handling,
+weighted sampling, swapped-order diagnostics, validation rules and sensitivity.
+Tag/lambda/F1 choices remain preparation, not a completed deletion experiment.
+Historical human gates remain unmet without imposing new human annotation.
+The earlier total-byte result favoring compact eligible rows remains in main.
+
+Final abstract information claims now specify private information, exact rational
+ridge and the constructed family. The shortened service discussion loses no
+empirical evidence. The retention-contract story is clearer without implying
+measured speed, memory or semantic benefit.
+
+Scope: source and public aggregate inspection. No model/data rerun, network,
+source edit, theorem-proof certification, or rendered-page review. Final package
+rebinding is separate work.
+
+Final readability delta: the long abstract sentence was split, with exact
+rational-output/private-information qualifications preserved. FP32 and FP64
+were expanded at first use. No empirical table, count, protocol or gate changed.

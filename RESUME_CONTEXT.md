@@ -1,3 +1,28 @@
+Latest continuation - 23 October 2026: TMLR final rewrite V10 complete
+
+Current title: Exact Unlearning After Data Curation.
+Current source SHA256: be256390853c2eb1ca1f23db199b01e963f4dc582f174fb790de5f89420a6722.
+The central story is the retention contract imposed by future cumulative deletions.
+The accessible opening, worked coefficient example, 8/4/0-bit example, clearer
+notation and practical baseline discussion connect the existing results. Main
+body is exactly12 pages in unchanged TMLR layout; references start13, appendices14,
+21 total. All23 references retained. Source-bound theory, empirical and citation
+reviews passed. Native compilation, full visual review and clean supplement checks
+passed. No new scientific result or experiment; both calibration failures preserved.
+
+Current public milestone: manuscript/final_rewrite_20261023.
+Private current upload packet: outputs/tmlr_submission_20261023_v10.
+Read SUBMISSION_CHECKLIST.txt and REWRITE_SUMMARY.json in the milestone.
+The anonymous ZIP has199 members and189 unchanged source mappings. All scientific
+code and evidence bytes are identical to V9; only source/title/bindings refreshed.
+
+Author roster reuse remains confirmed, current-paper attestations/profile IDs
+remain unconfirmed. No actual submission. Scheduler remains PAUSED at user's
+request. No SSH, retuning, held-out use, model call, or protected-lock modification.
+Dominici full-text search remains user-closed and nonblocking.
+
+HISTORICAL CHECKPOINTS FOLLOW
+
 Latest continuation - 23 October 2026: TMLR V9 desk-review fixes complete
 
 Current source SHA256: adf82e53d6720634cded6f75cf3158b1e0d58f73a1ec6c0c051e40fee2a28bfc.

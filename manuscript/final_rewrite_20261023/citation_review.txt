@@ -1,0 +1,18 @@
+PASS: final rewrite citation-use and framing review
+Source: REPOSITORY_ROOT/manuscript/third_working_draft.tex
+SHA256: be256390853c2eb1ca1f23db199b01e963f4dc582f174fb790de5f89420a6722
+Bytes: 92137
+
+All 23 references are defined and used. No duplicate, undefined, or unused key. All 23 bibliography entries are internally byte-identical to source_before.tex. No required citation corrections.
+
+Opening now progresses from familiar pipeline decisions to a concrete illustration, target distinction, service question and two precise results. Definitions precede the coefficient algebra. The practical-cost comparator and failed qualification remain explicit without dominating the first pages. All prose changes remain within the earlier verified citation scope.
+
+The abstract now explicitly preserves private information, exact rational ridge, and the constructed-family conditional minimum. The original title ambiguity is removed.
+
+Important source distinctions retained: Cao/Schelter pipeline antecedents; Ginart/Cohen state antecedents; raw-neighbor SemDeDup rule under fixed graph/order and nonnegative threshold; ticketed multishot threshold example; Tadakamalla joint answer-tuple versus per-probe expected-error contract; Dominici metadata-only availability.
+
+The natural data establish score-graph admissions and exact integer membership/state checks. Both semantic calibration failures, unexecuted task/cost study, and earlier unfavorable total-byte comparison remain explicit.
+
+
+Read-only comparison of all 23 citation definitions/uses and bibliography metadata against previously primary-source-audited V9; independent source-level review of rewritten opening, main comparison and detailed comparison appendix. Not a new proof audit, literature-exhaustiveness claim, policy clearance, PDF layout certificate, or full-text technical assessment of the unavailable Dominici thesis.
+No new literature search or manuscript/repository edit. Existing primary-source audits are listed in the JSON.

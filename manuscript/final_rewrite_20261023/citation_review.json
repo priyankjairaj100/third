@@ -1,0 +1,313 @@
+{
+  "audit": "final_rewrite_citation_use_and_readability_review",
+  "reviewed_at_utc": "2026-10-23T07:28:31.182095+00:00",
+  "passed": true,
+  "status": "pass_for_citation_and_framing_scope",
+  "source": {
+    "path": "REPOSITORY_ROOT/manuscript/third_working_draft.tex",
+    "sha256": "be256390853c2eb1ca1f23db199b01e963f4dc582f174fb790de5f89420a6722",
+    "bytes": 92137
+  },
+  "baseline": {
+    "path": "PRIVATE_ORCHESTRATION_ROOT/work/final-rewrite-20261023/source_before.tex",
+    "sha256": "adf82e53d6720634cded6f75cf3158b1e0d58f73a1ec6c0c051e40fee2a28bfc"
+  },
+  "scope": "Read-only comparison of all 23 citation definitions/uses and bibliography metadata against previously primary-source-audited V9; independent source-level review of rewritten opening, main comparison and detailed comparison appendix. Not a new proof audit, literature-exhaustiveness claim, policy clearance, PDF layout certificate, or full-text technical assessment of the unavailable Dominici thesis.",
+  "candidate_matches_installed_source": true,
+  "method": "Read full source sections, compare bibliography entries byte-for-byte internally, check citation keys and framing against preserved primary-source audits. No fresh network lookup because references and supported attributions are unchanged. No manuscript/repository edit.",
+  "structural_checks": {
+    "bibliography_entries": 23,
+    "unique_defined_keys": 23,
+    "unique_used_keys": 23,
+    "undefined_keys": [],
+    "unused_keys": [],
+    "duplicate_keys": [],
+    "changed_bibliography_entries": [],
+    "removed_bibliography_entries": [],
+    "new_bibliography_entries": [],
+    "all23_bibliography_entries_internally_byte_identical": true,
+    "em_dash_characters_in_manuscript_body": 0
+  },
+  "prior_source_audits": [
+    "work/desk-reject-fixes-20261023/final_citation_review.json",
+    "work/desk-reject-fixes-20261023/NEW_REFERENCES_AUDIT.json",
+    "work/desk-reject-deep-20261023/literature_audit.json",
+    "work/tmlr-desk-reject-audit-20261022/citations_a.json",
+    "work/tmlr-desk-reject-audit-20261022/citations_b.json",
+    "work/tmlr-desk-reject-audit-20261022/citations_c.json",
+    "work/tmlr-desk-reject-audit-20261022/source_review_addendum.json"
+  ],
+  "bibliography_comparison": [
+    {
+      "key": "semdedup",
+      "unchanged": true,
+      "sha256": "80cf9802aeb6f49d42e60a24bb8211300e5cfc46ebc19830e8e4fca056f29a7f"
+    },
+    {
+      "key": "aggregate",
+      "unchanged": true,
+      "sha256": "ce60933a134bfae73890808833c66d0786152f58ae26c7ddf10d51be28be13e8"
+    },
+    {
+      "key": "dbsp",
+      "unchanged": true,
+      "sha256": "6b35949dde9a7108b40d5fb77c202acc8d59711d02dd640f43b26990f82750a6"
+    },
+    {
+      "key": "grace",
+      "unchanged": true,
+      "sha256": "fced08f11781480a490b2c69182c3a23defbd797a5e9a7816a6931d43350ecfa"
+    },
+    {
+      "key": "cao",
+      "unchanged": true,
+      "sha256": "a552a1f9ed0bc34c794312fff2ec70fc59d233eb9760b4fd4595c72d9f0a75b6"
+    },
+    {
+      "key": "space",
+      "unchanged": true,
+      "sha256": "460321192adde4e974c6ed4194f1ce84a7860b77a405c20350e385b20fe640a9"
+    },
+    {
+      "key": "cohencontrol",
+      "unchanged": true,
+      "sha256": "c61b07511ebcf6eec535a792ed0e8fb89b97bba979fe757b48ede91ad0e12ae9"
+    },
+    {
+      "key": "dominici",
+      "unchanged": true,
+      "sha256": "14320195d7484bc683cf1f21de17b5c04d43548588a7c0848326d66ed1d70f85"
+    },
+    {
+      "key": "semcode",
+      "unchanged": true,
+      "sha256": "4951f7a8e768582bf808c1d4ca4812e354b2f4b6f77031c56b4d55ec955d80b3"
+    },
+    {
+      "key": "ticketed",
+      "unchanged": true,
+      "sha256": "9e626259775c56b5618e0244917cea5535874d03d3fe9d1bdc9427bfb780ebcd"
+    },
+    {
+      "key": "ginart",
+      "unchanged": true,
+      "sha256": "7fc97bec2147a5659ed8259db6eb88d19e934c5addcf6ff42746dbc3a00906fc"
+    },
+    {
+      "key": "green",
+      "unchanged": true,
+      "sha256": "d9d704040e3142c061c511aa4a0b9da3ef726f533be2964133575ba2f8e5066d"
+    },
+    {
+      "key": "mistral",
+      "unchanged": true,
+      "sha256": "aa947212621b711c086ef5a7f64abc270cc041b54dde81521135b7fbd466c604"
+    },
+    {
+      "key": "qwen",
+      "unchanged": true,
+      "sha256": "b5613b626795688de494e7e8eac24cc45011cd724bb0e6faf301b6b4d3e143ba"
+    },
+    {
+      "key": "ivmunlearning",
+      "unchanged": true,
+      "sha256": "d28d866777c5f0e7fce60c384979e6be950c6329759f8763b0b2d976c13a4ec2"
+    },
+    {
+      "key": "shannon",
+      "unchanged": true,
+      "sha256": "57b348b3295e268f0e11b0ad74b4fee14a1697fa87e664ff037a473390f77048"
+    },
+    {
+      "key": "askubuntu",
+      "unchanged": true,
+      "sha256": "96c6ff6357e24ebd55dcfac2a2c40f9da1d7f303d1d6fd0dfbf2c7d1cf08600d"
+    },
+    {
+      "key": "counterfactual",
+      "unchanged": true,
+      "sha256": "af6f44214ecbedae56a1ed5a1a41dfbf0644d8c4dcc1ab2985a8a1f1d96e8a07"
+    },
+    {
+      "key": "counterfactualcode",
+      "unchanged": true,
+      "sha256": "70455c2dbaff4746fa9f49e34f0e50feb103a9598c039406be1c33359ae5e816"
+    },
+    {
+      "key": "e5",
+      "unchanged": true,
+      "sha256": "ea45505472fd951f36de2170f4baf4681bd772bceb0aab90ff98aa73a3f79f25"
+    },
+    {
+      "key": "priu",
+      "unchanged": true,
+      "sha256": "ead95d01acc2caca898b65ffb06e9b32b9ad26f5d7e36552603cef5eb4db79cc"
+    },
+    {
+      "key": "arcane",
+      "unchanged": true,
+      "sha256": "715519e1ba6eed41e24ca9b6bb19b7fb7971a724d69dec72425827639dd9c43e"
+    },
+    {
+      "key": "judge",
+      "unchanged": true,
+      "sha256": "b013d2a981991755e24c79f68cc8161ab6a31cc19b93960f406b4188e6e1172f"
+    }
+  ],
+  "citation_and_framing_review": [
+    {
+      "claim": "First-page narrative and practical relevance",
+      "status": "supported_and_clearer",
+      "lines": [
+        257,
+        302,
+        319
+      ],
+      "reason": "Starts with curation, a three-record illustration and distinct target expressions; defines the cumulative future budget before formal coefficient algebra. Practical contribution is an explicit retention contract, not demonstrated deployment superiority."
+    },
+    {
+      "claim": "Title and encoder influence",
+      "status": "resolved",
+      "lines": [
+        225,
+        393
+      ],
+      "reason": "The title no longer uses never trained; the main setup fixes the representation and the limitations preserve possible Stack Exchange pretraining overlap."
+    },
+    {
+      "claim": "Abstract private-information and exactness scope",
+      "status": "supported_after_precision_edit",
+      "lines": [
+        242,
+        245,
+        253
+      ],
+      "reason": "Restores private information, exact rational ridge, and the constructed-family conditional minimum. Final sentence says excluded data can still be needed, avoiding a universal claim that every eligible payload must be stored verbatim."
+    },
+    {
+      "claim": "Excluded-blocker illustration",
+      "status": "supported",
+      "lines": [
+        270,
+        286
+      ],
+      "reason": "Separates changes in selected membership from the possibility of different fitted models. Clearly states blockers include excluded earlier raw records."
+    },
+    {
+      "claim": "Cao, Schelter, Ginart and Cohen antecedents",
+      "status": "supported",
+      "lines": [
+        344,
+        1038,
+        1068
+      ],
+      "reason": "Credits preprocessing summaries, maintained dataflows, later-deletion metadata and history independence. Does not claim that broad preprocessing-aware or continuing-state unlearning begins here."
+    },
+    {
+      "claim": "SemDeDup paper versus exact released rule",
+      "status": "supported",
+      "lines": [
+        381,
+        1049
+      ],
+      "reason": "Exact raw-neighbor operator is attributed to released code with nonnegative thresholds and a fixed graph/order, while paper citation supports embedding-based deduplication motivation."
+    },
+    {
+      "claim": "Provenance sources",
+      "status": "supported",
+      "lines": [
+        471,
+        1058
+      ],
+      "reason": "Signed Boolean formula is explicitly a specialization; Green supports polynomial lineage and aggregate supports richer operations. No claim that this exact finite-budget formula appears in Green."
+    },
+    {
+      "claim": "ARCANE and GRACE comparisons",
+      "status": "supported",
+      "lines": [
+        1051,
+        1055
+      ],
+      "reason": "ARCANE statement is confined to Section 3.2 representative-selection contract. GRACE is identified as behavioral language-model unlearning with a different target; no general inferiority claim."
+    },
+    {
+      "claim": "Dominici unavailable thesis",
+      "status": "metadata_only_limit_preserved",
+      "lines": [
+        1042,
+        1523
+      ],
+      "reason": "States title-level scope and available metadata/research description; full text unavailable. No claim that the thesis lacks the current operator/state guarantees, no renewed thesis search."
+    },
+    {
+      "claim": "Space and ticketed bounds",
+      "status": "supported",
+      "lines": [
+        1073,
+        1075,
+        1629
+      ],
+      "reason": "Budget-dependent storage is attributed to earlier work; ticketed multi-request threshold construction is expressly preserved. Appendix distinguishes one-request main definitions from multishot Appendix B.1."
+    },
+    {
+      "claim": "Tadakamalla counterfactual comparison",
+      "status": "supported",
+      "lines": [
+        1080,
+        1645
+      ],
+      "reason": "Exact binary-history prediction/counterfactual separation is credited. Main text and appendix distinguish complete-answer-tuple success from per-fixed-input/probe expected squared ridge error; no numerically interchangeable approximation comparison."
+    },
+    {
+      "claim": "Shannon use",
+      "status": "supported",
+      "lines": [
+        791,
+        1086
+      ],
+      "reason": "Credits classical information-distortion method rather than attributing the paper-specific squared-error derivation directly to the old source."
+    },
+    {
+      "claim": "Natural observations and failed calibration",
+      "status": "scope_preserved",
+      "lines": [
+        247,
+        937,
+        1029
+      ],
+      "reason": "The abstract identifies admissions after an initially excluded deletion. The body specifies integer membership/continuing logical-state tests, fixed development score graphs, both failed model-only calibrations, and unexecuted threshold-qualified utility/cost/held-out studies."
+    },
+    {
+      "claim": "Model, dataset and judging citations",
+      "status": "supported_with_existing_source_limits",
+      "lines": [
+        868,
+        876,
+        980,
+        988
+      ],
+      "reason": "AskUbuntu release identity, E5 encoder and named judge model assets retain their prior verified attributions. The judge citation motivates model agreement/order diagnostics, not human semantic validity. Documentary release identity is not a signed raw-byte or rights certification."
+    },
+    {
+      "claim": "Information lower bound versus practical memory",
+      "status": "scope_preserved",
+      "lines": [
+        708,
+        847
+      ],
+      "reason": "Explains why mD sums over possible probes even though one probe exposes D signs; preserves public-storage costs and earlier compact eligible-row total-byte advantage."
+    }
+  ],
+  "required_corrections": [],
+  "optional_editorial_notes": [],
+  "readability_verdict": "Opening now progresses from familiar pipeline decisions to a concrete illustration, target distinction, service question and two precise results. Definitions precede the coefficient algebra. The practical-cost comparator and failed qualification remain explicit without dominating the first pages. All prose changes remain within the earlier verified citation scope.",
+  "final_delta_review": {
+    "passed": true,
+    "current_sha256": "be256390853c2eb1ca1f23db199b01e963f4dc582f174fb790de5f89420a6722",
+    "current_bytes": 92137,
+    "previous_reviewed_sha256": "863df44d6f348d1554b300a05202c4425b9119a70b2b8806b2609dfa06012a4e",
+    "inverse_delta_sha256": "863df44d6f348d1554b300a05202c4425b9119a70b2b8806b2609dfa06012a4e",
+    "exactly_three_text_replacements": true,
+    "claim_effect": "None. Abstract sentence split preserves exact rational outputs, private information, constructed-family conditional minimum; FP32 and FP64 first uses are expanded."
+  }
+}
